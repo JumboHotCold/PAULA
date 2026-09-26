@@ -93,3 +93,7 @@ psycopg2-binary==2.9.9
 pgvector
 groq>=0.25.0
 django-unfold==0.80.2
+opencv-python-headless
+Pillow
+pymupdf
+google-generativeai
