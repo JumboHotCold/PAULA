@@ -46,23 +46,43 @@ The suggestions must be in the SAME language as your response and relevant to SP
 
 class PauliBotLogic:
     """
-    PauliBot v2 — AI Logic Engine powered by Groq (Llama 3.3 70B).
+    PauliBot v2 — AI Logic Engine powered by Groq (Llama 3.3 70B) or Google Gemini.
     Uses Retrieval-Augmented Generation (RAG) with pgvector for context retrieval.
+    Includes smart RAG fallback when LLM API keys are offline or invalid.
     """
 
     def __init__(self):
-        # Priority: os.environ (for security) → Django settings (via python-decouple)
-        self.api_key = os.environ.get('GROQ_API_KEY') or getattr(settings, 'GROQ_API_KEY', '')
-        
-        if self.api_key:
-            self.client = Groq(api_key=self.api_key)
-            self.model_name = "llama-3.3-70b-versatile"
-            logger.info(f"PauliBot v2 initialized with Groq model: {self.model_name}")
-        else:
-            self.client = None
-            logger.warning("PauliBot v2: GROQ_API_KEY not found. AI engine is offline.")
-            
-        # Initialize the RAG searcher engine (unchanged — pgvector + SentenceTransformer)
+        # Priority: os.environ → Django settings
+        self.groq_key = (os.environ.get('GROQ_API_KEY') or getattr(settings, 'GROQ_API_KEY', '')).strip()
+        self.gemini_key = (os.environ.get('GEMINI_API_KEY') or getattr(settings, 'GEMINI_API_KEY', '')).strip()
+
+        # Ignore placeholder values
+        if self.groq_key in ('your_groq_api_key_here', ''):
+            self.groq_key = None
+        if self.gemini_key in ('your_gemini_api_key_here', ''):
+            self.gemini_key = None
+
+        self.client = None
+        self.gemini_model = None
+
+        if self.groq_key:
+            try:
+                self.client = Groq(api_key=self.groq_key)
+                self.model_name = "llama-3.3-70b-versatile"
+                logger.info(f"PauliBot v2 initialized with Groq model: {self.model_name}")
+            except Exception as e:
+                logger.warning(f"Failed to initialize Groq client: {e}")
+
+        if not self.client and self.gemini_key:
+            try:
+                import google.generativeai as genai
+                genai.configure(api_key=self.gemini_key)
+                self.gemini_model = genai.GenerativeModel('gemini-1.5-flash')
+                logger.info("PauliBot v2 initialized with Gemini model: gemini-1.5-flash")
+            except Exception as e:
+                logger.warning(f"Failed to initialize Gemini client: {e}")
+
+        # Initialize the RAG searcher engine
         self.rag = RAGSearcher()
 
     def _build_context(self, query):
@@ -146,28 +166,40 @@ class PauliBotLogic:
     def _extract_destination(self, message):
         """Extract destination node ID from a user's location query."""
         msg_lower = message.lower()
-        # Try longest keyword first for better matching
         sorted_keywords = sorted(self.LOCATION_KEYWORDS.keys(), key=len, reverse=True)
         for keyword in sorted_keywords:
             if keyword in msg_lower:
                 return self.LOCATION_KEYWORDS[keyword]
         return None
 
+    def _generate_rag_fallback(self, msg, sources, action, action_data):
+        """Generates a direct response using retrieved knowledge base entries when LLM is unavailable."""
+        results = self.rag.search(msg, limit=5)
+        if not results:
+            return (
+                "I'm sorry, but I don't have that specific information in my current knowledge base for SPUS. "
+                "For further assistance, please contact the university administration."
+            ), sources, action, action_data
+
+        ans_lines = []
+        for res in results[:3]:
+            txt = res['text']
+            if txt.startswith("FAQ about "):
+                # Format FAQ answer nicely
+                parts = txt.split(" - ", 1)
+                if len(parts) == 2:
+                    txt = f"**{parts[0]}**\n{parts[1]}"
+            ans_lines.append(txt)
+
+        response_text = "Here is what I found in the SPUS Knowledge Base regarding your inquiry:\n\n" + "\n\n".join(ans_lines)
+        response_text += '\n\n[SUGGESTIONS: "What are the enrollment requirements?" | "Where is the Registrar\'s office?" | "How do I contact SPUS?"]'
+        return response_text, sources, action, action_data
+
     def process_query(self, user_message, history=None):
         """
-        Takes the user message, retrieves RAG context, and generates a response via Groq.
+        Takes the user message, retrieves RAG context, and generates a response via LLM or RAG fallback.
         Returns a tuple of (response_text, sources_list, action, action_data).
-        
-        :param user_message: The current user query string.
-        :param history: Optional list of previous messages in OpenAI/Groq format.
         """
-        if not self.client:
-            return (
-                "System Configuration Error: The AI brain is currently offline because "
-                "the `GROQ_API_KEY` is missing in the `.env` file. "
-                "Please configure it to enable intelligent responses."
-            ), [], None, None
-            
         msg = user_message.strip()
         if not msg:
             return "Please type a message.", [], None, None
@@ -189,6 +221,10 @@ class PauliBotLogic:
         # Step 1: Retrieve context from the knowledge base (RAG)
         context, sources = self._build_context(msg)
         
+        # If no LLM client is configured, use direct RAG knowledge fallback
+        if not self.client and not self.gemini_model:
+            return self._generate_rag_fallback(msg, sources, action, action_data)
+
         # Step 2: Build the user message with embedded context
         user_content = (
             f"--- VERIFIED SPUS KNOWLEDGE ---\n"
@@ -201,43 +237,38 @@ class PauliBotLogic:
         system_prompt = PAULIBOT_SYSTEM_PROMPT
         if is_procedural:
             system_prompt += "\n\nPROCEDURAL OVERRIDE: The user is asking a procedural question. You are an academic advisor. Answer using ONLY the provided handbook excerpts/knowledge base. Format procedural answers strictly as a numbered Markdown list. Ensure it is easy to read."
-        
-        # Step 3: Call Groq API with structured system + user messages
-        # Combine system prompt, history, and current user content
-        messages = [{"role": "system", "content": system_prompt}]
-        
-        if history:
-            messages.extend(history)
-            
-        messages.append({"role": "user", "content": user_content})
 
-        try:
-            chat_completion = self.client.chat.completions.create(
-                model=self.model_name,
-                messages=messages,
-                temperature=0.6,
-                max_tokens=1024,
-                top_p=0.9,
-                stream=False,
-            )
+        # Step 3: Try Groq API
+        if self.client:
+            messages = [{"role": "system", "content": system_prompt}]
+            if history:
+                messages.extend(history)
+            messages.append({"role": "user", "content": user_content})
 
-            
-            response_text = chat_completion.choices[0].message.content.strip()
-            logger.info(f"Groq response generated successfully for query: '{msg[:50]}...'")
-            return response_text, sources, action, action_data
-            
-        except Exception as e:
-            error_msg = str(e)
-            logger.error(f"Groq API error: {error_msg}")
-            
-            if "rate_limit" in error_msg.lower() or "429" in error_msg:
-                return (
-                    "I'm receiving a lot of questions right now! 😅 "
-                    "Please wait a moment and try again. "
-                    "Maraming nagtatanong ngayon, subukan ulit mamaya!"
-                ), [], None, None
-            
-            return (
-                "I apologize, but I am currently experiencing technical difficulties "
-                f"connecting to my intelligence network. ({error_msg})"
-            ), [], None, None
+            try:
+                chat_completion = self.client.chat.completions.create(
+                    model=self.model_name,
+                    messages=messages,
+                    temperature=0.6,
+                    max_tokens=1024,
+                    top_p=0.9,
+                    stream=False,
+                )
+                response_text = chat_completion.choices[0].message.content.strip()
+                logger.info(f"Groq response generated successfully for query: '{msg[:50]}...'")
+                return response_text, sources, action, action_data
+            except Exception as e:
+                error_msg = str(e)
+                logger.error(f"Groq API error: {error_msg}")
+
+        # Step 4: Try Gemini API if Groq was unavailable or failed
+        if self.gemini_model:
+            try:
+                full_prompt = f"{system_prompt}\n\n{user_content}"
+                response = self.gemini_model.generate_content(full_prompt)
+                return response.text.strip(), sources, action, action_data
+            except Exception as e:
+                logger.error(f"Gemini API error: {e}")
+
+        # Step 5: If LLM call fails (e.g. invalid API key), fallback to direct RAG answer!
+        return self._generate_rag_fallback(msg, sources, action, action_data)

@@ -78,6 +78,7 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_HOST: postgres
       POSTGRES_PORT: 5432
+      USE_POSTGRES: ${USE_POSTGRES:-true}
 
     volumes:
       # Mount application code (for development)
@@ -87,7 +88,7 @@ services:
 
     ports:
       # Expose Django application port
-      - "8000:8000"
+      - "8080:8000"
 
     depends_on:
       postgres:
