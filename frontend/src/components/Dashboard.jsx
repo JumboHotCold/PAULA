@@ -39,17 +39,17 @@ function SourcesAccordion({ sources }) {
   const [open, setOpen] = useState(false);
   if (!sources || sources.length === 0) return null;
   return (
-    <div className="sources-container" style={{ marginTop: '12px', fontSize: '0.86em', borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '8px' }}>
-      <button onClick={() => setOpen(!open)} style={{ background: 'none', border: 'none', color: 'var(--text-light)', cursor: 'pointer', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '6px', padding: '4px 0' }}>
+    <div className="sources-container" style={{ marginTop: '12px', fontSize: '0.86em', borderTop: '1px solid var(--color-border)', paddingTop: '8px' }}>
+      <button onClick={() => setOpen(!open)} style={{ background: 'none', border: 'none', color: 'var(--color-text-muted)', cursor: 'pointer', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '6px', padding: '4px 0', fontFamily: 'var(--font-family-sans)' }}>
         📎 Sources {open ? '▼' : '▶'}
       </button>
       {open && (
-        <div style={{ marginTop: '8px', padding: '10px 14px', background: 'rgba(0,0,0,0.03)', borderRadius: '8px', color: 'var(--text-dark)' }}>
+        <div style={{ marginTop: '8px', padding: '10px 14px', background: 'var(--color-surface-hover)', borderRadius: '8px', color: 'var(--color-text)', border: '1px solid var(--color-border)' }}>
           {sources.map((s, i) => (
             <div key={i} style={{ marginBottom: '6px', display: 'flex', gap: '6px', alignItems: 'flex-start' }}>
               <span>📄</span>
               <span style={{ lineHeight: 1.4 }}>
-                {s.url ? <a href={s.url} target="_blank" rel="noreferrer" style={{color: 'var(--spus-green)', textDecoration: 'underline', fontWeight: 500}}>{s.title}</a> : s.title}
+                {s.url ? <a href={s.url} target="_blank" rel="noreferrer" style={{color: 'var(--color-primary)', textDecoration: 'underline', fontWeight: 500}}>{s.title}</a> : s.title}
                 {s.page ? ` (Page ${s.page})` : ''}
               </span>
             </div>
@@ -263,9 +263,9 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
                 </svg>
               </button>
             )}
-            <div className="chat-title">
+            <h1 className="chat-title">
               {!isGuest ? 'New Chat' : 'Welcome Guest'}
-            </div>
+            </h1>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             {/* Smart Virtual Tour Button */}
@@ -280,7 +280,8 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
             {isGuest && (
               <button 
                 onClick={onNavigateLogin} 
-                style={{ background: 'none', border: 'none', color: 'var(--color-primary)', fontWeight: 600, cursor: 'pointer', fontSize: '0.9em' }}
+                style={{ background: 'none', border: 'none', color: 'var(--color-primary)', fontWeight: 600, cursor: 'pointer', fontSize: '0.9em', padding: '6px 10px', borderRadius: '6px' }}
+                className="hover:opacity-80"
               >
                 Login
               </button>

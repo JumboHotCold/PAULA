@@ -5,6 +5,7 @@ import AuthPage from './components/AuthPage';
 import RegisterPage from './components/RegisterPage';
 import Dashboard from './components/Dashboard';
 import AdminDashboard from './components/AdminDashboard';
+import ThemeToggle from './components/ThemeToggle';
 
 import { sendMessage, ensureCsrfToken, fetchConversations, getCookie } from './api/chatApi';
 
@@ -53,29 +54,32 @@ function AdminLogin({ onLogin, onBack }) {
   };
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f9fafb', padding: '1rem' }}>
-       <div style={{ backgroundColor: '#ffffff', padding: '2.5rem', borderRadius: '1rem', boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)', width: '100%', maxWidth: '400px', border: '1px solid rgba(0, 85, 41, 0.2)' }}>
-          <div style={{ width: '64px', height: '64px', margin: '0 auto 1rem', backgroundColor: 'rgba(0, 85, 41, 0.1)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'var(--color-bg)', padding: '1rem', position: 'relative' }}>
+       <div style={{ position: 'absolute', top: '20px', right: '20px', zIndex: 10 }}>
+         <ThemeToggle />
+       </div>
+       <div style={{ backgroundColor: 'var(--color-surface)', padding: '2.5rem', borderRadius: '1rem', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.25)', width: '100%', maxWidth: '400px', border: '1px solid var(--color-border)', transition: 'background-color 0.2s, border-color 0.2s' }}>
+          <div style={{ width: '64px', height: '64px', margin: '0 auto 1rem', backgroundColor: 'rgba(16, 185, 129, 0.15)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
              <span style={{ fontSize: '1.5rem' }}>🛡️</span>
           </div>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', textAlign: 'center', color: '#004d26', marginBottom: '0.5rem', fontFamily: 'var(--font-family-heading)' }}>Admin Access</h2>
-          <p style={{ textAlign: 'center', fontSize: '0.875rem', color: '#6b7280', marginBottom: '1.5rem' }}>Restricted to authorized personnel</p>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', textAlign: 'center', color: 'var(--color-primary)', marginBottom: '0.5rem', fontFamily: 'var(--font-family-heading)', letterSpacing: '-0.015em' }}>Admin Access</h2>
+          <p style={{ textAlign: 'center', fontSize: '0.875rem', color: 'var(--color-text-muted)', marginBottom: '1.5rem' }}>Restricted to authorized personnel</p>
           
-          {error && <div style={{ backgroundColor: '#fef2f2', color: '#ef4444', fontSize: '0.875rem', padding: '0.75rem', borderRadius: '0.5rem', border: '1px solid #fee2e2', marginBottom: '1rem', textAlign: 'center' }}>{error}</div>}
+          {error && <div style={{ backgroundColor: 'rgba(239, 68, 68, 0.1)', color: '#ef4444', fontSize: '0.875rem', padding: '0.75rem', borderRadius: '0.5rem', border: '1px solid rgba(239, 68, 68, 0.2)', marginBottom: '1rem', textAlign: 'center' }}>{error}</div>}
           
           <form onSubmit={handleAdminLogin} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
              <div>
-                <label style={{ fontSize: '0.75rem', fontWeight: 'bold', color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.25rem', display: 'block' }}>Username / ID</label>
-                <input type="text" value={username} onChange={e => setUsername(e.target.value)} required style={{ width: '100%', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', padding: '0.75rem 1rem', borderRadius: '0.75rem', outline: 'none', transition: 'all 0.2s' }} />
+                <label style={{ fontSize: '0.75rem', fontWeight: 'bold', color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.25rem', display: 'block' }}>Username / ID</label>
+                <input type="text" value={username} onChange={e => setUsername(e.target.value)} required style={{ width: '100%', backgroundColor: 'var(--color-input-bg)', border: '1px solid var(--color-border)', color: 'var(--color-text)', padding: '0.75rem 1rem', borderRadius: '0.75rem', outline: 'none', transition: 'all 0.2s' }} />
              </div>
              <div>
-                <label style={{ fontSize: '0.75rem', fontWeight: 'bold', color: '#6b7280', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.25rem', display: 'block' }}>Password</label>
-                <input type="password" value={password} onChange={e => setPassword(e.target.value)} required style={{ width: '100%', backgroundColor: '#f9fafb', border: '1px solid #e5e7eb', padding: '0.75rem 1rem', borderRadius: '0.75rem', outline: 'none', transition: 'all 0.2s' }} />
+                <label style={{ fontSize: '0.75rem', fontWeight: 'bold', color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.25rem', display: 'block' }}>Password</label>
+                <input type="password" value={password} onChange={e => setPassword(e.target.value)} required style={{ width: '100%', backgroundColor: 'var(--color-input-bg)', border: '1px solid var(--color-border)', color: 'var(--color-text)', padding: '0.75rem 1rem', borderRadius: '0.75rem', outline: 'none', transition: 'all 0.2s' }} />
              </div>
-             <button type="submit" disabled={isLoading} style={{ width: '100%', backgroundColor: '#004d26', color: '#ffffff', padding: '0.875rem', borderRadius: '0.75rem', fontWeight: 'bold', cursor: isLoading ? 'not-allowed' : 'pointer', border: 'none', transition: 'background-color 0.2s', marginTop: '0.5rem' }}>
+             <button type="submit" disabled={isLoading} style={{ width: '100%', backgroundColor: 'var(--color-primary)', color: '#ffffff', padding: '0.875rem', borderRadius: '0.75rem', fontWeight: 'bold', cursor: isLoading ? 'not-allowed' : 'pointer', border: 'none', transition: 'all 0.2s', marginTop: '0.5rem' }}>
                {isLoading ? 'Authenticating...' : 'Secure Login'}
              </button>
-             <button type="button" onClick={onBack} style={{ width: '100%', textAlign: 'center', fontSize: '0.875rem', color: '#6b7280', background: 'none', border: 'none', cursor: 'pointer', outline: 'none', marginTop: '0.5rem' }}>
+             <button type="button" onClick={onBack} style={{ width: '100%', textAlign: 'center', fontSize: '0.875rem', color: 'var(--color-text-muted)', background: 'none', border: 'none', cursor: 'pointer', outline: 'none', marginTop: '0.5rem' }}>
                ← Back to Home
              </button>
           </form>

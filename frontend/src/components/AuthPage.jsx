@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { getCookie, ensureCsrfToken } from '../api/chatApi';
+import ThemeToggle from './ThemeToggle';
 
 export default function AuthPage({ onLogin, onNavigateRegister }) {
   const [studentId, setStudentId] = useState('');
@@ -54,6 +55,9 @@ export default function AuthPage({ onLogin, onNavigateRegister }) {
             <p>Saint Paul University Surigao</p>
           </div>
         </a>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+          <ThemeToggle />
+        </div>
       </nav>
 
       <div className="main-container">

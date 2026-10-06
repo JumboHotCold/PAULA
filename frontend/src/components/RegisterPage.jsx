@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ThemeToggle from './ThemeToggle';
 
 export default function RegisterPage({ onNavigateLogin }) {
   const [formData, setFormData] = useState({
@@ -43,7 +44,10 @@ export default function RegisterPage({ onNavigateLogin }) {
   };
 
   return (
-    <div className="register-wrapper">
+    <div className="register-wrapper" style={{ position: 'relative' }}>
+      <div style={{ position: 'absolute', top: '20px', right: '20px', zIndex: 10 }}>
+        <ThemeToggle />
+      </div>
       <div className="register-container">
         
         <div className="register-header">

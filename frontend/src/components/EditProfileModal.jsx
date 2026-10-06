@@ -166,7 +166,9 @@ export default function EditProfileModal({ isOpen, onClose, user, onUpdate }) {
           margin-bottom: 28px;
         }
         .modal-header h2 {
-          font-family: 'Merriweather', serif;
+          font-family: var(--font-family-heading);
+          font-weight: 700;
+          letter-spacing: -0.015em;
           margin: 0;
           color: var(--color-primary);
           font-size: 1.6em;
