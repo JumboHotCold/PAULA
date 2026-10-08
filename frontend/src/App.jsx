@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect } from 'react';
 import './App.css';
+import MaterialIcon from './components/MaterialIcon';
 
 import AuthPage from './components/AuthPage';
 import RegisterPage from './components/RegisterPage';
@@ -7,9 +8,16 @@ import Dashboard from './components/Dashboard';
 import AdminDashboard from './components/AdminDashboard';
 import ThemeToggle from './components/ThemeToggle';
 
-import { sendMessage, ensureCsrfToken, fetchConversations, getCookie } from './api/chatApi';
+import { 
+  sendMessage, 
+  ensureCsrfToken, 
+  fetchConversations, 
+  getCookie,
+  deleteConversation,
+  fetchConversationDetails
+} from './api/chatApi';
 
-const GUEST_GREETING = "Hello! Welcome to Saint Paul University Surigao! 🤖\n\nI'm PauliBot, your virtual campus assistant. I can help you with admissions, office locations, tuition fees, staff info, and more.\n\nHow may I assist you today?";
+const GUEST_GREETING = "Hello! Welcome to Saint Paul University Surigao!\n\nI'm PauliBot, your virtual campus assistant. I can help you with admissions, office locations, tuition fees, staff info, and more.\n\nHow may I assist you today?";
 
 function AdminLogin({ onLogin, onBack }) {
   const [username, setUsername] = useState('');
@@ -60,7 +68,7 @@ function AdminLogin({ onLogin, onBack }) {
        </div>
        <div style={{ backgroundColor: 'var(--color-surface)', padding: '2.5rem', borderRadius: '1rem', boxShadow: '0 10px 30px rgba(0, 0, 0, 0.25)', width: '100%', maxWidth: '400px', border: '1px solid var(--color-border)', transition: 'background-color 0.2s, border-color 0.2s' }}>
           <div style={{ width: '64px', height: '64px', margin: '0 auto 1rem', backgroundColor: 'rgba(16, 185, 129, 0.15)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-             <span style={{ fontSize: '1.5rem' }}>🛡️</span>
+             <MaterialIcon name="shield" size={28} color="#10B981" />
           </div>
           <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', textAlign: 'center', color: 'var(--color-primary)', marginBottom: '0.5rem', fontFamily: 'var(--font-family-heading)', letterSpacing: '-0.015em' }}>Admin Access</h2>
           <p style={{ textAlign: 'center', fontSize: '0.875rem', color: 'var(--color-text-muted)', marginBottom: '1.5rem' }}>Restricted to authorized personnel</p>
@@ -216,7 +224,6 @@ export default function App() {
       }).then(async (result) => {
         if (result.isConfirmed) {
           try {
-            const { deleteConversation } = await import('./api/chatApi');
             await deleteConversation(id);
             const updatedConversations = await fetchConversations();
             setConversations(updatedConversations);
@@ -321,7 +328,6 @@ export default function App() {
       onNavigateAdmin={user?.is_superuser ? () => setCurrentView('admin') : null}
       onUpdateUser={handleUpdateUser}
       onLoadChat={async (id) => {
-        const { fetchConversationDetails } = await import('./api/chatApi');
         const details = await fetchConversationDetails(id);
         setMessages(details.map(d => ({ text: d.message, isUser: true })).flatMap((m, i) => [m, { text: details[i].response, isUser: false}]));
         setConversationId(id);

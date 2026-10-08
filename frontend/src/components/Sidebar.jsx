@@ -1,4 +1,5 @@
 import { Plus, MessageSquare } from 'lucide-react';
+import MaterialIcon from './MaterialIcon';
 
 export default function Sidebar({ user, onLogout, onNewChat, conversations, onDeleteChat, onLoadChat }) {
   // Extract initial
@@ -36,10 +37,10 @@ export default function Sidebar({ user, onLogout, onNewChat, conversations, onDe
               </button>
               <button 
                 onClick={(e) => { e.stopPropagation(); onDeleteChat && onDeleteChat(conv.id); }}
-                className="opacity-0 group-hover:opacity-100 p-1.5 text-red-400 hover:text-red-600 transition-opacity"
+                className="opacity-0 group-hover:opacity-100 p-1.5 text-red-400 hover:text-red-600 transition-opacity flex items-center"
                 title="Delete Chat"
               >
-                🗑️
+                <MaterialIcon name="delete" size={16} color="#DC2626" />
               </button>
             </div>
           ))

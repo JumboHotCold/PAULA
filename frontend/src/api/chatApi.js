@@ -173,6 +173,24 @@ export async function patchStudentNeed(id, data) {
   return res.json();
 }
 
+export async function fetchAdminReportsData() {
+  const res = await fetch('/api/admin/reports/data/', { credentials: 'include' });
+  if (!res.ok) throw new Error('Failed to fetch admin reports data');
+  return res.json();
+}
+
+export function getPrintReportUrl(type = 'summary') {
+  return `/api/admin/reports/print/?type=${encodeURIComponent(type)}`;
+}
+
+export function getExportCsvUrl(type = 'summary') {
+  return `/api/admin/reports/export/csv/?type=${encodeURIComponent(type)}`;
+}
+
+export function getExportPdfUrl(type = 'summary') {
+  return `/api/admin/reports/export/pdf/?type=${encodeURIComponent(type)}`;
+}
+
 // =============================================================================
 // PUBLIC API
 // =============================================================================

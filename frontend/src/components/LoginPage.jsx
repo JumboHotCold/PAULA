@@ -10,6 +10,7 @@
 
 import { useState } from 'react';
 import { getCookie, ensureCsrfToken } from '../api/chatApi';
+import MaterialIcon from './MaterialIcon';
 
 export default function LoginPage({ onLogin }) {
   const [studentId, setStudentId] = useState('');
@@ -232,12 +233,12 @@ export default function LoginPage({ onLogin }) {
                 {/* Features list */}
                 <div className="mt-8 space-y-3 text-left max-w-xs mx-auto">
                   {[
-                    { icon: '💬', text: 'AI-powered campus assistant' },
-                    { icon: '📋', text: 'Enrollment & admissions info' },
-                    { icon: '📍', text: 'Campus locations & navigation' },
+                    { icon: 'chat', text: 'AI-powered campus assistant', color: '#10B981' },
+                    { icon: 'assignment', text: 'Enrollment & admissions info', color: '#F59E0B' },
+                    { icon: 'location_on', text: 'Campus locations & navigation', color: '#3B82F6' },
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3 text-xs text-text-muted">
-                      <span className="text-base">{item.icon}</span>
+                      <MaterialIcon name={item.icon} size={16} color={item.color} />
                       <span>{item.text}</span>
                     </div>
                   ))}

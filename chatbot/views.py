@@ -6,11 +6,12 @@ Handles both frontend HTML rendering and API endpoints.
 
 import json
 from django.shortcuts import render, redirect
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import ensure_csrf_cookie
 import re
+from django.utils import timezone
 
 from rest_framework import status
 from rest_framework.decorators import api_view
@@ -23,6 +24,12 @@ from .serializers import (
     UserLoginSerializer,
     ChatHistorySerializer,
     ConversationSerializer
+)
+from .reports import (
+    get_analytics_summary_data,
+    generate_analytics_csv,
+    generate_analytics_pdf,
+    render_print_html
 )
 
 # Initialize bot logic engine
@@ -418,30 +425,93 @@ def admin_trending_confusion(request):
 @api_view(['GET'])
 def admin_metrics(request):
     """
-    Summary metrics for admin dashboard cards.
-    Derives counts from existing CustomUser, Conversation, and StudentNeed tables.
+    Enhanced summary metrics for admin dashboard cards.
+    Provides comprehensive institutional metrics, feedback satisfaction, and counts.
     Only accessible to superusers.
     """
     if not request.user.is_superuser:
         return Response({'error': 'Unauthorized'}, status=403)
 
-    total_enrolled = CustomUser.objects.filter(is_active=True, is_superuser=False).count()
-    # At-risk = students with high/critical urgency open needs
-    at_risk = StudentNeed.objects.filter(
-        urgency__in=['Critical', 'High'],
-        status__in=['Open', 'In Progress']
-    ).values('student').distinct().count()
-    unresolved_requests = StudentNeed.objects.exclude(status='Resolved').count()
-    pending_enrollments = StudentNeed.objects.filter(
-        need_type='Enrollment', status__in=['Open', 'In Progress']
-    ).count()
+    summary = get_analytics_summary_data()
+    kpis = summary['kpis']
 
     return Response({
-        'total_enrolled': total_enrolled,
-        'at_risk': at_risk,
-        'unresolved_requests': unresolved_requests,
-        'pending_enrollments': pending_enrollments,
+        'total_enrolled': kpis['total_enrolled'],
+        'at_risk': kpis['at_risk_students'],
+        'unresolved_requests': kpis['open_needs'] + kpis['in_progress_needs'],
+        'pending_enrollments': StudentNeed.objects.filter(
+            need_type='Enrollment', status__in=['Open', 'In Progress']
+        ).count(),
+        'total_queries': kpis['total_queries'],
+        'total_conversations': kpis['total_conversations'],
+        'satisfaction_rate': kpis['satisfaction_rate'],
+        'positive_feedback': kpis['positive_feedback'],
+        'negative_feedback': kpis['negative_feedback'],
+        'total_needs': kpis['total_needs'],
+        'open_needs': kpis['open_needs'],
+        'in_progress_needs': kpis['in_progress_needs'],
+        'resolved_needs': kpis['resolved_needs'],
+        'urgency_distribution': summary['urgency_distribution'],
+        'type_distribution': summary['type_distribution'],
+        'trending_topics': summary['trending_topics'],
     })
+
+
+@api_view(['GET'])
+def admin_reports_data(request):
+    """
+    Returns full institutional report dataset as JSON.
+    Only accessible to superusers.
+    """
+    if not request.user.is_superuser:
+        return Response({'error': 'Unauthorized'}, status=403)
+    data = get_analytics_summary_data()
+    return Response(data)
+
+
+@api_view(['GET'])
+def admin_reports_print(request):
+    """
+    Returns a ready-to-print, responsive HTML document.
+    Only accessible to superusers.
+    """
+    if not request.user.is_superuser:
+        return HttpResponse('<h1>403 Unauthorized: Administrator privileges required</h1>', status=403)
+    report_type = request.query_params.get('type', 'summary')
+    html_content = render_print_html(report_type=report_type)
+    return HttpResponse(html_content, content_type='text/html')
+
+
+@api_view(['GET'])
+def admin_reports_export_csv(request):
+    """
+    Exports institutional report data as a downloadable CSV.
+    Supports ?type=summary (default), ?type=student_needs, ?type=queries.
+    """
+    if not request.user.is_superuser:
+        return Response({'error': 'Unauthorized'}, status=403)
+    report_type = request.query_params.get('type', 'summary')
+    csv_bytes = generate_analytics_csv(report_type=report_type)
+    filename = f"paulibot_report_{report_type}_{timezone.now().strftime('%Y%m%d_%H%M%S')}.csv"
+    response = HttpResponse(csv_bytes, content_type='text/csv; charset=utf-8')
+    response['Content-Disposition'] = f'attachment; filename="{filename}"'
+    return response
+
+
+@api_view(['GET'])
+def admin_reports_export_pdf(request):
+    """
+    Exports institutional report data as a downloadable, branded PDF document.
+    Supports ?type=summary (default).
+    """
+    if not request.user.is_superuser:
+        return Response({'error': 'Unauthorized'}, status=403)
+    report_type = request.query_params.get('type', 'summary')
+    pdf_bytes = generate_analytics_pdf(report_type=report_type)
+    filename = f"paulibot_report_{report_type}_{timezone.now().strftime('%Y%m%d_%H%M%S')}.pdf"
+    response = HttpResponse(pdf_bytes, content_type='application/pdf')
+    response['Content-Disposition'] = f'attachment; filename="{filename}"'
+    return response
 
 
 @api_view(['GET'])

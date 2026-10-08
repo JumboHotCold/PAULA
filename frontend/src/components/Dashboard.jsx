@@ -5,6 +5,7 @@ import { fetchAnnouncements } from '../api/chatApi';
 import VirtualTour from './VirtualTour';
 import MapModule from './MapModule';
 import PromptGrid from './PromptGrid';
+import MaterialIcon from './MaterialIcon';
 
 // =============================================================================
 // SUB-COMPONENTS FOR Markdown & Sources
@@ -41,13 +42,13 @@ function SourcesAccordion({ sources }) {
   return (
     <div className="sources-container" style={{ marginTop: '12px', fontSize: '0.86em', borderTop: '1px solid var(--color-border)', paddingTop: '8px' }}>
       <button onClick={() => setOpen(!open)} style={{ background: 'none', border: 'none', color: 'var(--color-text-muted)', cursor: 'pointer', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '6px', padding: '4px 0', fontFamily: 'var(--font-family-sans)' }}>
-        📎 Sources {open ? '▼' : '▶'}
+        <MaterialIcon name="attach_file" size={16} /> Sources <MaterialIcon name="chevron_right" size={14} style={{ transform: open ? 'rotate(90deg)' : 'none', transition: 'transform 0.2s' }} />
       </button>
       {open && (
         <div style={{ marginTop: '8px', padding: '10px 14px', background: 'var(--color-surface-hover)', borderRadius: '8px', color: 'var(--color-text)', border: '1px solid var(--color-border)' }}>
           {sources.map((s, i) => (
             <div key={i} style={{ marginBottom: '6px', display: 'flex', gap: '6px', alignItems: 'flex-start' }}>
-              <span>📄</span>
+              <MaterialIcon name="description" size={16} color="var(--color-primary)" />
               <span style={{ lineHeight: 1.4 }}>
                 {s.url ? <a href={s.url} target="_blank" rel="noreferrer" style={{color: 'var(--color-primary)', textDecoration: 'underline', fontWeight: 500}}>{s.title}</a> : s.title}
                 {s.page ? ` (Page ${s.page})` : ''}
@@ -168,12 +169,12 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
             onClick={() => setIsSidebarOpen(false)}
             aria-label="Close sidebar"
           >
-            ✕
+            <MaterialIcon name="close" size={18} />
           </button>
 
           <div className="sidebar-header">
             <button className="new-chat-btn" onClick={() => { onNewChat(); setIsSidebarOpen(false); }}>
-              <span>+</span> New Chat
+              <MaterialIcon name="add" size={18} /> New Chat
             </button>
           </div>
 
@@ -190,10 +191,10 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
                   </button>
                   <button 
                     onClick={(e) => { e.stopPropagation(); onDeleteChat && onDeleteChat(conv.id); }}
-                    style={{ background: 'none', border: 'none', color: '#dc3545', cursor: 'pointer', padding: '5px' }}
+                    style={{ background: 'none', border: 'none', color: '#dc3545', cursor: 'pointer', padding: '5px', display: 'flex', alignItems: 'center' }}
                     title="Delete Chat"
                   >
-                    🗑️
+                    <MaterialIcon name="delete" size={16} color="#dc3545" />
                   </button>
                 </div>
               ))
@@ -235,8 +236,9 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
              <button 
                 onClick={() => { setActiveModule('chat'); setNavigationDestination(null); }} 
                 className="module-close-btn"
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
              >
-               ✕ Close {activeModule === 'tour' ? 'Tour' : 'Map'}
+               <MaterialIcon name="close" size={16} style={{ marginRight: '6px' }} /> Close {activeModule === 'tour' ? 'Tour' : 'Map'}
              </button>
              
              {activeModule === 'tour' && <VirtualTour className="w-full h-full shadow-2xl" />}
@@ -272,8 +274,9 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
             <button
               onClick={() => setActiveModule(prev => prev === 'tour' ? 'chat' : 'tour')}
               className="tour-toggle-btn"
+              style={{ display: 'flex', alignItems: 'center', gap: '6px' }}
             >
-              <span>🧭</span>
+              <MaterialIcon name="explore" size={18} />
               <span className="tour-btn-label">Smart Virtual Tour</span>
             </button>
             <ThemeToggle />
@@ -311,7 +314,7 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
               
               {isGuest && (
                 <div className="guest-warning-badge">
-                  <span>⚠️</span>
+                  <MaterialIcon name="warning" size={16} color="#DC2626" />
                   <span>Guest Mode: Chat history not saved</span>
                 </div>
               )}

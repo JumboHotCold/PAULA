@@ -32,6 +32,10 @@ urlpatterns = [
     path('api/admin/metrics/', views.admin_metrics, name='admin_metrics'),
     path('api/admin/student-needs/', views.admin_student_needs, name='admin_student_needs'),
     path('api/admin/student-needs/<int:pk>/', views.admin_student_need_detail, name='admin_student_need_detail'),
+    path('api/admin/reports/data/', views.admin_reports_data, name='admin_reports_data'),
+    path('api/admin/reports/print/', views.admin_reports_print, name='admin_reports_print'),
+    path('api/admin/reports/export/csv/', views.admin_reports_export_csv, name='admin_reports_export_csv'),
+    path('api/admin/reports/export/pdf/', views.admin_reports_export_pdf, name='admin_reports_export_pdf'),
     
     # Public API
     path('api/announcements', views.get_announcements, name='get_announcements'),

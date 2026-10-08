@@ -4,6 +4,7 @@ import PromptGrid from './PromptGrid';
 import MessageBubble from './MessageBubble';
 import TypingIndicator from './TypingIndicator';
 import ChatInput from './ChatInput';
+import MaterialIcon from './MaterialIcon';
 
 export default function GuestDashboard({ onLogout, messages, isTyping, onSend }) {
   const bottomRef = useRef(null);
@@ -47,8 +48,8 @@ export default function GuestDashboard({ onLogout, messages, isTyping, onSend })
               </p>
               
               <div className="flex items-center gap-2 text-amber-600 text-[0.85rem] font-bold mb-10 bg-amber-50 px-4 py-2 rounded-full border border-amber-200">
-                <TriangleAlert className="w-4 h-4" />
-                ⚠️ Guest Mode: Chat history not saved
+                <MaterialIcon name="warning" size={16} color="#D97706" />
+                <span>Guest Mode: Chat history not saved</span>
               </div>
               
               <PromptGrid onPromptClick={onSend} />

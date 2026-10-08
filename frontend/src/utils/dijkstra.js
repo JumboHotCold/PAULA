@@ -102,7 +102,7 @@ function generateDirections(path) {
     to: path[0],
     nodeId: path[0],
     instruction: `Start at ${CAMPUS_NODES[path[0]].name}`,
-    icon: '🟢',
+    icon: 'near_me',
   });
 
   for (let i = 1; i < path.length - 1; i++) {
@@ -111,7 +111,7 @@ function generateDirections(path) {
       to: path[i],
       nodeId: path[i],
       instruction: `Walk to ${CAMPUS_NODES[path[i]].name}`,
-      icon: '→',
+      icon: 'chevron_right',
     });
   }
 
@@ -120,7 +120,7 @@ function generateDirections(path) {
     to: path[path.length - 1],
     nodeId: path[path.length - 1],
     instruction: `Arrive at ${CAMPUS_NODES[path[path.length - 1]].name}`,
-    icon: '🔴',
+    icon: 'flag',
   });
 
   return steps;

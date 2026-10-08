@@ -1,16 +1,17 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import { CAMPUS_NODES, resolveLocationFromText } from '../data/campusGraph';
 import { fetchCampusRoute } from '../api/chatApi';
+import MaterialIcon from './MaterialIcon';
 
 // =============================================================================
 // NODE TYPE ICONS
 // =============================================================================
 const TYPE_ICONS = {
-  office: '🏢',
-  building: '🏫',
-  facility: '🔧',
-  landmark: '📍',
-  college: '🎓',
+  office: 'business',
+  building: 'apartment',
+  facility: 'build',
+  landmark: 'location_on',
+  college: 'school',
 };
 
 const TYPE_COLORS = {
@@ -202,14 +203,16 @@ export default function MapModule({ className = "", destination = null }) {
           <button
             className={`campus-nav-mode-btn ${mode === 'navigate' ? 'active' : ''}`}
             onClick={() => setMode('navigate')}
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}
           >
-            🧭 Navigate
+            <MaterialIcon name="explore" size={15} /> Navigate
           </button>
           <button
             className={`campus-nav-mode-btn ${mode === 'mapper' ? 'active' : ''}`}
             onClick={() => setMode('mapper')}
+            style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}
           >
-            📐 Map Coords
+            <MaterialIcon name="map" size={15} /> Map Coords
           </button>
         </div>
       </div>
@@ -346,7 +349,9 @@ export default function MapModule({ className = "", destination = null }) {
                   transform: 'translate(-50%, -130%)',
                 }}
               >
-                <span className="campus-nav-tooltip-icon">{TYPE_ICONS[node.type]}</span>
+                <span className="campus-nav-tooltip-icon">
+                  <MaterialIcon name={TYPE_ICONS[node.type] || 'location_on'} size={15} color={TYPE_COLORS[node.type]} />
+                </span>
                 <span className="campus-nav-tooltip-name">{node.name}</span>
               </div>
             );
@@ -358,7 +363,9 @@ export default function MapModule({ className = "", destination = null }) {
       {mode === 'navigate' && showOriginPicker && !pathResult && (
         <div className="campus-nav-origin-panel">
           <div className="campus-nav-origin-panel-header">
-            <span className="campus-nav-origin-icon">📍</span>
+            <span className="campus-nav-origin-icon">
+              <MaterialIcon name="location_on" size={16} color="var(--spus-gold)" />
+            </span>
             <div>
               <div className="campus-nav-origin-dest-label">
                 Destination: <strong>{CAMPUS_NODES[selectedDestination]?.name}</strong>
@@ -384,7 +391,9 @@ export default function MapModule({ className = "", destination = null }) {
                 className="campus-nav-location-item"
                 onClick={() => setOrigin(node.id)}
               >
-                <span className="campus-nav-location-item-icon">{TYPE_ICONS[node.type]}</span>
+                <span className="campus-nav-location-item-icon">
+                  <MaterialIcon name={TYPE_ICONS[node.type] || 'location_on'} size={15} color={TYPE_COLORS[node.type]} />
+                </span>
                 <span>{node.name}</span>
               </button>
             ))}
@@ -396,7 +405,9 @@ export default function MapModule({ className = "", destination = null }) {
       {mode === 'navigate' && !selectedDestination && !pathResult && (
         <div className="campus-nav-origin-panel">
           <div className="campus-nav-origin-panel-header">
-            <span className="campus-nav-origin-icon">🧭</span>
+            <span className="campus-nav-origin-icon">
+              <MaterialIcon name="explore" size={16} color="var(--spus-gold)" />
+            </span>
             <div>
               <div className="campus-nav-origin-prompt">Select a destination</div>
               <div style={{ fontSize: '0.75rem', color: 'var(--text-light, #6b7280)' }}>
@@ -440,7 +451,10 @@ export default function MapModule({ className = "", destination = null }) {
             onClick={() => setShowDirections(!showDirections)}
           >
             <div className="campus-nav-directions-summary">
-              <span>📍 {CAMPUS_NODES[origin]?.name} → {CAMPUS_NODES[selectedDestination]?.name}</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                <MaterialIcon name="location_on" size={15} color="var(--spus-gold)" />
+                {CAMPUS_NODES[origin]?.name} → {CAMPUS_NODES[selectedDestination]?.name}
+              </span>
               <span className="campus-nav-directions-time">
                 ~{Math.ceil((pathResult.distance_pixels * 0.05) / 60)} min walk
               </span>
@@ -451,12 +465,14 @@ export default function MapModule({ className = "", destination = null }) {
           {showDirections && (
             <div className="campus-nav-directions-steps">
               <div className="campus-nav-step start end">
-                <span className="campus-nav-step-icon">🚶</span>
+                <span className="campus-nav-step-icon">
+                  <MaterialIcon name="near_me" size={16} color="var(--spus-green)" />
+                </span>
                 <span className="campus-nav-step-text">Follow the highlighted path on the map.</span>
               </div>
               
-              <button className="campus-nav-reset-btn" onClick={resetNavigation}>
-                🔄 Change Starting Point
+              <button className="campus-nav-reset-btn" onClick={resetNavigation} style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+                <MaterialIcon name="refresh" size={15} style={{ marginRight: '6px' }} /> Change Starting Point
               </button>
             </div>
           )}
@@ -467,7 +483,9 @@ export default function MapModule({ className = "", destination = null }) {
       {mode === 'mapper' && (
         <div className="campus-nav-mapper-panel">
           <div className="campus-nav-mapper-header">
-            <h3>📐 Coordinate Mapper</h3>
+            <h3 style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <MaterialIcon name="map" size={18} /> Coordinate Mapper
+            </h3>
             <span className="campus-nav-mapper-progress">{mappedCount}/{totalCount} mapped</span>
           </div>
           
@@ -492,8 +510,8 @@ export default function MapModule({ className = "", destination = null }) {
                   className={`campus-nav-mapper-item ${isActive ? 'active' : ''} ${isMapped ? 'mapped' : ''}`}
                   onClick={() => setActiveMapperNode(node.id)}
                 >
-                  <span className="campus-nav-mapper-status">
-                    {isMapped ? '✅' : '⬜'}
+                  <span className="campus-nav-mapper-status" style={{ display: 'flex', alignItems: 'center' }}>
+                    <MaterialIcon name={isMapped ? "check_circle" : "circle"} size={14} color={isMapped ? "#10B981" : "#D1D5DB"} />
                   </span>
                   <span className="campus-nav-mapper-name">{node.name}</span>
                   {isMapped && (
@@ -506,8 +524,8 @@ export default function MapModule({ className = "", destination = null }) {
             })}
           </div>
 
-          <button className="campus-nav-mapper-copy-btn" onClick={copyMapperJSON}>
-            📋 Copy All Coordinates as JSON
+          <button className="campus-nav-mapper-copy-btn" onClick={copyMapperJSON} style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
+            <MaterialIcon name="assignment" size={15} style={{ marginRight: '6px' }} /> Copy All Coordinates as JSON
           </button>
         </div>
       )}

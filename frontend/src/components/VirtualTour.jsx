@@ -3,6 +3,7 @@ import { ReactPhotoSphereViewer } from 'react-photo-sphere-viewer';
 import { MarkersPlugin } from '@photo-sphere-viewer/markers-plugin';
 import '@photo-sphere-viewer/core/index.css';
 import '@photo-sphere-viewer/markers-plugin/index.css';
+import MaterialIcon from './MaterialIcon';
 
 /**
  * NODES — Virtual Tour locations with 360° panoramas.
@@ -289,7 +290,7 @@ export default function VirtualTour({ className = "" }) {
                    <h4 className="font-bold text-spus-green mb-1 text-xs sm:text-sm">{node.name}</h4>
                    <p className="text-[10px] sm:text-xs text-gray-600 leading-tight border-b border-gray-100 pb-2 mb-2">{node.description}</p>
                    <div className="flex items-center gap-2 text-[9px] sm:text-[10px] font-bold text-spus-gold uppercase tracking-wider">
-                     <span>📸</span> {('ontouchstart' in window) ? 'Tap again to enter 360°' : 'Click to Enter 360°'}
+                     <MaterialIcon name="explore" size={14} color="var(--spus-gold)" /> {('ontouchstart' in window) ? 'Tap again to enter 360°' : 'Click to Enter 360°'}
                    </div>
                 </div>
               </div>
@@ -318,7 +319,7 @@ export default function VirtualTour({ className = "" }) {
         className="vt-back-btn absolute top-4 left-1/2 -translate-x-1/2 z-30 bg-white/90 backdrop-blur shadow-lg py-2 px-4 sm:px-6 rounded-2xl font-bold flex items-center gap-2 hover:bg-white hover:scale-105 border border-spus-gold/30 text-spus-green text-sm transition-all active:scale-95 group"
         onClick={() => setViewMode('aerial')}
       >
-        <span className="group-hover:rotate-[-10deg] transition-transform">🔙</span> 
+        <MaterialIcon name="arrow_back" size={18} color="var(--spus-green)" className="group-hover:-translate-x-0.5 transition-transform" /> 
         <span className="vt-back-label">Back to Aerial View</span>
       </button>
 

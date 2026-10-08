@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import ThemeToggle from './ThemeToggle';
+import MaterialIcon from './MaterialIcon';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell
 } from 'recharts';
@@ -9,6 +10,9 @@ import {
   fetchTrendingConfusion,
   fetchStudentNeeds,
   patchStudentNeed,
+  getPrintReportUrl,
+  getExportCsvUrl,
+  getExportPdfUrl,
 } from '../api/chatApi';
 
 /* ═══════════════════════════════════════════════════════
@@ -223,7 +227,7 @@ export default function AdminDashboard({ user, onBackToChat }) {
             className="admin-action-btn primary"
             style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}
           >
-            <span>🛡️</span> Full Power Admin (Unfold)
+            <MaterialIcon name="shield" size={18} color="#ffffff" /> Full Power Admin (Unfold)
           </a>
           <button className="admin-back-btn" onClick={onBackToChat}>
             ← Back to Chat
@@ -232,9 +236,11 @@ export default function AdminDashboard({ user, onBackToChat }) {
       </div>
 
       {/* Metric Cards */}
-      <div className="admin-metrics-grid">
+      <div className="admin-metrics-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))' }}>
         {loading ? (
           <>
+            <SkeletonCard height="110px" />
+            <SkeletonCard height="110px" />
             <SkeletonCard height="110px" />
             <SkeletonCard height="110px" />
             <SkeletonCard height="110px" />
@@ -243,27 +249,148 @@ export default function AdminDashboard({ user, onBackToChat }) {
         ) : (
           <>
             <div className="admin-metric-card">
-              <div className="metric-icon-wrap" style={{ background: 'rgba(10, 77, 46, 0.1)', color: 'var(--spus-green)' }}>🎓</div>
+              <div className="metric-icon-wrap" style={{ background: 'rgba(10, 77, 46, 0.1)', color: 'var(--spus-green)' }}>
+                <MaterialIcon name="school" size={22} color="var(--spus-green)" />
+              </div>
               <div className="metric-value">{metrics?.total_enrolled ?? 0}</div>
               <div className="metric-label">Total Enrolled</div>
             </div>
             <div className="admin-metric-card">
-              <div className="metric-icon-wrap" style={{ background: 'rgba(220, 38, 38, 0.1)', color: '#DC2626' }}>⚠️</div>
+              <div className="metric-icon-wrap" style={{ background: 'rgba(5, 150, 105, 0.1)', color: '#059669' }}>
+                <MaterialIcon name="chat" size={22} color="#059669" />
+              </div>
+              <div className="metric-value">{metrics?.total_queries ?? 0}</div>
+              <div className="metric-label">Total Inquiries</div>
+            </div>
+            <div className="admin-metric-card">
+              <div className="metric-icon-wrap" style={{ background: 'rgba(212, 175, 55, 0.15)', color: 'var(--spus-gold)' }}>
+                <MaterialIcon name="sentiment_satisfied" size={22} color="var(--spus-gold)" />
+              </div>
+              <div className="metric-value">{metrics?.satisfaction_rate != null ? `${metrics.satisfaction_rate}%` : '100%'}</div>
+              <div className="metric-label">Satisfaction Rate</div>
+            </div>
+            <div className="admin-metric-card">
+              <div className="metric-icon-wrap" style={{ background: 'rgba(220, 38, 38, 0.1)', color: '#DC2626' }}>
+                <MaterialIcon name="warning" size={22} color="#DC2626" />
+              </div>
               <div className="metric-value">{metrics?.at_risk ?? 0}</div>
               <div className="metric-label">At-Risk Students</div>
             </div>
             <div className="admin-metric-card">
-              <div className="metric-icon-wrap" style={{ background: 'rgba(212, 175, 55, 0.1)', color: 'var(--spus-gold)' }}>📋</div>
+              <div className="metric-icon-wrap" style={{ background: 'rgba(245, 158, 11, 0.1)', color: '#F59E0B' }}>
+                <MaterialIcon name="assignment" size={22} color="#F59E0B" />
+              </div>
               <div className="metric-value">{metrics?.unresolved_requests ?? 0}</div>
               <div className="metric-label">Unresolved Requests</div>
             </div>
             <div className="admin-metric-card">
-              <div className="metric-icon-wrap" style={{ background: 'rgba(59, 130, 246, 0.1)', color: '#3B82F6' }}>📝</div>
+              <div className="metric-icon-wrap" style={{ background: 'rgba(59, 130, 246, 0.1)', color: '#3B82F6' }}>
+                <MaterialIcon name="edit_note" size={22} color="#3B82F6" />
+              </div>
               <div className="metric-value">{metrics?.pending_enrollments ?? 0}</div>
               <div className="metric-label">Pending Enrollments</div>
             </div>
           </>
         )}
+      </div>
+
+      {/* Reports & Export Toolbar */}
+      <div className="admin-reports-card" style={{
+        backgroundColor: 'var(--card-bg, rgba(255, 255, 255, 0.8))',
+        backdropFilter: 'blur(10px)',
+        borderRadius: '12px',
+        padding: '16px 20px',
+        border: '1px solid var(--border-color)',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        flexWrap: 'wrap',
+        gap: '12px',
+        marginBottom: '20px',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.04)'
+      }}>
+        <div>
+          <h3 style={{ margin: 0, fontSize: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-dark)' }}>
+            <MaterialIcon name="summarize" size={20} color="var(--spus-green)" />
+            Institutional Reports & Exports
+          </h3>
+          <p style={{ margin: '3px 0 0', fontSize: '0.8rem', color: 'var(--text-light)' }}>
+            Ready-to-print official university analytics with PDF and CSV export capabilities.
+          </p>
+        </div>
+        <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+          <a
+            href={getPrintReportUrl('summary')}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="admin-action-btn"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              textDecoration: 'none',
+              background: 'var(--spus-green)',
+              color: '#ffffff',
+              fontWeight: 600,
+              padding: '8px 14px',
+              borderRadius: '8px'
+            }}
+          >
+            <MaterialIcon name="print" size={16} color="#ffffff" />
+            Ready to Print
+          </a>
+          <a
+            href={getExportPdfUrl('summary')}
+            download
+            className="admin-action-btn"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              textDecoration: 'none',
+              fontWeight: 600,
+              padding: '8px 14px',
+              borderRadius: '8px'
+            }}
+          >
+            <MaterialIcon name="picture_as_pdf" size={16} color="#DC2626" />
+            Export PDF
+          </a>
+          <a
+            href={getExportCsvUrl('summary')}
+            download
+            className="admin-action-btn"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              textDecoration: 'none',
+              fontWeight: 600,
+              padding: '8px 14px',
+              borderRadius: '8px'
+            }}
+          >
+            <MaterialIcon name="table_chart" size={16} color="#059669" />
+            Summary CSV
+          </a>
+          <a
+            href={getExportCsvUrl('student_needs')}
+            download
+            className="admin-action-btn"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '6px',
+              textDecoration: 'none',
+              fontWeight: 600,
+              padding: '8px 14px',
+              borderRadius: '8px'
+            }}
+          >
+            <MaterialIcon name="file_download" size={16} color="#2563EB" />
+            Needs Log CSV
+          </a>
+        </div>
       </div>
 
       {/* Charts Row */}
