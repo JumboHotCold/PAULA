@@ -96,10 +96,10 @@ export default function LoginPage({ onLogin }) {
                 </div>
                 <div>
                   <h1 className="text-2xl font-bold tracking-tight" style={{ fontFamily: 'var(--font-family-heading)' }}>
-                    PauliBot
+                    PAULA
                   </h1>
                   <p className="text-sm text-text-secondary font-light">
-                    Saint Paul University Surigao
+                    Paulinian Artificial User Support and Learning Assistant • SPUS
                   </p>
                 </div>
               </div>
@@ -213,7 +213,7 @@ export default function LoginPage({ onLogin }) {
                   Visitor Access
                 </h2>
                 <p className="text-sm text-text-secondary font-light mb-8 max-w-xs mx-auto leading-relaxed">
-                  Explore PauliBot as a guest. Ask about admissions, programs, campus facilities, and more — no account needed.
+                  Explore PAULA as a guest. Ask about admissions, programs, campus facilities, and more — no account needed.
                 </p>
 
                 {/* Guest Button */}
@@ -251,7 +251,7 @@ export default function LoginPage({ onLogin }) {
 
         {/* Footer */}
         <p className="text-center text-[0.65rem] text-text-muted mt-6 animate-fade-in-up animation-delay-400">
-          © 2026 Saint Paul University Surigao — PauliBot v2.0
+          © 2026 Saint Paul University Surigao — PAULA v2.0 (Paulinian Artificial User Support and Learning Assistant)
         </p>
       </div>
     </div>

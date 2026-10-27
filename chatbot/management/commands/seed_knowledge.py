@@ -39,12 +39,17 @@ class Command(BaseCommand):
 
         # Seed FAQs
         for faq_data in FAQS:
+            defaults = {
+                'category': faq_data['category'],
+                'answer': faq_data['answer'],
+            }
+            if 'source_type' in faq_data:
+                defaults['source_type'] = faq_data['source_type']
+            if 'source_office' in faq_data:
+                defaults['source_office'] = faq_data['source_office']
             obj, created = FAQ.objects.update_or_create(
                 question=faq_data['question'],
-                defaults={
-                    'category': faq_data['category'],
-                    'answer': faq_data['answer'],
-                }
+                defaults=defaults
             )
             status = "CREATED" if created else "UPDATED"
             self.stdout.write(f"  [{status}] FAQ: {obj.question}")

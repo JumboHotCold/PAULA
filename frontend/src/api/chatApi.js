@@ -1,6 +1,6 @@
 /**
- * PauliBot Chat API Layer
- * =======================
+ * PAULA Chat API Layer
+ * ====================
  * Handles all communication with the Django REST Framework backend.
  * Uses fetch with credentials for session-based auth + CSRF protection.
  */

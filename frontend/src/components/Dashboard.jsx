@@ -6,18 +6,54 @@ import VirtualTour from './VirtualTour';
 import MapModule from './MapModule';
 import PromptGrid from './PromptGrid';
 import MaterialIcon from './MaterialIcon';
+import PaulaAvatar from './PaulaAvatar';
+import UserAvatar from './UserAvatar';
 
 // =============================================================================
 // SUB-COMPONENTS FOR Markdown & Sources
 // =============================================================================
 
-function CheckboxLine({ text, indent }) {
-  const [checked, setChecked] = useState(false);
+function renderFormattedText(str) {
+  if (!str) return '';
+  const parts = [];
+  const regex = /(\*\*.*?\*\*|\[.*?\]\(.*?\))/g;
+  let lastIndex = 0;
+  let match;
+  while ((match = regex.exec(str)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(str.substring(lastIndex, match.index));
+    }
+    const token = match[0];
+    if (token.startsWith('**') && token.endsWith('**')) {
+      parts.push(<strong key={match.index}>{token.slice(2, -2)}</strong>);
+    } else if (token.startsWith('[')) {
+      const linkMatch = token.match(/\[(.*?)\]\((.*?)\)/);
+      if (linkMatch) {
+        parts.push(
+          <a key={match.index} href={linkMatch[2]} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)', textDecoration: 'underline', fontWeight: 500 }}>
+            {linkMatch[1]}
+          </a>
+        );
+      } else {
+        parts.push(token);
+      }
+    }
+    lastIndex = regex.lastIndex;
+  }
+  if (lastIndex < str.length) {
+    parts.push(str.substring(lastIndex));
+  }
+  return parts.length > 0 ? parts : str;
+}
+
+function ListItemLine({ text, indent, bullet }) {
   return (
-    <label style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', cursor: 'pointer', marginLeft: indent.length * 8 + 'px', opacity: checked ? 0.6 : 1, textDecoration: checked ? 'line-through' : 'none', marginBottom: '6px' }}>
-      <input type="checkbox" checked={checked} onChange={(e) => setChecked(e.target.checked)} style={{ marginTop: '5px', accentColor: 'var(--spus-green)' }} />
-      <span style={{ flex: 1 }}>{text}</span>
-    </label>
+    <div style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginLeft: `${(indent?.length || 0) * 8 + 6}px`, marginBottom: '6px', lineHeight: '1.5' }}>
+      <span style={{ color: 'var(--spus-green, #005529)', fontWeight: 600, minWidth: bullet && bullet.endsWith('.') ? '22px' : '10px', userSelect: 'none' }}>
+        {bullet}
+      </span>
+      <span style={{ flex: 1 }}>{renderFormattedText(text)}</span>
+    </div>
   );
 }
 
@@ -25,12 +61,15 @@ function MarkdownRenderer({ text }) {
   return (
     <div className="markdown-renderer">
       {text.split('\n').map((line, idx) => {
-        const listRegex = /^(\s*)(?:-\s|\*\s|\d+\.\s)(.*)$/;
-        const match = line.match(listRegex);
-        if (match) {
-          return <CheckboxLine key={idx} text={match[2]} indent={match[1]} />;
+        const unorderedMatch = line.match(/^(\s*)(?:-\s|\*\s)(.*)$/);
+        if (unorderedMatch) {
+          return <ListItemLine key={idx} text={unorderedMatch[2]} indent={unorderedMatch[1]} bullet="•" />;
         }
-        return line.trim() ? <p key={idx} style={{ marginBottom: '8px' }}>{line}</p> : <div key={idx} style={{ height: '8px' }} />;
+        const orderedMatch = line.match(/^(\s*)(\d+\.)\s(.*)$/);
+        if (orderedMatch) {
+          return <ListItemLine key={idx} text={orderedMatch[3]} indent={orderedMatch[1]} bullet={orderedMatch[2]} />;
+        }
+        return line.trim() ? <p key={idx} style={{ marginBottom: '8px' }}>{renderFormattedText(line)}</p> : <div key={idx} style={{ height: '8px' }} />;
       })}
     </div>
   );
@@ -42,7 +81,7 @@ function SourcesAccordion({ sources }) {
   return (
     <div className="sources-container" style={{ marginTop: '12px', fontSize: '0.86em', borderTop: '1px solid var(--color-border)', paddingTop: '8px' }}>
       <button onClick={() => setOpen(!open)} style={{ background: 'none', border: 'none', color: 'var(--color-text-muted)', cursor: 'pointer', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '6px', padding: '4px 0', fontFamily: 'var(--font-family-sans)' }}>
-        <MaterialIcon name="attach_file" size={16} /> Sources <MaterialIcon name="chevron_right" size={14} style={{ transform: open ? 'rotate(90deg)' : 'none', transition: 'transform 0.2s' }} />
+        <MaterialIcon name="attach_file" size={16} /> Sources ({sources.length}) <MaterialIcon name="chevron_right" size={14} style={{ transform: open ? 'rotate(90deg)' : 'none', transition: 'transform 0.2s' }} />
       </button>
       {open && (
         <div style={{ marginTop: '8px', padding: '10px 14px', background: 'var(--color-surface-hover)', borderRadius: '8px', color: 'var(--color-text)', border: '1px solid var(--color-border)' }}>
@@ -203,12 +242,8 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
 
           <div className="sidebar-footer">
             <div className="user-profile" onClick={() => !isGuest && setIsProfileModalOpen(true)} style={{ cursor: isGuest ? 'default' : 'pointer' }}>
-              <div className="avatar">
-                {user.avatar_url ? (
-                  <img src={user.avatar_url.startsWith('http') ? user.avatar_url : `http://localhost:8000${user.avatar_url}`} alt="Avatar" style={{ width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover' }} />
-                ) : (
-                  initial
-                )}
+              <div className="avatar" style={{ background: 'transparent' }}>
+                <UserAvatar user={user} size="sm" />
               </div>
               <div className="user-info">
                 <div>{user.nickname || user.name}</div>
@@ -297,7 +332,7 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
         <div className="messages-container">
           {isChatEmpty ? (
             <div className="empty-chat-state">
-              <div className="w-24 h-24 mb-4 mx-auto flex items-center justify-center">
+              <div className="w-24 h-24 mb-4 mx-auto flex items-center justify-center" title="St. Paul University Surigao">
                  <img 
                    src="/spus-logo.webp" 
                    alt="SPUS Logo" 
@@ -306,10 +341,10 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
                  />
               </div>
               <h2 className="empty-chat-title">
-                PauliBot
+                PAULA
               </h2>
               <p className="empty-chat-subtitle">
-                Saint Paul University Surigao AI Assistant
+                Paulinian Artificial User Support and Learning Assistant • SPUS
               </p>
               
               {isGuest && (
@@ -331,7 +366,11 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
                 return (
                   <div key={idx} className={`message-wrapper ${msg.isUser ? 'user' : 'bot'}`}>
                     <div className="message-avatar">
-                      {msg.isUser ? initial : 'P'}
+                      {msg.isUser ? (
+                        <UserAvatar user={user} size="sm" />
+                      ) : (
+                        <PaulaAvatar size="sm" variant="crest" />
+                      )}
                     </div>
                     <div className="message-content">
                       {msg.isUser ? text : <MarkdownRenderer text={text} />}
@@ -360,7 +399,9 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
 
               {isTyping && (
                 <div className="message-wrapper bot">
-                  <div className="message-avatar">P</div>
+                  <div className="message-avatar">
+                    <PaulaAvatar size="sm" variant="crest" isTyping={true} />
+                  </div>
                   <div className="message-content" style={{ padding: '0' }}>
                     <div className="typing-indicator">
                       <div className="typing-dot"></div>

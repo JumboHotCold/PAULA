@@ -155,12 +155,20 @@ class Command(BaseCommand):
                     all_chunks.append(chunk_info)
 
                     if not dry_run:
-                        # Step 5: Save to database
+                        # Step 5: Save to database with source_type='handbook'
                         obj, created = FAQ.objects.get_or_create(
                             category="Student Handbook",
                             question=chunk_info['question'],
-                            defaults={'answer': chunk_info['answer']}
+                            defaults={
+                                'answer': chunk_info['answer'],
+                                'source_type': 'handbook',
+                                'source_office': 'Student Affairs'
+                            }
                         )
+                        if not created and (obj.source_type != 'handbook' or not obj.source_office):
+                            obj.source_type = 'handbook'
+                            obj.source_office = 'Student Affairs'
+                            obj.save(update_fields=['source_type', 'source_office'])
                         status = "CREATED" if created else "EXISTS"
                         self.stdout.write(f"    [{status}] {chunk_info['question']}")
                     else:

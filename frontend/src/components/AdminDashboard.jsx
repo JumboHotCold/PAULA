@@ -401,7 +401,7 @@ export default function AdminDashboard({ user, onBackToChat }) {
           {loading ? (
             <SkeletonCard height="200px" />
           ) : pulseData.length === 0 ? (
-            <p className="admin-empty">No chat data yet. Heatmap will populate as students interact with PauliBot.</p>
+            <p className="admin-empty">No chat data yet. Heatmap will populate as students interact with PAULA.</p>
           ) : (
             <div style={{ overflowX: 'auto', padding: '10px 0' }}>
               <CampusPulseHeatmap data={pulseData} />

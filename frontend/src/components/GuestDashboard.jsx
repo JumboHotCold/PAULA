@@ -41,10 +41,10 @@ export default function GuestDashboard({ onLogout, messages, isTyping, onSend })
                  <img src="/spus-logo.webp" alt="SPUS Logo" className="w-full h-full object-contain filter drop-shadow-md" />
               </div>
               <h2 className="text-[2.5rem] text-[#004d26] font-bold mb-1 tracking-tight text-center" style={{ fontFamily: 'var(--font-family-heading)' }}>
-                PauliBot
+                PAULA
               </h2>
               <p className="text-gray-500 text-[0.95rem] mb-4 font-medium text-center">
-                Saint Paul University Surigao AI Assistant
+                Paulinian Artificial User Support and Learning Assistant • SPUS
               </p>
               
               <div className="flex items-center gap-2 text-amber-600 text-[0.85rem] font-bold mb-10 bg-amber-50 px-4 py-2 rounded-full border border-amber-200">

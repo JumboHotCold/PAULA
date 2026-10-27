@@ -51,8 +51,8 @@ export default function AuthPage({ onLogin, onNavigateRegister }) {
             style={{ height: '50px', width: '50px', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.2))', objectFit: 'contain' }}
           />
           <div className="brand-text">
-            <h1>PauliBot</h1>
-            <p>Saint Paul University Surigao</p>
+            <h1>PAULA</h1>
+            <p>Paulinian Artificial User Support and Learning Assistant • SPUS</p>
           </div>
         </a>
         <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
@@ -112,7 +112,7 @@ export default function AuthPage({ onLogin, onNavigateRegister }) {
             <div className="guest-content">
               <h3>Visitor Access</h3>
               <p style={{ marginBottom: '25px', opacity: 0.9 }}>
-                Need quick answers? Interact with PauliBot instantly without logging in.
+                Need quick answers? Interact with PAULA instantly without logging in.
                 Perfect for prospective students and visitors.
               </p>
 

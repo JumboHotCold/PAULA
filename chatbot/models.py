@@ -207,6 +207,25 @@ class FAQ(models.Model):
     question = models.CharField(max_length=500, help_text="The question or topic")
     answer = models.TextField(help_text="The official answer")
     
+    # Source tracking for knowledge priority (Office > Website > Handbook)
+    SOURCE_TYPES = [
+        ('office', 'Office-Submitted'),    # From admin/dept letters (Highest authority)
+        ('handbook', 'Student Handbook'),   # From Handbook.pdf OCR (Foundational policies)
+        ('website', 'Website'),            # From spus.edu.ph scrapes (Current facts)
+        ('curated', 'Curated/Manual'),     # From data.py or admin panel
+    ]
+    source_type = models.CharField(
+        max_length=20,
+        default='curated',
+        choices=SOURCE_TYPES,
+        help_text="Origin of this entry: office-submitted, handbook, website, or curated"
+    )
+    source_office = models.CharField(
+        max_length=100,
+        null=True, blank=True,
+        help_text="Office/Department that provided this (e.g. 'Registrar', 'Finance', 'CEIT', 'CHS')"
+    )
+
     # AI Search embedding
     embedding = VectorField(dimensions=384, null=True, blank=True)
 
@@ -219,7 +238,39 @@ class FAQ(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return self.question
+        prefix = f"[{self.source_office}] " if self.source_office else f"[{self.get_source_type_display()}] "
+        return f"{prefix}{self.question}"
+
+
+class WebResource(models.Model):
+    """
+    Official institutional web resources scraped from spus.edu.ph.
+    Used by PauliBot RAG to provide verified answers with citation URLs.
+    """
+    title = models.CharField(max_length=255, help_text="Page or Section title")
+    url = models.URLField(max_length=500, help_text="Official SPUS URL")
+    category = models.CharField(max_length=100, default="General", help_text="Category (e.g., 'Admissions', 'Academics', 'TVET', 'About')")
+    content = models.TextField(help_text="Extracted text content from the webpage")
+    last_scraped = models.DateTimeField(auto_now=True)
+    
+    # AI Search embedding
+    embedding = VectorField(dimensions=384, null=True, blank=True, help_text="Vector embedding for semantic search")
+
+    class Meta:
+        verbose_name = "Web Resource"
+        verbose_name_plural = "Web Resources"
+        ordering = ['category', 'title']
+
+    def save(self, *args, **kwargs):
+        if self.pk:
+            old_obj = WebResource.objects.get(pk=self.pk)
+            if old_obj.title != self.title or old_obj.content != self.content:
+                self.embedding = None
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f"[{self.category}] {self.title}"
+
 
 
 # ==============================================================================

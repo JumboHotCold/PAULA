@@ -30,6 +30,9 @@ GEMINI_API_KEY = config('GEMINI_API_KEY', default='')
 # Groq API Key (Phase 2 — Live Chat AI Engine)
 GROQ_API_KEY = config('GROQ_API_KEY', default='')
 
+# OpenAI API Key (Fallback AI Engine)
+OPENAI_API_KEY = config('OPENAI_API_KEY', default='')
+
 # Debug mode controlled by environment
 DEBUG = config('DEBUG', default=False, cast=bool)
 

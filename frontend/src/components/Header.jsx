@@ -18,10 +18,10 @@ export default function Header({ user, onLogout }) {
         </div>
         <div>
           <h1 className="text-lg font-bold tracking-tight" style={{ fontFamily: 'var(--font-family-heading)' }}>
-            PauliBot
+            PAULA
           </h1>
           <p className="text-xs text-text-secondary font-light">
-            SPUS Virtual Assistant
+            Paulinian Artificial User Support and Learning Assistant
           </p>
         </div>
       </div>

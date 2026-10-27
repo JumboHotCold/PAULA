@@ -67,13 +67,19 @@ class Command(BaseCommand):
         # ── Structured entries parsed from the text ──
         entries = self._parse_structured_entries(content)
         for entry in entries:
+            defaults = {
+                'category': entry['category'],
+                'answer': entry['answer'],
+                'embedding': None,  # Force re-embed
+            }
+            if 'source_type' in entry:
+                defaults['source_type'] = entry['source_type']
+            if 'source_office' in entry:
+                defaults['source_office'] = entry['source_office']
+
             obj, created = FAQ.objects.update_or_create(
                 question=entry['question'],
-                defaults={
-                    'category': entry['category'],
-                    'answer': entry['answer'],
-                    'embedding': None,  # Force re-embed
-                }
+                defaults=defaults
             )
             status = "CREATED" if created else "UPDATED"
             self.stdout.write(f"  [{status}] {entry['category']}: {entry['question'][:80]}")
@@ -183,6 +189,49 @@ class Command(BaseCommand):
                 "category": "Academics - College",
                 "question": "What is the SPUS College Department? How do I contact the registrar?",
                 "answer": college
+            })
+
+        # ── 10b. ALL Undergraduate Programs (Unified comprehensive entry) ──
+        # This ensures a broad "What programs are available?" query returns ALL colleges
+        all_programs = _extract_between(content, "Undergraduate Programs", "SPUS TVET")
+        if all_programs:
+            entries.append({
+                "category": "Academics",
+                "question": "What programs are offered at SPUS? What are the available undergraduate programs? What courses are available?",
+                "source_type": "office",
+                "source_office": "Registrar",
+                "answer": (
+                    "Saint Paul University Surigao (SPUS) offers a comprehensive range of undergraduate programs "
+                    "across five (5) colleges:\n\n"
+                    "**College of Health Sciences (4-Year Curriculum)**\n"
+                    "- Bachelor of Science in Nursing\n"
+                    "- Bachelor of Science in Psychology\n\n"
+                    "**College of Education, Arts and Sciences (3-Year Curriculum)**\n"
+                    "- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n"
+                    "- Bachelor of Science in Mathematics\n"
+                    "- Bachelor of Science in Public Administration\n"
+                    "- Bachelor of Elementary Education\n"
+                    "- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n"
+                    "- Bachelor of Early Childhood Education\n"
+                    "- Bachelor of Physical Education\n\n"
+                    "**College of Business Management and Accountancy (4-Year Curriculum)**\n"
+                    "- Bachelor of Science in Accountancy\n"
+                    "- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n"
+                    "- Bachelor of Science in Hospitality Management\n"
+                    "- Bachelor of Science in Tourism Management\n"
+                    "- Bachelor of Science in Accounting and Information System\n"
+                    "- Bachelor of Science in Office Administration\n\n"
+                    "**College of Engineering & Information Technology (4-Year Curriculum)**\n"
+                    "- Bachelor of Science in Mining Engineering\n"
+                    "- Bachelor of Science in Civil Engineering\n"
+                    "- Bachelor of Science in Computer Engineering\n"
+                    "- Bachelor of Science in Information Technology\n\n"
+                    "**College of Criminal Justice Education (4-Year Curriculum)**\n"
+                    "- Bachelor of Science in Criminology\n"
+                    "- Bachelor of Forensic Science\n\n"
+                    "SPUS also offers Graduate School programs (PhD, Masters) and TVET/TESDA programs. "
+                    "For inquiries, contact the Registrar at registrar@spus.edu.ph or call 09635606094."
+                )
             })
 
         # ── 11. College of Health Sciences ──

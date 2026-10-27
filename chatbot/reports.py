@@ -171,7 +171,7 @@ def generate_analytics_csv(report_type='summary'):
 
     if report_type == 'student_needs':
         writer.writerow([
-            'Saint Paul University Surigao - PauliBot Student Needs Case Log'
+            'Saint Paul University Surigao - PAULA Student Needs Case Log'
         ])
         writer.writerow([f'Exported At: {timezone.now().strftime("%Y-%m-%d %H:%M:%S")}'])
         writer.writerow([])
@@ -197,7 +197,7 @@ def generate_analytics_csv(report_type='summary'):
 
     elif report_type == 'queries':
         writer.writerow([
-            'Saint Paul University Surigao - PauliBot Query & Interaction Log'
+            'Saint Paul University Surigao - PAULA Query & Interaction Log'
         ])
         writer.writerow([f'Exported At: {timezone.now().strftime("%Y-%m-%d %H:%M:%S")}'])
         writer.writerow([])
@@ -217,7 +217,7 @@ def generate_analytics_csv(report_type='summary'):
     else: # 'summary' executive report
         data = get_analytics_summary_data()
         kpis = data['kpis']
-        writer.writerow(['Saint Paul University Surigao - PauliBot Institutional Analytics Summary'])
+        writer.writerow(['Saint Paul University Surigao - PAULA Institutional Analytics Summary'])
         writer.writerow([f'Generated: {data["generated_at"]}'])
         writer.writerow([])
         writer.writerow(['KEY PERFORMANCE INDICATORS', 'VALUE'])
@@ -362,7 +362,7 @@ def generate_analytics_pdf(report_type='summary'):
     elements.append(HRFlowable(width="100%", thickness=2, color=gold_color, spaceAfter=8, spaceBefore=4))
 
     # Title
-    elements.append(Paragraph("PauliBot AI Campus Pulse & Institutional Analytics Report", title_style))
+    elements.append(Paragraph("PAULA AI Campus Pulse & Institutional Analytics Report", title_style))
     elements.append(Paragraph("Comprehensive evaluation of student inquiries, flagged institutional needs, and sentiment metrics.", subtitle_style))
     elements.append(Spacer(1, 10))
 
@@ -378,7 +378,7 @@ def generate_analytics_pdf(report_type='summary'):
         [
             Paragraph("Total Inquiries Handled", cell_bold_style),
             Paragraph(str(kpis['total_queries']), cell_style),
-            Paragraph("Total user questions processed through PauliBot AI", cell_style)
+            Paragraph("Total user questions processed through PAULA AI", cell_style)
         ],
         [
             Paragraph("Active / Enrolled Students", cell_bold_style),
@@ -525,7 +525,7 @@ def generate_analytics_pdf(report_type='summary'):
     # --- Sign-off / Signature Block ---
     sign_block = [
         [
-            Paragraph("<b>Prepared by:</b><br/><br/><br/>_____________________________________<br/>PauliBot Administrative System", cell_style),
+            Paragraph("<b>Prepared by:</b><br/><br/><br/>_____________________________________<br/>PAULA Administrative System", cell_style),
             Paragraph("<b>Noted and Approved by:</b><br/><br/><br/>_____________________________________<br/>Dean / Director of Student Affairs", cell_style)
         ]
     ]
@@ -612,7 +612,7 @@ def render_print_html(report_type='summary'):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PauliBot Institutional Analytics Report — SPUS</title>
+    <title>PAULA Institutional Analytics Report — SPUS</title>
     <style>
         :root {{
             --spus-green: #0A4D2E;
@@ -851,7 +851,7 @@ def render_print_html(report_type='summary'):
 
     <div class="action-bar">
         <div>
-            <strong>PauliBot Institutional Reporting</strong>
+            <strong>PAULA Institutional Reporting</strong>
             <span style="color: var(--text-gray); margin-left: 8px; font-size: 12px;">Format: Ready to Print</span>
         </div>
         <div style="display: flex; gap: 10px;">
@@ -871,13 +871,13 @@ def render_print_html(report_type='summary'):
             <div class="header-title">
                 <h1>SAINT PAUL UNIVERSITY SURIGAO</h1>
                 <p>Office of Student Affairs & Technology Services • Surigao City, Philippines</p>
-                <p style="margin-top: 4px; font-weight: 700; color: var(--spus-green); font-size: 14px;">PauliBot AI Analytics & Campus Pulse Report</p>
+                <p style="margin-top: 4px; font-weight: 700; color: var(--spus-green); font-size: 14px;">PAULA AI Analytics & Campus Pulse Report</p>
             </div>
             <div class="header-meta">
                 <strong>OFFICIAL INSTITUTIONAL RECORD</strong><br/>
                 Date: {data['generated_at']}<br/>
                 Reporting Scope: {data['date_range']}<br/>
-                System: PauliBot v2.0 Production
+                System: PAULA v2.0 Production
             </div>
         </div>
 
@@ -967,7 +967,7 @@ def render_print_html(report_type='summary'):
         <div class="signature-grid">
             <div class="signature-box">
                 <p>Prepared by:</p>
-                <div class="signature-line">PauliBot Administration & Research Team</div>
+                <div class="signature-line">PAULA Administration & Research Team</div>
                 <p style="color: var(--text-gray); font-size: 11px;">Saint Paul University Surigao</p>
             </div>
             <div class="signature-box">

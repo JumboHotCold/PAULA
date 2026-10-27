@@ -1,0 +1,39 @@
+{
+  "office": "Registrar",
+  "category": "Registrar's Office",
+  "source_type": "office",
+  "items": [
+    {
+      "question": "What is the procedure for Changing, Adding, Dropping, or Withdrawing subjects (Document URO-PR-007)?",
+      "answer": "The official University Registrar procedure for Changing, Adding, Dropping, or Withdrawal of Subjects (URO-PR-007) applies to all officially enrolled students in basic and higher education:\n1. Step 1 (Student): Requests a Changing/Adding/Dropping/Withdrawal form from the Registrar's Clerk.\n2. Step 2 (Clerk): Issues the official Request for Changing/Adding/Dropping/Withdrawal form.\n3. Step 3 (Student): Fills out the form completely with subject codes, descriptions, and valid reasons.\n4. Step 4 (Approvals): Secures required approval signatures from the Dean, Subject Teacher/STL, University Registrar, and Vice President for Finance Services.\n5. Step 5 (Student): Furnishes final signed copies to the Finance Office and the University Registrar's Office to record and finalize the adjustment."
+    },
+    {
+      "question": "How can an old or continuing college student enroll at SPUS (Document URO-PR-016)?",
+      "answer": "Enrollment procedure for Old / Continuing Students in Higher Education (URO-PR-016):\n1. Academic Advising: Go to the Dean's or Program Chair's office for curriculum advising and evaluation. Obtain the printed Pre-Registration Form.\n2. Assessment of Fees: Proceed to the Student Accounts / Finance Office for assessment of tuition and fees. Obtain the printed Assessment Form.\n3. Payment: Pay the required enrollment fee at the Cashier's counter and receive the Official Receipt (OR).\n4. Encoding and Validation: Proceed to the Registrar's Clerk for system encoding and validation. The student's enrollment is finalized upon receipt of the validated registration."
+    },
+    {
+      "question": "What is the step-by-step enrollment procedure for transferee students at SPUS (Document URO-PR-017)?",
+      "answer": "Enrollment procedure for Transferee Students in Higher Education (URO-PR-017):\n1. Dean's Office (Evaluation & Crediting): Submit Transfer Credentials and Curricular Checklist to the Dean's Office for transcript evaluation and crediting of previous subjects.\n2. Student Affairs Office (SAO) (Encoding & Information): Fill out the Student Information Sheet and submit required documents: Transfer Credentials (Honorable Dismissal / Transcript of Records), PSA Birth Certificate, Certificate of Good Moral Character, and 1 pc 2x2 ID picture.\n3. Finance Office (Payment): Pay the initial or full enrollment fee at the Cashier/Finance Office. Receive the Pre-registration Form and Official Receipt (OR).\n4. Registrar's Office (Validation & Official Enrollment): Proceed to the University Registrar's Office for validation and verification. Receive the official Study Load and Assessment stamped with 'OFFICIALLY ENROLLED'.\n5. ICT Office & Clinic: Proceed to the ICT Office for ID validation/processing, and visit the University Clinic for Health Services medical profiling."
+    },
+    {
+      "question": "What are the required documents for transferee students enrolling at SPUS?",
+      "answer": "Requirements for Transferee Students in Higher Education:\n1. Official Transfer Credentials (Honorable Dismissal / Transcript of Records for evaluation)\n2. Curricular Checklist from previous school\n3. Original PSA Birth Certificate\n4. Original Certificate of Good Moral Character\n5. 1 pc. 2x2 ID picture\n6. Accomplished Student Information Sheet (at SAO)"
+    },
+    {
+      "question": "What is the step-by-step enrollment procedure for incoming freshmen at SPUS (Document URO-PR-005)?",
+      "answer": "Enrollment procedure for Incoming College Freshmen (URO-PR-005):\n1. Guidance Office & Admitting Officer: Take the College Entrance Examination at the Guidance Office. The Admitting Officer verifies submitted admission documents and encodes the student data.\n2. Dean's Office (Advising & Scheduling): Proceed to the Dean's Office for academic advising, schedule plotting, and schedule encoding. Receive the Pre-Registration Form.\n3. Finance Office (Assessment & Payment): Proceed to the Finance Office/Cashier for assessment of fees and payment of initial enrollment fee. Receive the Official Receipt (OR).\n4. Registrar's Office (Validation & Official Enrollment): Proceed to the University Registrar's Office for verification and validation of enrollment. Receive the official Study Load and Assessment stamped with 'OFFICIALLY ENROLLED'.\n5. ICT Office (Student ID): Secure an Official Identification Card (ID) at the ICT Office by presenting the Official Receipt and stamped Study Load.\n6. University Clinic (Health Profiling): Complete the medical profiling form at the University Clinic by presenting the Official Receipt and Study Load."
+    },
+    {
+      "question": "What are the required admission and enrollment documents for incoming freshmen at SPUS?",
+      "answer": "Admission and enrollment requirements for Incoming College Freshmen:\n1. Senior High School (SHS) Report Card (Form 138 / SF9)\n2. Original PSA Birth Certificate\n3. Original Certificate of Good Moral Character\n4. College Entrance Examination Result (from Guidance Office)\n5. 1 pc. 2x2 ID picture\n6. Marriage Certificate (if married)\n7. Accomplished Student Information Sheet"
+    },
+    {
+      "question": "Where do students get their official school ID and what are the requirements?",
+      "answer": "Official Student Identification Cards (IDs) are issued and validated at the ICT Systems and Services Office. Students must present their Official Receipt (OR) for enrollment and their official Study Load stamped 'OFFICIALLY ENROLLED' by the University Registrar."
+    },
+    {
+      "question": "Who must approve the subject adding, dropping, or withdrawal form?",
+      "answer": "The Changing, Adding, Dropping, or Withdrawal of Subjects form (URO-PR-007) requires approval signatures from:\n1. College Dean\n2. Subject Teacher / Subject Team Leader (STL)\n3. University Registrar\n4. Vice President for Finance Services\n\nOnce signed, the student must furnish copies to both the Finance Office and the Registrar's Office."
+    }
+  ]
+}

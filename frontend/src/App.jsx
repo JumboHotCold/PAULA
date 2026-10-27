@@ -17,7 +17,7 @@ import {
   fetchConversationDetails
 } from './api/chatApi';
 
-const GUEST_GREETING = "Hello! Welcome to Saint Paul University Surigao!\n\nI'm PauliBot, your virtual campus assistant. I can help you with admissions, office locations, tuition fees, staff info, and more.\n\nHow may I assist you today?";
+const GUEST_GREETING = "Hello! Welcome to Saint Paul University Surigao!\n\nI'm PAULA (Paulinian Artificial User Support and Learning Assistant), your virtual campus assistant. I can help you with admissions, office locations, tuition fees, staff info, and more.\n\nHow may I assist you today?";
 
 function AdminLogin({ onLogin, onBack }) {
   const [username, setUsername] = useState('');
@@ -183,7 +183,7 @@ export default function App() {
       const Swal = SwalModule.default;
       Swal.fire({
         title: 'Ready to leave?',
-        text: "Are you sure you want to log out of PauliBot?",
+        text: "Are you sure you want to log out of PAULA?",
         icon: 'question',
         showCancelButton: true,
         confirmButtonColor: '#005529',

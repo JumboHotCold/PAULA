@@ -1,9 +1,9 @@
 export default function PromptGrid({ onPromptClick }) {
   const prompts = [
-    "What courses are available?",
+    "What programs are offered?",
     "How do I enroll?",
     "Where is the registrar office?",
-    "School calendar activities"
+    "Does SPUS offer scholarships?"
   ];
 
   return (

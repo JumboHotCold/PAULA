@@ -97,3 +97,4 @@ Pillow
 pymupdf
 google-generativeai
 reportlab>=4.0.0
+openai

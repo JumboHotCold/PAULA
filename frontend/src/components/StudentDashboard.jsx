@@ -27,7 +27,7 @@ export default function StudentDashboard({ user, onLogout, messages, isTyping, o
         {/* Mobile Header */}
         <header className="md:hidden w-full border-b border-gray-200 px-4 py-3 flex items-center justify-between shrink-0 bg-white z-10 shadow-sm">
            <h2 className="text-[#005529] font-bold text-lg" style={{ fontFamily: 'var(--font-family-heading)' }}>
-             PauliBot
+             PAULA
            </h2>
            <button onClick={onNewChat} className="p-2 text-gray-500 hover:text-[#005529]">
              <Plus className="w-6 h-6" />
@@ -38,7 +38,7 @@ export default function StudentDashboard({ user, onLogout, messages, isTyping, o
         {!isChatEmpty && (
           <div className="hidden md:flex w-full px-6 py-5 shrink-0 bg-white/90 backdrop-blur items-center z-10 absolute top-0 left-0 border-b border-gray-100">
              <h2 className="text-[#005529] font-bold text-base" style={{ fontFamily: 'var(--font-family-heading)' }}>
-               Chat with PauliBot
+               Chat with PAULA
              </h2>
           </div>
         )}
@@ -53,10 +53,10 @@ export default function StudentDashboard({ user, onLogout, messages, isTyping, o
                    <img src="/spus-logo.webp" alt="SPUS Logo" className="w-full h-full object-contain filter drop-shadow-md" />
                 </div>
                 <h1 className="text-[2.5rem] text-[#004d26] font-bold mb-1 tracking-tight text-center" style={{ fontFamily: 'var(--font-family-heading)' }}>
-                  PauliBot
+                  PAULA
                 </h1>
                 <p className="text-gray-500 text-[0.95rem] mb-10 font-medium text-center">
-                  Saint Paul University Surigao AI Assistant
+                  Paulinian Artificial User Support and Learning Assistant • SPUS
                 </p>
                 <PromptGrid onPromptClick={onSend} />
               </div>

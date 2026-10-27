@@ -8,7 +8,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from unfold.admin import ModelAdmin
 
-from .models import CustomUser, Conversation, ChatHistory, Location, StaffMember, FAQ, StudentNeed, Announcement
+from .models import CustomUser, Conversation, ChatHistory, Location, StaffMember, FAQ, WebResource, StudentNeed, Announcement
 
 
 # ==============================================================================
@@ -66,9 +66,18 @@ class StaffMemberAdmin(ModelAdmin):
 
 @admin.register(FAQ)
 class FAQAdmin(ModelAdmin):
-    list_display = ('category', 'question')
-    list_filter = ('category',)
-    search_fields = ('question', 'answer')
+    list_display = ('question', 'category', 'source_type', 'source_office')
+    list_filter = ('source_type', 'source_office', 'category')
+    search_fields = ('question', 'answer', 'source_office')
+
+
+@admin.register(WebResource)
+class WebResourceAdmin(ModelAdmin):
+    list_display = ('title', 'category', 'url', 'last_scraped')
+    list_filter = ('category', 'last_scraped')
+    search_fields = ('title', 'content', 'url')
+    readonly_fields = ('last_scraped',)
+
 
 
 # ==============================================================================

@@ -10,7 +10,7 @@ const QUICK_ACTIONS = [
   { icon: 'assignment', label: 'Enrollment Info', prompt: 'How do I enroll at SPUS? What are the requirements?' },
   { icon: 'location_on', label: 'Office Locations', prompt: 'Where are the main offices located in SPUS campus?' },
   { icon: 'payments', label: 'Tuition Fees', prompt: 'What are the current tuition fees at SPUS?' },
-  { icon: 'event', label: 'Academic Calendar', prompt: 'What is the academic calendar for this school year?' },
+  { icon: 'event', label: 'Academic Calendar', prompt: 'What is the SPUS academic calendar and important dates?' },
   { icon: 'phone', label: 'Contact Info', prompt: 'How can I contact the SPUS administration?' },
   { icon: 'school', label: 'Programs Offered', prompt: 'What degree programs are offered at SPUS?' },
 ];

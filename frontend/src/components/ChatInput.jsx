@@ -23,7 +23,7 @@ export default function ChatInput({ onSend, disabled }) {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           disabled={disabled}
-          placeholder="Type a message to PauliBot..."
+          placeholder="Type a message to PAULA..."
           className="w-full py-4 pl-5 pr-14 bg-transparent border-none outline-none
                      text-gray-700 text-[0.95rem] font-body placeholder:text-gray-400
                      disabled:cursor-not-allowed"

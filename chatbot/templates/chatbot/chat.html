@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat - PauliBot</title>
+    <title>Chat - PAULA</title>
     <!-- Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;500;600&display=swap"
@@ -787,8 +787,8 @@
             <div class="empty-state" id="empty-state">
                 <img src="{% static 'chatbot/images/SPUS-Logo1.webp' %}" alt="SPUS Logo"
                     style="height: 100px; width: 100px; object-fit: contain; margin-bottom: 20px; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));">
-                <h1>PauliBot</h1>
-                <p>Saint Paul University Surigao AI Assistant</p>
+                <h1>PAULA</h1>
+                <p>Paulinian Artificial User Support and Learning Assistant • SPUS</p>
                 {% if not user.is_authenticated %}
                 <p style="margin-top: 10px; color: #D4AF37; font-weight: 600;">⚠️ Guest Mode: Chat history not saved</p>
                 {% endif %}
@@ -803,8 +803,8 @@
                     <div class="suggestion-card" onclick="fillInput('Where is the registrar office?')">
                         Where is the registrar office?
                     </div>
-                    <div class="suggestion-card" onclick="fillInput('School calendar activities')">
-                        School calendar activities
+                    <div class="suggestion-card" onclick="fillInput('Does SPUS offer scholarships?')">
+                        Does SPUS offer scholarships?
                     </div>
                 </div>
             </div>
@@ -812,7 +812,7 @@
 
         <div class="input-area">
             <div class="input-wrapper">
-                <input type="text" class="chat-input" id="message-input" placeholder="Type a message to PauliBot..."
+                <input type="text" class="chat-input" id="message-input" placeholder="Type a message to PAULA..."
                     autocomplete="off">
                 <button class="send-btn" id="send-btn" onclick="sendMessage()">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -831,7 +831,7 @@
         <div class="modal-box">
             <div class="modal-icon">👋</div>
             <h3>Leaving so soon?</h3>
-            <p>Are you sure you want to log out of PauliBot?</p>
+            <p>Are you sure you want to log out of PAULA?</p>
             <div class="modal-actions">
                 <button class="modal-btn modal-btn-cancel" onclick="hideLogoutModal()">Cancel</button>
                 <a href="{% url 'logout_page' %}" class="modal-btn modal-btn-logout">Logout</a>
@@ -880,7 +880,7 @@
             return { cleanText, suggestions };
         }
 
-        function appendMessage(text, sender, isUser, chatHistoryId = null, existingFeedback = null) {
+        function appendMessage(text, sender, isUser, chatHistoryId = null, existingFeedback = null, sources = null) {
             // Hide empty state if visible
             if (emptyState) emptyState.style.display = 'none';
 
@@ -905,6 +905,35 @@
                 content.innerHTML = `<pre>${escapeHtml(cleanText)}</pre>`;
 
                 contentWrapper.appendChild(content);
+
+                // Sources list (if provided)
+                if (sources && sources.length > 0) {
+                    const sourcesDiv = document.createElement('div');
+                    sourcesDiv.style.cssText = 'margin-top: 8px; font-size: 0.85em; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px;';
+                    const toggleBtn = document.createElement('button');
+                    toggleBtn.style.cssText = 'background:none; border:none; color:#00b050; font-weight:600; cursor:pointer; display:flex; align-items:center; gap:4px; padding:0;';
+                    toggleBtn.innerHTML = `📎 Sources (${sources.length}) ▾`;
+                    const listDiv = document.createElement('div');
+                    listDiv.style.cssText = 'display:none; margin-top:6px; padding:8px; background:rgba(0,0,0,0.2); border-radius:6px;';
+                    sources.forEach(s => {
+                        const item = document.createElement('div');
+                        item.style.cssText = 'margin-bottom:4px; line-height:1.4;';
+                        if (s.url) {
+                            item.innerHTML = `📄 <a href="${s.url}" target="_blank" rel="noopener noreferrer" style="color:#00b050; text-decoration:underline;">${escapeHtml(s.title)}</a>`;
+                        } else {
+                            item.innerHTML = `📄 ${escapeHtml(s.title)}`;
+                        }
+                        listDiv.appendChild(item);
+                    });
+                    toggleBtn.onclick = () => {
+                        const isHidden = listDiv.style.display === 'none';
+                        listDiv.style.display = isHidden ? 'block' : 'none';
+                        toggleBtn.innerHTML = `📎 Sources (${sources.length}) ${isHidden ? '▴' : '▾'}`;
+                    };
+                    sourcesDiv.appendChild(toggleBtn);
+                    sourcesDiv.appendChild(listDiv);
+                    contentWrapper.appendChild(sourcesDiv);
+                }
 
                 // Feedback buttons (only for authenticated users with a saved chat entry)
                 if (chatHistoryId) {
@@ -1049,7 +1078,7 @@
 
                 // Handle Response
                 if (data.response) {
-                    appendMessage(data.response, 'PauliBot', false, data.chat_history_id);
+                    appendMessage(data.response, 'PAULA', false, data.chat_history_id, null, data.sources);
 
                     // Update current Conversation ID if newly created
                     if (data.conversation_id && data.conversation_id !== currentConversationId) {
@@ -1063,12 +1092,12 @@
                     }
 
                 } else if (data.error) {
-                    appendMessage("Error: " + data.error, 'PauliBot', false);
+                    appendMessage("Error: " + data.error, 'PAULA', false);
                 }
 
             } catch (error) {
                 document.getElementById(loadingId).remove();
-                appendMessage("Network error. Please try again.", 'PauliBot', false);
+                appendMessage("Network error. Please try again.", 'PAULA', false);
                 console.error(error);
             }
 
@@ -1133,7 +1162,7 @@
                 emptyState.style.display = 'none';
                 messages.forEach(msg => {
                     appendMessage(msg.message, 'You', true);
-                    appendMessage(msg.response, 'PauliBot', false, msg.id, msg.feedback);
+                    appendMessage(msg.response, 'PAULA', false, msg.id, msg.feedback);
                 });
             } else {
                 messagesContainer.innerHTML = '';
