@@ -52,7 +52,7 @@ export default function MapModule({ className = "", destination = null }) {
   // ── Sync destination prop ──
   useEffect(() => {
     if (destination) {
-      const resolvedId = resolveLocationFromText(destination) || destination;
+      const resolvedId = CAMPUS_NODES[destination] ? destination : resolveLocationFromText(destination);
       if (CAMPUS_NODES[resolvedId]) {
         setSelectedDestination(resolvedId);
         setShowOriginPicker(true);

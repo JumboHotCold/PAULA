@@ -1,0 +1,443 @@
+{
+  "passed": 13,
+  "checks": [
+    {
+      "query": "Who is the University President?",
+      "passed": true,
+      "elapsed_ms": 224.1,
+      "response": "Sr. Marie Rosanne Mallillin, SPCS — University President\n\n**Source review:** The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | University President | Sr. Marie Rosanne Mallillin, SPCS",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.619696+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | University President | Sr. Marie Rosanne Mallillin, SPCS",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 99,
+              "retrieved_at": "2026-10-27T14:12:30.732196+00:00"
+            }
+          ],
+          "review_notes": [
+            "The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office."
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Who is currently the University President?",
+      "passed": true,
+      "elapsed_ms": 2020.18,
+      "response": "Sr. Marie Rosanne Mallillin, SPCS — University President\n\n**Source review:** The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office.\n\nThis reflects the stored source snapshot; it does not independently confirm changes made today.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | University President | Sr. Marie Rosanne Mallillin, SPCS",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.619696+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | University President | Sr. Marie Rosanne Mallillin, SPCS",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 99,
+              "retrieved_at": "2026-10-27T14:12:30.732196+00:00"
+            }
+          ],
+          "review_notes": [
+            "The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office."
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Who is the university president now?",
+      "passed": true,
+      "elapsed_ms": 131.38,
+      "response": "Sr. Marie Rosanne Mallillin, SPCS — University President\n\n**Source review:** The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office.\n\nThis reflects the stored source snapshot; it does not independently confirm changes made today.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | University President | Sr. Marie Rosanne Mallillin, SPCS",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.619696+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | University President | Sr. Marie Rosanne Mallillin, SPCS",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 99,
+              "retrieved_at": "2026-10-27T14:12:30.732196+00:00"
+            }
+          ],
+          "review_notes": [
+            "The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office."
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Who is the university president today?",
+      "passed": true,
+      "elapsed_ms": 91.58,
+      "response": "Sr. Marie Rosanne Mallillin, SPCS — University President\n\n**Source review:** The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office.\n\nThis reflects the stored source snapshot; it does not independently confirm changes made today.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | University President | Sr. Marie Rosanne Mallillin, SPCS",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.619696+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | University President | Sr. Marie Rosanne Mallillin, SPCS",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 99,
+              "retrieved_at": "2026-10-27T14:12:30.732196+00:00"
+            }
+          ],
+          "review_notes": [
+            "The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office."
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Sino ang pangulo ng SPUS?",
+      "passed": true,
+      "elapsed_ms": 3312.39,
+      "response": "Sr. Marie Rosanne Mallillin, SPCS — University President\n\n**Source review:** The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office.\n\n[SUGGESTIONS: \"Anong mga programa ang inaalok sa SPUS?\" | \"Paano mag-enroll sa SPUS?\" | \"Saan ang Registrar office?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | University President | Sr. Marie Rosanne Mallillin, SPCS",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.619696+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | University President | Sr. Marie Rosanne Mallillin, SPCS",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 99,
+              "retrieved_at": "2026-10-27T14:12:30.732196+00:00"
+            }
+          ],
+          "review_notes": [
+            "The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office."
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Who is Sr. Marie Rosanne Mallillin?",
+      "passed": true,
+      "elapsed_ms": 155.18,
+      "response": "Sr. Marie Rosanne Mallillin, SPCS — University President\n\n**Source review:** The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | University President | Sr. Marie Rosanne Mallillin, SPCS",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.619696+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | University President | Sr. Marie Rosanne Mallillin, SPCS",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 99,
+              "retrieved_at": "2026-10-27T14:12:30.732196+00:00"
+            }
+          ],
+          "review_notes": [
+            "The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office."
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Who is the Vice President for Academic Services?",
+      "passed": true,
+      "elapsed_ms": 192.15,
+      "response": "Dr. Nikko T. Ederio, LPT — VP for Academics Services\n\n**Source review:** A local staff record names a different holder for this role. The official website excerpt is shown; the discrepancy needs institutional review.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.644267+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ACADEMIC SERVICES | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 88,
+              "retrieved_at": "2026-10-27T14:12:30.685384+00:00"
+            },
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | Quality Management Office | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 411,
+              "retrieved_at": "2026-10-27T14:12:32.022809+00:00"
+            },
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Health Sciences | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 231,
+              "retrieved_at": "2026-10-27T14:12:31.272621+00:00"
+            },
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Education, Arts and Sciences | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 138,
+              "retrieved_at": "2026-10-27T14:12:30.877364+00:00"
+            },
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 100,
+              "retrieved_at": "2026-10-27T14:12:30.737133+00:00"
+            }
+          ],
+          "review_notes": [
+            "A local staff record names a different holder for this role. The official website excerpt is shown; the discrepancy needs institutional review."
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Who is the VP for Academics?",
+      "passed": true,
+      "elapsed_ms": 163.11,
+      "response": "Dr. Nikko T. Ederio, LPT — VP for Academics Services\n\n**Source review:** A local staff record names a different holder for this role. The official website excerpt is shown; the discrepancy needs institutional review.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.644267+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ACADEMIC SERVICES | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 88,
+              "retrieved_at": "2026-10-27T14:12:30.685384+00:00"
+            },
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | Quality Management Office | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 411,
+              "retrieved_at": "2026-10-27T14:12:32.022809+00:00"
+            },
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Health Sciences | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 231,
+              "retrieved_at": "2026-10-27T14:12:31.272621+00:00"
+            },
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Education, Arts and Sciences | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 138,
+              "retrieved_at": "2026-10-27T14:12:30.877364+00:00"
+            },
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 100,
+              "retrieved_at": "2026-10-27T14:12:30.737133+00:00"
+            }
+          ],
+          "review_notes": [
+            "A local staff record names a different holder for this role. The official website excerpt is shown; the discrepancy needs institutional review."
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Who is currently holding that role?",
+      "passed": true,
+      "elapsed_ms": 145.22,
+      "response": "Here is the information from the SPUS sources for your follow-up.\n\nSr. Marie Rosanne Mallillin, SPCS — University President\n\n**Source review:** The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office.\n\nThis reflects the stored source snapshot; it does not independently confirm changes made today.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | University President | Sr. Marie Rosanne Mallillin, SPCS",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.619696+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | University President | Sr. Marie Rosanne Mallillin, SPCS",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 99,
+              "retrieved_at": "2026-10-27T14:12:30.732196+00:00"
+            }
+          ],
+          "review_notes": [
+            "The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office."
+          ]
+        }
+      ]
+    },
+    {
+      "query": "How about the VP for Academics?",
+      "passed": true,
+      "elapsed_ms": 164.57,
+      "response": "Here is the information from the SPUS sources for your follow-up.\n\nDr. Nikko T. Ederio, LPT — VP for Academics Services\n\n**Source review:** A local staff record names a different holder for this role. The official website excerpt is shown; the discrepancy needs institutional review.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.644267+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ACADEMIC SERVICES | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 88,
+              "retrieved_at": "2026-10-27T14:12:30.685384+00:00"
+            },
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | Quality Management Office | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 411,
+              "retrieved_at": "2026-10-27T14:12:32.022809+00:00"
+            },
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Health Sciences | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 231,
+              "retrieved_at": "2026-10-27T14:12:31.272621+00:00"
+            },
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Education, Arts and Sciences | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 138,
+              "retrieved_at": "2026-10-27T14:12:30.877364+00:00"
+            },
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 100,
+              "retrieved_at": "2026-10-27T14:12:30.737133+00:00"
+            }
+          ],
+          "review_notes": [
+            "A local staff record names a different holder for this role. The official website excerpt is shown; the discrepancy needs institutional review."
+          ]
+        }
+      ]
+    },
+    {
+      "query": "Who is the JSIT moderator?",
+      "passed": true,
+      "elapsed_ms": 44.09,
+      "response": "Khen Malaque is the JSIT Moderator.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "Staff Directory: JSIT Moderator",
+          "page": null,
+          "url": null,
+          "source_type": "staff_directory",
+          "source_office": "",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ]
+    },
+    {
+      "query": "Who is the CEIT dean?",
+      "passed": true,
+      "elapsed_ms": 92.87,
+      "response": "Dr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": []
+        }
+      ]
+    },
+    {
+      "query": "Who is the PBMO director?",
+      "passed": true,
+      "elapsed_ms": 103.29,
+      "response": "I found conflicting information or more than one possible match. Please specify the office, category, or date.",
+      "sources": []
+    }
+  ]
+}

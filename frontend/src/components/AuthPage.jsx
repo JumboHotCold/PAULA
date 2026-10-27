@@ -30,7 +30,7 @@ export default function AuthPage({ onLogin, onNavigateRegister }) {
       const data = await res.json();
 
       if (res.ok) {
-        onLogin({ type: 'STUDENT', id: studentId, name: data.name || 'Student' });
+        onLogin({ type: 'STUDENT', id: data.account_id || data.student_id || studentId.trim(), name: data.name || 'Student' });
       } else {
         setError(data.error || 'Invalid credentials.');
       }

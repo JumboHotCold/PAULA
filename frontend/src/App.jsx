@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import './App.css';
 import MaterialIcon from './components/MaterialIcon';
 
@@ -14,8 +14,19 @@ import {
   fetchConversations, 
   getCookie,
   deleteConversation,
-  fetchConversationDetails
+  fetchConversationDetails,
+  logoutSession,
+  sessionStatus
 } from './api/chatApi';
+
+function chatSession(user, fresh = false) {
+  const key = user?.type === 'GUEST' ? null : `paula-chat:${user?.id}`;
+  const current = key && !fresh ? sessionStorage.getItem(key) : null;
+  const value = current || crypto.randomUUID();
+  if (key) sessionStorage.setItem(key, value);
+  if (key && fresh) sessionStorage.removeItem(`paula-thread:${user.id}`);
+  return value;
+}
 
 const GUEST_GREETING = "Hello! Welcome to Saint Paul University Surigao!\n\nI'm PAULA (Paulinian Artificial User Support and Learning Assistant), your virtual campus assistant. I can help you with admissions, office locations, tuition fees, staff info, and more.\n\nHow may I assist you today?";
 
@@ -46,7 +57,7 @@ function AdminLogin({ onLogin, onBack }) {
       const data = await res.json();
       if (res.ok) {
         if (data.is_superuser) {
-          onLogin({ type: 'ADMIN', id: username, name: data.name, is_superuser: true });
+          onLogin({ type: 'ADMIN', id: data.account_id || username.trim(), name: data.name, is_superuser: true });
         } else {
           setError('Access denied. Administrator privileges required.');
         }
@@ -109,42 +120,94 @@ export default function App() {
   const [isTyping, setIsTyping] = useState(false);
   const [conversationId, setConversationId] = useState(null);
   const [conversations, setConversations] = useState([]);
+  const [chatSessionId, setChatSessionId] = useState(null);
+  const [isRestoring, setIsRestoring] = useState(true);
+  const chatEpoch = useRef(0);
 
   // Restore session
   useEffect(() => {
+    const epoch = chatEpoch.current;
     ensureCsrfToken();
     const storedUser = localStorage.getItem('paulibot_user');
     if (storedUser) {
       try {
         const parsed = JSON.parse(storedUser);
-        setUser(parsed);
-        
-        if (parsed.is_superuser && window.location.pathname === '/admin') {
-          setCurrentView('admin');
-        } else {
-          setCurrentView('chat');
-        }
-
-        if (parsed.type === 'GUEST') {
-           setMessages([]);
-        }
+        const restore = async () => {
+          if (parsed.type !== 'GUEST') {
+            const session = await sessionStatus();
+            if (epoch !== chatEpoch.current) return;
+            if (!session.authenticated || String(session.id) !== String(parsed.id)) {
+              localStorage.removeItem('paulibot_user');
+              setCurrentView('login');
+              return;
+            }
+          } else {
+            await logoutSession();
+          }
+          if (epoch !== chatEpoch.current) return;
+          setUser(parsed);
+          setChatSessionId(chatSession(parsed));
+          if (parsed.is_superuser && window.location.pathname === '/admin') {
+            setCurrentView('admin');
+          } else {
+            setCurrentView('chat');
+          }
+          if (parsed.type === 'GUEST') setMessages([]);
+        };
+        restore().catch(() => {
+          if (epoch !== chatEpoch.current) return;
+          localStorage.removeItem('paulibot_user');
+          setCurrentView('login');
+        }).finally(() => setIsRestoring(false));
       } catch (e) {
         localStorage.removeItem('paulibot_user');
+        setIsRestoring(false);
       }
+    } else {
+      setIsRestoring(false);
     }
   }, []);
 
   // Fetch history if student
   useEffect(() => {
-    if (user?.type === 'STUDENT') {
+    let cancelled = false;
+    const epoch = chatEpoch.current;
+    if (user && user.type !== 'GUEST') {
       fetchConversations()
-        .then(data => setConversations(data))
+        .then(async data => {
+          if (cancelled || epoch !== chatEpoch.current) return;
+          setConversations(data);
+          const activeSession = sessionStorage.getItem(`paula-chat:${user.id}`);
+          const activeId = sessionStorage.getItem(`paula-thread:${user.id}`);
+          const active = data.find(conversation => String(conversation.id) === activeId) ||
+            data.find(conversation => conversation.client_session_id === activeSession);
+          if (active) {
+            const details = await fetchConversationDetails(active.id);
+            if (cancelled || epoch !== chatEpoch.current) return;
+            setConversationId(active.id);
+            setMessages(details.flatMap(row => [{ text: row.message, isUser: true }, { text: row.response, isUser: false }]));
+          }
+        })
         .catch(console.error);
     }
-  }, [user]);
+    return () => { cancelled = true; };
+  }, [user?.id, user?.type]);
 
-  const handleLogin = useCallback((userData) => {
+  const handleLogin = useCallback(async (userData) => {
+    const epoch = ++chatEpoch.current;
+    if (userData.type === 'GUEST') {
+      try {
+        await logoutSession();
+      } catch (error) {
+        window.alert(error.message);
+        return;
+      }
+    }
+    if (epoch !== chatEpoch.current) return;
+    setIsTyping(false);
     setUser(userData);
+    setChatSessionId(chatSession(userData, true));
+    setConversations([]);
     localStorage.setItem('paulibot_user', JSON.stringify(userData));
     
     if (userData.type === 'GUEST') {
@@ -170,6 +233,8 @@ export default function App() {
 
   const handleLogout = useCallback(() => {
     if (user?.type === 'GUEST') {
+      chatEpoch.current++;
+      setIsTyping(false);
       setUser(null);
       setMessages([]);
       setConversations([]);
@@ -189,22 +254,22 @@ export default function App() {
         confirmButtonColor: '#005529',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Yes, log out!'
-      }).then((result) => {
+      }).then(async (result) => {
         if (result.isConfirmed) {
+          chatEpoch.current++;
+          setIsTyping(false);
+          try {
+            await logoutSession();
+          } catch (error) {
+            Swal.fire('Logout failed', error.message, 'error');
+            return;
+          }
           setUser(null);
           setMessages([]);
           setConversations([]);
           setConversationId(null);
           localStorage.removeItem('paulibot_user');
           setCurrentView('login');
-          const csrfToken = getCookie('csrftoken');
-          fetch('/api/login', { 
-            method: 'DELETE', 
-            credentials: 'include',
-            headers: {
-              ...(csrfToken && { 'X-CSRFToken': csrfToken }),
-            }
-          }).catch(() => {});
         }
       });
     });
@@ -230,6 +295,7 @@ export default function App() {
             if (conversationId === id) {
               setConversationId(null);
               setMessages([]);
+              setChatSessionId(chatSession(user, true));
             }
             Swal.fire({ title: 'Deleted!', text: 'Conversation removed.', icon: 'success', timer: 1500, showConfirmButton: false });
           } catch (err) {
@@ -242,43 +308,71 @@ export default function App() {
   }, [conversationId, user]);
 
   const handleNewChat = useCallback(() => {
+    const epoch = ++chatEpoch.current;
+    setIsTyping(false);
     setMessages([]);
     setConversationId(null);
-    fetchConversations().then(data => setConversations(data)).catch(console.error);
+    setChatSessionId(chatSession(user, true));
+    if (user?.type !== 'GUEST') fetchConversations().then(data => {
+      if (epoch === chatEpoch.current) setConversations(data);
+    }).catch(console.error);
   }, [user]);
 
   const handleSend = useCallback(
     async (text) => {
-      setMessages((prev) => [...prev, { text, isUser: true }]);
+      const epoch = chatEpoch.current;
+      setMessages((prev) => [...prev, { text, isUser: true, timestamp: Date.now() / 1000 }]);
       setIsTyping(true);
 
       try {
-        const data = await sendMessage(text, conversationId);
+        const clarificationHistory = messages.slice(-8).map(message => ({
+          role: message.isUser ? 'user' : 'assistant',
+          content: message.text,
+          ...(message.timestamp ? { timestamp: message.timestamp } : {}),
+        }));
+        const data = await sendMessage(text, conversationId, clarificationHistory, messages.at(-1)?.contextToken,
+          user?.type === 'GUEST' ? 'guest' : 'authenticated', chatSessionId, user?.id);
+        if (epoch !== chatEpoch.current) return;
 
-        if (data.conversation_id && user?.type === 'STUDENT') {
+        if (data.conversation_id && data.saved) {
           setConversationId(data.conversation_id);
-          fetchConversations().then(data => setConversations(data)).catch(console.error);
+          sessionStorage.setItem(`paula-thread:${user.id}`, String(data.conversation_id));
+          fetchConversations().then(data => { if (epoch === chatEpoch.current) setConversations(data); }).catch(console.error);
         }
 
         setTimeout(() => {
+          if (epoch !== chatEpoch.current) return;
           setIsTyping(false);
           setMessages((prev) => [
             ...prev,
-            { text: data.response || 'Sorry, I encountered an error.', sources: data.sources || [], action: data.action, action_data: data.action_data, isUser: false },
+            { text: data.response || 'Sorry, I encountered an error.', sources: data.sources || [], action: data.action, action_data: data.action_data, isUser: false, timestamp: Date.now() / 1000, contextToken: data.context_token },
           ]);
         }, 600); // 600ms network delay simulation from your index.html logic
       } catch (err) {
+        if (epoch !== chatEpoch.current) return;
         setIsTyping(false);
+        if (err.status === 401) {
+          chatEpoch.current++;
+          setUser(null);
+          setMessages([]);
+          setConversations([]);
+          setConversationId(null);
+          localStorage.removeItem('paulibot_user');
+          setCurrentView('login');
+          window.alert(err.message);
+          return;
+        }
         setMessages((prev) => [
           ...prev,
           { text: "Network error. Please try again.", isUser: false },
         ]);
       }
     },
-    [conversationId, user]
+    [conversationId, user, messages, chatSessionId]
   );
 
   // Router Logic
+  if (isRestoring) return <div role="status" className="p-6 text-center">Loading PAULA...</div>;
   if (currentView === 'register') {
     return <RegisterPage onNavigateLogin={() => setCurrentView('login')} />;
   }
@@ -328,9 +422,18 @@ export default function App() {
       onNavigateAdmin={user?.is_superuser ? () => setCurrentView('admin') : null}
       onUpdateUser={handleUpdateUser}
       onLoadChat={async (id) => {
+        const epoch = ++chatEpoch.current;
+        setIsTyping(false);
         const details = await fetchConversationDetails(id);
+        if (epoch !== chatEpoch.current) return;
         setMessages(details.map(d => ({ text: d.message, isUser: true })).flatMap((m, i) => [m, { text: details[i].response, isUser: false}]));
         setConversationId(id);
+        sessionStorage.setItem(`paula-thread:${user.id}`, String(id));
+        const session = conversations.find(conversation => conversation.id === id)?.client_session_id;
+        if (session) {
+          sessionStorage.setItem(`paula-chat:${user.id}`, session);
+          setChatSessionId(session);
+        }
       }}
     />
   );

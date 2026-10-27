@@ -1,0 +1,836 @@
+{
+  "document": "PBMO_SPUS_BRANDING",
+  "office": "PBMO",
+  "page": 7,
+  "pdf_text_layer_characters": 0,
+  "requested_render_dpi": 200,
+  "ocr_image_size": [
+    2602,
+    4200
+  ],
+  "selected_pass": "overlapping_tiles",
+  "selection_is_heuristic": true,
+  "stats": {
+    "lines": 12,
+    "characters": 340,
+    "mean_confidence": 0.9676,
+    "low_confidence_lines_below_0_85": 0
+  },
+  "review_flags": [],
+  "color_contrast_text_similarity": 0.997,
+  "passes": [
+    {
+      "name": "color",
+      "seconds": 6.87,
+      "rows": [
+        {
+          "box": [
+            [
+              625.48,
+              1539.01
+            ],
+            [
+              2011.96,
+              1532.66
+            ],
+            [
+              2011.96,
+              1619.46
+            ],
+            [
+              625.48,
+              1625.81
+            ]
+          ],
+          "text": "Having a signature font contributes to a",
+          "confidence": 0.960435
+        },
+        {
+          "box": [
+            [
+              615.06,
+              1649.09
+            ],
+            [
+              2014.05,
+              1630.04
+            ],
+            [
+              2016.13,
+              1706.25
+            ],
+            [
+              617.14,
+              1725.3
+            ]
+          ],
+          "text": "strong brand.It is considered as a visual",
+          "confidence": 0.928848
+        },
+        {
+          "box": [
+            [
+              700.54,
+              1748.59
+            ],
+            [
+              2014.05,
+              1729.54
+            ],
+            [
+              2016.13,
+              1805.75
+            ],
+            [
+              702.62,
+              1824.8
+            ]
+          ],
+          "text": "componentand shouldbeconsistent",
+          "confidence": 0.984167
+        },
+        {
+          "box": [
+            [
+              1601.23,
+              1835.38
+            ],
+            [
+              2007.79,
+              1835.38
+            ],
+            [
+              2007.79,
+              1913.71
+            ],
+            [
+              1601.23,
+              1913.71
+            ]
+          ],
+          "text": "throughout.",
+          "confidence": 0.986587
+        },
+        {
+          "box": [
+            [
+              654.67,
+              2004.74
+            ],
+            [
+              2014.05,
+              1998.39
+            ],
+            [
+              2014.05,
+              2095.77
+            ],
+            [
+              654.67,
+              2102.12
+            ]
+          ],
+          "text": "·Primary font - for headlines, titles,",
+          "confidence": 0.954313
+        },
+        {
+          "box": [
+            [
+              1261.39,
+              2108.47
+            ],
+            [
+              1993.2,
+              2112.7
+            ],
+            [
+              1991.11,
+              2188.91
+            ],
+            [
+              1259.3,
+              2186.79
+            ]
+          ],
+          "text": "and key messages",
+          "confidence": 0.961555
+        },
+        {
+          "box": [
+            [
+              777.68,
+              2298.99
+            ],
+            [
+              2016.13,
+              2296.88
+            ],
+            [
+              2016.13,
+              2375.2
+            ],
+            [
+              777.68,
+              2379.44
+            ]
+          ],
+          "text": "·Secondary font- for body text,",
+          "confidence": 0.945472
+        },
+        {
+          "box": [
+            [
+              706.79,
+              2398.49
+            ],
+            [
+              1997.37,
+              2392.14
+            ],
+            [
+              1997.37,
+              2474.7
+            ],
+            [
+              706.79,
+              2483.17
+            ]
+          ],
+          "text": "captions, and supporting content",
+          "confidence": 0.971645
+        },
+        {
+          "box": [
+            [
+              740.15,
+              2491.63
+            ],
+            [
+              1986.94,
+              2487.4
+            ],
+            [
+              1986.94,
+              2567.84
+            ],
+            [
+              740.15,
+              2574.19
+            ]
+          ],
+          "text": "· Avoid mixing too many fonts or",
+          "confidence": 0.974238
+        },
+        {
+          "box": [
+            [
+              861.08,
+              2582.66
+            ],
+            [
+              1984.86,
+              2582.66
+            ],
+            [
+              1984.86,
+              2675.81
+            ],
+            [
+              861.08,
+              2675.81
+            ]
+          ],
+          "text": "using unapproved typefaces.",
+          "confidence": 0.981293
+        },
+        {
+          "box": [
+            [
+              685.94,
+              2766.83
+            ],
+            [
+              1982.77,
+              2781.65
+            ],
+            [
+              1982.77,
+              2862.1
+            ],
+            [
+              685.94,
+              2849.4
+            ]
+          ],
+          "text": "·Never stretch, compress, or warp",
+          "confidence": 0.97196
+        },
+        {
+          "box": [
+            [
+              1822.23,
+              2868.45
+            ],
+            [
+              1991.11,
+              2868.45
+            ],
+            [
+              1991.11,
+              2946.77
+            ],
+            [
+              1822.23,
+              2946.77
+            ]
+          ],
+          "text": "text.",
+          "confidence": 0.993713
+        }
+      ],
+      "text": "Having a signature font contributes to a\nstrong brand.It is considered as a visual\ncomponentand shouldbeconsistent\nthroughout.\n·Primary font - for headlines, titles,\nand key messages\n·Secondary font- for body text,\ncaptions, and supporting content\n· Avoid mixing too many fonts or\nusing unapproved typefaces.\n·Never stretch, compress, or warp\ntext."
+    },
+    {
+      "name": "autocontrast",
+      "seconds": 3.63,
+      "rows": [
+        {
+          "box": [
+            [
+              627.57,
+              1541.13
+            ],
+            [
+              2009.88,
+              1530.54
+            ],
+            [
+              2009.88,
+              1617.34
+            ],
+            [
+              627.57,
+              1627.92
+            ]
+          ],
+          "text": "Having a signature font contributes to a",
+          "confidence": 0.953432
+        },
+        {
+          "box": [
+            [
+              617.14,
+              1649.09
+            ],
+            [
+              2011.96,
+              1632.16
+            ],
+            [
+              2011.96,
+              1708.37
+            ],
+            [
+              619.23,
+              1725.3
+            ]
+          ],
+          "text": "strongbrand.Itis considered as a visual",
+          "confidence": 0.938859
+        },
+        {
+          "box": [
+            [
+              702.62,
+              1750.71
+            ],
+            [
+              2014.05,
+              1729.54
+            ],
+            [
+              2016.13,
+              1805.75
+            ],
+            [
+              702.62,
+              1826.92
+            ]
+          ],
+          "text": "componentand shouldbeconsistent",
+          "confidence": 0.983895
+        },
+        {
+          "box": [
+            [
+              1599.15,
+              1833.27
+            ],
+            [
+              2007.79,
+              1833.27
+            ],
+            [
+              2007.79,
+              1917.94
+            ],
+            [
+              1599.15,
+              1917.94
+            ]
+          ],
+          "text": "throughout.",
+          "confidence": 0.987314
+        },
+        {
+          "box": [
+            [
+              650.5,
+              2002.62
+            ],
+            [
+              2014.05,
+              1998.39
+            ],
+            [
+              2014.05,
+              2097.88
+            ],
+            [
+              650.5,
+              2102.12
+            ]
+          ],
+          "text": "· Primary font - for headlines, titles,",
+          "confidence": 0.976541
+        },
+        {
+          "box": [
+            [
+              1259.3,
+              2106.35
+            ],
+            [
+              1993.2,
+              2110.58
+            ],
+            [
+              1993.2,
+              2193.15
+            ],
+            [
+              1259.3,
+              2188.91
+            ]
+          ],
+          "text": "and key messages",
+          "confidence": 0.965299
+        },
+        {
+          "box": [
+            [
+              773.51,
+              2298.99
+            ],
+            [
+              2016.13,
+              2296.88
+            ],
+            [
+              2016.13,
+              2377.32
+            ],
+            [
+              773.51,
+              2381.55
+            ]
+          ],
+          "text": "· Secondary font - for body text,",
+          "confidence": 0.949549
+        },
+        {
+          "box": [
+            [
+              706.79,
+              2398.49
+            ],
+            [
+              1997.37,
+              2392.14
+            ],
+            [
+              1997.37,
+              2474.7
+            ],
+            [
+              706.79,
+              2483.17
+            ]
+          ],
+          "text": "captions, and supporting content",
+          "confidence": 0.976608
+        },
+        {
+          "box": [
+            [
+              738.07,
+              2491.63
+            ],
+            [
+              1986.94,
+              2487.4
+            ],
+            [
+              1986.94,
+              2567.84
+            ],
+            [
+              738.07,
+              2574.19
+            ]
+          ],
+          "text": "· Avoid mixing too many fonts or",
+          "confidence": 0.978685
+        },
+        {
+          "box": [
+            [
+              861.08,
+              2584.78
+            ],
+            [
+              1986.94,
+              2582.66
+            ],
+            [
+              1986.94,
+              2675.81
+            ],
+            [
+              861.08,
+              2677.92
+            ]
+          ],
+          "text": "using unapproved typefaces.",
+          "confidence": 0.98231
+        },
+        {
+          "box": [
+            [
+              685.94,
+              2773.19
+            ],
+            [
+              1980.69,
+              2783.77
+            ],
+            [
+              1980.69,
+              2862.1
+            ],
+            [
+              685.94,
+              2849.4
+            ]
+          ],
+          "text": "·Never stretch,compress,or warp",
+          "confidence": 0.900345
+        },
+        {
+          "box": [
+            [
+              1820.15,
+              2868.45
+            ],
+            [
+              1989.03,
+              2868.45
+            ],
+            [
+              1989.03,
+              2946.77
+            ],
+            [
+              1820.15,
+              2946.77
+            ]
+          ],
+          "text": "text.",
+          "confidence": 0.994108
+        }
+      ],
+      "text": "Having a signature font contributes to a\nstrongbrand.Itis considered as a visual\ncomponentand shouldbeconsistent\nthroughout.\n· Primary font - for headlines, titles,\nand key messages\n· Secondary font - for body text,\ncaptions, and supporting content\n· Avoid mixing too many fonts or\nusing unapproved typefaces.\n·Never stretch,compress,or warp\ntext."
+    },
+    {
+      "name": "overlapping_tiles",
+      "seconds": 8.49,
+      "rows": [
+        {
+          "box": [
+            [
+              628.2,
+              1545.52
+            ],
+            [
+              2011.83,
+              1535.14
+            ],
+            [
+              2011.83,
+              1615.6
+            ],
+            [
+              628.2,
+              1625.98
+            ]
+          ],
+          "text": "Having a signature fontcontributes to a",
+          "confidence": 0.956724
+        },
+        {
+          "box": [
+            [
+              617.71,
+              1648.04
+            ],
+            [
+              2013.14,
+              1628.58
+            ],
+            [
+              2014.45,
+              1706.44
+            ],
+            [
+              619.02,
+              1725.9
+            ]
+          ],
+          "text": "strong brand.It is considered as a visual",
+          "confidence": 0.93755
+        },
+        {
+          "box": [
+            [
+              700.34,
+              1750.56
+            ],
+            [
+              2013.14,
+              1729.79
+            ],
+            [
+              2014.45,
+              1806.36
+            ],
+            [
+              701.65,
+              1827.12
+            ]
+          ],
+          "text": "componentand should beconsistent",
+          "confidence": 0.968565
+        },
+        {
+          "box": [
+            [
+              1602.64,
+              1837.5
+            ],
+            [
+              2005.27,
+              1837.5
+            ],
+            [
+              2005.27,
+              1915.36
+            ],
+            [
+              1602.64,
+              1915.36
+            ]
+          ],
+          "text": "throughout.",
+          "confidence": 0.985447
+        },
+        {
+          "box": [
+            [
+              645.25,
+              2004.9
+            ],
+            [
+              2010.52,
+              2001.01
+            ],
+            [
+              2010.52,
+              2095.74
+            ],
+            [
+              645.25,
+              2099.63
+            ]
+          ],
+          "text": "· Primary font - for headlines, titles,",
+          "confidence": 0.961366
+        },
+        {
+          "box": [
+            [
+              1259.03,
+              2108.16
+            ],
+            [
+              1993.47,
+              2110.75
+            ],
+            [
+              1993.47,
+              2192.51
+            ],
+            [
+              1259.03,
+              2189.91
+            ]
+          ],
+          "text": "and key messages",
+          "confidence": 0.977851
+        },
+        {
+          "box": [
+            [
+              769.85,
+              2297.62
+            ],
+            [
+              2015.76,
+              2295.02
+            ],
+            [
+              2015.76,
+              2380.67
+            ],
+            [
+              769.85,
+              2383.26
+            ]
+          ],
+          "text": "· Secondary font - for body text,",
+          "confidence": 0.950974
+        },
+        {
+          "box": [
+            [
+              702.96,
+              2398.83
+            ],
+            [
+              1996.09,
+              2388.45
+            ],
+            [
+              1996.09,
+              2477.99
+            ],
+            [
+              702.96,
+              2488.37
+            ]
+          ],
+          "text": "captions, and supporting content",
+          "confidence": 0.989064
+        },
+        {
+          "box": [
+            [
+              737.06,
+              2492.27
+            ],
+            [
+              1988.22,
+              2489.67
+            ],
+            [
+              1988.22,
+              2571.42
+            ],
+            [
+              737.06,
+              2574.02
+            ]
+          ],
+          "text": "· Avoid mixing too many fonts or",
+          "confidence": 0.963164
+        },
+        {
+          "box": [
+            [
+              857.72,
+              2588.29
+            ],
+            [
+              1984.29,
+              2584.4
+            ],
+            [
+              1984.29,
+              2670.05
+            ],
+            [
+              857.72,
+              2673.94
+            ]
+          ],
+          "text": "using unapproved typefaces.",
+          "confidence": 0.993322
+        },
+        {
+          "box": [
+            [
+              684.6,
+              2776.46
+            ],
+            [
+              1980.35,
+              2784.24
+            ],
+            [
+              1980.35,
+              2856.91
+            ],
+            [
+              684.6,
+              2849.13
+            ]
+          ],
+          "text": "·Never stretch, compress, or warp",
+          "confidence": 0.933971
+        },
+        {
+          "box": [
+            [
+              1822.97,
+              2869.89
+            ],
+            [
+              1990.84,
+              2869.89
+            ],
+            [
+              1990.84,
+              2945.15
+            ],
+            [
+              1822.97,
+              2945.15
+            ]
+          ],
+          "text": "text.",
+          "confidence": 0.993621
+        }
+      ],
+      "text": "Having a signature fontcontributes to a\nstrong brand.It is considered as a visual\ncomponentand should beconsistent\nthroughout.\n· Primary font - for headlines, titles,\nand key messages\n· Secondary font - for body text,\ncaptions, and supporting content\n· Avoid mixing too many fonts or\nusing unapproved typefaces.\n·Never stretch, compress, or warp\ntext."
+    }
+  ]
+}

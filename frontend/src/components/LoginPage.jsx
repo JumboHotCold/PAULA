@@ -50,7 +50,7 @@ export default function LoginPage({ onLogin }) {
       const data = await res.json();
 
       if (res.ok) {
-        onLogin({ type: 'STUDENT', id: studentId.trim(), name: data.name || studentId.trim() });
+        onLogin({ type: 'STUDENT', id: data.account_id || data.student_id || studentId.trim(), name: data.name || studentId.trim() });
       } else {
         setError(data.error || data.student_id?.[0] || 'Invalid Student ID or Password.');
       }

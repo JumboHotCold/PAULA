@@ -1,0 +1,274 @@
+{
+  "endpoint": "http://localhost:5173/api/chat",
+  "passed": 17,
+  "checks": [
+    {
+      "message": "How do I enroll at SPUS?",
+      "has_history": false,
+      "passed": true,
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "saved": false
+    },
+    {
+      "message": "Incoming college freshman",
+      "has_history": true,
+      "passed": true,
+      "response": "Enrollment procedure for Incoming College Freshmen (URO-PR-005):\n1. Guidance Office & Admitting Officer: Take the College Entrance Examination at the Guidance Office. The Admitting Officer verifies submitted admission documents and encodes the student data.\n2. Dean's Office (Advising & Scheduling): Proceed to the Dean's Office for academic advising, schedule plotting, and schedule encoding. Receive the Pre-Registration Form.\n3. Finance Office (Assessment & Payment): Proceed to the Finance Office/Cashier for assessment of fees and payment of initial enrollment fee. Receive the Official Receipt (OR).\n4. Registrar's Office (Validation & Official Enrollment): Proceed to the University Registrar's Office for verification and validation of enrollment. Receive the official Study Load and Assessment stamped with 'OFFICIALLY ENROLLED'.\n5. ICT Office (Student ID): Secure an Official Identification Card (ID) at the ICT Office by presenting the Official Receipt and stamped Study Load.\n6. University Clinic (Health Profiling): Complete the medical profiling form at the University Clinic by presenting the Official Receipt and Study Load.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What is the step-by-step enrollment procedure for incoming freshmen at SPUS (Document URO-PR-005)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null
+        }
+      ],
+      "saved": false
+    },
+    {
+      "message": "Transferee student",
+      "has_history": true,
+      "passed": true,
+      "response": "Enrollment procedure for Transferee Students in Higher Education (URO-PR-017):\n1. Dean's Office (Evaluation & Crediting): Submit Transfer Credentials and Curricular Checklist to the Dean's Office for transcript evaluation and crediting of previous subjects.\n2. Student Affairs Office (SAO) (Encoding & Information): Fill out the Student Information Sheet and submit required documents: Transfer Credentials (Honorable Dismissal / Transcript of Records), PSA Birth Certificate, Certificate of Good Moral Character, and 1 pc 2x2 ID picture.\n3. Finance Office (Payment): Pay the initial or full enrollment fee at the Cashier/Finance Office. Receive the Pre-registration Form and Official Receipt (OR).\n4. Registrar's Office (Validation & Official Enrollment): Proceed to the University Registrar's Office for validation and verification. Receive the official Study Load and Assessment stamped with 'OFFICIALLY ENROLLED'.\n5. ICT Office & Clinic: Proceed to the ICT Office for ID validation/processing, and visit the University Clinic for Health Services medical profiling.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What is the step-by-step enrollment procedure for transferee students at SPUS (Document URO-PR-017)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null
+        }
+      ],
+      "saved": false
+    },
+    {
+      "message": "Old/continuing college student",
+      "has_history": true,
+      "passed": true,
+      "response": "Enrollment procedure for Old / Continuing Students in Higher Education (URO-PR-016):\n1. Academic Advising: Go to the Dean's or Program Chair's office for curriculum advising and evaluation. Obtain the printed Pre-Registration Form.\n2. Assessment of Fees: Proceed to the Student Accounts / Finance Office for assessment of tuition and fees. Obtain the printed Assessment Form.\n3. Payment: Pay the required enrollment fee at the Cashier's counter and receive the Official Receipt (OR).\n4. Encoding and Validation: Proceed to the Registrar's Clerk for system encoding and validation. The student's enrollment is finalized upon receipt of the validated registration.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] How can an old or continuing college student enroll at SPUS (Document URO-PR-016)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null
+        }
+      ],
+      "saved": false
+    },
+    {
+      "message": "How do I enroll?",
+      "has_history": false,
+      "passed": true,
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "saved": false
+    },
+    {
+      "message": "Incoming college freshman",
+      "has_history": true,
+      "passed": true,
+      "response": "Enrollment procedure for Incoming College Freshmen (URO-PR-005):\n1. Guidance Office & Admitting Officer: Take the College Entrance Examination at the Guidance Office. The Admitting Officer verifies submitted admission documents and encodes the student data.\n2. Dean's Office (Advising & Scheduling): Proceed to the Dean's Office for academic advising, schedule plotting, and schedule encoding. Receive the Pre-Registration Form.\n3. Finance Office (Assessment & Payment): Proceed to the Finance Office/Cashier for assessment of fees and payment of initial enrollment fee. Receive the Official Receipt (OR).\n4. Registrar's Office (Validation & Official Enrollment): Proceed to the University Registrar's Office for verification and validation of enrollment. Receive the official Study Load and Assessment stamped with 'OFFICIALLY ENROLLED'.\n5. ICT Office (Student ID): Secure an Official Identification Card (ID) at the ICT Office by presenting the Official Receipt and stamped Study Load.\n6. University Clinic (Health Profiling): Complete the medical profiling form at the University Clinic by presenting the Official Receipt and Study Load.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What is the step-by-step enrollment procedure for incoming freshmen at SPUS (Document URO-PR-005)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null
+        }
+      ],
+      "saved": false
+    },
+    {
+      "message": "Transferee student",
+      "has_history": true,
+      "passed": true,
+      "response": "Enrollment procedure for Transferee Students in Higher Education (URO-PR-017):\n1. Dean's Office (Evaluation & Crediting): Submit Transfer Credentials and Curricular Checklist to the Dean's Office for transcript evaluation and crediting of previous subjects.\n2. Student Affairs Office (SAO) (Encoding & Information): Fill out the Student Information Sheet and submit required documents: Transfer Credentials (Honorable Dismissal / Transcript of Records), PSA Birth Certificate, Certificate of Good Moral Character, and 1 pc 2x2 ID picture.\n3. Finance Office (Payment): Pay the initial or full enrollment fee at the Cashier/Finance Office. Receive the Pre-registration Form and Official Receipt (OR).\n4. Registrar's Office (Validation & Official Enrollment): Proceed to the University Registrar's Office for validation and verification. Receive the official Study Load and Assessment stamped with 'OFFICIALLY ENROLLED'.\n5. ICT Office & Clinic: Proceed to the ICT Office for ID validation/processing, and visit the University Clinic for Health Services medical profiling.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What is the step-by-step enrollment procedure for transferee students at SPUS (Document URO-PR-017)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null
+        }
+      ],
+      "saved": false
+    },
+    {
+      "message": "Old/continuing college student",
+      "has_history": true,
+      "passed": true,
+      "response": "Enrollment procedure for Old / Continuing Students in Higher Education (URO-PR-016):\n1. Academic Advising: Go to the Dean's or Program Chair's office for curriculum advising and evaluation. Obtain the printed Pre-Registration Form.\n2. Assessment of Fees: Proceed to the Student Accounts / Finance Office for assessment of tuition and fees. Obtain the printed Assessment Form.\n3. Payment: Pay the required enrollment fee at the Cashier's counter and receive the Official Receipt (OR).\n4. Encoding and Validation: Proceed to the Registrar's Clerk for system encoding and validation. The student's enrollment is finalized upon receipt of the validated registration.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] How can an old or continuing college student enroll at SPUS (Document URO-PR-016)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null
+        }
+      ],
+      "saved": false
+    },
+    {
+      "message": "Incoming college freshman",
+      "has_history": false,
+      "passed": true,
+      "response": "Enrollment procedure for Incoming College Freshmen (URO-PR-005):\n1. Guidance Office & Admitting Officer: Take the College Entrance Examination at the Guidance Office. The Admitting Officer verifies submitted admission documents and encodes the student data.\n2. Dean's Office (Advising & Scheduling): Proceed to the Dean's Office for academic advising, schedule plotting, and schedule encoding. Receive the Pre-Registration Form.\n3. Finance Office (Assessment & Payment): Proceed to the Finance Office/Cashier for assessment of fees and payment of initial enrollment fee. Receive the Official Receipt (OR).\n4. Registrar's Office (Validation & Official Enrollment): Proceed to the University Registrar's Office for verification and validation of enrollment. Receive the official Study Load and Assessment stamped with 'OFFICIALLY ENROLLED'.\n5. ICT Office (Student ID): Secure an Official Identification Card (ID) at the ICT Office by presenting the Official Receipt and stamped Study Load.\n6. University Clinic (Health Profiling): Complete the medical profiling form at the University Clinic by presenting the Official Receipt and Study Load.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What is the step-by-step enrollment procedure for incoming freshmen at SPUS (Document URO-PR-005)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null
+        }
+      ],
+      "saved": false
+    },
+    {
+      "message": "Transferee student",
+      "has_history": false,
+      "passed": true,
+      "response": "Enrollment procedure for Transferee Students in Higher Education (URO-PR-017):\n1. Dean's Office (Evaluation & Crediting): Submit Transfer Credentials and Curricular Checklist to the Dean's Office for transcript evaluation and crediting of previous subjects.\n2. Student Affairs Office (SAO) (Encoding & Information): Fill out the Student Information Sheet and submit required documents: Transfer Credentials (Honorable Dismissal / Transcript of Records), PSA Birth Certificate, Certificate of Good Moral Character, and 1 pc 2x2 ID picture.\n3. Finance Office (Payment): Pay the initial or full enrollment fee at the Cashier/Finance Office. Receive the Pre-registration Form and Official Receipt (OR).\n4. Registrar's Office (Validation & Official Enrollment): Proceed to the University Registrar's Office for validation and verification. Receive the official Study Load and Assessment stamped with 'OFFICIALLY ENROLLED'.\n5. ICT Office & Clinic: Proceed to the ICT Office for ID validation/processing, and visit the University Clinic for Health Services medical profiling.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What is the step-by-step enrollment procedure for transferee students at SPUS (Document URO-PR-017)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null
+        }
+      ],
+      "saved": false
+    },
+    {
+      "message": "Old/continuing college student",
+      "has_history": false,
+      "passed": true,
+      "response": "Enrollment procedure for Old / Continuing Students in Higher Education (URO-PR-016):\n1. Academic Advising: Go to the Dean's or Program Chair's office for curriculum advising and evaluation. Obtain the printed Pre-Registration Form.\n2. Assessment of Fees: Proceed to the Student Accounts / Finance Office for assessment of tuition and fees. Obtain the printed Assessment Form.\n3. Payment: Pay the required enrollment fee at the Cashier's counter and receive the Official Receipt (OR).\n4. Encoding and Validation: Proceed to the Registrar's Clerk for system encoding and validation. The student's enrollment is finalized upon receipt of the validated registration.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] How can an old or continuing college student enroll at SPUS (Document URO-PR-016)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null
+        }
+      ],
+      "saved": false
+    },
+    {
+      "message": "What documents do I need to enroll at SPUS?",
+      "has_history": false,
+      "passed": true,
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "saved": false
+    },
+    {
+      "message": "Transferee student",
+      "has_history": true,
+      "passed": true,
+      "response": "Requirements for Transferee Students in Higher Education:\n1. Official Transfer Credentials (Honorable Dismissal / Transcript of Records for evaluation)\n2. Curricular Checklist from previous school\n3. Original PSA Birth Certificate\n4. Original Certificate of Good Moral Character\n5. 1 pc. 2x2 ID picture\n6. Accomplished Student Information Sheet (at SAO)\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What are the required documents for transferee students enrolling at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null
+        }
+      ],
+      "saved": false
+    },
+    {
+      "message": "Old/continuing college student",
+      "has_history": true,
+      "passed": true,
+      "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "saved": false
+    },
+    {
+      "message": "How do I enroll at SPUS as an old student?",
+      "has_history": false,
+      "passed": true,
+      "response": "Enrollment procedure for Old / Continuing Students in Higher Education (URO-PR-016):\n1. Academic Advising: Go to the Dean's or Program Chair's office for curriculum advising and evaluation. Obtain the printed Pre-Registration Form.\n2. Assessment of Fees: Proceed to the Student Accounts / Finance Office for assessment of tuition and fees. Obtain the printed Assessment Form.\n3. Payment: Pay the required enrollment fee at the Cashier's counter and receive the Official Receipt (OR).\n4. Encoding and Validation: Proceed to the Registrar's Clerk for system encoding and validation. The student's enrollment is finalized upon receipt of the validated registration.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] How can an old or continuing college student enroll at SPUS (Document URO-PR-016)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null
+        }
+      ],
+      "saved": false
+    },
+    {
+      "message": "who is the university preseidnt?",
+      "has_history": false,
+      "passed": true,
+      "response": "Sr. Marie Rosanne Mallillin, SPCS — University President\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | University President | Sr. Marie Rosanne Mallillin, SPCS",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.619696+00:00"
+        }
+      ],
+      "saved": false
+    },
+    {
+      "message": "who are the CEIT faculty?",
+      "has_history": false,
+      "passed": true,
+      "response": "Faculty information from the stored sources; this may not be the complete or current lineup.\n\nFaculty listed under College of Engineering and Information Technology on the official SPUS website:\n- Dr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n- Engr. Angelus Vincent P. Guilalas, Pcpe — College Full-time Faculty, Program Chair\n- Engr. France Mae Camogao — College Full-time Faculty\n- Engr. Nathaniel D. Tiu — College Full-time Faculty, Program Chair\n- Engr. Kristine Georgia Po — College Full-time Faculty\n- Mr. Sanddy H. Madera — Part-time Faculty\n- Engr. Shaira Irica D. Barol — Part-time Faculty\n- Arch. Queen Ann Bonita O. Buyser — Part-time Faculty\n- Engr. Drake Joshua Besario — Computer Laboratory In-Charge, Part-time Faculty, Website Developer / Software Developer\n- Mrs. Marsha G. Gonzaga — Part-time Faculty\n- Dr. Riah Encarnacion — Part-time Faculty\n- Dr. Sherly S. Escandor — Part-time Faculty\n- Engr. Junell T. Bojocan, MIT — Part-time Faculty\n- Mr. Woolsey A. Lonzon — Archives In-Charge, Librarian, Part-time Faculty\n- Ms. Claudette Mae P. Curayag — Librarian, Part-time Faculty\n- Mr. Arnel Enario — Part-time Faculty\n- Mr. Warner R. Guyano — Part-time Faculty\n- Engr. Irene Mae E. Cabajes — Part-time Faculty\n- Engr. Francis Cooper D. Camogao — College Full-time Faculty, Program Chair\n- Engr. Frenzh Joevornyl T. Abucayan — College Full-time Faculty\n- Engr. Gerome L. Amper — Part-time Faculty\n- Engr. Gideon G. Buniel — Part-time Faculty\n- Dr. Arneil S. Enario — Part-time Faculty\n- Engr. Shaira Irica B. Ensomo — Part-time Faculty\n- Dr. Jackelou S. Mapa — Part-time Faculty\n- Engr. Carlson Jay E. Martinez — Part-time Faculty\n- Engr. Glenn N. Micarandayo — Part-time Faculty\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "SPUS Faculty Directory | College of Engineering and Information Technology",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": null,
+          "retrieved_at": "2026-10-27T14:12:32.344148+00:00"
+        }
+      ],
+      "saved": false
+    }
+  ],
+  "final_restart_smoke": {
+    "exact_two_turn_passed": true,
+    "explicit_category_question_passed": true,
+    "response": "Enrollment procedure for Old / Continuing Students in Higher Education (URO-PR-016):\n1. Academic Advising: Go to the Dean's or Program Chair's office for curriculum advising and evaluation. Obtain the printed Pre-Registration Form.\n2. Assessment of Fees: Proceed to the Student Accounts / Finance Office for assessment of tuition and fees. Obtain the printed Assessment Form.\n3. Payment: Pay the required enrollment fee at the Cashier's counter and receive the Official Receipt (OR).\n4. Encoding and Validation: Proceed to the Registrar's Clerk for system encoding and validation. The student's enrollment is finalized upon receipt of the validated registration.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+    "sources": [
+      {
+        "title": "FAQ (Registrar's Office): [Registrar] How can an old or continuing college student enroll at SPUS (Document URO-PR-016)?",
+        "page": null,
+        "url": null,
+        "source_type": "office",
+        "source_office": "Registrar",
+        "retrieved_at": null
+      }
+    ]
+  }
+}

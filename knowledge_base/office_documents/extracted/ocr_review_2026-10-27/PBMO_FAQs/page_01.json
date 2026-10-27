@@ -1,0 +1,2004 @@
+{
+  "document": "PBMO_FAQs",
+  "office": "PBMO",
+  "page": 1,
+  "pdf_text_layer_characters": 0,
+  "requested_render_dpi": 200,
+  "ocr_image_size": [
+    3250,
+    4200
+  ],
+  "selected_pass": "overlapping_tiles",
+  "selection_is_heuristic": true,
+  "stats": {
+    "lines": 30,
+    "characters": 1655,
+    "mean_confidence": 0.9539,
+    "low_confidence_lines_below_0_85": 1
+  },
+  "review_flags": [
+    "low_confidence_lines_present"
+  ],
+  "color_contrast_text_similarity": 0.9282,
+  "passes": [
+    {
+      "name": "color",
+      "seconds": 9.72,
+      "rows": [
+        {
+          "box": [
+            [
+              1127.77,
+              448.79
+            ],
+            [
+              2101.07,
+              444.56
+            ],
+            [
+              2103.19,
+              518.65
+            ],
+            [
+              1127.77,
+              522.88
+            ]
+          ],
+          "text": "St.aul Gnibersity urigao",
+          "confidence": 0.899579
+        },
+        {
+          "box": [
+            [
+              1286.46,
+              537.7
+            ],
+            [
+              1938.15,
+              537.7
+            ],
+            [
+              1938.15,
+              596.98
+            ],
+            [
+              1286.46,
+              596.98
+            ]
+          ],
+          "text": "St.PaulUniversitySystem",
+          "confidence": 0.992578
+        },
+        {
+          "box": [
+            [
+              1290.69,
+              601.21
+            ],
+            [
+              1921.22,
+              596.98
+            ],
+            [
+              1921.22,
+              656.25
+            ],
+            [
+              1290.69,
+              660.48
+            ]
+          ],
+          "text": "8400SurigaoCity,Philippines",
+          "confidence": 0.982153
+        },
+        {
+          "box": [
+            [
+              2208.98,
+              571.57
+            ],
+            [
+              2304.2,
+              580.04
+            ],
+            [
+              2302.08,
+              613.91
+            ],
+            [
+              2206.87,
+              607.56
+            ]
+          ],
+          "text": "POUM",
+          "confidence": 0.448512
+        },
+        {
+          "box": [
+            [
+              437.99,
+              728.23
+            ],
+            [
+              825.2,
+              719.76
+            ],
+            [
+              827.31,
+              787.5
+            ],
+            [
+              440.1,
+              793.85
+            ]
+          ],
+          "text": "October 20,2026",
+          "confidence": 0.977525
+        },
+        {
+          "box": [
+            [
+              440.1,
+              933.57
+            ],
+            [
+              975.42,
+              927.22
+            ],
+            [
+              975.42,
+              986.49
+            ],
+            [
+              442.22,
+              992.84
+            ]
+          ],
+          "text": "DEXTERB.REQUILLO",
+          "confidence": 0.987967
+        },
+        {
+          "box": [
+            [
+              440.1,
+              1003.43
+            ],
+            [
+              895.02,
+              997.08
+            ],
+            [
+              895.02,
+              1058.47
+            ],
+            [
+              442.22,
+              1064.82
+            ]
+          ],
+          "text": "CARELFIL GLORIA",
+          "confidence": 0.976401
+        },
+        {
+          "box": [
+            [
+              442.22,
+              1073.29
+            ],
+            [
+              988.12,
+              1066.94
+            ],
+            [
+              990.23,
+              1124.09
+            ],
+            [
+              444.34,
+              1130.44
+            ]
+          ],
+          "text": "CHRISJOEMARRIVAS",
+          "confidence": 0.987053
+        },
+        {
+          "box": [
+            [
+              444.34,
+              1138.91
+            ],
+            [
+              1074.87,
+              1134.68
+            ],
+            [
+              1074.87,
+              1200.3
+            ],
+            [
+              444.34,
+              1206.65
+            ]
+          ],
+          "text": "BSIT CapstoneResearchers",
+          "confidence": 0.979858
+        },
+        {
+          "box": [
+            [
+              442.22,
+              1342.14
+            ],
+            [
+              613.61,
+              1342.14
+            ],
+            [
+              613.61,
+              1407.76
+            ],
+            [
+              442.22,
+              1407.76
+            ]
+          ],
+          "text": "THRU:",
+          "confidence": 0.987289
+        },
+        {
+          "box": [
+            [
+              450.68,
+              1414.11
+            ],
+            [
+              1199.71,
+              1414.11
+            ],
+            [
+              1199.71,
+              1471.27
+            ],
+            [
+              450.68,
+              1471.27
+            ]
+          ],
+          "text": "ENGR.ARNOLDA.MAGALONA",
+          "confidence": 0.985285
+        },
+        {
+          "box": [
+            [
+              450.68,
+              1483.97
+            ],
+            [
+              1231.45,
+              1483.97
+            ],
+            [
+              1231.45,
+              1545.36
+            ],
+            [
+              450.68,
+              1545.36
+            ]
+          ],
+          "text": "Director,ICTSystemsandServices",
+          "confidence": 0.977626
+        },
+        {
+          "box": [
+            [
+              450.68,
+              1553.83
+            ],
+            [
+              1193.36,
+              1553.83
+            ],
+            [
+              1193.36,
+              1615.22
+            ],
+            [
+              450.68,
+              1615.22
+            ]
+          ],
+          "text": "BSITCapstoneResearchAdviser",
+          "confidence": 0.992023
+        },
+        {
+          "box": [
+            [
+              450.68,
+              1754.94
+            ],
+            [
+              2327.47,
+              1750.71
+            ],
+            [
+              2327.47,
+              1822.68
+            ],
+            [
+              450.68,
+              1826.92
+            ]
+          ],
+          "text": "Subject: Response to Information Request for Capstone Research Project (\"PAULA\")",
+          "confidence": 0.967607
+        },
+        {
+          "box": [
+            [
+              454.92,
+              1960.28
+            ],
+            [
+              873.86,
+              1966.63
+            ],
+            [
+              871.74,
+              2030.14
+            ],
+            [
+              454.92,
+              2023.79
+            ]
+          ],
+          "text": "Dear Researchers,",
+          "confidence": 0.965512
+        },
+        {
+          "box": [
+            [
+              454.92,
+              2097.88
+            ],
+            [
+              1430.34,
+              2100.0
+            ],
+            [
+              1430.34,
+              2165.62
+            ],
+            [
+              454.92,
+              2165.62
+            ]
+          ],
+          "text": "Peace and blessings in the Spirit of St.Paul!",
+          "confidence": 0.958696
+        },
+        {
+          "box": [
+            [
+              457.03,
+              2235.48
+            ],
+            [
+              2814.13,
+              2231.25
+            ],
+            [
+              2814.13,
+              2298.99
+            ],
+            [
+              457.03,
+              2303.23
+            ]
+          ],
+          "text": "The PBMO acknowledges receipt of your request regarding public and non-sensitive information, general",
+          "confidence": 0.967453
+        },
+        {
+          "box": [
+            [
+              454.92,
+              2309.58
+            ],
+            [
+              2816.24,
+              2303.23
+            ],
+            [
+              2818.36,
+              2364.62
+            ],
+            [
+              454.92,
+              2370.97
+            ]
+          ],
+          "text": "guidelines,andfrequentlyaskedquestionsforthePublications,Brand,andMarketingOffice.Wesupport",
+          "confidence": 0.958869
+        },
+        {
+          "box": [
+            [
+              450.68,
+              2375.2
+            ],
+            [
+              2748.54,
+              2370.97
+            ],
+            [
+              2748.54,
+              2436.59
+            ],
+            [
+              450.68,
+              2440.83
+            ]
+          ],
+          "text": "your capstone research entitled“PAULA:Paulinian Artificial User Support and Learning Assistant.\"",
+          "confidence": 0.953944
+        },
+        {
+          "box": [
+            [
+              459.15,
+              2506.45
+            ],
+            [
+              2818.36,
+              2510.69
+            ],
+            [
+              2816.24,
+              2576.31
+            ],
+            [
+              459.15,
+              2572.08
+            ]
+          ],
+          "text": "sds",
+          "confidence": 0.361058
+        },
+        {
+          "box": [
+            [
+              463.38,
+              2582.66
+            ],
+            [
+              2266.11,
+              2582.66
+            ],
+            [
+              2266.11,
+              2644.05
+            ],
+            [
+              463.38,
+              2644.05
+            ]
+          ],
+          "text": "andoperationstoserveasanofficialreferenceforyourproposedknowledgebase:",
+          "confidence": 0.989643
+        },
+        {
+          "box": [
+            [
+              463.38,
+              2711.79
+            ],
+            [
+              1622.88,
+              2716.03
+            ],
+            [
+              1622.88,
+              2777.42
+            ],
+            [
+              463.38,
+              2773.19
+            ]
+          ],
+          "text": "OfficialOfficeInformation,FAQs,andProcedures",
+          "confidence": 0.936353
+        },
+        {
+          "box": [
+            [
+              461.26,
+              2849.4
+            ],
+            [
+              1474.77,
+              2851.51
+            ],
+            [
+              1474.77,
+              2910.79
+            ],
+            [
+              461.26,
+              2908.67
+            ]
+          ],
+          "text": "1.Publication and Documentation Services",
+          "confidence": 0.966535
+        },
+        {
+          "box": [
+            [
+              636.88,
+              2908.67
+            ],
+            [
+              2712.57,
+              2919.25
+            ],
+            [
+              2710.45,
+              2993.35
+            ],
+            [
+              634.77,
+              2982.76
+            ]
+          ],
+          "text": "Q: What services are provided by the Publication, Brand, and Marketing Office (PBMO)?",
+          "confidence": 0.977366
+        },
+        {
+          "box": [
+            [
+              457.03,
+              3046.27
+            ],
+            [
+              2835.29,
+              3058.97
+            ],
+            [
+              2835.29,
+              3130.95
+            ],
+            [
+              457.03,
+              3120.36
+            ]
+          ],
+          "text": "A: PBMO is responsible for designing, editing, and publishing official university publications (e.g., 1st",
+          "confidence": 0.9824
+        },
+        {
+          "box": [
+            [
+              457.03,
+              3116.13
+            ],
+            [
+              2828.94,
+              3130.95
+            ],
+            [
+              2828.94,
+              3200.81
+            ],
+            [
+              457.03,
+              3185.99
+            ]
+          ],
+          "text": "SemesterPresident'sReport,ThePauliGlobe student publicationforBasic and Higher Education,and annual",
+          "confidence": 0.961588
+        },
+        {
+          "box": [
+            [
+              457.03,
+              3183.87
+            ],
+            [
+              2828.94,
+              3200.81
+            ],
+            [
+              2828.94,
+              3270.67
+            ],
+            [
+              457.03,
+              3255.85
+            ]
+          ],
+          "text": "Yearbooks).The office also oversees university branding,manages digital media pipelines (including official",
+          "confidence": 0.969233
+        },
+        {
+          "box": [
+            [
+              454.92,
+              3255.85
+            ],
+            [
+              2837.4,
+              3264.31
+            ],
+            [
+              2837.4,
+              3338.41
+            ],
+            [
+              454.92,
+              3327.82
+            ]
+          ],
+          "text": "sociai media platforms and the Unified Muitimedia Communication Network), produces institutional",
+          "confidence": 0.953052
+        },
+        {
+          "box": [
+            [
+              457.03,
+              3323.59
+            ],
+            [
+              2617.35,
+              3336.29
+            ],
+            [
+              2615.23,
+              3410.38
+            ],
+            [
+              457.03,
+              3397.68
+            ]
+          ],
+          "text": "marketing/promotional materials, and documents major university events and heritage milestones.",
+          "confidence": 0.988222
+        },
+        {
+          "box": [
+            [
+              459.15,
+              3465.42
+            ],
+            [
+              2079.92,
+              3471.77
+            ],
+            [
+              2079.92,
+              3537.4
+            ],
+            [
+              459.15,
+              3531.05
+            ]
+          ],
+          "text": "2.Procedures for Requesting or Submitting Materials forPublication",
+          "confidence": 0.956749
+        },
+        {
+          "box": [
+            [
+              632.65,
+              3528.93
+            ],
+            [
+              2835.29,
+              3550.1
+            ],
+            [
+              2835.29,
+              3622.08
+            ],
+            [
+              630.53,
+              3603.02
+            ]
+          ],
+          "text": "Q:What is the procedure for submitting materials or reporting school events for publication?",
+          "confidence": 0.973566
+        }
+      ],
+      "text": "St.aul Gnibersity urigao\nSt.PaulUniversitySystem\n8400SurigaoCity,Philippines\nPOUM\nOctober 20,2026\nDEXTERB.REQUILLO\nCARELFIL GLORIA\nCHRISJOEMARRIVAS\nBSIT CapstoneResearchers\nTHRU:\nENGR.ARNOLDA.MAGALONA\nDirector,ICTSystemsandServices\nBSITCapstoneResearchAdviser\nSubject: Response to Information Request for Capstone Research Project (\"PAULA\")\nDear Researchers,\nPeace and blessings in the Spirit of St.Paul!\nThe PBMO acknowledges receipt of your request regarding public and non-sensitive information, general\nguidelines,andfrequentlyaskedquestionsforthePublications,Brand,andMarketingOffice.Wesupport\nyour capstone research entitled“PAULA:Paulinian Artificial User Support and Learning Assistant.\"\nsds\nandoperationstoserveasanofficialreferenceforyourproposedknowledgebase:\nOfficialOfficeInformation,FAQs,andProcedures\n1.Publication and Documentation Services\nQ: What services are provided by the Publication, Brand, and Marketing Office (PBMO)?\nA: PBMO is responsible for designing, editing, and publishing official university publications (e.g., 1st\nSemesterPresident'sReport,ThePauliGlobe student publicationforBasic and Higher Education,and annual\nYearbooks).The office also oversees university branding,manages digital media pipelines (including official\nsociai media platforms and the Unified Muitimedia Communication Network), produces institutional\nmarketing/promotional materials, and documents major university events and heritage milestones.\n2.Procedures for Requesting or Submitting Materials forPublication\nQ:What is the procedure for submitting materials or reporting school events for publication?"
+    },
+    {
+      "name": "autocontrast",
+      "seconds": 8.68,
+      "rows": [
+        {
+          "box": [
+            [
+              1127.77,
+              448.79
+            ],
+            [
+              2101.07,
+              444.56
+            ],
+            [
+              2101.07,
+              518.65
+            ],
+            [
+              1127.77,
+              522.88
+            ]
+          ],
+          "text": "St.aul Gnibersity urigao",
+          "confidence": 0.886967
+        },
+        {
+          "box": [
+            [
+              1286.46,
+              537.7
+            ],
+            [
+              1938.15,
+              537.7
+            ],
+            [
+              1938.15,
+              596.98
+            ],
+            [
+              1286.46,
+              596.98
+            ]
+          ],
+          "text": "St.PaulUniversitySystem",
+          "confidence": 0.99294
+        },
+        {
+          "box": [
+            [
+              2215.33,
+              573.69
+            ],
+            [
+              2304.2,
+              580.04
+            ],
+            [
+              2302.08,
+              613.91
+            ],
+            [
+              2213.22,
+              607.56
+            ]
+          ],
+          "text": "PIDLPYA",
+          "confidence": 0.655755
+        },
+        {
+          "box": [
+            [
+              1294.92,
+              603.33
+            ],
+            [
+              1919.11,
+              603.33
+            ],
+            [
+              1919.11,
+              658.37
+            ],
+            [
+              1294.92,
+              658.37
+            ]
+          ],
+          "text": "8400SurigaoCity,Philippines",
+          "confidence": 0.976137
+        },
+        {
+          "box": [
+            [
+              437.99,
+              726.11
+            ],
+            [
+              825.2,
+              719.76
+            ],
+            [
+              827.31,
+              789.62
+            ],
+            [
+              440.1,
+              793.85
+            ]
+          ],
+          "text": "October 20,2026",
+          "confidence": 0.960225
+        },
+        {
+          "box": [
+            [
+              440.1,
+              933.57
+            ],
+            [
+              975.42,
+              927.22
+            ],
+            [
+              975.42,
+              986.49
+            ],
+            [
+              442.22,
+              992.84
+            ]
+          ],
+          "text": "DEXTER B.REQUILLO",
+          "confidence": 0.964699
+        },
+        {
+          "box": [
+            [
+              442.22,
+              1003.43
+            ],
+            [
+              895.02,
+              997.08
+            ],
+            [
+              895.02,
+              1058.47
+            ],
+            [
+              444.34,
+              1064.82
+            ]
+          ],
+          "text": "CARELFIL GLORIA",
+          "confidence": 0.968492
+        },
+        {
+          "box": [
+            [
+              444.34,
+              1073.29
+            ],
+            [
+              988.12,
+              1066.94
+            ],
+            [
+              990.23,
+              1124.09
+            ],
+            [
+              444.34,
+              1130.44
+            ]
+          ],
+          "text": "CHRISJOEMARRIVAS",
+          "confidence": 0.986891
+        },
+        {
+          "box": [
+            [
+              444.34,
+              1138.91
+            ],
+            [
+              1072.75,
+              1136.79
+            ],
+            [
+              1072.75,
+              1200.3
+            ],
+            [
+              444.34,
+              1202.42
+            ]
+          ],
+          "text": "BSITCapstoneResearchers",
+          "confidence": 0.988656
+        },
+        {
+          "box": [
+            [
+              442.22,
+              1342.14
+            ],
+            [
+              613.61,
+              1342.14
+            ],
+            [
+              613.61,
+              1407.76
+            ],
+            [
+              442.22,
+              1407.76
+            ]
+          ],
+          "text": "THRU:",
+          "confidence": 0.98622
+        },
+        {
+          "box": [
+            [
+              448.57,
+              1414.11
+            ],
+            [
+              1197.59,
+              1414.11
+            ],
+            [
+              1197.59,
+              1471.27
+            ],
+            [
+              448.57,
+              1471.27
+            ]
+          ],
+          "text": "ENGR.ARNOLDA.MAGALONA",
+          "confidence": 0.987236
+        },
+        {
+          "box": [
+            [
+              450.68,
+              1483.97
+            ],
+            [
+              1231.45,
+              1483.97
+            ],
+            [
+              1231.45,
+              1545.36
+            ],
+            [
+              450.68,
+              1545.36
+            ]
+          ],
+          "text": "Director,ICTSystemsandServices",
+          "confidence": 0.956426
+        },
+        {
+          "box": [
+            [
+              452.8,
+              1553.83
+            ],
+            [
+              1191.24,
+              1553.83
+            ],
+            [
+              1191.24,
+              1615.22
+            ],
+            [
+              452.8,
+              1615.22
+            ]
+          ],
+          "text": "BSITCapstoneResearchAdviser",
+          "confidence": 0.990869
+        },
+        {
+          "box": [
+            [
+              454.92,
+              1960.28
+            ],
+            [
+              869.63,
+              1966.63
+            ],
+            [
+              869.63,
+              2030.14
+            ],
+            [
+              454.92,
+              2023.79
+            ]
+          ],
+          "text": "DearResearchers,",
+          "confidence": 0.991311
+        },
+        {
+          "box": [
+            [
+              457.03,
+              2097.88
+            ],
+            [
+              1428.22,
+              2100.0
+            ],
+            [
+              1428.22,
+              2165.62
+            ],
+            [
+              457.03,
+              2165.62
+            ]
+          ],
+          "text": "Peaceandblessings intheSpirit ofSt.Paul!",
+          "confidence": 0.971069
+        },
+        {
+          "box": [
+            [
+              454.92,
+              2233.37
+            ],
+            [
+              2816.24,
+              2229.13
+            ],
+            [
+              2816.24,
+              2301.11
+            ],
+            [
+              454.92,
+              2305.34
+            ]
+          ],
+          "text": "The PBMO acknowledges receipt of your request regarding public and non-sensitive information, general",
+          "confidence": 0.956051
+        },
+        {
+          "box": [
+            [
+              457.03,
+              2309.58
+            ],
+            [
+              2816.24,
+              2303.23
+            ],
+            [
+              2816.24,
+              2364.62
+            ],
+            [
+              457.03,
+              2370.97
+            ]
+          ],
+          "text": "guidelines,andfrequentlyaskedquestionsforthePublications,Brand,andMarketingOffice.Wesupport",
+          "confidence": 0.94889
+        },
+        {
+          "box": [
+            [
+              452.8,
+              2375.2
+            ],
+            [
+              2748.54,
+              2368.85
+            ],
+            [
+              2748.54,
+              2436.59
+            ],
+            [
+              452.8,
+              2442.94
+            ]
+          ],
+          "text": "your capstone research entitled“PAULA: Paulinian Artificial User Support and Learning Assistant.\"",
+          "confidence": 0.942665
+        },
+        {
+          "box": [
+            [
+              465.49,
+              2582.66
+            ],
+            [
+              2264.0,
+              2582.66
+            ],
+            [
+              2264.0,
+              2644.05
+            ],
+            [
+              465.49,
+              2644.05
+            ]
+          ],
+          "text": "andoperationstoserveasanofficialreferenceforyourproposedknowledgebase:",
+          "confidence": 0.982193
+        },
+        {
+          "box": [
+            [
+              463.38,
+              2709.68
+            ],
+            [
+              1625.0,
+              2711.79
+            ],
+            [
+              1625.0,
+              2779.54
+            ],
+            [
+              463.38,
+              2777.42
+            ]
+          ],
+          "text": "Official OfficeInformation,FAQs,andProcedures",
+          "confidence": 0.959735
+        },
+        {
+          "box": [
+            [
+              461.26,
+              2849.4
+            ],
+            [
+              1472.66,
+              2851.51
+            ],
+            [
+              1472.66,
+              2910.79
+            ],
+            [
+              461.26,
+              2908.67
+            ]
+          ],
+          "text": "1.Publication and DocumentationServices",
+          "confidence": 0.973282
+        },
+        {
+          "box": [
+            [
+              636.88,
+              2908.67
+            ],
+            [
+              2710.45,
+              2921.37
+            ],
+            [
+              2710.45,
+              2995.46
+            ],
+            [
+              634.77,
+              2982.76
+            ]
+          ],
+          "text": "Q: What services are provided by the Publication, Brand, and Marketing Office (PBMO)?",
+          "confidence": 0.989728
+        },
+        {
+          "box": [
+            [
+              457.03,
+              3046.27
+            ],
+            [
+              2835.29,
+              3058.97
+            ],
+            [
+              2835.29,
+              3130.95
+            ],
+            [
+              457.03,
+              3120.36
+            ]
+          ],
+          "text": "A: PBMO is responsible for designing, editing, and publishing official university publications (e.g., 1st",
+          "confidence": 0.975404
+        },
+        {
+          "box": [
+            [
+              457.03,
+              3116.13
+            ],
+            [
+              2828.94,
+              3130.95
+            ],
+            [
+              2828.94,
+              3200.81
+            ],
+            [
+              457.03,
+              3185.99
+            ]
+          ],
+          "text": "SemesterPresident'sReport,ThePauliGlobe student publicationforBasic and Higher Education,and annual",
+          "confidence": 0.964937
+        },
+        {
+          "box": [
+            [
+              457.03,
+              3255.85
+            ],
+            [
+              2835.29,
+              3264.31
+            ],
+            [
+              2835.29,
+              3338.41
+            ],
+            [
+              457.03,
+              3327.82
+            ]
+          ],
+          "text": "social media platforms and the Unified Multimedia Communication Network), produces institutional",
+          "confidence": 0.963637
+        },
+        {
+          "box": [
+            [
+              459.15,
+              3325.71
+            ],
+            [
+              2613.12,
+              3338.41
+            ],
+            [
+              2611.0,
+              3410.38
+            ],
+            [
+              459.15,
+              3397.68
+            ]
+          ],
+          "text": "marketing/promotional materials, and documents major university events and heritage milestones.",
+          "confidence": 0.982697
+        },
+        {
+          "box": [
+            [
+              459.15,
+              3465.42
+            ],
+            [
+              2079.92,
+              3471.77
+            ],
+            [
+              2079.92,
+              3537.4
+            ],
+            [
+              459.15,
+              3531.05
+            ]
+          ],
+          "text": "2.Procedures for Requesting or Submitting Materials forPublication",
+          "confidence": 0.957806
+        },
+        {
+          "box": [
+            [
+              634.77,
+              3528.93
+            ],
+            [
+              2833.17,
+              3550.1
+            ],
+            [
+              2833.17,
+              3622.08
+            ],
+            [
+              632.65,
+              3603.02
+            ]
+          ],
+          "text": "Q:What is the procedure for submitting materials or reporting school events for publication?",
+          "confidence": 0.955236
+        }
+      ],
+      "text": "St.aul Gnibersity urigao\nSt.PaulUniversitySystem\nPIDLPYA\n8400SurigaoCity,Philippines\nOctober 20,2026\nDEXTER B.REQUILLO\nCARELFIL GLORIA\nCHRISJOEMARRIVAS\nBSITCapstoneResearchers\nTHRU:\nENGR.ARNOLDA.MAGALONA\nDirector,ICTSystemsandServices\nBSITCapstoneResearchAdviser\nDearResearchers,\nPeaceandblessings intheSpirit ofSt.Paul!\nThe PBMO acknowledges receipt of your request regarding public and non-sensitive information, general\nguidelines,andfrequentlyaskedquestionsforthePublications,Brand,andMarketingOffice.Wesupport\nyour capstone research entitled“PAULA: Paulinian Artificial User Support and Learning Assistant.\"\nandoperationstoserveasanofficialreferenceforyourproposedknowledgebase:\nOfficial OfficeInformation,FAQs,andProcedures\n1.Publication and DocumentationServices\nQ: What services are provided by the Publication, Brand, and Marketing Office (PBMO)?\nA: PBMO is responsible for designing, editing, and publishing official university publications (e.g., 1st\nSemesterPresident'sReport,ThePauliGlobe student publicationforBasic and Higher Education,and annual\nsocial media platforms and the Unified Multimedia Communication Network), produces institutional\nmarketing/promotional materials, and documents major university events and heritage milestones.\n2.Procedures for Requesting or Submitting Materials forPublication\nQ:What is the procedure for submitting materials or reporting school events for publication?"
+    },
+    {
+      "name": "overlapping_tiles",
+      "seconds": 12.7,
+      "rows": [
+        {
+          "box": [
+            [
+              1127.02,
+              447.97
+            ],
+            [
+              2103.33,
+              443.09
+            ],
+            [
+              2103.33,
+              519.65
+            ],
+            [
+              1127.02,
+              524.53
+            ]
+          ],
+          "text": "St. aul Gnibersity urigao",
+          "confidence": 0.8985
+        },
+        {
+          "box": [
+            [
+              1287.55,
+              539.2
+            ],
+            [
+              1936.24,
+              539.2
+            ],
+            [
+              1936.24,
+              594.58
+            ],
+            [
+              1287.55,
+              594.58
+            ]
+          ],
+          "text": "St.PaulUniversitySystem",
+          "confidence": 0.993211
+        },
+        {
+          "box": [
+            [
+              1294.1,
+              605.98
+            ],
+            [
+              1926.41,
+              599.47
+            ],
+            [
+              1926.41,
+              651.6
+            ],
+            [
+              1294.1,
+              658.11
+            ]
+          ],
+          "text": "8400Surigao City,Philippines",
+          "confidence": 0.969179
+        },
+        {
+          "box": [
+            [
+              440.65,
+              728.16
+            ],
+            [
+              823.97,
+              723.27
+            ],
+            [
+              825.6,
+              788.43
+            ],
+            [
+              442.29,
+              793.32
+            ]
+          ],
+          "text": "October 20, 2026",
+          "confidence": 0.981505
+        },
+        {
+          "box": [
+            [
+              442.29,
+              935.04
+            ],
+            [
+              973.03,
+              930.15
+            ],
+            [
+              974.67,
+              985.54
+            ],
+            [
+              443.93,
+              990.43
+            ]
+          ],
+          "text": "DEXTER B.REQUILLO",
+          "confidence": 0.953046
+        },
+        {
+          "box": [
+            [
+              443.93,
+              1006.72
+            ],
+            [
+              892.77,
+              1000.2
+            ],
+            [
+              892.77,
+              1055.59
+            ],
+            [
+              445.56,
+              1062.1
+            ]
+          ],
+          "text": "CARELFIL GLORIA",
+          "confidence": 0.964635
+        },
+        {
+          "box": [
+            [
+              445.56,
+              1075.13
+            ],
+            [
+              986.14,
+              1071.88
+            ],
+            [
+              986.14,
+              1124.0
+            ],
+            [
+              447.2,
+              1127.26
+            ]
+          ],
+          "text": "CHRIS JOEMAR RIVAS",
+          "confidence": 0.940959
+        },
+        {
+          "box": [
+            [
+              445.56,
+              1141.92
+            ],
+            [
+              1071.32,
+              1138.66
+            ],
+            [
+              1071.32,
+              1198.94
+            ],
+            [
+              447.2,
+              1202.19
+            ]
+          ],
+          "text": "BSITCapstoneResearchers",
+          "confidence": 0.985971
+        },
+        {
+          "box": [
+            [
+              443.93,
+              1343.92
+            ],
+            [
+              609.38,
+              1343.92
+            ],
+            [
+              609.38,
+              1404.19
+            ],
+            [
+              443.93,
+              1404.19
+            ]
+          ],
+          "text": "THRU:",
+          "confidence": 0.988446
+        },
+        {
+          "box": [
+            [
+              448.84,
+              1417.22
+            ],
+            [
+              1197.45,
+              1415.59
+            ],
+            [
+              1197.45,
+              1469.35
+            ],
+            [
+              448.84,
+              1470.98
+            ]
+          ],
+          "text": "ENGR.ARNOLDA.MAGALONA",
+          "confidence": 0.986334
+        },
+        {
+          "box": [
+            [
+              450.48,
+              1487.27
+            ],
+            [
+              1230.22,
+              1485.64
+            ],
+            [
+              1230.22,
+              1542.65
+            ],
+            [
+              450.48,
+              1544.28
+            ]
+          ],
+          "text": "Director,ICT Systems andServices",
+          "confidence": 0.959729
+        },
+        {
+          "box": [
+            [
+              450.48,
+              1555.68
+            ],
+            [
+              1190.9,
+              1552.43
+            ],
+            [
+              1190.9,
+              1614.33
+            ],
+            [
+              450.48,
+              1617.59
+            ]
+          ],
+          "text": "BSIT Capstone Research Adviser",
+          "confidence": 0.956211
+        },
+        {
+          "box": [
+            [
+              453.76,
+              1757.68
+            ],
+            [
+              2322.83,
+              1752.79
+            ],
+            [
+              2324.47,
+              1822.84
+            ],
+            [
+              453.76,
+              1826.1
+            ]
+          ],
+          "text": "Subject: Response to Information Request for Capstone Research Project (\"PAULA\")",
+          "confidence": 0.981403
+        },
+        {
+          "box": [
+            [
+              455.39,
+              1961.3
+            ],
+            [
+              873.11,
+              1967.82
+            ],
+            [
+              871.47,
+              2029.72
+            ],
+            [
+              455.39,
+              2023.2
+            ]
+          ],
+          "text": "Dear Researchers,",
+          "confidence": 0.97372
+        },
+        {
+          "box": [
+            [
+              457.03,
+              2098.6
+            ],
+            [
+              1428.43,
+              2101.86
+            ],
+            [
+              1428.43,
+              2171.91
+            ],
+            [
+              457.03,
+              2170.28
+            ]
+          ],
+          "text": "Peace and blessings in the Spirit of St. Paul!",
+          "confidence": 0.984411
+        },
+        {
+          "box": [
+            [
+              455.39,
+              2235.44
+            ],
+            [
+              2814.26,
+              2233.81
+            ],
+            [
+              2814.26,
+              2303.86
+            ],
+            [
+              455.39,
+              2305.49
+            ]
+          ],
+          "text": "The PBMO acknowledges receipt of your request regarding public and non-sensitive information, general",
+          "confidence": 0.984525
+        },
+        {
+          "box": [
+            [
+              458.67,
+              2312.0
+            ],
+            [
+              2815.9,
+              2305.49
+            ],
+            [
+              2815.9,
+              2367.39
+            ],
+            [
+              458.67,
+              2373.9
+            ]
+          ],
+          "text": "guidelines, and frequently asked questions for the Publications, Brand, and Marketing Office. We support",
+          "confidence": 0.976132
+        },
+        {
+          "box": [
+            [
+              455.39,
+              2375.53
+            ],
+            [
+              2756.93,
+              2365.76
+            ],
+            [
+              2758.57,
+              2440.69
+            ],
+            [
+              455.39,
+              2450.47
+            ]
+          ],
+          "text": "your capstone research entitled \"PAULA: Paulinian Artificial User Support and Learning Assistant.\"",
+          "confidence": 0.987894
+        },
+        {
+          "box": [
+            [
+              461.95,
+              2510.74
+            ],
+            [
+              2810.99,
+              2514.0
+            ],
+            [
+              2810.99,
+              2575.9
+            ],
+            [
+              461.95,
+              2572.64
+            ]
+          ],
+          "text": "Below is theverified information,general procedures, and frequently asked questions regarding our services",
+          "confidence": 0.962957
+        },
+        {
+          "box": [
+            [
+              463.58,
+              2580.78
+            ],
+            [
+              2268.78,
+              2580.78
+            ],
+            [
+              2268.78,
+              2645.94
+            ],
+            [
+              463.58,
+              2645.94
+            ]
+          ],
+          "text": "and operations to serve as an official reference for your proposed knowledge base:",
+          "confidence": 0.984598
+        },
+        {
+          "box": [
+            [
+              466.86,
+              2717.62
+            ],
+            [
+              1620.09,
+              2719.25
+            ],
+            [
+              1620.09,
+              2776.26
+            ],
+            [
+              466.86,
+              2774.63
+            ]
+          ],
+          "text": "Official OfficeInformation,FAQs,andProcedures",
+          "confidence": 0.93891
+        },
+        {
+          "box": [
+            [
+              465.22,
+              2854.45
+            ],
+            [
+              1471.02,
+              2857.71
+            ],
+            [
+              1471.02,
+              2911.47
+            ],
+            [
+              465.22,
+              2909.84
+            ]
+          ],
+          "text": "1.Publication and Documentation Services",
+          "confidence": 0.967431
+        },
+        {
+          "box": [
+            [
+              553.68,
+              2916.36
+            ],
+            [
+              2706.15,
+              2926.13
+            ],
+            [
+              2706.15,
+              2991.29
+            ],
+            [
+              553.68,
+              2983.14
+            ]
+          ],
+          "text": ".Q: What services are provided by the Publication, Brand, and Marketing Office (PBMO)?",
+          "confidence": 0.984681
+        },
+        {
+          "box": [
+            [
+              458.67,
+              3051.56
+            ],
+            [
+              2832.28,
+              3064.59
+            ],
+            [
+              2832.28,
+              3133.01
+            ],
+            [
+              458.67,
+              3119.98
+            ]
+          ],
+          "text": "e snd n o nd p  is  ss s oe s",
+          "confidence": 0.440672
+        },
+        {
+          "box": [
+            [
+              458.67,
+              3121.61
+            ],
+            [
+              2829.01,
+              3133.01
+            ],
+            [
+              2827.37,
+              3196.54
+            ],
+            [
+              458.67,
+              3186.77
+            ]
+          ],
+          "text": "Semester President's Report, The PauliGlobe student publication for Basic and Higher Education, and annual",
+          "confidence": 0.991026
+        },
+        {
+          "box": [
+            [
+              458.67,
+              3190.03
+            ],
+            [
+              2829.01,
+              3204.69
+            ],
+            [
+              2827.37,
+              3269.85
+            ],
+            [
+              458.67,
+              3255.19
+            ]
+          ],
+          "text": "Yearbooks). The office also oversees university branding, manages digital media pipelines (including official",
+          "confidence": 0.979201
+        },
+        {
+          "box": [
+            [
+              458.67,
+              3256.82
+            ],
+            [
+              2832.28,
+              3268.22
+            ],
+            [
+              2832.28,
+              3338.26
+            ],
+            [
+              458.67,
+              3326.86
+            ]
+          ],
+          "text": "sociai media platforms and the Unified Multimedia Communication Network), produces institutional",
+          "confidence": 0.964186
+        },
+        {
+          "box": [
+            [
+              461.95,
+              3326.86
+            ],
+            [
+              2609.5,
+              3341.52
+            ],
+            [
+              2609.5,
+              3411.57
+            ],
+            [
+              461.95,
+              3396.91
+            ]
+          ],
+          "text": "marketing/promotional materials, and documents major university events and heritage milestones.",
+          "confidence": 0.984046
+        },
+        {
+          "box": [
+            [
+              461.95,
+              3470.21
+            ],
+            [
+              2075.48,
+              3473.47
+            ],
+            [
+              2075.48,
+              3535.37
+            ],
+            [
+              461.95,
+              3530.49
+            ]
+          ],
+          "text": "2. Procedures for Requesting or Submitting Materials for Publication",
+          "confidence": 0.968993
+        },
+        {
+          "box": [
+            [
+              548.77,
+              3532.11
+            ],
+            [
+              2835.56,
+              3553.29
+            ],
+            [
+              2835.56,
+              3623.34
+            ],
+            [
+              547.13,
+              3600.53
+            ]
+          ],
+          "text": ".Q: What is the procedure for submitting materials or reporting school events for publication?",
+          "confidence": 0.984953
+        }
+      ],
+      "text": "St. aul Gnibersity urigao\nSt.PaulUniversitySystem\n8400Surigao City,Philippines\nOctober 20, 2026\nDEXTER B.REQUILLO\nCARELFIL GLORIA\nCHRIS JOEMAR RIVAS\nBSITCapstoneResearchers\nTHRU:\nENGR.ARNOLDA.MAGALONA\nDirector,ICT Systems andServices\nBSIT Capstone Research Adviser\nSubject: Response to Information Request for Capstone Research Project (\"PAULA\")\nDear Researchers,\nPeace and blessings in the Spirit of St. Paul!\nThe PBMO acknowledges receipt of your request regarding public and non-sensitive information, general\nguidelines, and frequently asked questions for the Publications, Brand, and Marketing Office. We support\nyour capstone research entitled \"PAULA: Paulinian Artificial User Support and Learning Assistant.\"\nBelow is theverified information,general procedures, and frequently asked questions regarding our services\nand operations to serve as an official reference for your proposed knowledge base:\nOfficial OfficeInformation,FAQs,andProcedures\n1.Publication and Documentation Services\n.Q: What services are provided by the Publication, Brand, and Marketing Office (PBMO)?\ne snd n o nd p  is  ss s oe s\nSemester President's Report, The PauliGlobe student publication for Basic and Higher Education, and annual\nYearbooks). The office also oversees university branding, manages digital media pipelines (including official\nsociai media platforms and the Unified Multimedia Communication Network), produces institutional\nmarketing/promotional materials, and documents major university events and heritage milestones.\n2. Procedures for Requesting or Submitting Materials for Publication\n.Q: What is the procedure for submitting materials or reporting school events for publication?"
+    }
+  ]
+}

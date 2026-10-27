@@ -1,0 +1,567 @@
+{
+  "passed": 12,
+  "checks": [
+    {
+      "case": "two_roles",
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "passed": true,
+      "elapsed_ms": 881.65,
+      "response": "**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "parts": [
+        {
+          "query": "Who is the ICT Director?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "Who is the CEIT Dean?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "saved": false,
+      "action": null
+    },
+    {
+      "case": "shared_role",
+      "query": "Who are the deans of CEIT and CHS?",
+      "passed": true,
+      "elapsed_ms": 310.92,
+      "response": "**1. Who are the deans of CEIT?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 1\n\n**2. Who are the deans of CHS?**\n\nMrs. Kristal Liza Besario, MaN, RN — Dean, College of Health Sciences, Head, Health Service\n\nSources: 2\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "parts": [
+        {
+          "query": "Who are the deans of CEIT?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "Who are the deans of CHS?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who are the deans of CEIT?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Health Sciences, Head, Health Service | Mrs. Kristal Liza Besario, MaN, RN",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.725698+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Health Sciences | Dean, College of Health Sciences, Head, Health Service | Mrs. Kristal Liza Besario, MaN, RN",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 233,
+              "retrieved_at": "2026-10-27T14:12:31.280498+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who are the deans of CHS?",
+          "citation_index": 2
+        }
+      ],
+      "saved": false,
+      "action": null
+    },
+    {
+      "case": "audiences",
+      "query": "What are the requirements for freshmen and transferees?",
+      "passed": true,
+      "elapsed_ms": 4338.53,
+      "response": "**1. What are the requirements for freshmen?**\n\nAdmission and enrollment requirements for Incoming College Freshmen:\n1. Senior High School (SHS) Report Card (Form 138 / SF9)\n2. Original PSA Birth Certificate\n3. Original Certificate of Good Moral Character\n4. College Entrance Examination Result (from Guidance Office)\n5. 1 pc. 2x2 ID picture\n6. Marriage Certificate (if married)\n7. Accomplished Student Information Sheet\n\nSources: 1\n\n**2. What are the requirements for transferees?**\n\nRequirements for Transferee Students in Higher Education:\n1. Official Transfer Credentials (Honorable Dismissal / Transcript of Records for evaluation)\n2. Curricular Checklist from previous school\n3. Original PSA Birth Certificate\n4. Original Certificate of Good Moral Character\n5. 1 pc. 2x2 ID picture\n6. Accomplished Student Information Sheet (at SAO)\n\nSources: 2\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "parts": [
+        {
+          "query": "What are the requirements for freshmen?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "What are the requirements for transferees?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What are the required admission and enrollment documents for incoming freshmen at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "What are the requirements for freshmen?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What are the required documents for transferee students enrolling at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "What are the requirements for transferees?",
+          "citation_index": 2
+        }
+      ],
+      "saved": false,
+      "action": null
+    },
+    {
+      "case": "map_choices",
+      "query": "Where are the Registrar and Finance offices?",
+      "passed": true,
+      "elapsed_ms": 3843.79,
+      "response": "**1. Where are the Registrar offices?**\n\nRegistrar Office is available on the campus map. Choose its directions below.\n\nSources: 1\n\n**2. Where are the Finance offices?**\n\nFinance Office is available on the campus map. Choose its directions below.\n\nSources: 2\n\n[SUGGESTIONS: \"Directions to Registrar Office\" | \"Directions to Finance Office\"]",
+      "parts": [
+        {
+          "query": "Where are the Registrar offices?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "Where are the Finance offices?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "Campus map: Registrar Office",
+          "url": null,
+          "page": null,
+          "source_type": "campus_map",
+          "destination": "registrar_office",
+          "part": 1,
+          "query": "Where are the Registrar offices?",
+          "citation_index": 1
+        },
+        {
+          "title": "Campus map: Finance Office",
+          "url": null,
+          "page": null,
+          "source_type": "campus_map",
+          "destination": "finance_office",
+          "part": 2,
+          "query": "Where are the Finance offices?",
+          "citation_index": 2
+        }
+      ],
+      "saved": false,
+      "action": null
+    },
+    {
+      "case": "scholarship_application",
+      "query": "What scholarships are available, and how do I apply?",
+      "passed": true,
+      "elapsed_ms": 38279.71,
+      "response": "**1. What scholarships are available?**\n\nYes! SPUS offers 350 ESC Slots for incoming Grade 7 students. We also support the SHS Voucher Program Subsidy for incoming Grade 11 students (automatically eligible for public school completers, ESC certificate required for private school completers). For other academic and athletic scholarships, visit the Guidance Office for application details.\n\nSources: 1\n\n**2. how do I apply for scholarships?**\n\nI don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "parts": [
+        {
+          "query": "What scholarships are available?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "how do I apply for scholarships?",
+          "status": "no_match",
+          "source_indices": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "FAQ (Scholarships): Are there scholarships available?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "What scholarships are available?",
+          "citation_index": 1
+        }
+      ],
+      "saved": false,
+      "action": null
+    },
+    {
+      "case": "mixed_topics",
+      "query": "Who is the University President, and what office handles enrollment?",
+      "passed": true,
+      "elapsed_ms": 491.28,
+      "response": "**1. Who is the University President?**\n\nSr. Marie Rosanne Mallillin, SPCS — University President\n\n**Source review:** The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office.\n\nSources: 1\n\n**2. what office handles enrollment?**\n\nEnrollment procedure for Incoming College Freshmen (URO-PR-005):\n1. Guidance Office & Admitting Officer: Take the College Entrance Examination at the Guidance Office. The Admitting Officer verifies submitted admission documents and encodes the student data.\n2. Dean's Office (Advising & Scheduling): Proceed to the Dean's Office for academic advising, schedule plotting, and schedule encoding. Receive the Pre-Registration Form.\n3. Finance Office (Assessment & Payment): Proceed to the Finance Office/Cashier for assessment of fees and payment of initial enrollment fee. Receive the Official Receipt (OR).\n4. Registrar's Office (Validation & Official Enrollment): Proceed to the University Registrar's Office for verification and validation of enrollment. Receive the official Study Load and Assessment stamped with 'OFFICIALLY ENROLLED'.\n5. ICT Office (Student ID): Secure an Official Identification Card (ID) at the ICT Office by presenting the Official Receipt and stamped Study Load.\n6. University Clinic (Health Profiling): Complete the medical profiling form at the University Clinic by presenting the Official Receipt and Study Load.\n\nSources: 2\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "parts": [
+        {
+          "query": "Who is the University President?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "what office handles enrollment?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | University President | Sr. Marie Rosanne Mallillin, SPCS",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.619696+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | University President | Sr. Marie Rosanne Mallillin, SPCS",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 99,
+              "retrieved_at": "2026-10-27T14:12:30.732196+00:00"
+            }
+          ],
+          "review_notes": [
+            "The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office."
+          ],
+          "part": 1,
+          "query": "Who is the University President?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What is the step-by-step enrollment procedure for incoming freshmen at SPUS (Document URO-PR-005)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "what office handles enrollment?",
+          "citation_index": 2
+        }
+      ],
+      "saved": false,
+      "action": null
+    },
+    {
+      "case": "filipino",
+      "query": "Sino ang ICT director at CEIT dean?",
+      "passed": true,
+      "elapsed_ms": 275.83,
+      "response": "**1. Sino ang ICT director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nMga sanggunian: 1\n\n**2. Sino ang CEIT dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nMga sanggunian: 2\n\n[SUGGESTIONS: \"Anong mga programa ang inaalok sa SPUS?\" | \"Paano mag-enroll sa SPUS?\" | \"Saan ang Registrar office?\"]",
+      "parts": [
+        {
+          "query": "Sino ang ICT director?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "Sino ang CEIT dean?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Sino ang ICT director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Sino ang CEIT dean?",
+          "citation_index": 2
+        }
+      ],
+      "saved": false,
+      "action": null
+    },
+    {
+      "case": "partial_missing",
+      "query": "Who is the ICT Director, and who is the director of Mars?",
+      "passed": true,
+      "elapsed_ms": 191.18,
+      "response": "**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. who is the director of Mars?**\n\nI don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "parts": [
+        {
+          "query": "Who is the ICT Director?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "who is the director of Mars?",
+          "status": "no_match",
+          "source_indices": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        }
+      ],
+      "saved": false,
+      "action": null
+    },
+    {
+      "case": "partial_conflict",
+      "query": "Who is the ICT Director, and who is the PBMO director?",
+      "passed": true,
+      "elapsed_ms": 317.1,
+      "response": "**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. who is the PBMO director?**\n\nI found conflicting information or more than one possible match. Please specify the office, category, or date.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "parts": [
+        {
+          "query": "Who is the ICT Director?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "who is the PBMO director?",
+          "status": "conflict",
+          "source_indices": []
+        }
+      ],
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        }
+      ],
+      "saved": false,
+      "action": null
+    },
+    {
+      "case": "focused_followup",
+      "query": "How about CHS?",
+      "passed": true,
+      "elapsed_ms": 314.35,
+      "response": "Here is the information from the SPUS sources for your follow-up.\n\nMrs. Kristal Liza Besario, MaN, RN — Dean, College of Health Sciences, Head, Health Service\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "parts": [],
+      "sources": [
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Health Sciences, Head, Health Service | Mrs. Kristal Liza Besario, MaN, RN",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.725698+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Health Sciences | Dean, College of Health Sciences, Head, Health Service | Mrs. Kristal Liza Besario, MaN, RN",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 233,
+              "retrieved_at": "2026-10-27T14:12:31.280498+00:00"
+            }
+          ],
+          "review_notes": []
+        }
+      ],
+      "saved": false,
+      "action": null
+    },
+    {
+      "case": "ambiguous_pronoun",
+      "query": "Where is it?",
+      "passed": true,
+      "elapsed_ms": 178.95,
+      "response": "Which topic or detail do you mean? Please specify the office, program, or question.",
+      "parts": [],
+      "sources": [],
+      "saved": false,
+      "action": null
+    },
+    {
+      "case": "isolated_guest_tab",
+      "query": "How about CHS?",
+      "passed": true,
+      "elapsed_ms": 36.98,
+      "response": "Which topic or detail do you mean? Please specify the office, program, or question.",
+      "parts": [],
+      "sources": [],
+      "saved": false,
+      "action": null
+    }
+  ]
+}

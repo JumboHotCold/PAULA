@@ -5,6 +5,7 @@ Handles both frontend HTML rendering and API endpoints.
 """
 
 import json
+from uuid import UUID
 from django.shortcuts import render, redirect
 from django.http import JsonResponse, HttpResponse
 from django.contrib.auth import login, logout, authenticate
@@ -18,6 +19,9 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
 from .logic import PauliBotLogic
+from .intents import guest_clarification_history
+from .conversation_context import bounded_history
+from .context_tokens import decode_context, encode_context
 from .models import ChatHistory, CustomUser, Conversation, StudentNeed, Announcement
 from .serializers import (
     UserRegistrationSerializer,
@@ -108,12 +112,9 @@ def chat_view(request):
     context = {}
     
     # HYBRID ACCESS LOGIC
-    if request.user.is_authenticated:
-        # Load history for students
-        context['chat_history'] = ChatHistory.objects.filter(user=request.user).order_by('timestamp')
-    else:
-        # No history for guests
-        context['chat_history'] = []
+    # A page opens an empty thread. Selecting a sidebar conversation loads only
+    # that owned thread; never concatenate every past conversation in one view.
+    context['chat_history'] = []
         
     return render(request, 'chatbot/chat.html', context)
 
@@ -145,6 +146,7 @@ def login_user(request):
             'name': user.first_name or user.username,
             'is_superuser': user.is_superuser,
             'student_id': user.student_id,
+            'account_id': user.student_id or user.username,
         }, status=status.HTTP_200_OK)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
@@ -153,6 +155,16 @@ def logout_user(request):
     """API Endpoint for logout (JSON)"""
     logout(request)
     return Response({'message': 'Logout successful'}, status=status.HTTP_200_OK)
+
+
+@ensure_csrf_cookie
+@api_view(['GET'])
+def session_status(request):
+    """The browser restores identity from Django, not localStorage alone."""
+    if not request.user.is_authenticated:
+        return Response({'authenticated':False})
+    return Response({'authenticated':True, 'id':request.user.student_id or request.user.username,
+                     'is_superuser':request.user.is_superuser})
 
 @api_view(['GET'])
 @login_required
@@ -221,40 +233,96 @@ def chat_api(request):
             
         user_message = data.get('message', '')
         conversation_id = data.get('conversation_id')
+        # Fail closed: possession of an old session cookie alone is never
+        # sufficient to opt a chat request into permanent history.
+        mode = data.get('mode', 'guest')
+        if mode not in ('guest', 'authenticated'):
+            return Response({'error':'Invalid chat mode.'}, status=400)
+        persist = request.user.is_authenticated and mode == 'authenticated'
+        if mode == 'authenticated' and not request.user.is_authenticated:
+            return Response({'error':'Please log in again to save this conversation.'}, status=401)
+        expected_account = data.get('account_id')
+        if persist and expected_account is not None and str(expected_account) != str(request.user.student_id or request.user.username):
+            return Response({'error':'The signed-in account changed. Please log in again.'}, status=401)
+        client_session_id = data.get('chat_session_id')
+        try:
+            client_session_id = UUID(str(client_session_id)) if client_session_id else None
+        except ValueError:
+            return Response({'error':'Invalid chat session identifier.'}, status=400)
         
-        if not user_message:
+        if not isinstance(user_message, str) or not user_message.strip() or len(user_message) > 2000:
             return Response({'response': "Please type a message."}, status=400)
 
-        # Process query with Logic Engine
-        history_msgs = []
-        if conversation_id and request.user.is_authenticated:
-            # Fetch last 5 interactions (10 messages total) for context to stay within token limits
-            past_chats = ChatHistory.objects.filter(
-                conversation_id=conversation_id, 
-                user=request.user
-            ).order_by('-timestamp')[:5]
-            
-            # Reverse to get chronological order [ oldest -> newest ]
-            for chat in reversed(past_chats):
-                history_msgs.append({"role": "user", "content": chat.message})
-                # Strip suggestions from bot response for cleaner history context
-                clean_response = re.sub(r'\[SUGGESTIONS:.*?\]', '', chat.response).strip()
-                history_msgs.append({"role": "assistant", "content": clean_response})
-
-        bot_response, sources, action, action_data = bot.process_query(user_message, history=history_msgs)
-        
-        # HYBRID ACCESS: SAVE Logic
-        if request.user.is_authenticated:
-            # Student: Save to DB
-            
-            # Find or Create Conversation
+        conversation = None
+        # Resolve ownership and a stable client chat BEFORE reading history.
+        # A missing ID no longer creates a fresh sidebar item on every prompt.
+        if persist:
             if conversation_id:
                 try:
                     conversation = Conversation.objects.get(id=conversation_id, user=request.user, is_active=True)
                 except Conversation.DoesNotExist:
-                    # User sent an invalid ID, create a new one to be safe
-                    conversation = Conversation.objects.create(user=request.user, title=user_message[:30] + "...")
+                    return Response({'error':'Conversation not found.'}, status=404)
+            elif client_session_id:
+                conversation = Conversation.objects.filter(user=request.user, client_session_id=client_session_id).first()
+                if conversation is not None and not conversation.is_active:
+                    return Response({'error':'This conversation was deleted. Start a new chat.'}, status=409)
+                if conversation is None:
+                    conversation, _ = Conversation.objects.get_or_create(user=request.user, client_session_id=client_session_id,
+                        defaults={'title':user_message[:30] + ('...' if len(user_message) > 30 else '')})
+                conversation_id = conversation.id
             else:
+                # Compatibility for older clients. New clients use the UUID
+                # above, giving separate tabs/New Chat independent sessions.
+                session = getattr(request, 'session', None)
+                previous_id = session.get('paula_conversation_id') if session is not None else None
+                if previous_id:
+                    conversation = Conversation.objects.filter(id=previous_id, user=request.user, is_active=True).first()
+                    if conversation is not None:
+                        conversation_id = conversation.id
+
+        # Process query with Logic Engine
+        # A bounded transient clarification also covers authenticated clients
+        # that have not retained their first returned conversation ID. It is
+        # used only for routing; persisted history from an owned thread wins.
+        history_msgs = bounded_history(data.get('history'))
+        context_anchor = None
+        if conversation_id and persist:
+            # Fetch last 5 interactions (10 messages total) for context to stay within token limits
+            past_chats = ChatHistory.objects.filter(
+                conversation_id=conversation_id, 
+                user=request.user,
+                conversation__is_active=True,
+            ).order_by('-timestamp')[:4]
+            history_msgs = []
+            
+            # Reverse to get chronological order [ oldest -> newest ]
+            for chat in reversed(past_chats):
+                context_anchor = getattr(chat, 'id', None)
+                timestamp = getattr(chat, 'timestamp', None)
+                when = {'timestamp': timestamp.timestamp()} if hasattr(timestamp, 'timestamp') else {}
+                history_msgs.append({"role": "user", "content": chat.message, **when})
+                # Strip suggestions from bot response for cleaner history context
+                clean_response = re.sub(r'\[SUGGESTIONS:.*?\]', '', chat.response).strip()
+                history_msgs.append({"role": "assistant", "content": clean_response, **when})
+            history_msgs = bounded_history(history_msgs)
+
+        owner = f'user:{request.user.pk}' if persist else 'guest'
+        guest_id = data.get('context_id', '')
+        guest_id = guest_id if isinstance(guest_id, str) and len(guest_id) <= 100 else ''
+        thread = conversation_id if persist else guest_id
+        effective_context = decode_context(data.get('context_token'), owner, thread, context_anchor)
+        if effective_context:
+            result = bot.process_query(user_message, history=history_msgs, context_query=effective_context)
+        else:
+            result = bot.process_query(user_message, history=history_msgs)
+        bot_response, sources, action, action_data = result
+        
+        # HYBRID ACCESS: SAVE Logic
+        if persist:
+            # Student: Save to DB
+            
+            # Find or Create Conversation
+            if conversation is None:
                 # Create new conversation if none provided
                 # Use first message as title (truncated)
                 title = user_message[:30] + "..." if len(user_message) > 30 else user_message
@@ -275,6 +343,9 @@ def chat_api(request):
             
             # Update conversation timestamp
             conversation.save()
+            session = getattr(request, 'session', None)
+            if session is not None:
+                session['paula_conversation_id'] = conversation.id
             
             saved = True
             user_type = request.user.username
@@ -298,7 +369,11 @@ def chat_api(request):
             'conversation_title': conversation_title,
             'chat_history_id': chat_history_id,
             'action': action,
-            'action_data': action_data
+            'action_data': action_data,
+            'answer_parts': getattr(result, 'answer_parts', []),
+            'context_token': encode_context(getattr(result, 'context_query', ''), owner,
+                                            active_conversation_id if persist else guest_id,
+                                            chat_history_id if persist else None),
         })
         
     except Exception as e:

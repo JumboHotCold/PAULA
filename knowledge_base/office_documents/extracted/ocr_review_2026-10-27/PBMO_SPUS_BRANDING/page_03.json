@@ -1,0 +1,1716 @@
+{
+  "document": "PBMO_SPUS_BRANDING",
+  "office": "PBMO",
+  "page": 3,
+  "pdf_text_layer_characters": 0,
+  "requested_render_dpi": 200,
+  "ocr_image_size": [
+    4200,
+    2426
+  ],
+  "selected_pass": "color",
+  "selection_is_heuristic": true,
+  "stats": {
+    "lines": 25,
+    "characters": 1043,
+    "mean_confidence": 0.98,
+    "low_confidence_lines_below_0_85": 0
+  },
+  "review_flags": [],
+  "color_contrast_text_similarity": 0.9758,
+  "passes": [
+    {
+      "name": "color",
+      "seconds": 42.32,
+      "rows": [
+        {
+          "box": [
+            [
+              1297.68,
+              505.42
+            ],
+            [
+              3022.98,
+              511.73
+            ],
+            [
+              3020.87,
+              686.52
+            ],
+            [
+              1297.68,
+              680.21
+            ]
+          ],
+          "text": "BRANDMESSAGE",
+          "confidence": 0.988554
+        },
+        {
+          "box": [
+            [
+              609.68,
+              888.69
+            ],
+            [
+              2091.53,
+              897.11
+            ],
+            [
+              2091.53,
+              966.61
+            ],
+            [
+              609.68,
+              960.29
+            ]
+          ],
+          "text": "Guided by our vision, in union with Mary, our Model",
+          "confidence": 0.983847
+        },
+        {
+          "box": [
+            [
+              2351.92,
+              892.9
+            ],
+            [
+              3497.18,
+              888.69
+            ],
+            [
+              3497.18,
+              958.19
+            ],
+            [
+              2351.92,
+              962.4
+            ]
+          ],
+          "text": "SPU Surigao is a Paulinian community of",
+          "confidence": 0.989677
+        },
+        {
+          "box": [
+            [
+              611.79,
+              966.61
+            ],
+            [
+              2102.12,
+              970.82
+            ],
+            [
+              2102.12,
+              1031.89
+            ],
+            [
+              611.79,
+              1027.68
+            ]
+          ],
+          "text": "and St. Paul, our patron, we endeavor to become a",
+          "confidence": 0.981149
+        },
+        {
+          "box": [
+            [
+              2349.8,
+              962.4
+            ],
+            [
+              3442.14,
+              962.4
+            ],
+            [
+              3442.14,
+              1025.57
+            ],
+            [
+              2349.8,
+              1025.57
+            ]
+          ],
+          "text": "learners and believers impelled by the",
+          "confidence": 0.961047
+        },
+        {
+          "box": [
+            [
+              618.15,
+              1040.32
+            ],
+            [
+              2087.3,
+              1040.32
+            ],
+            [
+              2087.3,
+              1099.28
+            ],
+            [
+              618.15,
+              1099.28
+            ]
+          ],
+          "text": "preferred educational community,proclaimJesus",
+          "confidence": 0.981657
+        },
+        {
+          "box": [
+            [
+              2351.92,
+              1034.0
+            ],
+            [
+              3681.35,
+              1025.57
+            ],
+            [
+              3681.35,
+              1088.75
+            ],
+            [
+              2351.92,
+              1097.18
+            ]
+          ],
+          "text": "charism and spirituality of the Sisters of St. Paul",
+          "confidence": 0.975021
+        },
+        {
+          "box": [
+            [
+              2351.92,
+              1105.6
+            ],
+            [
+              3617.84,
+              1101.39
+            ],
+            [
+              3617.84,
+              1160.35
+            ],
+            [
+              2351.92,
+              1164.56
+            ]
+          ],
+          "text": "of Chartres form Christ-centered, integrated,",
+          "confidence": 0.968982
+        },
+        {
+          "box": [
+            [
+              616.03,
+              1107.7
+            ],
+            [
+              2125.4,
+              1107.7
+            ],
+            [
+              2125.4,
+              1172.99
+            ],
+            [
+              616.03,
+              1172.99
+            ]
+          ],
+          "text": "Christ, the good news, and uplift the quality of life, in",
+          "confidence": 0.989268
+        },
+        {
+          "box": [
+            [
+              616.03,
+              1179.31
+            ],
+            [
+              2108.47,
+              1175.09
+            ],
+            [
+              2108.47,
+              1240.38
+            ],
+            [
+              616.03,
+              1244.59
+            ]
+          ],
+          "text": "a culture of excellence, compassionate caring and",
+          "confidence": 0.991183
+        },
+        {
+          "box": [
+            [
+              2354.03,
+              1179.31
+            ],
+            [
+              3556.45,
+              1168.78
+            ],
+            [
+              3556.45,
+              1227.74
+            ],
+            [
+              2354.03,
+              1238.27
+            ]
+          ],
+          "text": "competent and responsible persons in the",
+          "confidence": 0.966244
+        },
+        {
+          "box": [
+            [
+              620.26,
+              1248.8
+            ],
+            [
+              1284.98,
+              1248.8
+            ],
+            [
+              1284.98,
+              1314.08
+            ],
+            [
+              620.26,
+              1314.08
+            ]
+          ],
+          "text": "collaboration through:",
+          "confidence": 0.975415
+        },
+        {
+          "box": [
+            [
+              2349.8,
+              1242.48
+            ],
+            [
+              3310.89,
+              1242.48
+            ],
+            [
+              3310.89,
+              1303.55
+            ],
+            [
+              2349.8,
+              1301.45
+            ]
+          ],
+          "text": "service of the Church and society.",
+          "confidence": 0.983516
+        },
+        {
+          "box": [
+            [
+              2347.68,
+              1379.37
+            ],
+            [
+              3537.4,
+              1373.05
+            ],
+            [
+              3537.4,
+              1438.33
+            ],
+            [
+              2347.68,
+              1444.65
+            ]
+          ],
+          "text": "St. Paul University Surigao provides quality,",
+          "confidence": 0.981752
+        },
+        {
+          "box": [
+            [
+              626.61,
+              1389.9
+            ],
+            [
+              2174.09,
+              1383.58
+            ],
+            [
+              2174.09,
+              1448.86
+            ],
+            [
+              626.61,
+              1455.18
+            ]
+          ],
+          "text": "· Integral Catholic formation, academic competence,",
+          "confidence": 0.97615
+        },
+        {
+          "box": [
+            [
+              620.26,
+              1465.71
+            ],
+            [
+              1613.1,
+              1461.5
+            ],
+            [
+              1613.1,
+              1518.36
+            ],
+            [
+              620.26,
+              1520.46
+            ]
+          ],
+          "text": "researchand communityservice;",
+          "confidence": 0.965038
+        },
+        {
+          "box": [
+            [
+              2343.45,
+              1448.86
+            ],
+            [
+              3664.42,
+              1444.65
+            ],
+            [
+              3664.42,
+              1499.4
+            ],
+            [
+              2343.45,
+              1503.61
+            ]
+          ],
+          "text": "CatholicPaulinianeducationthatiscustomer-",
+          "confidence": 0.995168
+        },
+        {
+          "box": [
+            [
+              2343.45,
+              1512.04
+            ],
+            [
+              3636.9,
+              1512.04
+            ],
+            [
+              3636.9,
+              1575.22
+            ],
+            [
+              2343.45,
+              1575.22
+            ]
+          ],
+          "text": "focused in a culture of compassionate caring",
+          "confidence": 0.991515
+        },
+        {
+          "box": [
+            [
+              620.26,
+              1533.1
+            ],
+            [
+              2106.35,
+              1524.67
+            ],
+            [
+              2106.35,
+              1589.96
+            ],
+            [
+              622.38,
+              1596.27
+            ]
+          ],
+          "text": "· Innovative and productive management systems",
+          "confidence": 0.98739
+        },
+        {
+          "box": [
+            [
+              624.5,
+              1606.8
+            ],
+            [
+              1981.45,
+              1589.96
+            ],
+            [
+              1981.45,
+              1655.24
+            ],
+            [
+              624.5,
+              1672.09
+            ]
+          ],
+          "text": "and processes permeated with Gospel values;",
+          "confidence": 0.995345
+        },
+        {
+          "box": [
+            [
+              2347.68,
+              1583.64
+            ],
+            [
+              3643.25,
+              1577.32
+            ],
+            [
+              3643.25,
+              1642.6
+            ],
+            [
+              2347.68,
+              1648.92
+            ]
+          ],
+          "text": "through· involvement at all levels· upgrading",
+          "confidence": 0.972372
+        },
+        {
+          "box": [
+            [
+              632.96,
+              1676.3
+            ],
+            [
+              2212.2,
+              1657.35
+            ],
+            [
+              2212.2,
+              1716.31
+            ],
+            [
+              632.96,
+              1737.37
+            ]
+          ],
+          "text": "·Optimum access to Paulinian education and services",
+          "confidence": 0.961052
+        },
+        {
+          "box": [
+            [
+              2345.56,
+              1655.24
+            ],
+            [
+              3325.71,
+              1648.92
+            ],
+            [
+              3327.82,
+              1707.89
+            ],
+            [
+              2345.56,
+              1714.2
+            ]
+          ],
+          "text": "of humanresources and facilities·",
+          "confidence": 0.985651
+        },
+        {
+          "box": [
+            [
+              624.5,
+              1743.69
+            ],
+            [
+              2025.91,
+              1724.73
+            ],
+            [
+              2028.02,
+              1790.02
+            ],
+            [
+              624.5,
+              1808.97
+            ]
+          ],
+          "text": "with preferential option for the under- privileged",
+          "confidence": 0.971024
+        },
+        {
+          "box": [
+            [
+              2345.56,
+              1724.73
+            ],
+            [
+              3467.54,
+              1718.42
+            ],
+            [
+              3467.54,
+              1773.17
+            ],
+            [
+              2345.56,
+              1779.49
+            ]
+          ],
+          "text": "commitment tocontinualimprovement",
+          "confidence": 0.982
+        }
+      ],
+      "text": "BRANDMESSAGE\nGuided by our vision, in union with Mary, our Model\nSPU Surigao is a Paulinian community of\nand St. Paul, our patron, we endeavor to become a\nlearners and believers impelled by the\npreferred educational community,proclaimJesus\ncharism and spirituality of the Sisters of St. Paul\nof Chartres form Christ-centered, integrated,\nChrist, the good news, and uplift the quality of life, in\na culture of excellence, compassionate caring and\ncompetent and responsible persons in the\ncollaboration through:\nservice of the Church and society.\nSt. Paul University Surigao provides quality,\n· Integral Catholic formation, academic competence,\nresearchand communityservice;\nCatholicPaulinianeducationthatiscustomer-\nfocused in a culture of compassionate caring\n· Innovative and productive management systems\nand processes permeated with Gospel values;\nthrough· involvement at all levels· upgrading\n·Optimum access to Paulinian education and services\nof humanresources and facilities·\nwith preferential option for the under- privileged\ncommitment tocontinualimprovement"
+    },
+    {
+      "name": "autocontrast",
+      "seconds": 9.35,
+      "rows": [
+        {
+          "box": [
+            [
+              1297.68,
+              505.42
+            ],
+            [
+              3022.98,
+              509.63
+            ],
+            [
+              3020.87,
+              684.42
+            ],
+            [
+              1297.68,
+              678.1
+            ]
+          ],
+          "text": "BRAND MESSAGE",
+          "confidence": 0.945153
+        },
+        {
+          "box": [
+            [
+              609.68,
+              888.69
+            ],
+            [
+              2091.53,
+              897.11
+            ],
+            [
+              2091.53,
+              966.61
+            ],
+            [
+              609.68,
+              960.29
+            ]
+          ],
+          "text": "Guided by our vision, in union with Mary, our Model",
+          "confidence": 0.977973
+        },
+        {
+          "box": [
+            [
+              2351.92,
+              892.9
+            ],
+            [
+              3497.18,
+              888.69
+            ],
+            [
+              3497.18,
+              958.19
+            ],
+            [
+              2351.92,
+              962.4
+            ]
+          ],
+          "text": "SPU Surigao is a Paulinian community of",
+          "confidence": 0.968477
+        },
+        {
+          "box": [
+            [
+              611.79,
+              966.61
+            ],
+            [
+              2102.12,
+              970.82
+            ],
+            [
+              2102.12,
+              1031.89
+            ],
+            [
+              611.79,
+              1027.68
+            ]
+          ],
+          "text": "and St.Paul,ourpatron,we endeavortobecome a",
+          "confidence": 0.943775
+        },
+        {
+          "box": [
+            [
+              2349.8,
+              962.4
+            ],
+            [
+              3440.02,
+              962.4
+            ],
+            [
+              3440.02,
+              1025.57
+            ],
+            [
+              2349.8,
+              1025.57
+            ]
+          ],
+          "text": "learnersandbelieversimpelledbythe",
+          "confidence": 0.994839
+        },
+        {
+          "box": [
+            [
+              618.15,
+              1040.32
+            ],
+            [
+              2087.3,
+              1040.32
+            ],
+            [
+              2087.3,
+              1099.28
+            ],
+            [
+              618.15,
+              1099.28
+            ]
+          ],
+          "text": "preferrededucationalcommunity,proclaimJesus",
+          "confidence": 0.97653
+        },
+        {
+          "box": [
+            [
+              2351.92,
+              1034.0
+            ],
+            [
+              3681.35,
+              1025.57
+            ],
+            [
+              3681.35,
+              1088.75
+            ],
+            [
+              2351.92,
+              1097.18
+            ]
+          ],
+          "text": "charismand spiritualityof theSistersofSt.Paul",
+          "confidence": 0.970266
+        },
+        {
+          "box": [
+            [
+              2351.92,
+              1105.6
+            ],
+            [
+              3617.84,
+              1101.39
+            ],
+            [
+              3617.84,
+              1160.35
+            ],
+            [
+              2351.92,
+              1164.56
+            ]
+          ],
+          "text": "ofChartresformChrist-centered,integrated,",
+          "confidence": 0.955228
+        },
+        {
+          "box": [
+            [
+              616.03,
+              1107.7
+            ],
+            [
+              2125.4,
+              1107.7
+            ],
+            [
+              2125.4,
+              1172.99
+            ],
+            [
+              616.03,
+              1172.99
+            ]
+          ],
+          "text": "Christ, the good news, and uplift the quality of life, in",
+          "confidence": 0.945252
+        },
+        {
+          "box": [
+            [
+              616.03,
+              1177.2
+            ],
+            [
+              2108.47,
+              1175.09
+            ],
+            [
+              2108.47,
+              1242.48
+            ],
+            [
+              616.03,
+              1244.59
+            ]
+          ],
+          "text": "a culture of excellence, compassionate caring and",
+          "confidence": 0.962328
+        },
+        {
+          "box": [
+            [
+              2354.03,
+              1179.31
+            ],
+            [
+              3556.45,
+              1168.78
+            ],
+            [
+              3556.45,
+              1227.74
+            ],
+            [
+              2354.03,
+              1238.27
+            ]
+          ],
+          "text": "competentandresponsiblepersonsinthe",
+          "confidence": 0.997588
+        },
+        {
+          "box": [
+            [
+              618.15,
+              1248.8
+            ],
+            [
+              1284.98,
+              1248.8
+            ],
+            [
+              1284.98,
+              1314.08
+            ],
+            [
+              618.15,
+              1314.08
+            ]
+          ],
+          "text": "collaboration through:",
+          "confidence": 0.962062
+        },
+        {
+          "box": [
+            [
+              2349.8,
+              1242.48
+            ],
+            [
+              3310.89,
+              1242.48
+            ],
+            [
+              3310.89,
+              1303.55
+            ],
+            [
+              2349.8,
+              1301.45
+            ]
+          ],
+          "text": "serviceoftheChurch and society.",
+          "confidence": 0.965021
+        },
+        {
+          "box": [
+            [
+              2347.68,
+              1379.37
+            ],
+            [
+              3537.4,
+              1373.05
+            ],
+            [
+              3537.4,
+              1438.33
+            ],
+            [
+              2347.68,
+              1444.65
+            ]
+          ],
+          "text": "St. Paul University Surigaoprovides quality,",
+          "confidence": 0.970644
+        },
+        {
+          "box": [
+            [
+              626.61,
+              1389.9
+            ],
+            [
+              2174.09,
+              1383.58
+            ],
+            [
+              2174.09,
+              1448.86
+            ],
+            [
+              626.61,
+              1455.18
+            ]
+          ],
+          "text": "·Integral Catholicformation,academiccompetence,",
+          "confidence": 0.973807
+        },
+        {
+          "box": [
+            [
+              620.26,
+              1463.6
+            ],
+            [
+              1615.22,
+              1459.39
+            ],
+            [
+              1615.22,
+              1518.36
+            ],
+            [
+              620.26,
+              1522.57
+            ]
+          ],
+          "text": "researchandcommunityservice;",
+          "confidence": 0.994681
+        },
+        {
+          "box": [
+            [
+              2343.45,
+              1448.86
+            ],
+            [
+              3664.42,
+              1444.65
+            ],
+            [
+              3664.42,
+              1499.4
+            ],
+            [
+              2343.45,
+              1503.61
+            ]
+          ],
+          "text": "CatholicPaulinianeducationthatiscustomer-",
+          "confidence": 0.994203
+        },
+        {
+          "box": [
+            [
+              2343.45,
+              1512.04
+            ],
+            [
+              3636.9,
+              1512.04
+            ],
+            [
+              3636.9,
+              1575.22
+            ],
+            [
+              2343.45,
+              1575.22
+            ]
+          ],
+          "text": "focused in a culture ofcompassionate caring",
+          "confidence": 0.960848
+        },
+        {
+          "box": [
+            [
+              620.26,
+              1533.1
+            ],
+            [
+              2106.35,
+              1524.67
+            ],
+            [
+              2106.35,
+              1589.96
+            ],
+            [
+              620.26,
+              1596.27
+            ]
+          ],
+          "text": "·Innovativeandproductivemanagementsystems",
+          "confidence": 0.985979
+        },
+        {
+          "box": [
+            [
+              624.5,
+              1606.8
+            ],
+            [
+              1981.45,
+              1589.96
+            ],
+            [
+              1981.45,
+              1655.24
+            ],
+            [
+              624.5,
+              1672.09
+            ]
+          ],
+          "text": "and processespermeated withGospel values;",
+          "confidence": 0.964031
+        },
+        {
+          "box": [
+            [
+              2347.68,
+              1583.64
+            ],
+            [
+              3643.25,
+              1577.32
+            ],
+            [
+              3643.25,
+              1642.6
+            ],
+            [
+              2347.68,
+              1648.92
+            ]
+          ],
+          "text": "through·involvement at all levels·upgrading",
+          "confidence": 0.978423
+        },
+        {
+          "box": [
+            [
+              632.96,
+              1676.3
+            ],
+            [
+              2212.2,
+              1655.24
+            ],
+            [
+              2212.2,
+              1716.31
+            ],
+            [
+              632.96,
+              1737.37
+            ]
+          ],
+          "text": "·OptimumaccesstoPaulinianeducationandservices",
+          "confidence": 0.986468
+        },
+        {
+          "box": [
+            [
+              2345.56,
+              1655.24
+            ],
+            [
+              3325.71,
+              1648.92
+            ],
+            [
+              3327.82,
+              1707.89
+            ],
+            [
+              2345.56,
+              1714.2
+            ]
+          ],
+          "text": "ofhumanresourcesandfacilities·",
+          "confidence": 0.995985
+        },
+        {
+          "box": [
+            [
+              624.5,
+              1743.69
+            ],
+            [
+              2025.91,
+              1724.73
+            ],
+            [
+              2028.02,
+              1790.02
+            ],
+            [
+              624.5,
+              1808.97
+            ]
+          ],
+          "text": "with preferential optionfor the under-privileged",
+          "confidence": 0.964013
+        },
+        {
+          "box": [
+            [
+              2345.56,
+              1724.73
+            ],
+            [
+              3467.54,
+              1718.42
+            ],
+            [
+              3467.54,
+              1773.17
+            ],
+            [
+              2345.56,
+              1779.49
+            ]
+          ],
+          "text": "commitmenttocontinualimprovement",
+          "confidence": 0.993011
+        }
+      ],
+      "text": "BRAND MESSAGE\nGuided by our vision, in union with Mary, our Model\nSPU Surigao is a Paulinian community of\nand St.Paul,ourpatron,we endeavortobecome a\nlearnersandbelieversimpelledbythe\npreferrededucationalcommunity,proclaimJesus\ncharismand spiritualityof theSistersofSt.Paul\nofChartresformChrist-centered,integrated,\nChrist, the good news, and uplift the quality of life, in\na culture of excellence, compassionate caring and\ncompetentandresponsiblepersonsinthe\ncollaboration through:\nserviceoftheChurch and society.\nSt. Paul University Surigaoprovides quality,\n·Integral Catholicformation,academiccompetence,\nresearchandcommunityservice;\nCatholicPaulinianeducationthatiscustomer-\nfocused in a culture ofcompassionate caring\n·Innovativeandproductivemanagementsystems\nand processespermeated withGospel values;\nthrough·involvement at all levels·upgrading\n·OptimumaccesstoPaulinianeducationandservices\nofhumanresourcesandfacilities·\nwith preferential optionfor the under-privileged\ncommitmenttocontinualimprovement"
+    },
+    {
+      "name": "overlapping_tiles",
+      "seconds": 26.560000000000002,
+      "rows": [
+        {
+          "box": [
+            [
+              1280.75,
+              490.62
+            ],
+            [
+              2144.46,
+              490.62
+            ],
+            [
+              2144.46,
+              696.97
+            ],
+            [
+              1280.75,
+              696.97
+            ]
+          ],
+          "text": "BRANDN",
+          "confidence": 0.990415
+        },
+        {
+          "box": [
+            [
+              2034.38,
+              492.72
+            ],
+            [
+              3046.27,
+              492.72
+            ],
+            [
+              3046.27,
+              701.18
+            ],
+            [
+              2034.38,
+              701.18
+            ]
+          ],
+          "text": "MESSAGE",
+          "confidence": 0.988789
+        },
+        {
+          "box": [
+            [
+              611.79,
+              890.69
+            ],
+            [
+              2087.3,
+              894.9
+            ],
+            [
+              2087.3,
+              962.28
+            ],
+            [
+              611.79,
+              958.07
+            ]
+          ],
+          "text": "Guided by our vision, in union with Mary, our Model",
+          "confidence": 0.955641
+        },
+        {
+          "box": [
+            [
+              2356.15,
+              897.01
+            ],
+            [
+              3488.71,
+              892.8
+            ],
+            [
+              3488.71,
+              953.86
+            ],
+            [
+              2356.15,
+              958.07
+            ]
+          ],
+          "text": "SPUSurigaoisaPauliniancommunityof",
+          "confidence": 0.987682
+        },
+        {
+          "box": [
+            [
+              611.79,
+              966.5
+            ],
+            [
+              2100.0,
+              970.71
+            ],
+            [
+              2100.0,
+              1031.77
+            ],
+            [
+              611.79,
+              1027.56
+            ]
+          ],
+          "text": "and St.Paul,ourpatron,we endeavortobecome a",
+          "confidence": 0.95073
+        },
+        {
+          "box": [
+            [
+              2356.15,
+              966.5
+            ],
+            [
+              3437.9,
+              966.5
+            ],
+            [
+              3437.9,
+              1021.24
+            ],
+            [
+              2356.15,
+              1021.24
+            ]
+          ],
+          "text": "learnersandbelieversimpelledbythe",
+          "confidence": 0.993349
+        },
+        {
+          "box": [
+            [
+              618.15,
+              1038.09
+            ],
+            [
+              2087.3,
+              1038.09
+            ],
+            [
+              2087.3,
+              1101.26
+            ],
+            [
+              618.15,
+              1101.26
+            ]
+          ],
+          "text": "preferrededucationalcommunity,proclaimJesus",
+          "confidence": 0.975028
+        },
+        {
+          "box": [
+            [
+              2354.03,
+              1035.98
+            ],
+            [
+              3679.23,
+              1027.56
+            ],
+            [
+              3681.35,
+              1090.73
+            ],
+            [
+              2354.03,
+              1101.26
+            ]
+          ],
+          "text": "charismand spirituality of theSisters ofSt.Paul",
+          "confidence": 0.964312
+        },
+        {
+          "box": [
+            [
+              616.03,
+              1105.47
+            ],
+            [
+              2127.52,
+              1105.47
+            ],
+            [
+              2127.52,
+              1174.96
+            ],
+            [
+              616.03,
+              1177.06
+            ]
+          ],
+          "text": "Christ, the good news, and uplift the quality of life, in",
+          "confidence": 0.986084
+        },
+        {
+          "box": [
+            [
+              2356.15,
+              1107.57
+            ],
+            [
+              3611.49,
+              1105.47
+            ],
+            [
+              3611.49,
+              1158.11
+            ],
+            [
+              2356.15,
+              1160.22
+            ]
+          ],
+          "text": "ofChartresformChrist-centered,integrated",
+          "confidence": 0.965651
+        },
+        {
+          "box": [
+            [
+              616.03,
+              1179.17
+            ],
+            [
+              2104.23,
+              1177.06
+            ],
+            [
+              2104.23,
+              1240.23
+            ],
+            [
+              616.03,
+              1242.34
+            ]
+          ],
+          "text": "a cultureofexcellence,compassionatecaringand",
+          "confidence": 0.985483
+        },
+        {
+          "box": [
+            [
+              2356.15,
+              1179.17
+            ],
+            [
+              3554.33,
+              1168.64
+            ],
+            [
+              3554.33,
+              1225.49
+            ],
+            [
+              2356.15,
+              1238.12
+            ]
+          ],
+          "text": "competentandresponsiblepersonsinthe",
+          "confidence": 0.996678
+        },
+        {
+          "box": [
+            [
+              622.38,
+              1246.83
+            ],
+            [
+              1276.51,
+              1253.15
+            ],
+            [
+              1276.51,
+              1312.11
+            ],
+            [
+              622.38,
+              1305.79
+            ]
+          ],
+          "text": "collaborationthrough:",
+          "confidence": 0.982675
+        },
+        {
+          "box": [
+            [
+              2351.92,
+              1242.62
+            ],
+            [
+              3308.77,
+              1244.73
+            ],
+            [
+              3308.77,
+              1303.69
+            ],
+            [
+              2351.92,
+              1299.47
+            ]
+          ],
+          "text": "serviceoftheChurchandsociety.",
+          "confidence": 0.992544
+        },
+        {
+          "box": [
+            [
+              630.85,
+              1392.12
+            ],
+            [
+              2171.98,
+              1381.6
+            ],
+            [
+              2171.98,
+              1446.87
+            ],
+            [
+              630.85,
+              1455.29
+            ]
+          ],
+          "text": "Integral Catholicformation,academiccompetence,",
+          "confidence": 0.98632
+        },
+        {
+          "box": [
+            [
+              2347.68,
+              1381.6
+            ],
+            [
+              3533.17,
+              1375.28
+            ],
+            [
+              3533.17,
+              1438.45
+            ],
+            [
+              2347.68,
+              1444.76
+            ]
+          ],
+          "text": "St.Paul UniversitySurigaoprovidesquality,",
+          "confidence": 0.970135
+        },
+        {
+          "box": [
+            [
+              622.38,
+              1463.72
+            ],
+            [
+              1613.1,
+              1459.5
+            ],
+            [
+              1613.1,
+              1514.25
+            ],
+            [
+              622.38,
+              1520.57
+            ]
+          ],
+          "text": "researchandcommunityservice;",
+          "confidence": 0.989144
+        },
+        {
+          "box": [
+            [
+              2351.92,
+              1453.19
+            ],
+            [
+              3658.06,
+              1446.87
+            ],
+            [
+              3660.18,
+              1493.19
+            ],
+            [
+              2351.92,
+              1501.62
+            ]
+          ],
+          "text": "CatholicPaulinianeducationthatiscustomer-",
+          "confidence": 0.992301
+        },
+        {
+          "box": [
+            [
+              630.85,
+              1535.31
+            ],
+            [
+              2102.12,
+              1524.78
+            ],
+            [
+              2102.12,
+              1581.63
+            ],
+            [
+              630.85,
+              1592.16
+            ]
+          ],
+          "text": "·Innovativeandproductivemanagementsystems",
+          "confidence": 0.979468
+        },
+        {
+          "box": [
+            [
+              2347.68,
+              1514.25
+            ],
+            [
+              3632.66,
+              1512.15
+            ],
+            [
+              3632.66,
+              1571.1
+            ],
+            [
+              2347.68,
+              1573.21
+            ]
+          ],
+          "text": "focusedinacultureofcompassionatecaring",
+          "confidence": 0.997304
+        },
+        {
+          "box": [
+            [
+              626.61,
+              1604.79
+            ],
+            [
+              1979.33,
+              1590.06
+            ],
+            [
+              1979.33,
+              1651.12
+            ],
+            [
+              626.61,
+              1665.86
+            ]
+          ],
+          "text": "andprocessespermeatedwithGospelvalues;",
+          "confidence": 0.992936
+        },
+        {
+          "box": [
+            [
+              2347.68,
+              1585.84
+            ],
+            [
+              3641.13,
+              1577.42
+            ],
+            [
+              3641.13,
+              1642.7
+            ],
+            [
+              2347.68,
+              1651.12
+            ]
+          ],
+          "text": "through·involvement at all levels·upgrading",
+          "confidence": 0.982677
+        },
+        {
+          "box": [
+            [
+              632.96,
+              1676.39
+            ],
+            [
+              2212.2,
+              1655.33
+            ],
+            [
+              2212.2,
+              1712.18
+            ],
+            [
+              635.08,
+              1733.24
+            ]
+          ],
+          "text": "·OptimumaccesstoPaulinianeducationandservices",
+          "confidence": 0.981425
+        },
+        {
+          "box": [
+            [
+              2349.8,
+              1657.44
+            ],
+            [
+              3321.47,
+              1649.01
+            ],
+            [
+              3321.47,
+              1703.76
+            ],
+            [
+              2349.8,
+              1712.18
+            ]
+          ],
+          "text": "ofhumanresourcesandfacilities·",
+          "confidence": 0.989198
+        },
+        {
+          "box": [
+            [
+              626.61,
+              1741.66
+            ],
+            [
+              2021.67,
+              1729.03
+            ],
+            [
+              2021.67,
+              1790.09
+            ],
+            [
+              626.61,
+              1802.73
+            ]
+          ],
+          "text": "withpreferentialoptionfortheunder-privileged",
+          "confidence": 0.988121
+        },
+        {
+          "box": [
+            [
+              2347.68,
+              1726.92
+            ],
+            [
+              3465.42,
+              1718.5
+            ],
+            [
+              3465.42,
+              1771.14
+            ],
+            [
+              2347.68,
+              1779.56
+            ]
+          ],
+          "text": "commitmenttocontinualimprovement",
+          "confidence": 0.997441
+        }
+      ],
+      "text": "BRANDN\nMESSAGE\nGuided by our vision, in union with Mary, our Model\nSPUSurigaoisaPauliniancommunityof\nand St.Paul,ourpatron,we endeavortobecome a\nlearnersandbelieversimpelledbythe\npreferrededucationalcommunity,proclaimJesus\ncharismand spirituality of theSisters ofSt.Paul\nChrist, the good news, and uplift the quality of life, in\nofChartresformChrist-centered,integrated\na cultureofexcellence,compassionatecaringand\ncompetentandresponsiblepersonsinthe\ncollaborationthrough:\nserviceoftheChurchandsociety.\nIntegral Catholicformation,academiccompetence,\nSt.Paul UniversitySurigaoprovidesquality,\nresearchandcommunityservice;\nCatholicPaulinianeducationthatiscustomer-\n·Innovativeandproductivemanagementsystems\nfocusedinacultureofcompassionatecaring\nandprocessespermeatedwithGospelvalues;\nthrough·involvement at all levels·upgrading\n·OptimumaccesstoPaulinianeducationandservices\nofhumanresourcesandfacilities·\nwithpreferentialoptionfortheunder-privileged\ncommitmenttocontinualimprovement"
+    }
+  ]
+}

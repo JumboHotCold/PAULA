@@ -1,0 +1,1892 @@
+{
+  "document": "PBMO_SPUS_BRANDING",
+  "office": "PBMO",
+  "page": 5,
+  "pdf_text_layer_characters": 0,
+  "requested_render_dpi": 200,
+  "ocr_image_size": [
+    4200,
+    3246
+  ],
+  "selected_pass": "overlapping_tiles",
+  "selection_is_heuristic": true,
+  "stats": {
+    "lines": 31,
+    "characters": 563,
+    "mean_confidence": 0.9735,
+    "low_confidence_lines_below_0_85": 0
+  },
+  "review_flags": [],
+  "color_contrast_text_similarity": 0.953,
+  "passes": [
+    {
+      "name": "color",
+      "seconds": 8.98,
+      "rows": [
+        {
+          "box": [
+            [
+              387.4,
+              720.63
+            ],
+            [
+              590.62,
+              724.86
+            ],
+            [
+              588.51,
+              794.59
+            ],
+            [
+              385.28,
+              788.25
+            ]
+          ],
+          "text": "LOGO",
+          "confidence": 0.992899
+        },
+        {
+          "box": [
+            [
+              2497.98,
+              733.31
+            ],
+            [
+              3749.09,
+              733.31
+            ],
+            [
+              3749.09,
+              860.11
+            ],
+            [
+              2497.98,
+              860.11
+            ]
+          ],
+          "text": "St.naul lnibersitp",
+          "confidence": 0.848755
+        },
+        {
+          "box": [
+            [
+              387.4,
+              796.71
+            ],
+            [
+              1930.65,
+              809.39
+            ],
+            [
+              1930.65,
+              877.01
+            ],
+            [
+              387.4,
+              864.33
+            ]
+          ],
+          "text": "A logo is thevisual representation of your school.it is an",
+          "confidence": 0.940453
+        },
+        {
+          "box": [
+            [
+              385.28,
+              864.33
+            ],
+            [
+              1845.97,
+              872.79
+            ],
+            [
+              1845.97,
+              940.41
+            ],
+            [
+              385.28,
+              934.07
+            ]
+          ],
+          "text": "icon that symbolizes the school's history, culture, and",
+          "confidence": 0.945453
+        },
+        {
+          "box": [
+            [
+              2487.4,
+              877.01
+            ],
+            [
+              3751.21,
+              868.56
+            ],
+            [
+              3751.21,
+              1065.09
+            ],
+            [
+              2489.52,
+              1073.55
+            ]
+          ],
+          "text": "SURIGAO",
+          "confidence": 0.990852
+        },
+        {
+          "box": [
+            [
+              383.17,
+              931.96
+            ],
+            [
+              1903.12,
+              940.41
+            ],
+            [
+              1901.01,
+              1005.92
+            ],
+            [
+              383.17,
+              997.47
+            ]
+          ],
+          "text": "values.Itcanbeusedonallprint media,all advertising",
+          "confidence": 0.972675
+        },
+        {
+          "box": [
+            [
+              389.52,
+              1001.7
+            ],
+            [
+              1947.58,
+              1008.04
+            ],
+            [
+              1945.46,
+              1067.21
+            ],
+            [
+              389.52,
+              1060.87
+            ]
+          ],
+          "text": "platforms,websites,andotherexternalcommunications.",
+          "confidence": 0.965273
+        },
+        {
+          "box": [
+            [
+              2497.98,
+              1086.23
+            ],
+            [
+              2809.17,
+              1086.23
+            ],
+            [
+              2809.17,
+              1141.17
+            ],
+            [
+              2497.98,
+              1141.17
+            ]
+          ],
+          "text": "CARITAS",
+          "confidence": 0.991005
+        },
+        {
+          "box": [
+            [
+              2946.77,
+              1082.0
+            ],
+            [
+              3257.96,
+              1082.0
+            ],
+            [
+              3257.96,
+              1136.95
+            ],
+            [
+              2946.77,
+              1136.95
+            ]
+          ],
+          "text": "VERITAS",
+          "confidence": 0.988563
+        },
+        {
+          "box": [
+            [
+              3389.21,
+              1075.66
+            ],
+            [
+              3744.86,
+              1069.32
+            ],
+            [
+              3746.98,
+              1130.61
+            ],
+            [
+              3391.33,
+              1136.95
+            ]
+          ],
+          "text": "SCIENTIA",
+          "confidence": 0.986716
+        },
+        {
+          "box": [
+            [
+              378.93,
+              1322.91
+            ],
+            [
+              569.46,
+              1322.91
+            ],
+            [
+              569.46,
+              1394.77
+            ],
+            [
+              378.93,
+              1394.77
+            ]
+          ],
+          "text": "ICON",
+          "confidence": 0.992337
+        },
+        {
+          "box": [
+            [
+              383.17,
+              1413.79
+            ],
+            [
+              1816.33,
+              1420.12
+            ],
+            [
+              1814.21,
+              1487.75
+            ],
+            [
+              383.17,
+              1481.41
+            ]
+          ],
+          "text": "Sub-Brand and Visual SystemSupport The icon can",
+          "confidence": 0.950104
+        },
+        {
+          "box": [
+            [
+              389.52,
+              1487.75
+            ],
+            [
+              1731.65,
+              1487.75
+            ],
+            [
+              1731.65,
+              1546.92
+            ],
+            [
+              389.52,
+              1546.92
+            ]
+          ],
+          "text": "alsobeusedasamotiforpatternintheschool's",
+          "confidence": 0.980473
+        },
+        {
+          "box": [
+            [
+              389.52,
+              1551.15
+            ],
+            [
+              1752.82,
+              1551.15
+            ],
+            [
+              1752.82,
+              1618.77
+            ],
+            [
+              389.52,
+              1618.77
+            ]
+          ],
+          "text": "design system - subtly repeated in backgrounds,",
+          "confidence": 0.958502
+        },
+        {
+          "box": [
+            [
+              2370.97,
+              1601.87
+            ],
+            [
+              2527.62,
+              1593.41
+            ],
+            [
+              2531.85,
+              1648.36
+            ],
+            [
+              2375.2,
+              1656.81
+            ]
+          ],
+          "text": "VERITAS",
+          "confidence": 0.933557
+        },
+        {
+          "box": [
+            [
+              385.28,
+              1616.66
+            ],
+            [
+              1754.94,
+              1614.55
+            ],
+            [
+              1754.94,
+              1682.17
+            ],
+            [
+              385.28,
+              1684.29
+            ]
+          ],
+          "text": "stationery,orweblayouts toreinforce the identity.",
+          "confidence": 0.972523
+        },
+        {
+          "box": [
+            [
+              2351.92,
+              1739.23
+            ],
+            [
+              2489.52,
+              1669.49
+            ],
+            [
+              2517.04,
+              1720.21
+            ],
+            [
+              2379.44,
+              1789.95
+            ]
+          ],
+          "text": "SPUS",
+          "confidence": 0.958049
+        },
+        {
+          "box": [
+            [
+              3141.53,
+              1730.78
+            ],
+            [
+              3274.9,
+              1669.49
+            ],
+            [
+              3300.3,
+              1724.44
+            ],
+            [
+              3164.82,
+              1785.72
+            ]
+          ],
+          "text": "SPUS",
+          "confidence": 0.910979
+        },
+        {
+          "box": [
+            [
+              2413.31,
+              1978.03
+            ],
+            [
+              2500.1,
+              1978.03
+            ],
+            [
+              2500.1,
+              2011.84
+            ],
+            [
+              2413.31,
+              2011.84
+            ]
+          ],
+          "text": "1906",
+          "confidence": 0.996308
+        },
+        {
+          "box": [
+            [
+              497.48,
+              2096.38
+            ],
+            [
+              1380.24,
+              2079.47
+            ],
+            [
+              1384.48,
+              2366.88
+            ],
+            [
+              501.71,
+              2383.78
+            ]
+          ],
+          "text": "2535",
+          "confidence": 0.549674
+        },
+        {
+          "box": [
+            [
+              2064.01,
+              2195.7
+            ],
+            [
+              3630.54,
+              2187.25
+            ],
+            [
+              3630.54,
+              2259.1
+            ],
+            [
+              2064.01,
+              2267.55
+            ]
+          ],
+          "text": "St.aul nbersitySt.aul nbersitp",
+          "confidence": 0.86641
+        },
+        {
+          "box": [
+            [
+              2059.78,
+              2282.34
+            ],
+            [
+              3622.08,
+              2273.89
+            ],
+            [
+              3622.08,
+              2385.89
+            ],
+            [
+              2059.78,
+              2394.35
+            ]
+          ],
+          "text": "SURIGAOSURIGAO",
+          "confidence": 0.995312
+        },
+        {
+          "box": [
+            [
+              2055.54,
+              2402.8
+            ],
+            [
+              2254.54,
+              2402.8
+            ],
+            [
+              2254.54,
+              2442.95
+            ],
+            [
+              2055.54,
+              2442.95
+            ]
+          ],
+          "text": "CARITAS",
+          "confidence": 0.982752
+        },
+        {
+          "box": [
+            [
+              2328.63,
+              2400.69
+            ],
+            [
+              2533.97,
+              2400.69
+            ],
+            [
+              2533.97,
+              2447.18
+            ],
+            [
+              2328.63,
+              2447.18
+            ]
+          ],
+          "text": "VERITAS",
+          "confidence": 0.987084
+        },
+        {
+          "box": [
+            [
+              2599.6,
+              2398.57
+            ],
+            [
+              3050.5,
+              2396.46
+            ],
+            [
+              3050.5,
+              2442.95
+            ],
+            [
+              2599.6,
+              2445.07
+            ]
+          ],
+          "text": "SCIENTIACARITAS",
+          "confidence": 0.989061
+        },
+        {
+          "box": [
+            [
+              3122.48,
+              2396.46
+            ],
+            [
+              3329.94,
+              2396.46
+            ],
+            [
+              3329.94,
+              2442.95
+            ],
+            [
+              3122.48,
+              2442.95
+            ]
+          ],
+          "text": "VERITAS",
+          "confidence": 0.973417
+        },
+        {
+          "box": [
+            [
+              3401.92,
+              2396.46
+            ],
+            [
+              3628.43,
+              2392.23
+            ],
+            [
+              3628.43,
+              2438.73
+            ],
+            [
+              3404.03,
+              2442.95
+            ]
+          ],
+          "text": "SCIENTIA",
+          "confidence": 0.987959
+        }
+      ],
+      "text": "LOGO\nSt.naul lnibersitp\nA logo is thevisual representation of your school.it is an\nicon that symbolizes the school's history, culture, and\nSURIGAO\nvalues.Itcanbeusedonallprint media,all advertising\nplatforms,websites,andotherexternalcommunications.\nCARITAS\nVERITAS\nSCIENTIA\nICON\nSub-Brand and Visual SystemSupport The icon can\nalsobeusedasamotiforpatternintheschool's\ndesign system - subtly repeated in backgrounds,\nVERITAS\nstationery,orweblayouts toreinforce the identity.\nSPUS\nSPUS\n1906\n2535\nSt.aul nbersitySt.aul nbersitp\nSURIGAOSURIGAO\nCARITAS\nVERITAS\nSCIENTIACARITAS\nVERITAS\nSCIENTIA"
+    },
+    {
+      "name": "autocontrast",
+      "seconds": 12.54,
+      "rows": [
+        {
+          "box": [
+            [
+              387.4,
+              722.74
+            ],
+            [
+              590.62,
+              722.74
+            ],
+            [
+              590.62,
+              790.37
+            ],
+            [
+              387.4,
+              790.37
+            ]
+          ],
+          "text": "LOGO",
+          "confidence": 0.994662
+        },
+        {
+          "box": [
+            [
+              2497.98,
+              733.31
+            ],
+            [
+              3749.09,
+              733.31
+            ],
+            [
+              3749.09,
+              860.11
+            ],
+            [
+              2497.98,
+              860.11
+            ]
+          ],
+          "text": "St.aul lnibersitp",
+          "confidence": 0.881645
+        },
+        {
+          "box": [
+            [
+              387.4,
+              796.71
+            ],
+            [
+              1930.65,
+              809.39
+            ],
+            [
+              1930.65,
+              877.01
+            ],
+            [
+              387.4,
+              864.33
+            ]
+          ],
+          "text": "A logo is thevisual representationofyour school it is an",
+          "confidence": 0.950479
+        },
+        {
+          "box": [
+            [
+              385.28,
+              864.33
+            ],
+            [
+              1845.97,
+              872.79
+            ],
+            [
+              1845.97,
+              940.41
+            ],
+            [
+              385.28,
+              934.07
+            ]
+          ],
+          "text": "icon that symbolizes the school's history, culture, and",
+          "confidence": 0.95426
+        },
+        {
+          "box": [
+            [
+              2487.4,
+              877.01
+            ],
+            [
+              3751.21,
+              868.56
+            ],
+            [
+              3751.21,
+              1062.98
+            ],
+            [
+              2489.52,
+              1071.43
+            ]
+          ],
+          "text": "SURIGAO",
+          "confidence": 0.995541
+        },
+        {
+          "box": [
+            [
+              385.28,
+              931.96
+            ],
+            [
+              1901.01,
+              940.41
+            ],
+            [
+              1898.89,
+              1005.92
+            ],
+            [
+              385.28,
+              997.47
+            ]
+          ],
+          "text": "values.Itcanbeusedon allprintmedia,all advertising",
+          "confidence": 0.968867
+        },
+        {
+          "box": [
+            [
+              389.52,
+              1001.7
+            ],
+            [
+              1947.58,
+              1005.92
+            ],
+            [
+              1945.46,
+              1067.21
+            ],
+            [
+              389.52,
+              1062.98
+            ]
+          ],
+          "text": "platforms,websites,andotherexternalcommunications.",
+          "confidence": 0.978478
+        },
+        {
+          "box": [
+            [
+              3389.21,
+              1075.66
+            ],
+            [
+              3742.74,
+              1069.32
+            ],
+            [
+              3744.86,
+              1130.61
+            ],
+            [
+              3391.33,
+              1136.95
+            ]
+          ],
+          "text": "SCIENTIA",
+          "confidence": 0.990787
+        },
+        {
+          "box": [
+            [
+              2497.98,
+              1086.23
+            ],
+            [
+              2809.17,
+              1086.23
+            ],
+            [
+              2809.17,
+              1141.17
+            ],
+            [
+              2497.98,
+              1141.17
+            ]
+          ],
+          "text": "CARITAS",
+          "confidence": 0.991325
+        },
+        {
+          "box": [
+            [
+              2948.89,
+              1082.0
+            ],
+            [
+              3257.96,
+              1082.0
+            ],
+            [
+              3257.96,
+              1136.95
+            ],
+            [
+              2948.89,
+              1136.95
+            ]
+          ],
+          "text": "VERITAS",
+          "confidence": 0.990822
+        },
+        {
+          "box": [
+            [
+              383.17,
+              1327.14
+            ],
+            [
+              567.34,
+              1327.14
+            ],
+            [
+              567.34,
+              1392.65
+            ],
+            [
+              383.17,
+              1392.65
+            ]
+          ],
+          "text": "ICON",
+          "confidence": 0.991483
+        },
+        {
+          "box": [
+            [
+              383.17,
+              1413.79
+            ],
+            [
+              1816.33,
+              1420.12
+            ],
+            [
+              1814.21,
+              1487.75
+            ],
+            [
+              383.17,
+              1481.41
+            ]
+          ],
+          "text": "Sub-Brand and Visual System Support The icon can",
+          "confidence": 0.957265
+        },
+        {
+          "box": [
+            [
+              389.52,
+              1487.75
+            ],
+            [
+              1731.65,
+              1487.75
+            ],
+            [
+              1731.65,
+              1546.92
+            ],
+            [
+              389.52,
+              1546.92
+            ]
+          ],
+          "text": "alsobeusedasamotiforpatternintheschool's",
+          "confidence": 0.982225
+        },
+        {
+          "box": [
+            [
+              389.52,
+              1551.15
+            ],
+            [
+              1750.71,
+              1551.15
+            ],
+            [
+              1750.71,
+              1618.77
+            ],
+            [
+              389.52,
+              1618.77
+            ]
+          ],
+          "text": "design system - subtly repeated in backgrounds",
+          "confidence": 0.961292
+        },
+        {
+          "box": [
+            [
+              2379.44,
+              1603.98
+            ],
+            [
+              2519.15,
+              1593.41
+            ],
+            [
+              2523.39,
+              1642.02
+            ],
+            [
+              2383.67,
+              1652.59
+            ]
+          ],
+          "text": "ERITA",
+          "confidence": 0.988159
+        },
+        {
+          "box": [
+            [
+              385.28,
+              1618.77
+            ],
+            [
+              1757.06,
+              1614.55
+            ],
+            [
+              1757.06,
+              1680.06
+            ],
+            [
+              385.28,
+              1684.29
+            ]
+          ],
+          "text": "stationery,orweblayoutstoreinforce theidentity.",
+          "confidence": 0.97301
+        },
+        {
+          "box": [
+            [
+              2351.92,
+              1739.23
+            ],
+            [
+              2481.05,
+              1675.83
+            ],
+            [
+              2506.45,
+              1724.44
+            ],
+            [
+              2375.2,
+              1789.95
+            ]
+          ],
+          "text": "SPUS",
+          "confidence": 0.958253
+        },
+        {
+          "box": [
+            [
+              3145.77,
+              1732.89
+            ],
+            [
+              3274.9,
+              1673.72
+            ],
+            [
+              3298.19,
+              1722.32
+            ],
+            [
+              3169.05,
+              1781.5
+            ]
+          ],
+          "text": "SPUS",
+          "confidence": 0.949921
+        },
+        {
+          "box": [
+            [
+              1052.12,
+              2151.32
+            ],
+            [
+              1329.44,
+              2159.77
+            ],
+            [
+              1325.2,
+              2307.7
+            ],
+            [
+              1045.77,
+              2299.25
+            ]
+          ],
+          "text": "55",
+          "confidence": 0.734502
+        },
+        {
+          "box": [
+            [
+              2064.01,
+              2195.7
+            ],
+            [
+              3630.54,
+              2189.36
+            ],
+            [
+              3630.54,
+              2261.21
+            ],
+            [
+              2064.01,
+              2267.55
+            ]
+          ],
+          "text": "St.aul nbersitySt.aul Tnbersitp",
+          "confidence": 0.845149
+        },
+        {
+          "box": [
+            [
+              2059.78,
+              2282.34
+            ],
+            [
+              3622.08,
+              2271.78
+            ],
+            [
+              3622.08,
+              2385.89
+            ],
+            [
+              2059.78,
+              2396.46
+            ]
+          ],
+          "text": "SURIGAOSURIGAO",
+          "confidence": 0.996854
+        },
+        {
+          "box": [
+            [
+              3399.8,
+              2396.46
+            ],
+            [
+              3626.31,
+              2392.23
+            ],
+            [
+              3626.31,
+              2438.73
+            ],
+            [
+              3401.92,
+              2442.95
+            ]
+          ],
+          "text": "SCIENTIA",
+          "confidence": 0.986624
+        },
+        {
+          "box": [
+            [
+              2055.54,
+              2402.8
+            ],
+            [
+              2258.77,
+              2402.8
+            ],
+            [
+              2258.77,
+              2449.29
+            ],
+            [
+              2055.54,
+              2449.29
+            ]
+          ],
+          "text": "CARITAS",
+          "confidence": 0.98238
+        },
+        {
+          "box": [
+            [
+              2328.63,
+              2400.69
+            ],
+            [
+              2531.85,
+              2400.69
+            ],
+            [
+              2531.85,
+              2447.18
+            ],
+            [
+              2328.63,
+              2447.18
+            ]
+          ],
+          "text": "VERITAS",
+          "confidence": 0.988189
+        },
+        {
+          "box": [
+            [
+              2601.71,
+              2398.57
+            ],
+            [
+              3050.5,
+              2396.46
+            ],
+            [
+              3050.5,
+              2442.95
+            ],
+            [
+              2601.71,
+              2445.07
+            ]
+          ],
+          "text": "SCIENTIACARITAS",
+          "confidence": 0.990042
+        },
+        {
+          "box": [
+            [
+              3122.48,
+              2396.46
+            ],
+            [
+              3327.82,
+              2396.46
+            ],
+            [
+              3327.82,
+              2442.95
+            ],
+            [
+              3122.48,
+              2442.95
+            ]
+          ],
+          "text": "VERITAS",
+          "confidence": 0.973219
+        }
+      ],
+      "text": "LOGO\nSt.aul lnibersitp\nA logo is thevisual representationofyour school it is an\nicon that symbolizes the school's history, culture, and\nSURIGAO\nvalues.Itcanbeusedon allprintmedia,all advertising\nplatforms,websites,andotherexternalcommunications.\nSCIENTIA\nCARITAS\nVERITAS\nICON\nSub-Brand and Visual System Support The icon can\nalsobeusedasamotiforpatternintheschool's\ndesign system - subtly repeated in backgrounds\nERITA\nstationery,orweblayoutstoreinforce theidentity.\nSPUS\nSPUS\n55\nSt.aul nbersitySt.aul Tnbersitp\nSURIGAOSURIGAO\nSCIENTIA\nCARITAS\nVERITAS\nSCIENTIACARITAS\nVERITAS"
+    },
+    {
+      "name": "overlapping_tiles",
+      "seconds": 13.42,
+      "rows": [
+        {
+          "box": [
+            [
+              393.75,
+              724.66
+            ],
+            [
+              586.39,
+              728.89
+            ],
+            [
+              586.39,
+              790.16
+            ],
+            [
+              393.75,
+              785.93
+            ]
+          ],
+          "text": "LOGO",
+          "confidence": 0.995338
+        },
+        {
+          "box": [
+            [
+              2493.75,
+              733.11
+            ],
+            [
+              3753.33,
+              728.89
+            ],
+            [
+              3753.33,
+              861.99
+            ],
+            [
+              2493.75,
+              864.1
+            ]
+          ],
+          "text": "St.Paul nibersity",
+          "confidence": 0.861833
+        },
+        {
+          "box": [
+            [
+              393.75,
+              800.72
+            ],
+            [
+              1926.41,
+              811.29
+            ],
+            [
+              1926.41,
+              872.55
+            ],
+            [
+              391.63,
+              861.99
+            ]
+          ],
+          "text": "A logoisthevisualrepresentationofyourschool.itisan",
+          "confidence": 0.970995
+        },
+        {
+          "box": [
+            [
+              387.4,
+              864.1
+            ],
+            [
+              1848.08,
+              872.55
+            ],
+            [
+              1848.08,
+              942.27
+            ],
+            [
+              387.4,
+              933.82
+            ]
+          ],
+          "text": "icon that symbolizes the school's history,culture,and",
+          "confidence": 0.957628
+        },
+        {
+          "box": [
+            [
+              2464.11,
+              851.43
+            ],
+            [
+              3770.26,
+              845.09
+            ],
+            [
+              3772.38,
+              1085.94
+            ],
+            [
+              2466.23,
+              1092.28
+            ]
+          ],
+          "text": "SURIGAO",
+          "confidence": 0.994276
+        },
+        {
+          "box": [
+            [
+              389.52,
+              935.94
+            ],
+            [
+              1896.77,
+              944.39
+            ],
+            [
+              1896.77,
+              1003.54
+            ],
+            [
+              389.52,
+              995.09
+            ]
+          ],
+          "text": "values.Itcanbeusedonallprintmedia,alladvertising",
+          "confidence": 0.977962
+        },
+        {
+          "box": [
+            [
+              391.63,
+              1003.54
+            ],
+            [
+              1945.46,
+              1005.66
+            ],
+            [
+              1945.46,
+              1062.7
+            ],
+            [
+              391.63,
+              1060.59
+            ]
+          ],
+          "text": "platforms,websites,andotherexternalcommunications.",
+          "confidence": 0.980268
+        },
+        {
+          "box": [
+            [
+              2500.1,
+              1088.05
+            ],
+            [
+              2804.94,
+              1083.83
+            ],
+            [
+              2804.94,
+              1136.65
+            ],
+            [
+              2500.1,
+              1138.76
+            ]
+          ],
+          "text": "CARITAS",
+          "confidence": 0.994719
+        },
+        {
+          "box": [
+            [
+              2948.89,
+              1081.71
+            ],
+            [
+              3249.5,
+              1081.71
+            ],
+            [
+              3249.5,
+              1132.42
+            ],
+            [
+              2948.89,
+              1132.42
+            ]
+          ],
+          "text": "VERITAS",
+          "confidence": 0.99155
+        },
+        {
+          "box": [
+            [
+              3397.68,
+              1079.6
+            ],
+            [
+              3738.51,
+              1075.38
+            ],
+            [
+              3738.51,
+              1126.08
+            ],
+            [
+              3397.68,
+              1130.31
+            ]
+          ],
+          "text": "SCIENTIA",
+          "confidence": 0.992222
+        },
+        {
+          "box": [
+            [
+              383.17,
+              1328.9
+            ],
+            [
+              565.22,
+              1328.9
+            ],
+            [
+              565.22,
+              1390.17
+            ],
+            [
+              383.17,
+              1390.17
+            ]
+          ],
+          "text": "ICON",
+          "confidence": 0.992813
+        },
+        {
+          "box": [
+            [
+              385.28,
+              1415.52
+            ],
+            [
+              1812.1,
+              1421.86
+            ],
+            [
+              1812.1,
+              1487.36
+            ],
+            [
+              383.17,
+              1481.02
+            ]
+          ],
+          "text": "Sub-Brand andVisual SystemSupportTheiconcan",
+          "confidence": 0.971341
+        },
+        {
+          "box": [
+            [
+              387.4,
+              1483.13
+            ],
+            [
+              1731.65,
+              1487.36
+            ],
+            [
+              1731.65,
+              1548.63
+            ],
+            [
+              387.4,
+              1544.4
+            ]
+          ],
+          "text": "alsobeusedasamotiforpatternintheschool's",
+          "confidence": 0.978019
+        },
+        {
+          "box": [
+            [
+              389.52,
+              1552.85
+            ],
+            [
+              1750.71,
+              1552.85
+            ],
+            [
+              1750.71,
+              1616.23
+            ],
+            [
+              389.52,
+              1616.23
+            ]
+          ],
+          "text": "designsystem-subtlyrepeatedinbackgrounds,",
+          "confidence": 0.984969
+        },
+        {
+          "box": [
+            [
+              2358.27,
+              1604.41
+            ],
+            [
+              2536.09,
+              1593.85
+            ],
+            [
+              2538.21,
+              1642.44
+            ],
+            [
+              2362.5,
+              1653.01
+            ]
+          ],
+          "text": "VERITAS",
+          "confidence": 0.97452
+        },
+        {
+          "box": [
+            [
+              3177.52,
+              1599.33
+            ],
+            [
+              3321.47,
+              1595.11
+            ],
+            [
+              3323.59,
+              1633.14
+            ],
+            [
+              3177.52,
+              1637.36
+            ]
+          ],
+          "text": "ERITAS",
+          "confidence": 0.985667
+        },
+        {
+          "box": [
+            [
+              385.28,
+              1619.2
+            ],
+            [
+              1752.82,
+              1617.09
+            ],
+            [
+              1752.82,
+              1680.47
+            ],
+            [
+              385.28,
+              1682.58
+            ]
+          ],
+          "text": "stationery,orweblayoutstoreinforcetheidentity.",
+          "confidence": 0.980234
+        },
+        {
+          "box": [
+            [
+              2354.03,
+              1748.08
+            ],
+            [
+              2481.05,
+              1678.36
+            ],
+            [
+              2504.33,
+              1720.61
+            ],
+            [
+              2375.2,
+              1790.33
+            ]
+          ],
+          "text": "SPUS",
+          "confidence": 0.95993
+        },
+        {
+          "box": [
+            [
+              3145.77,
+              1737.52
+            ],
+            [
+              3279.13,
+              1669.91
+            ],
+            [
+              3302.42,
+              1714.28
+            ],
+            [
+              3171.17,
+              1784.0
+            ]
+          ],
+          "text": "SPUS",
+          "confidence": 0.939989
+        },
+        {
+          "box": [
+            [
+              2284.17,
+              1972.03
+            ],
+            [
+              2512.8,
+              2031.18
+            ],
+            [
+              2495.87,
+              2100.9
+            ],
+            [
+              2265.12,
+              2041.75
+            ]
+          ],
+          "text": "SURIGAO",
+          "confidence": 0.968796
+        },
+        {
+          "box": [
+            [
+              2497.98,
+              2024.85
+            ],
+            [
+              2610.18,
+              1978.37
+            ],
+            [
+              2629.23,
+              2024.85
+            ],
+            [
+              2517.04,
+              2071.33
+            ]
+          ],
+          "text": "CITY",
+          "confidence": 0.990798
+        },
+        {
+          "box": [
+            [
+              3075.91,
+              1969.92
+            ],
+            [
+              3308.77,
+              2024.85
+            ],
+            [
+              3291.83,
+              2094.57
+            ],
+            [
+              3061.09,
+              2039.64
+            ]
+          ],
+          "text": "SURIGAO",
+          "confidence": 0.977247
+        },
+        {
+          "box": [
+            [
+              3296.07,
+              2018.51
+            ],
+            [
+              3406.15,
+              1974.14
+            ],
+            [
+              3423.08,
+              2022.73
+            ],
+            [
+              3313.0,
+              2064.99
+            ]
+          ],
+          "text": "CITY",
+          "confidence": 0.977081
+        },
+        {
+          "box": [
+            [
+              2421.77,
+              1986.82
+            ],
+            [
+              2474.7,
+              1986.82
+            ],
+            [
+              2474.7,
+              2005.83
+            ],
+            [
+              2421.77,
+              2005.83
+            ]
+          ],
+          "text": "90",
+          "confidence": 0.987974
+        },
+        {
+          "box": [
+            [
+              2059.78,
+              2189.64
+            ],
+            [
+              3626.31,
+              2185.41
+            ],
+            [
+              3626.31,
+              2265.7
+            ],
+            [
+              2059.78,
+              2272.03
+            ]
+          ],
+          "text": "St. aul Tnbersity St. aul Tnbersitp",
+          "confidence": 0.874674
+        },
+        {
+          "box": [
+            [
+              2053.43,
+              2278.37
+            ],
+            [
+              3626.31,
+              2269.92
+            ],
+            [
+              3628.43,
+              2394.57
+            ],
+            [
+              2053.43,
+              2403.02
+            ]
+          ],
+          "text": "SURIGAOSURIGAO",
+          "confidence": 0.996632
+        },
+        {
+          "box": [
+            [
+              2059.78,
+              2405.14
+            ],
+            [
+              2254.54,
+              2405.14
+            ],
+            [
+              2254.54,
+              2441.05
+            ],
+            [
+              2059.78,
+              2443.17
+            ]
+          ],
+          "text": "CARITAS",
+          "confidence": 0.98428
+        },
+        {
+          "box": [
+            [
+              2334.98,
+              2405.14
+            ],
+            [
+              2527.62,
+              2405.14
+            ],
+            [
+              2527.62,
+              2441.05
+            ],
+            [
+              2334.98,
+              2441.05
+            ]
+          ],
+          "text": "VERITAS",
+          "confidence": 0.989894
+        },
+        {
+          "box": [
+            [
+              2608.06,
+              2403.02
+            ],
+            [
+              3046.27,
+              2400.91
+            ],
+            [
+              3046.27,
+              2434.71
+            ],
+            [
+              2608.06,
+              2438.94
+            ]
+          ],
+          "text": "SCIENTIACARITAS",
+          "confidence": 0.994319
+        },
+        {
+          "box": [
+            [
+              3130.95,
+              2400.91
+            ],
+            [
+              3323.59,
+              2400.91
+            ],
+            [
+              3323.59,
+              2434.71
+            ],
+            [
+              3130.95,
+              2434.71
+            ]
+          ],
+          "text": "VERITAS",
+          "confidence": 0.962497
+        },
+        {
+          "box": [
+            [
+              3408.27,
+              2398.8
+            ],
+            [
+              3622.08,
+              2398.8
+            ],
+            [
+              3622.08,
+              2434.71
+            ],
+            [
+              3408.27,
+              2434.71
+            ]
+          ],
+          "text": "SCIENTIA",
+          "confidence": 0.99092
+        }
+      ],
+      "text": "LOGO\nSt.Paul nibersity\nA logoisthevisualrepresentationofyourschool.itisan\nicon that symbolizes the school's history,culture,and\nSURIGAO\nvalues.Itcanbeusedonallprintmedia,alladvertising\nplatforms,websites,andotherexternalcommunications.\nCARITAS\nVERITAS\nSCIENTIA\nICON\nSub-Brand andVisual SystemSupportTheiconcan\nalsobeusedasamotiforpatternintheschool's\ndesignsystem-subtlyrepeatedinbackgrounds,\nVERITAS\nERITAS\nstationery,orweblayoutstoreinforcetheidentity.\nSPUS\nSPUS\nSURIGAO\nCITY\nSURIGAO\nCITY\n90\nSt. aul Tnbersity St. aul Tnbersitp\nSURIGAOSURIGAO\nCARITAS\nVERITAS\nSCIENTIACARITAS\nVERITAS\nSCIENTIA"
+    }
+  ]
+}

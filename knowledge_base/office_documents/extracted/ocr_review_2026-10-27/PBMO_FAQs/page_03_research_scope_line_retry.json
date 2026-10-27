@@ -1,0 +1,56 @@
+{
+  "document": "PBMO FAQs.pdf",
+  "page": 3,
+  "crop_pixels": [
+    272,
+    1100,
+    4226,
+    1792
+  ],
+  "render_dpi": 160,
+  "deskew_degrees": -0.9992436702572906,
+  "method": "automatic projection-line segmentation followed by recognition only",
+  "rows": [
+    {
+      "text": "Attached herewith are copies of the Policy on Online Posting, the Procedure on Online Posting,and the",
+      "confidence": 0.9306094882511856,
+      "band_y": [
+        58,
+        162
+      ]
+    },
+    {
+      "text": "official spus Branding Materials. Please note that these attached documents and assets are provided",
+      "confidence": 0.9501325289408366,
+      "band_y": [
+        155,
+        272
+      ]
+    },
+    {
+      "text": "strictly for research and academic development purposes within the scope of your PAULA capstone project.",
+      "confidence": 0.9697918611077162,
+      "band_y": [
+        281,
+        382
+      ]
+    },
+    {
+      "text": "They must not be misplaced, shared with unauthorized parties, or utilized for any other purpose outside this",
+      "confidence": 0.9284516283207469,
+      "band_y": [
+        386,
+        492
+      ]
+    },
+    {
+      "text": "approved research. We expect your team to treat these materials with the utmost respect and confidentiality.",
+      "confidence": 0.964491362924929,
+      "band_y": [
+        504,
+        602
+      ]
+    }
+  ],
+  "text": "Attached herewith are copies of the Policy on Online Posting, the Procedure on Online Posting,and the\nofficial spus Branding Materials. Please note that these attached documents and assets are provided\nstrictly for research and academic development purposes within the scope of your PAULA capstone project.\nThey must not be misplaced, shared with unauthorized parties, or utilized for any other purpose outside this\napproved research. We expect your team to treat these materials with the utmost respect and confidentiality."
+}

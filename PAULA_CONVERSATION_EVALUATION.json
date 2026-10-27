@@ -1,0 +1,149 @@
+{
+  "repeats": 20,
+  "mode": "read-only; no LLM; warm paired retrieval",
+  "model_load_ms_excluding_import": 1364.0,
+  "cases": [
+    {
+      "case": "procedure_transferee",
+      "previous": "How do old students enroll at SPUS?",
+      "fragment": "How about transferee?",
+      "baseline_fragment": {
+        "effective_query": "How about transferee?",
+        "expected_source_found": false,
+        "source_count": 0,
+        "sources": [],
+        "p50_ms": 49.97,
+        "p95_ms": 54.93
+      },
+      "contextual": {
+        "effective_query": "How do transferee college students enroll at SPUS?",
+        "expected_source_found": true,
+        "source_count": 1,
+        "sources": [
+          "FAQ (Registrar's Office): [Registrar] What is the step-by-step enrollment procedure for transferee students at SPUS (Document URO-PR-017)?"
+        ],
+        "p50_ms": 5.01,
+        "p95_ms": 6.05
+      }
+    },
+    {
+      "case": "procedure_freshmen",
+      "previous": "How do old students enroll at SPUS?",
+      "fragment": "And freshmen?",
+      "baseline_fragment": {
+        "effective_query": "And freshmen?",
+        "expected_source_found": false,
+        "source_count": 0,
+        "sources": [],
+        "p50_ms": 52.99,
+        "p95_ms": 67.34
+      },
+      "contextual": {
+        "effective_query": "How do incoming college freshmen enroll at SPUS?",
+        "expected_source_found": true,
+        "source_count": 1,
+        "sources": [
+          "FAQ (Registrar's Office): [Registrar] What is the step-by-step enrollment procedure for incoming freshmen at SPUS (Document URO-PR-005)?"
+        ],
+        "p50_ms": 5.44,
+        "p95_ms": 7.45
+      }
+    },
+    {
+      "case": "procedure_filipino",
+      "previous": "How do old students enroll at SPUS?",
+      "fragment": "Paano naman ang transferee?",
+      "baseline_fragment": {
+        "effective_query": "Paano naman ang transferee?",
+        "expected_source_found": false,
+        "source_count": 0,
+        "sources": [],
+        "p50_ms": 63.18,
+        "p95_ms": 75.33
+      },
+      "contextual": {
+        "effective_query": "How do transferee college students enroll at SPUS?",
+        "expected_source_found": true,
+        "source_count": 1,
+        "sources": [
+          "FAQ (Registrar's Office): [Registrar] What is the step-by-step enrollment procedure for transferee students at SPUS (Document URO-PR-017)?"
+        ],
+        "p50_ms": 5.13,
+        "p95_ms": 5.66
+      }
+    },
+    {
+      "case": "documents_transferee",
+      "previous": "What documents do incoming freshmen need to enroll at SPUS?",
+      "fragment": "What about transferees?",
+      "baseline_fragment": {
+        "effective_query": "What about transferees?",
+        "expected_source_found": false,
+        "source_count": 0,
+        "sources": [],
+        "p50_ms": 68.34,
+        "p95_ms": 99.49
+      },
+      "contextual": {
+        "effective_query": "What documents do transferee college students need to enroll at SPUS?",
+        "expected_source_found": true,
+        "source_count": 1,
+        "sources": [
+          "FAQ (Registrar's Office): [Registrar] What are the required documents for transferee students enrolling at SPUS?"
+        ],
+        "p50_ms": 5.73,
+        "p95_ms": 8.58
+      }
+    },
+    {
+      "case": "faculty_chs",
+      "previous": "Who are the CEIT faculty?",
+      "fragment": "How about CHS?",
+      "baseline_fragment": {
+        "effective_query": "How about CHS?",
+        "expected_source_found": false,
+        "source_count": 0,
+        "sources": [],
+        "p50_ms": 61.82,
+        "p95_ms": 66.8
+      },
+      "contextual": {
+        "effective_query": "Who are the CHS faculty?",
+        "expected_source_found": true,
+        "source_count": 1,
+        "sources": [
+          "SPUS Faculty Directory | College of Health Sciences"
+        ],
+        "p50_ms": 7.76,
+        "p95_ms": 11.95
+      }
+    },
+    {
+      "case": "faculty_cbma_taglish",
+      "previous": "Who are the CEIT faculty?",
+      "fragment": "Sa CBMA naman?",
+      "baseline_fragment": {
+        "effective_query": "Sa CBMA naman?",
+        "expected_source_found": false,
+        "source_count": 0,
+        "sources": [],
+        "p50_ms": 64.39,
+        "p95_ms": 79.36
+      },
+      "contextual": {
+        "effective_query": "Who are the CBMA faculty?",
+        "expected_source_found": true,
+        "source_count": 1,
+        "sources": [
+          "SPUS Faculty Directory | College of Business Management and Accountancy"
+        ],
+        "p50_ms": 6.03,
+        "p95_ms": 9.15
+      }
+    }
+  ],
+  "limitations": "Six labeled positive cases in three families; not overall PAULA accuracy. Network, browser and provider time excluded.",
+  "baseline_hits": 0,
+  "contextual_hits": 6,
+  "cutoff_unchanged": 0.45
+}

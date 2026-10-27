@@ -37,6 +37,11 @@ LOCATIONS = {
 }
 
 STAFF = {
+    "jsit_moderator": {
+        "name": "Khen Malaque",
+        "position": "JSIT Moderator",
+        "office": ""
+    },
     "president": {
         "name": "Sr. Marie Rosanne Mallillin, SPC",
         "position": "University President",

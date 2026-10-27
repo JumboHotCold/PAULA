@@ -1,0 +1,81 @@
+{
+  "passed": 18,
+  "checks": [
+    {
+      "check": "public_session_status_sets_csrf_cookie",
+      "passed": true
+    },
+    {
+      "check": "authenticated_first_prompt",
+      "passed": true
+    },
+    {
+      "check": "missing_id_reuses_thread",
+      "passed": true
+    },
+    {
+      "check": "two_messages_one_conversation",
+      "passed": true
+    },
+    {
+      "check": "refresh_retains_group",
+      "passed": true
+    },
+    {
+      "check": "new_chat_is_separate",
+      "passed": true
+    },
+    {
+      "check": "resume_owned_thread",
+      "passed": true
+    },
+    {
+      "check": "guest_overrides_existing_authenticated_cookie",
+      "passed": true
+    },
+    {
+      "check": "guest_adds_zero_database_history",
+      "passed": true
+    },
+    {
+      "check": "post_logout_clears_django_identity",
+      "passed": true
+    },
+    {
+      "check": "logged_out_cannot_save_as_student",
+      "passed": true
+    },
+    {
+      "check": "logged_out_guest_remains_unsaved",
+      "passed": true
+    },
+    {
+      "check": "stale_account_tab_cannot_write_under_new_identity",
+      "passed": true
+    },
+    {
+      "check": "restored_identity_comes_from_django_session",
+      "passed": true
+    },
+    {
+      "check": "other_account_cannot_read_thread",
+      "passed": true
+    },
+    {
+      "check": "other_account_cannot_append_thread",
+      "passed": true
+    },
+    {
+      "check": "same_client_uuid_isolated_by_account",
+      "passed": true
+    },
+    {
+      "check": "other_account_sidebar_excludes_foreign_thread",
+      "passed": true
+    }
+  ],
+  "all_temporary_changes_rolled_back": true,
+  "existing_conversations": 139,
+  "existing_messages": 176,
+  "new_accounts_created": 0
+}

@@ -1,0 +1,16 @@
+{
+  "documents": 4,
+  "pages": 16,
+  "knowledge_items_compared": 22,
+  "pdf_hashes_unchanged": true,
+  "page_artifacts_present": true,
+  "confidence_values_valid": true,
+  "reconciliation_region_check_passed": true,
+  "ocr_engine_versions": {
+    "rapidocr-onnxruntime": "1.4.4",
+    "onnxruntime": "1.31.1",
+    "PyMuPDF": "1.28.2",
+    "Pillow": "12.3.0",
+    "numpy": "2.4.2"
+  }
+}

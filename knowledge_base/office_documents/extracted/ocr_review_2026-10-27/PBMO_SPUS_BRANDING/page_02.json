@@ -1,0 +1,244 @@
+{
+  "document": "PBMO_SPUS_BRANDING",
+  "office": "PBMO",
+  "page": 2,
+  "pdf_text_layer_characters": 0,
+  "requested_render_dpi": 200,
+  "ocr_image_size": [
+    4200,
+    3029
+  ],
+  "selected_pass": "autocontrast",
+  "selection_is_heuristic": true,
+  "stats": {
+    "lines": 3,
+    "characters": 85,
+    "mean_confidence": 0.9732,
+    "low_confidence_lines_below_0_85": 0
+  },
+  "review_flags": [
+    "sparse_text_or_graphic_page_check_visually"
+  ],
+  "color_contrast_text_similarity": 0.9885,
+  "passes": [
+    {
+      "name": "color",
+      "seconds": 3.39,
+      "rows": [
+        {
+          "box": [
+            [
+              1917.94,
+              1283.12
+            ],
+            [
+              2616.53,
+              1302.05
+            ],
+            [
+              2614.42,
+              1363.05
+            ],
+            [
+              1915.83,
+              1346.22
+            ]
+          ],
+          "text": "involvementatalllevels",
+          "confidence": 0.985644
+        },
+        {
+          "box": [
+            [
+              1818.45,
+              1348.33
+            ],
+            [
+              2713.91,
+              1371.46
+            ],
+            [
+              2711.79,
+              1438.78
+            ],
+            [
+              1816.33,
+              1415.64
+            ]
+          ],
+          "text": "upgrading of human resources",
+          "confidence": 0.9577
+        },
+        {
+          "box": [
+            [
+              1687.2,
+              1405.12
+            ],
+            [
+              2834.58,
+              1434.57
+            ],
+            [
+              2832.46,
+              1501.88
+            ],
+            [
+              1685.08,
+              1474.53
+            ]
+          ],
+          "text": "commitment to continual improvement",
+          "confidence": 0.975942
+        }
+      ],
+      "text": "involvementatalllevels\nupgrading of human resources\ncommitment to continual improvement"
+    },
+    {
+      "name": "autocontrast",
+      "seconds": 2.11,
+      "rows": [
+        {
+          "box": [
+            [
+              1915.83,
+              1283.12
+            ],
+            [
+              2616.53,
+              1302.05
+            ],
+            [
+              2614.42,
+              1365.15
+            ],
+            [
+              1915.83,
+              1348.33
+            ]
+          ],
+          "text": "involvementatall levels",
+          "confidence": 0.966731
+        },
+        {
+          "box": [
+            [
+              1818.45,
+              1350.43
+            ],
+            [
+              2713.91,
+              1365.15
+            ],
+            [
+              2711.79,
+              1432.46
+            ],
+            [
+              1816.33,
+              1417.74
+            ]
+          ],
+          "text": "upgrading ofhuman resources",
+          "confidence": 0.975583
+        },
+        {
+          "box": [
+            [
+              1689.31,
+              1407.22
+            ],
+            [
+              2834.58,
+              1434.57
+            ],
+            [
+              2832.46,
+              1503.98
+            ],
+            [
+              1687.2,
+              1476.64
+            ]
+          ],
+          "text": "commitment to continual improvement",
+          "confidence": 0.97743
+        }
+      ],
+      "text": "involvementatall levels\nupgrading ofhuman resources\ncommitment to continual improvement"
+    },
+    {
+      "name": "overlapping_tiles",
+      "seconds": 61.71,
+      "rows": [
+        {
+          "box": [
+            [
+              1917.94,
+              1286.29
+            ],
+            [
+              2612.3,
+              1303.27
+            ],
+            [
+              2610.18,
+              1358.46
+            ],
+            [
+              1917.94,
+              1339.36
+            ]
+          ],
+          "text": "involvementatall levels",
+          "confidence": 0.968767
+        },
+        {
+          "box": [
+            [
+              1824.8,
+              1354.22
+            ],
+            [
+              2707.56,
+              1369.07
+            ],
+            [
+              2707.56,
+              1428.51
+            ],
+            [
+              1822.68,
+              1411.53
+            ]
+          ],
+          "text": "upgradingofhumanresources",
+          "confidence": 0.995868
+        },
+        {
+          "box": [
+            [
+              1693.55,
+              1407.28
+            ],
+            [
+              2830.34,
+              1437.0
+            ],
+            [
+              2828.23,
+              1498.55
+            ],
+            [
+              1693.55,
+              1468.84
+            ]
+          ],
+          "text": "commitmentto continual improvement",
+          "confidence": 0.967105
+        }
+      ],
+      "text": "involvementatall levels\nupgradingofhumanresources\ncommitmentto continual improvement"
+    }
+  ]
+}

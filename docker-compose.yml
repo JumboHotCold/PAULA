@@ -60,17 +60,21 @@ services:
     command: >
       sh -c "python manage.py migrate &&
              python manage.py collectstatic --noinput &&
-             gunicorn paulibot.wsgi:application --bind 0.0.0.0:8000 --workers 3"
+             gunicorn paulibot.wsgi:application --bind 0.0.0.0:8000 --workers 3 --timeout 120"
 
     environment:
       # Django settings
       DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY}
-      DEBUG: ${DEBUG}
+      # The workspace launcher supplies this explicitly, avoiding host DEBUG values.
+      DEBUG: ${PAULA_DJANGO_DEBUG:-${DEBUG}}
       ALLOWED_HOSTS: ${ALLOWED_HOSTS}
 
       # AI API Keys
       GROQ_API_KEY: ${GROQ_API_KEY}
       GEMINI_API_KEY: ${GEMINI_API_KEY}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      GROQ_MODEL: ${GROQ_MODEL:-llama-3.3-70b-versatile}
+      RAG_MAX_COSINE_DISTANCE: ${RAG_MAX_COSINE_DISTANCE:-0.45}
 
       # Database connection
       POSTGRES_DB: ${POSTGRES_DB}
@@ -85,6 +89,8 @@ services:
       - .:/app
       # Static files storage
       - static_volume:/app/staticfiles
+      # Preserve downloaded embedding models across web-container recreation.
+      - model_cache:/root/.cache/huggingface
 
     ports:
       # Expose Django application port
@@ -102,6 +108,8 @@ volumes:
   postgres_data:
     driver: local
   static_volume:
+    driver: local
+  model_cache:
     driver: local
 
 # Network for service communication

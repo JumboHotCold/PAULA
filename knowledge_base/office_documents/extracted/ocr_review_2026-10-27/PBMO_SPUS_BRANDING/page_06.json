@@ -1,0 +1,1366 @@
+{
+  "document": "PBMO_SPUS_BRANDING",
+  "office": "PBMO",
+  "page": 6,
+  "pdf_text_layer_characters": 0,
+  "requested_render_dpi": 200,
+  "ocr_image_size": [
+    4200,
+    3263
+  ],
+  "selected_pass": "color",
+  "selection_is_heuristic": true,
+  "stats": {
+    "lines": 20,
+    "characters": 613,
+    "mean_confidence": 0.9554,
+    "low_confidence_lines_below_0_85": 2
+  },
+  "review_flags": [
+    "low_confidence_lines_present"
+  ],
+  "color_contrast_text_similarity": 0.9911,
+  "passes": [
+    {
+      "name": "color",
+      "seconds": 10.49,
+      "rows": [
+        {
+          "box": [
+            [
+              294.25,
+              684.65
+            ],
+            [
+              1998.39,
+              684.65
+            ],
+            [
+              1998.39,
+              753.32
+            ],
+            [
+              294.25,
+              753.32
+            ]
+          ],
+          "text": "·Theschool logoshouldbeprominent andvisible inall visual",
+          "confidence": 0.964413
+        },
+        {
+          "box": [
+            [
+              296.37,
+              765.81
+            ],
+            [
+              793.85,
+              765.81
+            ],
+            [
+              793.85,
+              817.83
+            ],
+            [
+              296.37,
+              817.83
+            ]
+          ],
+          "text": "communications.",
+          "confidence": 0.996806
+        },
+        {
+          "box": [
+            [
+              287.9,
+              824.07
+            ],
+            [
+              2108.47,
+              824.07
+            ],
+            [
+              2108.47,
+              890.67
+            ],
+            [
+              287.9,
+              890.67
+            ]
+          ],
+          "text": "·It should not beplaced with another graphic or edited to create",
+          "confidence": 0.93413
+        },
+        {
+          "box": [
+            [
+              292.14,
+              890.67
+            ],
+            [
+              679.54,
+              898.99
+            ],
+            [
+              677.42,
+              963.5
+            ],
+            [
+              292.14,
+              953.1
+            ]
+          ],
+          "text": "a new image.",
+          "confidence": 0.977991
+        },
+        {
+          "box": [
+            [
+              292.14,
+              957.26
+            ],
+            [
+              1710.48,
+              959.34
+            ],
+            [
+              1710.48,
+              1032.17
+            ],
+            [
+              292.14,
+              1030.09
+            ]
+          ],
+          "text": "·For legibility, keep the area around the logo clear.",
+          "confidence": 0.957854
+        },
+        {
+          "box": [
+            [
+              296.37,
+              1025.93
+            ],
+            [
+              2008.97,
+              1025.93
+            ],
+            [
+              2008.97,
+              1098.77
+            ],
+            [
+              296.37,
+              1098.77
+            ]
+          ],
+          "text": "·The school logo colors can not be changed or modified. Use",
+          "confidence": 0.965767
+        },
+        {
+          "box": [
+            [
+              298.49,
+              1096.68
+            ],
+            [
+              1232.06,
+              1098.77
+            ],
+            [
+              1232.06,
+              1167.44
+            ],
+            [
+              298.49,
+              1165.36
+            ]
+          ],
+          "text": "only theprovidedofficial images.",
+          "confidence": 0.971729
+        },
+        {
+          "box": [
+            [
+              2379.44,
+              1506.64
+            ],
+            [
+              3025.1,
+              1498.32
+            ],
+            [
+              3025.1,
+              1569.07
+            ],
+            [
+              2379.44,
+              1577.39
+            ]
+          ],
+          "text": "St.Daul Tlnioersity",
+          "confidence": 0.841185
+        },
+        {
+          "box": [
+            [
+              2379.44,
+              1581.56
+            ],
+            [
+              3022.98,
+              1573.23
+            ],
+            [
+              3022.98,
+              1675.2
+            ],
+            [
+              2379.44,
+              1683.52
+            ]
+          ],
+          "text": "SURIGAO",
+          "confidence": 0.991622
+        },
+        {
+          "box": [
+            [
+              2377.32,
+              1685.61
+            ],
+            [
+              2548.79,
+              1679.36
+            ],
+            [
+              2550.91,
+              1720.98
+            ],
+            [
+              2377.32,
+              1725.14
+            ]
+          ],
+          "text": "CARITAS",
+          "confidence": 0.950778
+        },
+        {
+          "box": [
+            [
+              2612.3,
+              1683.52
+            ],
+            [
+              2777.42,
+              1683.52
+            ],
+            [
+              2777.42,
+              1718.9
+            ],
+            [
+              2612.3,
+              1718.9
+            ]
+          ],
+          "text": "VERITAS",
+          "confidence": 0.988882
+        },
+        {
+          "box": [
+            [
+              2836.69,
+              1683.52
+            ],
+            [
+              3025.1,
+              1677.28
+            ],
+            [
+              3025.1,
+              1712.66
+            ],
+            [
+              2838.81,
+              1716.82
+            ]
+          ],
+          "text": "SCIENTIA",
+          "confidence": 0.97256
+        },
+        {
+          "box": [
+            [
+              1119.86,
+              1737.63
+            ],
+            [
+              1426.81,
+              1737.63
+            ],
+            [
+              1426.81,
+              1779.25
+            ],
+            [
+              1119.86,
+              1779.25
+            ]
+          ],
+          "text": "t.Dautglntbrrsitp",
+          "confidence": 0.782747
+        },
+        {
+          "box": [
+            [
+              1115.62,
+              1773.01
+            ],
+            [
+              1428.93,
+              1773.01
+            ],
+            [
+              1428.93,
+              1833.36
+            ],
+            [
+              1115.62,
+              1833.36
+            ]
+          ],
+          "text": "SURIGAO",
+          "confidence": 0.991906
+        },
+        {
+          "box": [
+            [
+              2326.51,
+              2024.81
+            ],
+            [
+              3067.44,
+              2016.48
+            ],
+            [
+              3069.56,
+              2080.99
+            ],
+            [
+              2328.63,
+              2091.4
+            ]
+          ],
+          "text": "Banner logo with school name",
+          "confidence": 0.977443
+        },
+        {
+          "box": [
+            [
+              961.09,
+              2043.54
+            ],
+            [
+              1704.13,
+              2035.21
+            ],
+            [
+              1704.13,
+              2095.56
+            ],
+            [
+              961.09,
+              2103.89
+            ]
+          ],
+          "text": "Square logowithschool name",
+          "confidence": 0.971691
+        },
+        {
+          "box": [
+            [
+              1881.96,
+              2353.61
+            ],
+            [
+              3594.56,
+              2334.88
+            ],
+            [
+              3596.67,
+              2407.71
+            ],
+            [
+              1881.96,
+              2426.44
+            ]
+          ],
+          "text": "·Specify a minimum distance from the edge of the logo to the",
+          "confidence": 0.986917
+        },
+        {
+          "box": [
+            [
+              1879.84,
+              2426.44
+            ],
+            [
+              2423.89,
+              2420.2
+            ],
+            [
+              2426.01,
+              2480.55
+            ],
+            [
+              1879.84,
+              2486.79
+            ]
+          ],
+          "text": "nextvisual element.",
+          "confidence": 0.963612
+        },
+        {
+          "box": [
+            [
+              1879.84,
+              2488.87
+            ],
+            [
+              3391.33,
+              2474.3
+            ],
+            [
+              3391.33,
+              2540.89
+            ],
+            [
+              1879.84,
+              2555.46
+            ]
+          ],
+          "text": "·Minimum size of the logos must be 0.5 inches in width.",
+          "confidence": 0.963941
+        },
+        {
+          "box": [
+            [
+              1879.84,
+              2553.38
+            ],
+            [
+              3609.38,
+              2540.89
+            ],
+            [
+              3611.49,
+              2607.49
+            ],
+            [
+              1879.84,
+              2619.97
+            ]
+          ],
+          "text": "·The color of the logo can not be changed except in greyscale.",
+          "confidence": 0.956537
+        }
+      ],
+      "text": "·Theschool logoshouldbeprominent andvisible inall visual\ncommunications.\n·It should not beplaced with another graphic or edited to create\na new image.\n·For legibility, keep the area around the logo clear.\n·The school logo colors can not be changed or modified. Use\nonly theprovidedofficial images.\nSt.Daul Tlnioersity\nSURIGAO\nCARITAS\nVERITAS\nSCIENTIA\nt.Dautglntbrrsitp\nSURIGAO\nBanner logo with school name\nSquare logowithschool name\n·Specify a minimum distance from the edge of the logo to the\nnextvisual element.\n·Minimum size of the logos must be 0.5 inches in width.\n·The color of the logo can not be changed except in greyscale."
+    },
+    {
+      "name": "autocontrast",
+      "seconds": 7.54,
+      "rows": [
+        {
+          "box": [
+            [
+              294.25,
+              682.57
+            ],
+            [
+              1996.27,
+              682.57
+            ],
+            [
+              1996.27,
+              751.24
+            ],
+            [
+              294.25,
+              751.24
+            ]
+          ],
+          "text": "·Theschool logoshouldbeprominent andvisible in all visual",
+          "confidence": 0.970224
+        },
+        {
+          "box": [
+            [
+              296.37,
+              765.81
+            ],
+            [
+              793.85,
+              765.81
+            ],
+            [
+              793.85,
+              817.83
+            ],
+            [
+              296.37,
+              817.83
+            ]
+          ],
+          "text": "communications.",
+          "confidence": 0.996972
+        },
+        {
+          "box": [
+            [
+              287.9,
+              824.07
+            ],
+            [
+              2108.47,
+              824.07
+            ],
+            [
+              2108.47,
+              890.67
+            ],
+            [
+              287.9,
+              890.67
+            ]
+          ],
+          "text": "·It should not beplaced with another graphic or edited to create",
+          "confidence": 0.931635
+        },
+        {
+          "box": [
+            [
+              292.14,
+              894.83
+            ],
+            [
+              675.3,
+              901.07
+            ],
+            [
+              673.19,
+              963.5
+            ],
+            [
+              292.14,
+              955.18
+            ]
+          ],
+          "text": "a new image.",
+          "confidence": 0.969661
+        },
+        {
+          "box": [
+            [
+              292.14,
+              957.26
+            ],
+            [
+              1710.48,
+              959.34
+            ],
+            [
+              1710.48,
+              1032.17
+            ],
+            [
+              292.14,
+              1030.09
+            ]
+          ],
+          "text": "·For legibility, keep the area around the logo clear.",
+          "confidence": 0.955292
+        },
+        {
+          "box": [
+            [
+              296.37,
+              1025.93
+            ],
+            [
+              2008.97,
+              1025.93
+            ],
+            [
+              2008.97,
+              1098.77
+            ],
+            [
+              296.37,
+              1098.77
+            ]
+          ],
+          "text": "·The school logo colors can not be changed or modified. Use",
+          "confidence": 0.96334
+        },
+        {
+          "box": [
+            [
+              298.49,
+              1096.68
+            ],
+            [
+              1232.06,
+              1098.77
+            ],
+            [
+              1232.06,
+              1167.44
+            ],
+            [
+              298.49,
+              1165.36
+            ]
+          ],
+          "text": "only theprovidedofficial images.",
+          "confidence": 0.973876
+        },
+        {
+          "box": [
+            [
+              2381.55,
+              1508.72
+            ],
+            [
+              3025.1,
+              1498.32
+            ],
+            [
+              3025.1,
+              1564.91
+            ],
+            [
+              2381.55,
+              1577.39
+            ]
+          ],
+          "text": "St.paul Clniuersitp",
+          "confidence": 0.812832
+        },
+        {
+          "box": [
+            [
+              2379.44,
+              1581.56
+            ],
+            [
+              3022.98,
+              1573.23
+            ],
+            [
+              3022.98,
+              1675.2
+            ],
+            [
+              2379.44,
+              1683.52
+            ]
+          ],
+          "text": "SURIGAO",
+          "confidence": 0.995676
+        },
+        {
+          "box": [
+            [
+              2383.67,
+              1685.61
+            ],
+            [
+              2548.79,
+              1685.61
+            ],
+            [
+              2548.79,
+              1720.98
+            ],
+            [
+              2383.67,
+              1720.98
+            ]
+          ],
+          "text": "CARITAS",
+          "confidence": 0.902531
+        },
+        {
+          "box": [
+            [
+              2614.42,
+              1683.52
+            ],
+            [
+              2777.42,
+              1683.52
+            ],
+            [
+              2777.42,
+              1718.9
+            ],
+            [
+              2614.42,
+              1718.9
+            ]
+          ],
+          "text": "VERITAS",
+          "confidence": 0.987627
+        },
+        {
+          "box": [
+            [
+              2836.69,
+              1683.52
+            ],
+            [
+              3022.98,
+              1677.28
+            ],
+            [
+              3022.98,
+              1712.66
+            ],
+            [
+              2838.81,
+              1716.82
+            ]
+          ],
+          "text": "SCIENTIA",
+          "confidence": 0.971517
+        },
+        {
+          "box": [
+            [
+              1119.86,
+              1737.63
+            ],
+            [
+              1424.7,
+              1737.63
+            ],
+            [
+              1424.7,
+              1779.25
+            ],
+            [
+              1119.86,
+              1779.25
+            ]
+          ],
+          "text": "t.Dautlntbrrsitp",
+          "confidence": 0.82647
+        },
+        {
+          "box": [
+            [
+              1115.62,
+              1773.01
+            ],
+            [
+              1428.93,
+              1773.01
+            ],
+            [
+              1428.93,
+              1833.36
+            ],
+            [
+              1115.62,
+              1833.36
+            ]
+          ],
+          "text": "SURIGAO",
+          "confidence": 0.991766
+        },
+        {
+          "box": [
+            [
+              2326.51,
+              2022.73
+            ],
+            [
+              3069.56,
+              2016.48
+            ],
+            [
+              3071.67,
+              2083.08
+            ],
+            [
+              2326.51,
+              2091.4
+            ]
+          ],
+          "text": "Banner logo with school name",
+          "confidence": 0.973475
+        },
+        {
+          "box": [
+            [
+              961.09,
+              2043.54
+            ],
+            [
+              1702.02,
+              2033.13
+            ],
+            [
+              1702.02,
+              2093.48
+            ],
+            [
+              961.09,
+              2105.97
+            ]
+          ],
+          "text": "Square logowithschool name",
+          "confidence": 0.974678
+        },
+        {
+          "box": [
+            [
+              1881.96,
+              2353.61
+            ],
+            [
+              3594.56,
+              2334.88
+            ],
+            [
+              3596.67,
+              2407.71
+            ],
+            [
+              1881.96,
+              2426.44
+            ]
+          ],
+          "text": "· Specify a minimum distance from the edge of the logo to the",
+          "confidence": 0.979126
+        },
+        {
+          "box": [
+            [
+              1881.96,
+              2428.52
+            ],
+            [
+              2421.77,
+              2422.28
+            ],
+            [
+              2423.89,
+              2478.46
+            ],
+            [
+              1881.96,
+              2484.71
+            ]
+          ],
+          "text": "nextvisualelement.",
+          "confidence": 0.990535
+        },
+        {
+          "box": [
+            [
+              1879.84,
+              2488.87
+            ],
+            [
+              3389.21,
+              2474.3
+            ],
+            [
+              3389.21,
+              2540.89
+            ],
+            [
+              1879.84,
+              2555.46
+            ]
+          ],
+          "text": "·Minimum size of the logos must be 0.5 inches in width.",
+          "confidence": 0.960562
+        },
+        {
+          "box": [
+            [
+              1879.84,
+              2553.38
+            ],
+            [
+              3607.26,
+              2540.89
+            ],
+            [
+              3609.38,
+              2607.49
+            ],
+            [
+              1879.84,
+              2619.97
+            ]
+          ],
+          "text": "·The color of the logo can not be changed except in greyscale.",
+          "confidence": 0.942133
+        }
+      ],
+      "text": "·Theschool logoshouldbeprominent andvisible in all visual\ncommunications.\n·It should not beplaced with another graphic or edited to create\na new image.\n·For legibility, keep the area around the logo clear.\n·The school logo colors can not be changed or modified. Use\nonly theprovidedofficial images.\nSt.paul Clniuersitp\nSURIGAO\nCARITAS\nVERITAS\nSCIENTIA\nt.Dautlntbrrsitp\nSURIGAO\nBanner logo with school name\nSquare logowithschool name\n· Specify a minimum distance from the edge of the logo to the\nnextvisualelement.\n·Minimum size of the logos must be 0.5 inches in width.\n·The color of the logo can not be changed except in greyscale."
+    },
+    {
+      "name": "overlapping_tiles",
+      "seconds": 10.7,
+      "rows": [
+        {
+          "box": [
+            [
+              292.14,
+              689.9
+            ],
+            [
+              1996.27,
+              685.65
+            ],
+            [
+              1996.27,
+              751.46
+            ],
+            [
+              292.14,
+              755.71
+            ]
+          ],
+          "text": "·Theschool logoshouldbeprominentandvisibleinallvisual",
+          "confidence": 0.982089
+        },
+        {
+          "box": [
+            [
+              296.37,
+              764.2
+            ],
+            [
+              787.5,
+              764.2
+            ],
+            [
+              787.5,
+              815.14
+            ],
+            [
+              296.37,
+              815.14
+            ]
+          ],
+          "text": "communications.",
+          "confidence": 0.996426
+        },
+        {
+          "box": [
+            [
+              290.02,
+              823.63
+            ],
+            [
+              2106.35,
+              819.39
+            ],
+            [
+              2106.35,
+              895.81
+            ],
+            [
+              290.02,
+              897.93
+            ]
+          ],
+          "text": "· It should not be placed with another graphic or edited to create",
+          "confidence": 0.981344
+        },
+        {
+          "box": [
+            [
+              296.37,
+              893.69
+            ],
+            [
+              683.77,
+              904.3
+            ],
+            [
+              681.65,
+              963.74
+            ],
+            [
+              294.25,
+              953.12
+            ]
+          ],
+          "text": "a new image.",
+          "confidence": 0.96572
+        },
+        {
+          "box": [
+            [
+              296.37,
+              963.74
+            ],
+            [
+              1704.13,
+              965.86
+            ],
+            [
+              1704.13,
+              1027.42
+            ],
+            [
+              296.37,
+              1027.42
+            ]
+          ],
+          "text": "·Forlegibility,keeptheareaaroundthelogoclear.",
+          "confidence": 0.967458
+        },
+        {
+          "box": [
+            [
+              287.9,
+              1027.42
+            ],
+            [
+              2006.85,
+              1025.3
+            ],
+            [
+              2006.85,
+              1099.59
+            ],
+            [
+              287.9,
+              1101.72
+            ]
+          ],
+          "text": "· The school logo colors can not be changed or modified. Use",
+          "confidence": 0.971309
+        },
+        {
+          "box": [
+            [
+              298.49,
+              1099.59
+            ],
+            [
+              1223.59,
+              1101.72
+            ],
+            [
+              1223.59,
+              1165.4
+            ],
+            [
+              298.49,
+              1163.28
+            ]
+          ],
+          "text": "onlytheprovidedofficialimages.",
+          "confidence": 0.993243
+        },
+        {
+          "box": [
+            [
+              2379.44,
+              1509.29
+            ],
+            [
+              3025.1,
+              1500.8
+            ],
+            [
+              3027.22,
+              1566.6
+            ],
+            [
+              2379.44,
+              1577.22
+            ]
+          ],
+          "text": "St.paul Clnibersity",
+          "confidence": 0.822676
+        },
+        {
+          "box": [
+            [
+              2373.08,
+              1583.58
+            ],
+            [
+              3025.1,
+              1572.97
+            ],
+            [
+              3027.22,
+              1674.86
+            ],
+            [
+              2375.2,
+              1685.48
+            ]
+          ],
+          "text": "SURIGAO",
+          "confidence": 0.998128
+        },
+        {
+          "box": [
+            [
+              2385.79,
+              1689.2
+            ],
+            [
+              2548.79,
+              1689.2
+            ],
+            [
+              2548.79,
+              1718.94
+            ],
+            [
+              2385.79,
+              1718.94
+            ]
+          ],
+          "text": "AS",
+          "confidence": 0.354622
+        },
+        {
+          "box": [
+            [
+              2610.18,
+              1687.08
+            ],
+            [
+              2779.54,
+              1682.83
+            ],
+            [
+              2779.54,
+              1714.69
+            ],
+            [
+              2610.18,
+              1718.94
+            ]
+          ],
+          "text": "VERITAS",
+          "confidence": 0.987534
+        },
+        {
+          "box": [
+            [
+              2836.69,
+              1682.83
+            ],
+            [
+              3025.1,
+              1680.71
+            ],
+            [
+              3025.1,
+              1710.44
+            ],
+            [
+              2836.69,
+              1714.69
+            ]
+          ],
+          "text": "SCIENTIA",
+          "confidence": 0.985202
+        },
+        {
+          "box": [
+            [
+              1121.98,
+              1744.42
+            ],
+            [
+              1420.46,
+              1744.42
+            ],
+            [
+              1420.46,
+              1774.16
+            ],
+            [
+              1121.98,
+              1774.16
+            ]
+          ],
+          "text": "t.Daul Jlntbrrsitp",
+          "confidence": 0.727461
+        },
+        {
+          "box": [
+            [
+              1117.74,
+              1778.41
+            ],
+            [
+              1420.46,
+              1778.41
+            ],
+            [
+              1420.46,
+              1825.13
+            ],
+            [
+              1117.74,
+              1825.13
+            ]
+          ],
+          "text": "SURIGAO",
+          "confidence": 0.995306
+        },
+        {
+          "box": [
+            [
+              956.85,
+              2046.01
+            ],
+            [
+              1702.02,
+              2037.52
+            ],
+            [
+              1702.02,
+              2094.86
+            ],
+            [
+              958.97,
+              2105.48
+            ]
+          ],
+          "text": "Squarelogowithschoolname",
+          "confidence": 0.99433
+        },
+        {
+          "box": [
+            [
+              2330.75,
+              2031.15
+            ],
+            [
+              3065.32,
+              2022.65
+            ],
+            [
+              3065.32,
+              2077.87
+            ],
+            [
+              2330.75,
+              2086.37
+            ]
+          ],
+          "text": "Bannerlogowithschoolname",
+          "confidence": 0.994369
+        },
+        {
+          "box": [
+            [
+              1886.19,
+              2358.23
+            ],
+            [
+              3592.44,
+              2339.11
+            ],
+            [
+              3592.44,
+              2402.83
+            ],
+            [
+              1886.19,
+              2421.94
+            ]
+          ],
+          "text": "·Specify a minimum distancefrom theedge of thelogo to the",
+          "confidence": 0.934652
+        },
+        {
+          "box": [
+            [
+              1884.07,
+              2430.44
+            ],
+            [
+              2419.66,
+              2421.94
+            ],
+            [
+              2419.66,
+              2472.92
+            ],
+            [
+              1884.07,
+              2481.41
+            ]
+          ],
+          "text": "nextvisualelement.",
+          "confidence": 0.991263
+        },
+        {
+          "box": [
+            [
+              1881.96,
+              2494.15
+            ],
+            [
+              3389.21,
+              2475.04
+            ],
+            [
+              3389.21,
+              2536.63
+            ],
+            [
+              1881.96,
+              2555.75
+            ]
+          ],
+          "text": "·Minimum sizeof the logosmustbe 0.5 inches inwidth.",
+          "confidence": 0.940052
+        },
+        {
+          "box": [
+            [
+              1884.07,
+              2555.75
+            ],
+            [
+              3607.26,
+              2543.0
+            ],
+            [
+              3607.26,
+              2604.6
+            ],
+            [
+              1884.07,
+              2619.46
+            ]
+          ],
+          "text": "·The color of the logo can not be changed except in greyscale.",
+          "confidence": 0.927499
+        }
+      ],
+      "text": "·Theschool logoshouldbeprominentandvisibleinallvisual\ncommunications.\n· It should not be placed with another graphic or edited to create\na new image.\n·Forlegibility,keeptheareaaroundthelogoclear.\n· The school logo colors can not be changed or modified. Use\nonlytheprovidedofficialimages.\nSt.paul Clnibersity\nSURIGAO\nAS\nVERITAS\nSCIENTIA\nt.Daul Jlntbrrsitp\nSURIGAO\nSquarelogowithschoolname\nBannerlogowithschoolname\n·Specify a minimum distancefrom theedge of thelogo to the\nnextvisualelement.\n·Minimum sizeof the logosmustbe 0.5 inches inwidth.\n·The color of the logo can not be changed except in greyscale."
+    }
+  ]
+}

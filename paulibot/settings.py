@@ -29,9 +29,14 @@ GEMINI_API_KEY = config('GEMINI_API_KEY', default='')
 
 # Groq API Key (Phase 2 — Live Chat AI Engine)
 GROQ_API_KEY = config('GROQ_API_KEY', default='')
+GROQ_MODEL = config('GROQ_MODEL', default='llama-3.3-70b-versatile')
 
 # OpenAI API Key (Fallback AI Engine)
 OPENAI_API_KEY = config('OPENAI_API_KEY', default='')
+
+# Conservative relevance gate, applied to raw cosine distance before ranking.
+# Tune using labeled SPUS evaluation queries; this is not a probability score.
+RAG_MAX_COSINE_DISTANCE = config('RAG_MAX_COSINE_DISTANCE', default=0.45, cast=float)
 
 # Debug mode controlled by environment
 DEBUG = config('DEBUG', default=False, cast=bool)

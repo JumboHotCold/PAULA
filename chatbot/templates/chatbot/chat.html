@@ -843,6 +843,10 @@
     <script>
         // Global State
         let currentConversationId = null;
+        let guestClarificationHistory = [];
+        let conversationContextToken = null;
+        const contextTabId = globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random()}`;
+        let chatSessionId = crypto.randomUUID();
         const isAuthenticated = {{ user.is_authenticated| lower }};
         const messagesContainer = document.getElementById('messages-container');
         const messageInput = document.getElementById('message-input');
@@ -1054,8 +1058,15 @@
             try {
                 // Determine Payload
                 const payload = {
-                    message: message
+                    message: message,
+                    mode: isAuthenticated ? 'authenticated' : 'guest',
+                    chat_session_id: chatSessionId,
+                    context_id: contextTabId,
+                    context_token: conversationContextToken
                 };
+                if (!isAuthenticated) {
+                    payload.history = guestClarificationHistory;
+                }
 
                 // If we have an active conversation, send its ID
                 if (currentConversationId) {
@@ -1078,6 +1089,13 @@
 
                 // Handle Response
                 if (data.response) {
+                    conversationContextToken = data.context_token || null;
+                    if (!isAuthenticated) {
+                        guestClarificationHistory = [...guestClarificationHistory,
+                            { role: 'user', content: message, timestamp: Date.now() / 1000 },
+                            { role: 'assistant', content: data.response, timestamp: Date.now() / 1000 }
+                        ].slice(-8);
+                    }
                     appendMessage(data.response, 'PAULA', false, data.chat_history_id, null, data.sources);
 
                     // Update current Conversation ID if newly created
@@ -1177,6 +1195,9 @@
         }
 
         function startNewChat() {
+            guestClarificationHistory = [];
+            conversationContextToken = null;
+            chatSessionId = crypto.randomUUID();
             currentConversationId = null;
             chatTitle.textContent = "New Chat";
             messagesContainer.innerHTML = '';

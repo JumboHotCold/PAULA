@@ -1,0 +1,2510 @@
+{
+  "document": "PBMO_FAQs",
+  "office": "PBMO",
+  "page": 2,
+  "pdf_text_layer_characters": 0,
+  "requested_render_dpi": 200,
+  "ocr_image_size": [
+    2902,
+    4200
+  ],
+  "selected_pass": "overlapping_tiles",
+  "selection_is_heuristic": true,
+  "stats": {
+    "lines": 37,
+    "characters": 2667,
+    "mean_confidence": 0.952,
+    "low_confidence_lines_below_0_85": 3
+  },
+  "review_flags": [
+    "low_confidence_lines_present"
+  ],
+  "color_contrast_text_similarity": 0.9518,
+  "passes": [
+    {
+      "name": "color",
+      "seconds": 20.3,
+      "rows": [
+        {
+          "box": [
+            [
+              906.88,
+              577.92
+            ],
+            [
+              1851.71,
+              613.91
+            ],
+            [
+              1847.49,
+              694.35
+            ],
+            [
+              904.77,
+              656.25
+            ]
+          ],
+          "text": "St.aul dnibersityurigao",
+          "confidence": 0.900041
+        },
+        {
+          "box": [
+            [
+              1065.05,
+              677.42
+            ],
+            [
+              1691.43,
+              702.82
+            ],
+            [
+              1689.32,
+              764.21
+            ],
+            [
+              1062.94,
+              738.81
+            ]
+          ],
+          "text": "St.PaulUniversitySystem",
+          "confidence": 0.992241
+        },
+        {
+          "box": [
+            [
+              1073.49,
+              747.28
+            ],
+            [
+              1682.99,
+              764.21
+            ],
+            [
+              1682.99,
+              823.49
+            ],
+            [
+              1071.38,
+              806.55
+            ]
+          ],
+          "text": "8400SurigaoCity,Philippines.",
+          "confidence": 0.975293
+        },
+        {
+          "box": [
+            [
+              1950.84,
+              747.28
+            ],
+            [
+              2037.31,
+              762.1
+            ],
+            [
+              2030.98,
+              793.85
+            ],
+            [
+              1944.51,
+              781.15
+            ]
+          ],
+          "text": "PmUITT",
+          "confidence": 0.467762
+        },
+        {
+          "box": [
+            [
+              236.21,
+              838.31
+            ],
+            [
+              2501.29,
+              897.58
+            ],
+            [
+              2499.18,
+              973.79
+            ],
+            [
+              234.1,
+              914.52
+            ]
+          ],
+          "text": "A:Submit the complete details of the article/event following the standard5Ws and 1H framework (Who,",
+          "confidence": 0.9605
+        },
+        {
+          "box": [
+            [
+              236.21,
+              910.28
+            ],
+            [
+              2509.72,
+              965.32
+            ],
+            [
+              2507.61,
+              1047.88
+            ],
+            [
+              236.21,
+              994.96
+            ]
+          ],
+          "text": "What,Whn,WhereWhy,ndHow) along withhigh-resolutionphtos/mediaviamailroft copy toP.",
+          "confidence": 0.792755
+        },
+        {
+          "box": [
+            [
+              242.54,
+              986.49
+            ],
+            [
+              2509.72,
+              1037.3
+            ],
+            [
+              2507.61,
+              1115.62
+            ],
+            [
+              240.43,
+              1064.82
+            ]
+          ],
+          "text": "Per institutionalpolicy,mployeesattending school-fundedseminarsconventions,rexternal trainingare",
+          "confidence": 0.869167
+        },
+        {
+          "box": [
+            [
+              246.75,
+              1060.58
+            ],
+            [
+              2509.72,
+              1105.04
+            ],
+            [
+              2509.72,
+              1181.25
+            ],
+            [
+              244.65,
+              1136.79
+            ]
+          ],
+          "text": "required tosubmit these standard reporting details directly toPBMOfor offcial publication,tracking,and",
+          "confidence": 0.947886
+        },
+        {
+          "box": [
+            [
+              253.08,
+              1132.56
+            ],
+            [
+              997.56,
+              1153.73
+            ],
+            [
+              995.45,
+              1219.35
+            ],
+            [
+              250.97,
+              1198.19
+            ]
+          ],
+          "text": "inclusion in thePresident'sReport.",
+          "confidence": 0.955574
+        },
+        {
+          "box": [
+            [
+              261.52,
+              1270.16
+            ],
+            [
+              2058.4,
+              1306.15
+            ],
+            [
+              2058.4,
+              1382.36
+            ],
+            [
+              261.52,
+              1346.37
+            ]
+          ],
+          "text": "3. Guidelines for University-Related Announcements and Promotional Materials",
+          "confidence": 0.969208
+        },
+        {
+          "box": [
+            [
+              438.67,
+              1350.6
+            ],
+            [
+              2376.86,
+              1376.01
+            ],
+            [
+              2374.75,
+              1447.98
+            ],
+            [
+              436.57,
+              1422.58
+            ]
+          ],
+          "text": "Q: How are announcements and promotional materials broadcast across the campus?",
+          "confidence": 0.972088
+        },
+        {
+          "box": [
+            [
+              276.28,
+              1486.09
+            ],
+            [
+              2505.51,
+              1517.84
+            ],
+            [
+              2503.4,
+              1585.58
+            ],
+            [
+              276.28,
+              1553.83
+            ]
+          ],
+          "text": "A:PBMOutilizes theUnifiedMultimedia Communication Network-comprising outdoor LED displays",
+          "confidence": 0.948026
+        },
+        {
+          "box": [
+            [
+              280.5,
+              1553.83
+            ],
+            [
+              2513.94,
+              1583.47
+            ],
+            [
+              2513.94,
+              1655.44
+            ],
+            [
+              278.39,
+              1627.92
+            ]
+          ],
+          "text": "CampusTV monitors,social media channels, and the web portalto broadcast real-time news, institutional",
+          "confidence": 0.944124
+        },
+        {
+          "box": [
+            [
+              282.61,
+              1630.04
+            ],
+            [
+              2507.61,
+              1655.44
+            ],
+            [
+              2505.51,
+              1721.07
+            ],
+            [
+              280.5,
+              1695.67
+            ]
+          ],
+          "text": "announcements,emergencyadvisories,and updatesfromcivic/governmentpartners.Allpromotional assets,",
+          "confidence": 0.972281
+        },
+        {
+          "box": [
+            [
+              282.61,
+              1697.78
+            ],
+            [
+              2507.61,
+              1723.19
+            ],
+            [
+              2505.51,
+              1788.81
+            ],
+            [
+              282.61,
+              1763.41
+            ]
+          ],
+          "text": "announcements,andpostersmustundergocontentandbrand reviewbyPBMOpriortobroadcastorposting.",
+          "confidence": 0.988135
+        },
+        {
+          "box": [
+            [
+              297.37,
+              1829.03
+            ],
+            [
+              1383.51,
+              1848.08
+            ],
+            [
+              1383.51,
+              1915.83
+            ],
+            [
+              295.26,
+              1896.77
+            ]
+          ],
+          "text": "4.Branding and Proper Use of University Assets",
+          "confidence": 0.970828
+        },
+        {
+          "box": [
+            [
+              463.98,
+              1903.12
+            ],
+            [
+              2459.11,
+              1920.06
+            ],
+            [
+              2459.11,
+              1989.92
+            ],
+            [
+              463.98,
+              1972.98
+            ]
+          ],
+          "text": "Q:What are the guidelinesregardingofficial universitylogos,seals,andbrand materials?",
+          "confidence": 0.919575
+        },
+        {
+          "box": [
+            [
+              303.7,
+              2034.38
+            ],
+            [
+              2520.27,
+              2053.43
+            ],
+            [
+              2518.16,
+              2125.4
+            ],
+            [
+              303.7,
+              2106.35
+            ]
+          ],
+          "text": "A:Official logofiles,colorpalettes,and typography rules must berequested directlyfromPBMO.The official",
+          "confidence": 0.945702
+        },
+        {
+          "box": [
+            [
+              305.81,
+              2108.47
+            ],
+            [
+              2516.05,
+              2125.4
+            ],
+            [
+              2516.05,
+              2186.79
+            ],
+            [
+              305.81,
+              2169.86
+            ]
+          ],
+          "text": "universityname,logo,seal,andrelatedbrandingassetsmustnotbemodified,stretched,recolored,or",
+          "confidence": 0.922746
+        },
+        {
+          "box": [
+            [
+              305.81,
+              2174.09
+            ],
+            [
+              2511.83,
+              2191.03
+            ],
+            [
+              2511.83,
+              2252.42
+            ],
+            [
+              305.81,
+              2235.48
+            ]
+          ],
+          "text": "combinedwith unauthorizedgraphicelements.Allmaterialsmeantforpublicconsumptionmustadhereto",
+          "confidence": 0.983908
+        },
+        {
+          "box": [
+            [
+              307.92,
+              2239.72
+            ],
+            [
+              1197.92,
+              2250.3
+            ],
+            [
+              1195.81,
+              2307.46
+            ],
+            [
+              307.92,
+              2298.99
+            ]
+          ],
+          "text": "theofficialSPUSbrandidentitystandards.",
+          "confidence": 0.983807
+        },
+        {
+          "box": [
+            [
+              318.46,
+              2375.2
+            ],
+            [
+              1718.84,
+              2383.67
+            ],
+            [
+              1718.84,
+              2442.94
+            ],
+            [
+              318.46,
+              2434.48
+            ]
+          ],
+          "text": "5.RequestingDocumentationorCoverageof UniversityEvents",
+          "confidence": 0.98904
+        },
+        {
+          "box": [
+            [
+              491.4,
+              2442.94
+            ],
+            [
+              2416.93,
+              2453.53
+            ],
+            [
+              2416.93,
+              2517.04
+            ],
+            [
+              491.4,
+              2506.45
+            ]
+          ],
+          "text": "Q:Howcan departments or student organizations request event photo/video coverage?",
+          "confidence": 0.954798
+        },
+        {
+          "box": [
+            [
+              324.79,
+              2567.84
+            ],
+            [
+              2520.27,
+              2582.66
+            ],
+            [
+              2518.16,
+              2648.29
+            ],
+            [
+              324.79,
+              2633.47
+            ]
+          ],
+          "text": "A:Submit a formal written orelectronic request addressed to thePBMODirector at least three(3)tofive (5)",
+          "confidence": 0.951012
+        },
+        {
+          "box": [
+            [
+              324.79,
+              2639.82
+            ],
+            [
+              2520.27,
+              2646.17
+            ],
+            [
+              2518.16,
+              2711.79
+            ],
+            [
+              324.79,
+              2705.44
+            ]
+          ],
+          "text": "working daysbefore the scheduled event,outining the event title,date,time,venue，andrequested",
+          "confidence": 0.917236
+        },
+        {
+          "box": [
+            [
+              331.11,
+              2707.56
+            ],
+            [
+              2520.27,
+              2716.03
+            ],
+            [
+              2518.16,
+              2777.42
+            ],
+            [
+              329.01,
+              2766.83
+            ]
+          ],
+          "text": "deliverables.Forofficialgraduationpictorialsandyearbookdocumentation,PBMOcoordinatesdirectlywith",
+          "confidence": 0.978513
+        },
+        {
+          "box": [
+            [
+              333.22,
+              2779.54
+            ],
+            [
+              1733.61,
+              2775.3
+            ],
+            [
+              1733.61,
+              2838.81
+            ],
+            [
+              333.22,
+              2840.93
+            ]
+          ],
+          "text": "approvedoutsourcedserviceprovidersunderdesignatedschedules.",
+          "confidence": 0.995352
+        },
+        {
+          "box": [
+            [
+              335.33,
+              2902.32
+            ],
+            [
+              1933.96,
+              2908.67
+            ],
+            [
+              1933.96,
+              2974.29
+            ],
+            [
+              335.33,
+              2967.94
+            ]
+          ],
+          "text": "6.General Guidelinesfor Submitting Information orMaterials forPosting",
+          "confidence": 0.970102
+        },
+        {
+          "box": [
+            [
+              510.38,
+              2967.94
+            ],
+            [
+              2298.82,
+              2974.29
+            ],
+            [
+              2298.82,
+              3042.04
+            ],
+            [
+              510.38,
+              3035.69
+            ]
+          ],
+          "text": "Q: How far in advance should materials be submitted for digital or portal posting?",
+          "confidence": 0.979436
+        },
+        {
+          "box": [
+            [
+              343.77,
+              3101.31
+            ],
+            [
+              2528.71,
+              3103.43
+            ],
+            [
+              2528.71,
+              3171.17
+            ],
+            [
+              343.77,
+              3169.05
+            ]
+          ],
+          "text": "A: Submissions for official social media posts or student portal updates should be turned in at least two (2)",
+          "confidence": 0.985861
+        },
+        {
+          "box": [
+            [
+              343.77,
+              3171.17
+            ],
+            [
+              2532.92,
+              3169.05
+            ],
+            [
+              2532.92,
+              3234.68
+            ],
+            [
+              343.77,
+              3236.79
+            ]
+          ],
+          "text": "working dayspriorto thetarget publishing datetoallowadequate timeforreview,layoutverification,and",
+          "confidence": 0.961783
+        },
+        {
+          "box": [
+            [
+              350.1,
+              3236.79
+            ],
+            [
+              592.63,
+              3243.15
+            ],
+            [
+              592.63,
+              3304.54
+            ],
+            [
+              347.99,
+              3298.19
+            ]
+          ],
+          "text": "scheduling.",
+          "confidence": 0.992036
+        },
+        {
+          "box": [
+            [
+              354.31,
+              3370.16
+            ],
+            [
+              1206.35,
+              3365.93
+            ],
+            [
+              1206.35,
+              3423.08
+            ],
+            [
+              354.31,
+              3429.44
+            ]
+          ],
+          "text": "7.Office Hours and ServiceSchedules",
+          "confidence": 0.962725
+        },
+        {
+          "box": [
+            [
+              525.14,
+              3433.67
+            ],
+            [
+              2290.39,
+              3427.32
+            ],
+            [
+              2290.39,
+              3492.94
+            ],
+            [
+              525.14,
+              3499.29
+            ]
+          ],
+          "text": "Q:What are the operating hoursof thePublication,Brand,andMarketing Office?",
+          "confidence": 0.915344
+        },
+        {
+          "box": [
+            [
+              360.64,
+              3569.15
+            ],
+            [
+              421.8,
+              3569.15
+            ],
+            [
+              421.8,
+              3626.31
+            ],
+            [
+              360.64,
+              3626.31
+            ]
+          ],
+          "text": "A:",
+          "confidence": 0.799734
+        },
+        {
+          "box": [
+            [
+              364.86,
+              3636.9
+            ],
+            [
+              1628.16,
+              3626.31
+            ],
+            [
+              1628.16,
+              3685.58
+            ],
+            [
+              364.86,
+              3696.17
+            ]
+          ],
+          "text": "MondaytoFriday:8:00AM-12:00NN|1:30PM-5:00PM",
+          "confidence": 0.966682
+        },
+        {
+          "box": [
+            [
+              366.97,
+              3704.64
+            ],
+            [
+              1024.98,
+              3694.05
+            ],
+            [
+              1027.09,
+              3753.33
+            ],
+            [
+              369.08,
+              3761.79
+            ]
+          ],
+          "text": "Saturday:8:00AM-12:00PM",
+          "confidence": 0.98174
+        },
+        {
+          "box": [
+            [
+              371.19,
+              3768.15
+            ],
+            [
+              1235.88,
+              3759.68
+            ],
+            [
+              1237.99,
+              3821.07
+            ],
+            [
+              371.19,
+              3827.42
+            ]
+          ],
+          "text": "Sunday& Institutional Holidays:Closed",
+          "confidence": 0.973639
+        }
+      ],
+      "text": "St.aul dnibersityurigao\nSt.PaulUniversitySystem\n8400SurigaoCity,Philippines.\nPmUITT\nA:Submit the complete details of the article/event following the standard5Ws and 1H framework (Who,\nWhat,Whn,WhereWhy,ndHow) along withhigh-resolutionphtos/mediaviamailroft copy toP.\nPer institutionalpolicy,mployeesattending school-fundedseminarsconventions,rexternal trainingare\nrequired tosubmit these standard reporting details directly toPBMOfor offcial publication,tracking,and\ninclusion in thePresident'sReport.\n3. Guidelines for University-Related Announcements and Promotional Materials\nQ: How are announcements and promotional materials broadcast across the campus?\nA:PBMOutilizes theUnifiedMultimedia Communication Network-comprising outdoor LED displays\nCampusTV monitors,social media channels, and the web portalto broadcast real-time news, institutional\nannouncements,emergencyadvisories,and updatesfromcivic/governmentpartners.Allpromotional assets,\nannouncements,andpostersmustundergocontentandbrand reviewbyPBMOpriortobroadcastorposting.\n4.Branding and Proper Use of University Assets\nQ:What are the guidelinesregardingofficial universitylogos,seals,andbrand materials?\nA:Official logofiles,colorpalettes,and typography rules must berequested directlyfromPBMO.The official\nuniversityname,logo,seal,andrelatedbrandingassetsmustnotbemodified,stretched,recolored,or\ncombinedwith unauthorizedgraphicelements.Allmaterialsmeantforpublicconsumptionmustadhereto\ntheofficialSPUSbrandidentitystandards.\n5.RequestingDocumentationorCoverageof UniversityEvents\nQ:Howcan departments or student organizations request event photo/video coverage?\nA:Submit a formal written orelectronic request addressed to thePBMODirector at least three(3)tofive (5)\nworking daysbefore the scheduled event,outining the event title,date,time,venue，andrequested\ndeliverables.Forofficialgraduationpictorialsandyearbookdocumentation,PBMOcoordinatesdirectlywith\napprovedoutsourcedserviceprovidersunderdesignatedschedules.\n6.General Guidelinesfor Submitting Information orMaterials forPosting\nQ: How far in advance should materials be submitted for digital or portal posting?\nA: Submissions for official social media posts or student portal updates should be turned in at least two (2)\nworking dayspriorto thetarget publishing datetoallowadequate timeforreview,layoutverification,and\nscheduling.\n7.Office Hours and ServiceSchedules\nQ:What are the operating hoursof thePublication,Brand,andMarketing Office?\nA:\nMondaytoFriday:8:00AM-12:00NN|1:30PM-5:00PM\nSaturday:8:00AM-12:00PM\nSunday& Institutional Holidays:Closed"
+    },
+    {
+      "name": "autocontrast",
+      "seconds": 20.92,
+      "rows": [
+        {
+          "box": [
+            [
+              908.98,
+              580.04
+            ],
+            [
+              1849.6,
+              613.91
+            ],
+            [
+              1845.39,
+              692.24
+            ],
+            [
+              906.88,
+              658.37
+            ]
+          ],
+          "text": "St.aul Gnibersity urigao",
+          "confidence": 0.878745
+        },
+        {
+          "box": [
+            [
+              1065.05,
+              679.54
+            ],
+            [
+              1691.43,
+              702.82
+            ],
+            [
+              1689.32,
+              764.21
+            ],
+            [
+              1062.94,
+              740.93
+            ]
+          ],
+          "text": "St.PaulUniversitySystem",
+          "confidence": 0.992407
+        },
+        {
+          "box": [
+            [
+              1075.6,
+              749.4
+            ],
+            [
+              1682.99,
+              764.21
+            ],
+            [
+              1682.99,
+              823.49
+            ],
+            [
+              1073.49,
+              808.67
+            ]
+          ],
+          "text": "8400SurigaoCity,Philippines.",
+          "confidence": 0.9642
+        },
+        {
+          "box": [
+            [
+              1946.62,
+              747.28
+            ],
+            [
+              2037.31,
+              757.86
+            ],
+            [
+              2033.09,
+              795.97
+            ],
+            [
+              1942.4,
+              785.38
+            ]
+          ],
+          "text": "PIIUPTT",
+          "confidence": 0.48282
+        },
+        {
+          "box": [
+            [
+              236.21,
+              838.31
+            ],
+            [
+              2501.29,
+              897.58
+            ],
+            [
+              2499.18,
+              975.91
+            ],
+            [
+              234.1,
+              916.63
+            ]
+          ],
+          "text": "A:Submit the complete details of the article/event following the standard 5Ws and 1H framework (Who,",
+          "confidence": 0.946649
+        },
+        {
+          "box": [
+            [
+              238.32,
+              910.28
+            ],
+            [
+              2505.51,
+              967.44
+            ],
+            [
+              2503.4,
+              1050.0
+            ],
+            [
+              236.21,
+              994.96
+            ]
+          ],
+          "text": "What,When,Where,Why,and How alongwithhigh-resolution htos/media viamailor soft copytoPMO.",
+          "confidence": 0.813525
+        },
+        {
+          "box": [
+            [
+              240.43,
+              984.38
+            ],
+            [
+              2511.83,
+              1035.18
+            ],
+            [
+              2509.72,
+              1119.86
+            ],
+            [
+              238.32,
+              1066.94
+            ]
+          ],
+          "text": "Per institutional olicy,mployees attending school-funded seminarsconventions, orextenal trainings are",
+          "confidence": 0.893784
+        },
+        {
+          "box": [
+            [
+              246.75,
+              1060.58
+            ],
+            [
+              2509.72,
+              1107.16
+            ],
+            [
+              2507.61,
+              1185.48
+            ],
+            [
+              246.75,
+              1138.91
+            ]
+          ],
+          "text": "required to submit these standard reporting details directiy to PBMO for official publication, tracking, and",
+          "confidence": 0.946614
+        },
+        {
+          "box": [
+            [
+              253.08,
+              1132.56
+            ],
+            [
+              997.56,
+              1153.73
+            ],
+            [
+              995.45,
+              1221.47
+            ],
+            [
+              250.97,
+              1200.3
+            ]
+          ],
+          "text": "inclusion in thePresident'sReport.",
+          "confidence": 0.970746
+        },
+        {
+          "box": [
+            [
+              261.52,
+              1272.28
+            ],
+            [
+              2058.4,
+              1306.15
+            ],
+            [
+              2058.4,
+              1382.36
+            ],
+            [
+              261.52,
+              1348.49
+            ]
+          ],
+          "text": "3. Guidelines for University-Related Announcements and Promotional Materials",
+          "confidence": 0.970042
+        },
+        {
+          "box": [
+            [
+              373.3,
+              1350.6
+            ],
+            [
+              2376.86,
+              1373.89
+            ],
+            [
+              2374.75,
+              1447.98
+            ],
+            [
+              373.3,
+              1422.58
+            ]
+          ],
+          "text": "Q: How are announcements and promotional materials broadcast across the campus?",
+          "confidence": 0.993921
+        },
+        {
+          "box": [
+            [
+              278.39,
+              1488.21
+            ],
+            [
+              2505.51,
+              1519.96
+            ],
+            [
+              2503.4,
+              1587.7
+            ],
+            [
+              276.28,
+              1553.83
+            ]
+          ],
+          "text": "A:PBMOutilizes theUnifiedMultimediaCommunication Network-comprisingoutdoorLEDdisplays",
+          "confidence": 0.957528
+        },
+        {
+          "box": [
+            [
+              280.5,
+              1555.95
+            ],
+            [
+              2513.94,
+              1585.58
+            ],
+            [
+              2513.94,
+              1657.56
+            ],
+            [
+              278.39,
+              1627.92
+            ]
+          ],
+          "text": "Campus TVmonitors,social media channels, and the webportal—to broadcast real-time news, institutional",
+          "confidence": 0.944836
+        },
+        {
+          "box": [
+            [
+              282.61,
+              1632.16
+            ],
+            [
+              2505.51,
+              1655.44
+            ],
+            [
+              2503.4,
+              1721.07
+            ],
+            [
+              280.5,
+              1697.78
+            ]
+          ],
+          "text": "announcements,emergencyadvisories,and updatesfromcivic/governmentpartners.All promotionalassets,",
+          "confidence": 0.97334
+        },
+        {
+          "box": [
+            [
+              284.72,
+              1699.9
+            ],
+            [
+              2505.51,
+              1725.3
+            ],
+            [
+              2503.4,
+              1790.93
+            ],
+            [
+              284.72,
+              1765.52
+            ]
+          ],
+          "text": "announcements,and posters mustundergo content and brand reviewbyPBMOpriorto broadcast orposting.",
+          "confidence": 0.960807
+        },
+        {
+          "box": [
+            [
+              297.37,
+              1831.15
+            ],
+            [
+              1383.51,
+              1850.2
+            ],
+            [
+              1383.51,
+              1915.83
+            ],
+            [
+              295.26,
+              1896.77
+            ]
+          ],
+          "text": "4.Branding andProperUseof UniversityAssets",
+          "confidence": 0.977545
+        },
+        {
+          "box": [
+            [
+              463.98,
+              1905.24
+            ],
+            [
+              2459.11,
+              1922.18
+            ],
+            [
+              2459.11,
+              1992.04
+            ],
+            [
+              463.98,
+              1975.1
+            ]
+          ],
+          "text": "Q:What are the guidelines regarding official university logos,seals,and brand materials？",
+          "confidence": 0.919041
+        },
+        {
+          "box": [
+            [
+              303.7,
+              2036.49
+            ],
+            [
+              2518.16,
+              2055.54
+            ],
+            [
+              2516.05,
+              2125.4
+            ],
+            [
+              303.7,
+              2106.35
+            ]
+          ],
+          "text": "A:Official logofiles,colorpalettes,and typographyrulesmust berequested directlyfromPBMO.The official",
+          "confidence": 0.948101
+        },
+        {
+          "box": [
+            [
+              307.92,
+              2110.58
+            ],
+            [
+              2513.94,
+              2125.4
+            ],
+            [
+              2513.94,
+              2186.79
+            ],
+            [
+              307.92,
+              2171.98
+            ]
+          ],
+          "text": "universityname,logo,seal,andrelatedbrandingassetsmustnotbemodified,stretched,recolored，or",
+          "confidence": 0.924205
+        },
+        {
+          "box": [
+            [
+              305.81,
+              2174.09
+            ],
+            [
+              2509.72,
+              2193.15
+            ],
+            [
+              2509.72,
+              2252.42
+            ],
+            [
+              305.81,
+              2235.48
+            ]
+          ],
+          "text": "combinedwithunauthorizedgraphicelements.Allmaterialsmeantforpublicconsumptionmustadhereto",
+          "confidence": 0.98722
+        },
+        {
+          "box": [
+            [
+              310.02,
+              2241.83
+            ],
+            [
+              1195.81,
+              2252.42
+            ],
+            [
+              1195.81,
+              2309.58
+            ],
+            [
+              310.02,
+              2301.11
+            ]
+          ],
+          "text": "theofficialSPUSbrandidentitystandards.",
+          "confidence": 0.984543
+        },
+        {
+          "box": [
+            [
+              318.46,
+              2375.2
+            ],
+            [
+              1718.84,
+              2383.67
+            ],
+            [
+              1718.84,
+              2445.06
+            ],
+            [
+              318.46,
+              2436.59
+            ]
+          ],
+          "text": "5.RequestingDocumentationorCoverageof UniversityEvents",
+          "confidence": 0.989837
+        },
+        {
+          "box": [
+            [
+              489.29,
+              2445.06
+            ],
+            [
+              2416.93,
+              2453.53
+            ],
+            [
+              2414.82,
+              2519.15
+            ],
+            [
+              489.29,
+              2510.69
+            ]
+          ],
+          "text": "Q:How can departments or student organizationsrequest event photolvideo coverage?",
+          "confidence": 0.962322
+        },
+        {
+          "box": [
+            [
+              324.79,
+              2569.96
+            ],
+            [
+              2520.27,
+              2584.78
+            ],
+            [
+              2518.16,
+              2650.4
+            ],
+            [
+              324.79,
+              2635.58
+            ]
+          ],
+          "text": "A:Submit a formal written orelectronicrequest addressed to thePBMODirectorat least three(3)tofive (5)",
+          "confidence": 0.958452
+        },
+        {
+          "box": [
+            [
+              324.79,
+              2641.94
+            ],
+            [
+              2520.27,
+              2648.29
+            ],
+            [
+              2518.16,
+              2711.79
+            ],
+            [
+              324.79,
+              2705.44
+            ]
+          ],
+          "text": "working daysbefore the scheduled event,outining the event title,date,time,venue,andrequested",
+          "confidence": 0.917375
+        },
+        {
+          "box": [
+            [
+              331.11,
+              2709.68
+            ],
+            [
+              2520.27,
+              2718.15
+            ],
+            [
+              2518.16,
+              2777.42
+            ],
+            [
+              331.11,
+              2768.95
+            ]
+          ],
+          "text": "deliverables.Forofficialgraduationpictorialsandyearbookdocumentation,PBMOcoordinatesdirectlywith",
+          "confidence": 0.983363
+        },
+        {
+          "box": [
+            [
+              337.44,
+              2904.44
+            ],
+            [
+              1933.96,
+              2908.67
+            ],
+            [
+              1933.96,
+              2974.29
+            ],
+            [
+              337.44,
+              2970.06
+            ]
+          ],
+          "text": "6.General Guidelines for Submitting Information or Materials for Posting",
+          "confidence": 0.95257
+        },
+        {
+          "box": [
+            [
+              434.46,
+              2965.83
+            ],
+            [
+              2298.82,
+              2974.29
+            ],
+            [
+              2298.82,
+              3046.27
+            ],
+            [
+              432.35,
+              3037.8
+            ]
+          ],
+          "text": "Q: How far in advance should materials be submitted for digital or portal posting?",
+          "confidence": 0.98516
+        },
+        {
+          "box": [
+            [
+              343.77,
+              3101.31
+            ],
+            [
+              2526.6,
+              3105.54
+            ],
+            [
+              2526.6,
+              3173.29
+            ],
+            [
+              343.77,
+              3169.05
+            ]
+          ],
+          "text": "( esd sosds",
+          "confidence": 0.315167
+        },
+        {
+          "box": [
+            [
+              345.88,
+              3173.29
+            ],
+            [
+              2532.92,
+              3169.05
+            ],
+            [
+              2532.92,
+              3234.68
+            ],
+            [
+              345.88,
+              3238.91
+            ]
+          ],
+          "text": "working dayspriorto thetargetpublishing datetoallowadequate timeforreview,layoutverification,and",
+          "confidence": 0.963507
+        },
+        {
+          "box": [
+            [
+              350.1,
+              3238.91
+            ],
+            [
+              592.63,
+              3245.26
+            ],
+            [
+              590.52,
+              3306.65
+            ],
+            [
+              347.99,
+              3300.3
+            ]
+          ],
+          "text": "scheduling.",
+          "confidence": 0.993945
+        },
+        {
+          "box": [
+            [
+              356.42,
+              3374.4
+            ],
+            [
+              1206.35,
+              3368.04
+            ],
+            [
+              1206.35,
+              3423.08
+            ],
+            [
+              356.42,
+              3429.44
+            ]
+          ],
+          "text": "7.Office Hours andServiceSchedules",
+          "confidence": 0.965801
+        },
+        {
+          "box": [
+            [
+              525.14,
+              3433.67
+            ],
+            [
+              2288.28,
+              3429.44
+            ],
+            [
+              2288.28,
+              3495.06
+            ],
+            [
+              525.14,
+              3499.29
+            ]
+          ],
+          "text": "Q:What are theoperating hoursof thePublication,Brand,andMarketing Office?",
+          "confidence": 0.915652
+        },
+        {
+          "box": [
+            [
+              360.64,
+              3571.27
+            ],
+            [
+              421.8,
+              3571.27
+            ],
+            [
+              421.8,
+              3626.31
+            ],
+            [
+              360.64,
+              3626.31
+            ]
+          ],
+          "text": "A:",
+          "confidence": 0.790734
+        },
+        {
+          "box": [
+            [
+              364.86,
+              3639.01
+            ],
+            [
+              1628.16,
+              3628.43
+            ],
+            [
+              1628.16,
+              3685.58
+            ],
+            [
+              364.86,
+              3696.17
+            ]
+          ],
+          "text": "MondaytoFriday:8:00AM-12:00NN|1:30PM-5:00PM",
+          "confidence": 0.962661
+        },
+        {
+          "box": [
+            [
+              369.08,
+              3704.64
+            ],
+            [
+              1027.09,
+              3696.17
+            ],
+            [
+              1027.09,
+              3757.56
+            ],
+            [
+              371.19,
+              3763.91
+            ]
+          ],
+          "text": "Saturday:8:00AM-12:00PM",
+          "confidence": 0.978011
+        },
+        {
+          "box": [
+            [
+              371.19,
+              3766.03
+            ],
+            [
+              1235.88,
+              3759.68
+            ],
+            [
+              1237.99,
+              3825.3
+            ],
+            [
+              371.19,
+              3831.65
+            ]
+          ],
+          "text": "Sunday& Institutional Holidays:Closed",
+          "confidence": 0.966236
+        }
+      ],
+      "text": "St.aul Gnibersity urigao\nSt.PaulUniversitySystem\n8400SurigaoCity,Philippines.\nPIIUPTT\nA:Submit the complete details of the article/event following the standard 5Ws and 1H framework (Who,\nWhat,When,Where,Why,and How alongwithhigh-resolution htos/media viamailor soft copytoPMO.\nPer institutional olicy,mployees attending school-funded seminarsconventions, orextenal trainings are\nrequired to submit these standard reporting details directiy to PBMO for official publication, tracking, and\ninclusion in thePresident'sReport.\n3. Guidelines for University-Related Announcements and Promotional Materials\nQ: How are announcements and promotional materials broadcast across the campus?\nA:PBMOutilizes theUnifiedMultimediaCommunication Network-comprisingoutdoorLEDdisplays\nCampus TVmonitors,social media channels, and the webportal—to broadcast real-time news, institutional\nannouncements,emergencyadvisories,and updatesfromcivic/governmentpartners.All promotionalassets,\nannouncements,and posters mustundergo content and brand reviewbyPBMOpriorto broadcast orposting.\n4.Branding andProperUseof UniversityAssets\nQ:What are the guidelines regarding official university logos,seals,and brand materials？\nA:Official logofiles,colorpalettes,and typographyrulesmust berequested directlyfromPBMO.The official\nuniversityname,logo,seal,andrelatedbrandingassetsmustnotbemodified,stretched,recolored，or\ncombinedwithunauthorizedgraphicelements.Allmaterialsmeantforpublicconsumptionmustadhereto\ntheofficialSPUSbrandidentitystandards.\n5.RequestingDocumentationorCoverageof UniversityEvents\nQ:How can departments or student organizationsrequest event photolvideo coverage?\nA:Submit a formal written orelectronicrequest addressed to thePBMODirectorat least three(3)tofive (5)\nworking daysbefore the scheduled event,outining the event title,date,time,venue,andrequested\ndeliverables.Forofficialgraduationpictorialsandyearbookdocumentation,PBMOcoordinatesdirectlywith\n6.General Guidelines for Submitting Information or Materials for Posting\nQ: How far in advance should materials be submitted for digital or portal posting?\n( esd sosds\nworking dayspriorto thetargetpublishing datetoallowadequate timeforreview,layoutverification,and\nscheduling.\n7.Office Hours andServiceSchedules\nQ:What are theoperating hoursof thePublication,Brand,andMarketing Office?\nA:\nMondaytoFriday:8:00AM-12:00NN|1:30PM-5:00PM\nSaturday:8:00AM-12:00PM\nSunday& Institutional Holidays:Closed"
+    },
+    {
+      "name": "overlapping_tiles",
+      "seconds": 16.11,
+      "rows": [
+        {
+          "box": [
+            [
+              908.34,
+              579.27
+            ],
+            [
+              1841.54,
+              615.39
+            ],
+            [
+              1838.62,
+              691.95
+            ],
+            [
+              905.41,
+              655.84
+            ]
+          ],
+          "text": "St.aul Gnibersity urigao",
+          "confidence": 0.884677
+        },
+        {
+          "box": [
+            [
+              1989.27,
+              603.83
+            ],
+            [
+              2021.45,
+              603.83
+            ],
+            [
+              2021.45,
+              613.94
+            ],
+            [
+              1989.27,
+              613.94
+            ]
+          ],
+          "text": "FEE",
+          "confidence": 0.512462
+        },
+        {
+          "box": [
+            [
+              1064.85,
+              680.4
+            ],
+            [
+              1687.96,
+              703.51
+            ],
+            [
+              1686.49,
+              761.29
+            ],
+            [
+              1063.38,
+              738.18
+            ]
+          ],
+          "text": "St.Paul UniversitySystem",
+          "confidence": 0.98171
+        },
+        {
+          "box": [
+            [
+              1078.01,
+              749.73
+            ],
+            [
+              1680.64,
+              768.51
+            ],
+            [
+              1679.18,
+              821.96
+            ],
+            [
+              1076.55,
+              803.18
+            ]
+          ],
+          "text": "8400Surigao City,Philippines.",
+          "confidence": 0.971203
+        },
+        {
+          "box": [
+            [
+              236.96,
+              839.3
+            ],
+            [
+              2507.07,
+              899.97
+            ],
+            [
+              2505.61,
+              975.09
+            ],
+            [
+              235.49,
+              914.42
+            ]
+          ],
+          "text": "A: Submit the complete details of the article/event following the standard 5Ws and 1H framework (Who,",
+          "confidence": 0.972212
+        },
+        {
+          "box": [
+            [
+              238.42,
+              912.97
+            ],
+            [
+              2507.07,
+              966.42
+            ],
+            [
+              2505.61,
+              1045.87
+            ],
+            [
+              236.96,
+              992.42
+            ]
+          ],
+          "text": "What,When,Where,Why,and Howalng withhighresolution photos/mediaviamailorofcopy toMO.",
+          "confidence": 0.818399
+        },
+        {
+          "box": [
+            [
+              241.35,
+              985.2
+            ],
+            [
+              2510.0,
+              1038.65
+            ],
+            [
+              2508.53,
+              1119.55
+            ],
+            [
+              239.88,
+              1066.1
+            ]
+          ],
+          "text": "Per institutional policy,employees attending school-funded seminars, conventions, orexternal trainings are",
+          "confidence": 0.921445
+        },
+        {
+          "box": [
+            [
+              248.66,
+              1063.21
+            ],
+            [
+              2507.07,
+              1109.43
+            ],
+            [
+              2505.61,
+              1181.66
+            ],
+            [
+              247.2,
+              1135.44
+            ]
+          ],
+          "text": "required to submit these standard reporting details directly to PBMO for official publication, tracking, and",
+          "confidence": 0.97631
+        },
+        {
+          "box": [
+            [
+              254.51,
+              1135.44
+            ],
+            [
+              996.1,
+              1158.55
+            ],
+            [
+              994.64,
+              1219.22
+            ],
+            [
+              253.05,
+              1196.11
+            ]
+          ],
+          "text": "inclusion in the President's Report.",
+          "confidence": 0.985237
+        },
+        {
+          "box": [
+            [
+              264.75,
+              1274.12
+            ],
+            [
+              2056.56,
+              1307.34
+            ],
+            [
+              2055.1,
+              1379.57
+            ],
+            [
+              263.29,
+              1346.34
+            ]
+          ],
+          "text": "3. Guidelines for University-Related Announcements and Promotional Materials",
+          "confidence": 0.975158
+        },
+        {
+          "box": [
+            [
+              359.82,
+              1350.68
+            ],
+            [
+              2376.89,
+              1378.12
+            ],
+            [
+              2376.89,
+              1447.46
+            ],
+            [
+              359.82,
+              1420.02
+            ]
+          ],
+          "text": "·Q: How are announcements and promotional materials broadcast across the campus?",
+          "confidence": 0.983059
+        },
+        {
+          "box": [
+            [
+              274.99,
+              1486.47
+            ],
+            [
+              2508.53,
+              1519.69
+            ],
+            [
+              2508.53,
+              1586.14
+            ],
+            [
+              274.99,
+              1552.92
+            ]
+          ],
+          "text": "A: PBMO utilizes the Unified Multimedia Communication Network-comprising outdoor LED displays,",
+          "confidence": 0.968172
+        },
+        {
+          "box": [
+            [
+              280.84,
+              1557.25
+            ],
+            [
+              2511.46,
+              1586.14
+            ],
+            [
+              2511.46,
+              1652.59
+            ],
+            [
+              280.84,
+              1623.7
+            ]
+          ],
+          "text": "Campus TV monitors, social media channels, and the web portal—-to broadcast real-time news, institutional",
+          "confidence": 0.976079
+        },
+        {
+          "box": [
+            [
+              280.84,
+              1632.37
+            ],
+            [
+              2511.46,
+              1655.48
+            ],
+            [
+              2511.46,
+              1720.49
+            ],
+            [
+              280.84,
+              1697.38
+            ]
+          ],
+          "text": "announcements, emergency advisories, and updates from civic/government partners. All promotional assets,",
+          "confidence": 0.996498
+        },
+        {
+          "box": [
+            [
+              286.69,
+              1701.71
+            ],
+            [
+              2507.07,
+              1724.82
+            ],
+            [
+              2507.07,
+              1786.94
+            ],
+            [
+              286.69,
+              1763.83
+            ]
+          ],
+          "text": "announcements, and posters must undergo content and brand review by PBMO prior to broadcast or posting.",
+          "confidence": 0.99318
+        },
+        {
+          "box": [
+            [
+              295.47,
+              1833.17
+            ],
+            [
+              1380.79,
+              1850.5
+            ],
+            [
+              1380.79,
+              1912.62
+            ],
+            [
+              295.47,
+              1895.28
+            ]
+          ],
+          "text": "4.Branding and Proper Use of University Assets",
+          "confidence": 0.954011
+        },
+        {
+          "box": [
+            [
+              381.77,
+              1903.95
+            ],
+            [
+              2458.8,
+              1921.29
+            ],
+            [
+              2458.8,
+              1989.18
+            ],
+            [
+              381.77,
+              1971.85
+            ]
+          ],
+          "text": ". Q: What are the guidelines regarding official university logos, seals, and brand materials?",
+          "confidence": 0.969884
+        },
+        {
+          "box": [
+            [
+              302.78,
+              2038.3
+            ],
+            [
+              2515.85,
+              2057.08
+            ],
+            [
+              2515.85,
+              2123.53
+            ],
+            [
+              302.78,
+              2104.75
+            ]
+          ],
+          "text": "A: Official logo files, color palettes, and typography rules must be requested directly from PBMO. The official",
+          "confidence": 0.971458
+        },
+        {
+          "box": [
+            [
+              310.09,
+              2112.59
+            ],
+            [
+              2517.31,
+              2128.48
+            ],
+            [
+              2517.31,
+              2184.82
+            ],
+            [
+              310.09,
+              2168.93
+            ]
+          ],
+          "text": "university name, logo, seal, and related branding assets must not be modified, stretched, recolored, or",
+          "confidence": 0.997716
+        },
+        {
+          "box": [
+            [
+              305.7,
+              2176.15
+            ],
+            [
+              2514.38,
+              2193.48
+            ],
+            [
+              2514.38,
+              2254.16
+            ],
+            [
+              305.7,
+              2236.82
+            ]
+          ],
+          "text": "combined with unauthorized graphic elements. All materials meant for public consumption must adhere to",
+          "confidence": 0.96674
+        },
+        {
+          "box": [
+            [
+              313.02,
+              2241.16
+            ],
+            [
+              1186.25,
+              2252.71
+            ],
+            [
+              1186.25,
+              2309.05
+            ],
+            [
+              313.02,
+              2297.49
+            ]
+          ],
+          "text": "the official SPUS brand identity standards.",
+          "confidence": 0.97111
+        },
+        {
+          "box": [
+            [
+              317.41,
+              2376.95
+            ],
+            [
+              1718.67,
+              2385.61
+            ],
+            [
+              1718.67,
+              2446.29
+            ],
+            [
+              317.41,
+              2437.62
+            ]
+          ],
+          "text": "5. Requesting Documentation or Coverage of University Events",
+          "confidence": 0.985517
+        },
+        {
+          "box": [
+            [
+              397.85,
+              2444.84
+            ],
+            [
+              2416.38,
+              2456.4
+            ],
+            [
+              2416.38,
+              2518.51
+            ],
+            [
+              397.85,
+              2506.96
+            ]
+          ],
+          "text": ".Q: How can departments or student organizations request event photo/video coverage?",
+          "confidence": 0.967364
+        },
+        {
+          "box": [
+            [
+              326.18,
+              2574.85
+            ],
+            [
+              2515.85,
+              2586.41
+            ],
+            [
+              2515.85,
+              2648.53
+            ],
+            [
+              326.18,
+              2636.97
+            ]
+          ],
+          "text": "A: Submit a formal written or electronic request addressed to the PBMO Director at least three (3) to five (5)",
+          "confidence": 0.981786
+        },
+        {
+          "box": [
+            [
+              330.57,
+              2645.64
+            ],
+            [
+              2517.31,
+              2652.86
+            ],
+            [
+              2517.31,
+              2709.2
+            ],
+            [
+              330.57,
+              2701.98
+            ]
+          ],
+          "text": "working days before the scheduled event, outlining the event title, date, time, venue, and requested",
+          "confidence": 0.986316
+        },
+        {
+          "box": [
+            [
+              329.11,
+              2710.64
+            ],
+            [
+              2520.23,
+              2717.87
+            ],
+            [
+              2520.23,
+              2778.54
+            ],
+            [
+              329.11,
+              2771.31
+            ]
+          ],
+          "text": "deliverables. For official graduation pictorials and yearbook documentation, PBMO coordinates directly with",
+          "confidence": 0.981412
+        },
+        {
+          "box": [
+            [
+              336.42,
+              2781.43
+            ],
+            [
+              1734.76,
+              2779.98
+            ],
+            [
+              1734.76,
+              2842.1
+            ],
+            [
+              336.42,
+              2843.54
+            ]
+          ],
+          "text": "approved outsourced service providers under designated schedules.",
+          "confidence": 0.991544
+        },
+        {
+          "box": [
+            [
+              337.88,
+              2907.1
+            ],
+            [
+              1933.69,
+              2911.44
+            ],
+            [
+              1933.69,
+              2973.56
+            ],
+            [
+              337.88,
+              2969.22
+            ]
+          ],
+          "text": "6. General Guidelines for Submitting Information or Materials for Posting",
+          "confidence": 0.989158
+        },
+        {
+          "box": [
+            [
+              428.57,
+              2972.11
+            ],
+            [
+              2294.98,
+              2976.44
+            ],
+            [
+              2294.98,
+              3042.9
+            ],
+            [
+              428.57,
+              3038.56
+            ]
+          ],
+          "text": ".Q: How far in advance should materials be submitted for digital or portal posting?",
+          "confidence": 0.9798
+        },
+        {
+          "box": [
+            [
+              342.27,
+              3102.12
+            ],
+            [
+              2529.01,
+              3107.9
+            ],
+            [
+              2529.01,
+              3174.35
+            ],
+            [
+              342.27,
+              3168.57
+            ]
+          ],
+          "text": "A: Submissions for official social media posts or student portal updates should be turned in at least two (2)",
+          "confidence": 0.994452
+        },
+        {
+          "box": [
+            [
+              345.2,
+              3174.35
+            ],
+            [
+              2531.94,
+              3168.57
+            ],
+            [
+              2531.94,
+              3233.58
+            ],
+            [
+              345.2,
+              3239.36
+            ]
+          ],
+          "text": "working days prior to the target publishing date to allow adequate time for review, layout verification, and",
+          "confidence": 0.997904
+        },
+        {
+          "box": [
+            [
+              352.51,
+              3242.25
+            ],
+            [
+              590.93,
+              3246.58
+            ],
+            [
+              589.47,
+              3305.81
+            ],
+            [
+              351.05,
+              3301.47
+            ]
+          ],
+          "text": "scheduling.",
+          "confidence": 0.992307
+        },
+        {
+          "box": [
+            [
+              355.44,
+              3376.59
+            ],
+            [
+              1205.27,
+              3370.81
+            ],
+            [
+              1205.27,
+              3424.26
+            ],
+            [
+              355.44,
+              3430.04
+            ]
+          ],
+          "text": "7.Office Hours andServiceSchedules",
+          "confidence": 0.971011
+        },
+        {
+          "box": [
+            [
+              440.27,
+              3438.71
+            ],
+            [
+              2289.13,
+              3431.49
+            ],
+            [
+              2289.13,
+              3493.6
+            ],
+            [
+              440.27,
+              3500.83
+            ]
+          ],
+          "text": ".Q: What are the operating hours of the Publication, Brand, and Marketing Office?",
+          "confidence": 0.976546
+        },
+        {
+          "box": [
+            [
+              361.29,
+              3573.05
+            ],
+            [
+              422.72,
+              3573.05
+            ],
+            [
+              422.72,
+              3627.95
+            ],
+            [
+              361.29,
+              3627.95
+            ]
+          ],
+          "text": "A：",
+          "confidence": 0.755626
+        },
+        {
+          "box": [
+            [
+              368.6,
+              3705.96
+            ],
+            [
+              1025.35,
+              3698.73
+            ],
+            [
+              1025.35,
+              3755.07
+            ],
+            [
+              368.6,
+              3762.29
+            ]
+          ],
+          "text": "Saturday: 8:00 AM-12:00 PM",
+          "confidence": 0.952463
+        },
+        {
+          "box": [
+            [
+              371.53,
+              3770.96
+            ],
+            [
+              1235.98,
+              3765.18
+            ],
+            [
+              1235.98,
+              3821.52
+            ],
+            [
+              371.53,
+              3827.3
+            ]
+          ],
+          "text": "Sunday & Institutional Holidays: Closed",
+          "confidence": 0.975379
+        }
+      ],
+      "text": "St.aul Gnibersity urigao\nFEE\nSt.Paul UniversitySystem\n8400Surigao City,Philippines.\nA: Submit the complete details of the article/event following the standard 5Ws and 1H framework (Who,\nWhat,When,Where,Why,and Howalng withhighresolution photos/mediaviamailorofcopy toMO.\nPer institutional policy,employees attending school-funded seminars, conventions, orexternal trainings are\nrequired to submit these standard reporting details directly to PBMO for official publication, tracking, and\ninclusion in the President's Report.\n3. Guidelines for University-Related Announcements and Promotional Materials\n·Q: How are announcements and promotional materials broadcast across the campus?\nA: PBMO utilizes the Unified Multimedia Communication Network-comprising outdoor LED displays,\nCampus TV monitors, social media channels, and the web portal—-to broadcast real-time news, institutional\nannouncements, emergency advisories, and updates from civic/government partners. All promotional assets,\nannouncements, and posters must undergo content and brand review by PBMO prior to broadcast or posting.\n4.Branding and Proper Use of University Assets\n. Q: What are the guidelines regarding official university logos, seals, and brand materials?\nA: Official logo files, color palettes, and typography rules must be requested directly from PBMO. The official\nuniversity name, logo, seal, and related branding assets must not be modified, stretched, recolored, or\ncombined with unauthorized graphic elements. All materials meant for public consumption must adhere to\nthe official SPUS brand identity standards.\n5. Requesting Documentation or Coverage of University Events\n.Q: How can departments or student organizations request event photo/video coverage?\nA: Submit a formal written or electronic request addressed to the PBMO Director at least three (3) to five (5)\nworking days before the scheduled event, outlining the event title, date, time, venue, and requested\ndeliverables. For official graduation pictorials and yearbook documentation, PBMO coordinates directly with\napproved outsourced service providers under designated schedules.\n6. General Guidelines for Submitting Information or Materials for Posting\n.Q: How far in advance should materials be submitted for digital or portal posting?\nA: Submissions for official social media posts or student portal updates should be turned in at least two (2)\nworking days prior to the target publishing date to allow adequate time for review, layout verification, and\nscheduling.\n7.Office Hours andServiceSchedules\n.Q: What are the operating hours of the Publication, Brand, and Marketing Office?\nA：\nSaturday: 8:00 AM-12:00 PM\nSunday & Institutional Holidays: Closed"
+    }
+  ]
+}

@@ -1,0 +1,483 @@
+{
+  "checks": [
+    {
+      "case": "two_roles",
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "passed": true,
+      "expected_fragments": [
+        "Arnold A. Magalona",
+        "Karen T. Plaza"
+      ],
+      "matched_fragments": [
+        true,
+        true
+      ],
+      "p50_ms": 172.46,
+      "first_ms": 340.38,
+      "warm_max_ms": 184.43,
+      "response": "**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "action": null,
+      "action_data": null,
+      "parts": [
+        {
+          "query": "Who is the ICT Director?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "Who is the CEIT Dean?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "case": "shared_role",
+      "query": "Who are the deans of CEIT and CHS?",
+      "passed": true,
+      "expected_fragments": [
+        "Karen T. Plaza",
+        "Kristal Liza Besario"
+      ],
+      "matched_fragments": [
+        true,
+        true
+      ],
+      "p50_ms": 153.99,
+      "first_ms": 164.0,
+      "warm_max_ms": 173.47,
+      "response": "**1. Who are the deans of CEIT?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 1\n\n**2. Who are the deans of CHS?**\n\nMrs. Kristal Liza Besario, MaN, RN — Dean, College of Health Sciences, Head, Health Service\n\nSources: 2\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who are the deans of CEIT?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Health Sciences, Head, Health Service | Mrs. Kristal Liza Besario, MaN, RN",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.725698+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Health Sciences | Dean, College of Health Sciences, Head, Health Service | Mrs. Kristal Liza Besario, MaN, RN",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 233,
+              "retrieved_at": "2026-10-27T14:12:31.280498+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who are the deans of CHS?",
+          "citation_index": 2
+        }
+      ],
+      "action": null,
+      "action_data": null,
+      "parts": [
+        {
+          "query": "Who are the deans of CEIT?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "Who are the deans of CHS?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "case": "two_audiences",
+      "query": "What are the requirements for freshmen and transferees?",
+      "passed": true,
+      "expected_fragments": [
+        "Freshmen",
+        "Transferee"
+      ],
+      "matched_fragments": [
+        true,
+        true
+      ],
+      "p50_ms": 12.78,
+      "first_ms": 49.64,
+      "warm_max_ms": 15.31,
+      "response": "**1. What are the requirements for freshmen?**\n\nAdmission and enrollment requirements for Incoming College Freshmen:\n1. Senior High School (SHS) Report Card (Form 138 / SF9)\n2. Original PSA Birth Certificate\n3. Original Certificate of Good Moral Character\n4. College Entrance Examination Result (from Guidance Office)\n5. 1 pc. 2x2 ID picture\n6. Marriage Certificate (if married)\n7. Accomplished Student Information Sheet\n\nSources: 1\n\n**2. What are the requirements for transferees?**\n\nRequirements for Transferee Students in Higher Education:\n1. Official Transfer Credentials (Honorable Dismissal / Transcript of Records for evaluation)\n2. Curricular Checklist from previous school\n3. Original PSA Birth Certificate\n4. Original Certificate of Good Moral Character\n5. 1 pc. 2x2 ID picture\n6. Accomplished Student Information Sheet (at SAO)\n\nSources: 2\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What are the required admission and enrollment documents for incoming freshmen at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "What are the requirements for freshmen?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What are the required documents for transferee students enrolling at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "What are the requirements for transferees?",
+          "citation_index": 2
+        }
+      ],
+      "action": null,
+      "action_data": null,
+      "parts": [
+        {
+          "query": "What are the requirements for freshmen?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "What are the requirements for transferees?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "case": "two_offices",
+      "query": "Where are the Registrar and Finance offices?",
+      "passed": true,
+      "expected_fragments": [
+        "Registrar Office",
+        "Finance Office"
+      ],
+      "matched_fragments": [
+        true,
+        true
+      ],
+      "p50_ms": 1.97,
+      "first_ms": 2.25,
+      "warm_max_ms": 2.17,
+      "response": "**1. Where are the Registrar offices?**\n\nRegistrar Office is available on the campus map. Choose its directions below.\n\nSources: 1\n\n**2. Where are the Finance offices?**\n\nFinance Office is available on the campus map. Choose its directions below.\n\nSources: 2\n\n[SUGGESTIONS: \"Directions to Registrar Office\" | \"Directions to Finance Office\"]",
+      "sources": [
+        {
+          "title": "Campus map: Registrar Office",
+          "url": null,
+          "page": null,
+          "source_type": "campus_map",
+          "destination": "registrar_office",
+          "part": 1,
+          "query": "Where are the Registrar offices?",
+          "citation_index": 1
+        },
+        {
+          "title": "Campus map: Finance Office",
+          "url": null,
+          "page": null,
+          "source_type": "campus_map",
+          "destination": "finance_office",
+          "part": 2,
+          "query": "Where are the Finance offices?",
+          "citation_index": 2
+        }
+      ],
+      "action": null,
+      "action_data": null,
+      "parts": [
+        {
+          "query": "Where are the Registrar offices?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "Where are the Finance offices?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "case": "filipino",
+      "query": "Sino ang ICT director at CEIT dean?",
+      "passed": true,
+      "expected_fragments": [
+        "Arnold A. Magalona",
+        "Karen T. Plaza"
+      ],
+      "matched_fragments": [
+        true,
+        true
+      ],
+      "p50_ms": 141.92,
+      "first_ms": 137.78,
+      "warm_max_ms": 142.25,
+      "response": "**1. Sino ang ICT director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nMga sanggunian: 1\n\n**2. Sino ang CEIT dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nMga sanggunian: 2\n\n[SUGGESTIONS: \"Anong mga programa ang inaalok sa SPUS?\" | \"Paano mag-enroll sa SPUS?\" | \"Saan ang Registrar office?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Sino ang ICT director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Sino ang CEIT dean?",
+          "citation_index": 2
+        }
+      ],
+      "action": null,
+      "action_data": null,
+      "parts": [
+        {
+          "query": "Sino ang ICT director?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "Sino ang CEIT dean?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "case": "partial_missing",
+      "query": "Who is the ICT Director, and who is the director of Mars?",
+      "passed": true,
+      "expected_fragments": [
+        "Arnold A. Magalona"
+      ],
+      "matched_fragments": [
+        true
+      ],
+      "p50_ms": 164.53,
+      "first_ms": 51219.45,
+      "warm_max_ms": 250.63,
+      "response": "**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. who is the director of Mars?**\n\nI don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        }
+      ],
+      "action": null,
+      "action_data": null,
+      "parts": [
+        {
+          "query": "Who is the ICT Director?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "who is the director of Mars?",
+          "status": "no_match",
+          "source_indices": []
+        }
+      ]
+    },
+    {
+      "case": "partial_conflict",
+      "query": "Who is the ICT Director, and who is the PBMO director?",
+      "passed": true,
+      "expected_fragments": [
+        "Arnold A. Magalona",
+        "conflicting"
+      ],
+      "matched_fragments": [
+        true,
+        true
+      ],
+      "p50_ms": 164.23,
+      "first_ms": 150.89,
+      "warm_max_ms": 172.66,
+      "response": "**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. who is the PBMO director?**\n\nI found conflicting information or more than one possible match. Please specify the office, category, or date.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        }
+      ],
+      "action": null,
+      "action_data": null,
+      "parts": [
+        {
+          "query": "Who is the ICT Director?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "who is the PBMO director?",
+          "status": "conflict",
+          "source_indices": []
+        }
+      ]
+    }
+  ],
+  "passed": 7,
+  "total": 7,
+  "cutoff": 0.45,
+  "notes": "Seven fixed response smoke checks; three warm samples after one initial sample. No LLM calls or embedding writes. Vector model startup may affect first samples. Expected fragments test targeted coverage, not full factual precision."
+}

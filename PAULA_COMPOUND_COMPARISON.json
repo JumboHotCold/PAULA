@@ -1,0 +1,49 @@
+{
+  "response_smoke_checks": {
+    "before_passed": 1,
+    "after_passed": 7,
+    "total": 7
+  },
+  "after_verified_parts": 12,
+  "requested_parts": 14,
+  "baseline_displayed_sources": 0,
+  "cutoff": 0.45,
+  "latency": [
+    {
+      "case": "two_roles",
+      "before_p50_ms": 175.07,
+      "after_p50_ms": 172.46
+    },
+    {
+      "case": "shared_role",
+      "before_p50_ms": 130.48,
+      "after_p50_ms": 153.99
+    },
+    {
+      "case": "two_audiences",
+      "before_p50_ms": 0.56,
+      "after_p50_ms": 12.78
+    },
+    {
+      "case": "two_offices",
+      "before_p50_ms": 0.51,
+      "after_p50_ms": 1.97
+    },
+    {
+      "case": "filipino",
+      "before_p50_ms": 132.59,
+      "after_p50_ms": 141.92
+    },
+    {
+      "case": "partial_missing",
+      "before_p50_ms": 59.2,
+      "after_p50_ms": 164.53
+    },
+    {
+      "case": "partial_conflict",
+      "before_p50_ms": 130.0,
+      "after_p50_ms": 164.23
+    }
+  ],
+  "notes": "Small fixed corpus; includes two curated map destinations. The other two parts correctly remain missing/conflicting. Response smoke check names alone passed the old map-selection prompt; it was not an independent answered result."
+}

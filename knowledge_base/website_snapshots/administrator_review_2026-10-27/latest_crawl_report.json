@@ -1,0 +1,83 @@
+{
+  "started_at": "2026-10-27T14:12:26.628976+00:00",
+  "dry_run": false,
+  "max_pages": 1,
+  "max_depth": 1,
+  "pages": [
+    {
+      "requested_url": "https://spus.edu.ph/administrator/",
+      "depth": 0,
+      "url": "https://spus.edu.ph/administrator/",
+      "sha256": "167446e98e01a4fec31a0a795040a9991b44c9e781355d626207f67edb033929",
+      "snapshot": "knowledge_base/website_snapshots/administrator_review_2026-10-27/167446e98e01a4fec31a0a795040a9991b44c9e781355d626207f67edb033929.html",
+      "records": 425,
+      "extraction": {
+        "people_cards": 407,
+        "sections": [
+          "ACADEMIC SERVICES",
+          "Administrative Services Office",
+          "College of Business Management and Accountancy",
+          "College of Criminal Justice Education",
+          "College of Education, Arts and Sciences",
+          "College of Engineering and Information Technology",
+          "College of Health Sciences",
+          "Finance Office and Canteen Services",
+          "GRADE SCHOOL FACULTY",
+          "GRADUATE SCHOOL FACULTY",
+          "Guidance and Health Services",
+          "Human Resource Management Office",
+          "ICT Systems and Services",
+          "JUNIOR HIGH SCHOOL FACULTY",
+          "Laboratory Assistant",
+          "Library",
+          "Maintenance Personnel",
+          "Office and Academic Secretaries",
+          "PRISM",
+          "Publication, Documentation and Marketing Office",
+          "Quality Management Office",
+          "Registrar's Office",
+          "SENIOR HIGH SCHOOL FACULTY",
+          "Student Affairs Office",
+          "TOP MANAGEMENT"
+        ],
+        "faculty_counts": {
+          "TOP MANAGEMENT": 3,
+          "ACADEMIC SERVICES": 5,
+          "GRADUATE SCHOOL FACULTY": 36,
+          "College of Education, Arts and Sciences": 36,
+          "College of Engineering and Information Technology": 27,
+          "College of Business Management and Accountancy": 18,
+          "College of Criminal Justice Education": 8,
+          "College of Health Sciences": 22,
+          "PRISM": 17,
+          "GRADE SCHOOL FACULTY": 22,
+          "JUNIOR HIGH SCHOOL FACULTY": 35,
+          "SENIOR HIGH SCHOOL FACULTY": 29,
+          "Library": 2,
+          "Publication, Documentation and Marketing Office": 1,
+          "ICT Systems and Services": 1,
+          "Laboratory Assistant": 4,
+          "Administrative Services Office": 1,
+          "Office and Academic Secretaries": 1
+        },
+        "incomplete_cards": [
+          {
+            "name": "Ms. Nessel Auditor",
+            "role": "",
+            "section": "College of Education, Arts and Sciences"
+          }
+        ]
+      },
+      "database": {
+        "created": 0,
+        "refreshed": 425,
+        "obsolete_chunks_removed": 0
+      },
+      "status": "ingested"
+    }
+  ],
+  "finished_at": "2026-10-27T14:12:32.427687+00:00",
+  "pages_visited": 1,
+  "successful": 1,
+  "queued_remaining": 0
+}

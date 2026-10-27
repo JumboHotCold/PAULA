@@ -1,0 +1,144 @@
+{
+  "cutoff": 0.45,
+  "checks": [
+    {
+      "case": "president",
+      "query": "Who is the University President?",
+      "passed": true,
+      "status": "ok",
+      "count": 1,
+      "p50_ms": 51.41,
+      "warm_max_ms": 56.57,
+      "titles": [
+        "SPUS Personnel | TOP MANAGEMENT | University President | Sr. Marie Rosanne Mallillin, SPCS"
+      ]
+    },
+    {
+      "case": "current",
+      "query": "Who is the current university president?",
+      "passed": true,
+      "status": "ok",
+      "count": 1,
+      "p50_ms": 54.87,
+      "warm_max_ms": 56.21,
+      "titles": [
+        "SPUS Personnel | TOP MANAGEMENT | University President | Sr. Marie Rosanne Mallillin, SPCS"
+      ]
+    },
+    {
+      "case": "currently",
+      "query": "Who is currently the University President?",
+      "passed": false,
+      "status": "no_match",
+      "count": 0,
+      "p50_ms": 52.51,
+      "warm_max_ms": 56.91,
+      "titles": []
+    },
+    {
+      "case": "now",
+      "query": "Who is the university president now?",
+      "passed": false,
+      "status": "no_match",
+      "count": 0,
+      "p50_ms": 50.8,
+      "warm_max_ms": 53.25,
+      "titles": []
+    },
+    {
+      "case": "today",
+      "query": "Who is the university president today?",
+      "passed": false,
+      "status": "no_match",
+      "count": 0,
+      "p50_ms": 48.71,
+      "warm_max_ms": 49.89,
+      "titles": []
+    },
+    {
+      "case": "filipino",
+      "query": "Sino ang presidente ng SPUS?",
+      "passed": true,
+      "status": "ok",
+      "count": 1,
+      "p50_ms": 44.96,
+      "warm_max_ms": 47.12,
+      "titles": [
+        "SPUS Personnel | TOP MANAGEMENT | University President | Sr. Marie Rosanne Mallillin, SPCS"
+      ]
+    },
+    {
+      "case": "vp_short",
+      "query": "Who is the VP for Academics?",
+      "passed": true,
+      "status": "ok",
+      "count": 1,
+      "p50_ms": 61.46,
+      "warm_max_ms": 77.2,
+      "titles": [
+        "SPUS Personnel | Quality Management Office | VP for Academics Services | Dr. Nikko T. Ederio, LPT"
+      ]
+    },
+    {
+      "case": "vp_expanded",
+      "query": "Who is the Vice President for Academic Services?",
+      "passed": false,
+      "status": "no_match",
+      "count": 0,
+      "p50_ms": 61.69,
+      "warm_max_ms": 90.42,
+      "titles": []
+    },
+    {
+      "case": "dean",
+      "query": "Who is the CEIT dean?",
+      "passed": true,
+      "status": "ok",
+      "count": 1,
+      "p50_ms": 45.79,
+      "warm_max_ms": 47.87,
+      "titles": [
+        "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza"
+      ]
+    },
+    {
+      "case": "moderator",
+      "query": "Who is the JSIT moderator?",
+      "passed": true,
+      "status": "ok",
+      "count": 1,
+      "p50_ms": 3.88,
+      "warm_max_ms": 4.35,
+      "titles": [
+        "Staff Directory: JSIT Moderator"
+      ]
+    },
+    {
+      "case": "historical",
+      "query": "Who is the university president in 2099?",
+      "expected": "no exact match",
+      "passed": true
+    },
+    {
+      "case": "foreign",
+      "query": "Who is the president of Mars?",
+      "expected": "no exact match",
+      "passed": true
+    },
+    {
+      "case": "followup",
+      "query": "Who is currently holding that role?",
+      "effective_queries": [],
+      "passed": false
+    },
+    {
+      "case": "role_switch",
+      "query": "How about the VP for Academics?",
+      "effective_queries": [],
+      "passed": false
+    }
+  ],
+  "passed": 8,
+  "total": 14,
+  "notes": "Small regression corpus; warm retrieval only, no LLM, no embeddings or institutional data writes. Negative controls test exact exclusion only."
+}

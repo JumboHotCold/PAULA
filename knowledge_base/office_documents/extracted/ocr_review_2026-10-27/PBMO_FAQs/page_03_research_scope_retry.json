@@ -1,0 +1,37 @@
+{
+  "document": "PBMO FAQs.pdf",
+  "page": 3,
+  "crop_pixels": [
+    272,
+    1100,
+    4226,
+    1792
+  ],
+  "render_dpi": 160,
+  "reason": "Targeted retry of research-use paragraph missed by full-page passes",
+  "rows": [
+    {
+      "box": [
+        [
+          81.71068572998047,
+          528.8295288085938
+        ],
+        [
+          3575.340576171875,
+          448.227294921875
+        ],
+        [
+          3579.32666015625,
+          581.9091186523438
+        ],
+        [
+          85.69657135009766,
+          662.5113525390625
+        ]
+      ],
+      "text": " pe pdsn  m s s   exa s pe",
+      "confidence": 0.3870872597281749
+    }
+  ],
+  "text": " pe pdsn  m s s   exa s pe"
+}

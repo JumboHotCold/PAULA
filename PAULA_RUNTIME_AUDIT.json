@@ -1,0 +1,795 @@
+{
+  "source_hashes": {
+    "chatbot/grounding.py": "d4b3c675f8e9d52dabcd6192c6a72cb53ace2e6b831ab751db682983aa40ba26",
+    "chatbot/intents.py": "39b660feded83ef2a1a67992a55aa2d979c691fcd63b330d59e5a40f397d012c",
+    "chatbot/logic.py": "ed46e6f11d3c481684b98e788ed294b0bd8b228e58d5709fb403cdc0adfd8daf",
+    "chatbot/rag.py": "1bc46e4721e47d5c858dd24838f0d9eb3638a33ac7a204541d063125e61b85d4",
+    "chatbot/views.py": "8110717d919c317fa879291ff2929dc8c242d890cc1762ebf055b8b0459ce035",
+    "chatbot/templates/chatbot/chat.html": "098e7fa4acebbaad15e9de38d669452b4603568bf335c11dd6c55734c4fc41d2",
+    "paulibot/settings.py": "0570f42571b9de7771efec6475ddda337d92e9c0185b600ee38350b714524c85",
+    "frontend/src/App.jsx": "5df3166a90ddf1e14df36659f9f237519b68508979695ad8ce9bdae4c8e1f6b4",
+    "frontend/src/api/chatApi.js": "23448a57e84712175734c517eb946a211c21a36ddb9e6292a89df426bc07faae",
+    "frontend/src/components/MapModule.jsx": "6730274c905649590321423756ad4b7ead804f9eab69bcb74d6c6c0d4183c9e0",
+    "frontend/vite.config.js": "9168a78c33499657239ef1539a5e182e68be910d6ec9d7a9bbed947cec1153a0",
+    "docker-compose.yml": "bf2a32c7c0781b5fc6202efe378390eef7fd473b0bdb7df379a3b623a81c11ae",
+    "scripts/start_workspace_backend.ps1": "47167117a9b8784f0c3e729e3a8d4131c45cd7cdac8b78a250aa847d7198ed89",
+    "chatbot/test_grounding.py": "1379365134f89e16671d4f7061dd5c4331120e590f361226393f07c7938e79ae",
+    "chatbot/test_intents.py": "190fc12e227f90d1f08862b5450d7026984e8e6265c94c3a30b9293b6bffc0bc",
+    "scripts/evaluate_grounding.py": "8daf5e25837c056a0dc613d93fb10532e51bc89601e874c99f829dfcce92c30d",
+    "scripts/reocr_office_documents.py": "d7a1fad8b6c144b811c0c7b63020460bb601ea340e85df00b9d6f10efed70a42",
+    "scripts/reconcile_ocr_review.py": "ae891b438d25413a248268751e7cb878245024fc049e66a2985bc8c53eaf18b2",
+    "scripts/audit_runtime_state.py": "5aeb22b096beb0983c52c2142798b8e007402e5d152a3ab58276f2a46d3a0458",
+    "PAULA_SYSTEM_UNDERSTANDING_REPORT.md": "4a5f18a2283c5f3500d162795298bdc7e4d39b9bb29b00f41557538feeb9fb23",
+    "PAULA_RESPONSE_GROUNDING.md": "fe6842e2454822c60a199e8207f5c6ca9ca5c07439398c26182231e945201a21",
+    "knowledge_base/office_documents/Registrar/Registrar_knowledge.json": "ba5907e8250271c248021f7ca37504c432dda17a3312140a0a67d11dd7a48a3a",
+    "knowledge_base/office_documents/PBMO/PBMO_knowledge.json": "d5550864077bc153ffd3166b307d3b046c6741cc623cc3c42e44ffe233f9c2bd",
+    "knowledge_base/office_documents/extracted/REGISTRAR_PDF_REVIEW.md": "b9d779b258d5e6e4eb8e5aea6164ac3468651947a4b6e9740a25f368452791cb",
+    "knowledge_base/office_documents/extracted/ocr_review_2026-10-27/REVIEW_REPORT.md": "55cd91a64442c3db423ec944e53ab8a063971de6f92d4d45577d1e0e1fbf9fa6",
+    "knowledge_base/office_documents/extracted/ocr_review_2026-10-27/MANUAL_REVIEW_NOTES.md": "6dc16a359cf9eecebf9db3f767820ab849eecfe773be4a9e9c007c8be206cff3"
+  },
+  "database": {
+    "vendor": "postgresql",
+    "driver": "psycopg",
+    "vector_extension": true,
+    "pending_migrations": [],
+    "missing_embeddings": {
+      "FAQ": 0,
+      "Location": 0,
+      "StaffMember": 0,
+      "WebResource": 0
+    }
+  },
+  "dependencies": [
+    {
+      "package": "aiohappyeyeballs",
+      "installed": "2.6.1",
+      "required": "==2.6.1",
+      "status": "matches"
+    },
+    {
+      "package": "aiohttp",
+      "installed": "3.13.3",
+      "required": "==3.13.3",
+      "status": "matches"
+    },
+    {
+      "package": "aiosignal",
+      "installed": "1.4.0",
+      "required": "==1.4.0",
+      "status": "matches"
+    },
+    {
+      "package": "annotated-doc",
+      "installed": "0.0.4",
+      "required": "==0.0.4",
+      "status": "matches"
+    },
+    {
+      "package": "annotated-types",
+      "installed": "0.7.0",
+      "required": "==0.7.0",
+      "status": "matches"
+    },
+    {
+      "package": "anyio",
+      "installed": "4.12.1",
+      "required": "==4.12.1",
+      "status": "matches"
+    },
+    {
+      "package": "asgiref",
+      "installed": "3.11.0",
+      "required": "==3.11.0",
+      "status": "matches"
+    },
+    {
+      "package": "attrs",
+      "installed": "25.4.0",
+      "required": "==25.4.0",
+      "status": "matches"
+    },
+    {
+      "package": "certifi",
+      "installed": "2026.1.4",
+      "required": "==2026.1.4",
+      "status": "matches"
+    },
+    {
+      "package": "cffi",
+      "installed": "2.0.0",
+      "required": "==2.0.0",
+      "status": "matches"
+    },
+    {
+      "package": "charset-normalizer",
+      "installed": "3.4.4",
+      "required": "==3.4.4",
+      "status": "matches"
+    },
+    {
+      "package": "click",
+      "installed": "8.3.1",
+      "required": "==8.3.1",
+      "status": "matches"
+    },
+    {
+      "package": "colorama",
+      "installed": "0.4.6",
+      "required": "==0.4.6",
+      "status": "matches"
+    },
+    {
+      "package": "cryptography",
+      "installed": "46.0.5",
+      "required": "==46.0.5",
+      "status": "matches"
+    },
+    {
+      "package": "distro",
+      "installed": "1.9.0",
+      "required": "==1.9.0",
+      "status": "matches"
+    },
+    {
+      "package": "Django",
+      "installed": "4.2.10",
+      "required": "==4.2.10",
+      "status": "matches"
+    },
+    {
+      "package": "django-cors-headers",
+      "installed": "4.3.1",
+      "required": "==4.3.1",
+      "status": "matches"
+    },
+    {
+      "package": "djangorestframework",
+      "installed": "3.14.0",
+      "required": "==3.14.0",
+      "status": "matches"
+    },
+    {
+      "package": "filelock",
+      "installed": "3.24.3",
+      "required": "==3.24.3",
+      "status": "matches"
+    },
+    {
+      "package": "frozenlist",
+      "installed": "1.8.0",
+      "required": "==1.8.0",
+      "status": "matches"
+    },
+    {
+      "package": "fsspec",
+      "installed": "2026.2.0",
+      "required": "==2026.2.0",
+      "status": "matches"
+    },
+    {
+      "package": "google-ai-generativelanguage",
+      "installed": "0.6.15",
+      "required": "==0.6.15",
+      "status": "matches"
+    },
+    {
+      "package": "google-api-core",
+      "installed": "2.30.0",
+      "required": "==2.30.0",
+      "status": "matches"
+    },
+    {
+      "package": "google-api-python-client",
+      "installed": "2.190.0",
+      "required": "==2.190.0",
+      "status": "matches"
+    },
+    {
+      "package": "google-auth",
+      "installed": "2.48.0",
+      "required": "==2.48.0",
+      "status": "matches"
+    },
+    {
+      "package": "google-auth-httplib2",
+      "installed": "0.3.0",
+      "required": "==0.3.0",
+      "status": "matches"
+    },
+    {
+      "package": "google-genai",
+      "installed": "1.64.0",
+      "required": "==1.64.0",
+      "status": "matches"
+    },
+    {
+      "package": "googleapis-common-protos",
+      "installed": "1.72.0",
+      "required": "==1.72.0",
+      "status": "matches"
+    },
+    {
+      "package": "grpcio",
+      "installed": "1.78.1",
+      "required": "==1.78.1",
+      "status": "matches"
+    },
+    {
+      "package": "grpcio-status",
+      "installed": "1.71.2",
+      "required": "==1.71.2",
+      "status": "matches"
+    },
+    {
+      "package": "gunicorn",
+      "installed": "21.2.0",
+      "required": "==21.2.0",
+      "status": "matches"
+    },
+    {
+      "package": "h11",
+      "installed": "0.16.0",
+      "required": "==0.16.0",
+      "status": "matches"
+    },
+    {
+      "package": "hf-xet",
+      "installed": "1.2.0",
+      "required": "==1.2.0",
+      "status": "matches"
+    },
+    {
+      "package": "httpcore",
+      "installed": "1.0.9",
+      "required": "==1.0.9",
+      "status": "matches"
+    },
+    {
+      "package": "httplib2",
+      "installed": "0.31.2",
+      "required": "==0.31.2",
+      "status": "matches"
+    },
+    {
+      "package": "httpx",
+      "installed": "0.28.1",
+      "required": "==0.28.1",
+      "status": "matches"
+    },
+    {
+      "package": "huggingface_hub",
+      "installed": "1.4.1",
+      "required": "==1.4.1",
+      "status": "matches"
+    },
+    {
+      "package": "idna",
+      "installed": "3.11",
+      "required": "==3.11",
+      "status": "matches"
+    },
+    {
+      "package": "Jinja2",
+      "installed": "3.1.6",
+      "required": "==3.1.6",
+      "status": "matches"
+    },
+    {
+      "package": "joblib",
+      "installed": "1.5.3",
+      "required": "==1.5.3",
+      "status": "matches"
+    },
+    {
+      "package": "markdown-it-py",
+      "installed": "4.0.0",
+      "required": "==4.0.0",
+      "status": "matches"
+    },
+    {
+      "package": "MarkupSafe",
+      "installed": "3.0.3",
+      "required": "==3.0.3",
+      "status": "matches"
+    },
+    {
+      "package": "mdurl",
+      "installed": "0.1.2",
+      "required": "==0.1.2",
+      "status": "matches"
+    },
+    {
+      "package": "mpmath",
+      "installed": "1.3.0",
+      "required": "==1.3.0",
+      "status": "matches"
+    },
+    {
+      "package": "multidict",
+      "installed": "6.7.1",
+      "required": "==6.7.1",
+      "status": "matches"
+    },
+    {
+      "package": "networkx",
+      "installed": "3.6.1",
+      "required": "==3.6.1",
+      "status": "matches"
+    },
+    {
+      "package": "numpy",
+      "installed": "2.4.2",
+      "required": "==2.4.2",
+      "status": "matches"
+    },
+    {
+      "package": "packaging",
+      "installed": "26.0",
+      "required": "==26.0",
+      "status": "matches"
+    },
+    {
+      "package": "propcache",
+      "installed": "0.4.1",
+      "required": "==0.4.1",
+      "status": "matches"
+    },
+    {
+      "package": "proto-plus",
+      "installed": "1.27.1",
+      "required": "==1.27.1",
+      "status": "matches"
+    },
+    {
+      "package": "protobuf",
+      "installed": "5.29.6",
+      "required": "==5.29.6",
+      "status": "matches"
+    },
+    {
+      "package": "psycopg",
+      "installed": "3.3.6",
+      "required": ">=3.1.0",
+      "status": "matches"
+    },
+    {
+      "package": "pyasn1",
+      "installed": "0.6.2",
+      "required": "==0.6.2",
+      "status": "matches"
+    },
+    {
+      "package": "pyasn1_modules",
+      "installed": "0.4.2",
+      "required": "==0.4.2",
+      "status": "matches"
+    },
+    {
+      "package": "pycparser",
+      "installed": "3.0",
+      "required": "==3.0",
+      "status": "matches"
+    },
+    {
+      "package": "pydantic",
+      "installed": "2.12.5",
+      "required": "==2.12.5",
+      "status": "matches"
+    },
+    {
+      "package": "pydantic_core",
+      "installed": "2.41.5",
+      "required": "==2.41.5",
+      "status": "matches"
+    },
+    {
+      "package": "Pygments",
+      "installed": "2.19.2",
+      "required": "==2.19.2",
+      "status": "matches"
+    },
+    {
+      "package": "pyparsing",
+      "installed": "3.3.2",
+      "required": "==3.3.2",
+      "status": "matches"
+    },
+    {
+      "package": "python-decouple",
+      "installed": "3.8",
+      "required": "==3.8",
+      "status": "matches"
+    },
+    {
+      "package": "pytz",
+      "installed": "2025.2",
+      "required": "==2025.2",
+      "status": "matches"
+    },
+    {
+      "package": "PyYAML",
+      "installed": "6.0.3",
+      "required": "==6.0.3",
+      "status": "matches"
+    },
+    {
+      "package": "regex",
+      "installed": "2026.2.19",
+      "required": "==2026.2.19",
+      "status": "matches"
+    },
+    {
+      "package": "requests",
+      "installed": "2.32.5",
+      "required": "==2.32.5",
+      "status": "matches"
+    },
+    {
+      "package": "rich",
+      "installed": "14.3.3",
+      "required": "==14.3.3",
+      "status": "matches"
+    },
+    {
+      "package": "rsa",
+      "installed": "4.9.1",
+      "required": "==4.9.1",
+      "status": "matches"
+    },
+    {
+      "package": "safetensors",
+      "installed": "0.7.0",
+      "required": "==0.7.0",
+      "status": "matches"
+    },
+    {
+      "package": "scikit-learn",
+      "installed": "1.8.0",
+      "required": "==1.8.0",
+      "status": "matches"
+    },
+    {
+      "package": "scipy",
+      "installed": "1.17.0",
+      "required": "==1.17.0",
+      "status": "matches"
+    },
+    {
+      "package": "sentence-transformers",
+      "installed": "5.2.3",
+      "required": "==5.2.3",
+      "status": "matches"
+    },
+    {
+      "package": "setuptools",
+      "installed": "82.0.0",
+      "required": "==82.0.0",
+      "status": "matches"
+    },
+    {
+      "package": "shellingham",
+      "installed": "1.5.4",
+      "required": "==1.5.4",
+      "status": "matches"
+    },
+    {
+      "package": "sniffio",
+      "installed": "1.3.1",
+      "required": "==1.3.1",
+      "status": "matches"
+    },
+    {
+      "package": "sqlite-vec",
+      "installed": "0.1.6",
+      "required": "==0.1.6",
+      "status": "matches"
+    },
+    {
+      "package": "sqlparse",
+      "installed": "0.5.5",
+      "required": "==0.5.5",
+      "status": "matches"
+    },
+    {
+      "package": "sympy",
+      "installed": "1.14.0",
+      "required": "==1.14.0",
+      "status": "matches"
+    },
+    {
+      "package": "tenacity",
+      "installed": "9.1.4",
+      "required": "==9.1.4",
+      "status": "matches"
+    },
+    {
+      "package": "threadpoolctl",
+      "installed": "3.6.0",
+      "required": "==3.6.0",
+      "status": "matches"
+    },
+    {
+      "package": "tokenizers",
+      "installed": "0.22.2",
+      "required": "==0.22.2",
+      "status": "matches"
+    },
+    {
+      "package": "torch",
+      "installed": "2.10.0",
+      "required": "==2.10.0",
+      "status": "matches"
+    },
+    {
+      "package": "tqdm",
+      "installed": "4.67.3",
+      "required": "==4.67.3",
+      "status": "matches"
+    },
+    {
+      "package": "transformers",
+      "installed": "5.2.0",
+      "required": "==5.2.0",
+      "status": "matches"
+    },
+    {
+      "package": "typer",
+      "installed": "0.24.1",
+      "required": "==0.24.1",
+      "status": "matches"
+    },
+    {
+      "package": "typer-slim",
+      "installed": "0.24.0",
+      "required": "==0.24.0",
+      "status": "matches"
+    },
+    {
+      "package": "typing-inspection",
+      "installed": "0.4.2",
+      "required": "==0.4.2",
+      "status": "matches"
+    },
+    {
+      "package": "typing_extensions",
+      "installed": "4.15.0",
+      "required": "==4.15.0",
+      "status": "matches"
+    },
+    {
+      "package": "tzdata",
+      "installed": "2025.3",
+      "required": "==2025.3",
+      "status": "matches"
+    },
+    {
+      "package": "uritemplate",
+      "installed": "4.2.0",
+      "required": "==4.2.0",
+      "status": "matches"
+    },
+    {
+      "package": "urllib3",
+      "installed": "2.6.3",
+      "required": "==2.6.3",
+      "status": "matches"
+    },
+    {
+      "package": "websockets",
+      "installed": "15.0.1",
+      "required": "==15.0.1",
+      "status": "matches"
+    },
+    {
+      "package": "yarl",
+      "installed": "1.22.0",
+      "required": "==1.22.0",
+      "status": "matches"
+    },
+    {
+      "package": "pgvector",
+      "installed": "0.5.0",
+      "required": "",
+      "status": "matches"
+    },
+    {
+      "package": "groq",
+      "installed": "1.7.0",
+      "required": ">=0.25.0",
+      "status": "matches"
+    },
+    {
+      "package": "django-unfold",
+      "installed": "0.80.2",
+      "required": "==0.80.2",
+      "status": "matches"
+    },
+    {
+      "package": "opencv-python-headless",
+      "installed": "5.0.0.93",
+      "required": "",
+      "status": "matches"
+    },
+    {
+      "package": "Pillow",
+      "installed": "12.3.0",
+      "required": "",
+      "status": "matches"
+    },
+    {
+      "package": "pymupdf",
+      "installed": "1.28.2",
+      "required": "",
+      "status": "matches"
+    },
+    {
+      "package": "google-generativeai",
+      "installed": "0.8.6",
+      "required": "",
+      "status": "matches"
+    },
+    {
+      "package": "reportlab",
+      "installed": "5.1.0",
+      "required": ">=4.0.0",
+      "status": "matches"
+    },
+    {
+      "package": "openai",
+      "installed": "2.54.0",
+      "required": "",
+      "status": "matches"
+    }
+  ],
+  "office_knowledge_comparison": [
+    {
+      "office": "Registrar",
+      "item": 1,
+      "question": "What is the procedure for Changing, Adding, Dropping, or Withdrawing subjects (Document URO-PR-007)?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "Registrar",
+      "item": 2,
+      "question": "How can an old or continuing college student enroll at SPUS (Document URO-PR-016)?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "Registrar",
+      "item": 3,
+      "question": "What is the step-by-step enrollment procedure for transferee students at SPUS (Document URO-PR-017)?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "Registrar",
+      "item": 4,
+      "question": "What are the required documents for transferee students enrolling at SPUS?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "Registrar",
+      "item": 5,
+      "question": "What is the step-by-step enrollment procedure for incoming freshmen at SPUS (Document URO-PR-005)?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "Registrar",
+      "item": 6,
+      "question": "What are the required admission and enrollment documents for incoming freshmen at SPUS?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "Registrar",
+      "item": 7,
+      "question": "Where do students get their official school ID and what are the requirements?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "Registrar",
+      "item": 8,
+      "question": "Who must approve the subject adding, dropping, or withdrawal form?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "PBMO",
+      "item": 1,
+      "question": "What is the Publication, Brand, and Marketing Office (PBMO) and what services does it provide?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "PBMO",
+      "item": 2,
+      "question": "What is the procedure for submitting materials or reporting school events for publication to PBMO?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "PBMO",
+      "item": 3,
+      "question": "Are university employees required to report external seminars or trainings to PBMO?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "PBMO",
+      "item": 4,
+      "question": "How are announcements and promotional materials broadcast across the SPUS campus?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "PBMO",
+      "item": 5,
+      "question": "Do posters and promotional materials require PBMO review before posting or broadcasting?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "PBMO",
+      "item": 6,
+      "question": "What are the guidelines for using official SPUS logos, seals, and brand assets?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "PBMO",
+      "item": 7,
+      "question": "How do departments or student organizations request photo or video event coverage from PBMO?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "PBMO",
+      "item": 8,
+      "question": "How far in advance must materials be submitted for social media or student portal posting?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "PBMO",
+      "item": 9,
+      "question": "What are the operating hours of the Publication, Brand, and Marketing Office (PBMO)?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "PBMO",
+      "item": 10,
+      "question": "Who is the Director of the Publication, Brand, and Marketing Office (PBMO)?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "PBMO",
+      "item": 11,
+      "question": "What is the SPUS Policy on Online Posting (Document PBMO-PO-010 / PBMO-PR-009)?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "PBMO",
+      "item": 12,
+      "question": "What are the 4 steps in the PBMO procedure for online posting of materials?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "PBMO",
+      "item": 13,
+      "question": "What are the official colors and brand palette of St. Paul University Surigao (SPUS)?",
+      "status": "matches_existing_json"
+    },
+    {
+      "office": "PBMO",
+      "item": 14,
+      "question": "What does the St. Paul University Surigao seal represent?",
+      "status": "matches_existing_json"
+    }
+  ],
+  "settings": {
+    "debug": true,
+    "cosine_threshold": 0.45,
+    "groq_model": "llama-3.3-70b-versatile",
+    "groq_key_present": true,
+    "openai_key_present": true
+  },
+  "provider_clients": {
+    "groq": true,
+    "openai": true,
+    "gemini": false
+  },
+  "ocr_outputs_are_review_artifacts_not_automatic_ingestion": true,
+  "ocr_artifacts": {
+    "files": 106,
+    "combined_sha256": "fb3cfd4fa9bf7a4fbcc349f642de4a1864e78872f91a2203bd8c422341064448"
+  }
+}

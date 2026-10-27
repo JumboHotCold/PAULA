@@ -1,0 +1,282 @@
+{
+  "review_date": "2026-10-27",
+  "versions": {
+    "rapidocr-onnxruntime": "1.4.4",
+    "onnxruntime": "1.31.1",
+    "PyMuPDF": "1.28.2",
+    "Pillow": "12.3.0",
+    "numpy": "2.4.2"
+  },
+  "method": "color + grayscale/autocontrast + overlapping vertical tiles",
+  "confidence_caution": "OCR model confidence is not a measured accuracy or factual verification rate.",
+  "documents": [
+    {
+      "source": "Registrar/REGISTRAR ENROLLMENT PROCEDURES.pdf",
+      "office": "Registrar",
+      "sha256_before": "a35f07b91a959175725cbaa33a350db534969b1b8526c140c806fb36625b9e95",
+      "bytes": 20154604,
+      "page_count": 4,
+      "pages": [
+        {
+          "page": 1,
+          "pdf_text_layer_characters": 0,
+          "selected_pass": "overlapping_tiles",
+          "stats": {
+            "lines": 69,
+            "characters": 1307,
+            "mean_confidence": 0.9791,
+            "low_confidence_lines_below_0_85": 0
+          },
+          "review_flags": [
+            "color_and_contrast_passes_disagree"
+          ]
+        },
+        {
+          "page": 2,
+          "pdf_text_layer_characters": 0,
+          "selected_pass": "overlapping_tiles",
+          "stats": {
+            "lines": 53,
+            "characters": 938,
+            "mean_confidence": 0.977,
+            "low_confidence_lines_below_0_85": 1
+          },
+          "review_flags": [
+            "low_confidence_lines_present"
+          ]
+        },
+        {
+          "page": 3,
+          "pdf_text_layer_characters": 0,
+          "selected_pass": "overlapping_tiles",
+          "stats": {
+            "lines": 71,
+            "characters": 1418,
+            "mean_confidence": 0.9605,
+            "low_confidence_lines_below_0_85": 3
+          },
+          "review_flags": [
+            "low_confidence_lines_present",
+            "color_and_contrast_passes_disagree"
+          ]
+        },
+        {
+          "page": 4,
+          "pdf_text_layer_characters": 0,
+          "selected_pass": "overlapping_tiles",
+          "stats": {
+            "lines": 82,
+            "characters": 1873,
+            "mean_confidence": 0.9607,
+            "low_confidence_lines_below_0_85": 5
+          },
+          "review_flags": [
+            "low_confidence_lines_present",
+            "color_and_contrast_passes_disagree"
+          ]
+        }
+      ],
+      "previous_characters": 5672,
+      "new_characters": 5874,
+      "sha256_after": "a35f07b91a959175725cbaa33a350db534969b1b8526c140c806fb36625b9e95"
+    },
+    {
+      "source": "PBMO/PBMO FAQs.pdf",
+      "office": "PBMO",
+      "sha256_before": "f454f6ccbcb5dc5473f51023492f3ebb615efaea32fbcc8fa0e665146dbd9867",
+      "bytes": 18413058,
+      "page_count": 3,
+      "pages": [
+        {
+          "page": 1,
+          "pdf_text_layer_characters": 0,
+          "selected_pass": "overlapping_tiles",
+          "stats": {
+            "lines": 30,
+            "characters": 1655,
+            "mean_confidence": 0.9539,
+            "low_confidence_lines_below_0_85": 1
+          },
+          "review_flags": [
+            "low_confidence_lines_present"
+          ]
+        },
+        {
+          "page": 2,
+          "pdf_text_layer_characters": 0,
+          "selected_pass": "overlapping_tiles",
+          "stats": {
+            "lines": 37,
+            "characters": 2667,
+            "mean_confidence": 0.952,
+            "low_confidence_lines_below_0_85": 3
+          },
+          "review_flags": [
+            "low_confidence_lines_present"
+          ]
+        },
+        {
+          "page": 3,
+          "pdf_text_layer_characters": 0,
+          "selected_pass": "overlapping_tiles",
+          "stats": {
+            "lines": 12,
+            "characters": 471,
+            "mean_confidence": 0.8945,
+            "low_confidence_lines_below_0_85": 2
+          },
+          "review_flags": [
+            "low_confidence_lines_present",
+            "color_and_contrast_passes_disagree"
+          ]
+        }
+      ],
+      "previous_characters": 4651,
+      "new_characters": 4919,
+      "sha256_after": "f454f6ccbcb5dc5473f51023492f3ebb615efaea32fbcc8fa0e665146dbd9867"
+    },
+    {
+      "source": "PBMO/PBMO PROCEDURES.pdf",
+      "office": "PBMO",
+      "sha256_before": "a8612af8c98c1e65ba306b21a51722c4e640795f064bc3cc3ebbef5c16237d31",
+      "bytes": 10964462,
+      "page_count": 2,
+      "pages": [
+        {
+          "page": 1,
+          "pdf_text_layer_characters": 0,
+          "selected_pass": "overlapping_tiles",
+          "stats": {
+            "lines": 70,
+            "characters": 3026,
+            "mean_confidence": 0.9413,
+            "low_confidence_lines_below_0_85": 5
+          },
+          "review_flags": [
+            "low_confidence_lines_present"
+          ]
+        },
+        {
+          "page": 2,
+          "pdf_text_layer_characters": 0,
+          "selected_pass": "overlapping_tiles",
+          "stats": {
+            "lines": 70,
+            "characters": 1261,
+            "mean_confidence": 0.9261,
+            "low_confidence_lines_below_0_85": 8
+          },
+          "review_flags": [
+            "low_confidence_lines_present"
+          ]
+        }
+      ],
+      "previous_characters": 4141,
+      "new_characters": 4458,
+      "sha256_after": "a8612af8c98c1e65ba306b21a51722c4e640795f064bc3cc3ebbef5c16237d31"
+    },
+    {
+      "source": "PBMO/PBMO SPUS BRANDING.pdf",
+      "office": "PBMO",
+      "sha256_before": "8034e88fdb6c0a549e817b36b3e240093e18bf792ded4b535668d8d44be7a88d",
+      "bytes": 17108949,
+      "page_count": 7,
+      "pages": [
+        {
+          "page": 1,
+          "pdf_text_layer_characters": 0,
+          "selected_pass": "overlapping_tiles",
+          "stats": {
+            "lines": 9,
+            "characters": 66,
+            "mean_confidence": 0.9295,
+            "low_confidence_lines_below_0_85": 1
+          },
+          "review_flags": [
+            "sparse_text_or_graphic_page_check_visually",
+            "low_confidence_lines_present"
+          ]
+        },
+        {
+          "page": 2,
+          "pdf_text_layer_characters": 0,
+          "selected_pass": "autocontrast",
+          "stats": {
+            "lines": 3,
+            "characters": 85,
+            "mean_confidence": 0.9732,
+            "low_confidence_lines_below_0_85": 0
+          },
+          "review_flags": [
+            "sparse_text_or_graphic_page_check_visually"
+          ]
+        },
+        {
+          "page": 3,
+          "pdf_text_layer_characters": 0,
+          "selected_pass": "color",
+          "stats": {
+            "lines": 25,
+            "characters": 1043,
+            "mean_confidence": 0.98,
+            "low_confidence_lines_below_0_85": 0
+          },
+          "review_flags": []
+        },
+        {
+          "page": 4,
+          "pdf_text_layer_characters": 0,
+          "selected_pass": "color",
+          "stats": {
+            "lines": 19,
+            "characters": 479,
+            "mean_confidence": 0.965,
+            "low_confidence_lines_below_0_85": 0
+          },
+          "review_flags": []
+        },
+        {
+          "page": 5,
+          "pdf_text_layer_characters": 0,
+          "selected_pass": "overlapping_tiles",
+          "stats": {
+            "lines": 31,
+            "characters": 563,
+            "mean_confidence": 0.9735,
+            "low_confidence_lines_below_0_85": 0
+          },
+          "review_flags": []
+        },
+        {
+          "page": 6,
+          "pdf_text_layer_characters": 0,
+          "selected_pass": "color",
+          "stats": {
+            "lines": 20,
+            "characters": 613,
+            "mean_confidence": 0.9554,
+            "low_confidence_lines_below_0_85": 2
+          },
+          "review_flags": [
+            "low_confidence_lines_present"
+          ]
+        },
+        {
+          "page": 7,
+          "pdf_text_layer_characters": 0,
+          "selected_pass": "overlapping_tiles",
+          "stats": {
+            "lines": 12,
+            "characters": 340,
+            "mean_confidence": 0.9676,
+            "low_confidence_lines_below_0_85": 0
+          },
+          "review_flags": []
+        }
+      ],
+      "previous_characters": 3319,
+      "new_characters": 3419,
+      "sha256_after": "8034e88fdb6c0a549e817b36b3e240093e18bf792ded4b535668d8d44be7a88d"
+    }
+  ]
+}

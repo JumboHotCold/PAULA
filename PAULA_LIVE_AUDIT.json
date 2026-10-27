@@ -1,0 +1,76 @@
+[
+    {
+        "source_count":  0,
+        "saved":  false,
+        "name":  "enrollment",
+        "action":  null,
+        "passed":  true
+    },
+    {
+        "source_count":  0,
+        "saved":  false,
+        "name":  "enrollment_typo",
+        "action":  null,
+        "passed":  true
+    },
+    {
+        "source_count":  0,
+        "saved":  false,
+        "name":  "map_typo",
+        "action":  "navigate_map",
+        "passed":  true
+    },
+    {
+        "source_count":  0,
+        "saved":  false,
+        "name":  "map_directions",
+        "action":  "navigate_map",
+        "passed":  true
+    },
+    {
+        "source_count":  0,
+        "saved":  false,
+        "name":  "ambiguous_map",
+        "action":  null,
+        "passed":  true
+    },
+    {
+        "source_count":  0,
+        "saved":  false,
+        "name":  "online_payment",
+        "action":  null,
+        "passed":  true
+    },
+    {
+        "source_count":  0,
+        "saved":  false,
+        "name":  "ceit_grounding",
+        "action":  null,
+        "passed":  true
+    },
+    {
+        "source_count":  1,
+        "saved":  false,
+        "name":  "pbmo_knowledge",
+        "action":  null,
+        "passed":  true
+    },
+    {
+        "saved":  false,
+        "name":  "enrollment_freshman",
+        "source":  "FAQ (Registrar\u0027s Office): [Registrar] What is the step-by-step enrollment procedure for incoming freshmen at SPUS (Document URO-PR-005)?",
+        "passed":  true
+    },
+    {
+        "saved":  false,
+        "name":  "enrollment_transferee",
+        "source":  "FAQ (Registrar\u0027s Office): [Registrar] What is the step-by-step enrollment procedure for transferee students at SPUS (Document URO-PR-017)?",
+        "passed":  true
+    },
+    {
+        "saved":  false,
+        "name":  "enrollment_old student",
+        "source":  "FAQ (Registrar\u0027s Office): [Registrar] How can an old or continuing college student enroll at SPUS (Document URO-PR-016)?",
+        "passed":  true
+    }
+]

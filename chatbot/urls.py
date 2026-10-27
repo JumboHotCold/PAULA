@@ -25,6 +25,8 @@ urlpatterns = [
     # API Auth (Optional/Legacy support)
     path('api/register', views.register_user, name='api_register'),
     path('api/login', views.login_user, name='api_login'),
+    path('api/logout', views.logout_user, name='api_logout'),
+    path('api/session', views.session_status, name='api_session'),
 
     # Admin Dashboard API
     path('api/admin/campus-pulse/', views.admin_campus_pulse, name='admin_campus_pulse'),

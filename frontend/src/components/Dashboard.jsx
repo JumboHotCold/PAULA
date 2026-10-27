@@ -89,8 +89,14 @@ function SourcesAccordion({ sources }) {
             <div key={i} style={{ marginBottom: '6px', display: 'flex', gap: '6px', alignItems: 'flex-start' }}>
               <MaterialIcon name="description" size={16} color="var(--color-primary)" />
               <span style={{ lineHeight: 1.4 }}>
+                {s.citation_index ? `${s.citation_index}. ` : ''}
                 {s.url ? <a href={s.url} target="_blank" rel="noreferrer" style={{color: 'var(--color-primary)', textDecoration: 'underline', fontWeight: 500}}>{s.title}</a> : s.title}
                 {s.page ? ` (Page ${s.page})` : ''}
+                {s.retrieved_at && Number.isFinite(Date.parse(s.retrieved_at)) && (
+                  <small style={{ display: 'block', color: 'var(--color-text-muted)' }}>
+                    Website fetched: {new Date(s.retrieved_at).toLocaleDateString('en-PH')}
+                  </small>
+                )}
               </span>
             </div>
           ))}

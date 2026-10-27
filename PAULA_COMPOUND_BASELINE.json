@@ -1,0 +1,153 @@
+{
+  "checks": [
+    {
+      "case": "two_roles",
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "passed": false,
+      "expected_fragments": [
+        "Arnold A. Magalona",
+        "Karen T. Plaza"
+      ],
+      "matched_fragments": [
+        false,
+        false
+      ],
+      "p50_ms": 175.07,
+      "first_ms": 28744.4,
+      "warm_max_ms": 338.63,
+      "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "action": null,
+      "action_data": null,
+      "parts": []
+    },
+    {
+      "case": "shared_role",
+      "query": "Who are the deans of CEIT and CHS?",
+      "passed": false,
+      "expected_fragments": [
+        "Karen T. Plaza",
+        "Kristal Liza Besario"
+      ],
+      "matched_fragments": [
+        false,
+        false
+      ],
+      "p50_ms": 130.48,
+      "first_ms": 149.6,
+      "warm_max_ms": 143.38,
+      "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "action": null,
+      "action_data": null,
+      "parts": []
+    },
+    {
+      "case": "two_audiences",
+      "query": "What are the requirements for freshmen and transferees?",
+      "passed": false,
+      "expected_fragments": [
+        "Freshmen",
+        "Transferee"
+      ],
+      "matched_fragments": [
+        false,
+        false
+      ],
+      "p50_ms": 0.56,
+      "first_ms": 0.62,
+      "warm_max_ms": 0.8,
+      "response": "Which topic or detail do you mean? Please specify the office, program, or question.",
+      "sources": [],
+      "action": null,
+      "action_data": null,
+      "parts": []
+    },
+    {
+      "case": "two_offices",
+      "query": "Where are the Registrar and Finance offices?",
+      "passed": true,
+      "expected_fragments": [
+        "Registrar Office",
+        "Finance Office"
+      ],
+      "matched_fragments": [
+        true,
+        true
+      ],
+      "p50_ms": 0.51,
+      "first_ms": 0.53,
+      "warm_max_ms": 0.55,
+      "response": "Which campus office or building would you like to find?\n\nRegistrar Office, Finance Office\n\n[SUGGESTIONS: \"Where is the Registrar office?\" | \"Directions to the Finance office\" | \"Where is the main entrance?\"]",
+      "sources": [],
+      "action": null,
+      "action_data": null,
+      "parts": []
+    },
+    {
+      "case": "filipino",
+      "query": "Sino ang ICT director at CEIT dean?",
+      "passed": false,
+      "expected_fragments": [
+        "Arnold A. Magalona",
+        "Karen T. Plaza"
+      ],
+      "matched_fragments": [
+        false,
+        false
+      ],
+      "p50_ms": 132.59,
+      "first_ms": 202.91,
+      "warm_max_ms": 134.14,
+      "response": "Wala akong sapat na beripikadong impormasyon sa aking SPUS knowledge base para sagutin ang tanong na ito. Mangyaring kumpirmahin ito sa kinauukulang opisina o sa [opisyal na SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"Anong mga programa ang inaalok sa SPUS?\" | \"Paano mag-enroll sa SPUS?\" | \"Saan ang Registrar office?\"]",
+      "sources": [],
+      "action": null,
+      "action_data": null,
+      "parts": []
+    },
+    {
+      "case": "partial_missing",
+      "query": "Who is the ICT Director, and who is the director of Mars?",
+      "passed": false,
+      "expected_fragments": [
+        "Arnold A. Magalona"
+      ],
+      "matched_fragments": [
+        false
+      ],
+      "p50_ms": 59.2,
+      "first_ms": 72.37,
+      "warm_max_ms": 60.85,
+      "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "action": null,
+      "action_data": null,
+      "parts": []
+    },
+    {
+      "case": "partial_conflict",
+      "query": "Who is the ICT Director, and who is the PBMO director?",
+      "passed": false,
+      "expected_fragments": [
+        "Arnold A. Magalona",
+        "conflicting"
+      ],
+      "matched_fragments": [
+        false,
+        false
+      ],
+      "p50_ms": 130.0,
+      "first_ms": 150.6,
+      "warm_max_ms": 134.36,
+      "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "action": null,
+      "action_data": null,
+      "parts": []
+    }
+  ],
+  "passed": 1,
+  "total": 7,
+  "cutoff": 0.45,
+  "notes": "Seven fixed response smoke checks; three warm samples after one initial sample. No LLM calls or embedding writes. Vector model startup may affect first samples. Expected fragments test targeted coverage, not full factual precision."
+}

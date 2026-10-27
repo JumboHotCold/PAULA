@@ -1,0 +1,19 @@
+deb402
+005301
+COLORPALETTE
+002c04
+The color palette sets a visual tone for the school's
+brand.Colorscanalsocreateastrongbrand
+recall when it is associatedwithyourbrand.
+COLORPALETTEGUIDELINES
+0101c1
+215a2e
+Primarycolors areused for logo,school
+documentssuchasletterheads,certificates,
+diploma and school signage and banners.
+·Secondary colors maybe used to
+complement the primary palette but never to
+substitute.It maybe used inbackgrounds,
+highlighters, supporting text or callouts.
+fcd108
+da0200

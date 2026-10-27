@@ -1,0 +1,1298 @@
+{
+  "document": "PBMO_SPUS_BRANDING",
+  "office": "PBMO",
+  "page": 4,
+  "pdf_text_layer_characters": 0,
+  "requested_render_dpi": 200,
+  "ocr_image_size": [
+    4200,
+    3244
+  ],
+  "selected_pass": "color",
+  "selection_is_heuristic": true,
+  "stats": {
+    "lines": 19,
+    "characters": 479,
+    "mean_confidence": 0.965,
+    "low_confidence_lines_below_0_85": 0
+  },
+  "review_flags": [],
+  "color_contrast_text_similarity": 0.9908,
+  "passes": [
+    {
+      "name": "color",
+      "seconds": 8.02,
+      "rows": [
+        {
+          "box": [
+            [
+              2176.21,
+              557.56
+            ],
+            [
+              2451.41,
+              553.34
+            ],
+            [
+              2451.41,
+              629.37
+            ],
+            [
+              2178.33,
+              635.71
+            ]
+          ],
+          "text": "deb402",
+          "confidence": 0.996528
+        },
+        {
+          "box": [
+            [
+              3042.04,
+              566.01
+            ],
+            [
+              3296.07,
+              566.01
+            ],
+            [
+              3296.07,
+              642.04
+            ],
+            [
+              3042.04,
+              642.04
+            ]
+          ],
+          "text": "005301",
+          "confidence": 0.998702
+        },
+        {
+          "box": [
+            [
+              353.53,
+              1028.53
+            ],
+            [
+              1727.42,
+              1032.76
+            ],
+            [
+              1725.3,
+              1172.15
+            ],
+            [
+              353.53,
+              1167.92
+            ]
+          ],
+          "text": "COLORPALETTE",
+          "confidence": 0.991318
+        },
+        {
+          "box": [
+            [
+              3037.8,
+              1134.13
+            ],
+            [
+              3304.54,
+              1129.91
+            ],
+            [
+              3306.65,
+              1203.83
+            ],
+            [
+              3039.92,
+              1208.05
+            ]
+          ],
+          "text": "002c04",
+          "confidence": 0.976664
+        },
+        {
+          "box": [
+            [
+              342.94,
+              1241.84
+            ],
+            [
+              1776.11,
+              1241.84
+            ],
+            [
+              1776.11,
+              1313.65
+            ],
+            [
+              342.94,
+              1313.65
+            ]
+          ],
+          "text": "The color palette sets a visual tone for the school's",
+          "confidence": 0.956917
+        },
+        {
+          "box": [
+            [
+              347.18,
+              1326.32
+            ],
+            [
+              1627.92,
+              1326.32
+            ],
+            [
+              1627.92,
+              1387.57
+            ],
+            [
+              347.18,
+              1387.57
+            ]
+          ],
+          "text": "brand.Colorscanalsocreateastrongbrand",
+          "confidence": 0.99098
+        },
+        {
+          "box": [
+            [
+              342.94,
+              1400.24
+            ],
+            [
+              1589.82,
+              1396.02
+            ],
+            [
+              1589.82,
+              1463.6
+            ],
+            [
+              342.94,
+              1467.83
+            ]
+          ],
+          "text": "recall when it is associatedwithyourbrand.",
+          "confidence": 0.966806
+        },
+        {
+          "box": [
+            [
+              349.29,
+              1653.68
+            ],
+            [
+              1356.96,
+              1651.57
+            ],
+            [
+              1356.96,
+              1721.26
+            ],
+            [
+              349.29,
+              1723.38
+            ]
+          ],
+          "text": "COLORPALETTEGUIDELINES",
+          "confidence": 0.990921
+        },
+        {
+          "box": [
+            [
+              2180.44,
+              1721.26
+            ],
+            [
+              2398.49,
+              1721.26
+            ],
+            [
+              2398.49,
+              1799.41
+            ],
+            [
+              2180.44,
+              1799.41
+            ]
+          ],
+          "text": "0101c1",
+          "confidence": 0.928289
+        },
+        {
+          "box": [
+            [
+              3056.85,
+              1710.7
+            ],
+            [
+              3302.42,
+              1710.7
+            ],
+            [
+              3302.42,
+              1788.85
+            ],
+            [
+              3056.85,
+              1788.85
+            ]
+          ],
+          "text": "215a2e",
+          "confidence": 0.988949
+        },
+        {
+          "box": [
+            [
+              353.53,
+              1774.06
+            ],
+            [
+              1545.36,
+              1765.61
+            ],
+            [
+              1547.48,
+              1833.2
+            ],
+            [
+              353.53,
+              1841.65
+            ]
+          ],
+          "text": "Primarycolors areused for logo,school",
+          "confidence": 0.95957
+        },
+        {
+          "box": [
+            [
+              395.87,
+              1854.32
+            ],
+            [
+              1644.86,
+              1845.87
+            ],
+            [
+              1644.86,
+              1907.12
+            ],
+            [
+              395.87,
+              1915.57
+            ]
+          ],
+          "text": "documentssuchasletterheads,certificates,",
+          "confidence": 0.958406
+        },
+        {
+          "box": [
+            [
+              393.75,
+              1930.35
+            ],
+            [
+              1598.29,
+              1921.9
+            ],
+            [
+              1600.4,
+              1989.48
+            ],
+            [
+              393.75,
+              1997.93
+            ]
+          ],
+          "text": "diploma and school signage and banners.",
+          "confidence": 0.937824
+        },
+        {
+          "box": [
+            [
+              342.94,
+              2008.49
+            ],
+            [
+              1378.12,
+              1997.93
+            ],
+            [
+              1380.24,
+              2065.52
+            ],
+            [
+              342.94,
+              2076.08
+            ]
+          ],
+          "text": "·Secondary colors maybe used to",
+          "confidence": 0.935193
+        },
+        {
+          "box": [
+            [
+              393.75,
+              2086.64
+            ],
+            [
+              1689.31,
+              2071.85
+            ],
+            [
+              1689.31,
+              2145.77
+            ],
+            [
+              393.75,
+              2160.55
+            ]
+          ],
+          "text": "complement the primary palette but never to",
+          "confidence": 0.969721
+        },
+        {
+          "box": [
+            [
+              391.63,
+              2164.78
+            ],
+            [
+              1589.82,
+              2149.99
+            ],
+            [
+              1591.94,
+              2217.58
+            ],
+            [
+              391.63,
+              2232.36
+            ]
+          ],
+          "text": "substitute.It maybe used inbackgrounds,",
+          "confidence": 0.960182
+        },
+        {
+          "box": [
+            [
+              391.63,
+              2242.92
+            ],
+            [
+              1503.02,
+              2226.03
+            ],
+            [
+              1505.14,
+              2297.83
+            ],
+            [
+              391.63,
+              2314.73
+            ]
+          ],
+          "text": "highlighters, supporting text or callouts.",
+          "confidence": 0.961037
+        },
+        {
+          "box": [
+            [
+              2165.62,
+              2291.5
+            ],
+            [
+              2404.84,
+              2287.27
+            ],
+            [
+              2406.96,
+              2369.64
+            ],
+            [
+              2167.74,
+              2373.86
+            ]
+          ],
+          "text": "fcd108",
+          "confidence": 0.874553
+        },
+        {
+          "box": [
+            [
+              3046.27,
+              2283.05
+            ],
+            [
+              3317.24,
+              2278.83
+            ],
+            [
+              3317.24,
+              2352.74
+            ],
+            [
+              3048.39,
+              2359.08
+            ]
+          ],
+          "text": "da0200",
+          "confidence": 0.991708
+        }
+      ],
+      "text": "deb402\n005301\nCOLORPALETTE\n002c04\nThe color palette sets a visual tone for the school's\nbrand.Colorscanalsocreateastrongbrand\nrecall when it is associatedwithyourbrand.\nCOLORPALETTEGUIDELINES\n0101c1\n215a2e\nPrimarycolors areused for logo,school\ndocumentssuchasletterheads,certificates,\ndiploma and school signage and banners.\n·Secondary colors maybe used to\ncomplement the primary palette but never to\nsubstitute.It maybe used inbackgrounds,\nhighlighters, supporting text or callouts.\nfcd108\nda0200"
+    },
+    {
+      "name": "autocontrast",
+      "seconds": 4.87,
+      "rows": [
+        {
+          "box": [
+            [
+              2178.33,
+              557.56
+            ],
+            [
+              2453.53,
+              553.34
+            ],
+            [
+              2455.65,
+              629.37
+            ],
+            [
+              2180.44,
+              635.71
+            ]
+          ],
+          "text": "deb402",
+          "confidence": 0.996372
+        },
+        {
+          "box": [
+            [
+              3042.04,
+              566.01
+            ],
+            [
+              3296.07,
+              566.01
+            ],
+            [
+              3296.07,
+              642.04
+            ],
+            [
+              3042.04,
+              642.04
+            ]
+          ],
+          "text": "005301",
+          "confidence": 0.998649
+        },
+        {
+          "box": [
+            [
+              355.65,
+              1030.65
+            ],
+            [
+              1727.42,
+              1030.65
+            ],
+            [
+              1727.42,
+              1170.04
+            ],
+            [
+              355.65,
+              1170.04
+            ]
+          ],
+          "text": "COLORPALETTE",
+          "confidence": 0.989414
+        },
+        {
+          "box": [
+            [
+              3037.8,
+              1134.13
+            ],
+            [
+              3304.54,
+              1129.91
+            ],
+            [
+              3306.65,
+              1205.94
+            ],
+            [
+              3039.92,
+              1210.16
+            ]
+          ],
+          "text": "002c04",
+          "confidence": 0.992848
+        },
+        {
+          "box": [
+            [
+              342.94,
+              1241.84
+            ],
+            [
+              1773.99,
+              1241.84
+            ],
+            [
+              1773.99,
+              1313.65
+            ],
+            [
+              342.94,
+              1313.65
+            ]
+          ],
+          "text": "Thecolor palettesets a visual tone for the school's",
+          "confidence": 0.952754
+        },
+        {
+          "box": [
+            [
+              347.18,
+              1326.32
+            ],
+            [
+              1627.92,
+              1326.32
+            ],
+            [
+              1627.92,
+              1387.57
+            ],
+            [
+              347.18,
+              1387.57
+            ]
+          ],
+          "text": "brand.Colorscanalsocreateastrongbrand",
+          "confidence": 0.989978
+        },
+        {
+          "box": [
+            [
+              340.83,
+              1400.24
+            ],
+            [
+              1589.82,
+              1396.02
+            ],
+            [
+              1589.82,
+              1463.6
+            ],
+            [
+              340.83,
+              1467.83
+            ]
+          ],
+          "text": "recall when it is associatedwithyourbrand.",
+          "confidence": 0.961882
+        },
+        {
+          "box": [
+            [
+              351.41,
+              1655.79
+            ],
+            [
+              1356.96,
+              1651.57
+            ],
+            [
+              1356.96,
+              1717.04
+            ],
+            [
+              351.41,
+              1721.26
+            ]
+          ],
+          "text": "COLORPALETTEGUIDELINES",
+          "confidence": 0.993807
+        },
+        {
+          "box": [
+            [
+              2182.56,
+              1721.26
+            ],
+            [
+              2398.49,
+              1721.26
+            ],
+            [
+              2398.49,
+              1799.41
+            ],
+            [
+              2182.56,
+              1799.41
+            ]
+          ],
+          "text": "0101c1",
+          "confidence": 0.930834
+        },
+        {
+          "box": [
+            [
+              3058.97,
+              1712.82
+            ],
+            [
+              3302.42,
+              1712.82
+            ],
+            [
+              3302.42,
+              1784.62
+            ],
+            [
+              3058.97,
+              1784.62
+            ]
+          ],
+          "text": "215a2e",
+          "confidence": 0.990319
+        },
+        {
+          "box": [
+            [
+              351.41,
+              1765.61
+            ],
+            [
+              1549.6,
+              1763.5
+            ],
+            [
+              1549.6,
+              1839.53
+            ],
+            [
+              351.41,
+              1841.65
+            ]
+          ],
+          "text": "Primary colors are used for logo, school",
+          "confidence": 0.977392
+        },
+        {
+          "box": [
+            [
+              395.87,
+              1854.32
+            ],
+            [
+              1644.86,
+              1845.87
+            ],
+            [
+              1644.86,
+              1905.01
+            ],
+            [
+              395.87,
+              1915.57
+            ]
+          ],
+          "text": "documentssuchasletterheads,certificates,",
+          "confidence": 0.963911
+        },
+        {
+          "box": [
+            [
+              393.75,
+              1930.35
+            ],
+            [
+              1598.29,
+              1921.9
+            ],
+            [
+              1600.4,
+              1989.48
+            ],
+            [
+              393.75,
+              1997.93
+            ]
+          ],
+          "text": "diploma and school signageandbanners",
+          "confidence": 0.964757
+        },
+        {
+          "box": [
+            [
+              342.94,
+              2006.38
+            ],
+            [
+              1376.01,
+              1997.93
+            ],
+            [
+              1378.12,
+              2067.63
+            ],
+            [
+              342.94,
+              2076.08
+            ]
+          ],
+          "text": "·Secondary colorsmay be used to",
+          "confidence": 0.926143
+        },
+        {
+          "box": [
+            [
+              391.63,
+              2086.64
+            ],
+            [
+              1689.31,
+              2071.85
+            ],
+            [
+              1689.31,
+              2145.77
+            ],
+            [
+              391.63,
+              2160.55
+            ]
+          ],
+          "text": "complement the primary palette but never to",
+          "confidence": 0.978455
+        },
+        {
+          "box": [
+            [
+              391.63,
+              2162.67
+            ],
+            [
+              1589.82,
+              2147.88
+            ],
+            [
+              1591.94,
+              2217.58
+            ],
+            [
+              391.63,
+              2232.36
+            ]
+          ],
+          "text": "substitute.It maybeused inbackgrounds,",
+          "confidence": 0.957773
+        },
+        {
+          "box": [
+            [
+              391.63,
+              2242.92
+            ],
+            [
+              1500.91,
+              2226.03
+            ],
+            [
+              1503.02,
+              2297.83
+            ],
+            [
+              391.63,
+              2314.73
+            ]
+          ],
+          "text": "highlighters, supporting text or callouts.",
+          "confidence": 0.951136
+        },
+        {
+          "box": [
+            [
+              2167.74,
+              2291.5
+            ],
+            [
+              2402.72,
+              2291.5
+            ],
+            [
+              2402.72,
+              2367.53
+            ],
+            [
+              2167.74,
+              2367.53
+            ]
+          ],
+          "text": "fcd108",
+          "confidence": 0.891114
+        },
+        {
+          "box": [
+            [
+              3042.04,
+              2283.05
+            ],
+            [
+              3317.24,
+              2278.83
+            ],
+            [
+              3317.24,
+              2352.74
+            ],
+            [
+              3044.15,
+              2359.08
+            ]
+          ],
+          "text": "da0200",
+          "confidence": 0.987654
+        }
+      ],
+      "text": "deb402\n005301\nCOLORPALETTE\n002c04\nThecolor palettesets a visual tone for the school's\nbrand.Colorscanalsocreateastrongbrand\nrecall when it is associatedwithyourbrand.\nCOLORPALETTEGUIDELINES\n0101c1\n215a2e\nPrimary colors are used for logo, school\ndocumentssuchasletterheads,certificates,\ndiploma and school signageandbanners\n·Secondary colorsmay be used to\ncomplement the primary palette but never to\nsubstitute.It maybeused inbackgrounds,\nhighlighters, supporting text or callouts.\nfcd108\nda0200"
+    },
+    {
+      "name": "overlapping_tiles",
+      "seconds": 11.55,
+      "rows": [
+        {
+          "box": [
+            [
+              2186.79,
+              563.8
+            ],
+            [
+              2445.06,
+              561.69
+            ],
+            [
+              2447.18,
+              620.81
+            ],
+            [
+              2186.79,
+              625.04
+            ]
+          ],
+          "text": "deb402",
+          "confidence": 0.995069
+        },
+        {
+          "box": [
+            [
+              3046.27,
+              574.36
+            ],
+            [
+              3287.6,
+              570.13
+            ],
+            [
+              3287.6,
+              635.59
+            ],
+            [
+              3048.39,
+              639.82
+            ]
+          ],
+          "text": "005301",
+          "confidence": 0.998996
+        },
+        {
+          "box": [
+            [
+              345.06,
+              1024.13
+            ],
+            [
+              1735.89,
+              1028.35
+            ],
+            [
+              1735.89,
+              1182.5
+            ],
+            [
+              342.94,
+              1178.28
+            ]
+          ],
+          "text": "COLORPALETTE",
+          "confidence": 0.990037
+        },
+        {
+          "box": [
+            [
+              3046.27,
+              1138.16
+            ],
+            [
+              3300.3,
+              1138.16
+            ],
+            [
+              3300.3,
+              1201.5
+            ],
+            [
+              3046.27,
+              1201.5
+            ]
+          ],
+          "text": "002c04",
+          "confidence": 0.987311
+        },
+        {
+          "box": [
+            [
+              347.18,
+              1245.85
+            ],
+            [
+              1773.99,
+              1245.85
+            ],
+            [
+              1773.99,
+              1311.31
+            ],
+            [
+              347.18,
+              1311.31
+            ]
+          ],
+          "text": "Thecolorpalettesetsavisual tonefortheschool's",
+          "confidence": 0.976975
+        },
+        {
+          "box": [
+            [
+              347.18,
+              1319.75
+            ],
+            [
+              1634.27,
+              1323.98
+            ],
+            [
+              1634.27,
+              1393.66
+            ],
+            [
+              347.18,
+              1391.55
+            ]
+          ],
+          "text": "brand. Colors can also create a strong brand",
+          "confidence": 0.941625
+        },
+        {
+          "box": [
+            [
+              345.06,
+              1402.11
+            ],
+            [
+              1589.82,
+              1397.88
+            ],
+            [
+              1589.82,
+              1465.46
+            ],
+            [
+              345.06,
+              1467.57
+            ]
+          ],
+          "text": "recall when it is associatedwithyourbrand.",
+          "confidence": 0.955657
+        },
+        {
+          "box": [
+            [
+              351.41,
+              1660.29
+            ],
+            [
+              1354.84,
+              1656.07
+            ],
+            [
+              1354.84,
+              1719.42
+            ],
+            [
+              353.53,
+              1721.53
+            ]
+          ],
+          "text": "COLORPALETTEGUIDELINES",
+          "confidence": 0.990095
+        },
+        {
+          "box": [
+            [
+              2186.79,
+              1727.87
+            ],
+            [
+              2392.14,
+              1727.87
+            ],
+            [
+              2392.14,
+              1793.33
+            ],
+            [
+              2186.79,
+              1793.33
+            ]
+          ],
+          "text": "0101c1",
+          "confidence": 0.961964
+        },
+        {
+          "box": [
+            [
+              3063.21,
+              1717.31
+            ],
+            [
+              3296.07,
+              1717.31
+            ],
+            [
+              3296.07,
+              1780.66
+            ],
+            [
+              3063.21,
+              1780.66
+            ]
+          ],
+          "text": "215a2e",
+          "confidence": 0.990948
+        },
+        {
+          "box": [
+            [
+              349.29,
+              1774.32
+            ],
+            [
+              1545.36,
+              1765.88
+            ],
+            [
+              1545.36,
+              1837.67
+            ],
+            [
+              349.29,
+              1844.0
+            ]
+          ],
+          "text": "Primary colors are used for logo,school",
+          "confidence": 0.945178
+        },
+        {
+          "box": [
+            [
+              395.87,
+              1858.79
+            ],
+            [
+              1644.86,
+              1850.34
+            ],
+            [
+              1644.86,
+              1903.13
+            ],
+            [
+              395.87,
+              1911.58
+            ]
+          ],
+          "text": "documentssuchasletterheads,certificates",
+          "confidence": 0.982555
+        },
+        {
+          "box": [
+            [
+              393.75,
+              1930.58
+            ],
+            [
+              1602.52,
+              1922.13
+            ],
+            [
+              1602.52,
+              1989.71
+            ],
+            [
+              393.75,
+              1998.15
+            ]
+          ],
+          "text": "diplomaand school signageandbanners.",
+          "confidence": 0.959901
+        },
+        {
+          "box": [
+            [
+              387.4,
+              2012.93
+            ],
+            [
+              1376.01,
+              2000.26
+            ],
+            [
+              1376.01,
+              2065.72
+            ],
+            [
+              387.4,
+              2076.28
+            ]
+          ],
+          "text": "Secondarycolorsmaybeused to",
+          "confidence": 0.981355
+        },
+        {
+          "box": [
+            [
+              397.98,
+              2093.17
+            ],
+            [
+              1685.08,
+              2076.28
+            ],
+            [
+              1687.2,
+              2137.52
+            ],
+            [
+              397.98,
+              2154.41
+            ]
+          ],
+          "text": "complementtheprimarypalettebutneverto",
+          "confidence": 0.992091
+        },
+        {
+          "box": [
+            [
+              397.98,
+              2167.08
+            ],
+            [
+              1585.58,
+              2156.52
+            ],
+            [
+              1587.7,
+              2215.65
+            ],
+            [
+              397.98,
+              2226.21
+            ]
+          ],
+          "text": "substitute.Itmaybeusedinbackgrounds",
+          "confidence": 0.984908
+        },
+        {
+          "box": [
+            [
+              391.63,
+              2245.21
+            ],
+            [
+              1503.02,
+              2226.21
+            ],
+            [
+              1503.02,
+              2298.0
+            ],
+            [
+              391.63,
+              2317.0
+            ]
+          ],
+          "text": "highlighters, supporting text or callouts.",
+          "confidence": 0.95618
+        },
+        {
+          "box": [
+            [
+              3050.5,
+              2289.55
+            ],
+            [
+              3308.77,
+              2283.22
+            ],
+            [
+              3310.89,
+              2346.57
+            ],
+            [
+              3052.62,
+              2355.01
+            ]
+          ],
+          "text": "da0200",
+          "confidence": 0.984246
+        },
+        {
+          "box": [
+            [
+              2171.98,
+              2298.0
+            ],
+            [
+              2400.6,
+              2295.89
+            ],
+            [
+              2400.6,
+              2365.57
+            ],
+            [
+              2171.98,
+              2367.68
+            ]
+          ],
+          "text": "fcd108",
+          "confidence": 0.969442
+        }
+      ],
+      "text": "deb402\n005301\nCOLORPALETTE\n002c04\nThecolorpalettesetsavisual tonefortheschool's\nbrand. Colors can also create a strong brand\nrecall when it is associatedwithyourbrand.\nCOLORPALETTEGUIDELINES\n0101c1\n215a2e\nPrimary colors are used for logo,school\ndocumentssuchasletterheads,certificates\ndiplomaand school signageandbanners.\nSecondarycolorsmaybeused to\ncomplementtheprimarypalettebutneverto\nsubstitute.Itmaybeusedinbackgrounds\nhighlighters, supporting text or callouts.\nda0200\nfcd108"
+    }
+  ]
+}

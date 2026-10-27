@@ -82,9 +82,11 @@ class Conversation(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     is_active = models.BooleanField(default=True)
+    client_session_id = models.UUIDField(null=True, blank=True, editable=False)
 
     class Meta:
         ordering = ['-updated_at']
+        constraints = [models.UniqueConstraint(fields=['user', 'client_session_id'], name='unique_user_chat_session')]
 
     def __str__(self):
         return f"{self.title} ({self.user.username})"

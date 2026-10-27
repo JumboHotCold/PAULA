@@ -1,0 +1,883 @@
+{
+  "document": "PBMO_FAQs",
+  "office": "PBMO",
+  "page": 3,
+  "pdf_text_layer_characters": 0,
+  "requested_render_dpi": 200,
+  "ocr_image_size": [
+    3035,
+    4200
+  ],
+  "selected_pass": "overlapping_tiles",
+  "selection_is_heuristic": true,
+  "stats": {
+    "lines": 12,
+    "characters": 471,
+    "mean_confidence": 0.8945,
+    "low_confidence_lines_below_0_85": 2
+  },
+  "review_flags": [
+    "low_confidence_lines_present",
+    "color_and_contrast_passes_disagree"
+  ],
+  "color_contrast_text_similarity": 0.82,
+  "passes": [
+    {
+      "name": "color",
+      "seconds": 5.68,
+      "rows": [
+        {
+          "box": [
+            [
+              904.18,
+              493.25
+            ],
+            [
+              1867.37,
+              497.48
+            ],
+            [
+              1865.26,
+              573.69
+            ],
+            [
+              902.07,
+              569.46
+            ]
+          ],
+          "text": "St.aul Gnibersity urigao",
+          "confidence": 0.881719
+        },
+        {
+          "box": [
+            [
+              1062.25,
+              590.62
+            ],
+            [
+              1709.3,
+              590.62
+            ],
+            [
+              1709.3,
+              654.13
+            ],
+            [
+              1062.25,
+              654.13
+            ]
+          ],
+          "text": "St.Paul UniversitySystem",
+          "confidence": 0.978828
+        },
+        {
+          "box": [
+            [
+              1070.68,
+              660.48
+            ],
+            [
+              1694.54,
+              656.25
+            ],
+            [
+              1696.65,
+              717.64
+            ],
+            [
+              1072.79,
+              721.88
+            ]
+          ],
+          "text": "8400Surigao City,Philippines.",
+          "confidence": 0.936304
+        },
+        {
+          "box": [
+            [
+              1972.75,
+              624.5
+            ],
+            [
+              2069.7,
+              637.2
+            ],
+            [
+              2067.59,
+              671.07
+            ],
+            [
+              1968.53,
+              658.37
+            ]
+          ],
+          "text": "HmUT",
+          "confidence": 0.34497
+        },
+        {
+          "box": [
+            [
+              219.19,
+              929.33
+            ],
+            [
+              2569.21,
+              884.88
+            ],
+            [
+              2571.32,
+              988.61
+            ],
+            [
+              221.3,
+              1033.06
+            ]
+          ],
+          "text": "strictlyforreearchandacademicdevelopmentpurosewithnthecpeof yourUAcapstoneprojt.",
+          "confidence": 0.801594
+        },
+        {
+          "box": [
+            [
+              236.06,
+              1083.87
+            ],
+            [
+              2571.32,
+              1035.18
+            ],
+            [
+              2573.43,
+              1128.33
+            ],
+            [
+              238.16,
+              1177.02
+            ]
+          ],
+          "text": "edsnsis ase",
+          "confidence": 0.352256
+        },
+        {
+          "box": [
+            [
+              242.38,
+              1219.35
+            ],
+            [
+              2343.69,
+              1177.02
+            ],
+            [
+              2345.8,
+              1282.86
+            ],
+            [
+              244.49,
+              1327.32
+            ]
+          ],
+          "text": "We hope this information asists in developing a reliable knowledge base for the PAULA system.",
+          "confidence": 0.954498
+        },
+        {
+          "box": [
+            [
+              261.35,
+              1380.24
+            ],
+            [
+              1110.73,
+              1371.77
+            ],
+            [
+              1112.83,
+              1447.98
+            ],
+            [
+              261.35,
+              1454.33
+            ]
+          ],
+          "text": "Best of luckwith your capstone project!",
+          "confidence": 0.952319
+        },
+        {
+          "box": [
+            [
+              278.21,
+              1596.17
+            ],
+            [
+              619.65,
+              1596.17
+            ],
+            [
+              619.65,
+              1659.68
+            ],
+            [
+              278.21,
+              1659.68
+            ]
+          ],
+          "text": "Yours in Christ,",
+          "confidence": 0.961715
+        },
+        {
+          "box": [
+            [
+              545.88,
+              1744.35
+            ],
+            [
+              1034.85,
+              1731.65
+            ],
+            [
+              1036.96,
+              1809.98
+            ],
+            [
+              547.99,
+              1822.68
+            ]
+          ],
+          "text": "MikuueriMoplan",
+          "confidence": 0.605331
+        },
+        {
+          "box": [
+            [
+              292.96,
+              1812.1
+            ],
+            [
+              1498.53,
+              1784.58
+            ],
+            [
+              1500.64,
+              1852.32
+            ],
+            [
+              295.07,
+              1879.84
+            ]
+          ],
+          "text": "MRS.MICHELLETIMBLACOPLAZA,PT,MAComm",
+          "confidence": 0.838297
+        },
+        {
+          "box": [
+            [
+              303.5,
+              1881.96
+            ],
+            [
+              1376.29,
+              1858.67
+            ],
+            [
+              1378.4,
+              1926.41
+            ],
+            [
+              303.5,
+              1949.7
+            ]
+          ],
+          "text": "Director,Publications,Brand,and Marketing Office",
+          "confidence": 0.942979
+        },
+        {
+          "box": [
+            [
+              309.82,
+              1951.81
+            ],
+            [
+              878.89,
+              1941.23
+            ],
+            [
+              880.99,
+              2013.21
+            ],
+            [
+              309.82,
+              2021.67
+            ]
+          ],
+          "text": "St.Paul University Surigao",
+          "confidence": 0.977944
+        }
+      ],
+      "text": "St.aul Gnibersity urigao\nSt.Paul UniversitySystem\n8400Surigao City,Philippines.\nHmUT\nstrictlyforreearchandacademicdevelopmentpurosewithnthecpeof yourUAcapstoneprojt.\nedsnsis ase\nWe hope this information asists in developing a reliable knowledge base for the PAULA system.\nBest of luckwith your capstone project!\nYours in Christ,\nMikuueriMoplan\nMRS.MICHELLETIMBLACOPLAZA,PT,MAComm\nDirector,Publications,Brand,and Marketing Office\nSt.Paul University Surigao"
+    },
+    {
+      "name": "autocontrast",
+      "seconds": 4.67,
+      "rows": [
+        {
+          "box": [
+            [
+              902.07,
+              491.13
+            ],
+            [
+              1869.48,
+              495.36
+            ],
+            [
+              1867.37,
+              575.81
+            ],
+            [
+              899.96,
+              571.57
+            ]
+          ],
+          "text": "St.aul dnibersity Surigao",
+          "confidence": 0.850968
+        },
+        {
+          "box": [
+            [
+              1060.14,
+              588.51
+            ],
+            [
+              1707.19,
+              592.74
+            ],
+            [
+              1707.19,
+              654.13
+            ],
+            [
+              1060.14,
+              649.9
+            ]
+          ],
+          "text": "St.Paul UniversitySystem",
+          "confidence": 0.973665
+        },
+        {
+          "box": [
+            [
+              1070.68,
+              660.48
+            ],
+            [
+              1694.54,
+              660.48
+            ],
+            [
+              1694.54,
+              717.64
+            ],
+            [
+              1070.68,
+              717.64
+            ]
+          ],
+          "text": "8400Surigao City,Philippines.",
+          "confidence": 0.962611
+        },
+        {
+          "box": [
+            [
+              1972.75,
+              624.5
+            ],
+            [
+              2069.7,
+              635.08
+            ],
+            [
+              2065.49,
+              671.07
+            ],
+            [
+              1968.53,
+              660.48
+            ]
+          ],
+          "text": "HHUT",
+          "confidence": 0.364326
+        },
+        {
+          "box": [
+            [
+              229.73,
+              1003.43
+            ],
+            [
+              2571.32,
+              956.85
+            ],
+            [
+              2573.43,
+              1056.35
+            ],
+            [
+              231.84,
+              1102.92
+            ]
+          ],
+          "text": "Thyshdwidd",
+          "confidence": 0.658272
+        },
+        {
+          "box": [
+            [
+              238.16,
+              1083.87
+            ],
+            [
+              2571.32,
+              1035.18
+            ],
+            [
+              2573.43,
+              1128.33
+            ],
+            [
+              240.27,
+              1179.13
+            ]
+          ],
+          "text": "approved research.We expect yourteamto treat these materials with theutmost respect and confidentialty.",
+          "confidence": 0.933139
+        },
+        {
+          "box": [
+            [
+              244.49,
+              1221.47
+            ],
+            [
+              2339.48,
+              1181.25
+            ],
+            [
+              2341.59,
+              1280.75
+            ],
+            [
+              246.59,
+              1323.08
+            ]
+          ],
+          "text": "We hope this information assists in developing a reliable knowledge base for the PAULA system.",
+          "confidence": 0.968804
+        },
+        {
+          "box": [
+            [
+              261.35,
+              1380.24
+            ],
+            [
+              1108.62,
+              1373.89
+            ],
+            [
+              1110.73,
+              1450.1
+            ],
+            [
+              261.35,
+              1454.33
+            ]
+          ],
+          "text": "Best of luckwithyourcapstone project!",
+          "confidence": 0.962263
+        },
+        {
+          "box": [
+            [
+              280.32,
+              1596.17
+            ],
+            [
+              617.54,
+              1596.17
+            ],
+            [
+              617.54,
+              1659.68
+            ],
+            [
+              280.32,
+              1659.68
+            ]
+          ],
+          "text": "Yours in Christ,",
+          "confidence": 0.959031
+        },
+        {
+          "box": [
+            [
+              547.99,
+              1750.71
+            ],
+            [
+              1032.74,
+              1738.0
+            ],
+            [
+              1034.85,
+              1807.86
+            ],
+            [
+              550.09,
+              1820.56
+            ]
+          ],
+          "text": "MickuueiiMaplnn",
+          "confidence": 0.570348
+        },
+        {
+          "box": [
+            [
+              295.07,
+              1812.1
+            ],
+            [
+              1498.53,
+              1786.69
+            ],
+            [
+              1498.53,
+              1854.44
+            ],
+            [
+              297.18,
+              1879.84
+            ]
+          ],
+          "text": "MRS.MICHELLETIMBLACOPLAZA,LPT,MAComm",
+          "confidence": 0.836181
+        },
+        {
+          "box": [
+            [
+              305.61,
+              1884.07
+            ],
+            [
+              1374.18,
+              1860.79
+            ],
+            [
+              1376.29,
+              1924.29
+            ],
+            [
+              305.61,
+              1945.46
+            ]
+          ],
+          "text": "Director,Publications,Brahd,andMarketingOffice",
+          "confidence": 0.925177
+        },
+        {
+          "box": [
+            [
+              309.82,
+              1947.58
+            ],
+            [
+              878.89,
+              1943.35
+            ],
+            [
+              878.89,
+              2015.32
+            ],
+            [
+              309.82,
+              2017.44
+            ]
+          ],
+          "text": "St.Paul University Surigao",
+          "confidence": 0.976976
+        }
+      ],
+      "text": "St.aul dnibersity Surigao\nSt.Paul UniversitySystem\n8400Surigao City,Philippines.\nHHUT\nThyshdwidd\napproved research.We expect yourteamto treat these materials with theutmost respect and confidentialty.\nWe hope this information assists in developing a reliable knowledge base for the PAULA system.\nBest of luckwithyourcapstone project!\nYours in Christ,\nMickuueiiMaplnn\nMRS.MICHELLETIMBLACOPLAZA,LPT,MAComm\nDirector,Publications,Brahd,andMarketingOffice\nSt.Paul University Surigao"
+    },
+    {
+      "name": "overlapping_tiles",
+      "seconds": 6.16,
+      "rows": [
+        {
+          "box": [
+            [
+              904.08,
+              496.12
+            ],
+            [
+              1861.69,
+              496.12
+            ],
+            [
+              1861.69,
+              572.69
+            ],
+            [
+              904.08,
+              572.69
+            ]
+          ],
+          "text": "St.aul nibersitySurigao",
+          "confidence": 0.903407
+        },
+        {
+          "box": [
+            [
+              1063.17,
+              594.12
+            ],
+            [
+              1704.13,
+              594.12
+            ],
+            [
+              1704.13,
+              653.84
+            ],
+            [
+              1063.17,
+              653.84
+            ]
+          ],
+          "text": "St.Paul UniversitySystem",
+          "confidence": 0.97203
+        },
+        {
+          "box": [
+            [
+              1974.89,
+              624.75
+            ],
+            [
+              2069.74,
+              635.47
+            ],
+            [
+              2065.15,
+              667.62
+            ],
+            [
+              1970.3,
+              656.91
+            ]
+          ],
+          "text": "HHUTE",
+          "confidence": 0.52497
+        },
+        {
+          "box": [
+            [
+              1075.41,
+              666.09
+            ],
+            [
+              1701.07,
+              659.97
+            ],
+            [
+              1701.07,
+              715.09
+            ],
+            [
+              1075.41,
+              721.22
+            ]
+          ],
+          "text": "8400 Surigao City,Philippines",
+          "confidence": 0.957526
+        },
+        {
+          "box": [
+            [
+              241.7,
+              1085.66
+            ],
+            [
+              2568.43,
+              1033.59
+            ],
+            [
+              2569.96,
+              1123.94
+            ],
+            [
+              243.23,
+              1176.0
+            ]
+          ],
+          "text": "approved research.We expect yourteam to treat thesematerials with the utmost respect and confidentialty.",
+          "confidence": 0.941545
+        },
+        {
+          "box": [
+            [
+              246.29,
+              1225.0
+            ],
+            [
+              2338.97,
+              1183.66
+            ],
+            [
+              2340.5,
+              1280.12
+            ],
+            [
+              247.82,
+              1321.47
+            ]
+          ],
+          "text": "We hope this information assists in developing a reliable knowledge base for the PAULA system.",
+          "confidence": 0.979248
+        },
+        {
+          "box": [
+            [
+              266.17,
+              1379.66
+            ],
+            [
+              1110.59,
+              1375.06
+            ],
+            [
+              1110.59,
+              1445.5
+            ],
+            [
+              266.17,
+              1450.09
+            ]
+          ],
+          "text": "Best of luck with your capstone project!",
+          "confidence": 0.946779
+        },
+        {
+          "box": [
+            [
+              278.41,
+              1595.56
+            ],
+            [
+              621.07,
+              1595.56
+            ],
+            [
+              621.07,
+              1661.41
+            ],
+            [
+              278.41,
+              1661.41
+            ]
+          ],
+          "text": "Yours in Christ,",
+          "confidence": 0.99331
+        },
+        {
+          "box": [
+            [
+              552.24,
+              1751.75
+            ],
+            [
+              1037.16,
+              1744.09
+            ],
+            [
+              1038.69,
+              1809.94
+            ],
+            [
+              553.77,
+              1817.59
+            ]
+          ],
+          "text": "MickuueuinMaplan",
+          "confidence": 0.61081
+        },
+        {
+          "box": [
+            [
+              299.83,
+              1813.0
+            ],
+            [
+              1494.55,
+              1788.5
+            ],
+            [
+              1496.08,
+              1849.75
+            ],
+            [
+              301.36,
+              1874.25
+            ]
+          ],
+          "text": "MRS. MICHELLE TIMBLACO-PLAZA, LPT, MA-Comm",
+          "confidence": 0.930588
+        },
+        {
+          "box": [
+            [
+              305.95,
+              1886.5
+            ],
+            [
+              1373.7,
+              1862.0
+            ],
+            [
+              1375.23,
+              1923.25
+            ],
+            [
+              307.48,
+              1947.75
+            ]
+          ],
+          "text": "Director, Publications, Brahd, and Marketing Office",
+          "confidence": 0.990029
+        },
+        {
+          "box": [
+            [
+              309.01,
+              1950.81
+            ],
+            [
+              876.54,
+              1946.22
+            ],
+            [
+              876.54,
+              2009.0
+            ],
+            [
+              309.01,
+              2013.59
+            ]
+          ],
+          "text": "St. Paul University Surigao",
+          "confidence": 0.983613
+        }
+      ],
+      "text": "St.aul nibersitySurigao\nSt.Paul UniversitySystem\nHHUTE\n8400 Surigao City,Philippines\napproved research.We expect yourteam to treat thesematerials with the utmost respect and confidentialty.\nWe hope this information assists in developing a reliable knowledge base for the PAULA system.\nBest of luck with your capstone project!\nYours in Christ,\nMickuueuinMaplan\nMRS. MICHELLE TIMBLACO-PLAZA, LPT, MA-Comm\nDirector, Publications, Brahd, and Marketing Office\nSt. Paul University Surigao"
+    }
+  ]
+}

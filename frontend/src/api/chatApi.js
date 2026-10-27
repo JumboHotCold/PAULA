@@ -26,8 +26,8 @@ export function getCookie(name) {
 export async function ensureCsrfToken() {
   if (!getCookie('csrftoken')) {
     try {
-      // Hit any GET endpoint to receive the CSRF cookie
-      await fetch('/api/conversations', {
+      // Public session status sets the cookie without reading private history.
+      await fetch('/api/session', {
         credentials: 'include',
       });
     } catch (e) {
@@ -43,12 +43,28 @@ export async function ensureCsrfToken() {
  * @param {number|null} conversationId - Optional conversation ID for history tracking
  * @returns {Promise<Object>} - { response, saved, user, conversation_id, conversation_title, chat_history_id }
  */
-export async function sendMessage(message, conversationId = null) {
+const contextTabId = globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random()}`;
+
+export async function logoutSession() {
+  await ensureCsrfToken();
+  const csrfToken = getCookie('csrftoken');
+  const response = await fetch('/api/logout', { method: 'POST', credentials: 'include',
+    headers: { ...(csrfToken && { 'X-CSRFToken': csrfToken }) } });
+  if (!response.ok) throw new Error('Could not end the previous login session.');
+}
+
+export async function sessionStatus() {
+  const response = await fetch('/api/session', { credentials: 'include' });
+  if (!response.ok) throw new Error('Could not verify your login session.');
+  return response.json();
+}
+
+export async function sendMessage(message, conversationId = null, history = [], contextToken = null, mode = 'guest', chatSessionId = null, accountId = null) {
   const csrfToken = getCookie('csrftoken');
 
   const res = await fetch('/api/chat', {
     method: 'POST',
-    credentials: 'include',
+    credentials: mode === 'guest' ? 'omit' : 'include',
     headers: {
       'Content-Type': 'application/json',
       ...(csrfToken && { 'X-CSRFToken': csrfToken }),
@@ -56,11 +72,21 @@ export async function sendMessage(message, conversationId = null) {
     body: JSON.stringify({
       message,
       conversation_id: conversationId,
+      mode,
+      chat_session_id: chatSessionId,
+      ...(mode === 'authenticated' && accountId != null ? { account_id: accountId } : {}),
+      context_id: contextTabId,
+      context_token: contextToken,
+      // Bounded, transient intent context. Facts are freshly retrieved by Django.
+      history: history.slice(-8),
     }),
   });
 
   if (!res.ok) {
-    throw new Error(`API error: ${res.status} ${res.statusText}`);
+    const detail = await res.json().catch(() => ({}));
+    const error = new Error(detail.error || `API error: ${res.status} ${res.statusText}`);
+    error.status = res.status;
+    throw error;
   }
 
   return res.json();
