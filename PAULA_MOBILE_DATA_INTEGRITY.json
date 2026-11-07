@@ -1,0 +1,25 @@
+{
+  "unchanged": true,
+  "models": {
+    "StaffMember": {
+      "count": 12,
+      "sha256": "5a618bd4a3d718185a5e06dfb45e3976d94437efea8debbbc2ca8954e68c6f00"
+    },
+    "FAQ": {
+      "count": 138,
+      "sha256": "bc8e18e7bf2b26cf44956da8aed3a4c03e3f77c9fff8b5e21180cc13641cedbd"
+    },
+    "WebResource": {
+      "count": 476,
+      "sha256": "06ba5660b42c6ae469c7004e47bca8815f2ba058098e9b472263172459d71950"
+    },
+    "Conversation": {
+      "count": 139,
+      "sha256": "37488cd64a23b0c0deabdfbbfc74ec40c98b20fa735a722ff5099ce12fe70787"
+    },
+    "ChatHistory": {
+      "count": 176,
+      "sha256": "b12f91fa44ab6e8aa46a4c897fbc6d88467ae7f88c433686220857f58e25e5fa"
+    }
+  }
+}

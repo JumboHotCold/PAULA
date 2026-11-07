@@ -1,0 +1,172 @@
+{
+  "cited_excerpts": 33,
+  "exact_matches": 33,
+  "checks": [
+    {
+      "artifact": "PAULA_DIALOGUE_LIVE_CHECKS.json",
+      "title": "FAQ (Registrar's Office): [Registrar] What is the step-by-step enrollment procedure for transferee students at SPUS (Document URO-PR-017)?",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_DIALOGUE_LIVE_CHECKS.json",
+      "title": "FAQ (Registrar's Office): [Registrar] How can an old or continuing college student enroll at SPUS (Document URO-PR-016)?",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_DIALOGUE_LIVE_CHECKS.json",
+      "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_DIALOGUE_LIVE_CHECKS.json",
+      "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_DIALOGUE_LIVE_CHECKS.json",
+      "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Health Sciences, Head, Health Service | Mrs. Kristal Liza Besario, MaN, RN",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_ABOUT_SPUS_DIALOGUE_CHECKS.json",
+      "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_ABOUT_SPUS_DIALOGUE_CHECKS.json",
+      "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_ABOUT_SPUS_DIALOGUE_CHECKS.json",
+      "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_ABOUT_SPUS_DIALOGUE_CHECKS.json",
+      "title": "FAQ (About SPUS): What is the SPUS Vision and Mission?",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_ABOUT_SPUS_DIALOGUE_CHECKS.json",
+      "title": "FAQ (About SPUS): What is the university's Vision and Mission?",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_ABOUT_SPUS_DIALOGUE_CHECKS.json",
+      "title": "FAQ (About SPUS): What is the SPUS Vision and Mission?",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_ABOUT_SPUS_DIALOGUE_CHECKS.json",
+      "title": "FAQ (About SPUS): What are the Paulinian Core Values?",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_ABOUT_SPUS_DIALOGUE_CHECKS.json",
+      "title": "FAQ (About SPUS): [About SPUS.txt] What are the complete definitions of the Paulinian core values at SPUS?",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_ABOUT_SPUS_DIALOGUE_CHECKS.json",
+      "title": "FAQ (Academics): Why choose SPUS?",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_ABOUT_SPUS_DIALOGUE_CHECKS.json",
+      "title": "FAQ (Academics): Why choose SPUS?",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_ABOUT_SPUS_DIALOGUE_CHECKS.json",
+      "title": "FAQ (Academics): Why choose SPUS?",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_ABOUT_SPUS_DIALOGUE_CHECKS.json",
+      "title": "About SPUS & Paulinian Core Values (Part 2)",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_ABOUT_SPUS_DIALOGUE_CHECKS.json",
+      "title": "FAQ (About SPUS): [About SPUS.txt] What is the early history of SPUS?",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_ABOUT_SPUS_DIALOGUE_CHECKS.json",
+      "title": "FAQ (About SPUS): [About SPUS.txt] What is the early history of SPUS?",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_COMPOUND_LIVE_CHECKS.json",
+      "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_COMPOUND_LIVE_CHECKS.json",
+      "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_COMPOUND_LIVE_CHECKS.json",
+      "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_COMPOUND_LIVE_CHECKS.json",
+      "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Health Sciences, Head, Health Service | Mrs. Kristal Liza Besario, MaN, RN",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_COMPOUND_LIVE_CHECKS.json",
+      "title": "FAQ (Registrar's Office): [Registrar] What are the required admission and enrollment documents for incoming freshmen at SPUS?",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_COMPOUND_LIVE_CHECKS.json",
+      "title": "FAQ (Registrar's Office): [Registrar] What are the required documents for transferee students enrolling at SPUS?",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_COMPOUND_LIVE_CHECKS.json",
+      "title": "FAQ (Scholarships): Does SPUS offer scholarships? Are there scholarships available? What scholarships are offered?",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_COMPOUND_LIVE_CHECKS.json",
+      "title": "SPUS Personnel | TOP MANAGEMENT | University President | Sr. Marie Rosanne Mallillin, SPCS",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_COMPOUND_LIVE_CHECKS.json",
+      "title": "FAQ (Registrar's Office): [Registrar] What is the step-by-step enrollment procedure for incoming freshmen at SPUS (Document URO-PR-005)?",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_COMPOUND_LIVE_CHECKS.json",
+      "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_COMPOUND_LIVE_CHECKS.json",
+      "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_COMPOUND_LIVE_CHECKS.json",
+      "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_COMPOUND_LIVE_CHECKS.json",
+      "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+      "exact_excerpt_present": true
+    },
+    {
+      "artifact": "PAULA_COMPOUND_LIVE_CHECKS.json",
+      "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Health Sciences, Head, Health Service | Mrs. Kristal Liza Besario, MaN, RN",
+      "exact_excerpt_present": true
+    }
+  ],
+  "limitation": "Verbatim preservation of cited knowledge in these cases; not a universal factual accuracy or freshness score"
+}

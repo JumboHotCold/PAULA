@@ -1,0 +1,71 @@
+{
+  "activation_to_all_workers_ready_ms": 83892.49,
+  "readiness": {
+    "ready": true,
+    "expected_workers": 3,
+    "ready_workers": 3,
+    "workers": [
+      {
+        "worker": 79,
+        "ready": true,
+        "social_router_ready": true,
+        "dimensions": 384,
+        "startup_ms": 53486.7
+      },
+      {
+        "worker": 71,
+        "ready": true,
+        "social_router_ready": true,
+        "dimensions": 384,
+        "startup_ms": 54012.04
+      },
+      {
+        "worker": 78,
+        "ready": true,
+        "social_router_ready": true,
+        "dimensions": 384,
+        "startup_ms": 52732.32
+      }
+    ],
+    "database_ready": true,
+    "knowledge_available": true,
+    "index_complete": true,
+    "knowledge": {
+      "FAQ": {
+        "total": 138,
+        "missing": 0
+      },
+      "Location": {
+        "total": 6,
+        "missing": 0
+      },
+      "StaffMember": {
+        "total": 12,
+        "missing": 0
+      },
+      "WebResource": {
+        "total": 476,
+        "missing": 0
+      }
+    }
+  },
+  "first_semantic_requests": [
+    {
+      "worker": "71",
+      "request_id": "d5a547e9-641e-43b5-9a5a-69004034ccf2",
+      "elapsed_ms": 380.09
+    },
+    {
+      "worker": "79",
+      "request_id": "6d52723b-45ac-4007-9eb3-973059cdf716",
+      "elapsed_ms": 379.7
+    },
+    {
+      "worker": "78",
+      "request_id": "8a5e0b44-64be-435d-8798-c322f9f801e6",
+      "elapsed_ms": 378.25
+    }
+  ],
+  "all_workers_observed": true,
+  "notes": "Activation includes Compose/startup. First semantic requests are made only after every worker reports readiness."
+}

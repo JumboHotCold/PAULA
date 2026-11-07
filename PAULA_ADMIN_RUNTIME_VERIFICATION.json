@@ -1,0 +1,80 @@
+{
+  "all_workers_ready": true,
+  "ready_workers": 3,
+  "admin_index_rendered_read_only": true,
+  "analytics_link_present": true,
+  "assets": [
+    {
+      "path": "/static/chatbot/images/SPUS-Logo1.webp",
+      "status": 200,
+      "content_type": "image/webp"
+    },
+    {
+      "path": "/static/unfold/css/simplebar/simplebar.css",
+      "status": 200,
+      "content_type": "text/css; charset=\"utf-8\""
+    },
+    {
+      "path": "/static/unfold/css/styles.css",
+      "status": 200,
+      "content_type": "text/css; charset=\"utf-8\""
+    },
+    {
+      "path": "/static/unfold/fonts/inter/styles.css",
+      "status": 200,
+      "content_type": "text/css; charset=\"utf-8\""
+    },
+    {
+      "path": "/static/unfold/fonts/material-symbols/styles.css",
+      "status": 200,
+      "content_type": "text/css; charset=\"utf-8\""
+    },
+    {
+      "path": "/static/unfold/js/alpine/alpine.anchor.js",
+      "status": 200,
+      "content_type": "text/javascript; charset=\"utf-8\""
+    },
+    {
+      "path": "/static/unfold/js/alpine/alpine.js",
+      "status": 200,
+      "content_type": "text/javascript; charset=\"utf-8\""
+    },
+    {
+      "path": "/static/unfold/js/alpine/alpine.persist.js",
+      "status": 200,
+      "content_type": "text/javascript; charset=\"utf-8\""
+    },
+    {
+      "path": "/static/unfold/js/alpine/alpine.resize.js",
+      "status": 200,
+      "content_type": "text/javascript; charset=\"utf-8\""
+    },
+    {
+      "path": "/static/unfold/js/alpine/alpine.sort.js",
+      "status": 200,
+      "content_type": "text/javascript; charset=\"utf-8\""
+    },
+    {
+      "path": "/static/unfold/js/app.js",
+      "status": 200,
+      "content_type": "text/javascript; charset=\"utf-8\""
+    },
+    {
+      "path": "/static/unfold/js/chart/chart.js",
+      "status": 200,
+      "content_type": "text/javascript; charset=\"utf-8\""
+    },
+    {
+      "path": "/static/unfold/js/htmx/htmx.js",
+      "status": 200,
+      "content_type": "text/javascript; charset=\"utf-8\""
+    },
+    {
+      "path": "/static/unfold/js/simplebar/simplebar.js",
+      "status": 200,
+      "content_type": "text/javascript; charset=\"utf-8\""
+    }
+  ],
+  "assets_passed": 14,
+  "notes": "Existing administrator used only for RequestFactory read-only rendering. No HTTP login, new account, session persistence or database mutations."
+}

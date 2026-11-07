@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-spus-green: #0A4D2E;
-  --color-spus-gold: #D4AF37;
+  --color-spus-green: #005301;
+  --color-spus-green-secondary: #215a2e;
+  --color-spus-gold: #deb402;
+  --color-spus-gold-bright: #fcd108;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
@@ -40,6 +42,8 @@
     --color-input-bg: #F9FAFB;
     --color-chat-bot-bg: #F1F5F9;
     --color-chat-bot-text: #1E293B;
+    /* Header brand colors stay independent of theme-adaptive action colors. */
+    --color-header-accent: var(--color-spus-green);
     
     /* Legacy aliases for backward compatibility */
     --text-dark: var(--color-text);
@@ -67,6 +71,7 @@ html[data-theme='dark'] {
     --color-input-bg: #0E1520;
     --color-chat-bot-bg: #1A2434;
     --color-chat-bot-text: #F1F5F9;
+    --color-header-accent: var(--color-spus-gold-bright);
     
     /* Balanced SPUS Palette for Dark Background Contrast */
     --spus-green: #10B981;
@@ -266,7 +271,8 @@ html[data-theme='dark'] .error-message {
    LANDING PAGE (AuthPage.jsx)
    ========================================= */
 .navbar {
-    background-color: var(--spus-green);
+    background-color: var(--color-spus-green);
+    border-bottom: 2px solid var(--color-spus-gold);
     padding: 15px 40px;
     display: flex;
     justify-content: space-between;
@@ -274,6 +280,25 @@ html[data-theme='dark'] .error-message {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     animation: fadeInUp 0.4s ease-out;
     flex-shrink: 0;
+}
+.navbar .theme-toggle {
+    width: 44px;
+    height: 44px;
+    background-color: var(--color-spus-green-secondary);
+    border-color: var(--color-spus-gold);
+    color: var(--color-spus-gold-bright);
+}
+html .navbar .theme-toggle:hover {
+    background-color: var(--color-spus-gold-bright);
+    border-color: var(--color-spus-gold-bright);
+    color: var(--color-spus-green);
+    box-shadow: none;
+    transform: none;
+}
+.navbar .theme-toggle:focus-visible,
+.navbar .brand:focus-visible {
+    outline: 2px solid var(--color-spus-gold-bright);
+    outline-offset: 4px;
 }
 .brand {
     display: flex;
@@ -286,7 +311,7 @@ html[data-theme='dark'] .error-message {
     font-family: var(--font-family-heading);
     font-size: 1.5em;
     font-weight: 700;
-    color: var(--spus-gold);
+    color: var(--color-spus-gold-bright);
     letter-spacing: -0.01em;
 }
 .brand-text p {
@@ -466,20 +491,18 @@ html[data-theme='dark'] .register-wrapper {
     animation: fadeInUp 0.6s ease-out;
 }
 .register-header {
-    background-color: var(--spus-green);
+    background-color: var(--color-spus-green);
+    border-bottom: 2px solid var(--color-spus-gold);
     color: #ffffff;
     padding: 30px;
     text-align: center;
-}
-html[data-theme='dark'] .register-header {
-    background-color: #064E3B;
 }
 .register-header h1 {
     font-family: var(--font-family-heading);
     font-size: 1.8em;
     font-weight: 700;
     margin-bottom: 5px;
-    color: var(--spus-gold);
+    color: var(--color-spus-gold-bright);
     letter-spacing: -0.015em;
 }
 .register-content {
@@ -674,12 +697,29 @@ html[data-theme='dark'] .register-header {
 .chat-title {
     font-family: var(--font-family-heading);
     font-weight: 600;
-    color: var(--color-primary);
+    color: var(--color-header-accent);
     font-size: 1.15em;
     letter-spacing: -0.015em;
 }
-html[data-theme='dark'] .chat-title {
-    color: var(--color-primary);
+.chat-login-btn {
+    background: none;
+    border: none;
+    color: var(--color-header-accent);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9em;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+.chat-login-btn:hover {
+    background-color: var(--color-surface-hover);
+}
+.chat-header .theme-toggle {
+    color: var(--color-header-accent);
+}
+.chat-header button:focus-visible {
+    outline: 2px solid var(--color-header-accent);
+    outline-offset: 3px;
 }
 .messages-container {
     flex: 1;
@@ -1417,9 +1457,9 @@ html[data-theme='dark'] .admin-skeleton {
     gap: 6px;
     padding: 6px 12px;
     border-radius: 9999px;
-    border: 1px solid rgba(212, 175, 55, 0.5);
-    background: rgba(212, 175, 55, 0.1);
-    color: var(--spus-gold);
+    border: 1px solid var(--color-spus-gold);
+    background: transparent;
+    color: var(--color-header-accent);
     cursor: pointer;
     transition: all 0.2s;
     font-size: 0.85em;
@@ -1428,7 +1468,7 @@ html[data-theme='dark'] .admin-skeleton {
     font-family: var(--font-family-sans);
 }
 .tour-toggle-btn:hover {
-    background: rgba(212, 175, 55, 0.2);
+    background: var(--color-surface-hover);
 }
 .tour-btn-label {
     display: inline;

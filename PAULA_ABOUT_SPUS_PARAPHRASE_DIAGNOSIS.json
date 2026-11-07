@@ -1,0 +1,19 @@
+{
+  "query": "why should i choose spus?",
+  "cutoff": 0.45,
+  "records": [
+    {
+      "record_id": 98,
+      "question": "Why choose SPUS? What makes SPUS special?",
+      "cosine_distance": 0.49669381995833906,
+      "eligible": true
+    },
+    {
+      "record_id": 116,
+      "question": "Why choose SPUS?",
+      "cosine_distance": 0.5830717931347009,
+      "eligible": true
+    }
+  ],
+  "database_unchanged": true
+}

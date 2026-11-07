@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { getCookie, ensureCsrfToken } from '../api/chatApi';
 import ThemeToggle from './ThemeToggle';
+import { userFromLogin } from '../authIdentity';
 
 export default function AuthPage({ onLogin, onNavigateRegister }) {
   const [studentId, setStudentId] = useState('');
@@ -30,7 +31,7 @@ export default function AuthPage({ onLogin, onNavigateRegister }) {
       const data = await res.json();
 
       if (res.ok) {
-        onLogin({ type: 'STUDENT', id: data.account_id || data.student_id || studentId.trim(), name: data.name || 'Student' });
+        onLogin(userFromLogin(data, studentId.trim()));
       } else {
         setError(data.error || 'Invalid credentials.');
       }
@@ -82,6 +83,7 @@ export default function AuthPage({ onLogin, onNavigateRegister }) {
                   className="form-input"
                   placeholder=" "
                   value={studentId}
+                  autoComplete="username" autoCapitalize="none" spellCheck={false} enterKeyHint="next"
                   onChange={(e) => setStudentId(e.target.value)}
                   required
                 />
@@ -95,6 +97,7 @@ export default function AuthPage({ onLogin, onNavigateRegister }) {
                   className="form-input"
                   placeholder=" "
                   value={password}
+                  autoComplete="current-password" enterKeyHint="go"
                   onChange={(e) => setPassword(e.target.value)}
                   required
                 />
@@ -105,6 +108,7 @@ export default function AuthPage({ onLogin, onNavigateRegister }) {
                 {isLoading ? 'Loading...' : 'Login'}
               </button>
             </form>
+            <a href="/admin" style={{ display: 'inline-flex', alignItems: 'center', minHeight: 44, marginTop: 12 }}>Administrator access</a>
           </div>
 
           {/* Guest Side */}

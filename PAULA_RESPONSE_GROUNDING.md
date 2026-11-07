@@ -1,5 +1,11 @@
 # PAULA Response Grounding Changes
 
+> Performance phase 1 (29 October 2026):
+> [PAULA_PERFORMANCE_PHASE1.md](PAULA_PERFORMANCE_PHASE1.md) records worker
+> readiness, request timings, provider deadlines, immediate display, and measured
+> benchmarks. Groq access is verified; `openai/gpt-oss-20b` is active after the
+> candidate comparison. The final benchmark recorded 66 successful provider calls.
+
 > Multi-part queries update (28 October 2026):
 > [PAULA_COMPOUND_QUERY_REPORT.md](PAULA_COMPOUND_QUERY_REPORT.md) describes
 > bounded decomposition, independent retrieval, partial answers, citations,

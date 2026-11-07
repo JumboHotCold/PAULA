@@ -13,6 +13,9 @@ Security Notes:
 from pathlib import Path
 import os
 from decouple import config
+from django.templatetags.static import static
+from django.conf import settings as django_settings
+from django.core.exceptions import ImproperlyConfigured
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,7 +32,14 @@ GEMINI_API_KEY = config('GEMINI_API_KEY', default='')
 
 # Groq API Key (Phase 2 — Live Chat AI Engine)
 GROQ_API_KEY = config('GROQ_API_KEY', default='')
-GROQ_MODEL = config('GROQ_MODEL', default='llama-3.3-70b-versatile')
+GROQ_MODEL = config('GROQ_MODEL', default='openai/gpt-oss-20b')
+PAULA_GROQ_ENABLED = config('PAULA_GROQ_ENABLED', default=True, cast=bool)
+PAULA_OPENAI_ENABLED = config('PAULA_OPENAI_ENABLED', default=False, cast=bool)
+PAULA_GENERATION_DEADLINE_SECONDS = min(8.0, max(.01, config('PAULA_GENERATION_DEADLINE_SECONDS', default=4.0, cast=float)))
+PAULA_PROVIDER_CALL_TIMEOUT_SECONDS = min(4.0, max(.01, config('PAULA_PROVIDER_CALL_TIMEOUT_SECONDS', default=3.0, cast=float)))
+PAULA_EMBEDDING_REVISION = config('PAULA_EMBEDDING_REVISION', default='1110a243fdf4706b3f48f1d95db1a4f5529b4d41')
+PAULA_EMBEDDING_MODEL_PATH = config('PAULA_EMBEDDING_MODEL_PATH', default='')
+PAULA_RUNTIME_DIR = config('PAULA_RUNTIME_DIR', default='/tmp/paula-runtime')
 
 # OpenAI API Key (Fallback AI Engine)
 OPENAI_API_KEY = config('OPENAI_API_KEY', default='')
@@ -40,6 +50,9 @@ RAG_MAX_COSINE_DISTANCE = config('RAG_MAX_COSINE_DISTANCE', default=0.45, cast=f
 
 # Debug mode controlled by environment
 DEBUG = config('DEBUG', default=False, cast=bool)
+
+# React and Django admin are separate interfaces during Vite development.
+PAULA_FRONTEND_ORIGIN = (config('PAULA_FRONTEND_ORIGIN', default='') or ('http://localhost:5173' if DEBUG else '')).rstrip('/')
 
 # Allowed hosts from environment
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1').split(',')
@@ -73,10 +86,12 @@ INSTALLED_APPS = [
 # =============================================================================
 
 UNFOLD = {
-    "SITE_TITLE": "PauliBot Admin",
-    "SITE_HEADER": "PauliBot",
+    "SITE_TITLE": "PAULA Administration",
+    "SITE_HEADER": "PAULA",
     "SITE_SUBHEADER": "Saint Paul University Surigao",
-    "SITE_LOGO": "chatbot/images/SPUS-Logo1.webp",
+    "SITE_LOGO": lambda request: static('chatbot/images/SPUS-Logo1.webp'),
+    "SITE_URL": lambda request: django_settings.PAULA_FRONTEND_ORIGIN or '/',
+    "SITE_FAVICONS": [{"rel": "icon", "href": lambda request: static('chatbot/images/SPUS-Logo1.webp')}],
     "SHOW_HISTORY": True,
     "SHOW_VIEW_ON_SITE": True,
     "COLORS": {
@@ -85,10 +100,10 @@ UNFOLD = {
             "100": "#dcfce7",
             "200": "#bbf7d0",
             "300": "#86efac",
-            "400": "#4ade80",
-            "500": "#0A4D2E",
-            "600": "#083d25",
-            "700": "#06301d",
+            "400": "#fcd108",
+            "500": "#deb402",
+            "600": "#215a2e",
+            "700": "#005301",
             "800": "#052416",
             "900": "#041a10",
             "950": "#020d08",
@@ -98,6 +113,13 @@ UNFOLD = {
         "show_search": True,
         "show_all_applications": True,
         "navigation": [
+            {
+                "title": "PAULA Workspace",
+                "items": [
+                    {"title": "Institutional Analytics", "link": lambda request: f'{django_settings.PAULA_FRONTEND_ORIGIN}/admin', "icon": "analytics", "permission": lambda request: request.user.is_superuser},
+                    {"title": "Assistant & Campus Map", "link": lambda request: f'{django_settings.PAULA_FRONTEND_ORIGIN}/', "icon": "map"},
+                ],
+            },
             {
                 "title": "Knowledge Base",
                 "icon": "library_books",
@@ -128,7 +150,9 @@ UNFOLD = {
 }
 
 MIDDLEWARE = [
+    'chatbot.performance.RequestTimingMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',  # CORS support
     'django.middleware.common.CommonMiddleware',
@@ -163,8 +187,10 @@ WSGI_APPLICATION = 'paulibot.wsgi.application'
 # =============================================================================
 
 # PostgreSQL configuration with environment variables
-# Falls back to SQLite3 for local development if PostgreSQL is not configured
-USE_POSTGRES = config('USE_POSTGRES', default='false', cast=str).lower() == 'true'
+# PostgreSQL/pgvector is required. Fail explicitly rather than reading another DB.
+USE_POSTGRES = config('USE_POSTGRES', default=True, cast=bool)
+if not USE_POSTGRES:
+    raise ImproperlyConfigured('PAULA requires PostgreSQL. Set USE_POSTGRES=true.')
 
 if USE_POSTGRES:
     # PostgreSQL (for Docker/Production)
@@ -176,14 +202,7 @@ if USE_POSTGRES:
             'PASSWORD': config('POSTGRES_PASSWORD', default='password'),
             'HOST': config('POSTGRES_HOST', default='localhost'),
             'PORT': config('POSTGRES_PORT', default='5432'),
-        }
-    }
-else:
-    # SQLite3 (for local development without Docker)
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+            'OPTIONS': {'connect_timeout': max(1, config('POSTGRES_CONNECT_TIMEOUT', default=3, cast=int))},
         }
     }
 
@@ -261,6 +280,12 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:5175",
 ]
 
+# Explicit origins for a hosted frontend; local development defaults stay intact.
+for _name in ('CORS_ALLOWED_ORIGINS', 'CSRF_TRUSTED_ORIGINS'):
+    _configured = config(_name, default=None)
+    if _configured is not None:
+        globals()[_name] = [value.strip() for value in _configured.split(',') if value.strip()]
+
 # =============================================================================
 # INTERNATIONALIZATION
 # =============================================================================
@@ -274,14 +299,25 @@ USE_TZ = True
 # STATIC FILES CONFIGURATION
 # =============================================================================
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+STORAGES = {
+    'default': {'BACKEND': 'django.core.files.storage.FileSystemStorage'},
+    'staticfiles': {'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage'},
+}
 
 # =============================================================================
 # DEFAULT FIELD CONFIGURATION
 # =============================================================================
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {'paula_console': {'class': 'logging.StreamHandler'}},
+    'loggers': {'paula.performance': {'handlers': ['paula_console'], 'level': 'INFO', 'propagate': False}},
+}
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'

@@ -8,6 +8,7 @@ import re
 from .grounding import eligible_evidence, terms
 from .intents import enrollment_category, enrollment_request, enrollment_subject
 from .retrieval_types import EvidenceList
+from .performance import timed
 
 
 def enrollment_lookup_topic(query):
@@ -23,6 +24,7 @@ def enrollment_lookup_topic(query):
     return 'documents' if re.search(r'\b(requirements?|documents?|papers)\b', query, re.I) else 'procedure'
 
 
+@timed('structured_enrollment')
 def exact_enrollment_lookup(query, records=None):
     topic = enrollment_lookup_topic(query)
     if topic is None:

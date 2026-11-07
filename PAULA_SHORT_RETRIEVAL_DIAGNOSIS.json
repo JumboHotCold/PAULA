@@ -1,0 +1,528 @@
+{
+  "missing_embeddings": {
+    "FAQ": 0,
+    "Location": 0,
+    "StaffMember": 0,
+    "WebResource": 0
+  },
+  "queries": [
+    {
+      "query": "What programs are offered?",
+      "status": "no_match",
+      "ms": 235.88,
+      "selected": [],
+      "faq_candidates": [
+        {
+          "id": 114,
+          "question": "What college courses or programs are available?",
+          "distance": 0.5588172910835265,
+          "eligible": true
+        },
+        {
+          "id": 117,
+          "question": "What TVET or TESDA programs are offered?",
+          "distance": 0.5607763339477174,
+          "eligible": true
+        },
+        {
+          "id": 147,
+          "question": "What programs are offered at SPUS? What are the available undergraduate programs? What courses are available?",
+          "distance": 0.5619113221062775,
+          "eligible": true
+        },
+        {
+          "id": 146,
+          "question": "What programs are offered at SPUS?",
+          "distance": 0.5655534812142655,
+          "eligible": true
+        },
+        {
+          "id": 4,
+          "question": "What is the courses information?",
+          "distance": 0.5963465267936163,
+          "eligible": true
+        },
+        {
+          "id": 113,
+          "question": "Does SPUS offer scholarships? Are there scholarships available? What scholarships are offered?",
+          "distance": 0.6017053129829917,
+          "eligible": false
+        },
+        {
+          "id": 3,
+          "question": "What is the scholarship information? What financial assistance or grants does SPUS offer?",
+          "distance": 0.6097683506789828,
+          "eligible": false
+        },
+        {
+          "id": 106,
+          "question": "What TVET or TESDA programs does SPUS offer? What are the TESDA training and assessment center programs?",
+          "distance": 0.6237214951183168,
+          "eligible": true
+        },
+        {
+          "id": 102,
+          "question": "What programs does the College of Education, Arts and Sciences offer?",
+          "distance": 0.628157362718265,
+          "eligible": true
+        },
+        {
+          "id": 115,
+          "question": "Does SPUS offer Graduate School programs?",
+          "distance": 0.6349076789507457,
+          "eligible": true
+        },
+        {
+          "id": 104,
+          "question": "What programs does the College of Engineering and Information Technology offer? Does SPUS offer IT or Engineering?",
+          "distance": 0.6490009604693578,
+          "eligible": true
+        },
+        {
+          "id": 101,
+          "question": "What programs does the SPUS College of Health Sciences offer? Does SPUS offer Nursing or Psychology?",
+          "distance": 0.6551166341056323,
+          "eligible": true
+        },
+        {
+          "id": 109,
+          "question": "How do I enroll in Grade 7?",
+          "distance": 0.6666313211038879,
+          "eligible": false
+        },
+        {
+          "id": 1,
+          "question": "What is the enrollment information?",
+          "distance": 0.6991913854111871,
+          "eligible": false
+        },
+        {
+          "id": 92,
+          "question": "What are the enrollment requirements for Nursery, Kindergarten, and Grade 1?",
+          "distance": 0.701087856422405,
+          "eligible": false
+        }
+      ]
+    },
+    {
+      "query": "What programs are offered at SPUS?",
+      "status": "ok",
+      "ms": 6.89,
+      "selected": [
+        {
+          "id": 146,
+          "title": "What programs are offered at SPUS?",
+          "distance": null
+        }
+      ],
+      "faq_candidates": [
+        {
+          "id": 4,
+          "question": "What is the courses information?",
+          "distance": 0.27019919575448015,
+          "eligible": true
+        },
+        {
+          "id": 146,
+          "question": "What programs are offered at SPUS?",
+          "distance": 0.30172284255759974,
+          "eligible": true
+        },
+        {
+          "id": 147,
+          "question": "What programs are offered at SPUS? What are the available undergraduate programs? What courses are available?",
+          "distance": 0.34143076364489655,
+          "eligible": true
+        },
+        {
+          "id": 114,
+          "question": "What college courses or programs are available?",
+          "distance": 0.3543761583790873,
+          "eligible": true
+        },
+        {
+          "id": 115,
+          "question": "Does SPUS offer Graduate School programs?",
+          "distance": 0.3695426991445627,
+          "eligible": true
+        },
+        {
+          "id": 113,
+          "question": "Does SPUS offer scholarships? Are there scholarships available? What scholarships are offered?",
+          "distance": 0.3849032750668093,
+          "eligible": false
+        },
+        {
+          "id": 3,
+          "question": "What is the scholarship information? What financial assistance or grants does SPUS offer?",
+          "distance": 0.391829317077635,
+          "eligible": false
+        },
+        {
+          "id": 104,
+          "question": "What programs does the College of Engineering and Information Technology offer? Does SPUS offer IT or Engineering?",
+          "distance": 0.39708695999047017,
+          "eligible": true
+        },
+        {
+          "id": 100,
+          "question": "What is the SPUS College Department? How do I contact the registrar?",
+          "distance": 0.41030152409369935,
+          "eligible": false
+        },
+        {
+          "id": 106,
+          "question": "What TVET or TESDA programs does SPUS offer? What are the TESDA training and assessment center programs?",
+          "distance": 0.43312398890030324,
+          "eligible": true
+        },
+        {
+          "id": 117,
+          "question": "What TVET or TESDA programs are offered?",
+          "distance": 0.44628913220367994,
+          "eligible": true
+        },
+        {
+          "id": 121,
+          "question": "What is the university's Data Privacy Policy?",
+          "distance": 0.44954471741216306,
+          "eligible": false
+        },
+        {
+          "id": 101,
+          "question": "What programs does the SPUS College of Health Sciences offer? Does SPUS offer Nursing or Psychology?",
+          "distance": 0.4503086850691018,
+          "eligible": true
+        },
+        {
+          "id": 1,
+          "question": "What is the enrollment information?",
+          "distance": 0.45148657117743973,
+          "eligible": false
+        },
+        {
+          "id": 153,
+          "question": "[About SPUS.txt] What are the SPUS campuses and what does each campus house?",
+          "distance": 0.47532270481030503,
+          "eligible": false
+        }
+      ]
+    },
+    {
+      "query": "What courses are available?",
+      "status": "ok",
+      "ms": 91.76,
+      "selected": [
+        {
+          "id": 114,
+          "title": "What college courses or programs are available?",
+          "distance": 0.43504653677482985
+        }
+      ],
+      "faq_candidates": [
+        {
+          "id": 114,
+          "question": "What college courses or programs are available?",
+          "distance": 0.43504653677482985,
+          "eligible": true
+        },
+        {
+          "id": 147,
+          "question": "What programs are offered at SPUS? What are the available undergraduate programs? What courses are available?",
+          "distance": 0.4734804630279541,
+          "eligible": true
+        },
+        {
+          "id": 4,
+          "question": "What is the courses information?",
+          "distance": 0.4905503836438172,
+          "eligible": true
+        },
+        {
+          "id": 146,
+          "question": "What programs are offered at SPUS?",
+          "distance": 0.49583910393235375,
+          "eligible": true
+        },
+        {
+          "id": 102,
+          "question": "What programs does the College of Education, Arts and Sciences offer?",
+          "distance": 0.5406846702098846,
+          "eligible": true
+        },
+        {
+          "id": 103,
+          "question": "What programs does the College of Business Management and Accountancy offer? Does SPUS offer Accountancy or HRM?",
+          "distance": 0.5589157676050517,
+          "eligible": true
+        },
+        {
+          "id": 106,
+          "question": "What TVET or TESDA programs does SPUS offer? What are the TESDA training and assessment center programs?",
+          "distance": 0.5631881356239319,
+          "eligible": true
+        },
+        {
+          "id": 117,
+          "question": "What TVET or TESDA programs are offered?",
+          "distance": 0.5722349031111533,
+          "eligible": true
+        },
+        {
+          "id": 109,
+          "question": "How do I enroll in Grade 7?",
+          "distance": 0.5836680929265103,
+          "eligible": false
+        },
+        {
+          "id": 101,
+          "question": "What programs does the SPUS College of Health Sciences offer? Does SPUS offer Nursing or Psychology?",
+          "distance": 0.6089009539307807,
+          "eligible": true
+        },
+        {
+          "id": 104,
+          "question": "What programs does the College of Engineering and Information Technology offer? Does SPUS offer IT or Engineering?",
+          "distance": 0.6167373955249786,
+          "eligible": true
+        },
+        {
+          "id": 115,
+          "question": "Does SPUS offer Graduate School programs?",
+          "distance": 0.6186323761940002,
+          "eligible": true
+        },
+        {
+          "id": 105,
+          "question": "What programs does the College of Criminal Justice Education offer? Does SPUS offer Criminology or Forensic Science?",
+          "distance": 0.6186983358084157,
+          "eligible": true
+        },
+        {
+          "id": 91,
+          "question": "What are the enrollment requirements for incoming Grade 7 students?",
+          "distance": 0.6414951980113983,
+          "eligible": false
+        },
+        {
+          "id": 113,
+          "question": "Does SPUS offer scholarships? Are there scholarships available? What scholarships are offered?",
+          "distance": 0.648917068508776,
+          "eligible": false
+        }
+      ]
+    },
+    {
+      "query": "What scholarships are available?",
+      "status": "ok",
+      "ms": 92.62,
+      "selected": [
+        {
+          "id": 149,
+          "title": "Are there scholarships available?",
+          "distance": 0.34387979936241475
+        },
+        {
+          "id": 113,
+          "title": "Does SPUS offer scholarships? Are there scholarships available? What scholarships are offered?",
+          "distance": 0.3733389190834435
+        },
+        {
+          "id": 3,
+          "title": "What is the scholarship information? What financial assistance or grants does SPUS offer?",
+          "distance": 0.4234125270493334
+        }
+      ],
+      "faq_candidates": [
+        {
+          "id": 149,
+          "question": "Are there scholarships available?",
+          "distance": 0.34387979936241475,
+          "eligible": true
+        },
+        {
+          "id": 113,
+          "question": "Does SPUS offer scholarships? Are there scholarships available? What scholarships are offered?",
+          "distance": 0.3733389190834435,
+          "eligible": true
+        },
+        {
+          "id": 3,
+          "question": "What is the scholarship information? What financial assistance or grants does SPUS offer?",
+          "distance": 0.4234125270493334,
+          "eligible": true
+        },
+        {
+          "id": 114,
+          "question": "What college courses or programs are available?",
+          "distance": 0.57376541417138,
+          "eligible": false
+        },
+        {
+          "id": 146,
+          "question": "What programs are offered at SPUS?",
+          "distance": 0.5871522899613465,
+          "eligible": false
+        },
+        {
+          "id": 147,
+          "question": "What programs are offered at SPUS? What are the available undergraduate programs? What courses are available?",
+          "distance": 0.5945558547973633,
+          "eligible": false
+        },
+        {
+          "id": 102,
+          "question": "What programs does the College of Education, Arts and Sciences offer?",
+          "distance": 0.5953230261802673,
+          "eligible": false
+        },
+        {
+          "id": 115,
+          "question": "Does SPUS offer Graduate School programs?",
+          "distance": 0.6325513124465942,
+          "eligible": false
+        },
+        {
+          "id": 29,
+          "question": "Handbook: On August 4, 2021, consistent honor student Rhea Marie B. Mula of Grade 12 HUMSS (Page 86, Part 2)",
+          "distance": 0.6510709344064051,
+          "eligible": false
+        },
+        {
+          "id": 116,
+          "question": "Why choose SPUS?",
+          "distance": 0.6592175662517548,
+          "eligible": false
+        },
+        {
+          "id": 22,
+          "question": "Handbook: July 23, 2021, St. Paul University Surigao Basic Education Department successful (Page 83, Part 2)",
+          "distance": 0.6665854354747864,
+          "eligible": false
+        },
+        {
+          "id": 100,
+          "question": "What is the SPUS College Department? How do I contact the registrar?",
+          "distance": 0.6725648240706423,
+          "eligible": false
+        },
+        {
+          "id": 93,
+          "question": "What are the enrollment requirements for incoming Grade 11 (SHS) students?",
+          "distance": 0.672936737537384,
+          "eligible": false
+        },
+        {
+          "id": 109,
+          "question": "How do I enroll in Grade 7?",
+          "distance": 0.6738615243269808,
+          "eligible": false
+        },
+        {
+          "id": 98,
+          "question": "Why choose SPUS? What makes SPUS special?",
+          "distance": 0.6804090738296509,
+          "eligible": false
+        }
+      ]
+    },
+    {
+      "query": "What services are offered?",
+      "status": "no_match",
+      "ms": 84.96,
+      "selected": [],
+      "faq_candidates": [
+        {
+          "id": 117,
+          "question": "What TVET or TESDA programs are offered?",
+          "distance": 0.5983790159225435,
+          "eligible": true
+        },
+        {
+          "id": 106,
+          "question": "What TVET or TESDA programs does SPUS offer? What are the TESDA training and assessment center programs?",
+          "distance": 0.6584029699323786,
+          "eligible": true
+        },
+        {
+          "id": 113,
+          "question": "Does SPUS offer scholarships? Are there scholarships available? What scholarships are offered?",
+          "distance": 0.6865373943287898,
+          "eligible": false
+        },
+        {
+          "id": 41,
+          "question": "Handbook: research and community service; (Page 91, Part 2)",
+          "distance": 0.6908520644395307,
+          "eligible": false
+        },
+        {
+          "id": 3,
+          "question": "What is the scholarship information? What financial assistance or grants does SPUS offer?",
+          "distance": 0.6909714341163613,
+          "eligible": false
+        },
+        {
+          "id": 40,
+          "question": "Handbook: research and community service; (Page 91, Part 1)",
+          "distance": 0.6923711299896218,
+          "eligible": false
+        },
+        {
+          "id": 69,
+          "question": "Handbook: policies, rules and regulations for the effective management of the dormitory to (Page 173, Part 1)",
+          "distance": 0.7065672278404215,
+          "eligible": true
+        },
+        {
+          "id": 14,
+          "question": "Handbook: INTERVENTIONS (Page 275, Part 1)",
+          "distance": 0.7140581948687799,
+          "eligible": false
+        },
+        {
+          "id": 4,
+          "question": "What is the courses information?",
+          "distance": 0.7186644161145552,
+          "eligible": false
+        },
+        {
+          "id": 147,
+          "question": "What programs are offered at SPUS? What are the available undergraduate programs? What courses are available?",
+          "distance": 0.7219138013175839,
+          "eligible": false
+        },
+        {
+          "id": 46,
+          "question": "Handbook: (revisit and innovate) systems to respond to the needs of every stakeholder we a (Page 95, Part 1)",
+          "distance": 0.7436085947026497,
+          "eligible": true
+        },
+        {
+          "id": 146,
+          "question": "What programs are offered at SPUS?",
+          "distance": 0.7439564542783352,
+          "eligible": false
+        },
+        {
+          "id": 149,
+          "question": "Are there scholarships available?",
+          "distance": 0.7478422001647284,
+          "eligible": false
+        },
+        {
+          "id": 73,
+          "question": "Handbook: On terms and conditions and available scholarship, the student may see the Schol (Page 227, Part 1)",
+          "distance": 0.7518652900497519,
+          "eligible": false
+        },
+        {
+          "id": 114,
+          "question": "What college courses or programs are available?",
+          "distance": 0.753016032188652,
+          "eligible": false
+        }
+      ]
+    }
+  ]
+}

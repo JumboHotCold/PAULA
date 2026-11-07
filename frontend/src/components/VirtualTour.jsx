@@ -241,7 +241,8 @@ export default function VirtualTour({ className = "" }) {
       setTappedNode(null);
       setHoveredNode(null);
     }
-    handleImageClickCoordLogger(e);
+    // Calibration is a deliberate developer action, not a normal mobile tap.
+    if (import.meta.env.DEV && e.altKey) handleImageClickCoordLogger(e);
   };
 
   if (viewMode === 'aerial') {
@@ -254,8 +255,8 @@ export default function VirtualTour({ className = "" }) {
         </div>
 
         {/* Aerial Image Container */}
-        <div className="flex-1 w-full h-full relative flex items-center justify-center p-2 sm:p-4">
-          <div className="relative inline-block max-w-full max-h-full">
+        <div className="vt-aerial-area flex-1 w-full relative flex items-center justify-center p-2 sm:p-4">
+          <div className="vt-aerial-wrapper relative inline-block max-w-full max-h-full">
             <img
               src="/images/SmartVirtualTour/SPUS_aerial_view.png"
               alt="SPUS Aerial View"
@@ -265,10 +266,11 @@ export default function VirtualTour({ className = "" }) {
 
             {/* Render interactive nodes */}
             {Object.values(NODES).map(node => (
-              <div
+              <button type="button"
                 key={node.id}
-                className="absolute -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer z-10"
+                className="vt-location-pin absolute -translate-x-1/2 -translate-y-1/2 flex flex-col items-center group cursor-pointer z-10"
                 style={{ top: node.top, left: node.left }}
+                aria-label={`Preview ${node.name}`} aria-expanded={tappedNode === node.id}
                 onMouseEnter={() => setHoveredNode(node.id)}
                 onMouseLeave={() => { if (tappedNode !== node.id) setHoveredNode(null); }}
                 onClick={(e) => handleNodeInteraction(e, node)}
@@ -293,9 +295,15 @@ export default function VirtualTour({ className = "" }) {
                      <MaterialIcon name="explore" size={14} color="var(--spus-gold)" /> {('ontouchstart' in window) ? 'Tap again to enter 360°' : 'Click to Enter 360°'}
                    </div>
                 </div>
-              </div>
+              </button>
             ))}
           </div>
+        </div>
+        <div className="vt-location-list" role="group" aria-label="Virtual tour locations">
+          {Object.values(NODES).map(node => <button type="button" key={node.id}
+            onClick={() => { setCurrentNodeId(node.id); setViewMode('360'); setTappedNode(null); }}>
+            <MaterialIcon name="explore" size={18} />{node.name}
+          </button>)}
         </div>
       </div>
     );
@@ -308,7 +316,8 @@ export default function VirtualTour({ className = "" }) {
   ];
 
   return (
-    <div className={`virtual-tour-container relative w-full h-full rounded-2xl overflow-hidden shadow-lg border border-gray-200 ${className}`}>
+    <div className={`virtual-tour-container vt-panorama-layout relative w-full h-full rounded-2xl overflow-hidden shadow-lg border border-gray-200 ${className}`}>
+      <div className="vt-panorama-toolbar">
       {/* Overlay header */}
       <div className="vt-header absolute top-3 left-3 z-10 bg-white/90 backdrop-blur px-3 py-1.5 rounded-xl shadow border border-gray-200 flex flex-col pointer-events-none">
         <span className="text-xs text-spus-gold font-bold uppercase tracking-wider">Smart Virtual Tour</span>
@@ -322,9 +331,10 @@ export default function VirtualTour({ className = "" }) {
         <MaterialIcon name="arrow_back" size={18} color="var(--spus-green)" className="group-hover:-translate-x-0.5 transition-transform" /> 
         <span className="vt-back-label">Back to Aerial View</span>
       </button>
+      </div>
 
       {/* key={currentNodeId} forces a clean remount when navigating between nodes */}
-      <ReactPhotoSphereViewer
+      <div className="vt-viewer"><ReactPhotoSphereViewer
         key={currentNodeId}
         src={currentNode?.panorama}
         height="100%"
@@ -333,7 +343,7 @@ export default function VirtualTour({ className = "" }) {
         onReady={handleReady}
         navbar={['zoom', 'fullscreen']}
         defaultZoomLvl={30}
-      />
+      /></div>
     </div>
   );
 }

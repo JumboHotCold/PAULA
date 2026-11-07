@@ -1,0 +1,50 @@
+{
+  "activation_to_all_workers_ready_ms": 94436.47,
+  "readiness": {
+    "ready": true,
+    "expected_workers": 3,
+    "ready_workers": 3,
+    "workers": [
+      {
+        "worker": 55,
+        "ready": true,
+        "social_router_ready": true,
+        "dimensions": 384,
+        "startup_ms": 64689.94
+      },
+      {
+        "worker": 56,
+        "ready": true,
+        "social_router_ready": true,
+        "dimensions": 384,
+        "startup_ms": 65120.48
+      },
+      {
+        "worker": 57,
+        "ready": true,
+        "social_router_ready": true,
+        "dimensions": 384,
+        "startup_ms": 65388.14
+      }
+    ]
+  },
+  "first_semantic_requests": [
+    {
+      "worker": "56",
+      "request_id": "edc5e641-3f20-4a8a-8e31-ff1c6d47c621",
+      "elapsed_ms": 1199.61
+    },
+    {
+      "worker": "57",
+      "request_id": "e33700d1-eb03-4989-be7f-78bf2ba849e7",
+      "elapsed_ms": 1198.16
+    },
+    {
+      "worker": "55",
+      "request_id": "5818bf9b-670e-4b6e-b86d-3faa18a1045c",
+      "elapsed_ms": 1197.85
+    }
+  ],
+  "all_workers_observed": true,
+  "notes": "Activation includes Compose/startup. First semantic requests are made only after every worker reports readiness."
+}

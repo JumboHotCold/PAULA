@@ -9,6 +9,7 @@ import json
 import re
 import time
 from .query_normalization import roles_in
+from .performance import timed
 
 MAX_MESSAGES = 8
 MAX_USER_CHARS = 2000
@@ -20,7 +21,8 @@ FOLLOW = re.compile(r'^(?:how about|what about|and(?: for)?|also(?: for)?|paano 
 PRONOUN = re.compile(r'\b(it|its|they|their|them|that|those|this|there|ito|iyan|iyon|nito|niyan|nila|doon)\b', re.I)
 QUESTION = re.compile(r'^(?:who|what|where|when|why|how|does|do|is|are|can|which|sino|ano|saan|nasaan|kailan|paano)\b', re.I)
 FILLERS = re.compile(r'\b(?:please|po|naman|ang|sa|the|a|an)\b', re.I)
-ATTRIBUTE = re.compile(r'^(?:what(?: are| is)?|how about|what about|ano(?: ang)?|paano naman(?: ang)?)\s+'
+ATTRIBUTE_CONTEXT_INTRO = r'(?:how about|what about|ano(?: naman)?(?: ang)?|paano naman(?: ang)?)'
+ATTRIBUTE = re.compile(r'^(?:what(?: are| is)?|' + ATTRIBUTE_CONTEXT_INTRO + r')\s+'
                        r'(?:the |its |their |mga )?(?:requirements?|documents?|fees?|cost|office hours|hours|schedule|deadline|'
                        r'eligibility|qualifications?|contact|location|policy|policies|process|procedure|steps?)\b', re.I)
 
@@ -186,13 +188,14 @@ def _attribute_query(text, previous, vocabulary):
         return None
     # Retain the user's complete attribute request; translate only structural
     # question words, never university facts. Dates/conditions stay attached.
-    value = re.sub(r'^(?:how about|what about|paano naman(?: ang)?|ano ang)\s+', 'What are ', text, flags=re.I)
+    value = re.sub(r'^' + ATTRIBUTE_CONTEXT_INTRO + r'\s+', 'What are ', text, flags=re.I)
     value = re.sub(r'\b(?:its|their|it|them|nito|nila)\b', 'the', value, flags=re.I).rstrip(' ?!.')
     years = re.findall(r'\b20\d{2}\b', previous)
     tail = ''.join(' in ' + year for year in years if year not in value and year not in subject)
     return value + ' for ' + subject + tail + '?'
 
 
+@timed('context_resolution')
 def resolve_turn(text, previous='', vocabulary=None):
     from .compound_queries import decompose_query
     vocabulary = vocabulary or builtin_vocabulary()
@@ -238,7 +241,7 @@ def resolve_turn(text, previous='', vocabulary=None):
     if reference and re.search(r'\b(explain|elaborate|clarify|repeat|detail|ipaliwanag|paliwanag|ulit)\b', text, re.I):
         unique_previous = previous and len(decompose_query(previous, vocabulary).queries) == 1
         return Resolution((previous,), 'reference', reference=int(reference.group(1)), **base) if unique_previous else Resolution(clarification=clarification(text), **base)
-    from .compound_queries import DEPENDENT_ACTION, MAX_PARTS, bind_dependent, decompose_query
+    from .compound_queries import MAX_PARTS, bind_dependent, decompose_query, dependent_request
     plan = decompose_query(text, vocabulary)
     if plan.clarification:
         return Resolution(clarification=plan.clarification, blocked=True, **base)
@@ -248,9 +251,9 @@ def resolve_turn(text, previous='', vocabulary=None):
         queries = []
         prior = previous
         for part in plan.queries:
-            antecedent = '; '.join(queries) if len(queries) > 1 and (PRONOUN.search(part) or DEPENDENT_ACTION.fullmatch(part)) else prior
-            if not (len(queries) > 1 and DEPENDENT_ACTION.fullmatch(part)):
-                part = bind_dependent(part, antecedent)
+            antecedent = '; '.join(queries) if len(queries) > 1 and (PRONOUN.search(part) or dependent_request(part)) else prior
+            if not (len(queries) > 1 and dependent_request(part)):
+                part = bind_dependent(part, antecedent, vocabulary)
             result = resolve_turn(part, antecedent, vocabulary)
             # Keep an unresolved part as a question; orchestration will ask
             # about that part without discarding independently supported ones.
@@ -263,8 +266,8 @@ def resolve_turn(text, previous='', vocabulary=None):
     # A prior multi-part turn does not establish a unique singular referent.
     # Explicit entity follow-ups may select the one compatible prior slot.
     prior_plan = decompose_query(previous, vocabulary) if previous else None
-    if DEPENDENT_ACTION.fullmatch(text):
-        bound = bind_dependent(text, previous) if not prior_plan or len(prior_plan.queries) == 1 else text
+    if dependent_request(text):
+        bound = bind_dependent(text, previous, vocabulary) if not prior_plan or len(prior_plan.queries) == 1 else text
         return (Resolution((bound,), 'followup', **base) if bound != text else
                 Resolution(clarification=clarification(text), **base))
     if prior_plan and len(prior_plan.queries) > 1 and (FOLLOW.match(text) or PRONOUN.search(text) or ATTRIBUTE.match(text)):
@@ -321,9 +324,27 @@ def resolve_turn(text, previous='', vocabulary=None):
     return Resolution(clarification=clarification(text), **base)
 
 
-def resolve_conversation(text, history=None, vocabulary=None):
+def dialogue_history(history):
+    """Social interludes never replace a task or pending clarification."""
+    from .dialogue import route_turn
+    from .query_understanding import incomplete_request, REPHRASE_EN, REPHRASE_FIL
+    from .response_style import strip_intro
+    rows = bounded_history(history)
+    result = []
+    for index in range(0, len(rows), 2):
+        route = route_turn(rows[index]['content'])
+        if route.kind != 'knowledge':
+            continue
+        if (incomplete_request(route.query) and
+                strip_intro(rows[index + 1]['content']).startswith((REPHRASE_EN, REPHRASE_FIL))):
+            continue
+        result.extend([{**rows[index], 'content': route.query or rows[index]['content']}, rows[index + 1]])
+    return result
+
+
+def conversation_anchor(history=None, vocabulary=None, *, filtered=False):
     from .intents import enrollment_resolution, enrollment_request, enrollment_category, normalize_query
-    history = bounded_history(history)
+    history = history if filtered else dialogue_history(history)
     previous = ''
     for index in range(0, len(history), 2):
         user = normalize_query(history[index]['content'])
@@ -340,7 +361,11 @@ def resolve_conversation(text, history=None, vocabulary=None):
             previous = result.queries[-1]
         elif result.relation == 'standalone':
             previous = user
-    return resolve_turn(text, previous, vocabulary)
+    return previous
+
+
+def resolve_conversation(text, history=None, vocabulary=None):
+    return resolve_turn(text, conversation_anchor(history, vocabulary), vocabulary)
 
 
 def validated_edit(payload, current, previous):

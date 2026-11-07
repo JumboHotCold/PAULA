@@ -1,0 +1,22 @@
+﻿{
+    "database_ready":  true,
+    "ready_workers":  3,
+    "expected_workers":  3,
+    "proxy_checks":  [
+                         {
+                             "query":  "ty",
+                             "saved":  false,
+                             "sources":  0,
+                             "mode":  "thanks",
+                             "passed":  true
+                         },
+                         {
+                             "query":  "What programs are offered?",
+                             "saved":  false,
+                             "sources":  1,
+                             "mode":  "knowledge",
+                             "passed":  true
+                         }
+                     ],
+    "index_complete":  true
+}

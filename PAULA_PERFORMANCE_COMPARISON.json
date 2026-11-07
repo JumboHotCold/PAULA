@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "case": "personnel",
+      "before_p50_ms": 106.28,
+      "before_p95_ms": 3888.1,
+      "after_p50_ms": 95.28,
+      "after_p95_ms": 114.19,
+      "after_workers": [
+        "55",
+        "56",
+        "57"
+      ]
+    },
+    {
+      "case": "structured_compound",
+      "before_p50_ms": 183.42,
+      "before_p95_ms": 234.01,
+      "after_p50_ms": 171.12,
+      "after_p95_ms": 200.32,
+      "after_workers": [
+        "55",
+        "56",
+        "57"
+      ]
+    },
+    {
+      "case": "enrollment",
+      "before_p50_ms": 43.76,
+      "before_p95_ms": 61.15,
+      "after_p50_ms": 45.73,
+      "after_p95_ms": 85.88,
+      "after_workers": [
+        "55",
+        "56",
+        "57"
+      ]
+    },
+    {
+      "case": "semantic_calendar",
+      "before_p50_ms": 109.97,
+      "before_p95_ms": 20153.28,
+      "after_p50_ms": 91.43,
+      "after_p95_ms": 110.12,
+      "after_workers": [
+        "55",
+        "56",
+        "57"
+      ]
+    },
+    {
+      "case": "scholarships",
+      "before_p50_ms": 714.93,
+      "before_p95_ms": 1627.81,
+      "after_p50_ms": 91.58,
+      "after_p95_ms": 106.64,
+      "after_workers": [
+        "55",
+        "56",
+        "57"
+      ]
+    },
+    {
+      "case": "policy",
+      "before_p50_ms": 749.18,
+      "before_p95_ms": 982.15,
+      "after_p50_ms": 90.58,
+      "after_p95_ms": 110.28,
+      "after_workers": [
+        "55",
+        "56",
+        "57"
+      ]
+    },
+    {
+      "case": "semantic_compound",
+      "before_p50_ms": 335.06,
+      "before_p95_ms": 408.34,
+      "after_p50_ms": 151.94,
+      "after_p95_ms": 169.52,
+      "after_workers": [
+        "55",
+        "56",
+        "57"
+      ]
+    }
+  ],
+  "provider_mode": "grounded_fallback_only_pending_project_permissions",
+  "notes": "Identical queries and sample count. Baseline includes cold-worker tails and failed provider attempts; after is readiness-gated and providers are disabled. Not a benchmark of a healthy LLM."
+}

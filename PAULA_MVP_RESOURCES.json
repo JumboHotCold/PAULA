@@ -1,0 +1,11 @@
+{
+  "BlockIO": "312MB / 3.23MB",
+  "CPUPerc": "0.09%",
+  "Container": "paulibot_web",
+  "ID": "25a2efc55894",
+  "MemPerc": "44.11%",
+  "MemUsage": "1.543GiB / 3.498GiB",
+  "Name": "paulibot_web",
+  "NetIO": "53.9MB / 1.83MB",
+  "PIDs": "161"
+}

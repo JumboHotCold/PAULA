@@ -1,0 +1,55 @@
+{
+  "ready_before": {
+    "ready": true,
+    "expected_workers": 3,
+    "ready_workers": 3,
+    "workers": [
+      {
+        "worker": 51,
+        "ready": true,
+        "dimensions": 384,
+        "startup_ms": 15716.21
+      },
+      {
+        "worker": 50,
+        "ready": true,
+        "dimensions": 384,
+        "startup_ms": 15809.39
+      },
+      {
+        "worker": 49,
+        "ready": true,
+        "dimensions": 384,
+        "startup_ms": 15874.36
+      }
+    ]
+  },
+  "ready_after": {
+    "ready": true,
+    "expected_workers": 3,
+    "ready_workers": 3,
+    "workers": [
+      {
+        "worker": 50,
+        "ready": true,
+        "dimensions": 384,
+        "startup_ms": 15809.39
+      },
+      {
+        "worker": 49,
+        "ready": true,
+        "dimensions": 384,
+        "startup_ms": 15874.36
+      },
+      {
+        "worker": 402,
+        "ready": true,
+        "dimensions": 384,
+        "startup_ms": 12871.9
+      }
+    ]
+  },
+  "unready_during_replacement": true,
+  "replacement_ready_ms": 25656.37,
+  "notes": "One idle Gunicorn worker gracefully replaced; database/container/volumes unchanged."
+}

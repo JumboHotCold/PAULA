@@ -7,9 +7,12 @@ import RegisterPage from './components/RegisterPage';
 import Dashboard from './components/Dashboard';
 import AdminDashboard from './components/AdminDashboard';
 import ThemeToggle from './components/ThemeToggle';
+import AdminSessionNotice from './components/AdminSessionNotice';
+import { restoreIdentity, userFromSession } from './authIdentity';
 
 import { 
   sendMessage, 
+  chatErrorMessage,
   ensureCsrfToken, 
   fetchConversations, 
   getCookie,
@@ -108,9 +111,26 @@ function AdminLogin({ onLogin, onBack }) {
 }
 
 export default function App() {
+  useEffect(() => {
+    const viewport = window.visualViewport;
+    const updateHeight = () => {
+      if (!viewport || viewport.scale === 1) {
+        document.documentElement.style.setProperty('--app-height', `${viewport?.height ?? window.innerHeight}px`);
+      }
+    };
+    updateHeight();
+    window.addEventListener('resize', updateHeight);
+    viewport?.addEventListener('resize', updateHeight);
+    return () => {
+      window.removeEventListener('resize', updateHeight);
+      viewport?.removeEventListener('resize', updateHeight);
+      document.documentElement.style.removeProperty('--app-height');
+    };
+  }, []);
   const [user, setUser] = useState(null); // null = not logged in
+  const [availableAdmin, setAvailableAdmin] = useState(null);
   const [currentView, setCurrentView] = useState(() => {
-    const path = window.location.pathname;
+    const path = window.location.pathname.replace(/\/$/, '') || '/';
     if (path === '/admin') return 'admin';
     if (path === '/register') return 'register';
     return 'login';
@@ -127,46 +147,54 @@ export default function App() {
   // Restore session
   useEffect(() => {
     const epoch = chatEpoch.current;
-    ensureCsrfToken();
-    const storedUser = localStorage.getItem('paulibot_user');
-    if (storedUser) {
-      try {
-        const parsed = JSON.parse(storedUser);
-        const restore = async () => {
-          if (parsed.type !== 'GUEST') {
-            const session = await sessionStatus();
-            if (epoch !== chatEpoch.current) return;
-            if (!session.authenticated || String(session.id) !== String(parsed.id)) {
-              localStorage.removeItem('paulibot_user');
-              setCurrentView('login');
-              return;
-            }
-          } else {
-            await logoutSession();
-          }
-          if (epoch !== chatEpoch.current) return;
-          setUser(parsed);
-          setChatSessionId(chatSession(parsed));
-          if (parsed.is_superuser && window.location.pathname === '/admin') {
-            setCurrentView('admin');
-          } else {
-            setCurrentView('chat');
-          }
-          if (parsed.type === 'GUEST') setMessages([]);
-        };
-        restore().catch(() => {
-          if (epoch !== chatEpoch.current) return;
-          localStorage.removeItem('paulibot_user');
-          setCurrentView('login');
-        }).finally(() => setIsRestoring(false));
-      } catch (e) {
+    let cancelled = false;
+    let stored = null;
+    try { stored = JSON.parse(localStorage.getItem('paulibot_user')); }
+    catch { localStorage.removeItem('paulibot_user'); }
+    const adminRoute = window.location.pathname.replace(/\/+$/, '') === '/admin';
+    const restore = async () => {
+      let session = null;
+      try { session = await sessionStatus(); } catch { /* No verified privileged identity. */ }
+      if (cancelled || epoch !== chatEpoch.current) return;
+      const identity = restoreIdentity(stored, session, adminRoute);
+      setAvailableAdmin(identity.availableAdmin);
+      if (identity.user) {
+        localStorage.setItem('paulibot_user', JSON.stringify(identity.user));
+        setUser(identity.user);
+        setChatSessionId(chatSession(identity.user));
+        setCurrentView(identity.user.is_superuser && adminRoute ? 'admin' : 'chat');
+      } else {
         localStorage.removeItem('paulibot_user');
-        setIsRestoring(false);
+        setCurrentView(adminRoute ? 'admin' : 'login');
       }
-    } else {
       setIsRestoring(false);
-    }
+    };
+    restore();
+    return () => { cancelled = true; };
   }, []);
+
+  // A login in another tab may become available; guest identity stays explicit.
+  useEffect(() => {
+    if (isRestoring || (user && user.type !== 'GUEST')) return;
+    let cancelled = false;
+    const epoch = chatEpoch.current;
+    const check = async () => {
+      if (document.visibilityState === 'hidden') return;
+      try {
+        const account = userFromSession(await sessionStatus());
+        if (!cancelled && epoch === chatEpoch.current) setAvailableAdmin(account?.is_superuser ? account : null);
+      } catch {
+        if (!cancelled && epoch === chatEpoch.current) setAvailableAdmin(null);
+      }
+    };
+    window.addEventListener('focus', check);
+    document.addEventListener('visibilitychange', check);
+    return () => {
+      cancelled = true;
+      window.removeEventListener('focus', check);
+      document.removeEventListener('visibilitychange', check);
+    };
+  }, [isRestoring, user?.type, user?.id]);
 
   // Fetch history if student
   useEffect(() => {
@@ -205,6 +233,7 @@ export default function App() {
     }
     if (epoch !== chatEpoch.current) return;
     setIsTyping(false);
+    setAvailableAdmin(null);
     setUser(userData);
     setChatSessionId(chatSession(userData, true));
     setConversations([]);
@@ -225,6 +254,23 @@ export default function App() {
       window.history.pushState(null, '', '/');
     }
   }, []);
+
+  const handleResumeAdmin = useCallback(async () => {
+    const epoch = chatEpoch.current;
+    try {
+      const account = userFromSession(await sessionStatus());
+      if (epoch !== chatEpoch.current) return;
+      if (!account?.is_superuser || String(account.id) !== String(availableAdmin?.id)) {
+        setAvailableAdmin(null);
+        window.alert('Your administrator session changed. Please sign in again.');
+        return;
+      }
+      await handleLogin(account);
+    } catch {
+      setAvailableAdmin(null);
+      window.alert('Could not verify your administrator session. Please sign in again.');
+    }
+  }, [availableAdmin?.id, handleLogin]);
 
   const handleUpdateUser = useCallback((updatedUserData) => {
     setUser(updatedUserData);
@@ -331,7 +377,8 @@ export default function App() {
           ...(message.timestamp ? { timestamp: message.timestamp } : {}),
         }));
         const data = await sendMessage(text, conversationId, clarificationHistory, messages.at(-1)?.contextToken,
-          user?.type === 'GUEST' ? 'guest' : 'authenticated', chatSessionId, user?.id);
+          user?.type === 'GUEST' ? 'guest' : 'authenticated', chatSessionId, user?.id,
+          messages.filter(message => message.isUser && message.text.length <= 500).map(message => message.text).slice(-64));
         if (epoch !== chatEpoch.current) return;
 
         if (data.conversation_id && data.saved) {
@@ -340,14 +387,13 @@ export default function App() {
           fetchConversations().then(data => { if (epoch === chatEpoch.current) setConversations(data); }).catch(console.error);
         }
 
-        setTimeout(() => {
-          if (epoch !== chatEpoch.current) return;
-          setIsTyping(false);
-          setMessages((prev) => [
-            ...prev,
-            { text: data.response || 'Sorry, I encountered an error.', sources: data.sources || [], action: data.action, action_data: data.action_data, isUser: false, timestamp: Date.now() / 1000, contextToken: data.context_token },
-          ]);
-        }, 600); // 600ms network delay simulation from your index.html logic
+        setIsTyping(false);
+        setMessages((prev) => [
+          ...prev,
+          { text: data.response || 'Sorry, I encountered an error.', sources: data.sources || [], suggestions: data.suggestions,
+            suggestionsKind: data.suggestions_kind, action: data.action, action_data: data.action_data,
+            isUser: false, timestamp: Date.now() / 1000, contextToken: data.context_token },
+        ]);
       } catch (err) {
         if (epoch !== chatEpoch.current) return;
         setIsTyping(false);
@@ -364,7 +410,7 @@ export default function App() {
         }
         setMessages((prev) => [
           ...prev,
-          { text: "Network error. Please try again.", isUser: false },
+          { text: chatErrorMessage(err), isUser: false },
         ]);
       }
     },
@@ -400,12 +446,12 @@ export default function App() {
 
   // If a user is not logged in but they are trying to view something else
   if (!user && currentView !== 'login') {
-    return <AuthPage onLogin={handleLogin} onNavigateRegister={() => setCurrentView('register')} />;
+    return <><AdminSessionNotice onContinue={availableAdmin ? handleResumeAdmin : null} /><AuthPage onLogin={handleLogin} onNavigateRegister={() => setCurrentView('register')} /></>;
   }
 
   if (currentView === 'login' && !user) {
     // Currently, it uses AuthPage. We maintain this as per existing code.
-    return <AuthPage onLogin={handleLogin} onNavigateRegister={() => setCurrentView('register')} />;
+    return <><AdminSessionNotice onContinue={availableAdmin ? handleResumeAdmin : null} /><AuthPage onLogin={handleLogin} onNavigateRegister={() => setCurrentView('register')} /></>;
   }
 
   return (
@@ -413,13 +459,17 @@ export default function App() {
       user={user}
       onLogout={handleLogout}
       onNavigateLogin={() => { handleLogout(); setCurrentView('login'); }}
+      onResumeAdmin={availableAdmin ? handleResumeAdmin : null}
       messages={messages}
       isTyping={isTyping}
       onSend={handleSend}
       onNewChat={handleNewChat}
       conversations={conversations}
       onDeleteChat={handleDeleteChat}
-      onNavigateAdmin={user?.is_superuser ? () => setCurrentView('admin') : null}
+      onNavigateAdmin={user?.is_superuser ? () => {
+        setCurrentView('admin');
+        window.history.pushState(null, '', '/admin');
+      } : null}
       onUpdateUser={handleUpdateUser}
       onLoadChat={async (id) => {
         const epoch = ++chatEpoch.current;

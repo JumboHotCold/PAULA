@@ -2,6 +2,8 @@
 
 ## Project Overview
 
+Current runtime and release instructions: [MVP operations checklist](PAULA_MVP_OPERATIONS.md) and [stabilization evidence](PAULA_MVP_STABILIZATION_REPORT.md). The older migration/setup sections below are historical. Use Docker PostgreSQL on port 8080 with Vite on 5173; public deployment is pending the supported-framework compatibility pass.
+
 **PauliBot** is a university chatbot system for Saint Paul University Surigao, now featuring:
 - ✅ **PostgreSQL Database** (migrated from SQLite3)
 - ✅ **Docker Containerization** (production-ready deployment)

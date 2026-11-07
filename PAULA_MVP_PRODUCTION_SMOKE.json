@@ -1,0 +1,50 @@
+{
+  "checks": {
+    "postgres_and_all_vectors_ready": true,
+    "https_headers_and_secure_csrf_cookie": true,
+    "grounded_faq_compound_and_semantic_without_provider": true,
+    "admin_static_css_available": true,
+    "admin_login_template_rendered": true,
+    "unknown_request_does_not_fabricate": true,
+    "malformed_request_safe": true,
+    "plain_http_redirects_to_https": true
+  },
+  "passed": true,
+  "mode": "isolated Gunicorn, DEBUG=false, HTTPS proxy policy, live PostgreSQL and offline cached MiniLM, providers disabled",
+  "readiness_ms": 57614.36,
+  "readiness": {
+    "ready": true,
+    "expected_workers": 1,
+    "ready_workers": 1,
+    "workers": [
+      {
+        "worker": 4757,
+        "ready": true,
+        "social_router_ready": true,
+        "dimensions": 384,
+        "startup_ms": 52930.88
+      }
+    ],
+    "database_ready": true,
+    "knowledge_available": true,
+    "index_complete": true,
+    "knowledge": {
+      "FAQ": {
+        "total": 138,
+        "missing": 0
+      },
+      "Location": {
+        "total": 6,
+        "missing": 0
+      },
+      "StaffMember": {
+        "total": 12,
+        "missing": 0
+      },
+      "WebResource": {
+        "total": 476,
+        "missing": 0
+      }
+    }
+  }
+}

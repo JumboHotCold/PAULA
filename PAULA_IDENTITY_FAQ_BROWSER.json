@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "mode": "guest",
+  "first": [
+    "What programs are offered at SPUS?",
+    "How do I enroll at SPUS?",
+    "Where is the Registrar office?"
+  ],
+  "remaining": [
+    "How do I enroll at SPUS?",
+    "Where is the Registrar office?"
+  ],
+  "related": [
+    "Do posters and promotional materials require PBMO review before posting or broadcasting?",
+    "What is the procedure for submitting materials or reporting school events for publication to PBMO?"
+  ],
+  "checks": [
+    {
+      "query": "who you?",
+      "passed": true,
+      "text": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\nWhat programs are offered at SPUS?\nHow do I enroll at SPUS?\nWhere is the Registrar office?",
+      "chips": 3
+    },
+    {
+      "query": "What programs are offered at SPUS?",
+      "passed": true,
+      "clicked": true
+    },
+    {
+      "query": "tell me about yourself?",
+      "passed": true,
+      "text": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\nHow do I enroll at SPUS?\nWhere is the Registrar office?",
+      "chips": 2
+    },
+    {
+      "query": "How are announcements and promotional materials broadcast across the SPUS campus?",
+      "passed": true,
+      "text": "Sure—here is the information from the stored sources.\n\nPBMO broadcasts campus announcements and promotional materials via the Unified Multimedia Communication Network, which includes:\n\n•\nOutdoor campus LED displays\n•\nCampus TV monitors\n•\nOfficial SPUS social media channels\n•\nThe university web portal\n\nAll promotional assets, announcements, and posters must undergo content and brand review by PBMO prior to broadcast or posting.\n\nSources (1)\nDo posters and promotional materials require PBMO review before posting or broadcasting?\nWhat is the procedure for submitting materials or reporting school events for publication to PBMO?",
+      "chips": 2
+    },
+    {
+      "query": "Do posters and promotional materials require PBMO review before posting or broadcasting?",
+      "passed": true,
+      "clicked": true
+    }
+  ]
+}

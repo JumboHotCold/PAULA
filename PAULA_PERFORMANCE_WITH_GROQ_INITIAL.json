@@ -1,0 +1,2203 @@
+{
+  "samples_per_case": 20,
+  "url": "http://localhost:5173/api/chat",
+  "interval_seconds": 0,
+  "selector_interval_seconds": 5.0,
+  "checks": [
+    {
+      "case": "personnel",
+      "query": "Who is the ICT Director?",
+      "n": 20,
+      "p50_ms": 107.89,
+      "p95_ms": 134.05,
+      "max_ms": 139.0,
+      "initial": [
+        {
+          "elapsed_ms": 142.06,
+          "ttfb_ms": 141.78,
+          "worker": "56",
+          "request_id": "f58cb7f1-6c1f-480e-b4a3-4e2f961840ac",
+          "server_timing": "total;dur=88.01, sql;dur=22.87"
+        },
+        {
+          "elapsed_ms": 113.27,
+          "ttfb_ms": 113.07,
+          "worker": "56",
+          "request_id": "f80b088d-a1e9-4ff5-8332-50750c6f0e5d",
+          "server_timing": "total;dur=106.54, sql;dur=23.8"
+        }
+      ],
+      "samples": [
+        {
+          "elapsed_ms": 118.76,
+          "ttfb_ms": 118.3,
+          "worker": "56",
+          "request_id": "504c6eb5-3a93-4526-b76e-a549113c87a2",
+          "server_timing": "total;dur=111.11, sql;dur=27.89"
+        },
+        {
+          "elapsed_ms": 134.05,
+          "ttfb_ms": 133.91,
+          "worker": "55",
+          "request_id": "ebf310ea-e8f7-4f09-af3c-4bdc27c82871",
+          "server_timing": "total;dur=124.48, sql;dur=32.32"
+        },
+        {
+          "elapsed_ms": 114.96,
+          "ttfb_ms": 114.66,
+          "worker": "56",
+          "request_id": "d0f9a2a7-e1c4-4196-9f4b-143edf032e93",
+          "server_timing": "total;dur=87.8, sql;dur=22.91"
+        },
+        {
+          "elapsed_ms": 107.76,
+          "ttfb_ms": 107.54,
+          "worker": "55",
+          "request_id": "e862fc02-0834-48cf-a9d6-ffb6c83b9420",
+          "server_timing": "total;dur=101.4, sql;dur=29.57"
+        },
+        {
+          "elapsed_ms": 96.36,
+          "ttfb_ms": 96.18,
+          "worker": "55",
+          "request_id": "b771d725-1b35-4b96-8831-30333c9adaf5",
+          "server_timing": "total;dur=88.07, sql;dur=21.95"
+        },
+        {
+          "elapsed_ms": 104.05,
+          "ttfb_ms": 103.82,
+          "worker": "55",
+          "request_id": "a94d126b-a6ee-41c3-91ad-64f1e1d40112",
+          "server_timing": "total;dur=96.36, sql;dur=25.33"
+        },
+        {
+          "elapsed_ms": 119.23,
+          "ttfb_ms": 119.07,
+          "worker": "56",
+          "request_id": "06ead530-c86a-4191-b05e-bb8f99bb9d79",
+          "server_timing": "total;dur=112.5, sql;dur=41.1"
+        },
+        {
+          "elapsed_ms": 116.59,
+          "ttfb_ms": 116.39,
+          "worker": "55",
+          "request_id": "2f8b8431-c0e6-42f9-9326-47e4fb368014",
+          "server_timing": "total;dur=91.29, sql;dur=24.02"
+        },
+        {
+          "elapsed_ms": 116.84,
+          "ttfb_ms": 116.57,
+          "worker": "56",
+          "request_id": "b89710cc-08a3-4eab-b40f-958bb92e90a5",
+          "server_timing": "total;dur=110.0, sql;dur=23.51"
+        },
+        {
+          "elapsed_ms": 106.26,
+          "ttfb_ms": 106.03,
+          "worker": "57",
+          "request_id": "f2defe13-4927-48fa-9dd0-5aeb27bd6fa5",
+          "server_timing": "total;dur=89.6, sql;dur=22.1"
+        },
+        {
+          "elapsed_ms": 139.0,
+          "ttfb_ms": 138.7,
+          "worker": "55",
+          "request_id": "9631f366-6551-425a-8cc3-90af31ef9f28",
+          "server_timing": "total;dur=110.83, sql;dur=26.36"
+        },
+        {
+          "elapsed_ms": 101.92,
+          "ttfb_ms": 101.67,
+          "worker": "55",
+          "request_id": "291b9bfa-3323-4e76-a39e-70c3f10f8b49",
+          "server_timing": "total;dur=92.97, sql;dur=23.79"
+        },
+        {
+          "elapsed_ms": 99.38,
+          "ttfb_ms": 99.07,
+          "worker": "55",
+          "request_id": "5d61109d-32e3-47cb-9dc5-ad3cbb5ebfeb",
+          "server_timing": "total;dur=90.74, sql;dur=23.92"
+        },
+        {
+          "elapsed_ms": 95.1,
+          "ttfb_ms": 94.94,
+          "worker": "57",
+          "request_id": "ae63ff43-110b-4b54-89ac-300a7992ad63",
+          "server_timing": "total;dur=88.13, sql;dur=23.97"
+        },
+        {
+          "elapsed_ms": 114.61,
+          "ttfb_ms": 114.35,
+          "worker": "57",
+          "request_id": "0c9d39a1-9055-4acb-a685-42d69e99e430",
+          "server_timing": "total;dur=90.71, sql;dur=25.98"
+        },
+        {
+          "elapsed_ms": 105.25,
+          "ttfb_ms": 104.96,
+          "worker": "55",
+          "request_id": "e878e2ca-5368-41f5-b8b1-158daa120bec",
+          "server_timing": "total;dur=98.64, sql;dur=30.39"
+        },
+        {
+          "elapsed_ms": 108.02,
+          "ttfb_ms": 107.78,
+          "worker": "56",
+          "request_id": "50eed40d-d88d-4dec-81d6-ee0a99dea92c",
+          "server_timing": "total;dur=86.28, sql;dur=23.84"
+        },
+        {
+          "elapsed_ms": 91.75,
+          "ttfb_ms": 91.54,
+          "worker": "56",
+          "request_id": "d75f87a2-6028-4437-a5d7-f976c24fc594",
+          "server_timing": "total;dur=86.04, sql;dur=21.87"
+        },
+        {
+          "elapsed_ms": 110.47,
+          "ttfb_ms": 110.26,
+          "worker": "57",
+          "request_id": "abb09e51-2276-4406-ba6d-389fcf197a9e",
+          "server_timing": "total;dur=85.55, sql;dur=23.27"
+        },
+        {
+          "elapsed_ms": 94.03,
+          "ttfb_ms": 93.85,
+          "worker": "55",
+          "request_id": "fea8e75b-3e92-483c-8478-d4aa409221e5",
+          "server_timing": "total;dur=84.58, sql;dur=21.47"
+        }
+      ],
+      "workers": [
+        "55",
+        "56",
+        "57"
+      ],
+      "outcomes": [
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        }
+      ],
+      "last_response": "Engr. Arnold A. Magalona \u00e2\u20ac\u201d Director, Information & Communications Technology Systems and Services\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "last_sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": []
+        }
+      ]
+    },
+    {
+      "case": "structured_compound",
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "n": 20,
+      "p50_ms": 185.01,
+      "p95_ms": 218.52,
+      "max_ms": 224.16,
+      "initial": [
+        {
+          "elapsed_ms": 173.0,
+          "ttfb_ms": 172.79,
+          "worker": "55",
+          "request_id": "02e45659-5569-4e7b-bf00-15eb61fcbec7",
+          "server_timing": "total;dur=161.76, sql;dur=43.13"
+        },
+        {
+          "elapsed_ms": 192.08,
+          "ttfb_ms": 191.81,
+          "worker": "57",
+          "request_id": "c6e9db43-0b01-4eba-b060-12e31f6e879e",
+          "server_timing": "total;dur=159.85, sql;dur=41.7"
+        }
+      ],
+      "samples": [
+        {
+          "elapsed_ms": 173.67,
+          "ttfb_ms": 173.25,
+          "worker": "55",
+          "request_id": "41f63518-a7fd-47fc-a103-0a98ffe4a2df",
+          "server_timing": "total;dur=165.46, sql;dur=39.38"
+        },
+        {
+          "elapsed_ms": 181.06,
+          "ttfb_ms": 180.82,
+          "worker": "55",
+          "request_id": "eca17f7e-2f41-46d6-a85a-75ede46210e9",
+          "server_timing": "total;dur=173.8, sql;dur=46.15"
+        },
+        {
+          "elapsed_ms": 190.11,
+          "ttfb_ms": 189.86,
+          "worker": "57",
+          "request_id": "b40c4c53-2067-4712-b054-6d49ae362bb3",
+          "server_timing": "total;dur=163.01, sql;dur=41.77"
+        },
+        {
+          "elapsed_ms": 195.3,
+          "ttfb_ms": 195.08,
+          "worker": "57",
+          "request_id": "fae02f4e-0767-411b-963e-13bde8594e26",
+          "server_timing": "total;dur=187.01, sql;dur=46.49"
+        },
+        {
+          "elapsed_ms": 202.58,
+          "ttfb_ms": 202.24,
+          "worker": "56",
+          "request_id": "5ecefebc-5179-4a63-b932-ec1b6f2e3cf4",
+          "server_timing": "total;dur=193.01, sql;dur=61.82"
+        },
+        {
+          "elapsed_ms": 188.31,
+          "ttfb_ms": 188.01,
+          "worker": "56",
+          "request_id": "75a89b11-5397-4a82-97cf-c442ac6a5cd2",
+          "server_timing": "total;dur=181.13, sql;dur=44.23"
+        },
+        {
+          "elapsed_ms": 175.47,
+          "ttfb_ms": 175.23,
+          "worker": "57",
+          "request_id": "e253c89a-eca8-400a-af9c-babf8ce18744",
+          "server_timing": "total;dur=168.38, sql;dur=40.21"
+        },
+        {
+          "elapsed_ms": 193.81,
+          "ttfb_ms": 193.49,
+          "worker": "56",
+          "request_id": "d73b733e-77d9-404c-91a8-c0cc3695cf0c",
+          "server_timing": "total;dur=171.85, sql;dur=43.64"
+        },
+        {
+          "elapsed_ms": 180.97,
+          "ttfb_ms": 180.61,
+          "worker": "56",
+          "request_id": "9c5d75d0-5ab6-4a72-aa57-98b9656ace16",
+          "server_timing": "total;dur=169.2, sql;dur=46.75"
+        },
+        {
+          "elapsed_ms": 172.11,
+          "ttfb_ms": 171.83,
+          "worker": "57",
+          "request_id": "d030876e-2b56-4125-94c3-39cdbd6b7ceb",
+          "server_timing": "total;dur=161.96, sql;dur=42.63"
+        },
+        {
+          "elapsed_ms": 204.6,
+          "ttfb_ms": 204.37,
+          "worker": "57",
+          "request_id": "c584e765-21cc-4e85-8e3e-08c668959a41",
+          "server_timing": "total;dur=197.42, sql;dur=55.43"
+        },
+        {
+          "elapsed_ms": 224.16,
+          "ttfb_ms": 223.91,
+          "worker": "57",
+          "request_id": "7b7868fd-2058-431e-a2bc-94c6d7ccf012",
+          "server_timing": "total;dur=191.34, sql;dur=56.01"
+        },
+        {
+          "elapsed_ms": 186.33,
+          "ttfb_ms": 186.0,
+          "worker": "56",
+          "request_id": "dc02c90d-cf5d-4aac-95f4-9f5b31087cde",
+          "server_timing": "total;dur=162.27, sql;dur=41.19"
+        },
+        {
+          "elapsed_ms": 218.52,
+          "ttfb_ms": 218.33,
+          "worker": "56",
+          "request_id": "60288f8f-40ea-40b3-b7f9-bcf105c9bdfc",
+          "server_timing": "total;dur=193.67, sql;dur=48.1"
+        },
+        {
+          "elapsed_ms": 169.85,
+          "ttfb_ms": 169.59,
+          "worker": "56",
+          "request_id": "4cdc2d7e-123c-4323-be01-0d7120264b14",
+          "server_timing": "total;dur=160.32, sql;dur=46.16"
+        },
+        {
+          "elapsed_ms": 169.72,
+          "ttfb_ms": 169.28,
+          "worker": "57",
+          "request_id": "f292539e-7537-40ce-bdb0-de592930ed04",
+          "server_timing": "total;dur=161.34, sql;dur=45.56"
+        },
+        {
+          "elapsed_ms": 171.89,
+          "ttfb_ms": 171.7,
+          "worker": "55",
+          "request_id": "8fe0f64c-cd84-40c9-b69e-a5321cb2dc90",
+          "server_timing": "total;dur=165.25, sql;dur=42.45"
+        },
+        {
+          "elapsed_ms": 186.84,
+          "ttfb_ms": 186.61,
+          "worker": "55",
+          "request_id": "710402fc-6831-42c3-91d2-4ceaeb34e278",
+          "server_timing": "total;dur=158.13, sql;dur=41.34"
+        },
+        {
+          "elapsed_ms": 183.69,
+          "ttfb_ms": 183.48,
+          "worker": "57",
+          "request_id": "bce9a1ae-126b-4e54-a1dc-d0b5645576f7",
+          "server_timing": "total;dur=159.09, sql;dur=42.34"
+        },
+        {
+          "elapsed_ms": 177.13,
+          "ttfb_ms": 176.75,
+          "worker": "57",
+          "request_id": "bc6360af-6cf1-4145-b8d1-92d16934d65d",
+          "server_timing": "total;dur=169.79, sql;dur=45.99"
+        }
+      ],
+      "workers": [
+        "55",
+        "56",
+        "57"
+      ],
+      "outcomes": [
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        }
+      ],
+      "last_response": "**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona \u00e2\u20ac\u201d Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza \u00e2\u20ac\u201d Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "last_sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ]
+    },
+    {
+      "case": "enrollment",
+      "query": "What are the requirements for freshmen and transferees?",
+      "n": 20,
+      "p50_ms": 37.38,
+      "p95_ms": 55.82,
+      "max_ms": 59.85,
+      "initial": [
+        {
+          "elapsed_ms": 56.79,
+          "ttfb_ms": 56.53,
+          "worker": "55",
+          "request_id": "366b3a15-bd0a-4404-a101-287bd9ae3aef",
+          "server_timing": "total;dur=30.69, sql;dur=6.12"
+        },
+        {
+          "elapsed_ms": 59.66,
+          "ttfb_ms": 59.43,
+          "worker": "57",
+          "request_id": "55fa273a-f103-4bf7-bfab-a8a68bd7372d",
+          "server_timing": "total;dur=29.86, sql;dur=4.7"
+        }
+      ],
+      "samples": [
+        {
+          "elapsed_ms": 33.71,
+          "ttfb_ms": 33.5,
+          "worker": "57",
+          "request_id": "8b613f6b-685e-40c0-bfe4-eda9bdaa3922",
+          "server_timing": "total;dur=28.09, sql;dur=5.25"
+        },
+        {
+          "elapsed_ms": 36.94,
+          "ttfb_ms": 36.63,
+          "worker": "55",
+          "request_id": "a7d7c821-23a2-4fcf-afc0-8b338701d99c",
+          "server_timing": "total;dur=30.06, sql;dur=5.41"
+        },
+        {
+          "elapsed_ms": 39.03,
+          "ttfb_ms": 38.6,
+          "worker": "55",
+          "request_id": "7fdcd4fc-2320-4dc6-a49c-3eb77ea93ff2",
+          "server_timing": "total;dur=30.15, sql;dur=4.84"
+        },
+        {
+          "elapsed_ms": 47.39,
+          "ttfb_ms": 47.12,
+          "worker": "55",
+          "request_id": "bc65b36c-bc43-438d-931e-75f6762e19d8",
+          "server_timing": "total;dur=31.13, sql;dur=5.43"
+        },
+        {
+          "elapsed_ms": 37.2,
+          "ttfb_ms": 36.94,
+          "worker": "55",
+          "request_id": "2cf0a723-0d83-4c2d-9304-4179a2ccb3fc",
+          "server_timing": "total;dur=30.7, sql;dur=5.75"
+        },
+        {
+          "elapsed_ms": 36.58,
+          "ttfb_ms": 36.18,
+          "worker": "57",
+          "request_id": "1778f053-efeb-44ca-8021-e8acd71e9ef8",
+          "server_timing": "total;dur=30.28, sql;dur=5.11"
+        },
+        {
+          "elapsed_ms": 59.85,
+          "ttfb_ms": 59.57,
+          "worker": "57",
+          "request_id": "7170f8b1-d322-4c12-8e13-bcac038b13a9",
+          "server_timing": "total;dur=28.21, sql;dur=4.03"
+        },
+        {
+          "elapsed_ms": 44.57,
+          "ttfb_ms": 44.4,
+          "worker": "56",
+          "request_id": "a803c997-827a-405e-81e3-003da8239e2c",
+          "server_timing": "total;dur=26.62, sql;dur=4.77"
+        },
+        {
+          "elapsed_ms": 37.56,
+          "ttfb_ms": 37.32,
+          "worker": "55",
+          "request_id": "45a80e16-32ae-4d6d-b06e-f4cd94e44210",
+          "server_timing": "total;dur=31.38, sql;dur=5.22"
+        },
+        {
+          "elapsed_ms": 55.82,
+          "ttfb_ms": 55.61,
+          "worker": "55",
+          "request_id": "0a46f727-94db-49bc-9d4a-04118e41c4f9",
+          "server_timing": "total;dur=29.63, sql;dur=4.84"
+        },
+        {
+          "elapsed_ms": 45.78,
+          "ttfb_ms": 45.54,
+          "worker": "57",
+          "request_id": "9070f02b-7c6f-4fa4-a1ec-fd1e2a8738ca",
+          "server_timing": "total;dur=29.14, sql;dur=5.46"
+        },
+        {
+          "elapsed_ms": 35.08,
+          "ttfb_ms": 34.87,
+          "worker": "57",
+          "request_id": "40171555-29a2-4776-be31-64ea60597549",
+          "server_timing": "total;dur=28.87, sql;dur=5.24"
+        },
+        {
+          "elapsed_ms": 34.72,
+          "ttfb_ms": 34.47,
+          "worker": "57",
+          "request_id": "030fc75a-00b2-4086-b67e-5f4df4de7f7a",
+          "server_timing": "total;dur=28.52, sql;dur=6.15"
+        },
+        {
+          "elapsed_ms": 55.79,
+          "ttfb_ms": 55.45,
+          "worker": "57",
+          "request_id": "46f9b920-a63f-4313-bcd8-79a922a89fb2",
+          "server_timing": "total;dur=31.62, sql;dur=4.74"
+        },
+        {
+          "elapsed_ms": 40.74,
+          "ttfb_ms": 40.53,
+          "worker": "57",
+          "request_id": "b1ee2c24-5170-4eab-bb7b-21272ea8cdf3",
+          "server_timing": "total;dur=29.47, sql;dur=5.64"
+        },
+        {
+          "elapsed_ms": 36.67,
+          "ttfb_ms": 36.26,
+          "worker": "57",
+          "request_id": "28f961a9-122e-438b-a069-1926a81525ee",
+          "server_timing": "total;dur=29.7, sql;dur=5.9"
+        },
+        {
+          "elapsed_ms": 35.5,
+          "ttfb_ms": 35.3,
+          "worker": "57",
+          "request_id": "37c3efba-b309-44a1-ac77-691c3654b778",
+          "server_timing": "total;dur=29.8, sql;dur=6.06"
+        },
+        {
+          "elapsed_ms": 54.38,
+          "ttfb_ms": 54.14,
+          "worker": "57",
+          "request_id": "ff877946-d638-4c9a-a93d-50093385433b",
+          "server_timing": "total;dur=28.64, sql;dur=5.75"
+        },
+        {
+          "elapsed_ms": 33.29,
+          "ttfb_ms": 32.96,
+          "worker": "55",
+          "request_id": "3d6f5bdc-a2f1-437f-8733-c7385d493047",
+          "server_timing": "total;dur=27.59, sql;dur=4.56"
+        },
+        {
+          "elapsed_ms": 32.52,
+          "ttfb_ms": 32.4,
+          "worker": "55",
+          "request_id": "7d939719-7517-4514-bb17-ca8f9faa648e",
+          "server_timing": "total;dur=26.66, sql;dur=5.04"
+        }
+      ],
+      "workers": [
+        "55",
+        "56",
+        "57"
+      ],
+      "outcomes": [
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        }
+      ],
+      "last_response": "**1. What are the requirements for freshmen?**\n\nAdmission and enrollment requirements for Incoming College Freshmen:\n1. Senior High School (SHS) Report Card (Form 138 / SF9)\n2. Original PSA Birth Certificate\n3. Original Certificate of Good Moral Character\n4. College Entrance Examination Result (from Guidance Office)\n5. 1 pc. 2x2 ID picture\n6. Marriage Certificate (if married)\n7. Accomplished Student Information Sheet\n\nSources: 1\n\n**2. What are the requirements for transferees?**\n\nRequirements for Transferee Students in Higher Education:\n1. Official Transfer Credentials (Honorable Dismissal / Transcript of Records for evaluation)\n2. Curricular Checklist from previous school\n3. Original PSA Birth Certificate\n4. Original Certificate of Good Moral Character\n5. 1 pc. 2x2 ID picture\n6. Accomplished Student Information Sheet (at SAO)\n\nSources: 2\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "last_sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What are the required admission and enrollment documents for incoming freshmen at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "What are the requirements for freshmen?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What are the required documents for transferee students enrolling at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "What are the requirements for transferees?",
+          "citation_index": 2
+        }
+      ]
+    },
+    {
+      "case": "semantic_calendar",
+      "query": "What is the school calendar?",
+      "n": 20,
+      "p50_ms": 108.94,
+      "p95_ms": 118.32,
+      "max_ms": 120.31,
+      "initial": [
+        {
+          "elapsed_ms": 95.46,
+          "ttfb_ms": 95.11,
+          "worker": "55",
+          "request_id": "9223a9c9-a664-409a-a360-550ac676d593",
+          "server_timing": "total;dur=86.72, sql;dur=28.22"
+        },
+        {
+          "elapsed_ms": 88.3,
+          "ttfb_ms": 88.07,
+          "worker": "55",
+          "request_id": "1cd613c2-bad1-4b34-923e-1be1f41d4a89",
+          "server_timing": "total;dur=81.51, sql;dur=26.77"
+        }
+      ],
+      "samples": [
+        {
+          "elapsed_ms": 79.94,
+          "ttfb_ms": 79.67,
+          "worker": "55",
+          "request_id": "5b2dbd69-05a3-4a2c-a8a8-c2c02fc47d0b",
+          "server_timing": "total;dur=73.78, sql;dur=26.02"
+        },
+        {
+          "elapsed_ms": 115.11,
+          "ttfb_ms": 114.91,
+          "worker": "57",
+          "request_id": "a8414d4f-a545-435e-9d64-983253aba002",
+          "server_timing": "total;dur=85.51, sql;dur=27.23"
+        },
+        {
+          "elapsed_ms": 89.81,
+          "ttfb_ms": 89.49,
+          "worker": "56",
+          "request_id": "c2c236b8-59c2-437f-b1d2-efddbf04ed46",
+          "server_timing": "total;dur=79.81, sql;dur=24.49"
+        },
+        {
+          "elapsed_ms": 110.8,
+          "ttfb_ms": 110.61,
+          "worker": "56",
+          "request_id": "a0dc11f0-65b4-4965-9ac0-eb5bcae5ef9b",
+          "server_timing": "total;dur=82.93, sql;dur=26.47"
+        },
+        {
+          "elapsed_ms": 85.0,
+          "ttfb_ms": 84.79,
+          "worker": "57",
+          "request_id": "e4c188c0-a8e9-4b8d-8964-3969ba94822e",
+          "server_timing": "total;dur=77.19, sql;dur=26.41"
+        },
+        {
+          "elapsed_ms": 82.87,
+          "ttfb_ms": 82.68,
+          "worker": "56",
+          "request_id": "762c86db-eb21-4130-99f2-14a8dee62cfd",
+          "server_timing": "total;dur=76.42, sql;dur=25.29"
+        },
+        {
+          "elapsed_ms": 84.02,
+          "ttfb_ms": 83.82,
+          "worker": "55",
+          "request_id": "8be7051c-3c82-4567-92e1-f85eccfdfaa5",
+          "server_timing": "total;dur=77.75, sql;dur=26.68"
+        },
+        {
+          "elapsed_ms": 100.03,
+          "ttfb_ms": 99.83,
+          "worker": "56",
+          "request_id": "ce02b0f1-0dde-4eb7-80cc-290eeeb3f3de",
+          "server_timing": "total;dur=75.27, sql;dur=25.66"
+        },
+        {
+          "elapsed_ms": 88.29,
+          "ttfb_ms": 88.04,
+          "worker": "55",
+          "request_id": "1af38c1b-3f5f-422a-8f9c-347e8261812b",
+          "server_timing": "total;dur=81.34, sql;dur=26.17"
+        },
+        {
+          "elapsed_ms": 118.32,
+          "ttfb_ms": 118.1,
+          "worker": "55",
+          "request_id": "2d39536f-f35c-4435-8c48-303bd00bafa5",
+          "server_timing": "total;dur=111.15, sql;dur=48.3"
+        },
+        {
+          "elapsed_ms": 89.72,
+          "ttfb_ms": 89.52,
+          "worker": "56",
+          "request_id": "31c746c9-a996-4c63-af1e-e982962b4cfe",
+          "server_timing": "total;dur=82.06, sql;dur=26.05"
+        },
+        {
+          "elapsed_ms": 111.48,
+          "ttfb_ms": 111.29,
+          "worker": "56",
+          "request_id": "74c495a8-e4d5-4a76-aa24-170f0c5eeaf6",
+          "server_timing": "total;dur=81.74, sql;dur=24.74"
+        },
+        {
+          "elapsed_ms": 107.09,
+          "ttfb_ms": 106.89,
+          "worker": "55",
+          "request_id": "43909ac5-6636-4edb-b03a-9a0d6ed15f3f",
+          "server_timing": "total;dur=101.18, sql;dur=27.08"
+        },
+        {
+          "elapsed_ms": 112.24,
+          "ttfb_ms": 112.01,
+          "worker": "55",
+          "request_id": "aaa262c9-055a-4b28-acf0-e066ced986eb",
+          "server_timing": "total;dur=85.87, sql;dur=27.96"
+        },
+        {
+          "elapsed_ms": 118.15,
+          "ttfb_ms": 117.89,
+          "worker": "56",
+          "request_id": "2470e01a-5d90-4952-bbfe-4ae42d2b6c3c",
+          "server_timing": "total;dur=97.12, sql;dur=32.8"
+        },
+        {
+          "elapsed_ms": 115.99,
+          "ttfb_ms": 115.61,
+          "worker": "55",
+          "request_id": "43c68862-4dd7-4ad6-93de-1d6fb213cf0c",
+          "server_timing": "total;dur=86.36, sql;dur=29.31"
+        },
+        {
+          "elapsed_ms": 120.31,
+          "ttfb_ms": 119.97,
+          "worker": "55",
+          "request_id": "57fcf68c-a049-4bd3-9821-8fc6439ed295",
+          "server_timing": "total;dur=95.45, sql;dur=31.83"
+        },
+        {
+          "elapsed_ms": 116.01,
+          "ttfb_ms": 115.81,
+          "worker": "57",
+          "request_id": "608a45cf-a9b0-4b71-a2a3-3f2c937cf7a5",
+          "server_timing": "total;dur=102.66, sql;dur=35.6"
+        },
+        {
+          "elapsed_ms": 99.63,
+          "ttfb_ms": 99.46,
+          "worker": "57",
+          "request_id": "2f9f047d-6714-4f3a-a119-4867f3be64cc",
+          "server_timing": "total;dur=93.62, sql;dur=27.99"
+        },
+        {
+          "elapsed_ms": 116.2,
+          "ttfb_ms": 115.94,
+          "worker": "57",
+          "request_id": "932b327f-af8b-46f1-8cab-23b1b50b2fd4",
+          "server_timing": "total;dur=90.49, sql;dur=27.59"
+        }
+      ],
+      "workers": [
+        "55",
+        "56",
+        "57"
+      ],
+      "outcomes": [
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        }
+      ],
+      "last_response": "The SPUS Academic Calendar generally follows a semestral schedule:\n\n**First Semester (August \u00e2\u20ac\u201c December)**\n- Enrollment Period (Late July \u00e2\u20ac\u201c Early August)\n- Start of Classes (August)\n- Preliminary Examinations\n- Midterm Examinations\n- University Foundation Day / Paulinian Week (November)\n- Final Examinations\n- Christmas Break (December)\n\n**Second Semester (January \u00e2\u20ac\u201c May)**\n- Enrollment Period (January)\n- Start of Classes (January)\n- Preliminary Examinations\n- Midterm Examinations\n- Lenten/Holy Week Break (March/April)\n- Final Examinations\n- Baccalaureate Mass & Commencement Exercises (May)\n\n**Key Annual Events & Activities:**\n- Feast of the Conversion of St. Paul (January 25)\n- Paulinian Week / Foundation Day Celebration\n- Intramurals / Sports Festival\n- Academic & Cultural Competitions\n- Community Extension Programs\n- Recognition & Awards Ceremony\n- Commencement Exercises / Graduation\n\nFor the exact dates and detailed schedule of the current academic year, please visit the SPUS Official Website at https://spus.edu.ph or inquire at the Registrar's Office.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "last_sources": [
+        {
+          "title": "FAQ (Academics): What is the school calendar? What are the academic calendar activities and important dates?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ]
+    },
+    {
+      "case": "scholarships",
+      "query": "What scholarships are available?",
+      "n": 20,
+      "p50_ms": 844.41,
+      "p95_ms": 1979.37,
+      "max_ms": 2177.31,
+      "initial": [
+        {
+          "elapsed_ms": 1049.18,
+          "ttfb_ms": 1048.98,
+          "worker": "57",
+          "request_id": "28ec6fb3-0eb1-4434-b24c-c9423d3dcb72",
+          "server_timing": "total;dur=1039.33, sql;dur=25.45"
+        },
+        {
+          "elapsed_ms": 925.59,
+          "ttfb_ms": 925.36,
+          "worker": "56",
+          "request_id": "f473295a-2f5f-4f08-af00-d95b1b668dc5",
+          "server_timing": "total;dur=918.16, sql;dur=20.14"
+        }
+      ],
+      "samples": [
+        {
+          "elapsed_ms": 1380.0,
+          "ttfb_ms": 1379.8,
+          "worker": "56",
+          "request_id": "8346f38c-7cf8-42a4-b33a-e4315115cb6d",
+          "server_timing": "total;dur=1371.19, sql;dur=20.65"
+        },
+        {
+          "elapsed_ms": 1979.37,
+          "ttfb_ms": 1978.88,
+          "worker": "56",
+          "request_id": "e7e389cb-001f-4ea8-8949-ec8b4a85db63",
+          "server_timing": "total;dur=1958.4, sql;dur=22.21"
+        },
+        {
+          "elapsed_ms": 827.94,
+          "ttfb_ms": 827.72,
+          "worker": "56",
+          "request_id": "1e9c26d5-97e9-4fad-a86e-a23107464340",
+          "server_timing": "total;dur=821.6, sql;dur=26.04"
+        },
+        {
+          "elapsed_ms": 972.48,
+          "ttfb_ms": 972.26,
+          "worker": "55",
+          "request_id": "40e1f5df-68ec-4c5a-8a13-1fb961535597",
+          "server_timing": "total;dur=953.14, sql;dur=22.34"
+        },
+        {
+          "elapsed_ms": 1234.13,
+          "ttfb_ms": 1233.8,
+          "worker": "56",
+          "request_id": "cda91ec0-8aea-450e-b6b6-e785a4bb5f6a",
+          "server_timing": "total;dur=1216.92, sql;dur=21.8"
+        },
+        {
+          "elapsed_ms": 836.58,
+          "ttfb_ms": 836.32,
+          "worker": "56",
+          "request_id": "bd8852d8-b6ec-435d-800d-666b5e1bee20",
+          "server_timing": "total;dur=810.83, sql;dur=21.81"
+        },
+        {
+          "elapsed_ms": 1129.39,
+          "ttfb_ms": 1129.11,
+          "worker": "57",
+          "request_id": "c8ace348-a70e-4b81-9080-38bd0c3bddf4",
+          "server_timing": "total;dur=1109.24, sql;dur=20.0"
+        },
+        {
+          "elapsed_ms": 845.78,
+          "ttfb_ms": 845.57,
+          "worker": "55",
+          "request_id": "8fafd3f8-b9dc-4b97-ad6a-9885b909f563",
+          "server_timing": "total;dur=827.87, sql;dur=23.21"
+        },
+        {
+          "elapsed_ms": 803.39,
+          "ttfb_ms": 803.21,
+          "worker": "55",
+          "request_id": "71fa5c2b-9bae-4b55-a4c0-9cfcfea5a52b",
+          "server_timing": "total;dur=780.13, sql;dur=20.81"
+        },
+        {
+          "elapsed_ms": 791.28,
+          "ttfb_ms": 791.03,
+          "worker": "56",
+          "request_id": "343f8525-97c9-428a-8ceb-01056537f42d",
+          "server_timing": "total;dur=758.95, sql;dur=22.12"
+        },
+        {
+          "elapsed_ms": 2177.31,
+          "ttfb_ms": 2177.07,
+          "worker": "56",
+          "request_id": "c0bf4964-1517-4a9f-b555-bf00f81a872b",
+          "server_timing": "total;dur=2170.68, sql;dur=24.02"
+        },
+        {
+          "elapsed_ms": 110.44,
+          "ttfb_ms": 110.1,
+          "worker": "56",
+          "request_id": "2565d2cd-aad1-42be-a371-ab812520eac3",
+          "server_timing": "total;dur=77.97, sql;dur=23.44"
+        },
+        {
+          "elapsed_ms": 93.92,
+          "ttfb_ms": 93.67,
+          "worker": "57",
+          "request_id": "dc9fbad1-ee95-4906-a68c-2f6b6436b571",
+          "server_timing": "total;dur=86.39, sql;dur=22.38"
+        },
+        {
+          "elapsed_ms": 98.47,
+          "ttfb_ms": 98.31,
+          "worker": "56",
+          "request_id": "00f21731-ac36-41d1-963b-f7196e2c2aa9",
+          "server_timing": "total;dur=77.38, sql;dur=21.83"
+        },
+        {
+          "elapsed_ms": 95.63,
+          "ttfb_ms": 95.1,
+          "worker": "56",
+          "request_id": "19c413d5-6d04-4079-994c-5518c466dac6",
+          "server_timing": "total;dur=73.21, sql;dur=22.02"
+        },
+        {
+          "elapsed_ms": 91.05,
+          "ttfb_ms": 90.95,
+          "worker": "55",
+          "request_id": "3c8a5ebb-8dca-430b-b5d5-16822ef1c05e",
+          "server_timing": "total;dur=73.52, sql;dur=22.8"
+        },
+        {
+          "elapsed_ms": 1090.77,
+          "ttfb_ms": 1090.62,
+          "worker": "56",
+          "request_id": "f03d0a9e-21cc-46e3-9188-5e3dc68860b6",
+          "server_timing": "total;dur=1072.08, sql;dur=20.24"
+        },
+        {
+          "elapsed_ms": 1932.8,
+          "ttfb_ms": 1932.46,
+          "worker": "55",
+          "request_id": "a02d0466-567e-4e77-92e8-ff3076ab2419",
+          "server_timing": "total;dur=1925.15, sql;dur=22.54"
+        },
+        {
+          "elapsed_ms": 852.44,
+          "ttfb_ms": 852.13,
+          "worker": "57",
+          "request_id": "5cdaf423-39f3-4653-add8-b69de5403425",
+          "server_timing": "total;dur=829.55, sql;dur=20.8"
+        },
+        {
+          "elapsed_ms": 843.04,
+          "ttfb_ms": 842.64,
+          "worker": "56",
+          "request_id": "91fa4a5d-26a7-4971-ae40-1a017d1b1d9a",
+          "server_timing": "total;dur=822.35, sql;dur=21.36"
+        }
+      ],
+      "workers": [
+        "55",
+        "56",
+        "57"
+      ],
+      "outcomes": [
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        }
+      ],
+      "last_response": "Yes! SPUS offers several scholarship and financial assistance programs:\n\n- **Academic and Athletic Scholarships**: Available for qualified college and high school students based on academic standing or sports excellence. Visit the Guidance Office for application guidelines.\n- **ESC Grants**: 350 Educational Service Contracting (ESC) slots for incoming Grade 7 junior high students.\n- **Senior High Voucher Program**: Tuition subsidy for incoming Grade 11 students (automatically granted to public school completers; ESC certificate required for private junior high completers).\n- **Student on Study Assistance Program (SSAP)**: Work-study financial grant program administered by the Scholarship Coordinator / SSAP Office.\n\nFor inquiries and application forms, visit the **Guidance Office** or consult the Scholarship Coordinator.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "last_sources": [
+        {
+          "title": "FAQ (Scholarships): Does SPUS offer scholarships? Are there scholarships available? What scholarships are offered?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Guidance",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ]
+    },
+    {
+      "case": "policy",
+      "query": "What is the SPUS Quality Policy?",
+      "n": 20,
+      "p50_ms": 876.33,
+      "p95_ms": 1979.4,
+      "max_ms": 1982.46,
+      "initial": [
+        {
+          "elapsed_ms": 869.04,
+          "ttfb_ms": 868.81,
+          "worker": "57",
+          "request_id": "978933e1-edb3-4b13-9601-88198dc62007",
+          "server_timing": "total;dur=845.15, sql;dur=31.34"
+        },
+        {
+          "elapsed_ms": 940.63,
+          "ttfb_ms": 940.43,
+          "worker": "55",
+          "request_id": "7b58554b-e6c6-4872-bbce-341af33b5236",
+          "server_timing": "total;dur=932.93, sql;dur=26.03"
+        }
+      ],
+      "samples": [
+        {
+          "elapsed_ms": 801.3,
+          "ttfb_ms": 801.09,
+          "worker": "57",
+          "request_id": "3e624138-3629-455f-be09-efb92fdc5252",
+          "server_timing": "total;dur=792.27, sql;dur=27.05"
+        },
+        {
+          "elapsed_ms": 851.7,
+          "ttfb_ms": 851.47,
+          "worker": "57",
+          "request_id": "44284710-a856-41a8-b3c0-857ea36bf8a8",
+          "server_timing": "total;dur=834.44, sql;dur=26.79"
+        },
+        {
+          "elapsed_ms": 902.72,
+          "ttfb_ms": 902.49,
+          "worker": "55",
+          "request_id": "030c0dc6-d6aa-459f-aa0b-9503b74f66c8",
+          "server_timing": "total;dur=895.79, sql;dur=27.58"
+        },
+        {
+          "elapsed_ms": 1982.46,
+          "ttfb_ms": 1982.15,
+          "worker": "56",
+          "request_id": "3e6c459f-0d4b-48ed-80df-f56dc867c1ad",
+          "server_timing": "total;dur=1957.54, sql;dur=24.95"
+        },
+        {
+          "elapsed_ms": 1490.81,
+          "ttfb_ms": 1490.39,
+          "worker": "57",
+          "request_id": "8e20ad8e-f0b3-4eb5-a4ef-cc27f5d95c08",
+          "server_timing": "total;dur=1470.36, sql;dur=26.04"
+        },
+        {
+          "elapsed_ms": 1246.4,
+          "ttfb_ms": 1246.03,
+          "worker": "56",
+          "request_id": "f92a96b9-758c-461b-808f-987f3ce9d8ff",
+          "server_timing": "total;dur=1222.76, sql;dur=22.46"
+        },
+        {
+          "elapsed_ms": 1979.4,
+          "ttfb_ms": 1979.22,
+          "worker": "55",
+          "request_id": "a9fb28cf-dc92-44c3-a0c1-2f17e31c0320",
+          "server_timing": "total;dur=1955.07, sql;dur=25.71"
+        },
+        {
+          "elapsed_ms": 844.66,
+          "ttfb_ms": 844.4,
+          "worker": "57",
+          "request_id": "14ee3dd4-5204-4846-a0cd-82b088e7bdcd",
+          "server_timing": "total;dur=825.83, sql;dur=26.74"
+        },
+        {
+          "elapsed_ms": 837.8,
+          "ttfb_ms": 837.56,
+          "worker": "55",
+          "request_id": "5a6a191b-39b9-410a-a268-f25c4e3b4143",
+          "server_timing": "total;dur=828.18, sql;dur=23.6"
+        },
+        {
+          "elapsed_ms": 924.05,
+          "ttfb_ms": 923.73,
+          "worker": "55",
+          "request_id": "871278be-c6d4-43e9-821d-519e28064eb8",
+          "server_timing": "total;dur=916.72, sql;dur=25.23"
+        },
+        {
+          "elapsed_ms": 1351.43,
+          "ttfb_ms": 1351.14,
+          "worker": "57",
+          "request_id": "e6d5d217-2461-40f6-af98-c3af1e5fd15b",
+          "server_timing": "total;dur=1321.57, sql;dur=28.51"
+        },
+        {
+          "elapsed_ms": 872.88,
+          "ttfb_ms": 872.64,
+          "worker": "56",
+          "request_id": "44c288c5-ed2c-425f-89dc-9c4f1178dc77",
+          "server_timing": "total;dur=855.24, sql;dur=27.49"
+        },
+        {
+          "elapsed_ms": 879.77,
+          "ttfb_ms": 879.34,
+          "worker": "57",
+          "request_id": "94a706e3-d80f-44e7-ae90-10d13f01ce98",
+          "server_timing": "total;dur=858.23, sql;dur=30.0"
+        },
+        {
+          "elapsed_ms": 823.56,
+          "ttfb_ms": 823.25,
+          "worker": "57",
+          "request_id": "4722e16c-9bbc-408a-9936-cef1d72f3f93",
+          "server_timing": "total;dur=805.93, sql;dur=24.27"
+        },
+        {
+          "elapsed_ms": 988.23,
+          "ttfb_ms": 987.94,
+          "worker": "57",
+          "request_id": "a32ce2b7-a501-4eed-b508-9d9dff42b748",
+          "server_timing": "total;dur=960.86, sql;dur=25.05"
+        },
+        {
+          "elapsed_ms": 692.48,
+          "ttfb_ms": 692.26,
+          "worker": "55",
+          "request_id": "22311148-2d76-44ff-8a0e-e40eded05283",
+          "server_timing": "total;dur=666.42, sql;dur=27.17"
+        },
+        {
+          "elapsed_ms": 756.55,
+          "ttfb_ms": 756.3,
+          "worker": "55",
+          "request_id": "d4446f6a-4799-4696-82f1-cf3448560fc7",
+          "server_timing": "total;dur=735.91, sql;dur=23.99"
+        },
+        {
+          "elapsed_ms": 1165.12,
+          "ttfb_ms": 1164.96,
+          "worker": "57",
+          "request_id": "c9a7b2d0-f85e-4877-bae8-6282e3da681c",
+          "server_timing": "total;dur=1159.6, sql;dur=26.04"
+        },
+        {
+          "elapsed_ms": 709.97,
+          "ttfb_ms": 709.81,
+          "worker": "57",
+          "request_id": "33f40018-3c99-4637-b72f-957114ca5983",
+          "server_timing": "total;dur=690.75, sql;dur=23.5"
+        },
+        {
+          "elapsed_ms": 842.3,
+          "ttfb_ms": 842.09,
+          "worker": "56",
+          "request_id": "893e481c-4217-4c98-9551-1ecb090b52e3",
+          "server_timing": "total;dur=812.85, sql;dur=27.02"
+        }
+      ],
+      "workers": [
+        "55",
+        "56",
+        "57"
+      ],
+      "outcomes": [
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        },
+        {
+          "source_count": 1,
+          "parts": []
+        }
+      ],
+      "last_response": "Quality Policy - St. Paul University Surigao\n### SPUS  QUALITY POLICY\n### QUALITY POLICY\nSt. Paul University Surigao is committed to delivering quality, Filipino, Catholic Paulinian education that is learner-focused and outcomes-based, rooted in a culture of compassionate care, through:\nHolistic formation\nDevelopment of human resources and continuous upgrading of facilities\nActive commitment and involvement of all stakeholders in the continual improvement of the quality management system\nCompliance with statutory, regulatory, and accreditation standards\n###\n###\nEmail: [email\u00c2\u00a0protected]\nPhone: (086) 826 4325\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "last_sources": [
+        {
+          "title": "SPUS Quality Policy",
+          "page": null,
+          "url": "https://spus.edu.ph/quality-policy/",
+          "source_type": "website",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ]
+    },
+    {
+      "case": "semantic_compound",
+      "query": "What scholarships are available, and what is the school calendar?",
+      "n": 20,
+      "p50_ms": 1018.11,
+      "p95_ms": 1754.44,
+      "max_ms": 2276.77,
+      "initial": [
+        {
+          "elapsed_ms": 1419.62,
+          "ttfb_ms": 1419.38,
+          "worker": "55",
+          "request_id": "31b128de-6038-4eab-a12d-748d7a23882c",
+          "server_timing": "total;dur=1412.95, sql;dur=53.84"
+        },
+        {
+          "elapsed_ms": 771.35,
+          "ttfb_ms": 771.06,
+          "worker": "57",
+          "request_id": "616cff10-fee7-4c16-b480-b5dc0fa023df",
+          "server_timing": "total;dur=743.85, sql;dur=50.67"
+        }
+      ],
+      "samples": [
+        {
+          "elapsed_ms": 1541.57,
+          "ttfb_ms": 1541.25,
+          "worker": "57",
+          "request_id": "04d60aa2-1437-42d7-b168-daf9b2e57c89",
+          "server_timing": "total;dur=1534.84, sql;dur=51.38"
+        },
+        {
+          "elapsed_ms": 939.0,
+          "ttfb_ms": 938.77,
+          "worker": "55",
+          "request_id": "aee820fd-1a7c-4256-94aa-b12aa3e5e457",
+          "server_timing": "total;dur=906.69, sql;dur=45.27"
+        },
+        {
+          "elapsed_ms": 826.09,
+          "ttfb_ms": 825.7,
+          "worker": "55",
+          "request_id": "430b3596-2470-4802-b7f4-c3c8f8f1ab39",
+          "server_timing": "total;dur=803.5, sql;dur=46.47"
+        },
+        {
+          "elapsed_ms": 797.06,
+          "ttfb_ms": 796.84,
+          "worker": "57",
+          "request_id": "d576c038-d111-4e55-b1dd-9d2343500985",
+          "server_timing": "total;dur=773.42, sql;dur=48.26"
+        },
+        {
+          "elapsed_ms": 1026.22,
+          "ttfb_ms": 1025.99,
+          "worker": "55",
+          "request_id": "f2e63aa8-f925-4f7f-83eb-77ed14db6574",
+          "server_timing": "total;dur=1017.38, sql;dur=43.94"
+        },
+        {
+          "elapsed_ms": 1698.81,
+          "ttfb_ms": 1698.34,
+          "worker": "57",
+          "request_id": "6179b73d-663d-4c8d-ab1a-8529c0098f87",
+          "server_timing": "total;dur=1691.38, sql;dur=43.89"
+        },
+        {
+          "elapsed_ms": 1754.44,
+          "ttfb_ms": 1754.23,
+          "worker": "56",
+          "request_id": "ae34fb1c-a5a1-4a3a-acf7-0691b2572cb5",
+          "server_timing": "total;dur=1732.37, sql;dur=54.63"
+        },
+        {
+          "elapsed_ms": 1040.15,
+          "ttfb_ms": 1039.88,
+          "worker": "56",
+          "request_id": "92699fbe-f391-400a-be39-86e50d4c4f91",
+          "server_timing": "total;dur=1023.44, sql;dur=49.92"
+        },
+        {
+          "elapsed_ms": 897.83,
+          "ttfb_ms": 897.64,
+          "worker": "56",
+          "request_id": "e9f48160-9dc0-4df7-a4a1-310f8d4f533d",
+          "server_timing": "total;dur=878.13, sql;dur=42.5"
+        },
+        {
+          "elapsed_ms": 1082.43,
+          "ttfb_ms": 1082.14,
+          "worker": "56",
+          "request_id": "5d44c6f4-8289-4a03-b615-89aec1dd90a8",
+          "server_timing": "total;dur=1074.42, sql;dur=45.43"
+        },
+        {
+          "elapsed_ms": 957.08,
+          "ttfb_ms": 956.78,
+          "worker": "56",
+          "request_id": "083fbc8d-469c-45fe-b8d3-71057b1ec755",
+          "server_timing": "total;dur=930.38, sql;dur=44.81"
+        },
+        {
+          "elapsed_ms": 1060.32,
+          "ttfb_ms": 1060.06,
+          "worker": "56",
+          "request_id": "68af8296-9fed-4bc5-ad11-7e935bda3519",
+          "server_timing": "total;dur=1031.75, sql;dur=45.11"
+        },
+        {
+          "elapsed_ms": 1076.09,
+          "ttfb_ms": 1075.74,
+          "worker": "56",
+          "request_id": "c4080b75-2a2a-4c6d-a1c7-9ca89c0ef20a",
+          "server_timing": "total;dur=1049.04, sql;dur=45.34"
+        },
+        {
+          "elapsed_ms": 1068.47,
+          "ttfb_ms": 1068.24,
+          "worker": "56",
+          "request_id": "0642e353-5605-4fc8-975a-836f3bfaf4a6",
+          "server_timing": "total;dur=1040.72, sql;dur=63.99"
+        },
+        {
+          "elapsed_ms": 1009.99,
+          "ttfb_ms": 1009.74,
+          "worker": "57",
+          "request_id": "f7d004c8-e417-4187-8f27-6bbb829893e9",
+          "server_timing": "total;dur=1002.87, sql;dur=54.78"
+        },
+        {
+          "elapsed_ms": 870.62,
+          "ttfb_ms": 870.35,
+          "worker": "57",
+          "request_id": "4ac8b597-f060-4ad4-b6df-45ea07d64adf",
+          "server_timing": "total;dur=861.81, sql;dur=42.75"
+        },
+        {
+          "elapsed_ms": 2276.77,
+          "ttfb_ms": 2276.56,
+          "worker": "57",
+          "request_id": "0189d350-26e4-49d4-a611-d7ae9ae58e95",
+          "server_timing": "total;dur=2255.17, sql;dur=49.4"
+        },
+        {
+          "elapsed_ms": 156.41,
+          "ttfb_ms": 156.15,
+          "worker": "57",
+          "request_id": "39ccb9b3-18d3-49e6-881a-eacdbaeb2dac",
+          "server_timing": "total;dur=133.08, sql;dur=44.42"
+        },
+        {
+          "elapsed_ms": 207.74,
+          "ttfb_ms": 207.49,
+          "worker": "56",
+          "request_id": "64a88306-97a8-4e89-bd0c-978b7d8e088d",
+          "server_timing": "total;dur=193.68, sql;dur=52.4"
+        },
+        {
+          "elapsed_ms": 198.95,
+          "ttfb_ms": 198.54,
+          "worker": "55",
+          "request_id": "256df123-c9f9-4846-915c-e76f9723333d",
+          "server_timing": "total;dur=166.62, sql;dur=49.47"
+        }
+      ],
+      "workers": [
+        "55",
+        "56",
+        "57"
+      ],
+      "outcomes": [
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        },
+        {
+          "source_count": 2,
+          "parts": [
+            "ok",
+            "ok"
+          ]
+        }
+      ],
+      "last_response": "**1. What scholarships are available?**\n\nYes! SPUS offers 350 ESC Slots for incoming Grade 7 students. We also support the SHS Voucher Program Subsidy for incoming Grade 11 students (automatically eligible for public school completers, ESC certificate required for private school completers). For other academic and athletic scholarships, visit the Guidance Office for application details.\n\nSources: 1\n\n**2. what is the school calendar?**\n\nThe SPUS Academic Calendar generally follows a semestral schedule:\n\n**First Semester (August \u00e2\u20ac\u201c December)**\n- Enrollment Period (Late July \u00e2\u20ac\u201c Early August)\n- Start of Classes (August)\n- Preliminary Examinations\n- Midterm Examinations\n- University Foundation Day / Paulinian Week (November)\n- Final Examinations\n- Christmas Break (December)\n\n**Second Semester (January \u00e2\u20ac\u201c May)**\n- Enrollment Period (January)\n- Start of Classes (January)\n- Preliminary Examinations\n- Midterm Examinations\n- Lenten/Holy Week Break (March/April)\n- Final Examinations\n- Baccalaureate Mass & Commencement Exercises (May)\n\n**Key Annual Events & Activities:**\n- Feast of the Conversion of St. Paul (January 25)\n- Paulinian Week / Foundation Day Celebration\n- Intramurals / Sports Festival\n- Academic & Cultural Competitions\n- Community Extension Programs\n- Recognition & Awards Ceremony\n- Commencement Exercises / Graduation\n\nFor the exact dates and detailed schedule of the current academic year, please visit the SPUS Official Website at https://spus.edu.ph or inquire at the Registrar's Office.\n\nSources: 2\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "last_sources": [
+        {
+          "title": "FAQ (Scholarships): Are there scholarships available?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "What scholarships are available?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): What is the school calendar? What are the academic calendar activities and important dates?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "what is the school calendar?",
+          "citation_index": 2
+        }
+      ]
+    }
+  ],
+  "notes": "Sequential local guest HTTP pilot; first two samples separated, not proof all workers were warm. No browser React paint time. Sources are existing stored snapshots; unsupported answers are recorded, not invented.",
+  "provider_model": "openai/gpt-oss-20b",
+  "provider_call_timeout_seconds": 2,
+  "generation_deadline_seconds": 4
+}

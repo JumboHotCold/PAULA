@@ -4,21 +4,10 @@
  * Renders a single chat message, styled by sender.
  * Parses [SUGGESTIONS: ...] from bot responses into clickable buttons.
  */
+import { parseMessage } from '../suggestions';
 
 export default function MessageBubble({ text, isUser, onSuggestionClick }) {
-  let displayText = text;
-  let suggestions = [];
-
-  // Parse follow-up suggestions from bot response
-  if (!isUser) {
-    const match = text.match(
-      /\[SUGGESTIONS?:\s*"([^"]+)"\s*\|\s*"([^"]+)"\s*\|\s*"([^"]+)"\s*\]/i
-    );
-    if (match) {
-      displayText = text.replace(match[0], '').trim();
-      suggestions = [match[1], match[2], match[3]];
-    }
-  }
+  const { text: displayText, suggestions } = isUser ? { text, suggestions: [] } : parseMessage(text);
 
   return (
     <div className={`flex animate-message-in ${isUser ? 'justify-end' : 'justify-start'}`}>

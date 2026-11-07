@@ -57,7 +57,24 @@ try {
     if ($taskActivePath.Replace('\', '/').TrimEnd('/') -ine $taskRoot.Replace('\', '/').TrimEnd('/')) {
         throw 'The running web service does not mount the intended workspace.'
     }
-    Write-Host 'Workspace mount verified. PostgreSQL container preserved. Backend: http://127.0.0.1:8080'
+    Write-Host 'Workspace mount verified. PostgreSQL container preserved. Waiting for all semantic workers...'
+    $taskReadinessTimer = [Diagnostics.Stopwatch]::StartNew()
+    $taskSemanticReady = $false
+    while ($taskReadinessTimer.Elapsed.TotalSeconds -lt 240) {
+        try {
+            $taskHealth = Invoke-RestMethod -Uri 'http://127.0.0.1:8080/api/health/ready' -TimeoutSec 2
+            if ($taskHealth.ready -and $taskHealth.ready_workers -eq $taskHealth.expected_workers) {
+                $taskSemanticReady = $true
+                break
+            }
+        }
+        catch { }
+        Start-Sleep -Seconds 1
+    }
+    if (-not $taskSemanticReady) {
+        throw 'Web service did not reach all-worker semantic readiness. Inspect worker logs; PostgreSQL was preserved.'
+    }
+    Write-Host "All $($taskHealth.ready_workers) semantic workers ready. Backend: http://127.0.0.1:8080"
 }
 finally {
     [Environment]::SetEnvironmentVariable('PAULA_DJANGO_DEBUG', $taskPreviousDebug, 'Process')

@@ -5,23 +5,30 @@ Handles both frontend HTML rendering and API endpoints.
 """
 
 import json
+import math
+from collections.abc import Mapping
 from uuid import UUID
 from django.shortcuts import render, redirect
 from django.http import JsonResponse, HttpResponse
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import ensure_csrf_cookie
+from django.views.decorators.http import require_GET
 import re
 from django.utils import timezone
+from django.db import DatabaseError
 
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from rest_framework.exceptions import ParseError, UnsupportedMediaType
+from .api_errors import failure
 
 from .logic import PauliBotLogic
 from .intents import guest_clarification_history
 from .conversation_context import bounded_history
-from .context_tokens import decode_context, encode_context
+from .context_tokens import decode_dialogue_state, encode_context
+from .suggestions import bounded_questions, response_suggestions
 from .models import ChatHistory, CustomUser, Conversation, StudentNeed, Announcement
 from .serializers import (
     UserRegistrationSerializer,
@@ -38,6 +45,18 @@ from .reports import (
 
 # Initialize bot logic engine
 bot = PauliBotLogic()
+
+
+@require_GET
+def health_live(request):
+    return JsonResponse({'live': True})
+
+
+@require_GET
+def health_ready(request):
+    from .health import service_readiness
+    state = service_readiness()
+    return JsonResponse(state, status=200 if state['ready'] else 503)
 
 # ==============================================================================
 # FRONTEND VIEWS (HTML PAGES)
@@ -225,14 +244,17 @@ def chat_api(request):
     Supports Conversation History.
     """
     try:
-        # Handle both JSON and Form data
-        if request.content_type == 'application/json':
-            data = request.data
-        else:
-            data = json.loads(request.body)
+        # Let DRF parse JSON/form bodies. Lists/scalars are not named fields.
+        data = request.data
+        if not isinstance(data, Mapping):
+            return failure('invalid_request', 400)
             
         user_message = data.get('message', '')
         conversation_id = data.get('conversation_id')
+        if conversation_id not in (None, ''):
+            if isinstance(conversation_id, bool) or not isinstance(conversation_id, (str, int)) or not str(conversation_id).isdecimal() or int(conversation_id) <= 0:
+                return failure('invalid_conversation', 400)
+            conversation_id = int(conversation_id)
         # Fail closed: possession of an old session cookie alone is never
         # sufficient to opt a chat request into permanent history.
         mode = data.get('mode', 'guest')
@@ -251,7 +273,7 @@ def chat_api(request):
             return Response({'error':'Invalid chat session identifier.'}, status=400)
         
         if not isinstance(user_message, str) or not user_message.strip() or len(user_message) > 2000:
-            return Response({'response': "Please type a message."}, status=400)
+            return failure('invalid_message', 400)
 
         conversation = None
         # Resolve ownership and a stable client chat BEFORE reading history.
@@ -310,12 +332,16 @@ def chat_api(request):
         guest_id = data.get('context_id', '')
         guest_id = guest_id if isinstance(guest_id, str) and len(guest_id) <= 100 else ''
         thread = conversation_id if persist else guest_id
-        effective_context = decode_context(data.get('context_token'), owner, thread, context_anchor)
+        dialogue_state = decode_dialogue_state(data.get('context_token'), owner, thread, context_anchor)
+        effective_context = dialogue_state.get('query', '')
+        dialogue_options = {'dialogue_state': dialogue_state} if dialogue_state.get('language') or dialogue_state.get('pending') else {}
         if effective_context:
-            result = bot.process_query(user_message, history=history_msgs, context_query=effective_context)
+            result = bot.process_query(user_message, history=history_msgs, context_query=effective_context, **dialogue_options)
         else:
-            result = bot.process_query(user_message, history=history_msgs)
+            result = bot.process_query(user_message, history=history_msgs, **dialogue_options)
         bot_response, sources, action, action_data = result
+        bot_response, suggestions, suggestions_kind = response_suggestions(
+            result, user_message, history_msgs, bounded_questions(data.get('asked_questions')))
         
         # HYBRID ACCESS: SAVE Logic
         if persist:
@@ -363,6 +389,8 @@ def chat_api(request):
         return Response({
             'response': bot_response,
             'sources': sources,
+            'suggestions': suggestions,
+            'suggestions_kind': suggestions_kind,
             'saved': saved,
             'user': user_type,
             'conversation_id': active_conversation_id,
@@ -371,13 +399,23 @@ def chat_api(request):
             'action': action,
             'action_data': action_data,
             'answer_parts': getattr(result, 'answer_parts', []),
+            'response_mode': getattr(result, 'response_mode', 'knowledge'),
+            'answer_status': getattr(result, 'answer_status', 'ok' if sources or action else 'no_match'),
             'context_token': encode_context(getattr(result, 'context_query', ''), owner,
                                             active_conversation_id if persist else guest_id,
-                                            chat_history_id if persist else None),
+                                            chat_history_id if persist else None,
+                                            language=getattr(result, 'language_preference', None),
+                                            pending=getattr(result, 'pending_clarification', None)),
         })
         
-    except Exception as e:
-        return Response({'error': str(e)}, status=500)
+    except ParseError as exc:
+        return failure('invalid_json', 400, exception=exc)
+    except UnsupportedMediaType as exc:
+        return failure('unsupported_media_type', 415, exception=exc)
+    except DatabaseError as exc:
+        return failure('storage_unavailable', 503, exception=exc)
+    except Exception as exc:
+        return failure('request_failed', 500, exception=exc)
 
 
 @api_view(['PATCH'])
@@ -408,8 +446,10 @@ def submit_feedback(request, chat_id):
         
     except ChatHistory.DoesNotExist:
         return Response({'error': 'Chat entry not found'}, status=404)
-    except Exception as e:
-        return Response({'error': str(e)}, status=500)
+    except DatabaseError as exc:
+        return failure('storage_unavailable', 503, stage='feedback', exception=exc)
+    except Exception as exc:
+        return failure('request_failed', 500, stage='feedback', exception=exc)
 
 
 # ==============================================================================
@@ -746,10 +786,17 @@ def calculate_campus_route(request):
     """
     try:
         data = request.data
-        start_x_pct = float(data.get('start_x'))
-        start_y_pct = float(data.get('start_y'))
-        end_x_pct = float(data.get('end_x'))
-        end_y_pct = float(data.get('end_y'))
+        if not isinstance(data, Mapping):
+            return failure('invalid_request', 400, stage='navigation')
+        try:
+            raw = [data.get(key) for key in ('start_x', 'start_y', 'end_x', 'end_y')]
+            if any(isinstance(value, bool) for value in raw):
+                raise ValueError('Boolean coordinates are not positions')
+            start_x_pct, start_y_pct, end_x_pct, end_y_pct = coordinates = [float(value) for value in raw]
+            if any(not math.isfinite(value) or not 0 <= value <= 100 for value in coordinates):
+                raise ValueError('Coordinates must be finite percentages')
+        except (TypeError, ValueError):
+            return failure('invalid_coordinates', 400, stage='navigation')
         
         pathfinder = get_pathfinder()
         
@@ -783,5 +830,9 @@ def calculate_campus_route(request):
             'distance_pixels': distance_estimate
         })
         
-    except Exception as e:
-        return Response({'error': str(e)}, status=500)
+    except ParseError as exc:
+        return failure('invalid_json', 400, stage='navigation', exception=exc)
+    except UnsupportedMediaType as exc:
+        return failure('unsupported_media_type', 415, stage='navigation', exception=exc)
+    except Exception as exc:
+        return failure('navigation_unavailable', 503, stage='navigation', exception=exc)

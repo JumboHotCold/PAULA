@@ -1,0 +1,221 @@
+{
+  "before": {
+    "captured": 84,
+    "expected": 84,
+    "server_p50_ms": 121.58,
+    "server_p95_ms": 891.49,
+    "hybrid_sql_count_p50": 14,
+    "hybrid_sql_ms_p95": 55.69,
+    "provider_outcomes": {
+      "groq:ok": 3
+    },
+    "stages": {
+      "context_llm_edit": {
+        "samples": 3,
+        "p50_inclusive_ms": 1917.374,
+        "p95_inclusive_ms": 2354.991
+      },
+      "context_resolution": {
+        "samples": 63,
+        "p50_inclusive_ms": 0.402,
+        "p95_inclusive_ms": 22.169
+      },
+      "dialogue_routing": {
+        "samples": 84,
+        "p50_inclusive_ms": 1.843,
+        "p95_inclusive_ms": 26.32
+      },
+      "embedding_coverage": {
+        "samples": 12,
+        "p50_inclusive_ms": 8.576,
+        "p95_inclusive_ms": 14.858
+      },
+      "exact_faq": {
+        "samples": 36,
+        "p50_inclusive_ms": 26.512,
+        "p95_inclusive_ms": 68.568
+      },
+      "followup_suggestions": {
+        "samples": 60,
+        "p50_inclusive_ms": 79.384,
+        "p95_inclusive_ms": 115.786
+      },
+      "grounding": {
+        "samples": 60,
+        "p50_inclusive_ms": 23.414,
+        "p95_inclusive_ms": 35.318
+      },
+      "hybrid_retrieval": {
+        "samples": 12,
+        "p50_inclusive_ms": 124.13,
+        "p95_inclusive_ms": 1297.265
+      },
+      "llm": {
+        "samples": 3,
+        "p50_inclusive_ms": 1861.113,
+        "p95_inclusive_ms": 2317.308
+      },
+      "normalization": {
+        "samples": 84,
+        "p50_inclusive_ms": 1.36,
+        "p95_inclusive_ms": 13.575
+      },
+      "orchestration": {
+        "samples": 84,
+        "p50_inclusive_ms": 40.033,
+        "p95_inclusive_ms": 1049.663
+      },
+      "public_vocabulary": {
+        "samples": 30,
+        "p50_inclusive_ms": 0.021,
+        "p95_inclusive_ms": 118.393
+      },
+      "query_embedding": {
+        "samples": 12,
+        "p50_inclusive_ms": 50.065,
+        "p95_inclusive_ms": 1210.576
+      },
+      "query_interpretation": {
+        "samples": 3,
+        "p50_inclusive_ms": 22.296,
+        "p95_inclusive_ms": 31.767
+      },
+      "response_render": {
+        "samples": 45,
+        "p50_inclusive_ms": 0.043,
+        "p95_inclusive_ms": 1.299
+      },
+      "retrieval": {
+        "samples": 54,
+        "p50_inclusive_ms": 37.487,
+        "p95_inclusive_ms": 805.692
+      },
+      "social_normalization": {
+        "samples": 75,
+        "p50_inclusive_ms": 0.046,
+        "p95_inclusive_ms": 1.745
+      },
+      "social_query_embedding": {
+        "samples": 3,
+        "p50_inclusive_ms": 39.107,
+        "p95_inclusive_ms": 42.87
+      },
+      "social_reply": {
+        "samples": 21,
+        "p50_inclusive_ms": 0.01,
+        "p95_inclusive_ms": 1.846
+      },
+      "structured_enrollment": {
+        "samples": 15,
+        "p50_inclusive_ms": 26.072,
+        "p95_inclusive_ms": 35.935
+      },
+      "structured_personnel": {
+        "samples": 45,
+        "p50_inclusive_ms": 0.008,
+        "p95_inclusive_ms": 515.625
+      }
+    }
+  },
+  "after": {
+    "captured": 84,
+    "expected": 84,
+    "server_p50_ms": 115.0,
+    "server_p95_ms": 345.25,
+    "hybrid_sql_count_p50": 10,
+    "hybrid_sql_ms_p95": 75.82,
+    "provider_outcomes": {},
+    "stages": {
+      "context_resolution": {
+        "samples": 63,
+        "p50_inclusive_ms": 0.336,
+        "p95_inclusive_ms": 3.766
+      },
+      "dialogue_routing": {
+        "samples": 84,
+        "p50_inclusive_ms": 1.107,
+        "p95_inclusive_ms": 7.356
+      },
+      "exact_faq": {
+        "samples": 36,
+        "p50_inclusive_ms": 24.849,
+        "p95_inclusive_ms": 50.19
+      },
+      "followup_suggestions": {
+        "samples": 63,
+        "p50_inclusive_ms": 76.613,
+        "p95_inclusive_ms": 93.701
+      },
+      "grounding": {
+        "samples": 63,
+        "p50_inclusive_ms": 22.997,
+        "p95_inclusive_ms": 32.367
+      },
+      "hybrid_retrieval": {
+        "samples": 12,
+        "p50_inclusive_ms": 86.92,
+        "p95_inclusive_ms": 151.317
+      },
+      "normalization": {
+        "samples": 84,
+        "p50_inclusive_ms": 1.117,
+        "p95_inclusive_ms": 12.917
+      },
+      "orchestration": {
+        "samples": 84,
+        "p50_inclusive_ms": 34.53,
+        "p95_inclusive_ms": 531.676
+      },
+      "public_vocabulary": {
+        "samples": 30,
+        "p50_inclusive_ms": 0.024,
+        "p95_inclusive_ms": 58.667
+      },
+      "query_embedding": {
+        "samples": 12,
+        "p50_inclusive_ms": 26.897,
+        "p95_inclusive_ms": 78.686
+      },
+      "query_interpretation": {
+        "samples": 3,
+        "p50_inclusive_ms": 26.51,
+        "p95_inclusive_ms": 55.913
+      },
+      "response_render": {
+        "samples": 48,
+        "p50_inclusive_ms": 0.041,
+        "p95_inclusive_ms": 0.168
+      },
+      "retrieval": {
+        "samples": 57,
+        "p50_inclusive_ms": 30.006,
+        "p95_inclusive_ms": 271.563
+      },
+      "social_normalization": {
+        "samples": 75,
+        "p50_inclusive_ms": 0.036,
+        "p95_inclusive_ms": 0.2
+      },
+      "social_query_embedding": {
+        "samples": 3,
+        "p50_inclusive_ms": 21.54,
+        "p95_inclusive_ms": 68.531
+      },
+      "social_reply": {
+        "samples": 21,
+        "p50_inclusive_ms": 0.008,
+        "p95_inclusive_ms": 0.018
+      },
+      "structured_enrollment": {
+        "samples": 18,
+        "p50_inclusive_ms": 25.328,
+        "p95_inclusive_ms": 69.334
+      },
+      "structured_personnel": {
+        "samples": 45,
+        "p50_inclusive_ms": 0.01,
+        "p95_inclusive_ms": 270.853
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "complete": true,
+  "passed": 20,
+  "checks": [
+    {
+      "name": "real Unfold stylesheets load",
+      "passed": true
+    },
+    {
+      "name": "real logo is visible with absolute static URL",
+      "passed": true
+    },
+    {
+      "name": "icon font loads instead of showing words",
+      "passed": true
+    },
+    {
+      "name": "PAULA branding and return link",
+      "passed": true
+    },
+    {
+      "name": "Unfold JavaScript initializes",
+      "passed": true
+    },
+    {
+      "name": "admin login fits mobile",
+      "passed": true
+    },
+    {
+      "name": "Unfold dark styling is applied",
+      "passed": true
+    },
+    {
+      "name": "guest has navigation without Map Tools or session lookup",
+      "passed": true
+    },
+    {
+      "name": "student cannot enable tools using a local superuser flag",
+      "passed": true
+    },
+    {
+      "name": "admin tools stay hidden before backend verification",
+      "passed": true
+    },
+    {
+      "name": "matching backend administrator can open tools",
+      "passed": true
+    },
+    {
+      "name": "admin mapper retains export and explains persistence",
+      "passed": true
+    },
+    {
+      "name": "switching admin to guest removes tools and restores navigation",
+      "passed": true
+    },
+    {
+      "name": "mismatched backend identity fails closed",
+      "passed": true
+    },
+    {
+      "name": "session error fails closed without hiding public navigation",
+      "passed": true
+    },
+    {
+      "name": "late admin verification cannot re-enable guest tools",
+      "passed": true
+    },
+    {
+      "name": "analytics restores at /admin",
+      "passed": true
+    },
+    {
+      "name": "analytics restores at /admin/",
+      "passed": true
+    },
+    {
+      "name": "stale local admin role is removed using backend session",
+      "passed": true
+    },
+    {
+      "name": "guest cannot restore analytics from a stale local admin flag",
+      "passed": true
+    }
+  ],
+  "notes": "Actual Docker admin login assets and responsive layout; isolated synthetic identity/session fixtures for MapModule. No real login, account creation, map writes, or historical-data changes."
+}

@@ -12,6 +12,7 @@ from .web_crawler import PERSON_CATEGORY, ROSTER_CATEGORY
 from .retrieval_types import EvidenceList
 from .query_normalization import canonical_text, person_key, roles_in, role_supported, freshness_requested
 from .evidence_identity import consolidate_evidence
+from .performance import timed
 
 
 def name_request(query):
@@ -108,6 +109,7 @@ def office_conflict(query,results,faqs):
     return False
 
 
+@timed('structured_personnel')
 def exact_personnel_lookup(query, resources=None):
     kind = lookup_kind(query)
     if kind is None:

@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { patchProfile } from '../api/chatApi';
+import { backendUrl } from '../utils/backendUrl';
 
 /**
  * EditProfileModal Component
@@ -13,6 +14,25 @@ export default function EditProfileModal({ isOpen, onClose, user, onUpdate }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const fileInputRef = useRef(null);
+  const dialogRef = useRef(null);
+  useEffect(() => {
+    if (!isOpen) return;
+    const previous = document.activeElement;
+    dialogRef.current?.querySelector('.close-btn')?.focus();
+    const key = event => {
+      if (event.key === 'Escape') onClose();
+      if (event.key !== 'Tab') return;
+      const items = [...dialogRef.current.querySelectorAll('button, input')].filter(el => !el.disabled && el.type !== 'file');
+      if (event.shiftKey && document.activeElement === items[0]) { event.preventDefault(); items.at(-1)?.focus(); }
+      if (!event.shiftKey && document.activeElement === items.at(-1)) { event.preventDefault(); items[0]?.focus(); }
+    };
+    document.addEventListener('keydown', key);
+    return () => {
+      document.removeEventListener('keydown', key);
+      const target = previous?.closest('[inert]') ? document.querySelector('.hamburger-btn') : previous;
+      target?.focus();
+    };
+  }, [isOpen, onClose]);
 
   useEffect(() => {
     if (isOpen && user) {
@@ -66,10 +86,10 @@ export default function EditProfileModal({ isOpen, onClose, user, onUpdate }) {
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content glass-card animate-message-in" onClick={(e) => e.stopPropagation()}>
+      <div ref={dialogRef} className="modal-content glass-card animate-message-in" role="dialog" aria-modal="true" aria-labelledby="profile-dialog-title" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
-          <h2>Edit Profile</h2>
-          <button className="close-btn" onClick={onClose}>&times;</button>
+          <h2 id="profile-dialog-title">Edit Profile</h2>
+          <button type="button" className="close-btn" aria-label="Close profile" onClick={onClose}>&times;</button>
         </div>
         
         <div className="modal-body">
@@ -79,7 +99,7 @@ export default function EditProfileModal({ isOpen, onClose, user, onUpdate }) {
             <div className="avatar-preview-container" onClick={() => fileInputRef.current.click()}>
               {avatarPreview ? (
                 <img 
-                  src={avatarPreview.startsWith('data:') ? avatarPreview : (avatarPreview.startsWith('http') ? avatarPreview : `http://localhost:8000${avatarPreview}`)} 
+                  src={backendUrl(avatarPreview)}
                   alt="Avatar Preview" 
                   className="avatar-preview-img" 
                   onError={(e) => { e.target.src = ''; setAvatarPreview(''); }}
@@ -148,11 +168,14 @@ export default function EditProfileModal({ isOpen, onClose, user, onUpdate }) {
           justify-content: center;
           z-index: 2000;
           padding: 20px;
+          overflow-y: auto;
         }
         .modal-content {
           width: 100%;
           max-width: 440px;
           border-radius: 20px;
+          max-height: calc(var(--app-height, 100dvh) - 32px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+          overflow-y: auto;
           padding: 32px;
           position: relative;
           background: var(--color-surface);
@@ -181,6 +204,8 @@ export default function EditProfileModal({ isOpen, onClose, user, onUpdate }) {
           color: var(--color-text-muted);
           line-height: 1;
           padding: 0;
+          min-width: 44px;
+          min-height: 44px;
         }
         .profile-photo-section {
           display: flex;
@@ -264,6 +289,15 @@ export default function EditProfileModal({ isOpen, onClose, user, onUpdate }) {
         .modal-footer .btn {
           flex: 1;
           padding: 14px;
+        }
+        @media (max-width: 600px) {
+          .modal-overlay { padding: 12px; }
+          .modal-content { padding: 20px; }
+          .modal-content input { font-size: 16px; }
+          .modal-header { margin-bottom: 16px; }
+          .profile-photo-section { margin-bottom: 18px; }
+          .avatar-preview-container { width: 96px; height: 96px; }
+          .modal-footer { margin-top: 20px; gap: 8px; }
         }
       `}} />
     </div>

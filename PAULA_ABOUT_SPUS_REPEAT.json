@@ -1,0 +1,62 @@
+{
+  "source_path": "knowledge_base/About_SPUS/About SPUS.txt",
+  "source_sha256": "f2b760d50b8e5ea3ce02fbfa8502cc43e6f54dfbdb1c365ecb2195e1812ffc90",
+  "encoding": "UTF-8",
+  "source_type": "curated",
+  "verification": "User-supplied document; not independently verified against the live website",
+  "dry_run": false,
+  "entries": [
+    {
+      "question": "What is Saint Paul University Surigao (SPUS)?",
+      "action": "reuse",
+      "record_ids": [
+        95
+      ]
+    },
+    {
+      "question": "What is SPUS?",
+      "action": "reuse",
+      "record_ids": [
+        151
+      ]
+    },
+    {
+      "question": "What is the SPUS Vision and Mission?",
+      "action": "reuse",
+      "record_ids": [
+        96
+      ]
+    },
+    {
+      "question": "What are the complete definitions of the Paulinian core values at SPUS?",
+      "action": "reuse",
+      "record_ids": [
+        152
+      ]
+    },
+    {
+      "question": "Why choose SPUS? What makes SPUS special?",
+      "action": "reuse",
+      "record_ids": [
+        98
+      ]
+    },
+    {
+      "question": "What are the SPUS campuses and what does each campus house?",
+      "action": "reuse",
+      "record_ids": [
+        153
+      ]
+    },
+    {
+      "question": "What is the early history of SPUS?",
+      "action": "reuse",
+      "record_ids": [
+        154
+      ]
+    }
+  ],
+  "created": 0,
+  "would_create": 0,
+  "reused": 7
+}

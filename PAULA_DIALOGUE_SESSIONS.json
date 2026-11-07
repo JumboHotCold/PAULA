@@ -1,0 +1,52 @@
+{
+  "passed": 11,
+  "checks": [
+    {
+      "check": "one_authenticated_thread_for_all_turns",
+      "passed": true
+    },
+    {
+      "check": "preference_follows_owned_session",
+      "passed": true
+    },
+    {
+      "check": "pending_category_survives_social_turns",
+      "passed": true
+    },
+    {
+      "check": "natural_category_uses_original_query",
+      "passed": true
+    },
+    {
+      "check": "five_prompts_grouped_in_one_thread",
+      "passed": true
+    },
+    {
+      "check": "guest_drops_student_identity_and_history",
+      "passed": true
+    },
+    {
+      "check": "guest_cannot_inherit_student_language",
+      "passed": true
+    },
+    {
+      "check": "new_thread_cannot_inherit_previous_token",
+      "passed": true
+    },
+    {
+      "check": "logout_cannot_replay_student_state",
+      "passed": true
+    },
+    {
+      "check": "another_account_cannot_replay_state",
+      "passed": true
+    },
+    {
+      "check": "foreign_conversation_still_forbidden",
+      "passed": true
+    }
+  ],
+  "temporary_writes_rolled_back": true,
+  "new_accounts_created": 0,
+  "note": "Existing accounts; fixture retriever, actual PostgreSQL session and persistence logic"
+}

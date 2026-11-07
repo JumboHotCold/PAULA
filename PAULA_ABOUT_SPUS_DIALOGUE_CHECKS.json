@@ -1,0 +1,270 @@
+[
+  {
+    "query": "What is SPUS?",
+    "url": "http://localhost:5173/api/chat",
+    "passed": true,
+    "elapsed_ms": 65.53,
+    "response": "Sure—here is the information from the stored sources.\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\n[SUGGESTIONS: \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+    "sources": [
+      {
+        "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+        "page": null,
+        "url": null,
+        "source_type": "curated",
+        "source_office": null,
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ]
+  },
+  {
+    "query": "Tell me about SPUS",
+    "url": "http://localhost:5173/api/chat",
+    "passed": true,
+    "elapsed_ms": 83.03,
+    "response": "Sure—here is the information from the stored sources.\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\n[SUGGESTIONS: \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+    "sources": [
+      {
+        "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+        "page": null,
+        "url": null,
+        "source_type": "curated",
+        "source_office": null,
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ]
+  },
+  {
+    "query": "Ano ang SPUS?",
+    "url": "http://localhost:5173/api/chat",
+    "passed": true,
+    "elapsed_ms": 111.41,
+    "response": "Sige—narito ang impormasyon mula sa mga nakaimbak na sanggunian.\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\n[SUGGESTIONS: \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+    "sources": [
+      {
+        "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+        "page": null,
+        "url": null,
+        "source_type": "curated",
+        "source_office": null,
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ]
+  },
+  {
+    "query": "What is the vision of SPUS?",
+    "url": "http://localhost:5173/api/chat",
+    "passed": true,
+    "elapsed_ms": 2120.27,
+    "response": "Sure—here is the information from the stored sources.\n\nVISION-MISSION\nVISION\nEmpowered Paulinians making a difference for Church and society.\n\nMISSION\nProclaim the Good News enabling Paulinians to reach full potentials through:\n\nTransformative Formation\nTranquil-daring Innovations\nAll-to-all Service\n\nVISION: Empowered Paulinians making a difference for Church and society. \nMISSION: Proclaim the Good News enabling Paulinians to reach their full potential through Transformative Formation, Tranquil-daring Innovations, and All-to-all Service.\n\n[SUGGESTIONS: \"What is Saint Paul University Surigao (SPUS)?\" | \"What are the Paulinian Core Values?\"]",
+    "sources": [
+      {
+        "title": "FAQ (About SPUS): What is the SPUS Vision and Mission?",
+        "page": null,
+        "url": null,
+        "source_type": "curated",
+        "source_office": null,
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      },
+      {
+        "title": "FAQ (About SPUS): What is the university's Vision and Mission?",
+        "page": null,
+        "url": null,
+        "source_type": "curated",
+        "source_office": null,
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ]
+  },
+  {
+    "query": "What is the mission of SPUS?",
+    "url": "http://localhost:5173/api/chat",
+    "passed": true,
+    "elapsed_ms": 819.45,
+    "response": "Sure—here is the information from the stored sources.\n\nVISION-MISSION\nVISION\nEmpowered Paulinians making a difference for Church and society.\n\nMISSION\nProclaim the Good News enabling Paulinians to reach full potentials through:\n\nTransformative Formation\nTranquil-daring Innovations\nAll-to-all Service\n\n[SUGGESTIONS: \"What is Saint Paul University Surigao (SPUS)?\" | \"What are the Paulinian Core Values?\"]",
+    "sources": [
+      {
+        "title": "FAQ (About SPUS): What is the SPUS Vision and Mission?",
+        "page": null,
+        "url": null,
+        "source_type": "curated",
+        "source_office": null,
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ]
+  },
+  {
+    "query": "What are the Paulinian core values?",
+    "url": "http://localhost:5173/api/chat",
+    "passed": true,
+    "elapsed_ms": 175.52,
+    "response": "Sure—here is the information from the stored sources.\n\nThe Paulinian Core Values are:\n- Charism: Developing talents to serve the community.\n- Christ-Centered: Living a life following and imitating Christ.\n- Commission: Having a life purpose to spread the Good News and positively impact the world.\n- Community: Being a responsible citizen prioritizing justice, peace, and environmental protection.\n- Charity: Being warm, hospitable, and 'all to all', especially to the underprivileged.\n\n[SUGGESTIONS: \"What are the complete definitions of the Paulinian core values at SPUS?\" | \"What is Saint Paul University Surigao (SPUS)?\"]",
+    "sources": [
+      {
+        "title": "FAQ (About SPUS): What are the Paulinian Core Values?",
+        "page": null,
+        "url": null,
+        "source_type": "curated",
+        "source_office": null,
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ]
+  },
+  {
+    "query": "What are the complete definitions of the Paulinian core values at SPUS?",
+    "url": "http://localhost:5173/api/chat",
+    "passed": true,
+    "elapsed_ms": 62.17,
+    "response": "Sure—here is the information from the stored sources.\n\nPAULINIAN CORE VALUES\nCharism\nThe Paulinian develops his or her gifts or talents to be put in the service of the community, he or she strives to grow and improve daily, always seeking the better and finer things, and the final good.\nChrist-Centered\nChrist is the center of Paulinian life; he or she follows and imitates Christ, doing everything in reference to Him.\nCommission\nThe Paulinian has a mission – a life purpose to spread the Good News; like Christ, he/she actively works “to save” this world, to make it better place to live in.\nCommunity\nThe Paulinian is a responsible family member and citizen, concerned with building communities, promotion of people, justice, and peace, and the protection of the environment.\nCharity\nUrged on by the love of Christ, the Paulinian is warm, hospitable, and “all to all”, especially to the underprivileged.\n\n[SUGGESTIONS: \"What are the Paulinian Core Values?\" | \"What is Saint Paul University Surigao (SPUS)?\"]",
+    "sources": [
+      {
+        "title": "FAQ (About SPUS): [About SPUS.txt] What are the complete definitions of the Paulinian core values at SPUS?",
+        "page": null,
+        "url": null,
+        "source_type": "curated",
+        "source_office": null,
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ]
+  },
+  {
+    "query": "Why choose SPUS?",
+    "url": "http://localhost:5173/api/chat",
+    "passed": true,
+    "elapsed_ms": 73.76,
+    "response": "Sure—here is the information from the stored sources.\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"Does SPUS offer Graduate School programs?\"]",
+    "sources": [
+      {
+        "title": "FAQ (Academics): Why choose SPUS?",
+        "page": null,
+        "url": null,
+        "source_type": "curated",
+        "source_office": null,
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ]
+  },
+  {
+    "query": "why should i choose spus?",
+    "url": "http://localhost:5173/api/chat",
+    "passed": true,
+    "elapsed_ms": 62.38,
+    "response": "Sure—here is the information from the stored sources.\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"Does SPUS offer Graduate School programs?\"]",
+    "sources": [
+      {
+        "title": "FAQ (Academics): Why choose SPUS?",
+        "page": null,
+        "url": null,
+        "source_type": "curated",
+        "source_office": null,
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ]
+  },
+  {
+    "query": "Why should we choose SPUS?",
+    "url": "http://localhost:5173/api/chat",
+    "passed": true,
+    "elapsed_ms": 108.57,
+    "response": "Sure—here is the information from the stored sources.\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"Does SPUS offer Graduate School programs?\"]",
+    "sources": [
+      {
+        "title": "FAQ (Academics): Why choose SPUS?",
+        "page": null,
+        "url": null,
+        "source_type": "curated",
+        "source_office": null,
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ]
+  },
+  {
+    "query": "What are the two campuses of SPUS?",
+    "url": "http://localhost:5173/api/chat",
+    "passed": true,
+    "elapsed_ms": 979.45,
+    "response": "Sure—here is the information from the stored sources.\n\n### About us\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\nIt has two campuses: the main campus in the heart of Surigao City houses the college academic units, graduate school and offices and the satellite campus at Brgy. Luna which houses the high school and grade school.\nSPUS is the first university in the Caraga region and is identified as the center for development in teacher education and the regional center for Gender and Development, it being the seat of CARAGA Women's resources center established in 1906.\nIt is one of the seven campuses comprising the St. Paul University System.\nIt is one of the 40 schools owned, managed, and operated by the Sisters of St. Paul of Chartres (SPC) in the Philippines.\n\n[SUGGESTIONS: \"What are the Paulinian Core Values?\" | \"What are the complete definitions of the Paulinian core values at SPUS?\"]",
+    "sources": [
+      {
+        "title": "About SPUS & Paulinian Core Values (Part 2)",
+        "page": null,
+        "url": "https://spus.edu.ph/about-us-2/",
+        "source_type": "website",
+        "source_office": null,
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ]
+  },
+  {
+    "query": "What is the early history of SPUS?",
+    "url": "http://localhost:5173/api/chat",
+    "passed": true,
+    "elapsed_ms": 68.05,
+    "response": "Sure—here is the information from the stored sources.\n\nSt. Paul University Surigao traces its roots to the year 1906 when the last group of Spanish Benedictine Missionaries, who had worked zealously as founders of the Cartilla or Doctrina School (which soon evolved into Escuela Catolica de San Nicolas), with the Religious of the Virgin Mary as administrators, vacated Surigao. Soon after their departure, the Missionaries of the Sacred Heart, also known as the Dutch Fathers, succeeded them, created the parish of Surigao, and made Escuela Catolica de San Nicolas a parochial school which they renamed San Nicolas School.\n\n[SUGGESTIONS: \"What is the history of SPUS?\" | \"What is Saint Paul University Surigao (SPUS)?\"]",
+    "sources": [
+      {
+        "title": "FAQ (About SPUS): [About SPUS.txt] What is the early history of SPUS?",
+        "page": null,
+        "url": null,
+        "source_type": "curated",
+        "source_office": null,
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ]
+  },
+  {
+    "query": "What is the early history of SPUS and San Nicolas School?",
+    "url": "http://localhost:5173/api/chat",
+    "passed": true,
+    "elapsed_ms": 140.12,
+    "response": "Sure—here is the information from the stored sources.\n\n**1. What is the early history of SPUS?**\n\nSt. Paul University Surigao traces its roots to the year 1906 when the last group of Spanish Benedictine Missionaries, who had worked zealously as founders of the Cartilla or Doctrina School (which soon evolved into Escuela Catolica de San Nicolas), with the Religious of the Virgin Mary as administrators, vacated Surigao. Soon after their departure, the Missionaries of the Sacred Heart, also known as the Dutch Fathers, succeeded them, created the parish of Surigao, and made Escuela Catolica de San Nicolas a parochial school which they renamed San Nicolas School.\n\nSources: 1\n\n**2. What is the early history of San Nicolas School?**\n\nI don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What is the history of SPUS?\" | \"What is Saint Paul University Surigao (SPUS)?\" | \"What is the procedure for submitting materials or reporting school events for publication to PBMO?\"]",
+    "sources": [
+      {
+        "title": "FAQ (About SPUS): [About SPUS.txt] What is the early history of SPUS?",
+        "page": null,
+        "url": null,
+        "source_type": "curated",
+        "source_office": null,
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": [],
+        "part": 1,
+        "query": "What is the early history of SPUS?",
+        "citation_index": 1
+      }
+    ]
+  },
+  {
+    "query": "What is the 2030 SPUS enrollment deadline?",
+    "url": "http://localhost:5173/api/chat",
+    "passed": true,
+    "elapsed_ms": 147.13,
+    "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What are the required documents for transferee students enrolling at SPUS?\" | \"What are the required admission and enrollment documents for incoming freshmen at SPUS?\" | \"What is the enrollment information?\"]",
+    "sources": []
+  }
+]

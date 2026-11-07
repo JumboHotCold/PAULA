@@ -1,0 +1,696 @@
+{
+  "phase": "before",
+  "url": "http://127.0.0.1:8080/api/chat",
+  "percentiles": "nearest rank; small sequential sample, not a load test",
+  "groups": {
+    "social": {
+      "n": 24,
+      "p50_ms": 145.38,
+      "p95_ms": 1070.6
+    },
+    "mixed": {
+      "n": 3,
+      "p50_ms": 245.34,
+      "p95_ms": 397.61
+    },
+    "knowledge": {
+      "n": 9,
+      "p50_ms": 112.76,
+      "p95_ms": 511.88
+    }
+  },
+  "results": [
+    {
+      "category": "social",
+      "query": "Hello",
+      "repeat": 0,
+      "elapsed_ms": 365.53,
+      "response": "Hello! I am PAULA, the Paulinian Artificial User Support and Learning Assistant. How can I help with your SPUS question?",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "93a44154-36cf-4c87-80c7-c22522ca34e3",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=243.57, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Okay",
+      "repeat": 0,
+      "elapsed_ms": 322.92,
+      "response": "You're welcome! You can ask another question about SPUS.",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "aa800f4b-588f-4ea4-bcab-cd2ed7b2e979",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=238.39, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "How are you?",
+      "repeat": 0,
+      "elapsed_ms": 3685.56,
+      "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"How are announcements and promotional materials broadcast across the SPUS campus?\" | \"What are the guidelines for using official SPUS logos, seals, and brand assets?\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "042117ca-4f57-410f-bd2d-a0637f32dfce",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=3678.67, sql;dur=203.13"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Thank you",
+      "repeat": 0,
+      "elapsed_ms": 16.51,
+      "response": "You're welcome! You can ask another question about SPUS.",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "cda39f3f-179f-4f6c-8056-65df6e2b465c",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=4.77, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Can you tell me a short joke?",
+      "repeat": 0,
+      "elapsed_ms": 315.52,
+      "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"How are announcements and promotional materials broadcast across the SPUS campus?\" | \"What are the guidelines for using official SPUS logos, seals, and brand assets?\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "9e9dbe8a-cdfd-4a38-acce-b87ced4ff338",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=308.65, sql;dur=44.54"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Kumusta ka?",
+      "repeat": 0,
+      "elapsed_ms": 614.52,
+      "response": "Wala akong sapat na beripikadong impormasyon sa aking SPUS knowledge base para sagutin ang tanong na ito. Mangyaring kumpirmahin ito sa kinauukulang opisina o sa [opisyal na SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"How are announcements and promotional materials broadcast across the SPUS campus?\" | \"What are the guidelines for using official SPUS logos, seals, and brand assets?\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "c82816e3-fb7d-42ff-9223-9cc20e76ecb8",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=606.28, sql;dur=40.75"
+      }
+    },
+    {
+      "category": "social",
+      "query": "I feel nervous today",
+      "repeat": 0,
+      "elapsed_ms": 179.75,
+      "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"How are announcements and promotional materials broadcast across the SPUS campus?\" | \"What are the guidelines for using official SPUS logos, seals, and brand assets?\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "1f736742-c925-4d72-a02e-101bc935bb2f",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=155.28, sql;dur=32.96"
+      }
+    },
+    {
+      "category": "social",
+      "query": "What do you do for fun?",
+      "repeat": 0,
+      "elapsed_ms": 1070.6,
+      "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"How are announcements and promotional materials broadcast across the SPUS campus?\" | \"What are the guidelines for using official SPUS logos, seals, and brand assets?\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "b6c52405-4c74-4242-b4ad-aac025be04bb",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=1041.22, sql;dur=41.13"
+      }
+    },
+    {
+      "category": "mixed",
+      "query": "Hi! Who is the ICT Director?",
+      "repeat": 0,
+      "elapsed_ms": 245.34,
+      "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"Who is the Director of the Publication, Brand, and Marketing Office (PBMO)?\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "779758a7-9d35-4516-b738-dc732aac2d6c",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=236.98, sql;dur=34.67"
+      }
+    },
+    {
+      "category": "knowledge",
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "repeat": 0,
+      "elapsed_ms": 511.88,
+      "response": "**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What is the courses information?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "6f283c94-d91f-4c09-aad6-7dd31f4d8adc",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=488.72, sql;dur=83.61"
+      }
+    },
+    {
+      "category": "knowledge",
+      "query": "Why should I choose SPUS?",
+      "repeat": 0,
+      "elapsed_ms": 75.93,
+      "response": "Choosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "60b1cbc2-a95b-4a4e-af0f-fc92b6bdb514",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=65.75, sql;dur=9.08"
+      }
+    },
+    {
+      "category": "knowledge",
+      "query": "How do I enroll at SPUS?",
+      "repeat": 0,
+      "elapsed_ms": 112.76,
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "b5140bc1-c9bd-4a79-911f-ff5f760c29e0",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=102.93, sql;dur=11.19"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Hello",
+      "repeat": 1,
+      "elapsed_ms": 10.03,
+      "response": "Hello! I am PAULA, the Paulinian Artificial User Support and Learning Assistant. How can I help with your SPUS question?",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "9ec81ab9-10f7-4dc1-8704-f40972e8faa4",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=1.29, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Okay",
+      "repeat": 1,
+      "elapsed_ms": 8.25,
+      "response": "You're welcome! You can ask another question about SPUS.",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "cc5159f7-d406-441d-86f6-d6745ed4307a",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=0.83, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "How are you?",
+      "repeat": 1,
+      "elapsed_ms": 136.56,
+      "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"How are announcements and promotional materials broadcast across the SPUS campus?\" | \"What are the guidelines for using official SPUS logos, seals, and brand assets?\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "29322cf7-9c2b-472d-a6dd-7684ddbeafe6",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=124.94, sql;dur=21.03"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Thank you",
+      "repeat": 1,
+      "elapsed_ms": 19.47,
+      "response": "You're welcome! You can ask another question about SPUS.",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "1aaef16e-8b19-4ec0-8d6c-4ccf535de0b8",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=1.12, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Can you tell me a short joke?",
+      "repeat": 1,
+      "elapsed_ms": 159.08,
+      "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"How are announcements and promotional materials broadcast across the SPUS campus?\" | \"What are the guidelines for using official SPUS logos, seals, and brand assets?\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "18250bb4-b41b-4e23-841f-e66eaca32ed7",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=149.34, sql;dur=33.14"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Kumusta ka?",
+      "repeat": 1,
+      "elapsed_ms": 180.14,
+      "response": "Wala akong sapat na beripikadong impormasyon sa aking SPUS knowledge base para sagutin ang tanong na ito. Mangyaring kumpirmahin ito sa kinauukulang opisina o sa [opisyal na SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"How are announcements and promotional materials broadcast across the SPUS campus?\" | \"What are the guidelines for using official SPUS logos, seals, and brand assets?\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "43ba65c6-d661-4357-a800-d19ee1e80b33",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=151.42, sql;dur=33.47"
+      }
+    },
+    {
+      "category": "social",
+      "query": "I feel nervous today",
+      "repeat": 1,
+      "elapsed_ms": 147.53,
+      "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"How are announcements and promotional materials broadcast across the SPUS campus?\" | \"What are the guidelines for using official SPUS logos, seals, and brand assets?\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "6d3e7a09-3587-490d-97ec-4a3851fe6696",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=137.2, sql;dur=29.21"
+      }
+    },
+    {
+      "category": "social",
+      "query": "What do you do for fun?",
+      "repeat": 1,
+      "elapsed_ms": 142.15,
+      "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"How are announcements and promotional materials broadcast across the SPUS campus?\" | \"What are the guidelines for using official SPUS logos, seals, and brand assets?\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "18b54017-9c5c-4cc1-8bf4-8b3608b8d6e3",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=129.8, sql;dur=26.93"
+      }
+    },
+    {
+      "category": "mixed",
+      "query": "Hi! Who is the ICT Director?",
+      "repeat": 1,
+      "elapsed_ms": 184.1,
+      "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"Who is the Director of the Publication, Brand, and Marketing Office (PBMO)?\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "b4c319c6-92d1-4ccf-a266-467aac56cb08",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=175.8, sql;dur=33.07"
+      }
+    },
+    {
+      "category": "knowledge",
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "repeat": 1,
+      "elapsed_ms": 229.49,
+      "response": "**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What is the courses information?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "4ce2a4df-2fd8-4528-9421-1dfa086fae37",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=220.14, sql;dur=65.41"
+      }
+    },
+    {
+      "category": "knowledge",
+      "query": "Why should I choose SPUS?",
+      "repeat": 1,
+      "elapsed_ms": 101.33,
+      "response": "Choosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "69b755fb-a2c3-45fc-af91-022fdd90a6a1",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=72.48, sql;dur=6.88"
+      }
+    },
+    {
+      "category": "knowledge",
+      "query": "How do I enroll at SPUS?",
+      "repeat": 1,
+      "elapsed_ms": 169.74,
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "0f6cbc22-6678-4859-ac15-18aecd0fa4f5",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=160.98, sql;dur=19.08"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Hello",
+      "repeat": 2,
+      "elapsed_ms": 10.35,
+      "response": "Hello! I am PAULA, the Paulinian Artificial User Support and Learning Assistant. How can I help with your SPUS question?",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "1142f8f9-77cf-43d7-b7fd-f76609edb334",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=1.22, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Okay",
+      "repeat": 2,
+      "elapsed_ms": 29.5,
+      "response": "You're welcome! You can ask another question about SPUS.",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "966e959d-b89e-4156-9a84-8e37fc95eb3b",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=1.52, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "How are you?",
+      "repeat": 2,
+      "elapsed_ms": 160.36,
+      "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"How are announcements and promotional materials broadcast across the SPUS campus?\" | \"What are the guidelines for using official SPUS logos, seals, and brand assets?\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "23d1118f-2ec3-43a6-975f-293ae4c049cb",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=115.36, sql;dur=21.25"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Thank you",
+      "repeat": 2,
+      "elapsed_ms": 23.06,
+      "response": "You're welcome! You can ask another question about SPUS.",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "57054759-c9ee-42bb-8a1c-be87f83527e8",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=0.91, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Can you tell me a short joke?",
+      "repeat": 2,
+      "elapsed_ms": 145.38,
+      "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"How are announcements and promotional materials broadcast across the SPUS campus?\" | \"What are the guidelines for using official SPUS logos, seals, and brand assets?\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "a14fd2e7-44ab-435b-9762-45ea280c6541",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=139.68, sql;dur=41.68"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Kumusta ka?",
+      "repeat": 2,
+      "elapsed_ms": 153.91,
+      "response": "Wala akong sapat na beripikadong impormasyon sa aking SPUS knowledge base para sagutin ang tanong na ito. Mangyaring kumpirmahin ito sa kinauukulang opisina o sa [opisyal na SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"How are announcements and promotional materials broadcast across the SPUS campus?\" | \"What are the guidelines for using official SPUS logos, seals, and brand assets?\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "5afd8430-aa7c-42e5-ab0a-895a71df7874",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=147.86, sql;dur=28.04"
+      }
+    },
+    {
+      "category": "social",
+      "query": "I feel nervous today",
+      "repeat": 2,
+      "elapsed_ms": 128.15,
+      "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"How are announcements and promotional materials broadcast across the SPUS campus?\" | \"What are the guidelines for using official SPUS logos, seals, and brand assets?\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "65a55334-2794-4bd8-8c98-f6d4fc007fdf",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=123.37, sql;dur=33.74"
+      }
+    },
+    {
+      "category": "social",
+      "query": "What do you do for fun?",
+      "repeat": 2,
+      "elapsed_ms": 128.95,
+      "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"How are announcements and promotional materials broadcast across the SPUS campus?\" | \"What are the guidelines for using official SPUS logos, seals, and brand assets?\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "b68adc29-c818-44c1-8b6e-65f3319e3013",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=123.34, sql;dur=29.13"
+      }
+    },
+    {
+      "category": "mixed",
+      "query": "Hi! Who is the ICT Director?",
+      "repeat": 2,
+      "elapsed_ms": 397.61,
+      "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"Who is the Director of the Publication, Brand, and Marketing Office (PBMO)?\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "7ff21e68-b183-4d95-800d-392c7958a579",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=391.19, sql;dur=38.25"
+      }
+    },
+    {
+      "category": "knowledge",
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "repeat": 2,
+      "elapsed_ms": 348.38,
+      "response": "**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What is the courses information?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "a75603aa-55d4-4915-a51f-54996b294ea4",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=341.48, sql;dur=52.94"
+      }
+    },
+    {
+      "category": "knowledge",
+      "query": "Why should I choose SPUS?",
+      "repeat": 2,
+      "elapsed_ms": 54.56,
+      "response": "Choosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "c3e5bc24-b7a5-49b8-83c2-0fe92f453630",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=48.72, sql;dur=7.61"
+      }
+    },
+    {
+      "category": "knowledge",
+      "query": "How do I enroll at SPUS?",
+      "repeat": 2,
+      "elapsed_ms": 6.64,
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "mode": null,
+      "headers": {
+        "X-Request-ID": "cc20acf7-0d37-45dc-a1d6-71fb1de41f4c",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=1.89, sql;dur=0.0"
+      }
+    }
+  ]
+}

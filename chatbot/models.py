@@ -14,6 +14,21 @@ from django.db import models
 from django.utils import timezone
 
 
+def invalidate_changed_embedding(instance, kwargs, fields):
+    """Invalidate exactly the text fields being persisted, including partial saves."""
+    if not instance.pk:
+        return
+    update_fields = kwargs.get('update_fields')
+    compared = set(fields) if update_fields is None else set(fields).intersection(update_fields)
+    if not compared:
+        return
+    previous = type(instance).objects.filter(pk=instance.pk).values(*compared).first()
+    if previous and any(previous[field] != getattr(instance, field) for field in compared):
+        instance.embedding = None
+        if update_fields is not None:
+            kwargs['update_fields'] = set(update_fields) | {'embedding'}
+
+
 class CustomUser(AbstractUser):
     """
     Custom User model for PauliBot authentication.
@@ -169,11 +184,7 @@ class Location(models.Model):
     embedding = VectorField(dimensions=384, null=True, blank=True, help_text="Automatically generated vector embedding for semantic search")
 
     def save(self, *args, **kwargs):
-        # Clear embedding if name or description changed
-        if self.pk:
-            old_obj = Location.objects.get(pk=self.pk)
-            if old_obj.name != self.name or old_obj.description != self.description:
-                self.embedding = None
+        invalidate_changed_embedding(self, kwargs, ('name', 'description'))
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -191,11 +202,7 @@ class StaffMember(models.Model):
     embedding = VectorField(dimensions=384, null=True, blank=True)
 
     def save(self, *args, **kwargs):
-        # Clear embedding if name, position or office changed
-        if self.pk:
-            old_obj = StaffMember.objects.get(pk=self.pk)
-            if old_obj.name != self.name or old_obj.position != self.position or old_obj.office != self.office:
-                self.embedding = None
+        invalidate_changed_embedding(self, kwargs, ('name', 'position', 'office'))
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -232,11 +239,7 @@ class FAQ(models.Model):
     embedding = VectorField(dimensions=384, null=True, blank=True)
 
     def save(self, *args, **kwargs):
-        # Clear embedding if category, question or answer changed
-        if self.pk:
-            old_obj = FAQ.objects.get(pk=self.pk)
-            if old_obj.category != self.category or old_obj.question != self.question or old_obj.answer != self.answer:
-                self.embedding = None
+        invalidate_changed_embedding(self, kwargs, ('category', 'question', 'answer'))
         super().save(*args, **kwargs)
 
     def __str__(self):
@@ -264,10 +267,7 @@ class WebResource(models.Model):
         ordering = ['category', 'title']
 
     def save(self, *args, **kwargs):
-        if self.pk:
-            old_obj = WebResource.objects.get(pk=self.pk)
-            if old_obj.title != self.title or old_obj.content != self.content:
-                self.embedding = None
+        invalidate_changed_embedding(self, kwargs, ('category', 'title', 'content'))
         super().save(*args, **kwargs)
 
     def __str__(self):

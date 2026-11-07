@@ -19,6 +19,21 @@ def normalized_text(value):
     return ' '.join(re.findall(r'\w+',value.casefold().replace('&',' and ')))
 
 
+def faq_question_key(value):
+    """Align explicit information requests while preserving the full subject."""
+    text = normalized_text(re.sub(r'^\s*\[[^\]\n]+\]\s*', '', value or ''))
+    # A recommendation's personal framing does not change its topic:
+    # "why should I use X" asks the same justification as "why use X".
+    # Retain the complete predicate, including negation and comparisons. Other
+    # modals (can/could/must) and named audiences have different meanings.
+    text = re.sub(r'^why should (?:i|we|you) (?=\w)', 'why ', text)
+    # These ask for the rationale for selecting the same educational subject.
+    # Keep the complete object and qualifiers; never erase negation/modalities.
+    text = re.sub(r'^why (?:(?:enroll|enrol|study) at|attend) (?=\w)', 'why choose ', text)
+    return re.sub(r'^(?:please )?(?:what is|tell me about|give me information about|ano ang) ',
+                  'information about ', text)
+
+
 def canonical_text(value):
     text=normalized_text(value)
     text=re.sub(r'\b(?:vice president|bise presidente|bise pangulo)\b','vp',text)

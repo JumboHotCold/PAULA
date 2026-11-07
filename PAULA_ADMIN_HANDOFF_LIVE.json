@@ -1,0 +1,24 @@
+{
+  "complete": true,
+  "passed": 4,
+  "checks": [
+    {
+      "name": "real Docker admin session restores analytics over Vite despite saved guest state",
+      "passed": true
+    },
+    {
+      "name": "real backend-verified administrator sees Map Tools after Back to Chat",
+      "passed": true
+    },
+    {
+      "name": "real administrator can open coordinate mapper",
+      "passed": true
+    },
+    {
+      "name": "real authenticated identity and map authorization survive page refresh",
+      "passed": true
+    }
+  ],
+  "temporary_test_session_removed": true,
+  "notes": "Real Docker session and Vite proxy; existing active superuser, ephemeral 5-minute session removed afterward. No credential-based login claim; no account, password, institutional fact, map-coordinate, or chat-history changes."
+}

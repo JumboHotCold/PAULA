@@ -1,0 +1,758 @@
+{
+  "rounds": 3,
+  "samples": 48,
+  "catalog_successes": 9,
+  "catalog_samples": 30,
+  "catalog_p50_ms": 247.72,
+  "catalog_p95_ms": 3096.09,
+  "rows": [
+    {
+      "query": "What programs are offered?",
+      "iteration": 0,
+      "ms": 3096.09,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [],
+      "worker": "12273"
+    },
+    {
+      "query": "What programs are offered at SPUS?",
+      "iteration": 0,
+      "ms": 824.15,
+      "catalog_case": true,
+      "catalog_success": true,
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "worker": "12272"
+    },
+    {
+      "query": "Which courses are available?",
+      "iteration": 0,
+      "ms": 246.8,
+      "catalog_case": true,
+      "catalog_success": true,
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What college courses or programs are available?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "worker": "12273"
+    },
+    {
+      "query": "What courses does SPUS offer?",
+      "iteration": 0,
+      "ms": 3145.87,
+      "catalog_case": true,
+      "catalog_success": true,
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "worker": "12273"
+    },
+    {
+      "query": "What are the available programs?",
+      "iteration": 0,
+      "ms": 260.63,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [],
+      "worker": "12273"
+    },
+    {
+      "query": "List programs",
+      "iteration": 0,
+      "ms": 210.19,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [],
+      "worker": "12273"
+    },
+    {
+      "query": "What progrms are offered?",
+      "iteration": 0,
+      "ms": 599.69,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [],
+      "worker": "12272"
+    },
+    {
+      "query": "Anong mga kursong inaalok sa SPUS?",
+      "iteration": 0,
+      "ms": 317.8,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "Wala akong sapat na beripikadong impormasyon para sagutin iyan sa ngayon. Puwede mong linawin o dagdagan ang iyong tanong?\n\nPara makumpirma, maaari ring magtanong sa kinauukulang opisina o sa [opisyal na SPUS website](https://spus.edu.ph).",
+      "sources": [],
+      "worker": "12272"
+    },
+    {
+      "query": "Ano ang mga programa na offered?",
+      "iteration": 0,
+      "ms": 288.27,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "Wala akong sapat na beripikadong impormasyon para sagutin iyan sa ngayon. Puwede mong linawin o dagdagan ang iyong tanong?\n\nPara makumpirma, maaari ring magtanong sa kinauukulang opisina o sa [opisyal na SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [],
+      "worker": "12272"
+    },
+    {
+      "query": "Anong available na mga kurso sa SPUS?",
+      "iteration": 0,
+      "ms": 223.69,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "Wala akong sapat na beripikadong impormasyon para sagutin iyan sa ngayon. Puwede mong linawin o dagdagan ang iyong tanong?\n\nPara makumpirma, maaari ring magtanong sa kinauukulang opisina o sa [opisyal na SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [],
+      "worker": "12272"
+    },
+    {
+      "query": "What programs are offered at CEIT?",
+      "iteration": 0,
+      "ms": 222.01,
+      "catalog_case": false,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [],
+      "worker": "12272"
+    },
+    {
+      "query": "What scholarships are available?",
+      "iteration": 0,
+      "ms": 2636.62,
+      "catalog_case": false,
+      "catalog_success": false,
+      "response": "Sure—here is the information from the stored sources.\n\nYes! SPUS offers several scholarship and financial assistance programs:\n\n- **Academic and Athletic Scholarships**: Available for qualified college and high school students based on academic standing or sports excellence. Visit the Guidance Office for application guidelines.\n- **ESC Grants**: 350 Educational Service Contracting (ESC) slots for incoming Grade 7 junior high students.\n- **Senior High Voucher Program**: Tuition subsidy for incoming Grade 11 students (automatically granted to public school completers; ESC certificate required for private junior high completers).\n- **Student on Study Assistance Program (SSAP)**: Work-study financial grant program administered by the Scholarship Coordinator / SSAP Office.\n\nFor inquiries and application forms, visit the **Guidance Office** or consult the Scholarship Coordinator.",
+      "sources": [
+        {
+          "title": "FAQ (Scholarships): Does SPUS offer scholarships? Are there scholarships available? What scholarships are offered?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Guidance",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "worker": "12272"
+    },
+    {
+      "query": "How do I enroll?",
+      "iteration": 0,
+      "ms": 6.48,
+      "catalog_case": false,
+      "catalog_success": false,
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "worker": "12272"
+    },
+    {
+      "query": "What programs are offered in 2037?",
+      "iteration": 0,
+      "ms": 1140.67,
+      "catalog_case": false,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [],
+      "worker": "12274"
+    },
+    {
+      "query": "What quantum teleportation degrees are offered?",
+      "iteration": 0,
+      "ms": 297.31,
+      "catalog_case": false,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [],
+      "worker": "12272"
+    },
+    {
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "iteration": 0,
+      "ms": 918.1,
+      "catalog_case": false,
+      "catalog_success": false,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "worker": "12272"
+    },
+    {
+      "query": "What programs are offered?",
+      "iteration": 1,
+      "ms": 226.26,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [],
+      "worker": "12273"
+    },
+    {
+      "query": "What programs are offered at SPUS?",
+      "iteration": 1,
+      "ms": 261.67,
+      "catalog_case": true,
+      "catalog_success": true,
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "worker": "12273"
+    },
+    {
+      "query": "Which courses are available?",
+      "iteration": 1,
+      "ms": 216.98,
+      "catalog_case": true,
+      "catalog_success": true,
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What college courses or programs are available?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "worker": "12273"
+    },
+    {
+      "query": "What courses does SPUS offer?",
+      "iteration": 1,
+      "ms": 2716.43,
+      "catalog_case": true,
+      "catalog_success": true,
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "worker": "12274"
+    },
+    {
+      "query": "What are the available programs?",
+      "iteration": 1,
+      "ms": 274.11,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [],
+      "worker": "12274"
+    },
+    {
+      "query": "List programs",
+      "iteration": 1,
+      "ms": 212.56,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [],
+      "worker": "12273"
+    },
+    {
+      "query": "What progrms are offered?",
+      "iteration": 1,
+      "ms": 227.98,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [],
+      "worker": "12274"
+    },
+    {
+      "query": "Anong mga kursong inaalok sa SPUS?",
+      "iteration": 1,
+      "ms": 247.72,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "Wala akong sapat na beripikadong impormasyon para sagutin iyan sa ngayon. Puwede mong linawin o dagdagan ang iyong tanong?\n\nPara makumpirma, maaari ring magtanong sa kinauukulang opisina o sa [opisyal na SPUS website](https://spus.edu.ph).",
+      "sources": [],
+      "worker": "12274"
+    },
+    {
+      "query": "Ano ang mga programa na offered?",
+      "iteration": 1,
+      "ms": 391.58,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "Wala akong sapat na beripikadong impormasyon para sagutin iyan sa ngayon. Puwede mong linawin o dagdagan ang iyong tanong?\n\nPara makumpirma, maaari ring magtanong sa kinauukulang opisina o sa [opisyal na SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [],
+      "worker": "12272"
+    },
+    {
+      "query": "Anong available na mga kurso sa SPUS?",
+      "iteration": 1,
+      "ms": 192.18,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "Wala akong sapat na beripikadong impormasyon para sagutin iyan sa ngayon. Puwede mong linawin o dagdagan ang iyong tanong?\n\nPara makumpirma, maaari ring magtanong sa kinauukulang opisina o sa [opisyal na SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [],
+      "worker": "12272"
+    },
+    {
+      "query": "What programs are offered at CEIT?",
+      "iteration": 1,
+      "ms": 360.0,
+      "catalog_case": false,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [],
+      "worker": "12274"
+    },
+    {
+      "query": "What scholarships are available?",
+      "iteration": 1,
+      "ms": 653.0,
+      "catalog_case": false,
+      "catalog_success": false,
+      "response": "Sure—here is the information from the stored sources.\n\nYes! SPUS offers several scholarship and financial assistance programs:\n\n- **Academic and Athletic Scholarships**: Available for qualified college and high school students based on academic standing or sports excellence. Visit the Guidance Office for application guidelines.\n- **ESC Grants**: 350 Educational Service Contracting (ESC) slots for incoming Grade 7 junior high students.\n- **Senior High Voucher Program**: Tuition subsidy for incoming Grade 11 students (automatically granted to public school completers; ESC certificate required for private junior high completers).\n- **Student on Study Assistance Program (SSAP)**: Work-study financial grant program administered by the Scholarship Coordinator / SSAP Office.\n\nFor inquiries and application forms, visit the **Guidance Office** or consult the Scholarship Coordinator.",
+      "sources": [
+        {
+          "title": "FAQ (Scholarships): Does SPUS offer scholarships? Are there scholarships available? What scholarships are offered?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Guidance",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "worker": "12274"
+    },
+    {
+      "query": "How do I enroll?",
+      "iteration": 1,
+      "ms": 6.41,
+      "catalog_case": false,
+      "catalog_success": false,
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "worker": "12273"
+    },
+    {
+      "query": "What programs are offered in 2037?",
+      "iteration": 1,
+      "ms": 180.69,
+      "catalog_case": false,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [],
+      "worker": "12273"
+    },
+    {
+      "query": "What quantum teleportation degrees are offered?",
+      "iteration": 1,
+      "ms": 191.8,
+      "catalog_case": false,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [],
+      "worker": "12273"
+    },
+    {
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "iteration": 1,
+      "ms": 581.05,
+      "catalog_case": false,
+      "catalog_success": false,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "worker": "12273"
+    },
+    {
+      "query": "What programs are offered?",
+      "iteration": 2,
+      "ms": 218.23,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [],
+      "worker": "12273"
+    },
+    {
+      "query": "What programs are offered at SPUS?",
+      "iteration": 2,
+      "ms": 80.54,
+      "catalog_case": true,
+      "catalog_success": true,
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "worker": "12273"
+    },
+    {
+      "query": "Which courses are available?",
+      "iteration": 2,
+      "ms": 165.41,
+      "catalog_case": true,
+      "catalog_success": true,
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What college courses or programs are available?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "worker": "12273"
+    },
+    {
+      "query": "What courses does SPUS offer?",
+      "iteration": 2,
+      "ms": 974.23,
+      "catalog_case": true,
+      "catalog_success": true,
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "worker": "12272"
+    },
+    {
+      "query": "What are the available programs?",
+      "iteration": 2,
+      "ms": 255.38,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [],
+      "worker": "12272"
+    },
+    {
+      "query": "List programs",
+      "iteration": 2,
+      "ms": 243.29,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [],
+      "worker": "12272"
+    },
+    {
+      "query": "What progrms are offered?",
+      "iteration": 2,
+      "ms": 178.9,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [],
+      "worker": "12272"
+    },
+    {
+      "query": "Anong mga kursong inaalok sa SPUS?",
+      "iteration": 2,
+      "ms": 317.2,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "Wala akong sapat na beripikadong impormasyon para sagutin iyan sa ngayon. Puwede mong linawin o dagdagan ang iyong tanong?\n\nPara makumpirma, maaari ring magtanong sa kinauukulang opisina o sa [opisyal na SPUS website](https://spus.edu.ph).",
+      "sources": [],
+      "worker": "12273"
+    },
+    {
+      "query": "Ano ang mga programa na offered?",
+      "iteration": 2,
+      "ms": 287.46,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "Wala akong sapat na beripikadong impormasyon para sagutin iyan sa ngayon. Puwede mong linawin o dagdagan ang iyong tanong?\n\nPara makumpirma, maaari ring magtanong sa kinauukulang opisina o sa [opisyal na SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [],
+      "worker": "12273"
+    },
+    {
+      "query": "Anong available na mga kurso sa SPUS?",
+      "iteration": 2,
+      "ms": 231.33,
+      "catalog_case": true,
+      "catalog_success": false,
+      "response": "Wala akong sapat na beripikadong impormasyon para sagutin iyan sa ngayon. Puwede mong linawin o dagdagan ang iyong tanong?\n\nPara makumpirma, maaari ring magtanong sa kinauukulang opisina o sa [opisyal na SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [],
+      "worker": "12273"
+    },
+    {
+      "query": "What programs are offered at CEIT?",
+      "iteration": 2,
+      "ms": 237.28,
+      "catalog_case": false,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [],
+      "worker": "12273"
+    },
+    {
+      "query": "What scholarships are available?",
+      "iteration": 2,
+      "ms": 580.37,
+      "catalog_case": false,
+      "catalog_success": false,
+      "response": "Sure—here is the information from the stored sources.\n\nYes! SPUS offers several scholarship and financial assistance programs:\n\n- **Academic and Athletic Scholarships**: Available for qualified college and high school students based on academic standing or sports excellence. Visit the Guidance Office for application guidelines.\n- **ESC Grants**: 350 Educational Service Contracting (ESC) slots for incoming Grade 7 junior high students.\n- **Senior High Voucher Program**: Tuition subsidy for incoming Grade 11 students (automatically granted to public school completers; ESC certificate required for private junior high completers).\n- **Student on Study Assistance Program (SSAP)**: Work-study financial grant program administered by the Scholarship Coordinator / SSAP Office.\n\nFor inquiries and application forms, visit the **Guidance Office** or consult the Scholarship Coordinator.",
+      "sources": [
+        {
+          "title": "FAQ (Scholarships): Does SPUS offer scholarships? Are there scholarships available? What scholarships are offered?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Guidance",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "worker": "12274"
+    },
+    {
+      "query": "How do I enroll?",
+      "iteration": 2,
+      "ms": 7.4,
+      "catalog_case": false,
+      "catalog_success": false,
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "worker": "12274"
+    },
+    {
+      "query": "What programs are offered in 2037?",
+      "iteration": 2,
+      "ms": 198.3,
+      "catalog_case": false,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [],
+      "worker": "12274"
+    },
+    {
+      "query": "What quantum teleportation degrees are offered?",
+      "iteration": 2,
+      "ms": 247.99,
+      "catalog_case": false,
+      "catalog_success": false,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [],
+      "worker": "12274"
+    },
+    {
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "iteration": 2,
+      "ms": 680.21,
+      "catalog_case": false,
+      "catalog_success": false,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "worker": "12274"
+    }
+  ],
+  "notes": "Warm HTTP guest requests in one local Docker environment. Catalog checks measure stored-list retrieval, not independent institutional fact verification; other queries are recorded for regression review."
+}

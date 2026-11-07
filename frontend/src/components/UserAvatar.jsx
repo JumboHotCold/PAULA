@@ -1,4 +1,5 @@
 import React from 'react';
+import { backendUrl } from '../utils/backendUrl';
 
 /**
  * UserAvatar Component
@@ -58,7 +59,7 @@ export default function UserAvatar({ user, size = 'sm', className = '' }) {
   if (user.avatar_url) {
     const avatarSrc = user.avatar_url.startsWith('http') 
       ? user.avatar_url 
-      : `http://localhost:8000${user.avatar_url}`;
+      : backendUrl(user.avatar_url);
 
     return (
       <div 

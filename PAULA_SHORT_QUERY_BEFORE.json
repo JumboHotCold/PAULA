@@ -1,0 +1,77 @@
+[
+  {
+    "query": "why spus?",
+    "ms": 2424.44,
+    "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"Why choose SPUS?\"]",
+    "sources": [],
+    "mode": "knowledge"
+  },
+  {
+    "query": "Why choose SPUS",
+    "ms": 60.55,
+    "response": "Sure\u2014here is the information from the stored sources.\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"Does SPUS offer Graduate School programs?\"]",
+    "sources": [
+      {
+        "title": "FAQ (Academics): Why choose SPUS?",
+        "page": null,
+        "url": null,
+        "source_type": "curated",
+        "source_office": null,
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ],
+    "mode": "knowledge"
+  },
+  {
+    "query": "wht is spus?",
+    "ms": 1502.5,
+    "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"How are announcements and promotional materials broadcast across the SPUS campus?\" | \"What are the guidelines for using official SPUS logos, seals, and brand assets?\"]",
+    "sources": [],
+    "mode": "knowledge"
+  },
+  {
+    "query": "helo",
+    "ms": 242.75,
+    "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"How are announcements and promotional materials broadcast across the SPUS campus?\" | \"What are the guidelines for using official SPUS logos, seals, and brand assets?\"]",
+    "sources": [],
+    "mode": "knowledge"
+  },
+  {
+    "query": "asdasdasd",
+    "ms": 153.0,
+    "response": "I don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"How are announcements and promotional materials broadcast across the SPUS campus?\" | \"What are the guidelines for using official SPUS logos, seals, and brand assets?\"]",
+    "sources": [],
+    "mode": "knowledge"
+  },
+  {
+    "query": "who is the university preseidnt?",
+    "ms": 931.91,
+    "response": "Sure\u2014here is the information from the stored sources.\n\nSr. Marie Rosanne Mallillin, SPCS \u2014 University President\n\n**Source review:** The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office.\n\n[SUGGESTIONS: \"What is the enrollment information?\" | \"What is the tuition information?\" | \"What is the courses information?\"]",
+    "sources": [
+      {
+        "title": "SPUS Personnel | TOP MANAGEMENT | University President | Sr. Marie Rosanne Mallillin, SPCS",
+        "page": null,
+        "url": "https://spus.edu.ph/administrator/",
+        "source_type": "website",
+        "source_office": "TOP MANAGEMENT",
+        "retrieved_at": "2026-10-27T14:12:30.619696+00:00",
+        "supporting_sources": [
+          {
+            "source_url": "https://spus.edu.ph/administrator/",
+            "document_title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | University President | Sr. Marie Rosanne Mallillin, SPCS",
+            "source_type": "website",
+            "record_type": "webresource",
+            "record_id": 99,
+            "retrieved_at": "2026-10-27T14:12:30.732196+00:00"
+          }
+        ],
+        "review_notes": [
+          "The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office."
+        ]
+      }
+    ],
+    "mode": "knowledge"
+  }
+]

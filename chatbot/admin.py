@@ -5,10 +5,29 @@ Uses django-unfold for a modern, SPUS-branded admin panel.
 Faculty/Staff can manage the Knowledge Base (Locations, Staff, FAQs) here.
 """
 from django.contrib import admin
+from django.contrib import messages
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from unfold.admin import ModelAdmin
 
 from .models import CustomUser, Conversation, ChatHistory, Location, StaffMember, FAQ, WebResource, StudentNeed, Announcement
+
+# Keep Unfold's login/security behavior, with the university crest above its form.
+admin.site.login_template = 'chatbot/admin_login.html'
+
+
+class KnowledgeModelAdmin(ModelAdmin):
+    """Save a public source and index only that edit, outside student chat."""
+    def save_model(self, request, obj, form, change):
+        super().save_model(request, obj, form, change)
+        if obj.embedding is None:
+            from .rag import RAGSearcher
+            from .performance import diagnostic_error
+            try:
+                if not RAGSearcher().index_record(obj):
+                    raise RuntimeError('Source changed or was indexed concurrently')
+            except Exception as exc:
+                diagnostic_error('admin_indexing', 'knowledge_index_pending', exc)
+                self.message_user(request, 'The source was saved. Search indexing needs attention; run the knowledge index check before the demonstration.', level=messages.WARNING)
 
 
 # ==============================================================================
@@ -52,27 +71,27 @@ class ChatHistoryAdmin(ModelAdmin):
 # ==============================================================================
 
 @admin.register(Location)
-class LocationAdmin(ModelAdmin):
+class LocationAdmin(KnowledgeModelAdmin):
     list_display = ('name', 'map_available')
     search_fields = ('name', 'description')
     list_filter = ('map_available',)
 
 
 @admin.register(StaffMember)
-class StaffMemberAdmin(ModelAdmin):
+class StaffMemberAdmin(KnowledgeModelAdmin):
     list_display = ('name', 'position', 'office')
     search_fields = ('name', 'position')
 
 
 @admin.register(FAQ)
-class FAQAdmin(ModelAdmin):
+class FAQAdmin(KnowledgeModelAdmin):
     list_display = ('question', 'category', 'source_type', 'source_office')
     list_filter = ('source_type', 'source_office', 'category')
     search_fields = ('question', 'answer', 'source_office')
 
 
 @admin.register(WebResource)
-class WebResourceAdmin(ModelAdmin):
+class WebResourceAdmin(KnowledgeModelAdmin):
     list_display = ('title', 'category', 'url', 'last_scraped')
     list_filter = ('category', 'last_scraped')
     search_fields = ('title', 'content', 'url')

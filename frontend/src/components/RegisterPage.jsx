@@ -85,7 +85,7 @@ export default function RegisterPage({ onNavigateLogin }) {
               <input type="email" id="email" name="email" required className="reg-input" onChange={handleChange} value={formData.email} />
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '20px' }}>
+            <div className="register-name-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', marginBottom: '20px' }}>
               <div>
                 <label htmlFor="first_name" className="reg-label">First Name</label>
                 <input type="text" id="first_name" name="first_name" required className="reg-input" onChange={handleChange} value={formData.first_name} />

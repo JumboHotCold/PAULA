@@ -1,0 +1,60 @@
+[
+  {
+    "query": "who you?",
+    "ms": 2615.31,
+    "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"How are announcements and promotional materials broadcast across the SPUS campus?\" | \"What are the guidelines for using official SPUS logos, seals, and brand assets?\"]",
+    "sources": [],
+    "suggestions": [
+      "What college courses or programs are available?",
+      "How are announcements and promotional materials broadcast across the SPUS campus?",
+      "What are the guidelines for using official SPUS logos, seals, and brand assets?"
+    ],
+    "mode": "knowledge"
+  },
+  {
+    "query": "tell me about yourself?",
+    "ms": 245.38,
+    "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"How are announcements and promotional materials broadcast across the SPUS campus?\" | \"What are the guidelines for using official SPUS logos, seals, and brand assets?\"]",
+    "sources": [],
+    "suggestions": [
+      "What college courses or programs are available?",
+      "How are announcements and promotional materials broadcast across the SPUS campus?",
+      "What are the guidelines for using official SPUS logos, seals, and brand assets?"
+    ],
+    "mode": "knowledge"
+  },
+  {
+    "query": "How are announcements and promotional materials broadcast across the SPUS campus?",
+    "ms": 127.49,
+    "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"Do posters and promotional materials require PBMO review before posting or broadcasting?\" | \"What is the procedure for submitting materials or reporting school events for publication to PBMO?\"]",
+    "sources": [],
+    "suggestions": [
+      "Do posters and promotional materials require PBMO review before posting or broadcasting?",
+      "What is the procedure for submitting materials or reporting school events for publication to PBMO?"
+    ],
+    "mode": "knowledge"
+  },
+  {
+    "query": "What programs are offered at SPUS?",
+    "ms": 765.7,
+    "response": "Sure\u2014here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"What are the required documents for transferee students enrolling at SPUS?\"]",
+    "sources": [
+      {
+        "title": "FAQ (Academics): What programs are offered at SPUS?",
+        "page": null,
+        "url": null,
+        "source_type": "office",
+        "source_office": "Registrar",
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ],
+    "suggestions": [
+      "Does SPUS offer Graduate School programs?",
+      "Why choose SPUS?",
+      "What are the required documents for transferee students enrolling at SPUS?"
+    ],
+    "mode": "knowledge"
+  }
+]

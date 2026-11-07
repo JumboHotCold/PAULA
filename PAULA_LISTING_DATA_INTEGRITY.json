@@ -1,0 +1,47 @@
+{
+  "before": {
+    "StaffMember": {
+      "count": 12,
+      "sha256": "5a618bd4a3d718185a5e06dfb45e3976d94437efea8debbbc2ca8954e68c6f00"
+    },
+    "FAQ": {
+      "count": 138,
+      "sha256": "bc8e18e7bf2b26cf44956da8aed3a4c03e3f77c9fff8b5e21180cc13641cedbd"
+    },
+    "WebResource": {
+      "count": 476,
+      "sha256": "06ba5660b42c6ae469c7004e47bca8815f2ba058098e9b472263172459d71950"
+    },
+    "Conversation": {
+      "count": 140,
+      "sha256": "a15954d508e98ca286a29c49d2c12fd86305e022198565e03e7769cf423011e3"
+    },
+    "ChatHistory": {
+      "count": 177,
+      "sha256": "eb3c4ba885366227bb1bc7a6c9314f54c1c938445169dabe71581736b5731f15"
+    }
+  },
+  "after": {
+    "StaffMember": {
+      "count": 12,
+      "sha256": "5a618bd4a3d718185a5e06dfb45e3976d94437efea8debbbc2ca8954e68c6f00"
+    },
+    "FAQ": {
+      "count": 138,
+      "sha256": "bc8e18e7bf2b26cf44956da8aed3a4c03e3f77c9fff8b5e21180cc13641cedbd"
+    },
+    "WebResource": {
+      "count": 476,
+      "sha256": "06ba5660b42c6ae469c7004e47bca8815f2ba058098e9b472263172459d71950"
+    },
+    "Conversation": {
+      "count": 140,
+      "sha256": "a15954d508e98ca286a29c49d2c12fd86305e022198565e03e7769cf423011e3"
+    },
+    "ChatHistory": {
+      "count": 177,
+      "sha256": "eb3c4ba885366227bb1bc7a6c9314f54c1c938445169dabe71581736b5731f15"
+    }
+  },
+  "unchanged": true
+}

@@ -1,0 +1,172 @@
+{
+  "passed": true,
+  "turns": 19,
+  "rows": [
+    {
+      "query": "How do I enroll?",
+      "mode": "knowledge",
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "thankyoui",
+      "mode": "thanks",
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "yes",
+      "mode": "affirmation",
+      "response": "Sure! What would you like help with next?\n\nAre you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "no",
+      "mode": "negation",
+      "response": "No problem. What would you like help with instead?\n\nAre you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "dili",
+      "mode": "negation",
+      "response": "No problem. What would you like help with instead?\n\nAre you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "Transferee student",
+      "mode": "knowledge",
+      "response": "Sure—here is the information from the stored sources.\n\nEnrollment procedure for Transferee Students in Higher Education (URO-PR-017):\n1. Dean's Office (Evaluation & Crediting): Submit Transfer Credentials and Curricular Checklist to the Dean's Office for transcript evaluation and crediting of previous subjects.\n2. Student Affairs Office (SAO) (Encoding & Information): Fill out the Student Information Sheet and submit required documents: Transfer Credentials (Honorable Dismissal / Transcript of Records), PSA Birth Certificate, Certificate of Good Moral Character, and 1 pc 2x2 ID picture.\n3. Finance Office (Payment): Pay the initial or full enrollment fee at the Cashier/Finance Office. Receive the Pre-registration Form and Official Receipt (OR).\n4. Registrar's Office (Validation & Official Enrollment): Proceed to the University Registrar's Office for validation and verification. Receive the official Study Load and Assessment stamped with 'OFFICIALLY ENROLLED'.\n5. ICT Office & Clinic: Proceed to the ICT Office for ID validation/processing, and visit the University Clinic for Health Services medical profiling.\n\n[SUGGESTIONS: \"What are the required documents for transferee students enrolling at SPUS?\" | \"Who must approve the subject adding, dropping, or withdrawal form?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What is the step-by-step enrollment procedure for transferee students at SPUS (Document URO-PR-017)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "action": null
+    },
+    {
+      "query": "Show me the campus map",
+      "mode": "knowledge",
+      "response": "Which campus office or building would you like to find?\n\n[SUGGESTIONS: \"Where is the Registrar office?\" | \"Directions to the Finance office\" | \"Where is the main entrance?\"]",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "ty",
+      "mode": "thanks",
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "sure",
+      "mode": "affirmation",
+      "response": "Sure! What would you like help with next?\n\nWhich campus office or building would you like to find?\n\n[SUGGESTIONS: \"Where is the Registrar office?\" | \"Directions to the Finance office\" | \"Where is the main entrance?\"]",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "Registrar",
+      "mode": "knowledge",
+      "response": "Opening the campus map for Registrar Office. Choose your starting location to calculate a route.",
+      "sources": [],
+      "action": "navigate_map"
+    },
+    {
+      "query": "Who is the ICT Director?",
+      "mode": "knowledge",
+      "response": "Sure—here is the information from the stored sources.\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": []
+        }
+      ],
+      "action": null
+    },
+    {
+      "query": "ty",
+      "mode": "thanks",
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "what do you mean?",
+      "mode": "clarification",
+      "response": "Which part of the previous answer would you like me to explain?",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "English please",
+      "mode": "language",
+      "response": "Sure, we can continue in English. Some quoted sources keep their original wording.",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "salamat kaayo",
+      "mode": "thanks",
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "salamat kaayo",
+      "mode": "thanks",
+      "response": "Walay sapayan! Let me know if you need anything else.",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "ty",
+      "mode": "thanks",
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "ty",
+      "mode": "thanks",
+      "response": "Happy to help!",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "ty",
+      "mode": "thanks",
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "action": null
+    }
+  ],
+  "data_unchanged": true,
+  "notes": "Live guest requests with signed thread context. No accounts or historical chat data changed."
+}

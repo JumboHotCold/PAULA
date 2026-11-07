@@ -1,0 +1,13 @@
+# Supported Django LTS upgrade plan
+
+Recommendation: complete and freeze the current reliability fixes, then validate a **separate Django 5.2 LTS candidate before public deployment**. Keep the current local demonstration build available for comparison. No framework package has been upgraded in this stabilization pass.
+
+Django 4.2 stopped receiving fixes on April 7, 2026. Django 5.2 LTS has extended support through April 2028. Use the latest supported 5.2 patch at implementation time rather than guessing a patch version now. [Official support table](https://www.djangoproject.com/download/).
+
+1. Preserve the tested application checkpoint and take a protected PostgreSQL backup. Rehearse restoring it into a separate PostgreSQL instance without replacing the active volume or creating replacement application accounts. Freeze a public knowledge snapshot and its hashes/model revision.
+2. Build a separate Docker candidate with a supported Django 5.2 patch. Check DRF, Unfold, cors-headers, WhiteNoise, psycopg/pgvector and Python compatibility together; update only dependencies required for that supported combination. Keep the MiniLM revision, dimensions, Groq configuration and retrieval cutoff unchanged. Use intermediate feature-version checks if required to resolve removals/deprecations; intermediate unsupported versions are test steps, not deployment targets. [Django upgrade guidance](https://docs.djangoproject.com/en/5.2/howto/upgrade-version/).
+3. Run deprecation checks, `pip check`, Django checks, migration planning and the complete regression suite on isolated PostgreSQL fixtures and the restored test snapshot. Review generated migrations; do not blindly apply them to the active database. Test session/CSRF/login/logout, guest isolation, conversation ownership, Unfold/admin assets, profile/media handling and map permissions.
+4. Run the strict knowledge audit, the same guest matrix and cold/warm benchmarks. Test Groq failure and provider deadlines, production HTTPS settings, multi-worker readiness and memory. Compare source IDs, answer support and topic continuity as well as timing. Confirm the existing vectors remain compatible without a bulk re-embedding.
+5. Approve cutover only after the clean image, real-host TLS/cookies, backups/restore and rollout/rollback rehearsal pass. Retain the previous image and backup; framework/database rollback requires a migration-specific plan. The separate candidate and cutover have not been implemented or validated yet.
+
+This avoids mixing retrieval debugging with framework compatibility changes while keeping an unsupported framework out of the public-release decision. It is not a recommendation to expose Django 4.2 publicly until convenient.

@@ -1,0 +1,36 @@
+{
+  "query": "TELL ME ABOUT SPUS AND WHY SHOULD I ENROL",
+  "passed": true,
+  "status": 200,
+  "ms": 689.1,
+  "response": "Sure—here is the information from the stored sources.\n\n**1. TELL ME ABOUT SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. WHY SHOULD I enroll at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+  "sources": [
+    {
+      "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+      "page": null,
+      "url": null,
+      "source_type": "curated",
+      "source_office": null,
+      "retrieved_at": null,
+      "supporting_sources": [],
+      "review_notes": [],
+      "part": 1,
+      "query": "TELL ME ABOUT SPUS?",
+      "citation_index": 1
+    },
+    {
+      "title": "FAQ (Academics): Why choose SPUS?",
+      "page": null,
+      "url": null,
+      "source_type": "curated",
+      "source_office": null,
+      "retrieved_at": null,
+      "supporting_sources": [],
+      "review_notes": [],
+      "part": 2,
+      "query": "WHY SHOULD I enroll at SPUS?",
+      "citation_index": 2
+    }
+  ],
+  "saved": false
+}

@@ -1,0 +1,756 @@
+{
+  "phase": "after",
+  "url": "http://127.0.0.1:8080/api/chat",
+  "percentiles": "nearest rank; small sequential sample, not a load test",
+  "groups": {
+    "social": {
+      "n": 24,
+      "p50_ms": 8.29,
+      "p95_ms": 39.98
+    },
+    "mixed": {
+      "n": 3,
+      "p50_ms": 167.38,
+      "p95_ms": 193.74
+    },
+    "knowledge": {
+      "n": 9,
+      "p50_ms": 67.74,
+      "p95_ms": 597.66
+    }
+  },
+  "results": [
+    {
+      "category": "social",
+      "query": "Hello",
+      "repeat": 0,
+      "elapsed_ms": 33.92,
+      "response": "Hello! I'm PAULA. How can I help today?",
+      "sources": [],
+      "mode": "greeting",
+      "headers": {
+        "X-Request-ID": "0e5c560a-164b-4c97-85f3-17c6364d7b2b",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=1.37, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Okay",
+      "repeat": 0,
+      "elapsed_ms": 9.31,
+      "response": "Got it!",
+      "sources": [],
+      "mode": "acknowledgement",
+      "headers": {
+        "X-Request-ID": "76b9ec4f-e3df-4bb4-97f5-4f697eae81f1",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=1.19, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "How are you?",
+      "repeat": 0,
+      "elapsed_ms": 9.75,
+      "response": "I'm here and ready to help! How's your day going?",
+      "sources": [],
+      "mode": "wellbeing",
+      "headers": {
+        "X-Request-ID": "b16ea453-ee2c-4b6d-a2f3-b6f73ba15d1f",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=0.86, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Thank you",
+      "repeat": 0,
+      "elapsed_ms": 6.46,
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "mode": "thanks",
+      "headers": {
+        "X-Request-ID": "3b4cbb78-4f4f-4129-b81c-d498285d2848",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=1.01, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Can you tell me a short joke?",
+      "repeat": 0,
+      "elapsed_ms": 45.94,
+      "response": "Why did the computer take a break? It needed to refresh!",
+      "sources": [],
+      "mode": "joke",
+      "headers": {
+        "X-Request-ID": "aa99df0d-af2f-43eb-a9e3-05060be2d270",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=40.1, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Kumusta ka?",
+      "repeat": 0,
+      "elapsed_ms": 7.2,
+      "response": "Handa akong tumulong! Ikaw, kumusta ang araw mo?",
+      "sources": [],
+      "mode": "wellbeing",
+      "headers": {
+        "X-Request-ID": "d6db3cc6-9c95-4b21-be9c-daef8af2e7da",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=1.49, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "I feel nervous today",
+      "repeat": 0,
+      "elapsed_ms": 8.81,
+      "response": "That sounds tiring. We can take things one step at a time. Want to talk about it or work through a question together?",
+      "sources": [],
+      "mode": "support",
+      "headers": {
+        "X-Request-ID": "bc1d0a1d-9323-4b00-88bb-be85991ddb72",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=1.93, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "What do you do for fun?",
+      "repeat": 0,
+      "elapsed_ms": 39.98,
+      "response": "I don't have personal experiences or favorites like a person, but I'm happy to chat. What do you enjoy?",
+      "sources": [],
+      "mode": "preference",
+      "headers": {
+        "X-Request-ID": "44c7e58d-920e-49f2-88e1-1d9baeb3f394",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=23.64, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "mixed",
+      "query": "Hi! Who is the ICT Director?",
+      "repeat": 0,
+      "elapsed_ms": 167.38,
+      "response": "Hi!\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\n[SUGGESTIONS: \"What is the enrollment information?\" | \"What is the tuition information?\" | \"What is the courses information?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": []
+        }
+      ],
+      "mode": "mixed",
+      "headers": {
+        "X-Request-ID": "3769fe30-4f99-43f2-8d44-6e79228f0ac5",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=153.58, sql;dur=41.7"
+      }
+    },
+    {
+      "category": "knowledge",
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "repeat": 0,
+      "elapsed_ms": 597.66,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What is the courses information?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "mode": "knowledge",
+      "headers": {
+        "X-Request-ID": "846b45b3-eb47-4678-8131-3e7cffa830dc",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=570.12, sql;dur=169.86"
+      }
+    },
+    {
+      "category": "knowledge",
+      "query": "Why should I choose SPUS?",
+      "repeat": 0,
+      "elapsed_ms": 92.06,
+      "response": "Sure—here is the information from the stored sources.\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "mode": "knowledge",
+      "headers": {
+        "X-Request-ID": "308d5bd4-9851-46ca-a73f-b4378c19d0f5",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=85.46, sql;dur=25.73"
+      }
+    },
+    {
+      "category": "knowledge",
+      "query": "How do I enroll at SPUS?",
+      "repeat": 0,
+      "elapsed_ms": 67.74,
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "mode": "knowledge",
+      "headers": {
+        "X-Request-ID": "6e4ffd9c-4b5f-4f66-a125-1455fad26430",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=49.55, sql;dur=11.36"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Hello",
+      "repeat": 1,
+      "elapsed_ms": 9.16,
+      "response": "Hello! I'm PAULA. How can I help today?",
+      "sources": [],
+      "mode": "greeting",
+      "headers": {
+        "X-Request-ID": "ebe59e92-423a-4daf-954e-ce3805b1b8ee",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=1.93, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Okay",
+      "repeat": 1,
+      "elapsed_ms": 6.6,
+      "response": "Got it!",
+      "sources": [],
+      "mode": "acknowledgement",
+      "headers": {
+        "X-Request-ID": "99027038-f57e-4239-b8e8-74c28e47d8b1",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=1.0, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "How are you?",
+      "repeat": 1,
+      "elapsed_ms": 7.81,
+      "response": "I'm here and ready to help! How's your day going?",
+      "sources": [],
+      "mode": "wellbeing",
+      "headers": {
+        "X-Request-ID": "77043364-cc1e-4deb-9d3f-efc5b959492a",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=1.39, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Thank you",
+      "repeat": 1,
+      "elapsed_ms": 7.1,
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "mode": "thanks",
+      "headers": {
+        "X-Request-ID": "c872aa34-5120-443d-abb1-560fa7b10a97",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=0.9, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Can you tell me a short joke?",
+      "repeat": 1,
+      "elapsed_ms": 25.57,
+      "response": "Why did the computer take a break? It needed to refresh!",
+      "sources": [],
+      "mode": "joke",
+      "headers": {
+        "X-Request-ID": "dee31d4f-95f5-4c21-bd61-00784a396f4d",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=20.27, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Kumusta ka?",
+      "repeat": 1,
+      "elapsed_ms": 7.66,
+      "response": "Handa akong tumulong! Ikaw, kumusta ang araw mo?",
+      "sources": [],
+      "mode": "wellbeing",
+      "headers": {
+        "X-Request-ID": "238d75a2-ac25-4ebb-8c7c-42f11be7f5d9",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=0.85, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "I feel nervous today",
+      "repeat": 1,
+      "elapsed_ms": 6.85,
+      "response": "That sounds tiring. We can take things one step at a time. Want to talk about it or work through a question together?",
+      "sources": [],
+      "mode": "support",
+      "headers": {
+        "X-Request-ID": "2d9a364d-338e-49b1-b24a-4f117d15823f",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=1.15, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "What do you do for fun?",
+      "repeat": 1,
+      "elapsed_ms": 26.75,
+      "response": "I don't have personal experiences or favorites like a person, but I'm happy to chat. What do you enjoy?",
+      "sources": [],
+      "mode": "preference",
+      "headers": {
+        "X-Request-ID": "fd47f8d9-87e6-4ec2-bed2-08fbda59658a",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=20.87, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "mixed",
+      "query": "Hi! Who is the ICT Director?",
+      "repeat": 1,
+      "elapsed_ms": 130.11,
+      "response": "Hi!\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\n[SUGGESTIONS: \"What is the enrollment information?\" | \"What is the tuition information?\" | \"What is the courses information?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": []
+        }
+      ],
+      "mode": "mixed",
+      "headers": {
+        "X-Request-ID": "4f0809a5-e3ad-48fa-b35c-ce19d5fbb6de",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=124.51, sql;dur=31.55"
+      }
+    },
+    {
+      "category": "knowledge",
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "repeat": 1,
+      "elapsed_ms": 257.5,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What is the courses information?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "mode": "knowledge",
+      "headers": {
+        "X-Request-ID": "bdaa98ce-c1ff-4325-84c4-6ad9f9dae5ed",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=249.96, sql;dur=56.47"
+      }
+    },
+    {
+      "category": "knowledge",
+      "query": "Why should I choose SPUS?",
+      "repeat": 1,
+      "elapsed_ms": 66.16,
+      "response": "Sure—here is the information from the stored sources.\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "mode": "knowledge",
+      "headers": {
+        "X-Request-ID": "42a8a419-47cc-4c31-aaf8-496de84f0e55",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=59.58, sql;dur=5.52"
+      }
+    },
+    {
+      "category": "knowledge",
+      "query": "How do I enroll at SPUS?",
+      "repeat": 1,
+      "elapsed_ms": 10.4,
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "mode": "knowledge",
+      "headers": {
+        "X-Request-ID": "5cc2d77b-6b70-45c5-9811-cb617aeb7617",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=2.55, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Hello",
+      "repeat": 2,
+      "elapsed_ms": 9.61,
+      "response": "Hello! I'm PAULA. How can I help today?",
+      "sources": [],
+      "mode": "greeting",
+      "headers": {
+        "X-Request-ID": "7efdf0b2-1222-406a-99bf-55ddc0a5cccc",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=1.31, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Okay",
+      "repeat": 2,
+      "elapsed_ms": 6.36,
+      "response": "Got it!",
+      "sources": [],
+      "mode": "acknowledgement",
+      "headers": {
+        "X-Request-ID": "1d6e5833-4519-4ec8-8d79-fb369dd8b428",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=1.09, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "How are you?",
+      "repeat": 2,
+      "elapsed_ms": 8.29,
+      "response": "I'm here and ready to help! How's your day going?",
+      "sources": [],
+      "mode": "wellbeing",
+      "headers": {
+        "X-Request-ID": "a339cf2b-0587-4687-9280-b8cf8364fe74",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=0.86, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Thank you",
+      "repeat": 2,
+      "elapsed_ms": 7.2,
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "mode": "thanks",
+      "headers": {
+        "X-Request-ID": "535309ba-a7d4-4ec7-8145-076793a2b4ab",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=0.93, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Can you tell me a short joke?",
+      "repeat": 2,
+      "elapsed_ms": 24.24,
+      "response": "Why did the computer take a break? It needed to refresh!",
+      "sources": [],
+      "mode": "joke",
+      "headers": {
+        "X-Request-ID": "a809bbe8-951c-49c0-875a-cc7b61b95604",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=19.59, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "Kumusta ka?",
+      "repeat": 2,
+      "elapsed_ms": 7.98,
+      "response": "Handa akong tumulong! Ikaw, kumusta ang araw mo?",
+      "sources": [],
+      "mode": "wellbeing",
+      "headers": {
+        "X-Request-ID": "ea13c629-9427-48d6-aa4f-127d88aadcfb",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=1.5, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "I feel nervous today",
+      "repeat": 2,
+      "elapsed_ms": 8.17,
+      "response": "That sounds tiring. We can take things one step at a time. Want to talk about it or work through a question together?",
+      "sources": [],
+      "mode": "support",
+      "headers": {
+        "X-Request-ID": "fa4fa556-5a14-4fde-8c86-843f2bf0e9c4",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=1.03, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "social",
+      "query": "What do you do for fun?",
+      "repeat": 2,
+      "elapsed_ms": 24.1,
+      "response": "I don't have personal experiences or favorites like a person, but I'm happy to chat. What do you enjoy?",
+      "sources": [],
+      "mode": "preference",
+      "headers": {
+        "X-Request-ID": "ec83cf7b-1db9-4125-a691-3d10d950462c",
+        "X-PAULA-Worker": "55",
+        "Server-Timing": "total;dur=18.84, sql;dur=0.0"
+      }
+    },
+    {
+      "category": "mixed",
+      "query": "Hi! Who is the ICT Director?",
+      "repeat": 2,
+      "elapsed_ms": 193.74,
+      "response": "Hi!\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\n[SUGGESTIONS: \"What is the enrollment information?\" | \"What is the tuition information?\" | \"What is the courses information?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": []
+        }
+      ],
+      "mode": "mixed",
+      "headers": {
+        "X-Request-ID": "4ff8689a-617e-44a2-888c-2a5ff383244d",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=171.68, sql;dur=47.97"
+      }
+    },
+    {
+      "category": "knowledge",
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "repeat": 2,
+      "elapsed_ms": 263.12,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What is the courses information?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "mode": "knowledge",
+      "headers": {
+        "X-Request-ID": "287788ea-af43-437d-a61c-03211cf434c6",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=256.86, sql;dur=52.14"
+      }
+    },
+    {
+      "category": "knowledge",
+      "query": "Why should I choose SPUS?",
+      "repeat": 2,
+      "elapsed_ms": 64.47,
+      "response": "Sure—here is the information from the stored sources.\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "mode": "knowledge",
+      "headers": {
+        "X-Request-ID": "cecc9266-71c9-4096-b21a-0d9039710849",
+        "X-PAULA-Worker": "56",
+        "Server-Timing": "total;dur=57.19, sql;dur=7.22"
+      }
+    },
+    {
+      "category": "knowledge",
+      "query": "How do I enroll at SPUS?",
+      "repeat": 2,
+      "elapsed_ms": 31.95,
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "mode": "knowledge",
+      "headers": {
+        "X-Request-ID": "90b83193-87f6-4ac6-8cf6-347895195a2f",
+        "X-PAULA-Worker": "57",
+        "Server-Timing": "total;dur=2.35, sql;dur=0.0"
+      }
+    }
+  ]
+}

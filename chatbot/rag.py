@@ -1,5 +1,6 @@
 """Hybrid retrieval with independent relevance gates and raw cosine scores."""
 import logging
+import math
 import re
 import time
 from threading import Lock
@@ -11,6 +12,8 @@ from pgvector.django import CosineDistance
 from .grounding import DEPARTMENTS, departments, normalize, rank_evidence, terms
 from .retrieval_types import EvidenceList, RetrievalOutcome
 from .evidence_identity import consolidate_evidence
+from .performance import timed, stage
+from .query_normalization import faq_question_key, normalized_text
 
 logger = logging.getLogger(__name__)
 _vocabulary_cache = None
@@ -22,26 +25,63 @@ class RAGSearcher:
     def __init__(self):
         self.model = None
 
+    @staticmethod
+    @timed('query_interpretation')
+    def complete_short_query(query):
+        from .models import FAQ
+        from .query_understanding import reason_completions, short_reason_subject
+        if short_reason_subject(query) is None:
+            return ()
+        # Public question labels only. Never read history, infer a person, or
+        # relax evidence thresholds to complete an omitted grammatical action.
+        return reason_completions(query, FAQ.objects.order_by('pk').values_list('question', flat=True)[:1500])
+
     def _generate_embedding(self, text):
         if self.model is None:
-            from sentence_transformers import SentenceTransformer
-            self.model = SentenceTransformer('all-MiniLM-L6-v2')
-        return self.model.encode(text).tolist()
-
-    def ensure_embeddings(self):
-        from .models import FAQ, Location, StaffMember, WebResource
-        formats = (
-            (Location, lambda obj: f'Location: {obj.name}. {obj.description}'),
-            (StaffMember, lambda obj: f'Staff: {obj.name}, {obj.position}. Office located at {obj.office}.'),
-            (FAQ, lambda obj: f'FAQ about {obj.category}: {obj.question} - {obj.answer}'),
-            (WebResource, lambda obj: f'{obj.category} - {obj.title}: {obj.content}'),
-        )
-        for model, format_text in formats:
-            for obj in model.objects.filter(embedding__isnull=True):
-                obj.embedding = self._generate_embedding(format_text(obj))
-                obj.save(update_fields=['embedding'])
+            from .embedding_runtime import runtime
+            self.model = runtime.get_model()
+        with stage('query_embedding'):
+            vector = self.model.encode(text).tolist()
+            if len(vector) != 384 or not all(math.isfinite(value) for value in vector) or not any(vector):
+                raise ValueError('Embedding output is not a finite nonzero 384-vector')
+            return vector
 
     @staticmethod
+    def _index_specs():
+        from .models import FAQ, Location, StaffMember, WebResource
+        return (
+            (Location, ('name', 'description'), lambda obj: f'Location: {obj.name}. {obj.description}'),
+            (StaffMember, ('name', 'position', 'office'), lambda obj: f'Staff: {obj.name}, {obj.position}. Office located at {obj.office}.'),
+            (FAQ, ('category', 'question', 'answer'), lambda obj: f'FAQ about {obj.category}: {obj.question} - {obj.answer}'),
+            (WebResource, ('category', 'title', 'content'), lambda obj: f'{obj.category} - {obj.title}: {obj.content}'),
+        )
+
+    def index_record(self, obj):
+        """Index one public source, without applying stale or duplicate work."""
+        for model, fields, format_text in self._index_specs():
+            if isinstance(obj, model):
+                snapshot = {field: getattr(obj, field) for field in fields}
+                vector = self._generate_embedding(format_text(obj))
+                return model.objects.filter(pk=obj.pk, embedding__isnull=True, **snapshot).update(embedding=vector)
+        raise ValueError('Unsupported knowledge model')
+
+    @timed('embedding_coverage')
+    def ensure_embeddings(self):
+        """Explicit maintenance only; interactive retrieval must never call it.
+
+        Compare-and-swap keeps a concurrent source edit from receiving a vector
+        computed from stale text. Only absent vectors are filled.
+        """
+        indexed = skipped = 0
+        for model, _, _ in self._index_specs():
+            for obj in model.objects.filter(embedding__isnull=True).iterator(chunk_size=100):
+                written = self.index_record(obj)
+                indexed += written
+                skipped += int(not written)
+        return {'indexed': indexed, 'skipped_changed_or_indexed': skipped}
+
+    @staticmethod
+    @timed('public_vocabulary')
     def context_vocabulary():
         """Cache public KB labels only; never cache a user's conversation.
 
@@ -88,6 +128,7 @@ class RAGSearcher:
             _vocabulary_expires = time.monotonic() + 60
             return _vocabulary_cache
 
+    @timed('retrieval')
     def retrieve(self, query, limit=5, allow_fallback=False):
         started = time.perf_counter()
         try:
@@ -122,8 +163,6 @@ class RAGSearcher:
 
     def search(self, query, limit=5):
         from .models import FAQ, Location, StaffMember, WebResource
-        if re.search(r'\bannouncements?\b', query, re.I):
-            return self._announcements(query, limit)
         from .enrollment import exact_enrollment_lookup, enrollment_lookup_topic
         if enrollment_lookup_topic(query):
             # Return only the requested office procedure/documents, including
@@ -154,6 +193,16 @@ class RAGSearcher:
                 return [dict(question=f'Who is the {obj.position}?', document_title=f'Staff Directory: {obj.position}',
                              answer=answer, text=answer, source_type='staff_directory', source_office=obj.office,
                              personnel_role=obj.position, personnel_name=obj.name, source_url=None, retrieval_method='exact_staff_role')]
+        exact_faq = self._exact_faq_lookup(query)
+        if exact_faq or exact_faq.status == 'conflict':
+            return exact_faq
+        # Mentioning announcements does not make an office procedure a news
+        # request. Exact knowledge and its conflicts take precedence. An empty
+        # announcements table is not evidence that other sources lack an answer.
+        if re.search(r'\bannouncements?\b', query, re.I):
+            announcements = self._announcements(query, limit)
+            if announcements:
+                return announcements
         rows=self._hybrid_search(query, limit)
         if lookup_kind(query) in ('role','name'):
             from .grounding import NAME_RE
@@ -161,6 +210,62 @@ class RAGSearcher:
             # identifying a person, even when it contains the requested title.
             rows=[row for row in rows if row.get('personnel_name') or NAME_RE.search(row.get('answer') or '')]
         return rows
+
+    @staticmethod
+    @timed('exact_faq')
+    def _exact_faq_lookup(query, records=None):
+        from .models import FAQ
+        from .grounding import eligible_evidence
+        from .query_understanding import listing_signature
+        key = faq_question_key(query)
+        if not key:
+            return EvidenceList(status='no_match')
+        records = list(records if records is not None else FAQ.objects.only(
+            'id', 'question', 'answer', 'category', 'source_type', 'source_office').order_by('pk'))
+        matches = [obj for obj in records if faq_question_key(obj.question) == key]
+        method = 'exact_faq_question'
+        signature = listing_signature(query)
+        if signature:
+            equivalents = [obj for obj in records if listing_signature(obj.question) == signature]
+            if not matches:
+                method = 'equivalent_faq_question'
+            known = {obj.pk for obj in matches}
+            matches.extend(obj for obj in equivalents if obj.pk not in known)
+        matched_questions = {}
+        if not matches and signature:
+            # Several existing FAQ labels contain explicit alternate questions.
+            # Prefer a complete single-question entry; otherwise bind only a
+            # matching grammatical alias, retaining the original provenance.
+            for obj in records:
+                aliases = [part.strip() + '?' for part in obj.question.split('?') if part.strip()]
+                if not 2 <= len(aliases) <= 4:
+                    continue
+                matched = [alias for alias in aliases if listing_signature(alias) == signature]
+                if matched:
+                    matches.append(obj)
+                    matched_questions[obj.pk] = matched[0]
+            if matches:
+                method = 'equivalent_faq_alias'
+        if not matches:
+            return EvidenceList(status='no_match')
+        if len({normalized_text(obj.answer) for obj in matches}) != 1:
+            return EvidenceList(status='conflict')
+        obj = matches[0]
+        row = dict(question=obj.question, answer=obj.answer, text=obj.answer,
+                   document_title=f'FAQ ({obj.category}): {obj.question}',
+                   source_type=obj.source_type or 'curated', source_office=obj.source_office,
+                   source_url=None, record_type='faq', record_id=obj.pk,
+                   retrieval_method=method)
+        if obj.pk in matched_questions:
+            row['matched_question'] = matched_questions[obj.pk]
+        if not eligible_evidence(query, row):
+            return EvidenceList(status='no_match')
+        row['supporting_sources'] = [
+            dict(document_title=f'FAQ ({other.category}): {other.question}', record_type='faq',
+                 record_id=other.pk, source_type=other.source_type, source_url=None)
+            for other in matches[1:]
+        ]
+        return EvidenceList([row])
 
     @staticmethod
     def _announcements(query, limit):
@@ -178,9 +283,9 @@ class RAGSearcher:
                 rows.append(row)
         return rows[:limit]
 
+    @timed('hybrid_retrieval')
     def _hybrid_search(self, query, limit=5):
         from .models import FAQ, Location, StaffMember, WebResource
-        self.ensure_embeddings()
         vector = self._generate_embedding(query)
         pool_size = max(15, limit * 3)
         keywords = sorted(terms(query))[:12]

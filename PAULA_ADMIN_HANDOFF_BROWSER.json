@@ -1,0 +1,51 @@
+{
+  "complete": true,
+  "passed": 11,
+  "checks": [
+    {
+      "name": "saved guest does not bypass React admin login",
+      "passed": true
+    },
+    {
+      "name": "React admin form recognizes backend superuser",
+      "passed": true
+    },
+    {
+      "name": "React admin login → Back to Chat → Campus map retains tools",
+      "passed": true
+    },
+    {
+      "name": "admin identity and tools survive root page refresh",
+      "passed": true
+    },
+    {
+      "name": "main React login also preserves superuser role",
+      "passed": true
+    },
+    {
+      "name": "guest plus existing admin cookie stays guest until explicit switch",
+      "passed": true
+    },
+    {
+      "name": "guest requests remain unsaved and omit authenticated cookies",
+      "passed": true
+    },
+    {
+      "name": "explicit admin switch clears guest messages and starts fresh context",
+      "passed": true
+    },
+    {
+      "name": "tools available after explicit verified admin switch",
+      "passed": true
+    },
+    {
+      "name": "explicit Continue as Guest still ends previous authentication",
+      "passed": true
+    },
+    {
+      "name": "explicit admin route restores existing verified session despite stale guest profile",
+      "passed": true
+    }
+  ],
+  "notes": "Actual App/forms/map against isolated API session fixtures. No real passwords, new accounts, historical writes, or production login claims."
+}

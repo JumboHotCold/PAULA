@@ -1,0 +1,21 @@
+{
+  "before": {
+    "samples": 81,
+    "correlated": 81,
+    "social_embedding_requests": 60,
+    "retrieval_requests": 60,
+    "provider_requests": 0,
+    "gratitude_sql_queries": 468,
+    "social_normalization_stage_requests": 0
+  },
+  "after": {
+    "samples": 81,
+    "correlated": 81,
+    "social_embedding_requests": 0,
+    "retrieval_requests": 0,
+    "provider_requests": 0,
+    "gratitude_sql_queries": 0,
+    "social_normalization_stage_requests": 42
+  },
+  "note": "Only public benchmark request IDs were correlated. No message text, SQL, identities, cookies or provider credentials are exported."
+}

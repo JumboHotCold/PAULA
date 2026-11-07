@@ -1,0 +1,114 @@
+[
+  {
+    "query": "ty",
+    "ms": 1835.74,
+    "mode": "repair",
+    "response": "I'm not sure what you mean yet. Could you rephrase or add a little more detail?",
+    "sources": [],
+    "request_id": "4f8fd0b2-0173-4028-bcad-52b36355256d"
+  },
+  {
+    "query": "thankyoui",
+    "ms": 1228.14,
+    "mode": "repair",
+    "response": "I'm not sure what you mean yet. Could you rephrase or add a little more detail?",
+    "sources": [],
+    "request_id": "912e75b6-8d55-4578-87df-21d441cc7e72"
+  },
+  {
+    "query": "thank you",
+    "ms": 7.62,
+    "mode": "thanks",
+    "response": "You're welcome! Glad that helped.",
+    "sources": [],
+    "request_id": "6bd997c1-5992-41e7-a8e1-131069578f33"
+  },
+  {
+    "query": "TYSM PAULA!!",
+    "ms": 261.55,
+    "mode": "repair",
+    "response": "I'm not sure what you mean yet. Could you rephrase or add a little more detail?",
+    "sources": [],
+    "request_id": "6aa1c85d-1ccf-4b8a-a45b-78c9b3862834"
+  },
+  {
+    "query": "thnak you",
+    "ms": 683.56,
+    "mode": "repair",
+    "response": "I'm not sure what you mean yet. Could you rephrase or add a little more detail?",
+    "sources": [],
+    "request_id": "a41a8939-8597-47c7-8be5-fb37cbd2f339"
+  },
+  {
+    "query": "goodmorning",
+    "ms": 152.98,
+    "mode": "repair",
+    "response": "I'm not sure what you mean yet. Could you rephrase or add a little more detail?",
+    "sources": [],
+    "request_id": "a7ef8d4a-83b3-4635-9591-4c196fde5eda"
+  },
+  {
+    "query": "howareyou",
+    "ms": 151.0,
+    "mode": "repair",
+    "response": "I'm not sure what you mean yet. Could you rephrase or add a little more detail?",
+    "sources": [],
+    "request_id": "27799728-f1c1-466c-8944-3cd769256b11"
+  },
+  {
+    "query": "salamat kaayo",
+    "ms": 144.55,
+    "mode": "repair",
+    "response": "I'm not sure what you mean yet. Could you rephrase or add a little more detail?",
+    "sources": [],
+    "request_id": "c584b04a-c2f3-4ccc-8e5b-ac029ebb7a34"
+  },
+  {
+    "query": "daghang salamat",
+    "ms": 181.42,
+    "mode": "repair",
+    "response": "I'm not sure what you mean yet. Could you rephrase or add a little more detail?",
+    "sources": [],
+    "request_id": "237dbc48-52ef-4208-a33b-f3e6a7e8f35c"
+  },
+  {
+    "query": "yes",
+    "ms": 142.38,
+    "mode": "repair",
+    "response": "I'm not sure what you mean yet. Could you rephrase or add a little more detail?",
+    "sources": [],
+    "request_id": "5ca0a87c-0dcc-416a-8c96-d85433648e14"
+  },
+  {
+    "query": "no",
+    "ms": 152.62,
+    "mode": "repair",
+    "response": "I'm not sure what you mean yet. Could you rephrase or add a little more detail?",
+    "sources": [],
+    "request_id": "54e84931-c893-43e1-a307-dc523ea1ba2e"
+  },
+  {
+    "query": "dili",
+    "ms": 142.58,
+    "mode": "repair",
+    "response": "I'm not sure what you mean yet. Could you rephrase or add a little more detail?",
+    "sources": [],
+    "request_id": "79593e77-d7dd-4909-8f26-de661dbb89c8"
+  },
+  {
+    "query": "help",
+    "ms": 134.82,
+    "mode": "repair",
+    "response": "I'm not sure what you mean yet. Could you rephrase or add a little more detail?",
+    "sources": [],
+    "request_id": "62d14ae5-698e-4cc2-991e-d04c3d29d516"
+  },
+  {
+    "query": "explain",
+    "ms": 286.41,
+    "mode": "knowledge",
+    "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).",
+    "sources": [],
+    "request_id": "ad523189-c618-48c5-8a72-88d0917072ea"
+  }
+]

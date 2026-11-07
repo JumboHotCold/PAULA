@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "mode": "guest",
+  "first": [
+    "What is the SPUS Vision and Mission?",
+    "What are the Paulinian Core Values?"
+  ],
+  "clicked": "What is the SPUS Vision and Mission?",
+  "after": {
+    "groups": 1,
+    "firstReplyGroups": 0,
+    "latestReplyGroups": 1,
+    "labels": [
+      "What are the Paulinian Core Values?",
+      "What is the SPUS Quality Policy?"
+    ],
+    "lastUser": "What is the SPUS Vision and Mission?"
+  }
+}

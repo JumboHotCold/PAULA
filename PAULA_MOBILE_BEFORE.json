@@ -1,0 +1,702 @@
+[
+  {
+    "screen": "entry",
+    "width": 320,
+    "height": 568,
+    "documentWidth": 320,
+    "header": null,
+    "composer": null,
+    "module": null,
+    "close": null,
+    "map": null,
+    "image": null,
+    "picker": null,
+    "mapHeader": null,
+    "tinyButtons": []
+  },
+  {
+    "screen": "entry",
+    "width": 375,
+    "height": 812,
+    "documentWidth": 375,
+    "header": null,
+    "composer": null,
+    "module": null,
+    "close": null,
+    "map": null,
+    "image": null,
+    "picker": null,
+    "mapHeader": null,
+    "tinyButtons": []
+  },
+  {
+    "screen": "entry",
+    "width": 768,
+    "height": 1024,
+    "documentWidth": 768,
+    "header": null,
+    "composer": null,
+    "module": null,
+    "close": null,
+    "map": null,
+    "image": null,
+    "picker": null,
+    "mapHeader": null,
+    "tinyButtons": []
+  },
+  {
+    "screen": "chat",
+    "width": 375,
+    "height": 812,
+    "documentWidth": 375,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 55,
+      "bottom": 55,
+      "right": 375
+    },
+    "composer": {
+      "x": 0,
+      "y": 742.203125,
+      "width": 375,
+      "height": 69.796875,
+      "bottom": 812,
+      "right": 375
+    },
+    "module": null,
+    "close": null,
+    "map": null,
+    "image": null,
+    "picker": null,
+    "mapHeader": null,
+    "tinyButtons": [
+      {
+        "label": "Smart Virtual Tour",
+        "width": 40,
+        "height": 32
+      },
+      {
+        "label": "Switch to light mode",
+        "width": 38,
+        "height": 38
+      },
+      {
+        "label": "Login",
+        "width": 58.5,
+        "height": 33.609375
+      },
+      {
+        "label": "What programs are offered?",
+        "width": 100.5,
+        "height": 16.08282470703125
+      },
+      {
+        "label": "How do I enroll?",
+        "width": 100.5,
+        "height": 16.08282470703125
+      },
+      {
+        "label": "Where is the registrar office?",
+        "width": 100.5,
+        "height": 16.082763671875
+      },
+      {
+        "label": "Does SPUS offer scholarships?",
+        "width": 100.5,
+        "height": 16.082763671875
+      },
+      {
+        "label": "",
+        "width": 32,
+        "height": 32
+      }
+    ]
+  },
+  {
+    "screen": "map",
+    "width": 320,
+    "height": 568,
+    "documentWidth": 320,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "bottom": 0,
+      "right": 0
+    },
+    "composer": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "bottom": 0,
+      "right": 0
+    },
+    "module": {
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 568,
+      "bottom": 568,
+      "right": 320
+    },
+    "close": {
+      "x": 176.34375,
+      "y": 16,
+      "width": 127.65625,
+      "height": 38.390625,
+      "bottom": 54.390625,
+      "right": 304
+    },
+    "map": {
+      "x": 0,
+      "y": 79.390625,
+      "width": 320,
+      "height": 488.609375,
+      "bottom": 568,
+      "right": 320
+    },
+    "image": {
+      "x": 8,
+      "y": 228.734375,
+      "width": 303.984375,
+      "height": 189.90625,
+      "bottom": 418.640625,
+      "right": 311.984375
+    },
+    "picker": {
+      "x": 8,
+      "y": 276.7161560058594,
+      "width": 304,
+      "height": 284.0000305175781,
+      "bottom": 560.7161865234375,
+      "right": 312
+    },
+    "mapHeader": {
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 79.390625,
+      "bottom": 79.390625,
+      "right": 320
+    },
+    "tinyButtons": [
+      {
+        "label": "Close Map",
+        "width": 127.65625,
+        "height": 38.390625
+      },
+      {
+        "label": "Main Entrance",
+        "width": 264,
+        "height": 37.609375
+      },
+      {
+        "label": "Guidance Office",
+        "width": 264,
+        "height": 37.609375
+      },
+      {
+        "label": "Restroom (Left Wing)",
+        "width": 264,
+        "height": 37.609405517578125
+      },
+      {
+        "label": "San Nicolas Building",
+        "width": 264,
+        "height": 37.609375
+      },
+      {
+        "label": "CFO",
+        "width": 264,
+        "height": 37.609375
+      }
+    ]
+  },
+  {
+    "screen": "map",
+    "width": 375,
+    "height": 812,
+    "documentWidth": 375,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "bottom": 0,
+      "right": 0
+    },
+    "composer": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "bottom": 0,
+      "right": 0
+    },
+    "module": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 812,
+      "bottom": 812,
+      "right": 375
+    },
+    "close": {
+      "x": 231.34375,
+      "y": 16,
+      "width": 127.65625,
+      "height": 38.390625,
+      "bottom": 54.390625,
+      "right": 359
+    },
+    "map": {
+      "x": 0,
+      "y": 79.390625,
+      "width": 375,
+      "height": 732.609375,
+      "bottom": 812,
+      "right": 375
+    },
+    "image": {
+      "x": 8,
+      "y": 333.625,
+      "width": 358.984375,
+      "height": 224.125,
+      "bottom": 557.75,
+      "right": 366.984375
+    },
+    "picker": {
+      "x": 8,
+      "y": 466.796875,
+      "width": 359,
+      "height": 337.203125,
+      "bottom": 804,
+      "right": 367
+    },
+    "mapHeader": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 79.390625,
+      "bottom": 79.390625,
+      "right": 375
+    },
+    "tinyButtons": [
+      {
+        "label": "Close Map",
+        "width": 127.65625,
+        "height": 38.390625
+      },
+      {
+        "label": "Main Entrance",
+        "width": 319,
+        "height": 37.609375
+      },
+      {
+        "label": "Guidance Office",
+        "width": 319,
+        "height": 37.609375
+      },
+      {
+        "label": "Restroom (Left Wing)",
+        "width": 319,
+        "height": 37.609375
+      },
+      {
+        "label": "San Nicolas Building",
+        "width": 319,
+        "height": 37.609375
+      },
+      {
+        "label": "CFO",
+        "width": 319,
+        "height": 37.609375
+      },
+      {
+        "label": "Restroom (Lower)",
+        "width": 319,
+        "height": 37.609375
+      }
+    ]
+  },
+  {
+    "screen": "map",
+    "width": 812,
+    "height": 375,
+    "documentWidth": 812,
+    "header": {
+      "x": 463,
+      "y": 0,
+      "width": 349,
+      "height": 86.21875,
+      "bottom": 86.21875,
+      "right": 812
+    },
+    "composer": {
+      "x": 463,
+      "y": 268,
+      "width": 349,
+      "height": 107,
+      "bottom": 375,
+      "right": 812
+    },
+    "module": {
+      "x": 0,
+      "y": 0,
+      "width": 462,
+      "height": 375,
+      "bottom": 375,
+      "right": 462
+    },
+    "close": {
+      "x": 313.375,
+      "y": 16,
+      "width": 131.625,
+      "height": 38.390625,
+      "bottom": 54.390625,
+      "right": 445
+    },
+    "map": {
+      "x": 16,
+      "y": 75,
+      "width": 429,
+      "height": 284,
+      "bottom": 359,
+      "right": 445
+    },
+    "image": {
+      "x": 24,
+      "y": 88.140625,
+      "width": 412.96875,
+      "height": 257.71875,
+      "bottom": 345.859375,
+      "right": 436.96875
+    },
+    "picker": {
+      "x": 28,
+      "y": 175.5,
+      "width": 360,
+      "height": 171.5,
+      "bottom": 347,
+      "right": 388
+    },
+    "mapHeader": {
+      "x": 16,
+      "y": 16,
+      "width": 429,
+      "height": 59,
+      "bottom": 75,
+      "right": 445
+    },
+    "tinyButtons": [
+      {
+        "label": "Close Map",
+        "width": 131.625,
+        "height": 38.390625
+      },
+      {
+        "label": "Navigate",
+        "width": 92.53125,
+        "height": 29.96875
+      },
+      {
+        "label": "Map Coords",
+        "width": 111.421875,
+        "height": 29.96875
+      },
+      {
+        "label": "Main Entrance",
+        "width": 320,
+        "height": 37.609375
+      },
+      {
+        "label": "Guidance Office",
+        "width": 320,
+        "height": 37.609375
+      },
+      {
+        "label": "Smart Virtual Tour",
+        "width": 169.71875,
+        "height": 34.390625
+      },
+      {
+        "label": "Switch to light mode",
+        "width": 38,
+        "height": 38
+      },
+      {
+        "label": "Login",
+        "width": 58.5,
+        "height": 33.609375
+      },
+      {
+        "label": "",
+        "width": 36,
+        "height": 36
+      }
+    ]
+  },
+  {
+    "screen": "map",
+    "width": 768,
+    "height": 1024,
+    "documentWidth": 768,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "bottom": 0,
+      "right": 0
+    },
+    "composer": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "bottom": 0,
+      "right": 0
+    },
+    "module": {
+      "x": 0,
+      "y": 0,
+      "width": 768,
+      "height": 1024,
+      "bottom": 1024,
+      "right": 768
+    },
+    "close": {
+      "x": 624.34375,
+      "y": 16,
+      "width": 127.65625,
+      "height": 38.390625,
+      "bottom": 54.390625,
+      "right": 752
+    },
+    "map": {
+      "x": 0,
+      "y": 59,
+      "width": 768,
+      "height": 965,
+      "bottom": 1024,
+      "right": 768
+    },
+    "image": {
+      "x": 8,
+      "y": 307.171875,
+      "width": 751.96875,
+      "height": 468.65625,
+      "bottom": 775.828125,
+      "right": 759.96875
+    },
+    "picker": {
+      "x": 8,
+      "y": 678.796875,
+      "width": 752,
+      "height": 337.203125,
+      "bottom": 1016,
+      "right": 760
+    },
+    "mapHeader": {
+      "x": 0,
+      "y": 0,
+      "width": 768,
+      "height": 59,
+      "bottom": 59,
+      "right": 768
+    },
+    "tinyButtons": [
+      {
+        "label": "Close Map",
+        "width": 127.65625,
+        "height": 38.390625
+      },
+      {
+        "label": "Navigate",
+        "width": 85.171875,
+        "height": 26.796875
+      },
+      {
+        "label": "Map Coords",
+        "width": 102.8125,
+        "height": 26.796875
+      },
+      {
+        "label": "Main Entrance",
+        "width": 712,
+        "height": 37.609375
+      },
+      {
+        "label": "Guidance Office",
+        "width": 712,
+        "height": 37.609375
+      },
+      {
+        "label": "Restroom (Left Wing)",
+        "width": 712,
+        "height": 37.609375
+      },
+      {
+        "label": "San Nicolas Building",
+        "width": 712,
+        "height": 37.609375
+      },
+      {
+        "label": "CFO",
+        "width": 712,
+        "height": 37.609375
+      },
+      {
+        "label": "Restroom (Lower)",
+        "width": 712,
+        "height": 37.609375
+      }
+    ]
+  },
+  {
+    "screen": "map",
+    "width": 1280,
+    "height": 900,
+    "documentWidth": 1280,
+    "header": {
+      "x": 864.671875,
+      "y": 0,
+      "width": 415.328125,
+      "height": 86.21875,
+      "bottom": 86.21875,
+      "right": 1280
+    },
+    "composer": {
+      "x": 864.671875,
+      "y": 793,
+      "width": 415.328125,
+      "height": 107,
+      "bottom": 900,
+      "right": 1280
+    },
+    "module": {
+      "x": 0,
+      "y": 0,
+      "width": 863.671875,
+      "height": 900,
+      "bottom": 900,
+      "right": 863.671875
+    },
+    "close": {
+      "x": 715.046875,
+      "y": 16,
+      "width": 131.625,
+      "height": 38.390625,
+      "bottom": 54.390625,
+      "right": 846.671875
+    },
+    "map": {
+      "x": 16,
+      "y": 75,
+      "width": 830.671875,
+      "height": 809,
+      "bottom": 884,
+      "right": 846.671875
+    },
+    "image": {
+      "x": 24,
+      "y": 225.671875,
+      "width": 814.65625,
+      "height": 507.65625,
+      "bottom": 733.328125,
+      "right": 838.65625
+    },
+    "picker": {
+      "x": 28,
+      "y": 534.796875,
+      "width": 360,
+      "height": 337.203125,
+      "bottom": 872,
+      "right": 388
+    },
+    "mapHeader": {
+      "x": 16,
+      "y": 16,
+      "width": 830.671875,
+      "height": 59,
+      "bottom": 75,
+      "right": 846.671875
+    },
+    "tinyButtons": [
+      {
+        "label": "Close Map",
+        "width": 131.625,
+        "height": 38.390625
+      },
+      {
+        "label": "Navigate",
+        "width": 92.53125,
+        "height": 29.96875
+      },
+      {
+        "label": "Map Coords",
+        "width": 111.421875,
+        "height": 29.96875
+      },
+      {
+        "label": "Main Entrance",
+        "width": 320,
+        "height": 37.609375
+      },
+      {
+        "label": "Guidance Office",
+        "width": 320,
+        "height": 37.609375
+      },
+      {
+        "label": "Restroom (Left Wing)",
+        "width": 320,
+        "height": 37.609375
+      },
+      {
+        "label": "San Nicolas Building",
+        "width": 320,
+        "height": 37.609375
+      },
+      {
+        "label": "CFO",
+        "width": 320,
+        "height": 37.609375
+      },
+      {
+        "label": "Restroom (Lower)",
+        "width": 320,
+        "height": 37.609375
+      },
+      {
+        "label": "Clinic",
+        "width": 320,
+        "height": 37.609375
+      },
+      {
+        "label": "Smart Virtual Tour",
+        "width": 169.71875,
+        "height": 34.390625
+      },
+      {
+        "label": "Switch to light mode",
+        "width": 38,
+        "height": 38
+      },
+      {
+        "label": "Login",
+        "width": 58.5,
+        "height": 33.609375
+      },
+      {
+        "label": "",
+        "width": 36,
+        "height": 36
+      }
+    ]
+  }
+]

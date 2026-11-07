@@ -1,0 +1,367 @@
+﻿[
+    {
+        "event":  "request_timing",
+        "providers":  [
+
+                      ],
+        "request_id":  "5b35ebb0-28d8-4e3f-8c29-3282c1fb2bb0",
+        "route":  "chat",
+        "sql_count":  2,
+        "sql_ms":  94.35,
+        "stages":  {
+                       "context_resolution":  {
+                                                  "calls":  1,
+                                                  "inclusive_ms":  32.613,
+                                                  "self_ms":  32.613
+                                              },
+                       "exact_faq":  {
+                                         "calls":  1,
+                                         "inclusive_ms":  378.156,
+                                         "self_ms":  376.537
+                                     },
+                       "followup_suggestions":  {
+                                                    "calls":  1,
+                                                    "inclusive_ms":  44.708,
+                                                    "self_ms":  44.708
+                                                },
+                       "grounding":  {
+                                         "calls":  2,
+                                         "inclusive_ms":  1.874,
+                                         "self_ms":  1.874
+                                     },
+                       "normalization":  {
+                                             "calls":  1,
+                                             "inclusive_ms":  0.482,
+                                             "self_ms":  0.482
+                                         },
+                       "orchestration":  {
+                                             "calls":  1,
+                                             "inclusive_ms":  495.639,
+                                             "self_ms":  12.649
+                                         },
+                       "response_render":  {
+                                               "calls":  1,
+                                               "inclusive_ms":  0.128,
+                                               "self_ms":  0.128
+                                           },
+                       "retrieval":  {
+                                         "calls":  1,
+                                         "inclusive_ms":  449.513,
+                                         "self_ms":  71.271
+                                     },
+                       "structured_personnel":  {
+                                                    "calls":  1,
+                                                    "inclusive_ms":  0.085,
+                                                    "self_ms":  0.085
+                                                }
+                   },
+        "status":  200,
+        "total_ms":  552.36,
+        "worker":  55
+    },
+    {
+        "event":  "request_timing",
+        "providers":  [
+
+                      ],
+        "request_id":  "97a4d212-8137-4df6-84f4-82612bb3fef5",
+        "route":  "chat",
+        "sql_count":  9,
+        "sql_ms":  105.77,
+        "stages":  {
+                       "context_resolution":  {
+                                                  "calls":  1,
+                                                  "inclusive_ms":  0.263,
+                                                  "self_ms":  0.263
+                                              },
+                       "exact_faq":  {
+                                         "calls":  1,
+                                         "inclusive_ms":  6.737,
+                                         "self_ms":  5.358
+                                     },
+                       "followup_suggestions":  {
+                                                    "calls":  1,
+                                                    "inclusive_ms":  26.785,
+                                                    "self_ms":  26.785
+                                                },
+                       "grounding":  {
+                                         "calls":  2,
+                                         "inclusive_ms":  1.705,
+                                         "self_ms":  1.705
+                                     },
+                       "normalization":  {
+                                             "calls":  1,
+                                             "inclusive_ms":  0.222,
+                                             "self_ms":  0.222
+                                         },
+                       "orchestration":  {
+                                             "calls":  1,
+                                             "inclusive_ms":  144.105,
+                                             "self_ms":  0.703
+                                         },
+                       "public_vocabulary":  {
+                                                 "calls":  1,
+                                                 "inclusive_ms":  135.665,
+                                                 "self_ms":  135.665
+                                             },
+                       "response_render":  {
+                                               "calls":  1,
+                                               "inclusive_ms":  0.03,
+                                               "self_ms":  0.03
+                                           },
+                       "retrieval":  {
+                                         "calls":  1,
+                                         "inclusive_ms":  6.896,
+                                         "self_ms":  0.155
+                                     },
+                       "structured_personnel":  {
+                                                    "calls":  1,
+                                                    "inclusive_ms":  0.004,
+                                                    "self_ms":  0.004
+                                                }
+                   },
+        "status":  200,
+        "total_ms":  172.28,
+        "worker":  55
+    },
+    {
+        "event":  "request_timing",
+        "providers":  [
+
+                      ],
+        "request_id":  "223e3240-7dd3-4b8b-be68-1984e852c798",
+        "route":  "chat",
+        "sql_count":  9,
+        "sql_ms":  38.34,
+        "stages":  {
+                       "context_resolution":  {
+                                                  "calls":  1,
+                                                  "inclusive_ms":  20.729,
+                                                  "self_ms":  20.729
+                                              },
+                       "exact_faq":  {
+                                         "calls":  1,
+                                         "inclusive_ms":  10.575,
+                                         "self_ms":  9.229
+                                     },
+                       "followup_suggestions":  {
+                                                    "calls":  1,
+                                                    "inclusive_ms":  31.691,
+                                                    "self_ms":  31.691
+                                                },
+                       "grounding":  {
+                                         "calls":  2,
+                                         "inclusive_ms":  1.705,
+                                         "self_ms":  1.705
+                                     },
+                       "normalization":  {
+                                             "calls":  1,
+                                             "inclusive_ms":  0.984,
+                                             "self_ms":  0.984
+                                         },
+                       "orchestration":  {
+                                             "calls":  1,
+                                             "inclusive_ms":  195.989,
+                                             "self_ms":  9.057
+                                         },
+                       "public_vocabulary":  {
+                                                 "calls":  1,
+                                                 "inclusive_ms":  110.766,
+                                                 "self_ms":  110.766
+                                             },
+                       "response_render":  {
+                                               "calls":  1,
+                                               "inclusive_ms":  0.128,
+                                               "self_ms":  0.128
+                                           },
+                       "retrieval":  {
+                                         "calls":  1,
+                                         "inclusive_ms":  53.965,
+                                         "self_ms":  43.302
+                                     },
+                       "structured_personnel":  {
+                                                    "calls":  1,
+                                                    "inclusive_ms":  0.088,
+                                                    "self_ms":  0.088
+                                                }
+                   },
+        "status":  200,
+        "total_ms":  234.24,
+        "worker":  56
+    },
+    {
+        "event":  "request_timing",
+        "providers":  [
+
+                      ],
+        "request_id":  "e8e37919-805b-489f-89f7-1ae97d4b657b",
+        "route":  "chat",
+        "sql_count":  0,
+        "sql_ms":  0.0,
+        "stages":  {
+                       "context_resolution":  {
+                                                  "calls":  1,
+                                                  "inclusive_ms":  0.451,
+                                                  "self_ms":  0.451
+                                              },
+                       "normalization":  {
+                                             "calls":  1,
+                                             "inclusive_ms":  0.225,
+                                             "self_ms":  0.225
+                                         },
+                       "orchestration":  {
+                                             "calls":  1,
+                                             "inclusive_ms":  2.145,
+                                             "self_ms":  1.445
+                                         },
+                       "public_vocabulary":  {
+                                                 "calls":  1,
+                                                 "inclusive_ms":  0.023,
+                                                 "self_ms":  0.023
+                                             }
+                   },
+        "status":  200,
+        "total_ms":  3.94,
+        "worker":  56
+    },
+    {
+        "event":  "request_timing",
+        "providers":  [
+
+                      ],
+        "request_id":  "1c37d5d4-cb36-4152-af85-9aad889b6d5e",
+        "route":  "chat",
+        "sql_count":  2,
+        "sql_ms":  95.11,
+        "stages":  {
+                       "context_resolution":  {
+                                                  "calls":  5,
+                                                  "inclusive_ms":  2.252,
+                                                  "self_ms":  2.252
+                                              },
+                       "followup_suggestions":  {
+                                                    "calls":  1,
+                                                    "inclusive_ms":  22.665,
+                                                    "self_ms":  22.665
+                                                },
+                       "grounding":  {
+                                         "calls":  2,
+                                         "inclusive_ms":  2.552,
+                                         "self_ms":  2.552
+                                     },
+                       "normalization":  {
+                                             "calls":  6,
+                                             "inclusive_ms":  1.539,
+                                             "self_ms":  1.539
+                                         },
+                       "orchestration":  {
+                                             "calls":  1,
+                                             "inclusive_ms":  157.653,
+                                             "self_ms":  2.456
+                                         },
+                       "public_vocabulary":  {
+                                                 "calls":  1,
+                                                 "inclusive_ms":  0.017,
+                                                 "self_ms":  0.017
+                                             },
+                       "response_render":  {
+                                               "calls":  1,
+                                               "inclusive_ms":  0.03,
+                                               "self_ms":  0.03
+                                           },
+                       "retrieval":  {
+                                         "calls":  1,
+                                         "inclusive_ms":  150.2,
+                                         "self_ms":  0.834
+                                     },
+                       "structured_enrollment":  {
+                                                     "calls":  1,
+                                                     "inclusive_ms":  149.366,
+                                                     "self_ms":  147.972
+                                                 }
+                   },
+        "status":  200,
+        "total_ms":  181.89,
+        "worker":  55
+    },
+    {
+        "event":  "request_timing",
+        "providers":  [
+
+                      ],
+        "request_id":  "31952504-65bb-4af1-ba1b-5049d503ba68",
+        "route":  "chat",
+        "sql_count":  14,
+        "sql_ms":  73.17,
+        "stages":  {
+                       "context_resolution":  {
+                                                  "calls":  1,
+                                                  "inclusive_ms":  1.011,
+                                                  "self_ms":  1.011
+                                              },
+                       "embedding_coverage":  {
+                                                  "calls":  1,
+                                                  "inclusive_ms":  8.328,
+                                                  "self_ms":  8.328
+                                              },
+                       "exact_faq":  {
+                                         "calls":  1,
+                                         "inclusive_ms":  21.218,
+                                         "self_ms":  21.218
+                                     },
+                       "followup_suggestions":  {
+                                                    "calls":  1,
+                                                    "inclusive_ms":  22.583,
+                                                    "self_ms":  22.583
+                                                },
+                       "grounding":  {
+                                         "calls":  15,
+                                         "inclusive_ms":  14.914,
+                                         "self_ms":  14.914
+                                     },
+                       "hybrid_retrieval":  {
+                                                "calls":  1,
+                                                "inclusive_ms":  148.237,
+                                                "self_ms":  83.165
+                                            },
+                       "normalization":  {
+                                             "calls":  1,
+                                             "inclusive_ms":  0.963,
+                                             "self_ms":  0.963
+                                         },
+                       "orchestration":  {
+                                             "calls":  1,
+                                             "inclusive_ms":  173.348,
+                                             "self_ms":  0.659
+                                         },
+                       "public_vocabulary":  {
+                                                 "calls":  1,
+                                                 "inclusive_ms":  0.016,
+                                                 "self_ms":  0.016
+                                             },
+                       "query_embedding":  {
+                                               "calls":  1,
+                                               "inclusive_ms":  42.482,
+                                               "self_ms":  42.482
+                                           },
+                       "response_render":  {
+                                               "calls":  1,
+                                               "inclusive_ms":  0.035,
+                                               "self_ms":  0.035
+                                           },
+                       "retrieval":  {
+                                         "calls":  1,
+                                         "inclusive_ms":  170.011,
+                                         "self_ms":  0.549
+                                     },
+                       "structured_personnel":  {
+                                                    "calls":  1,
+                                                    "inclusive_ms":  0.007,
+                                                    "self_ms":  0.007
+                                                }
+                   },
+        "status":  200,
+        "total_ms":  197.35,
+        "worker":  55
+    }
+]

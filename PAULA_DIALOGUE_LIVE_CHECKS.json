@@ -1,0 +1,292 @@
+{
+  "passed": 20,
+  "checks": [
+    {
+      "query": "Hello, PAULA!",
+      "passed": true,
+      "mode": "greeting",
+      "elapsed_ms": 36.82,
+      "worker": "55",
+      "response": "Hello! I'm PAULA. How can I help today?",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "Okay",
+      "passed": true,
+      "mode": "acknowledgement",
+      "elapsed_ms": 13.81,
+      "worker": "56",
+      "response": "Got it!",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "How are you doing today?",
+      "passed": true,
+      "mode": "wellbeing",
+      "elapsed_ms": 7.62,
+      "worker": "56",
+      "response": "I'm here and ready to help! How's your day going?",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "How do I enroll at SPUS?",
+      "passed": true,
+      "mode": "knowledge",
+      "elapsed_ms": 37.31,
+      "worker": "56",
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "Thank you",
+      "passed": true,
+      "mode": "thanks",
+      "elapsed_ms": 10.58,
+      "worker": "55",
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "I feel nervous today",
+      "passed": true,
+      "mode": "support",
+      "elapsed_ms": 13.38,
+      "worker": "57",
+      "response": "That sounds tiring. We can take things one step at a time. Want to talk about it or work through a question together?",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "Taglish please",
+      "passed": true,
+      "mode": "language",
+      "elapsed_ms": 32.1,
+      "worker": "57",
+      "response": "Sige, puwede tayong mag-usap sa Taglish. May ilang quoted sources na nasa English.",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "Okay",
+      "passed": true,
+      "mode": "acknowledgement",
+      "elapsed_ms": 21.62,
+      "worker": "55",
+      "response": "Sige!",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "I am a transferee",
+      "passed": true,
+      "mode": "knowledge",
+      "elapsed_ms": 73.07,
+      "worker": "55",
+      "response": "Sige—narito ang impormasyon mula sa mga nakaimbak na sanggunian.\n\nEnrollment procedure for Transferee Students in Higher Education (URO-PR-017):\n1. Dean's Office (Evaluation & Crediting): Submit Transfer Credentials and Curricular Checklist to the Dean's Office for transcript evaluation and crediting of previous subjects.\n2. Student Affairs Office (SAO) (Encoding & Information): Fill out the Student Information Sheet and submit required documents: Transfer Credentials (Honorable Dismissal / Transcript of Records), PSA Birth Certificate, Certificate of Good Moral Character, and 1 pc 2x2 ID picture.\n3. Finance Office (Payment): Pay the initial or full enrollment fee at the Cashier/Finance Office. Receive the Pre-registration Form and Official Receipt (OR).\n4. Registrar's Office (Validation & Official Enrollment): Proceed to the University Registrar's Office for validation and verification. Receive the official Study Load and Assessment stamped with 'OFFICIALLY ENROLLED'.\n5. ICT Office & Clinic: Proceed to the ICT Office for ID validation/processing, and visit the University Clinic for Health Services medical profiling.\n\n[SUGGESTIONS: \"What are the required documents for transferee students enrolling at SPUS?\" | \"Who must approve the subject adding, dropping, or withdrawal form?\" | \"What college courses or programs are available?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What is the step-by-step enrollment procedure for transferee students at SPUS (Document URO-PR-017)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "action": null
+    },
+    {
+      "query": "How about old students?",
+      "passed": true,
+      "mode": "knowledge",
+      "elapsed_ms": 77.68,
+      "worker": "55",
+      "response": "Here is the information from the SPUS sources for your follow-up.\n\nEnrollment procedure for Old / Continuing Students in Higher Education (URO-PR-016):\n1. Academic Advising: Go to the Dean's or Program Chair's office for curriculum advising and evaluation. Obtain the printed Pre-Registration Form.\n2. Assessment of Fees: Proceed to the Student Accounts / Finance Office for assessment of tuition and fees. Obtain the printed Assessment Form.\n3. Payment: Pay the required enrollment fee at the Cashier's counter and receive the Official Receipt (OR).\n4. Encoding and Validation: Proceed to the Registrar's Clerk for system encoding and validation. The student's enrollment is finalized upon receipt of the validated registration.\n\n[SUGGESTIONS: \"Who must approve the subject adding, dropping, or withdrawal form?\" | \"What college courses or programs are available?\" | \"What is the enrollment information?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] How can an old or continuing college student enroll at SPUS (Document URO-PR-016)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "action": null
+    },
+    {
+      "query": "English please",
+      "passed": true,
+      "mode": "language",
+      "elapsed_ms": 13.31,
+      "worker": "55",
+      "response": "Sure, we can continue in English. Some quoted sources keep their original wording.",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "Hi! Who is the ICT Director and CEIT Dean?",
+      "passed": true,
+      "mode": "mixed",
+      "elapsed_ms": 551.97,
+      "worker": "56",
+      "response": "Hi!\n\n**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What is the courses information?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "action": null
+    },
+    {
+      "query": "Thank you",
+      "passed": true,
+      "mode": "thanks",
+      "elapsed_ms": 11.33,
+      "worker": "57",
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "How about CHS?",
+      "passed": true,
+      "mode": "knowledge",
+      "elapsed_ms": 201.59,
+      "worker": "56",
+      "response": "Here is the information from the SPUS sources for your follow-up.\n\nMrs. Kristal Liza Besario, MaN, RN — Dean, College of Health Sciences, Head, Health Service\n\n[SUGGESTIONS: \"What is the enrollment information?\" | \"What is the tuition information?\" | \"What is the courses information?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Health Sciences, Head, Health Service | Mrs. Kristal Liza Besario, MaN, RN",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.725698+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Health Sciences | Dean, College of Health Sciences, Head, Health Service | Mrs. Kristal Liza Besario, MaN, RN",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 233,
+              "retrieved_at": "2026-10-27T14:12:31.280498+00:00"
+            }
+          ],
+          "review_notes": []
+        }
+      ],
+      "action": null
+    },
+    {
+      "query": "Where is the Registrar office?",
+      "passed": true,
+      "mode": "knowledge",
+      "elapsed_ms": 18.26,
+      "worker": "55",
+      "response": "Opening the campus map for Registrar Office. Choose your starting location to calculate a route.",
+      "sources": [],
+      "action": "navigate_map"
+    },
+    {
+      "query": "How about CHS?",
+      "passed": true,
+      "mode": "knowledge",
+      "elapsed_ms": 30.42,
+      "worker": "56",
+      "response": "Which topic or detail do you mean? Please specify the office, program, or question.",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "Could you make me laugh?",
+      "passed": true,
+      "mode": "joke",
+      "elapsed_ms": 69.12,
+      "worker": "55",
+      "response": "Why did the computer take a break? It needed to refresh!",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "What kind of music do you enjoy?",
+      "passed": true,
+      "mode": "preference",
+      "elapsed_ms": 87.6,
+      "worker": "57",
+      "response": "I don't have personal experiences or favorites like a person, but I'm happy to chat. What do you enjoy?",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "Maraming salamat po!",
+      "passed": true,
+      "mode": "thanks",
+      "elapsed_ms": 376.22,
+      "worker": "56",
+      "response": "Walang anuman! Mabuti kung nakatulong.",
+      "sources": [],
+      "action": null
+    },
+    {
+      "query": "Bye po!",
+      "passed": true,
+      "mode": "farewell",
+      "elapsed_ms": 56.66,
+      "worker": "56",
+      "response": "Ingat! Balik ka lang kung may tanong ka pa.",
+      "sources": [],
+      "action": null
+    }
+  ]
+}

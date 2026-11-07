@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "mode": "guest",
+  "checks": [
+    {
+      "query": "How do I enroll?",
+      "passed": true,
+      "text": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\nIncoming college freshman\nTransferee student\nOld/continuing college student",
+      "chips": 3
+    },
+    {
+      "query": "Thank you",
+      "passed": true,
+      "text": "You're welcome! Glad that helped.",
+      "chips": 0
+    },
+    {
+      "query": "Transferee student",
+      "passed": true,
+      "text": "Sure—here is the information from the stored sources.\n\nEnrollment procedure for Transferee Students in Higher Education (URO-PR-017):\n\n1.\nDean's Office (Evaluation & Crediting): Submit Transfer Credentials and Curricular Checklist to the Dean's Office for transcript evaluation and crediting of previous subjects.\n2.\nStudent Affairs Office (SAO) (Encoding & Information): Fill out the Student Information Sheet and submit required documents: Transfer Credentials (Honorable Dismissal / Transcript of Records), PSA Birth Certificate, Certificate of Good Moral Character, and 1 pc 2x2 ID picture.\n3.\nFinance Office (Payment): Pay the initial or full enrollment fee at the Cashier/Finance Office. Receive the Pre-registration Form and Official Receipt (OR).\n4.\nRegistrar's Office (Validation & Official Enrollment): Proceed to the University Registrar's Office for validation and verification. Receive the official Study Load and Assessment stamped with 'OFFICIALLY ENROLLED'.\n5.\nICT Office & Clinic: Proceed to the ICT Office for ID validation/processing, and visit the University Clinic for Health Services medical profiling.\nSources (1)\nWhat are the required documents for transferee students enrolling at SPUS?\nWho must approve the subject adding, dropping, or withdrawal form?\nWhat college courses or programs are available?",
+      "chips": 3
+    },
+    {
+      "query": "How are you?",
+      "passed": true,
+      "text": "I'm here and ready to help! How's your day going?",
+      "chips": 0
+    },
+    {
+      "query": "How about old students?",
+      "passed": true,
+      "text": "Here is the information from the SPUS sources for your follow-up.\n\nEnrollment procedure for Old / Continuing Students in Higher Education (URO-PR-016):\n\n1.\nAcademic Advising: Go to the Dean's or Program Chair's office for curriculum advising and evaluation. Obtain the printed Pre-Registration Form.\n2.\nAssessment of Fees: Proceed to the Student Accounts / Finance Office for assessment of tuition and fees. Obtain the printed Assessment Form.\n3.\nPayment: Pay the required enrollment fee at the Cashier's counter and receive the Official Receipt (OR).\n4.\nEncoding and Validation: Proceed to the Registrar's Clerk for system encoding and validation. The student's enrollment is finalized upon receipt of the validated registration.\nSources (1)\nWho must approve the subject adding, dropping, or withdrawal form?\nWhat college courses or programs are available?\nWhere is the registrar office?",
+      "chips": 3
+    },
+    {
+      "query": "Okay",
+      "passed": true,
+      "text": "Got it!",
+      "chips": 0
+    }
+  ]
+}

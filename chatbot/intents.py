@@ -1,5 +1,6 @@
 """Deterministic clarification and navigation; no generated facts or global state."""
 import re
+from .performance import timed
 
 
 ENROLL_QUESTION = 'Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?'
@@ -51,13 +52,17 @@ DESTINATIONS = {
 VOCABULARY = set('''where location directions navigate registrar enrollment enrolment
     enroll enrolling admission requirements documents procedure freshman freshmen
     transferee continuing faculty scholarship tuition finance guidance cafeteria
-    cathedral clinic entrance building office university president director principal dean'''.split())
+    cathedral clinic entrance building office university president director principal dean
+    choose benefits program course calendar contact application academic schedule'''.split())
 KNOWN_SHORT_TYPOS = {'wher': 'where', 'wheres': 'where is', 'enrol': 'enroll',
                      # Reported multi-edit typo; keep this explicit instead of
                      # broadly correcting two-edit matches to people's names.
                      'preseidnt': 'president'}
 PROTECTED_WORDS = {'officer', 'officers', 'finances', 'financial', 'offices',
-                   'there', 'their', 'them', 'those', 'this', 'these', 'that', 'here'}
+                   'there', 'their', 'them', 'those', 'this', 'these', 'that', 'here',
+                   'chose', 'chosen', 'choice', 'benefit', 'police'}
+QUESTION_LEAD_TYPOS = {'wht': 'what', 'whre': 'where', 'whn': 'when', 'hwo': 'how', 'whyy': 'why'}
+CORRECTION_VOCABULARY = VOCABULARY | {word + 's' for word in VOCABULARY if not word.endswith('s')}
 
 
 def _distance(left, right):
@@ -74,6 +79,7 @@ def _distance(left, right):
     return rows[-1][-1]
 
 
+@timed('normalization')
 def normalize_query(message):
     """Correct only unambiguous near-matches to a small domain vocabulary.
 
@@ -81,6 +87,12 @@ def normalize_query(message):
     Capitalized names in personnel questions and valid short words (e.g. 'were')
     are not rewritten into intent triggers. This is not universal spellchecking.
     """
+    # Only a leading question word is eligible for these short corrections.
+    # Elsewhere a short token may be a name, acronym or identifier.
+    message = re.sub(r'^\s*[A-Za-z]+\b', lambda match:
+        QUESTION_LEAD_TYPOS.get(match.group().strip().lower(), match.group().strip())
+        if not match.group().strip().isupper() else match.group().strip(), message)
+
     def replace(match):
         raw = match.group()
         word = raw.lower()
@@ -94,7 +106,7 @@ def normalize_query(message):
         # Preserve the user's grammar; retrieval canonicalizes it separately.
         if word.endswith('s') and word[:-1] in VOCABULARY:
             return raw
-        candidates = [(candidate, _distance(word, candidate)) for candidate in VOCABULARY
+        candidates = [(candidate, _distance(word, candidate)) for candidate in CORRECTION_VOCABULARY
                       if abs(len(candidate) - len(word)) <= 1]
         best = min((distance for _, distance in candidates), default=99)
         choices = [candidate for candidate, distance in candidates if distance == best]
@@ -171,8 +183,9 @@ def pending_request(history, kind):
     user, assistant = history[-2:]
     if user.get('role') != 'user' or assistant.get('role') != 'assistant':
         return None
+    from .response_style import strip_intro
     prefixes = (ENROLL_QUESTION, ENROLL_QUESTION_FIL) if kind == 'enrollment' else (NAV_QUESTION, NAV_QUESTION_FIL)
-    if not assistant.get('content', '').startswith(prefixes):
+    if not strip_intro(assistant.get('content', '')).startswith(prefixes):
         return None
     previous = user.get('content', '')
     return normalize_query(previous) if isinstance(previous, str) else None

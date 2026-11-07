@@ -1,0 +1,14 @@
+{
+  "model": "openai/gpt-oss-20b",
+  "elapsed_ms": 1513.51,
+  "providers": [
+    {
+      "provider": "groq",
+      "outcome": "ok",
+      "elapsed_ms": 1476.41
+    }
+  ],
+  "selected_expected": true,
+  "external_call_succeeded": true,
+  "limitation": "One synthetic provider call verifies connectivity/selection only; not a language or institutional-answer benchmark."
+}

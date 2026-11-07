@@ -1,0 +1,2239 @@
+{
+  "phase": "before",
+  "base_url": "http://127.0.0.1:8000",
+  "samples": 84,
+  "passed": 81,
+  "groups": {
+    "clarify": {
+      "samples": 3,
+      "passed": 3,
+      "p50_ms": 11.39,
+      "p95_ms": 13.05
+    },
+    "compound": {
+      "samples": 12,
+      "passed": 12,
+      "p50_ms": 277.03,
+      "p95_ms": 1121.18
+    },
+    "knowledge": {
+      "samples": 33,
+      "passed": 30,
+      "p50_ms": 123.81,
+      "p95_ms": 1970.3
+    },
+    "navigation": {
+      "samples": 3,
+      "passed": 3,
+      "p50_ms": 5.74,
+      "p95_ms": 5.75
+    },
+    "partial": {
+      "samples": 3,
+      "passed": 3,
+      "p50_ms": 261.98,
+      "p95_ms": 335.69
+    },
+    "social": {
+      "samples": 21,
+      "passed": 21,
+      "p50_ms": 9.4,
+      "p95_ms": 253.86
+    },
+    "unsupported": {
+      "samples": 9,
+      "passed": 9,
+      "p50_ms": 252.43,
+      "p95_ms": 1424.33
+    }
+  },
+  "workers": [
+    "72",
+    "73",
+    "74"
+  ],
+  "rows": [
+    {
+      "query": "ty",
+      "kind": "social",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "2bdae20c-b27f-4ef2-84a3-9b3828bc9893",
+      "worker": "73",
+      "server_timing": "total;dur=111.05, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "You're welcome! Glad that helped.",
+      "answer_status": null,
+      "response_mode": "thanks",
+      "ms": 228.48
+    },
+    {
+      "query": "thankyoui",
+      "kind": "social",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "557e20c4-d99b-4361-8106-e31980ce2514",
+      "worker": "73",
+      "server_timing": "total;dur=9.37, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "You're welcome! Glad that helped.",
+      "answer_status": null,
+      "response_mode": "thanks",
+      "ms": 13.0
+    },
+    {
+      "query": "THANK YOU",
+      "kind": "social",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "feb32058-8147-4e76-96d8-8070ddc59154",
+      "worker": "73",
+      "server_timing": "total;dur=1.61, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "You're welcome! Glad that helped.",
+      "answer_status": null,
+      "response_mode": "thanks",
+      "ms": 5.72
+    },
+    {
+      "query": "salamat kaayo",
+      "kind": "social",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "dfd5c027-b719-4e29-bf54-84ef7ecbe1a1",
+      "worker": "74",
+      "server_timing": "total;dur=107.46, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "Walay sapayan! Let me know if you need anything else.",
+      "answer_status": null,
+      "response_mode": "thanks",
+      "ms": 154.95
+    },
+    {
+      "query": "who you?",
+      "kind": "social",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "1c626c5f-38d9-4d40-a38d-e55e7893f7b8",
+      "worker": "72",
+      "server_timing": "total;dur=730.21, sql;dur=15.17",
+      "passed": true,
+      "sources": [],
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "answer_status": null,
+      "response_mode": "identity",
+      "ms": 764.1
+    },
+    {
+      "query": "tell me about yourself?",
+      "kind": "social",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "9b8bc1d5-c0d6-44d9-97fb-4e7cdf7b2152",
+      "worker": "74",
+      "server_timing": "total;dur=247.37, sql;dur=11.48",
+      "passed": true,
+      "sources": [],
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "answer_status": null,
+      "response_mode": "identity",
+      "ms": 253.86
+    },
+    {
+      "query": "What programs are offered?",
+      "kind": "knowledge",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "2d494908-2b14-41c1-92c8-d91543a2764a",
+      "worker": "73",
+      "server_timing": "total;dur=443.0, sql;dur=12.48",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 448.74
+    },
+    {
+      "query": "Tell me about SPUS",
+      "kind": "knowledge",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "a6d9708f-c184-421f-8afa-25991254aab0",
+      "worker": "73",
+      "server_timing": "total;dur=113.72, sql;dur=7.7",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\n[SUGGESTIONS: \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 120.83
+    },
+    {
+      "query": "why spus?",
+      "kind": "knowledge",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "0a84309a-afe9-4181-ab0c-f6345f89a454",
+      "worker": "74",
+      "server_timing": "total;dur=264.54, sql;dur=9.76",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 268.35
+    },
+    {
+      "query": "TELL ME ABOUT SPUS AND WHY SHOULD I ENROL",
+      "kind": "compound",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "c05e8559-73bc-4d1d-a688-90b47b4e2181",
+      "worker": "74",
+      "server_timing": "total;dur=274.13, sql;dur=27.3",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "TELL ME ABOUT SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "WHY SHOULD I enroll at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\n**1. TELL ME ABOUT SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. WHY SHOULD I enroll at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 277.03
+    },
+    {
+      "query": "Who is the university preseidnt?",
+      "kind": "knowledge",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "cda6d947-d708-4af8-9907-001257432263",
+      "worker": "73",
+      "server_timing": "total;dur=627.32, sql;dur=141.19",
+      "passed": true,
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | University President | Sr. Marie Rosanne Mallillin, SPCS",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.619696+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | University President | Sr. Marie Rosanne Mallillin, SPCS",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 99,
+              "retrieved_at": "2026-10-27T14:12:30.732196+00:00"
+            }
+          ],
+          "review_notes": [
+            "The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office."
+          ]
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nSr. Marie Rosanne Mallillin, SPCS — University President\n\n**Source review:** The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office.",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 630.46
+    },
+    {
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "kind": "compound",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "2ad431bb-1a98-4a72-b43c-33071cf078d8",
+      "worker": "72",
+      "server_timing": "total;dur=1113.71, sql;dur=151.29",
+      "passed": true,
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 1121.18
+    },
+    {
+      "query": "Who are the deans of CEIT and CHS?",
+      "kind": "compound",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "7039f36f-e106-4902-a263-1d113d89f386",
+      "worker": "72",
+      "server_timing": "total;dur=393.37, sql;dur=76.07",
+      "passed": true,
+      "sources": [
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who are the deans of CEIT?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Health Sciences, Head, Health Service | Mrs. Kristal Liza Besario, MaN, RN",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.725698+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Health Sciences | Dean, College of Health Sciences, Head, Health Service | Mrs. Kristal Liza Besario, MaN, RN",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 233,
+              "retrieved_at": "2026-10-27T14:12:31.280498+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who are the deans of CHS?",
+          "citation_index": 2
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who are the deans of CEIT?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 1\n\n**2. Who are the deans of CHS?**\n\nMrs. Kristal Liza Besario, MaN, RN — Dean, College of Health Sciences, Head, Health Service\n\nSources: 2\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 396.94
+    },
+    {
+      "query": "What are the requirements for freshmen and transferees?",
+      "kind": "compound",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "5bd7cf5e-6b8f-4f32-9cae-3335854cac6b",
+      "worker": "72",
+      "server_timing": "total;dur=130.4, sql;dur=12.97",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What are the required admission and enrollment documents for incoming freshmen at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "What are the requirements for freshmen?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What are the required documents for transferee students enrolling at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "What are the requirements for transferees?",
+          "citation_index": 2
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\n**1. What are the requirements for freshmen?**\n\nAdmission and enrollment requirements for Incoming College Freshmen:\n1. Senior High School (SHS) Report Card (Form 138 / SF9)\n2. Original PSA Birth Certificate\n3. Original Certificate of Good Moral Character\n4. College Entrance Examination Result (from Guidance Office)\n5. 1 pc. 2x2 ID picture\n6. Marriage Certificate (if married)\n7. Accomplished Student Information Sheet\n\nSources: 1\n\n**2. What are the requirements for transferees?**\n\nRequirements for Transferee Students in Higher Education:\n1. Official Transfer Credentials (Honorable Dismissal / Transcript of Records for evaluation)\n2. Curricular Checklist from previous school\n3. Original PSA Birth Certificate\n4. Original Certificate of Good Moral Character\n5. 1 pc. 2x2 ID picture\n6. Accomplished Student Information Sheet (at SAO)\n\nSources: 2\n\n[SUGGESTIONS: \"Who must approve the subject adding, dropping, or withdrawal form?\" | \"Where is the registrar office?\" | \"What college courses or programs are available?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 171.78
+    },
+    {
+      "query": "Where is the Registrar office?",
+      "kind": "navigation",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "9c89dbde-0ed7-4eec-974b-a83362a147a1",
+      "worker": "72",
+      "server_timing": "total;dur=3.01, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "Opening the campus map for Registrar Office. Choose your starting location to calculate a route.",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 5.32
+    },
+    {
+      "query": "How are announcements and promotional materials broadcast across the SPUS campus?",
+      "kind": "knowledge",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "4835770f-6a44-465a-a795-652147b1f4eb",
+      "worker": "72",
+      "server_timing": "total;dur=131.61, sql;dur=6.95",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Publication, Brand, and Marketing Office (PBMO)): [PBMO] How are announcements and promotional materials broadcast across the SPUS campus?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "PBMO",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nPBMO broadcasts campus announcements and promotional materials via the Unified Multimedia Communication Network, which includes:\n- Outdoor campus LED displays\n- Campus TV monitors\n- Official SPUS social media channels\n- The university web portal\n\nAll promotional assets, announcements, and posters must undergo content and brand review by PBMO prior to broadcast or posting.\n\n[SUGGESTIONS: \"Do posters and promotional materials require PBMO review before posting or broadcasting?\" | \"What is the procedure for submitting materials or reporting school events for publication to PBMO?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 133.92
+    },
+    {
+      "query": "What scholarships are available?",
+      "kind": "knowledge",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "6f965bee-f4c6-428e-9050-5730b9084e18",
+      "worker": "72",
+      "server_timing": "total;dur=118.43, sql;dur=6.48",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Scholarships): Does SPUS offer scholarships? Are there scholarships available? What scholarships are offered?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Guidance",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nYes! SPUS offers several scholarship and financial assistance programs:\n\n- **Academic and Athletic Scholarships**: Available for qualified college and high school students based on academic standing or sports excellence. Visit the Guidance Office for application guidelines.\n- **ESC Grants**: 350 Educational Service Contracting (ESC) slots for incoming Grade 7 junior high students.\n- **Senior High Voucher Program**: Tuition subsidy for incoming Grade 11 students (automatically granted to public school completers; ESC certificate required for private junior high completers).\n- **Student on Study Assistance Program (SSAP)**: Work-study financial grant program administered by the Scholarship Coordinator / SSAP Office.\n\nFor inquiries and application forms, visit the **Guidance Office** or consult the Scholarship Coordinator.",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 122.72
+    },
+    {
+      "query": "What programs are offered? TY!!",
+      "kind": "knowledge",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "bdcbc41a-fd4d-431d-bfe2-1c3b9f346fb4",
+      "worker": "72",
+      "server_timing": "total;dur=115.01, sql;dur=8.58",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "You're welcome!\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "answer_status": null,
+      "response_mode": "mixed",
+      "ms": 117.53
+    },
+    {
+      "query": "What is the TY scholarship?",
+      "kind": "unsupported",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "bb9192fb-91c9-41da-8655-eb8daf173149",
+      "worker": "72",
+      "server_timing": "total;dur=1421.93, sql;dur=46.67",
+      "passed": true,
+      "sources": [],
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"Are there scholarships available?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 1424.33
+    },
+    {
+      "query": "Who is the SPUS President in 2037?",
+      "kind": "unsupported",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "b886a303-c899-47fb-8bfd-2ab4dd476e41",
+      "worker": "72",
+      "server_timing": "total;dur=250.25, sql;dur=42.57",
+      "passed": true,
+      "sources": [],
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 252.43
+    },
+    {
+      "query": "What is quantum entanglement?",
+      "kind": "unsupported",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "1cc3c2e5-4e1c-4d84-90f4-2edc71bed36c",
+      "worker": "72",
+      "server_timing": "total;dur=248.78, sql;dur=39.64",
+      "passed": true,
+      "sources": [],
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 251.67
+    },
+    {
+      "query": "Tell me about SPUS and why enroll at UnknownXYZ Academy?",
+      "kind": "partial",
+      "iteration": 0,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "a5102b4f-584e-4d27-bd70-8f77f8de6dda",
+      "worker": "72",
+      "server_timing": "total;dur=244.35, sql;dur=52.66",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "Tell me about SPUS?",
+          "citation_index": 1
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Tell me about SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. why enroll at UnknownXYZ Academy?**\n\nI don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\" | \"Why choose SPUS?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 247.56
+    },
+    {
+      "query": "How do I enroll?",
+      "kind": "clarify",
+      "iteration": 0,
+      "continuity": true,
+      "http_status": 200,
+      "request_id": "4d5f85ca-6d94-4f62-a008-ff032746dc20",
+      "worker": "72",
+      "server_timing": "total;dur=9.17, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 11.39
+    },
+    {
+      "query": "Old/continuing college student",
+      "kind": "knowledge",
+      "iteration": 0,
+      "continuity": true,
+      "http_status": 200,
+      "request_id": "1aa17dfa-4e66-4bcb-a590-b762b5fa3375",
+      "worker": "72",
+      "server_timing": "total;dur=119.98, sql;dur=8.8",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] How can an old or continuing college student enroll at SPUS (Document URO-PR-016)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nEnrollment procedure for Old / Continuing Students in Higher Education (URO-PR-016):\n1. Academic Advising: Go to the Dean's or Program Chair's office for curriculum advising and evaluation. Obtain the printed Pre-Registration Form.\n2. Assessment of Fees: Proceed to the Student Accounts / Finance Office for assessment of tuition and fees. Obtain the printed Assessment Form.\n3. Payment: Pay the required enrollment fee at the Cashier's counter and receive the Official Receipt (OR).\n4. Encoding and Validation: Proceed to the Registrar's Clerk for system encoding and validation. The student's enrollment is finalized upon receipt of the validated registration.\n\n[SUGGESTIONS: \"Who must approve the subject adding, dropping, or withdrawal form?\" | \"Where is the registrar office?\" | \"What college courses or programs are available?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 122.23
+    },
+    {
+      "query": "How about transferee?",
+      "kind": "knowledge",
+      "iteration": 0,
+      "continuity": true,
+      "http_status": 200,
+      "request_id": "425235ff-d03d-4039-a132-9fae99b52fcd",
+      "worker": "72",
+      "server_timing": "total;dur=155.44, sql;dur=8.06",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What is the step-by-step enrollment procedure for transferee students at SPUS (Document URO-PR-017)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Here is the information from the SPUS sources for your follow-up.\n\nEnrollment procedure for Transferee Students in Higher Education (URO-PR-017):\n1. Dean's Office (Evaluation & Crediting): Submit Transfer Credentials and Curricular Checklist to the Dean's Office for transcript evaluation and crediting of previous subjects.\n2. Student Affairs Office (SAO) (Encoding & Information): Fill out the Student Information Sheet and submit required documents: Transfer Credentials (Honorable Dismissal / Transcript of Records), PSA Birth Certificate, Certificate of Good Moral Character, and 1 pc 2x2 ID picture.\n3. Finance Office (Payment): Pay the initial or full enrollment fee at the Cashier/Finance Office. Receive the Pre-registration Form and Official Receipt (OR).\n4. Registrar's Office (Validation & Official Enrollment): Proceed to the University Registrar's Office for validation and verification. Receive the official Study Load and Assessment stamped with 'OFFICIALLY ENROLLED'.\n5. ICT Office & Clinic: Proceed to the ICT Office for ID validation/processing, and visit the University Clinic for Health Services medical profiling.\n\n[SUGGESTIONS: \"What are the required documents for transferee students enrolling at SPUS?\" | \"Who must approve the subject adding, dropping, or withdrawal form?\" | \"Where is the registrar office?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 157.75
+    },
+    {
+      "query": "Ano naman ang requirements?",
+      "kind": "knowledge",
+      "iteration": 0,
+      "continuity": true,
+      "http_status": 200,
+      "request_id": "55b6bb20-1946-40c8-ae27-817523e3009a",
+      "worker": "72",
+      "server_timing": "total;dur=2403.3, sql;dur=0.0",
+      "passed": false,
+      "sources": [],
+      "response": "Aling paksa o detalye ang tinutukoy mo? Pakibanggit ang opisina, programa, o tanong.",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 2405.95
+    },
+    {
+      "query": "What programs are offered?",
+      "kind": "knowledge",
+      "iteration": 0,
+      "continuity": true,
+      "http_status": 200,
+      "request_id": "9d14a8ca-79ff-439a-b9b3-bf37a249b37c",
+      "worker": "72",
+      "server_timing": "total;dur=125.34, sql;dur=7.94",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 128.36
+    },
+    {
+      "query": "salamat kaayo",
+      "kind": "social",
+      "iteration": 0,
+      "continuity": true,
+      "http_status": 200,
+      "request_id": "056cf7fe-026f-4883-88d6-8a7879e33e0a",
+      "worker": "72",
+      "server_timing": "total;dur=6.58, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "Walay sapayan! Let me know if you need anything else.",
+      "answer_status": null,
+      "response_mode": "thanks",
+      "ms": 9.4
+    },
+    {
+      "query": "ty",
+      "kind": "social",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "969b6efc-6fed-4c85-b8aa-93722ef6fce1",
+      "worker": "74",
+      "server_timing": "total;dur=4.07, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "You're welcome! Glad that helped.",
+      "answer_status": null,
+      "response_mode": "thanks",
+      "ms": 6.89
+    },
+    {
+      "query": "thankyoui",
+      "kind": "social",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "6e368145-315c-4e78-901f-5322c32c99b4",
+      "worker": "74",
+      "server_timing": "total;dur=4.3, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "You're welcome! Glad that helped.",
+      "answer_status": null,
+      "response_mode": "thanks",
+      "ms": 6.32
+    },
+    {
+      "query": "THANK YOU",
+      "kind": "social",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "d1941ca7-aba1-4ffb-bc97-0c047e77ad8d",
+      "worker": "74",
+      "server_timing": "total;dur=1.37, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "You're welcome! Glad that helped.",
+      "answer_status": null,
+      "response_mode": "thanks",
+      "ms": 3.95
+    },
+    {
+      "query": "salamat kaayo",
+      "kind": "social",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "dd3fbf5c-e1ca-43ca-b50d-59c6bd2774ab",
+      "worker": "74",
+      "server_timing": "total;dur=2.6, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "Walay sapayan! Let me know if you need anything else.",
+      "answer_status": null,
+      "response_mode": "thanks",
+      "ms": 5.32
+    },
+    {
+      "query": "who you?",
+      "kind": "social",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "fb5c9030-5d99-4256-aa7e-135dc72fb874",
+      "worker": "74",
+      "server_timing": "total;dur=44.77, sql;dur=5.01",
+      "passed": true,
+      "sources": [],
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "answer_status": null,
+      "response_mode": "identity",
+      "ms": 48.14
+    },
+    {
+      "query": "tell me about yourself?",
+      "kind": "social",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "dc36963c-83ea-4bc9-9ce6-acbe2a05188b",
+      "worker": "74",
+      "server_timing": "total;dur=43.83, sql;dur=5.06",
+      "passed": true,
+      "sources": [],
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "answer_status": null,
+      "response_mode": "identity",
+      "ms": 46.44
+    },
+    {
+      "query": "What programs are offered?",
+      "kind": "knowledge",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "ae8e842b-8114-4080-bc86-e8f599ef2545",
+      "worker": "74",
+      "server_timing": "total;dur=110.92, sql;dur=5.32",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 113.64
+    },
+    {
+      "query": "Tell me about SPUS",
+      "kind": "knowledge",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "fb376e57-5963-4671-b83a-24e9511f92c0",
+      "worker": "73",
+      "server_timing": "total;dur=105.17, sql;dur=7.34",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\n[SUGGESTIONS: \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 108.15
+    },
+    {
+      "query": "why spus?",
+      "kind": "knowledge",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "c25292b0-a93d-4b5c-a23f-ef8a51583813",
+      "worker": "72",
+      "server_timing": "total;dur=115.35, sql;dur=7.33",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 117.94
+    },
+    {
+      "query": "TELL ME ABOUT SPUS AND WHY SHOULD I ENROL",
+      "kind": "compound",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "b9cf2aed-7b06-46e6-847d-9279c8f93cd4",
+      "worker": "73",
+      "server_timing": "total;dur=240.01, sql;dur=25.69",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "TELL ME ABOUT SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "WHY SHOULD I enroll at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\n**1. TELL ME ABOUT SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. WHY SHOULD I enroll at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 242.69
+    },
+    {
+      "query": "Who is the university preseidnt?",
+      "kind": "knowledge",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "3082f686-1b58-4c3a-a62f-a4e94f7b7dc4",
+      "worker": "73",
+      "server_timing": "total;dur=219.64, sql;dur=44.8",
+      "passed": true,
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | University President | Sr. Marie Rosanne Mallillin, SPCS",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.619696+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | University President | Sr. Marie Rosanne Mallillin, SPCS",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 99,
+              "retrieved_at": "2026-10-27T14:12:30.732196+00:00"
+            }
+          ],
+          "review_notes": [
+            "The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office."
+          ]
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nSr. Marie Rosanne Mallillin, SPCS — University President\n\n**Source review:** The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office.",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 222.75
+    },
+    {
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "kind": "compound",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "c024c48e-d60a-4062-ab5a-9e9eff8c6f06",
+      "worker": "73",
+      "server_timing": "total;dur=445.19, sql;dur=101.27",
+      "passed": true,
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 447.54
+    },
+    {
+      "query": "Who are the deans of CEIT and CHS?",
+      "kind": "compound",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "4d73a874-c972-4ef3-ac4b-4a6c1d3aeb31",
+      "worker": "73",
+      "server_timing": "total;dur=382.45, sql;dur=73.28",
+      "passed": true,
+      "sources": [
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who are the deans of CEIT?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Health Sciences, Head, Health Service | Mrs. Kristal Liza Besario, MaN, RN",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.725698+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Health Sciences | Dean, College of Health Sciences, Head, Health Service | Mrs. Kristal Liza Besario, MaN, RN",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 233,
+              "retrieved_at": "2026-10-27T14:12:31.280498+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who are the deans of CHS?",
+          "citation_index": 2
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who are the deans of CEIT?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 1\n\n**2. Who are the deans of CHS?**\n\nMrs. Kristal Liza Besario, MaN, RN — Dean, College of Health Sciences, Head, Health Service\n\nSources: 2\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 384.79
+    },
+    {
+      "query": "What are the requirements for freshmen and transferees?",
+      "kind": "compound",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "524cc8a5-6ede-46ef-bd05-436da011680f",
+      "worker": "73",
+      "server_timing": "total;dur=127.88, sql;dur=11.23",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What are the required admission and enrollment documents for incoming freshmen at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "What are the requirements for freshmen?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What are the required documents for transferee students enrolling at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "What are the requirements for transferees?",
+          "citation_index": 2
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\n**1. What are the requirements for freshmen?**\n\nAdmission and enrollment requirements for Incoming College Freshmen:\n1. Senior High School (SHS) Report Card (Form 138 / SF9)\n2. Original PSA Birth Certificate\n3. Original Certificate of Good Moral Character\n4. College Entrance Examination Result (from Guidance Office)\n5. 1 pc. 2x2 ID picture\n6. Marriage Certificate (if married)\n7. Accomplished Student Information Sheet\n\nSources: 1\n\n**2. What are the requirements for transferees?**\n\nRequirements for Transferee Students in Higher Education:\n1. Official Transfer Credentials (Honorable Dismissal / Transcript of Records for evaluation)\n2. Curricular Checklist from previous school\n3. Original PSA Birth Certificate\n4. Original Certificate of Good Moral Character\n5. 1 pc. 2x2 ID picture\n6. Accomplished Student Information Sheet (at SAO)\n\nSources: 2\n\n[SUGGESTIONS: \"Who must approve the subject adding, dropping, or withdrawal form?\" | \"Where is the registrar office?\" | \"What college courses or programs are available?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 130.41
+    },
+    {
+      "query": "Where is the Registrar office?",
+      "kind": "navigation",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "ddeaca2e-fe41-4d1c-8753-da3672371707",
+      "worker": "73",
+      "server_timing": "total;dur=2.87, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "Opening the campus map for Registrar Office. Choose your starting location to calculate a route.",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 5.74
+    },
+    {
+      "query": "How are announcements and promotional materials broadcast across the SPUS campus?",
+      "kind": "knowledge",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "6247a07e-c975-4426-9d67-9267cba584d8",
+      "worker": "73",
+      "server_timing": "total;dur=127.27, sql;dur=7.93",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Publication, Brand, and Marketing Office (PBMO)): [PBMO] How are announcements and promotional materials broadcast across the SPUS campus?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "PBMO",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nPBMO broadcasts campus announcements and promotional materials via the Unified Multimedia Communication Network, which includes:\n- Outdoor campus LED displays\n- Campus TV monitors\n- Official SPUS social media channels\n- The university web portal\n\nAll promotional assets, announcements, and posters must undergo content and brand review by PBMO prior to broadcast or posting.\n\n[SUGGESTIONS: \"Do posters and promotional materials require PBMO review before posting or broadcasting?\" | \"What is the procedure for submitting materials or reporting school events for publication to PBMO?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 131.47
+    },
+    {
+      "query": "What scholarships are available?",
+      "kind": "knowledge",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "53dbe8ee-d16e-4237-a65d-aa9ec0932448",
+      "worker": "73",
+      "server_timing": "total;dur=119.52, sql;dur=7.13",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Scholarships): Does SPUS offer scholarships? Are there scholarships available? What scholarships are offered?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Guidance",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nYes! SPUS offers several scholarship and financial assistance programs:\n\n- **Academic and Athletic Scholarships**: Available for qualified college and high school students based on academic standing or sports excellence. Visit the Guidance Office for application guidelines.\n- **ESC Grants**: 350 Educational Service Contracting (ESC) slots for incoming Grade 7 junior high students.\n- **Senior High Voucher Program**: Tuition subsidy for incoming Grade 11 students (automatically granted to public school completers; ESC certificate required for private junior high completers).\n- **Student on Study Assistance Program (SSAP)**: Work-study financial grant program administered by the Scholarship Coordinator / SSAP Office.\n\nFor inquiries and application forms, visit the **Guidance Office** or consult the Scholarship Coordinator.",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 122.59
+    },
+    {
+      "query": "What programs are offered? TY!!",
+      "kind": "knowledge",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "1089929f-2d0d-4a55-b481-5e45be8a824b",
+      "worker": "74",
+      "server_timing": "total;dur=138.68, sql;dur=8.72",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "You're welcome!\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "answer_status": null,
+      "response_mode": "mixed",
+      "ms": 143.33
+    },
+    {
+      "query": "What is the TY scholarship?",
+      "kind": "unsupported",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "4b4bbc5e-5649-4ad7-bb92-ffc8940a929d",
+      "worker": "74",
+      "server_timing": "total;dur=891.47, sql;dur=49.38",
+      "passed": true,
+      "sources": [],
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"Are there scholarships available?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 894.42
+    },
+    {
+      "query": "Who is the SPUS President in 2037?",
+      "kind": "unsupported",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "50cc3eda-369f-4037-8f24-5cb223f0d70c",
+      "worker": "73",
+      "server_timing": "total;dur=849.14, sql;dur=50.93",
+      "passed": true,
+      "sources": [],
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 851.77
+    },
+    {
+      "query": "What is quantum entanglement?",
+      "kind": "unsupported",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "53b940f0-aac5-49d0-84bb-b39cbd04ed2e",
+      "worker": "73",
+      "server_timing": "total;dur=242.63, sql;dur=36.9",
+      "passed": true,
+      "sources": [],
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 245.25
+    },
+    {
+      "query": "Tell me about SPUS and why enroll at UnknownXYZ Academy?",
+      "kind": "partial",
+      "iteration": 1,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "004c50f4-a136-487b-adc6-85aecb1d20a6",
+      "worker": "73",
+      "server_timing": "total;dur=259.4, sql;dur=55.69",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "Tell me about SPUS?",
+          "citation_index": 1
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Tell me about SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. why enroll at UnknownXYZ Academy?**\n\nI don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\" | \"Why choose SPUS?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 261.98
+    },
+    {
+      "query": "How do I enroll?",
+      "kind": "clarify",
+      "iteration": 1,
+      "continuity": true,
+      "http_status": 200,
+      "request_id": "d2d97bc5-ca1a-4915-9fe0-85c423563b44",
+      "worker": "74",
+      "server_timing": "total;dur=10.37, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 13.05
+    },
+    {
+      "query": "Old/continuing college student",
+      "kind": "knowledge",
+      "iteration": 1,
+      "continuity": true,
+      "http_status": 200,
+      "request_id": "a4ce1d8b-f2f1-4dfb-ab31-2b2dfb08849e",
+      "worker": "74",
+      "server_timing": "total;dur=120.64, sql;dur=8.92",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] How can an old or continuing college student enroll at SPUS (Document URO-PR-016)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nEnrollment procedure for Old / Continuing Students in Higher Education (URO-PR-016):\n1. Academic Advising: Go to the Dean's or Program Chair's office for curriculum advising and evaluation. Obtain the printed Pre-Registration Form.\n2. Assessment of Fees: Proceed to the Student Accounts / Finance Office for assessment of tuition and fees. Obtain the printed Assessment Form.\n3. Payment: Pay the required enrollment fee at the Cashier's counter and receive the Official Receipt (OR).\n4. Encoding and Validation: Proceed to the Registrar's Clerk for system encoding and validation. The student's enrollment is finalized upon receipt of the validated registration.\n\n[SUGGESTIONS: \"Who must approve the subject adding, dropping, or withdrawal form?\" | \"Where is the registrar office?\" | \"What college courses or programs are available?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 123.29
+    },
+    {
+      "query": "How about transferee?",
+      "kind": "knowledge",
+      "iteration": 1,
+      "continuity": true,
+      "http_status": 200,
+      "request_id": "097e491d-76d4-4483-826d-26c6429e6f30",
+      "worker": "74",
+      "server_timing": "total;dur=127.49, sql;dur=9.16",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What is the step-by-step enrollment procedure for transferee students at SPUS (Document URO-PR-017)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Here is the information from the SPUS sources for your follow-up.\n\nEnrollment procedure for Transferee Students in Higher Education (URO-PR-017):\n1. Dean's Office (Evaluation & Crediting): Submit Transfer Credentials and Curricular Checklist to the Dean's Office for transcript evaluation and crediting of previous subjects.\n2. Student Affairs Office (SAO) (Encoding & Information): Fill out the Student Information Sheet and submit required documents: Transfer Credentials (Honorable Dismissal / Transcript of Records), PSA Birth Certificate, Certificate of Good Moral Character, and 1 pc 2x2 ID picture.\n3. Finance Office (Payment): Pay the initial or full enrollment fee at the Cashier/Finance Office. Receive the Pre-registration Form and Official Receipt (OR).\n4. Registrar's Office (Validation & Official Enrollment): Proceed to the University Registrar's Office for validation and verification. Receive the official Study Load and Assessment stamped with 'OFFICIALLY ENROLLED'.\n5. ICT Office & Clinic: Proceed to the ICT Office for ID validation/processing, and visit the University Clinic for Health Services medical profiling.\n\n[SUGGESTIONS: \"What are the required documents for transferee students enrolling at SPUS?\" | \"Who must approve the subject adding, dropping, or withdrawal form?\" | \"Where is the registrar office?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 129.9
+    },
+    {
+      "query": "Ano naman ang requirements?",
+      "kind": "knowledge",
+      "iteration": 1,
+      "continuity": true,
+      "http_status": 200,
+      "request_id": "67cfb4f6-abeb-44ec-98b4-44b0aa800f51",
+      "worker": "74",
+      "server_timing": "total;dur=1964.85, sql;dur=0.0",
+      "passed": false,
+      "sources": [],
+      "response": "Aling paksa o detalye ang tinutukoy mo? Pakibanggit ang opisina, programa, o tanong.",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 1970.3
+    },
+    {
+      "query": "What programs are offered?",
+      "kind": "knowledge",
+      "iteration": 1,
+      "continuity": true,
+      "http_status": 200,
+      "request_id": "db7ede6f-0de6-4d3f-89fc-261141428257",
+      "worker": "74",
+      "server_timing": "total;dur=144.88, sql;dur=6.69",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 147.57
+    },
+    {
+      "query": "salamat kaayo",
+      "kind": "social",
+      "iteration": 1,
+      "continuity": true,
+      "http_status": 200,
+      "request_id": "f3baec4c-27ec-4196-80f9-a462c391dcaa",
+      "worker": "74",
+      "server_timing": "total;dur=9.1, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "Walay sapayan! Let me know if you need anything else.",
+      "answer_status": null,
+      "response_mode": "thanks",
+      "ms": 12.66
+    },
+    {
+      "query": "ty",
+      "kind": "social",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "7c7281d3-7d01-49c8-8d85-351a994d7e6c",
+      "worker": "74",
+      "server_timing": "total;dur=2.17, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "You're welcome! Glad that helped.",
+      "answer_status": null,
+      "response_mode": "thanks",
+      "ms": 5.63
+    },
+    {
+      "query": "thankyoui",
+      "kind": "social",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "c512dadf-d017-4bda-8453-07d10a3feb53",
+      "worker": "72",
+      "server_timing": "total;dur=4.08, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "You're welcome! Glad that helped.",
+      "answer_status": null,
+      "response_mode": "thanks",
+      "ms": 7.36
+    },
+    {
+      "query": "THANK YOU",
+      "kind": "social",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "fa27598e-a13c-4e09-9407-681ae5e17cdc",
+      "worker": "72",
+      "server_timing": "total;dur=1.65, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "You're welcome! Glad that helped.",
+      "answer_status": null,
+      "response_mode": "thanks",
+      "ms": 4.12
+    },
+    {
+      "query": "salamat kaayo",
+      "kind": "social",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "a52b89bc-f5b1-448b-84f9-91e98f477580",
+      "worker": "73",
+      "server_timing": "total;dur=2.97, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "Walay sapayan! Let me know if you need anything else.",
+      "answer_status": null,
+      "response_mode": "thanks",
+      "ms": 5.92
+    },
+    {
+      "query": "who you?",
+      "kind": "social",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "e021f9d4-44b4-4e22-982b-e83c0b36ec08",
+      "worker": "73",
+      "server_timing": "total;dur=41.82, sql;dur=4.48",
+      "passed": true,
+      "sources": [],
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "answer_status": null,
+      "response_mode": "identity",
+      "ms": 44.68
+    },
+    {
+      "query": "tell me about yourself?",
+      "kind": "social",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "a10bb8e6-fd88-4eb8-a9db-bca84657e05f",
+      "worker": "73",
+      "server_timing": "total;dur=39.29, sql;dur=4.5",
+      "passed": true,
+      "sources": [],
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "answer_status": null,
+      "response_mode": "identity",
+      "ms": 43.92
+    },
+    {
+      "query": "What programs are offered?",
+      "kind": "knowledge",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "8aad9cab-c575-4cc3-9ab3-b98dc8a4b06d",
+      "worker": "72",
+      "server_timing": "total;dur=114.88, sql;dur=7.86",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 117.83
+    },
+    {
+      "query": "Tell me about SPUS",
+      "kind": "knowledge",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "d9bc68b4-4785-43c8-8ca1-c6d2c83a5fb0",
+      "worker": "73",
+      "server_timing": "total;dur=102.11, sql;dur=5.62",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\n[SUGGESTIONS: \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 105.08
+    },
+    {
+      "query": "why spus?",
+      "kind": "knowledge",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "3bc964a2-811c-4abb-b7d8-439b73209158",
+      "worker": "72",
+      "server_timing": "total;dur=119.6, sql;dur=8.44",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 122.56
+    },
+    {
+      "query": "TELL ME ABOUT SPUS AND WHY SHOULD I ENROL",
+      "kind": "compound",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "10a10e6f-c9ad-48a4-8dfa-54d969d4cdbd",
+      "worker": "73",
+      "server_timing": "total;dur=136.06, sql;dur=11.39",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "TELL ME ABOUT SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "WHY SHOULD I enroll at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\n**1. TELL ME ABOUT SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. WHY SHOULD I enroll at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 139.06
+    },
+    {
+      "query": "Who is the university preseidnt?",
+      "kind": "knowledge",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "c35b7343-60f6-489a-a780-e4c300bbd5e8",
+      "worker": "73",
+      "server_timing": "total;dur=229.98, sql;dur=42.48",
+      "passed": true,
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | University President | Sr. Marie Rosanne Mallillin, SPCS",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.619696+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | University President | Sr. Marie Rosanne Mallillin, SPCS",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 99,
+              "retrieved_at": "2026-10-27T14:12:30.732196+00:00"
+            }
+          ],
+          "review_notes": [
+            "The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office."
+          ]
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nSr. Marie Rosanne Mallillin, SPCS — University President\n\n**Source review:** The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office.",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 232.87
+    },
+    {
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "kind": "compound",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "457e78f2-9033-46f3-8d07-7be7aa15b235",
+      "worker": "73",
+      "server_timing": "total;dur=393.56, sql;dur=81.19",
+      "passed": true,
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 396.47
+    },
+    {
+      "query": "Who are the deans of CEIT and CHS?",
+      "kind": "compound",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "bdba162d-4258-4f11-8a2c-472bbc344b4d",
+      "worker": "74",
+      "server_timing": "total;dur=606.66, sql;dur=104.56",
+      "passed": true,
+      "sources": [
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who are the deans of CEIT?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Health Sciences, Head, Health Service | Mrs. Kristal Liza Besario, MaN, RN",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.725698+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Health Sciences | Dean, College of Health Sciences, Head, Health Service | Mrs. Kristal Liza Besario, MaN, RN",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 233,
+              "retrieved_at": "2026-10-27T14:12:31.280498+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who are the deans of CHS?",
+          "citation_index": 2
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who are the deans of CEIT?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 1\n\n**2. Who are the deans of CHS?**\n\nMrs. Kristal Liza Besario, MaN, RN — Dean, College of Health Sciences, Head, Health Service\n\nSources: 2\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 608.93
+    },
+    {
+      "query": "What are the requirements for freshmen and transferees?",
+      "kind": "compound",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "f5f4eac2-e075-4002-8e9a-ee65e9bffe7b",
+      "worker": "73",
+      "server_timing": "total;dur=140.71, sql;dur=10.09",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What are the required admission and enrollment documents for incoming freshmen at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "What are the requirements for freshmen?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What are the required documents for transferee students enrolling at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "What are the requirements for transferees?",
+          "citation_index": 2
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\n**1. What are the requirements for freshmen?**\n\nAdmission and enrollment requirements for Incoming College Freshmen:\n1. Senior High School (SHS) Report Card (Form 138 / SF9)\n2. Original PSA Birth Certificate\n3. Original Certificate of Good Moral Character\n4. College Entrance Examination Result (from Guidance Office)\n5. 1 pc. 2x2 ID picture\n6. Marriage Certificate (if married)\n7. Accomplished Student Information Sheet\n\nSources: 1\n\n**2. What are the requirements for transferees?**\n\nRequirements for Transferee Students in Higher Education:\n1. Official Transfer Credentials (Honorable Dismissal / Transcript of Records for evaluation)\n2. Curricular Checklist from previous school\n3. Original PSA Birth Certificate\n4. Original Certificate of Good Moral Character\n5. 1 pc. 2x2 ID picture\n6. Accomplished Student Information Sheet (at SAO)\n\nSources: 2\n\n[SUGGESTIONS: \"Who must approve the subject adding, dropping, or withdrawal form?\" | \"Where is the registrar office?\" | \"What college courses or programs are available?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 143.26
+    },
+    {
+      "query": "Where is the Registrar office?",
+      "kind": "navigation",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "c004290a-d92c-4650-8c4a-d468bda0312e",
+      "worker": "73",
+      "server_timing": "total;dur=2.98, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "Opening the campus map for Registrar Office. Choose your starting location to calculate a route.",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 5.75
+    },
+    {
+      "query": "How are announcements and promotional materials broadcast across the SPUS campus?",
+      "kind": "knowledge",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "bca5be7b-2a4e-4d39-b5b3-fa096ff860a0",
+      "worker": "73",
+      "server_timing": "total;dur=121.56, sql;dur=6.48",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Publication, Brand, and Marketing Office (PBMO)): [PBMO] How are announcements and promotional materials broadcast across the SPUS campus?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "PBMO",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nPBMO broadcasts campus announcements and promotional materials via the Unified Multimedia Communication Network, which includes:\n- Outdoor campus LED displays\n- Campus TV monitors\n- Official SPUS social media channels\n- The university web portal\n\nAll promotional assets, announcements, and posters must undergo content and brand review by PBMO prior to broadcast or posting.\n\n[SUGGESTIONS: \"Do posters and promotional materials require PBMO review before posting or broadcasting?\" | \"What is the procedure for submitting materials or reporting school events for publication to PBMO?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 123.81
+    },
+    {
+      "query": "What scholarships are available?",
+      "kind": "knowledge",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "5c86169a-d6ab-4b22-a328-dda09ae77a39",
+      "worker": "73",
+      "server_timing": "total;dur=117.57, sql;dur=6.8",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Scholarships): Does SPUS offer scholarships? Are there scholarships available? What scholarships are offered?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Guidance",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nYes! SPUS offers several scholarship and financial assistance programs:\n\n- **Academic and Athletic Scholarships**: Available for qualified college and high school students based on academic standing or sports excellence. Visit the Guidance Office for application guidelines.\n- **ESC Grants**: 350 Educational Service Contracting (ESC) slots for incoming Grade 7 junior high students.\n- **Senior High Voucher Program**: Tuition subsidy for incoming Grade 11 students (automatically granted to public school completers; ESC certificate required for private junior high completers).\n- **Student on Study Assistance Program (SSAP)**: Work-study financial grant program administered by the Scholarship Coordinator / SSAP Office.\n\nFor inquiries and application forms, visit the **Guidance Office** or consult the Scholarship Coordinator.",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 120.2
+    },
+    {
+      "query": "What programs are offered? TY!!",
+      "kind": "knowledge",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "0a1d05b2-6f15-44a0-8e55-039b0f1b4d36",
+      "worker": "73",
+      "server_timing": "total;dur=119.9, sql;dur=8.19",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "You're welcome!\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "answer_status": null,
+      "response_mode": "mixed",
+      "ms": 122.4
+    },
+    {
+      "query": "What is the TY scholarship?",
+      "kind": "unsupported",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "6c67a658-2775-4488-b02b-53713e11360a",
+      "worker": "73",
+      "server_timing": "total;dur=253.55, sql;dur=42.61",
+      "passed": true,
+      "sources": [],
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"Are there scholarships available?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 255.78
+    },
+    {
+      "query": "Who is the SPUS President in 2037?",
+      "kind": "unsupported",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "ffcb3b23-c454-47e9-a551-22a2e440cf91",
+      "worker": "73",
+      "server_timing": "total;dur=193.36, sql;dur=39.48",
+      "passed": true,
+      "sources": [],
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 196.61
+    },
+    {
+      "query": "What is quantum entanglement?",
+      "kind": "unsupported",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "49a2209b-5ec2-4035-9fa8-3e32b07ca141",
+      "worker": "73",
+      "server_timing": "total;dur=225.01, sql;dur=40.53",
+      "passed": true,
+      "sources": [],
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 227.88
+    },
+    {
+      "query": "Tell me about SPUS and why enroll at UnknownXYZ Academy?",
+      "kind": "partial",
+      "iteration": 2,
+      "continuity": false,
+      "http_status": 200,
+      "request_id": "f94bc5f3-6f37-4e25-8469-66a3ea67461d",
+      "worker": "73",
+      "server_timing": "total;dur=293.31, sql;dur=53.7",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "Tell me about SPUS?",
+          "citation_index": 1
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Tell me about SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. why enroll at UnknownXYZ Academy?**\n\nI don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\" | \"Why choose SPUS?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 335.69
+    },
+    {
+      "query": "How do I enroll?",
+      "kind": "clarify",
+      "iteration": 2,
+      "continuity": true,
+      "http_status": 200,
+      "request_id": "1e43fe2a-f93f-4252-8b22-0ad56812e0cc",
+      "worker": "72",
+      "server_timing": "total;dur=2.64, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 5.34
+    },
+    {
+      "query": "Old/continuing college student",
+      "kind": "knowledge",
+      "iteration": 2,
+      "continuity": true,
+      "http_status": 200,
+      "request_id": "25ca66e8-2794-41b6-acec-00239475ce3b",
+      "worker": "74",
+      "server_timing": "total;dur=125.73, sql;dur=8.57",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] How can an old or continuing college student enroll at SPUS (Document URO-PR-016)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nEnrollment procedure for Old / Continuing Students in Higher Education (URO-PR-016):\n1. Academic Advising: Go to the Dean's or Program Chair's office for curriculum advising and evaluation. Obtain the printed Pre-Registration Form.\n2. Assessment of Fees: Proceed to the Student Accounts / Finance Office for assessment of tuition and fees. Obtain the printed Assessment Form.\n3. Payment: Pay the required enrollment fee at the Cashier's counter and receive the Official Receipt (OR).\n4. Encoding and Validation: Proceed to the Registrar's Clerk for system encoding and validation. The student's enrollment is finalized upon receipt of the validated registration.\n\n[SUGGESTIONS: \"Who must approve the subject adding, dropping, or withdrawal form?\" | \"Where is the registrar office?\" | \"What college courses or programs are available?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 129.96
+    },
+    {
+      "query": "How about transferee?",
+      "kind": "knowledge",
+      "iteration": 2,
+      "continuity": true,
+      "http_status": 200,
+      "request_id": "5fdda331-dcee-4698-bc58-ffb7feb2b131",
+      "worker": "74",
+      "server_timing": "total;dur=106.25, sql;dur=8.21",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What is the step-by-step enrollment procedure for transferee students at SPUS (Document URO-PR-017)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Here is the information from the SPUS sources for your follow-up.\n\nEnrollment procedure for Transferee Students in Higher Education (URO-PR-017):\n1. Dean's Office (Evaluation & Crediting): Submit Transfer Credentials and Curricular Checklist to the Dean's Office for transcript evaluation and crediting of previous subjects.\n2. Student Affairs Office (SAO) (Encoding & Information): Fill out the Student Information Sheet and submit required documents: Transfer Credentials (Honorable Dismissal / Transcript of Records), PSA Birth Certificate, Certificate of Good Moral Character, and 1 pc 2x2 ID picture.\n3. Finance Office (Payment): Pay the initial or full enrollment fee at the Cashier/Finance Office. Receive the Pre-registration Form and Official Receipt (OR).\n4. Registrar's Office (Validation & Official Enrollment): Proceed to the University Registrar's Office for validation and verification. Receive the official Study Load and Assessment stamped with 'OFFICIALLY ENROLLED'.\n5. ICT Office & Clinic: Proceed to the ICT Office for ID validation/processing, and visit the University Clinic for Health Services medical profiling.\n\n[SUGGESTIONS: \"What are the required documents for transferee students enrolling at SPUS?\" | \"Who must approve the subject adding, dropping, or withdrawal form?\" | \"Where is the registrar office?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 108.55
+    },
+    {
+      "query": "Ano naman ang requirements?",
+      "kind": "knowledge",
+      "iteration": 2,
+      "continuity": true,
+      "http_status": 200,
+      "request_id": "d2ff124c-1f86-41c2-bc49-71633d992794",
+      "worker": "74",
+      "server_timing": "total;dur=791.43, sql;dur=0.0",
+      "passed": false,
+      "sources": [],
+      "response": "Aling paksa o detalye ang tinutukoy mo? Pakibanggit ang opisina, programa, o tanong.",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 793.83
+    },
+    {
+      "query": "What programs are offered?",
+      "kind": "knowledge",
+      "iteration": 2,
+      "continuity": true,
+      "http_status": 200,
+      "request_id": "f383d03b-4dd0-40fd-81c2-883d8ad06cce",
+      "worker": "72",
+      "server_timing": "total;dur=117.51, sql;dur=8.14",
+      "passed": true,
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "answer_status": null,
+      "response_mode": "knowledge",
+      "ms": 120.28
+    },
+    {
+      "query": "salamat kaayo",
+      "kind": "social",
+      "iteration": 2,
+      "continuity": true,
+      "http_status": 200,
+      "request_id": "b3d55042-9c91-4723-b299-9f8fd2ab8755",
+      "worker": "72",
+      "server_timing": "total;dur=6.11, sql;dur=0.0",
+      "passed": true,
+      "sources": [],
+      "response": "Walay sapayan! Let me know if you need anything else.",
+      "answer_status": null,
+      "response_mode": "thanks",
+      "ms": 8.88
+    }
+  ],
+  "limitation": "Small sequential synthetic regression matrix, warm workers; not a load test or independent institutional fact review."
+}

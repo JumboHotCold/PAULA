@@ -5,8 +5,8 @@
       "case": "two_roles",
       "query": "Who is the ICT Director and CEIT Dean?",
       "passed": true,
-      "elapsed_ms": 881.65,
-      "response": "**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "elapsed_ms": 258.67,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
       "parts": [
         {
           "query": "Who is the ICT Director?",
@@ -76,8 +76,8 @@
       "case": "shared_role",
       "query": "Who are the deans of CEIT and CHS?",
       "passed": true,
-      "elapsed_ms": 310.92,
-      "response": "**1. Who are the deans of CEIT?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 1\n\n**2. Who are the deans of CHS?**\n\nMrs. Kristal Liza Besario, MaN, RN — Dean, College of Health Sciences, Head, Health Service\n\nSources: 2\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "elapsed_ms": 251.48,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who are the deans of CEIT?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 1\n\n**2. Who are the deans of CHS?**\n\nMrs. Kristal Liza Besario, MaN, RN — Dean, College of Health Sciences, Head, Health Service\n\nSources: 2\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
       "parts": [
         {
           "query": "Who are the deans of CEIT?",
@@ -147,8 +147,8 @@
       "case": "audiences",
       "query": "What are the requirements for freshmen and transferees?",
       "passed": true,
-      "elapsed_ms": 4338.53,
-      "response": "**1. What are the requirements for freshmen?**\n\nAdmission and enrollment requirements for Incoming College Freshmen:\n1. Senior High School (SHS) Report Card (Form 138 / SF9)\n2. Original PSA Birth Certificate\n3. Original Certificate of Good Moral Character\n4. College Entrance Examination Result (from Guidance Office)\n5. 1 pc. 2x2 ID picture\n6. Marriage Certificate (if married)\n7. Accomplished Student Information Sheet\n\nSources: 1\n\n**2. What are the requirements for transferees?**\n\nRequirements for Transferee Students in Higher Education:\n1. Official Transfer Credentials (Honorable Dismissal / Transcript of Records for evaluation)\n2. Curricular Checklist from previous school\n3. Original PSA Birth Certificate\n4. Original Certificate of Good Moral Character\n5. 1 pc. 2x2 ID picture\n6. Accomplished Student Information Sheet (at SAO)\n\nSources: 2\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "elapsed_ms": 88.05,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. What are the requirements for freshmen?**\n\nAdmission and enrollment requirements for Incoming College Freshmen:\n1. Senior High School (SHS) Report Card (Form 138 / SF9)\n2. Original PSA Birth Certificate\n3. Original Certificate of Good Moral Character\n4. College Entrance Examination Result (from Guidance Office)\n5. 1 pc. 2x2 ID picture\n6. Marriage Certificate (if married)\n7. Accomplished Student Information Sheet\n\nSources: 1\n\n**2. What are the requirements for transferees?**\n\nRequirements for Transferee Students in Higher Education:\n1. Official Transfer Credentials (Honorable Dismissal / Transcript of Records for evaluation)\n2. Curricular Checklist from previous school\n3. Original PSA Birth Certificate\n4. Original Certificate of Good Moral Character\n5. 1 pc. 2x2 ID picture\n6. Accomplished Student Information Sheet (at SAO)\n\nSources: 2\n\n[SUGGESTIONS: \"Who must approve the subject adding, dropping, or withdrawal form?\" | \"Where is the registrar office?\" | \"What college courses or programs are available?\"]",
       "parts": [
         {
           "query": "What are the requirements for freshmen?",
@@ -200,8 +200,8 @@
       "case": "map_choices",
       "query": "Where are the Registrar and Finance offices?",
       "passed": true,
-      "elapsed_ms": 3843.79,
-      "response": "**1. Where are the Registrar offices?**\n\nRegistrar Office is available on the campus map. Choose its directions below.\n\nSources: 1\n\n**2. Where are the Finance offices?**\n\nFinance Office is available on the campus map. Choose its directions below.\n\nSources: 2\n\n[SUGGESTIONS: \"Directions to Registrar Office\" | \"Directions to Finance Office\"]",
+      "elapsed_ms": 11.58,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Where are the Registrar offices?**\n\nRegistrar Office is available on the campus map. Choose its directions below.\n\nSources: 1\n\n**2. Where are the Finance offices?**\n\nFinance Office is available on the campus map. Choose its directions below.\n\nSources: 2\n\n[SUGGESTIONS: \"Directions to Registrar Office\" | \"Directions to Finance Office\"]",
       "parts": [
         {
           "query": "Where are the Registrar offices?",
@@ -247,8 +247,8 @@
       "case": "scholarship_application",
       "query": "What scholarships are available, and how do I apply?",
       "passed": true,
-      "elapsed_ms": 38279.71,
-      "response": "**1. What scholarships are available?**\n\nYes! SPUS offers 350 ESC Slots for incoming Grade 7 students. We also support the SHS Voucher Program Subsidy for incoming Grade 11 students (automatically eligible for public school completers, ESC certificate required for private school completers). For other academic and athletic scholarships, visit the Guidance Office for application details.\n\nSources: 1\n\n**2. how do I apply for scholarships?**\n\nI don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "elapsed_ms": 1924.29,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. What scholarships are available?**\n\nYes! SPUS offers several scholarship and financial assistance programs:\n\n- **Academic and Athletic Scholarships**: Available for qualified college and high school students based on academic standing or sports excellence. Visit the Guidance Office for application guidelines.\n- **ESC Grants**: 350 Educational Service Contracting (ESC) slots for incoming Grade 7 junior high students.\n- **Senior High Voucher Program**: Tuition subsidy for incoming Grade 11 students (automatically granted to public school completers; ESC certificate required for private junior high completers).\n- **Student on Study Assistance Program (SSAP)**: Work-study financial grant program administered by the Scholarship Coordinator / SSAP Office.\n\nFor inquiries and application forms, visit the **Guidance Office** or consult the Scholarship Coordinator.\n\nSources: 1\n\n**2. how do I apply for scholarships?**\n\nI don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).",
       "parts": [
         {
           "query": "What scholarships are available?",
@@ -265,11 +265,11 @@
       ],
       "sources": [
         {
-          "title": "FAQ (Scholarships): Are there scholarships available?",
+          "title": "FAQ (Scholarships): Does SPUS offer scholarships? Are there scholarships available? What scholarships are offered?",
           "page": null,
           "url": null,
-          "source_type": "curated",
-          "source_office": null,
+          "source_type": "office",
+          "source_office": "Guidance",
           "retrieved_at": null,
           "supporting_sources": [],
           "review_notes": [],
@@ -285,8 +285,8 @@
       "case": "mixed_topics",
       "query": "Who is the University President, and what office handles enrollment?",
       "passed": true,
-      "elapsed_ms": 491.28,
-      "response": "**1. Who is the University President?**\n\nSr. Marie Rosanne Mallillin, SPCS — University President\n\n**Source review:** The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office.\n\nSources: 1\n\n**2. what office handles enrollment?**\n\nEnrollment procedure for Incoming College Freshmen (URO-PR-005):\n1. Guidance Office & Admitting Officer: Take the College Entrance Examination at the Guidance Office. The Admitting Officer verifies submitted admission documents and encodes the student data.\n2. Dean's Office (Advising & Scheduling): Proceed to the Dean's Office for academic advising, schedule plotting, and schedule encoding. Receive the Pre-Registration Form.\n3. Finance Office (Assessment & Payment): Proceed to the Finance Office/Cashier for assessment of fees and payment of initial enrollment fee. Receive the Official Receipt (OR).\n4. Registrar's Office (Validation & Official Enrollment): Proceed to the University Registrar's Office for verification and validation of enrollment. Receive the official Study Load and Assessment stamped with 'OFFICIALLY ENROLLED'.\n5. ICT Office (Student ID): Secure an Official Identification Card (ID) at the ICT Office by presenting the Official Receipt and stamped Study Load.\n6. University Clinic (Health Profiling): Complete the medical profiling form at the University Clinic by presenting the Official Receipt and Study Load.\n\nSources: 2\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "elapsed_ms": 3191.5,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who is the University President?**\n\nSr. Marie Rosanne Mallillin, SPCS — University President\n\n**Source review:** The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office.\n\nSources: 1\n\n**2. what office handles enrollment?**\n\nEnrollment procedure for Incoming College Freshmen (URO-PR-005):\n1. Guidance Office & Admitting Officer: Take the College Entrance Examination at the Guidance Office. The Admitting Officer verifies submitted admission documents and encodes the student data.\n2. Dean's Office (Advising & Scheduling): Proceed to the Dean's Office for academic advising, schedule plotting, and schedule encoding. Receive the Pre-Registration Form.\n3. Finance Office (Assessment & Payment): Proceed to the Finance Office/Cashier for assessment of fees and payment of initial enrollment fee. Receive the Official Receipt (OR).\n4. Registrar's Office (Validation & Official Enrollment): Proceed to the University Registrar's Office for verification and validation of enrollment. Receive the official Study Load and Assessment stamped with 'OFFICIALLY ENROLLED'.\n5. ICT Office (Student ID): Secure an Official Identification Card (ID) at the ICT Office by presenting the Official Receipt and stamped Study Load.\n6. University Clinic (Health Profiling): Complete the medical profiling form at the University Clinic by presenting the Official Receipt and Study Load.\n\nSources: 2\n\n[SUGGESTIONS: \"What are the required admission and enrollment documents for incoming freshmen at SPUS?\" | \"What are the required documents for transferee students enrolling at SPUS?\" | \"Where is the registrar office?\"]",
       "parts": [
         {
           "query": "Who is the University President?",
@@ -349,8 +349,8 @@
       "case": "filipino",
       "query": "Sino ang ICT director at CEIT dean?",
       "passed": true,
-      "elapsed_ms": 275.83,
-      "response": "**1. Sino ang ICT director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nMga sanggunian: 1\n\n**2. Sino ang CEIT dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nMga sanggunian: 2\n\n[SUGGESTIONS: \"Anong mga programa ang inaalok sa SPUS?\" | \"Paano mag-enroll sa SPUS?\" | \"Saan ang Registrar office?\"]",
+      "elapsed_ms": 281.32,
+      "response": "Sige—narito ang impormasyon mula sa mga nakaimbak na sanggunian.\n\n**1. Sino ang ICT director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nMga sanggunian: 1\n\n**2. Sino ang CEIT dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nMga sanggunian: 2\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
       "parts": [
         {
           "query": "Sino ang ICT director?",
@@ -420,8 +420,8 @@
       "case": "partial_missing",
       "query": "Who is the ICT Director, and who is the director of Mars?",
       "passed": true,
-      "elapsed_ms": 191.18,
-      "response": "**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. who is the director of Mars?**\n\nI don't have enough verified information in my SPUS knowledge base to answer that specific question. Please confirm with the relevant university office or the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "elapsed_ms": 249.66,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. who is the director of Mars?**\n\nI don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).",
       "parts": [
         {
           "query": "Who is the ICT Director?",
@@ -467,8 +467,8 @@
       "case": "partial_conflict",
       "query": "Who is the ICT Director, and who is the PBMO director?",
       "passed": true,
-      "elapsed_ms": 317.1,
-      "response": "**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. who is the PBMO director?**\n\nI found conflicting information or more than one possible match. Please specify the office, category, or date.\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "elapsed_ms": 238.32,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. who is the PBMO director?**\n\nI found conflicting information or more than one possible match. Please specify the office, category, or date.",
       "parts": [
         {
           "query": "Who is the ICT Director?",
@@ -514,8 +514,8 @@
       "case": "focused_followup",
       "query": "How about CHS?",
       "passed": true,
-      "elapsed_ms": 314.35,
-      "response": "Here is the information from the SPUS sources for your follow-up.\n\nMrs. Kristal Liza Besario, MaN, RN — Dean, College of Health Sciences, Head, Health Service\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "elapsed_ms": 200.81,
+      "response": "Here is the information from the SPUS sources for your follow-up.\n\nMrs. Kristal Liza Besario, MaN, RN — Dean, College of Health Sciences, Head, Health Service",
       "parts": [],
       "sources": [
         {
@@ -545,7 +545,7 @@
       "case": "ambiguous_pronoun",
       "query": "Where is it?",
       "passed": true,
-      "elapsed_ms": 178.95,
+      "elapsed_ms": 866.99,
       "response": "Which topic or detail do you mean? Please specify the office, program, or question.",
       "parts": [],
       "sources": [],
@@ -556,7 +556,7 @@
       "case": "isolated_guest_tab",
       "query": "How about CHS?",
       "passed": true,
-      "elapsed_ms": 36.98,
+      "elapsed_ms": 10.92,
       "response": "Which topic or detail do you mean? Please specify the office, program, or question.",
       "parts": [],
       "sources": [],

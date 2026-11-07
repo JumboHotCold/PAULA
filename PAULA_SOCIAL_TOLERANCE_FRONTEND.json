@@ -1,0 +1,23 @@
+[
+  {
+    "query": "ty",
+    "ms": 150.46,
+    "response": "You're welcome! Glad that helped.",
+    "mode": "thanks",
+    "saved": false
+  },
+  {
+    "query": "thankyoui",
+    "ms": 21,
+    "response": "You're welcome! Glad that helped.",
+    "mode": "thanks",
+    "saved": false
+  },
+  {
+    "query": "salamat kaayo",
+    "ms": 15.84,
+    "response": "Walay sapayan! Let me know if you need anything else.",
+    "mode": "thanks",
+    "saved": false
+  }
+]

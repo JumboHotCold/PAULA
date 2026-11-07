@@ -1,0 +1,59 @@
+{
+  "before": {
+    "catalog_successes": 9,
+    "catalog_samples": 30,
+    "catalog_p50_ms": 247.72,
+    "catalog_p95_ms": 3096.09
+  },
+  "after": {
+    "catalog_successes": 30,
+    "catalog_samples": 30,
+    "catalog_p50_ms": 128.99,
+    "catalog_p95_ms": 360.01
+  },
+  "other_benchmark_controls_passed": true,
+  "multi_turn": [
+    {
+      "query": "What programs are offered at CEIT?",
+      "response": "Sure—here is the information from the stored sources.\n\nCollege of Engineering & Information Technology\nThe College of Engineering & Information Technology empowers students to become innovative problem-solvers and technology-driven professionals. It offers cutting-edge programs that combine scientific principles, technical expertise, and hands-on experience in engineering and information technology. The college is dedicated to producing graduates who are industry-ready, ethical, and capable of creating sustainable solutions that advance society in the digital age.\n\nPrograms Offered (4 Year Curriculum)\nBACHELOR OF SCIENCE IN MINING ENGINEERING\nBACHELOR OF SCIENCE IN CIVIL ENGINEERING\nBACHELOR OF SCIENCE IN COMPUTER ENGINEERING\nBACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics - College of Engineering & IT): What programs does the College of Engineering and Information Technology offer? Does SPUS offer IT or Engineering?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "query": "How about CHS?",
+      "response": "Here is the information from the SPUS sources for your follow-up.\n\nCollege of Health Sciences Program\nThe College of Health Sciences is committed to excellence in education, research, and service in the fields of healthcare and behavioral sciences. It offers the Bachelor of Science in Nursing, designed to develop highly skilled and compassionate nursing professionals, and the Bachelor of Science in Psychology, which prepares students for meaningful roles in mental health, research, and human development. Guided by a strong foundation of scientific knowledge, ethical practice, and social responsibility, the College of Health Sciences equips graduates to respond to the growing demands of healthcare and to contribute significantly to the well-being of individuals and communities.\n\nPrograms Offered (4 Year Curriculum)\nBACHELOR OF SCIENCE IN NURSING\nBACHELOR OF SCIENCE IN PSYCHOLOGY\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics - College of Health Sciences): What programs does the SPUS College of Health Sciences offer? Does SPUS offer Nursing or Psychology?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "query": "How do I enroll?",
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "passed": true
+    }
+  ],
+  "data_unchanged": true,
+  "notes": "Representative local warm-request measurements, not a general accuracy estimate or production latency guarantee. All factual text comes from stored sources."
+}

@@ -60,7 +60,7 @@ services:
     command: >
       sh -c "python manage.py migrate &&
              python manage.py collectstatic --noinput &&
-             gunicorn paulibot.wsgi:application --bind 0.0.0.0:8000 --workers 3 --timeout 120"
+             gunicorn paulibot.wsgi:application --config python:paulibot.gunicorn_conf --bind 0.0.0.0:8000 --workers 3 --timeout 120"
 
     environment:
       # Django settings
@@ -68,12 +68,20 @@ services:
       # The workspace launcher supplies this explicitly, avoiding host DEBUG values.
       DEBUG: ${PAULA_DJANGO_DEBUG:-${DEBUG}}
       ALLOWED_HOSTS: ${ALLOWED_HOSTS}
+      PAULA_FRONTEND_ORIGIN: ${PAULA_FRONTEND_ORIGIN:-}
 
       # AI API Keys
       GROQ_API_KEY: ${GROQ_API_KEY}
       GEMINI_API_KEY: ${GEMINI_API_KEY}
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
-      GROQ_MODEL: ${GROQ_MODEL:-llama-3.3-70b-versatile}
+      # Separate override avoids retaining the retired GROQ_MODEL in older env files.
+      GROQ_MODEL: ${PAULA_GROQ_MODEL:-openai/gpt-oss-20b}
+      PAULA_GROQ_ENABLED: ${PAULA_GROQ_ENABLED:-true}
+      # Currently exhausted; opt in only after restoring a usable fallback.
+      PAULA_OPENAI_ENABLED: ${PAULA_OPENAI_ENABLED:-false}
+      PAULA_GENERATION_DEADLINE_SECONDS: ${PAULA_GENERATION_DEADLINE_SECONDS:-4}
+      PAULA_PROVIDER_CALL_TIMEOUT_SECONDS: ${PAULA_PROVIDER_CALL_TIMEOUT_SECONDS:-3}
+      PAULA_EMBEDDING_REVISION: ${PAULA_EMBEDDING_REVISION:-1110a243fdf4706b3f48f1d95db1a4f5529b4d41}
       RAG_MAX_COSINE_DISTANCE: ${RAG_MAX_COSINE_DISTANCE:-0.45}
 
       # Database connection
@@ -99,6 +107,13 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+
+    healthcheck:
+      test: ["CMD", "python", "-B", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health/ready', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      start_period: 180s
+      retries: 5
 
     networks:
       - paulibot_network

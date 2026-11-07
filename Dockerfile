@@ -7,7 +7,7 @@
 # Build Instructions:
 #   docker build -t paulibot:latest .
 #
-# This Dockerfile creates a production-ready Python environment with:
+# This Dockerfile packages the application; release validation is still required.
 # - Python 3.11 (optimized for Django 4.x+)
 # - PostgreSQL client libraries
 # - Gunicorn WSGI server
@@ -37,6 +37,7 @@ RUN apt-get update && apt-get install -y \
 # Install Python dependencies
 COPY requirements.txt /app/
 RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir torch==2.10.0 --index-url https://download.pytorch.org/whl/cpu && \
     pip install --no-cache-dir -r requirements.txt
 
 # Copy project files
@@ -49,4 +50,4 @@ RUN mkdir -p /app/staticfiles
 EXPOSE 8000
 
 # Run migrations and start server (overridden by docker-compose)
-CMD ["gunicorn", "paulibot.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["gunicorn", "paulibot.wsgi:application", "--config", "python:paulibot.gunicorn_conf", "--bind", "0.0.0.0:8000"]

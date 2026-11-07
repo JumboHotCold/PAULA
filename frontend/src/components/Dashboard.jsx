@@ -1,4 +1,5 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, useMemo, useCallback } from 'react';
+import { latestSuggestions, parseMessage } from '../suggestions';
 import ThemeToggle from './ThemeToggle';
 import EditProfileModal from './EditProfileModal';
 import { fetchAnnouncements } from '../api/chatApi';
@@ -8,6 +9,7 @@ import PromptGrid from './PromptGrid';
 import MaterialIcon from './MaterialIcon';
 import PaulaAvatar from './PaulaAvatar';
 import UserAvatar from './UserAvatar';
+import AdminSessionNotice from './AdminSessionNotice';
 
 // =============================================================================
 // SUB-COMPONENTS FOR Markdown & Sources
@@ -80,7 +82,7 @@ function SourcesAccordion({ sources }) {
   if (!sources || sources.length === 0) return null;
   return (
     <div className="sources-container" style={{ marginTop: '12px', fontSize: '0.86em', borderTop: '1px solid var(--color-border)', paddingTop: '8px' }}>
-      <button onClick={() => setOpen(!open)} style={{ background: 'none', border: 'none', color: 'var(--color-text-muted)', cursor: 'pointer', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '6px', padding: '4px 0', fontFamily: 'var(--font-family-sans)' }}>
+      <button aria-expanded={open} aria-label={`${open ? 'Hide' : 'Show'} sources`} onClick={() => setOpen(!open)} style={{ background: 'none', border: 'none', color: 'var(--color-text-muted)', cursor: 'pointer', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '6px', padding: '4px 0', fontFamily: 'var(--font-family-sans)' }}>
         <MaterialIcon name="attach_file" size={16} /> Sources ({sources.length}) <MaterialIcon name="chevron_right" size={14} style={{ transform: open ? 'rotate(90deg)' : 'none', transition: 'transform 0.2s' }} />
       </button>
       {open && (
@@ -106,37 +108,41 @@ function SourcesAccordion({ sources }) {
   );
 }
 
-// Parses an incoming message to separate true text from structured suggestions.
-// Example: "Kamusta? [SUGGESTIONS: 'Hi' | 'Hello']"
-function parseMessage(rawText) {
-  if (!rawText) return { text: '', suggestions: [] };
-  
-  const regex = /\[SUGGESTIONS:\s*(.*?)\]/g;
-  let suggestions = [];
-  let cleanText = rawText;
-
-  const match = regex.exec(rawText);
-  if (match && match[1]) {
-    // split by |
-    const rawSuggestions = match[1].split('|');
-    // strip out wrapping quotes and trim whitespace
-    suggestions = rawSuggestions
-      .map(s => s.replace(/^["'\s]+|["'\s]+$/g, ''))
-      .filter(Boolean);
-    
-    // remove the suggestion block from the display text
-    cleanText = rawText.replace(match[0], '').trim();
-  }
-  return { text: cleanText, suggestions };
-}
-
-export default function Dashboard({ user, onLogout, onNavigateLogin, messages, isTyping, onSend, onNewChat, conversations = [], onNavigateAdmin, onUpdateUser, onDeleteChat, onLoadChat }) {
+export default function Dashboard({ user, onLogout, onNavigateLogin, messages, isTyping, onSend, onNewChat, conversations = [], onNavigateAdmin, onUpdateUser, onDeleteChat, onLoadChat, onResumeAdmin }) {
   const bottomRef = useRef(null);
   const [announcement, setAnnouncement] = useState(null);
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
+  const closeProfile = useCallback(() => setIsProfileModalOpen(false), []);
   const [activeModule, setActiveModule] = useState('chat'); // 'chat' | 'tour' | 'map'
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const sidebarRef = useRef(null);
+  const [compact, setCompact] = useState(() => window.matchMedia('(max-width: 1024px)').matches);
   const [navigationDestination, setNavigationDestination] = useState(null);
+  const activeSuggestions = useMemo(() => latestSuggestions(messages, isTyping), [messages, isTyping]);
+
+  useEffect(() => {
+    document.body.classList.add('paula-workspace-open');
+    const media = window.matchMedia('(max-width: 1024px)');
+    const resized = () => setCompact(media.matches);
+    media.addEventListener('change', resized);
+    return () => { document.body.classList.remove('paula-workspace-open'); media.removeEventListener('change', resized); };
+  }, []);
+
+  useEffect(() => {
+    if (!compact || !isSidebarOpen) return;
+    const previous = document.activeElement;
+    const focusable = () => [...sidebarRef.current.querySelectorAll('button, a, input')].filter(el => !el.disabled);
+    focusable()[0]?.focus();
+    const key = event => {
+      if (event.key === 'Escape') setIsSidebarOpen(false);
+      if (event.key !== 'Tab') return;
+      const items = focusable(), first = items[0], last = items.at(-1);
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+      if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+    };
+    document.addEventListener('keydown', key);
+    return () => { document.removeEventListener('keydown', key); previous?.focus(); };
+  }, [compact, isSidebarOpen]);
 
   useEffect(() => {
     // Check if the latest message triggers an active module change
@@ -199,7 +205,7 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
       
       {/* Mobile Sidebar Overlay */}
       {!isGuest && isSidebarOpen && (
-        <div 
+        <button type="button" aria-label="Close conversation history"
           className="sidebar-overlay"
           onClick={() => setIsSidebarOpen(false)}
         />
@@ -207,7 +213,8 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
 
       {/* Sidebar - Exact replica of chat.html <aside class="sidebar"> */}
       {!isGuest && (
-        <aside className={`sidebar ${isSidebarOpen ? 'sidebar-open' : ''}`}>
+        <aside ref={sidebarRef} id="chat-history-sidebar" aria-label="Conversation history" inert={compact && !isSidebarOpen ? true : undefined}
+               className={`sidebar ${isSidebarOpen ? 'sidebar-open' : ''}`}>
           {/* Mobile close button */}
           <button 
             className="sidebar-close-btn"
@@ -235,6 +242,7 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
                     {conv.title || "New Chat"}
                   </button>
                   <button 
+                    className="delete-conversation-btn" aria-label={`Delete conversation: ${conv.title || 'New Chat'}`}
                     onClick={(e) => { e.stopPropagation(); onDeleteChat && onDeleteChat(conv.id); }}
                     style={{ background: 'none', border: 'none', color: '#dc3545', cursor: 'pointer', padding: '5px', display: 'flex', alignItems: 'center' }}
                     title="Delete Chat"
@@ -247,7 +255,7 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
           </div>
 
           <div className="sidebar-footer">
-            <div className="user-profile" onClick={() => !isGuest && setIsProfileModalOpen(true)} style={{ cursor: isGuest ? 'default' : 'pointer' }}>
+            <button type="button" className="user-profile profile-trigger" onClick={() => { if (!isGuest) { setIsSidebarOpen(false); setIsProfileModalOpen(true); } }} style={{ cursor: isGuest ? 'default' : 'pointer' }}>
               <div className="avatar" style={{ background: 'transparent' }}>
                 <UserAvatar user={user} size="sm" />
               </div>
@@ -255,7 +263,7 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
                 <div>{user.nickname || user.name}</div>
                 <span>{user.id} {!isGuest && <em style={{ fontSize: '0.8em', marginLeft: '5px', color: 'var(--color-accent)' }}>(Edit)</em>}</span>
               </div>
-            </div>
+            </button>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '15px' }}>
               {onNavigateAdmin && (
                 <button className="logout-btn" onClick={onNavigateAdmin} style={{ background: 'var(--spus-gold)', color: 'var(--text-dark)', borderColor: 'var(--spus-gold)' }}>
@@ -274,6 +282,8 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
         {/* Module Area (Tour / Map) — stacks on top for mobile, side for desktop */}
         {activeModule !== 'chat' && (
           <div className="module-panel">
+             <div className="module-toolbar">
+             <span>{activeModule === 'tour' ? 'Explore the campus' : 'Campus navigation'}</span>
              <button 
                 onClick={() => { setActiveModule('chat'); setNavigationDestination(null); }} 
                 className="module-close-btn"
@@ -281,9 +291,10 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
              >
                <MaterialIcon name="close" size={16} style={{ marginRight: '6px' }} /> Close {activeModule === 'tour' ? 'Tour' : 'Map'}
              </button>
+             </div>
              
              {activeModule === 'tour' && <VirtualTour className="w-full h-full shadow-2xl" />}
-             {activeModule === 'map' && <MapModule className="w-full h-full shadow-2xl" destination={navigationDestination} />}
+             {activeModule === 'map' && <MapModule className="w-full h-full shadow-2xl" destination={navigationDestination} user={user} />}
           </div>
         )}
 
@@ -291,13 +302,14 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
       <main className={`main-chat ${activeModule !== 'chat' ? 'chat-with-module' : ''}`}>
         
         <header className="chat-header">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <div className="chat-brand" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             {/* Hamburger menu for mobile */}
             {!isGuest && (
               <button 
                 className="hamburger-btn"
                 onClick={() => setIsSidebarOpen(true)}
                 aria-label="Open sidebar"
+                aria-expanded={isSidebarOpen} aria-controls="chat-history-sidebar"
               >
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="3" y1="6" x2="21" y2="6" />
@@ -307,14 +319,20 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
               </button>
             )}
             <h1 className="chat-title">
-              {!isGuest ? 'New Chat' : 'Welcome Guest'}
+              PAULA
             </h1>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <div className="chat-header-actions" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <button className="tour-toggle-btn map-toggle-btn" aria-label="Campus map" aria-pressed={activeModule === 'map'}
+                    onClick={() => { setActiveModule(previous => previous === 'map' ? 'chat' : 'map'); setNavigationDestination(null); }}>
+              <MaterialIcon name="map" size={20} /><span className="map-btn-label">Campus map</span>
+            </button>
             {/* Smart Virtual Tour Button */}
             <button
               onClick={() => setActiveModule(prev => prev === 'tour' ? 'chat' : 'tour')}
               className="tour-toggle-btn"
+              aria-label="Smart Virtual Tour"
+              aria-pressed={activeModule === 'tour'}
               style={{ display: 'flex', alignItems: 'center', gap: '6px' }}
             >
               <MaterialIcon name="explore" size={18} />
@@ -324,14 +342,15 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
             {isGuest && (
               <button 
                 onClick={onNavigateLogin} 
-                style={{ background: 'none', border: 'none', color: 'var(--color-primary)', fontWeight: 600, cursor: 'pointer', fontSize: '0.9em', padding: '6px 10px', borderRadius: '6px' }}
-                className="hover:opacity-80"
+                className="chat-login-btn"
               >
                 Login
               </button>
             )}
           </div>
         </header>
+
+        {isGuest && <AdminSessionNotice onContinue={onResumeAdmin} />}
 
         {/* Announcement banner removed as per user request */}
 
@@ -367,7 +386,8 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
           ) : (
             <>
               {messages.map((msg, idx) => {
-                const { text, suggestions } = msg.isUser ? { text: msg.text, suggestions: [] } : parseMessage(msg.text);
+                const text = msg.isUser ? msg.text : parseMessage(msg.text).text;
+                const suggestions = idx === activeSuggestions.index ? activeSuggestions.suggestions : [];
 
                 return (
                   <div key={idx} className={`message-wrapper ${msg.isUser ? 'user' : 'bot'}`}>
@@ -386,11 +406,12 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
                       )}
 
                       {suggestions.length > 0 && (
-                        <div className="follow-up-chips">
+                        <div className="follow-up-chips" role="group" aria-label="Suggested next questions or choices">
                           {suggestions.map((s, i) => (
                             <button 
                               key={i} 
                               className="follow-up-chip" 
+                              disabled={isTyping}
                               onClick={() => { if (!isTyping) onSend(s); }}
                             >
                               {s}
@@ -428,12 +449,13 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
             <input 
               type="text" 
               name="message"
+              aria-label="Message PAULA" enterKeyHint="send"
               className="chat-input" 
               placeholder="Type your question here..." 
               autoComplete="off" 
               disabled={isTyping}
             />
-            <button type="submit" className="send-btn" disabled={isTyping}>
+            <button type="submit" className="send-btn" disabled={isTyping} aria-label="Send message">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                 <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
               </svg>
@@ -446,7 +468,7 @@ export default function Dashboard({ user, onLogout, onNavigateLogin, messages, i
       {!isGuest && (
         <EditProfileModal 
           isOpen={isProfileModalOpen} 
-          onClose={() => setIsProfileModalOpen(false)} 
+          onClose={closeProfile}
           user={user} 
           onUpdate={onUpdateUser}
         />

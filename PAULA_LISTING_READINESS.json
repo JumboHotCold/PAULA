@@ -1,0 +1,28 @@
+{
+    "ready":  true,
+    "expected_workers":  3,
+    "ready_workers":  3,
+    "workers":  [
+                    {
+                        "worker":  72,
+                        "ready":  true,
+                        "social_router_ready":  true,
+                        "dimensions":  384,
+                        "startup_ms":  40826.68
+                    },
+                    {
+                        "worker":  71,
+                        "ready":  true,
+                        "social_router_ready":  true,
+                        "dimensions":  384,
+                        "startup_ms":  40801.52
+                    },
+                    {
+                        "worker":  73,
+                        "ready":  true,
+                        "social_router_ready":  true,
+                        "dimensions":  384,
+                        "startup_ms":  40729.74
+                    }
+                ]
+}

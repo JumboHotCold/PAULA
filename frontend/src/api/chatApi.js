@@ -1,3 +1,6 @@
+import { postChat } from './chatTransport.js';
+export { chatErrorMessage } from './chatTransport.js';
+
 /**
  * PAULA Chat API Layer
  * ====================
@@ -59,17 +62,11 @@ export async function sessionStatus() {
   return response.json();
 }
 
-export async function sendMessage(message, conversationId = null, history = [], contextToken = null, mode = 'guest', chatSessionId = null, accountId = null) {
+export async function sendMessage(message, conversationId = null, history = [], contextToken = null, mode = 'guest', chatSessionId = null, accountId = null, askedQuestions = []) {
+  const requestStarted = globalThis.performance?.now?.();
   const csrfToken = getCookie('csrftoken');
 
-  const res = await fetch('/api/chat', {
-    method: 'POST',
-    credentials: mode === 'guest' ? 'omit' : 'include',
-    headers: {
-      'Content-Type': 'application/json',
-      ...(csrfToken && { 'X-CSRFToken': csrfToken }),
-    },
-    body: JSON.stringify({
+  const { response: res, data } = await postChat({
       message,
       conversation_id: conversationId,
       mode,
@@ -77,19 +74,30 @@ export async function sendMessage(message, conversationId = null, history = [], 
       ...(mode === 'authenticated' && accountId != null ? { account_id: accountId } : {}),
       context_id: contextTabId,
       context_token: contextToken,
-      // Bounded, transient intent context. Facts are freshly retrieved by Django.
       history: history.slice(-8),
-    }),
+      asked_questions: Array.isArray(askedQuestions) ? askedQuestions.filter(value =>
+        typeof value === 'string' && value.length <= 500).slice(-64) : [],
+  }, {
+    credentials: mode === 'guest' ? 'omit' : 'include',
+    csrfToken,
   });
-
-  if (!res.ok) {
-    const detail = await res.json().catch(() => ({}));
-    const error = new Error(detail.error || `API error: ${res.status} ${res.statusText}`);
-    error.status = res.status;
-    throw error;
+  // Operational timing only: no prompt, answer, account, cookies or context.
+  if (requestStarted != null && globalThis.performance?.measure) {
+    try {
+      globalThis.performance.measure('paula.chat.http', {
+        start: requestStarted,
+        end: globalThis.performance.now(),
+        detail: {
+          requestId: res.headers?.get('X-Request-ID') || null,
+          worker: res.headers?.get('X-PAULA-Worker') || null,
+          status: res.status,
+        },
+      });
+      const entries = globalThis.performance.getEntriesByName('paula.chat.http');
+      if (entries.length > 100) globalThis.performance.clearMeasures('paula.chat.http');
+    } catch { /* Timing support must not affect delivery. */ }
   }
-
-  return res.json();
+  return data;
 }
 
 /**

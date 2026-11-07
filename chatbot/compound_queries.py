@@ -22,6 +22,13 @@ SEPARATOR = re.compile(r'\s*,\s*(?:(?:and|at|pati|tsaka)\s+)?|\s*;\s*|\s+\b(?:an
 CONDITION = re.compile(r'\s+((?:in|during|as of|before|after|without|except|excluding|at|sa)\s+.+)$', re.I)
 RELATION = re.compile(r'\b(?:between|difference|relationship|distinction|versus|vs|compare|ihambing|pagkakaiba)\b', re.I)
 DEPENDENT_ACTION = re.compile(r'(?:how (?:do|can) i (?:apply|register|renew)|paano(?: ako)? mag[- ]?apply)[?.! ]*', re.I)
+DEPENDENT_REASON = re.compile(
+    r'why(?: should (?:i|we|you))?\s+(?P<verb>enroll|enrol|study|attend|choose|use|join|visit|contact|apply)'
+    r'(?P<prep>\s+(?:at|for|to))?(?P<reference>\s+(?:it|that|there|here))?[?.! ]*', re.I)
+
+
+def dependent_request(text):
+    return bool(DEPENDENT_ACTION.fullmatch(text) or DEPENDENT_REASON.fullmatch(text))
 
 
 @dataclass(frozen=True)
@@ -41,15 +48,33 @@ def topic_subject(text):
     match = re.match(r'^(?:what|which)\s+(.+?)\s+(?:is|are)\s+(?:available|offered)\b', clean, re.I)
     if not match:
         match = re.match(r'^(?:what (?:is|are)|ano ang)\s+(?:the\s+)?(.+)$', clean, re.I)
+    if not match:
+        match = re.match(r'^(?:please\s+)?(?:tell me about|give me information about|explain|describe)\s+(.+)$', clean, re.I)
     return match.group(1) if match else ''
 
 
-def bind_dependent(query, prior):
+def bind_dependent(query, prior, vocabulary=None):
     """A short action question may reuse its immediately named resource."""
-    if DEPENDENT_ACTION.fullmatch(query):
+    if dependent_request(query):
         subject = topic_subject(prior)
         if subject:
-            return question(query.rstrip(' ?!.') + ' for ' + subject)
+            # A coordinated prior object does not identify one reason target.
+            # Known compound labels may contain conjunctions without ambiguity.
+            if re.search(r'\b(and|or|versus|vs|pati|tsaka)\b|[;,]', subject, re.I):
+                mentions = vocabulary.mentions(subject) if vocabulary else []
+                if not (len(mentions) == 1 and mentions[0][0] == 0 and mentions[0][1] == len(subject)):
+                    return query
+            reason = DEPENDENT_REASON.fullmatch(query)
+            stem = query.rstrip(' ?!.')
+            if reason:
+                if reason.group('reference'):
+                    stem = stem[:reason.start('reference')].rstrip()
+                verb = reason.group('verb').casefold()
+                preposition = {'enroll': 'at', 'enrol': 'at', 'study': 'at', 'apply': 'for'}.get(verb)
+                connector = ' ' + preposition if preposition and not reason.group('prep') else ''
+            else:
+                connector = ' for'
+            return question(stem + connector + ' ' + subject)
     return query
 
 

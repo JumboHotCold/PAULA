@@ -9,8 +9,9 @@ import math
 import re
 
 from .intents import enrollment_category, enrollment_request, enrollment_subject
-from .query_normalization import canonical_text, normalized_text, FRESHNESS_WORDS, roles_in, role_supported
+from .query_normalization import canonical_text, normalized_text, faq_question_key, FRESHNESS_WORDS, roles_in, role_supported
 from .evidence_identity import consolidate_evidence
+from .performance import timed
 
 
 DEPARTMENTS = {
@@ -36,6 +37,7 @@ SYNONYMS = {
     'guro': 'faculty', 'courses': 'program', 'course': 'program',
     'programs': 'program', 'degrees': 'program', 'kurso': 'program',
     'programa': 'program', 'enrollment': 'enroll', 'enrolment': 'enroll',
+    'kursong': 'program', 'programang': 'program',
     'enrol': 'enroll', 'admissions': 'admission', 'requirements': 'requirement',
     'enrolling': 'enroll', 'enrolled': 'enroll', 'documents': 'document',
     'papers': 'document',
@@ -79,6 +81,18 @@ def terms(text):
             if word not in STOPWORDS and word not in FRESHNESS_WORDS and len(word) > 1}
 
 
+def faculty_identity_request(query):
+    """A faculty mention in a policy/document is not a request for a roster."""
+    if not FACULTY_RE.search(query):
+        return False
+    if re.search(r'\b(?:who|sino)\b', query, re.I):
+        return True
+    requested = terms(query)
+    return bool(requested) and requested.issubset(set(DEPARTMENTS) | {
+        'faculty', 'member', 'members', 'directory', 'profile', 'profiles', 'information', 'info'})
+
+
+@timed('grounding')
 def eligible_evidence(query, result):
     """Require topic/entity support before applying any authority preference.
 
@@ -89,7 +103,7 @@ def eligible_evidence(query, result):
     body = (result.get('answer') or result.get('text') or '').strip()
     if not body:
         return False
-    title = result.get('question') or result.get('document_title') or result.get('title') or ''
+    title = result.get('matched_question') or result.get('question') or result.get('document_title') or result.get('title') or ''
     scope = ' '.join([title, result.get('source_office') or '', body])
     requested = departments(query)
     found = departments(scope)
@@ -99,10 +113,6 @@ def eligible_evidence(query, result):
     years = set(re.findall(r'\b20\d{2}\b', query))
     if years and not years.issubset(set(re.findall(r'\b20\d{2}\b', scope))):
         return False
-    for acronym in re.findall(r'\b[A-Z]{2,}\b', query):
-        if acronym.lower() not in DEPARTMENTS and acronym != 'SPUS':
-            if acronym.casefold() not in canonical_text(scope).split():
-                return False
     # Specific roles are mandatory constraints, not optional overlap points.
     if not role_supported(query, result.get('personnel_role') or scope):
         return False
@@ -114,7 +124,7 @@ def eligible_evidence(query, result):
         actual_role = result.get('personnel_role')
         if actual_role and not re.fullmatch(r'(?:university\s+)?president', actual_role, re.I):
             return False
-    if FACULTY_RE.search(query):
+    if faculty_identity_request(query):
         # A dean/office holder alone is not a faculty lineup.
         personnel_body = re.sub(r'\bfaculty\s+(?:room|office|lounge|development)\b', '', body, flags=re.I)
         if not FACULTY_RE.search(personnel_body):
@@ -133,6 +143,27 @@ def eligible_evidence(query, result):
         if requested and faculty_scope != requested:
             return False
     query_terms = terms(query)
+    # An explicit information-request paraphrase can exactly match a stored
+    # FAQ even when lexical stopwords erase its subject. Extra constraints
+    # remain in the key; institutional names alone cannot admit nearby chunks.
+    if result.get('record_type') == 'faq':
+        if faq_question_key(query) and faq_question_key(query) == faq_question_key(title):
+            return True
+        # The same constrained grammatical equivalence used by FAQ lookup must
+        # survive the response-boundary validation, including Filipino wording.
+        from .query_understanding import listing_signature
+        signature = listing_signature(query)
+        if signature and signature == listing_signature(title):
+            return True
+    # Exact subject/predicate matches already establish the requested tokens.
+    # On hybrid paths, uppercase question/function words are not acronyms.
+    # Unknown abbreviations still need literal support in the candidate source.
+    for acronym in re.findall(r'\b[A-Z]{2,}\b', query):
+        if acronym.casefold() in STOPWORDS:
+            continue
+        if acronym.lower() not in DEPARTMENTS and acronym != 'SPUS':
+            if acronym.casefold() not in canonical_text(scope).split():
+                return False
     if not query_terms:
         return False
     body_terms = terms(scope)

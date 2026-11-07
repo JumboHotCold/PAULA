@@ -16,6 +16,8 @@ urlpatterns = [
     path('logout/', views.logout_page, name='logout_page'),
 
     # API Endpoints (AJAX)
+    path('api/health/live', views.health_live, name='health_live'),
+    path('api/health/ready', views.health_ready, name='health_ready'),
     path('api/chat', views.chat_api, name='chat_api'),
     path('api/history', views.get_chat_history, name='history'), # Legacy support
     path('api/conversations', views.conversation_list, name='conversation_list'),

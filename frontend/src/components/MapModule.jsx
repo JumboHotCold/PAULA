@@ -1,7 +1,8 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import { CAMPUS_NODES, resolveLocationFromText } from '../data/campusGraph';
-import { fetchCampusRoute } from '../api/chatApi';
+import { fetchCampusRoute, sessionStatus } from '../api/chatApi';
 import MaterialIcon from './MaterialIcon';
+import useMapViewport from '../hooks/useMapViewport';
 
 // =============================================================================
 // NODE TYPE ICONS
@@ -25,9 +26,27 @@ const TYPE_COLORS = {
 // =============================================================================
 // MapModule Component
 // =============================================================================
-export default function MapModule({ className = "", destination = null }) {
+export default function MapModule({ className = "", destination = null, user = null }) {
+  const [verifiedAdmin, setVerifiedAdmin] = useState(null);
+  const account = user?.id;
+  const eligibleAdmin = user?.type === 'ADMIN' && user?.is_superuser === true;
+  const canUseMapTools = eligibleAdmin && account != null && verifiedAdmin === account;
+  useEffect(() => {
+    let cancelled = false;
+    setVerifiedAdmin(null);
+    if (eligibleAdmin && account != null) {
+      sessionStatus().then(session => {
+        if (!cancelled && session.authenticated && session.is_superuser === true && String(session.id) === String(account)) {
+          setVerifiedAdmin(account);
+        }
+      }).catch(() => { /* Fail closed; navigation remains available. */ });
+    }
+    return () => { cancelled = true; };
+  }, [eligibleAdmin, account]);
   // ── State ──
-  const [mode, setMode] = useState('navigate'); // 'navigate' | 'mapper'
+  const [requestedMode, setMode] = useState('navigate'); // 'navigate' | 'mapper'
+  const mode = canUseMapTools ? requestedMode : 'navigate';
+  useEffect(() => { if (!canUseMapTools) setMode('navigate'); }, [canUseMapTools]);
   const [origin, setOrigin] = useState(null);
   const [selectedDestination, setSelectedDestination] = useState(destination);
   const [pathResult, setPathResult] = useState(null);
@@ -35,6 +54,11 @@ export default function MapModule({ className = "", destination = null }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [showOriginPicker, setShowOriginPicker] = useState(!!destination);
   const [hoveredNode, setHoveredNode] = useState(null);
+  const [aspectRatio, setAspectRatio] = useState(1.6);
+  const [isRouting, setIsRouting] = useState(false);
+  const [routeError, setRouteError] = useState('');
+  const [routeAttempt, setRouteAttempt] = useState(0);
+  const viewport = useMapViewport(aspectRatio);
   
   // ── Coordinate Mapper State ──
   const [mapperCoords, setMapperCoords] = useState(() => {
@@ -64,8 +88,12 @@ export default function MapModule({ className = "", destination = null }) {
 
   // ── Calculate path when origin & destination are both set ──
   useEffect(() => {
+    let cancelled = false;
     async function getRoute() {
       if (origin && selectedDestination && origin !== selectedDestination) {
+        setIsRouting(true);
+        setRouteError('');
+        setPathResult(null);
         try {
           const start = CAMPUS_NODES[origin];
           const end = CAMPUS_NODES[selectedDestination];
@@ -73,6 +101,7 @@ export default function MapModule({ className = "", destination = null }) {
           if (!start || !end) return;
           
           const result = await fetchCampusRoute(start.x, start.y, end.x, end.y);
+          if (cancelled) return;
           
           if (result.status === 'success') {
             setPathResult(result);
@@ -81,22 +110,30 @@ export default function MapModule({ className = "", destination = null }) {
           } else {
             console.error(result.error);
             setPathResult(null);
-            alert("No path found between these locations.");
+            setRouteError('No route was found. Please choose another starting point.');
           }
         } catch (error) {
+          if (cancelled) return;
           console.error("Failed to fetch route:", error);
           setPathResult(null);
+          setRouteError('The route could not be loaded. Please try again.');
+        } finally {
+          if (!cancelled) setIsRouting(false);
         }
       } else {
         setPathResult(null);
+        setIsRouting(false);
+        setRouteError('');
       }
     }
     
     getRoute();
-  }, [origin, selectedDestination]);
+    return () => { cancelled = true; };
+  }, [origin, selectedDestination, routeAttempt]);
 
   // ── Image click handler ──
   const handleImageClick = useCallback((e) => {
+    if (viewport.moved.current) return;
     const rect = e.target.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
@@ -120,7 +157,7 @@ export default function MapModule({ className = "", destination = null }) {
       });
       setActiveMapperNode(nextUnmapped || null);
     }
-  }, [mode, activeMapperNode, mapperCoords]);
+  }, [mode, activeMapperNode, mapperCoords, viewport.moved]);
 
   // ── Node click for navigation ──
   const handleNodeClick = useCallback((nodeId) => {
@@ -140,10 +177,17 @@ export default function MapModule({ className = "", destination = null }) {
     setPathResult(null);
     setShowDirections(false);
     setShowOriginPicker(!!selectedDestination);
+    setRouteError('');
+    setSearchQuery('');
+  };
+
+  const changeDestination = () => {
+    resetNavigation(); setSelectedDestination(null); setShowOriginPicker(false);
   };
 
   // ── Copy mapper JSON ──
   const copyMapperJSON = () => {
+    if (!canUseMapTools) return;
     const output = {};
     Object.entries(mapperCoords).forEach(([id, coords]) => {
       if (coords.x !== 0 || coords.y !== 0) {
@@ -199,27 +243,32 @@ export default function MapModule({ className = "", destination = null }) {
           <span className="campus-nav-badge">Campus Nav</span>
           <span className="campus-nav-title">Saint Paul University Surigao</span>
         </div>
-        <div className="campus-nav-header-right">
-          <button
-            className={`campus-nav-mode-btn ${mode === 'navigate' ? 'active' : ''}`}
-            onClick={() => setMode('navigate')}
-            style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}
-          >
-            <MaterialIcon name="explore" size={15} /> Navigate
-          </button>
+        {canUseMapTools && <div className="campus-nav-header-right">
           <button
             className={`campus-nav-mode-btn ${mode === 'mapper' ? 'active' : ''}`}
-            onClick={() => setMode('mapper')}
+            onClick={() => setMode(mode === 'mapper' ? 'navigate' : 'mapper')}
+            aria-pressed={mode === 'mapper'}
             style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}
           >
-            <MaterialIcon name="map" size={15} /> Map Coords
+            <MaterialIcon name={mode === 'mapper' ? 'explore' : 'tune'} size={18} /> {mode === 'mapper' ? 'Back to map' : 'Map tools'}
           </button>
-        </div>
+        </div>}
       </div>
 
       {/* ── Map Area ── */}
       <div className="campus-nav-map-area">
-        <div className="campus-nav-map-wrapper">
+        <div className="campus-nav-zoom-controls" role="group" aria-label="Map zoom controls">
+          <span className="campus-nav-touch-hint">Drag to move · Pinch or use + / −</span>
+          <button type="button" aria-label="Zoom out" disabled={viewport.zoom <= 1} onClick={() => viewport.zoomAt(viewport.zoom - .5)}>−</button>
+          <span className="campus-nav-zoom-value">{Math.round(viewport.zoom * 100)}%</span>
+          <button type="button" aria-label="Zoom in" disabled={viewport.zoom >= 4} onClick={() => viewport.zoomAt(viewport.zoom + .5)}>+</button>
+          <button type="button" aria-label="Fit map to screen" onClick={viewport.reset}><MaterialIcon name="fullscreen_exit" size={20} /></button>
+        </div>
+        <div className="campus-nav-viewport" ref={viewport.viewportRef} {...viewport.handlers} tabIndex={0}
+             role="region" aria-label="Campus map. Drag to move, pinch to zoom, or use the zoom buttons.">
+        <div className="campus-nav-map-stage">
+        <div className="campus-nav-map-wrapper" ref={viewport.canvasRef}
+             style={{ width: viewport.size.width * viewport.zoom, height: viewport.size.height * viewport.zoom }}>
           {/* The map image */}
           <img
             ref={imgRef}
@@ -227,6 +276,8 @@ export default function MapModule({ className = "", destination = null }) {
             alt="SPUS Campus Map"
             className="campus-nav-map-img"
             onClick={handleImageClick}
+            draggable={false}
+            onLoad={e => setAspectRatio(e.currentTarget.naturalWidth / e.currentTarget.naturalHeight)}
           />
 
           {/* ── SVG Overlay for nodes, path, pins ── */}
@@ -322,9 +373,17 @@ export default function MapModule({ className = "", destination = null }) {
                     stroke={strokeColor}
                     strokeWidth={strokeWidth}
                     className="campus-nav-node-dot"
+                    style={{ pointerEvents: 'none' }}
+                  />
+                  <circle cx={coords.x} cy={coords.y}
+                    r={Math.min(4, 16 / (viewport.size.width * viewport.zoom) * 100)}
+                    fill="transparent" className="campus-nav-node-hit" data-map-node={node.id}
+                    role="button" tabIndex={mode === 'navigate' ? 0 : -1} aria-label={node.name}
                     onMouseEnter={() => setHoveredNode(node.id)}
                     onMouseLeave={() => setHoveredNode(null)}
-                    onClick={(e) => { e.stopPropagation(); handleNodeClick(node.id); }}
+                    onFocus={() => setHoveredNode(node.id)} onBlur={() => setHoveredNode(null)}
+                    onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleNodeClick(node.id); } }}
+                    onClick={(e) => { e.stopPropagation(); if (!viewport.moved.current) handleNodeClick(node.id); }}
                     style={{ cursor: 'pointer' }}
                   />
                 </g>
@@ -357,6 +416,8 @@ export default function MapModule({ className = "", destination = null }) {
             );
           })()}
         </div>
+        </div>
+        </div>
       </div>
 
       {/* ── NAVIGATE MODE: Origin Picker Panel ── */}
@@ -372,17 +433,22 @@ export default function MapModule({ className = "", destination = null }) {
               </div>
               <div className="campus-nav-origin-prompt">Where are you right now?</div>
             </div>
+            <button type="button" className="campus-nav-change-destination" onClick={changeDestination}>Change destination</button>
           </div>
           
           <input
             type="text"
             className="campus-nav-search-input"
-            placeholder="Search location or click on the map..."
+            placeholder="Search your starting location"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            aria-label="Search starting locations" autoComplete="off"
           />
           
           <div className="campus-nav-location-list">
+            {isRouting && <p className="campus-nav-status" role="status">Finding your route…</p>}
+            {routeError && <div className="campus-nav-status" role="alert">{routeError} <button type="button" onClick={() => setRouteAttempt(attempt => attempt + 1)}>Try again</button></div>}
+            {!filteredNodes.some(n => n.id !== selectedDestination && hasCoordinates(n.id)) && <p className="campus-nav-status">No locations found. Try an office or building name.</p>}
             {filteredNodes
               .filter(n => n.id !== selectedDestination && hasCoordinates(n.id))
               .map(node => (
@@ -422,9 +488,11 @@ export default function MapModule({ className = "", destination = null }) {
             placeholder="Search for a location..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            aria-label="Search destinations" autoComplete="off"
           />
           
           <div className="campus-nav-location-list">
+            {!filteredNodes.some(n => hasCoordinates(n.id)) && <p className="campus-nav-status">No locations found. Try an office or building name.</p>}
             {filteredNodes.filter(n => hasCoordinates(n.id)).map(node => (
               <button
                 key={node.id}
@@ -435,7 +503,7 @@ export default function MapModule({ className = "", destination = null }) {
                   setSearchQuery('');
                 }}
               >
-                <span className="campus-nav-location-item-icon">{TYPE_ICONS[node.type]}</span>
+                <span className="campus-nav-location-item-icon"><MaterialIcon name={TYPE_ICONS[node.type] || 'location_on'} size={18} color={TYPE_COLORS[node.type]} /></span>
                 <span>{node.name}</span>
               </button>
             ))}
@@ -449,6 +517,7 @@ export default function MapModule({ className = "", destination = null }) {
           <button
             className="campus-nav-directions-toggle"
             onClick={() => setShowDirections(!showDirections)}
+            aria-expanded={showDirections}
           >
             <div className="campus-nav-directions-summary">
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
@@ -456,7 +525,7 @@ export default function MapModule({ className = "", destination = null }) {
                 {CAMPUS_NODES[origin]?.name} → {CAMPUS_NODES[selectedDestination]?.name}
               </span>
               <span className="campus-nav-directions-time">
-                ~{Math.ceil((pathResult.distance_pixels * 0.05) / 60)} min walk
+                Route ready · Follow the highlighted path
               </span>
             </div>
             <span className="campus-nav-directions-chevron">{showDirections ? '▼' : '▲'}</span>
@@ -474,6 +543,7 @@ export default function MapModule({ className = "", destination = null }) {
               <button className="campus-nav-reset-btn" onClick={resetNavigation} style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}>
                 <MaterialIcon name="refresh" size={15} style={{ marginRight: '6px' }} /> Change Starting Point
               </button>
+              <button className="campus-nav-reset-btn" onClick={changeDestination}>Change destination</button>
             </div>
           )}
         </div>
@@ -495,6 +565,7 @@ export default function MapModule({ className = "", destination = null }) {
               : 'Select a node below, then click the map to set its position.'
             }
           </p>
+          <p className="campus-nav-mapper-instructions">Preview and export only. Changes are not saved automatically; apply the exported coordinates to the map configuration and verify routing before publishing.</p>
 
           <div className="campus-nav-mapper-list">
             {Object.values(CAMPUS_NODES)

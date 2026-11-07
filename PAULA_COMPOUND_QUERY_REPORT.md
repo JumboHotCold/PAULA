@@ -1,5 +1,7 @@
 # PAULA multi-part conversational retrieval implementation
 
+> Subsequent performance work: [PAULA_PERFORMANCE_PHASE1.md](PAULA_PERFORMANCE_PHASE1.md).
+
 Implementation and verification: 28 October 2026.
 
 ## Verified starting state and root cause

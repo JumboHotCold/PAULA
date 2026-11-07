@@ -1,0 +1,1446 @@
+{
+  "before": {
+    "social": {
+      "n": 24,
+      "p50_ms": 145.38,
+      "p95_ms": 1070.6
+    },
+    "mixed": {
+      "n": 3,
+      "p50_ms": 245.34,
+      "p95_ms": 397.61
+    },
+    "knowledge": {
+      "n": 9,
+      "p50_ms": 112.76,
+      "p95_ms": 511.88
+    }
+  },
+  "after": {
+    "social": {
+      "n": 24,
+      "p50_ms": 8.29,
+      "p95_ms": 39.98
+    },
+    "mixed": {
+      "n": 3,
+      "p50_ms": 167.38,
+      "p95_ms": 193.74
+    },
+    "knowledge": {
+      "n": 9,
+      "p50_ms": 67.74,
+      "p95_ms": 597.66
+    }
+  },
+  "social_provider_calls": 0,
+  "social_sql_queries": 0,
+  "correlated_traces": 36,
+  "traces": [
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "0e5c560a-164b-4c97-85f3-17c6364d7b2b",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.02,
+          "self_ms": 0.02
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 0.332,
+          "self_ms": 0.175
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.136,
+          "self_ms": 0.136
+        }
+      },
+      "status": 200,
+      "total_ms": 1.38,
+      "worker": 57,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "76b9ec4f-e3df-4bb4-97f5-4f697eae81f1",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.021,
+          "self_ms": 0.021
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 0.23,
+          "self_ms": 0.116
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.093,
+          "self_ms": 0.093
+        }
+      },
+      "status": 200,
+      "total_ms": 1.21,
+      "worker": 55,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "b16ea453-ee2c-4b6d-a2f3-b6f73ba15d1f",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.014,
+          "self_ms": 0.014
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 0.099,
+          "self_ms": 0.08
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.006,
+          "self_ms": 0.006
+        }
+      },
+      "status": 200,
+      "total_ms": 0.87,
+      "worker": 55,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "3b4cbb78-4f4f-4129-b81c-d498285d2848",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.015,
+          "self_ms": 0.015
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 0.112,
+          "self_ms": 0.091
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.006,
+          "self_ms": 0.006
+        }
+      },
+      "status": 200,
+      "total_ms": 1.02,
+      "worker": 55,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "aa99df0d-af2f-43eb-a9e3-05060be2d270",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 38.749,
+          "self_ms": 9.895
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 38.928,
+          "self_ms": 0.169
+        },
+        "social_query_embedding": {
+          "calls": 1,
+          "inclusive_ms": 28.854,
+          "self_ms": 28.854
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.01,
+          "self_ms": 0.01
+        }
+      },
+      "status": 200,
+      "total_ms": 40.12,
+      "worker": 55,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "d6db3cc6-9c95-4b21-be9c-daef8af2e7da",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.016,
+          "self_ms": 0.016
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 0.126,
+          "self_ms": 0.103
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.007,
+          "self_ms": 0.007
+        }
+      },
+      "status": 200,
+      "total_ms": 1.51,
+      "worker": 57,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "bc1d0a1d-9323-4b00-88bb-be85991ddb72",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.388,
+          "self_ms": 0.388
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 0.629,
+          "self_ms": 0.134
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.106,
+          "self_ms": 0.106
+        }
+      },
+      "status": 200,
+      "total_ms": 1.94,
+      "worker": 56,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "44c7e58d-920e-49f2-88e1-1d9baeb3f394",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 22.152,
+          "self_ms": 1.003
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 22.343,
+          "self_ms": 0.176
+        },
+        "social_query_embedding": {
+          "calls": 1,
+          "inclusive_ms": 21.149,
+          "self_ms": 21.149
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.014,
+          "self_ms": 0.014
+        }
+      },
+      "status": 200,
+      "total_ms": 23.67,
+      "worker": 56,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "3769fe30-4f99-43f2-8d44-6e79228f0ac5",
+      "route": "chat",
+      "sql_count": 4,
+      "sql_ms": 41.7,
+      "stages": {
+        "context_resolution": {
+          "calls": 1,
+          "inclusive_ms": 0.238,
+          "self_ms": 0.238
+        },
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.06,
+          "self_ms": 0.06
+        },
+        "followup_suggestions": {
+          "calls": 1,
+          "inclusive_ms": 23.096,
+          "self_ms": 23.096
+        },
+        "grounding": {
+          "calls": 5,
+          "inclusive_ms": 2.756,
+          "self_ms": 2.756
+        },
+        "normalization": {
+          "calls": 1,
+          "inclusive_ms": 0.225,
+          "self_ms": 0.225
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 128.834,
+          "self_ms": 1.672
+        },
+        "response_render": {
+          "calls": 1,
+          "inclusive_ms": 0.029,
+          "self_ms": 0.029
+        },
+        "retrieval": {
+          "calls": 1,
+          "inclusive_ms": 125.836,
+          "self_ms": 0.398
+        },
+        "structured_personnel": {
+          "calls": 1,
+          "inclusive_ms": 125.438,
+          "self_ms": 123.456
+        }
+      },
+      "status": 200,
+      "total_ms": 153.6,
+      "worker": 56,
+      "category": "mixed"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "846b45b3-eb47-4678-8131-3e7cffa830dc",
+      "route": "chat",
+      "sql_count": 14,
+      "sql_ms": 169.86,
+      "stages": {
+        "context_resolution": {
+          "calls": 5,
+          "inclusive_ms": 2.303,
+          "self_ms": 1.952
+        },
+        "dialogue_routing": {
+          "calls": 3,
+          "inclusive_ms": 1.113,
+          "self_ms": 1.113
+        },
+        "followup_suggestions": {
+          "calls": 1,
+          "inclusive_ms": 27.818,
+          "self_ms": 27.818
+        },
+        "grounding": {
+          "calls": 10,
+          "inclusive_ms": 5.193,
+          "self_ms": 5.193
+        },
+        "normalization": {
+          "calls": 3,
+          "inclusive_ms": 0.273,
+          "self_ms": 0.273
+        },
+        "orchestration": {
+          "calls": 3,
+          "inclusive_ms": 1020.296,
+          "self_ms": 9.897
+        },
+        "public_vocabulary": {
+          "calls": 1,
+          "inclusive_ms": 60.459,
+          "self_ms": 60.459
+        },
+        "response_render": {
+          "calls": 2,
+          "inclusive_ms": 0.142,
+          "self_ms": 0.142
+        },
+        "retrieval": {
+          "calls": 2,
+          "inclusive_ms": 465.775,
+          "self_ms": 0.571
+        },
+        "structured_personnel": {
+          "calls": 2,
+          "inclusive_ms": 465.204,
+          "self_ms": 461.586
+        }
+      },
+      "status": 200,
+      "total_ms": 570.13,
+      "worker": 55,
+      "category": "knowledge"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "308d5bd4-9851-46ca-a73f-b4378c19d0f5",
+      "route": "chat",
+      "sql_count": 2,
+      "sql_ms": 25.73,
+      "stages": {
+        "context_resolution": {
+          "calls": 1,
+          "inclusive_ms": 0.109,
+          "self_ms": 0.109
+        },
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.039,
+          "self_ms": 0.039
+        },
+        "exact_faq": {
+          "calls": 1,
+          "inclusive_ms": 56.685,
+          "self_ms": 56.393
+        },
+        "followup_suggestions": {
+          "calls": 1,
+          "inclusive_ms": 25.821,
+          "self_ms": 25.821
+        },
+        "grounding": {
+          "calls": 2,
+          "inclusive_ms": 0.539,
+          "self_ms": 0.539
+        },
+        "normalization": {
+          "calls": 1,
+          "inclusive_ms": 0.228,
+          "self_ms": 0.228
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 58.403,
+          "self_ms": 0.802
+        },
+        "response_render": {
+          "calls": 1,
+          "inclusive_ms": 0.028,
+          "self_ms": 0.028
+        },
+        "retrieval": {
+          "calls": 1,
+          "inclusive_ms": 56.951,
+          "self_ms": 0.262
+        },
+        "structured_personnel": {
+          "calls": 1,
+          "inclusive_ms": 0.004,
+          "self_ms": 0.004
+        }
+      },
+      "status": 200,
+      "total_ms": 85.47,
+      "worker": 55,
+      "category": "knowledge"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "6e4ffd9c-4b5f-4f66-a125-1455fad26430",
+      "route": "chat",
+      "sql_count": 7,
+      "sql_ms": 11.36,
+      "stages": {
+        "context_resolution": {
+          "calls": 1,
+          "inclusive_ms": 0.27,
+          "self_ms": 0.27
+        },
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.037,
+          "self_ms": 0.037
+        },
+        "normalization": {
+          "calls": 1,
+          "inclusive_ms": 0.022,
+          "self_ms": 0.022
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 48.561,
+          "self_ms": 0.937
+        },
+        "public_vocabulary": {
+          "calls": 1,
+          "inclusive_ms": 47.296,
+          "self_ms": 47.296
+        }
+      },
+      "status": 200,
+      "total_ms": 49.56,
+      "worker": 56,
+      "category": "knowledge"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "ebe59e92-423a-4daf-954e-ce3805b1b8ee",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.054,
+          "self_ms": 0.054
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 0.744,
+          "self_ms": 0.681
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.008,
+          "self_ms": 0.008
+        }
+      },
+      "status": 200,
+      "total_ms": 1.94,
+      "worker": 56,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "99027038-f57e-4239-b8e8-74c28e47d8b1",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.013,
+          "self_ms": 0.013
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 0.095,
+          "self_ms": 0.076
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.005,
+          "self_ms": 0.005
+        }
+      },
+      "status": 200,
+      "total_ms": 1.01,
+      "worker": 55,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "77043364-cc1e-4deb-9d3f-efc5b959492a",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.022,
+          "self_ms": 0.022
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 0.188,
+          "self_ms": 0.157
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.009,
+          "self_ms": 0.009
+        }
+      },
+      "status": 200,
+      "total_ms": 1.41,
+      "worker": 56,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "c872aa34-5120-443d-abb1-560fa7b10a97",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.014,
+          "self_ms": 0.014
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 0.103,
+          "self_ms": 0.082
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.007,
+          "self_ms": 0.007
+        }
+      },
+      "status": 200,
+      "total_ms": 0.91,
+      "worker": 57,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "dee31d4f-95f5-4c21-bd61-00784a396f4d",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 19.116,
+          "self_ms": 1.047
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 19.258,
+          "self_ms": 0.133
+        },
+        "social_query_embedding": {
+          "calls": 1,
+          "inclusive_ms": 18.068,
+          "self_ms": 18.068
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.009,
+          "self_ms": 0.009
+        }
+      },
+      "status": 200,
+      "total_ms": 20.29,
+      "worker": 57,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "238d75a2-ac25-4ebb-8c7c-42f11be7f5d9",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.015,
+          "self_ms": 0.015
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 0.098,
+          "self_ms": 0.078
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.005,
+          "self_ms": 0.005
+        }
+      },
+      "status": 200,
+      "total_ms": 0.86,
+      "worker": 57,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "2d9a364d-338e-49b1-b24a-4f117d15823f",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.347,
+          "self_ms": 0.347
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 0.44,
+          "self_ms": 0.085
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.009,
+          "self_ms": 0.009
+        }
+      },
+      "status": 200,
+      "total_ms": 1.16,
+      "worker": 55,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "fd47f8d9-87e6-4ec2-bed2-08fbda59658a",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 19.405,
+          "self_ms": 1.303
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 19.591,
+          "self_ms": 0.178
+        },
+        "social_query_embedding": {
+          "calls": 1,
+          "inclusive_ms": 18.102,
+          "self_ms": 18.102
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.009,
+          "self_ms": 0.009
+        }
+      },
+      "status": 200,
+      "total_ms": 20.89,
+      "worker": 56,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "4f0809a5-e3ad-48fa-b35c-ce19d5fbb6de",
+      "route": "chat",
+      "sql_count": 4,
+      "sql_ms": 31.55,
+      "stages": {
+        "context_resolution": {
+          "calls": 1,
+          "inclusive_ms": 0.127,
+          "self_ms": 0.127
+        },
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.08,
+          "self_ms": 0.08
+        },
+        "followup_suggestions": {
+          "calls": 1,
+          "inclusive_ms": 24.114,
+          "self_ms": 24.114
+        },
+        "grounding": {
+          "calls": 5,
+          "inclusive_ms": 2.364,
+          "self_ms": 2.364
+        },
+        "normalization": {
+          "calls": 1,
+          "inclusive_ms": 0.023,
+          "self_ms": 0.023
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 99.325,
+          "self_ms": 0.907
+        },
+        "response_render": {
+          "calls": 1,
+          "inclusive_ms": 0.029,
+          "self_ms": 0.029
+        },
+        "retrieval": {
+          "calls": 1,
+          "inclusive_ms": 97.43,
+          "self_ms": 0.267
+        },
+        "structured_personnel": {
+          "calls": 1,
+          "inclusive_ms": 97.163,
+          "self_ms": 95.527
+        }
+      },
+      "status": 200,
+      "total_ms": 124.52,
+      "worker": 55,
+      "category": "mixed"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "bdaa98ce-c1ff-4325-84c4-6ad9f9dae5ed",
+      "route": "chat",
+      "sql_count": 14,
+      "sql_ms": 56.47,
+      "stages": {
+        "context_resolution": {
+          "calls": 5,
+          "inclusive_ms": 2.244,
+          "self_ms": 1.936
+        },
+        "dialogue_routing": {
+          "calls": 3,
+          "inclusive_ms": 1.137,
+          "self_ms": 1.137
+        },
+        "followup_suggestions": {
+          "calls": 1,
+          "inclusive_ms": 28.549,
+          "self_ms": 28.549
+        },
+        "grounding": {
+          "calls": 10,
+          "inclusive_ms": 5.143,
+          "self_ms": 5.143
+        },
+        "normalization": {
+          "calls": 3,
+          "inclusive_ms": 0.269,
+          "self_ms": 0.269
+        },
+        "orchestration": {
+          "calls": 3,
+          "inclusive_ms": 393.293,
+          "self_ms": 10.984
+        },
+        "public_vocabulary": {
+          "calls": 1,
+          "inclusive_ms": 45.175,
+          "self_ms": 45.175
+        },
+        "response_render": {
+          "calls": 2,
+          "inclusive_ms": 0.136,
+          "self_ms": 0.136
+        },
+        "retrieval": {
+          "calls": 2,
+          "inclusive_ms": 158.785,
+          "self_ms": 0.495
+        },
+        "structured_personnel": {
+          "calls": 2,
+          "inclusive_ms": 158.289,
+          "self_ms": 154.778
+        }
+      },
+      "status": 200,
+      "total_ms": 249.99,
+      "worker": 57,
+      "category": "knowledge"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "42a8a419-47cc-4c31-aaf8-496de84f0e55",
+      "route": "chat",
+      "sql_count": 2,
+      "sql_ms": 5.52,
+      "stages": {
+        "context_resolution": {
+          "calls": 1,
+          "inclusive_ms": 0.979,
+          "self_ms": 0.979
+        },
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.044,
+          "self_ms": 0.044
+        },
+        "exact_faq": {
+          "calls": 1,
+          "inclusive_ms": 24.762,
+          "self_ms": 23.717
+        },
+        "followup_suggestions": {
+          "calls": 1,
+          "inclusive_ms": 23.434,
+          "self_ms": 23.434
+        },
+        "grounding": {
+          "calls": 2,
+          "inclusive_ms": 1.291,
+          "self_ms": 1.291
+        },
+        "normalization": {
+          "calls": 1,
+          "inclusive_ms": 0.348,
+          "self_ms": 0.348
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 35.001,
+          "self_ms": 8.214
+        },
+        "response_render": {
+          "calls": 1,
+          "inclusive_ms": 0.081,
+          "self_ms": 0.081
+        },
+        "retrieval": {
+          "calls": 1,
+          "inclusive_ms": 25.089,
+          "self_ms": 0.257
+        },
+        "structured_personnel": {
+          "calls": 1,
+          "inclusive_ms": 0.071,
+          "self_ms": 0.071
+        }
+      },
+      "status": 200,
+      "total_ms": 59.59,
+      "worker": 56,
+      "category": "knowledge"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "5cc2d77b-6b70-45c5-9811-cb617aeb7617",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "context_resolution": {
+          "calls": 1,
+          "inclusive_ms": 0.657,
+          "self_ms": 0.657
+        },
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.039,
+          "self_ms": 0.039
+        },
+        "normalization": {
+          "calls": 1,
+          "inclusive_ms": 0.138,
+          "self_ms": 0.138
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 1.468,
+          "self_ms": 0.617
+        },
+        "public_vocabulary": {
+          "calls": 1,
+          "inclusive_ms": 0.017,
+          "self_ms": 0.017
+        }
+      },
+      "status": 200,
+      "total_ms": 2.56,
+      "worker": 56,
+      "category": "knowledge"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "7efdf0b2-1222-406a-99bf-55ddc0a5cccc",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.02,
+          "self_ms": 0.02
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 0.175,
+          "self_ms": 0.144
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.011,
+          "self_ms": 0.011
+        }
+      },
+      "status": 200,
+      "total_ms": 1.34,
+      "worker": 56,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "1d6e5833-4519-4ec8-8d79-fb369dd8b428",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.014,
+          "self_ms": 0.014
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 0.099,
+          "self_ms": 0.079
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.005,
+          "self_ms": 0.005
+        }
+      },
+      "status": 200,
+      "total_ms": 1.1,
+      "worker": 57,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "a339cf2b-0587-4687-9280-b8cf8364fe74",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.014,
+          "self_ms": 0.014
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 0.105,
+          "self_ms": 0.085
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.006,
+          "self_ms": 0.006
+        }
+      },
+      "status": 200,
+      "total_ms": 0.88,
+      "worker": 57,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "535309ba-a7d4-4ec7-8145-076793a2b4ab",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.017,
+          "self_ms": 0.017
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 0.106,
+          "self_ms": 0.082
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.007,
+          "self_ms": 0.007
+        }
+      },
+      "status": 200,
+      "total_ms": 0.94,
+      "worker": 56,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "a809bbe8-951c-49c0-875a-cc7b61b95604",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 18.582,
+          "self_ms": 0.486
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 18.771,
+          "self_ms": 0.119
+        },
+        "social_query_embedding": {
+          "calls": 1,
+          "inclusive_ms": 18.095,
+          "self_ms": 18.095
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.07,
+          "self_ms": 0.07
+        }
+      },
+      "status": 200,
+      "total_ms": 19.6,
+      "worker": 57,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "ea13c629-9427-48d6-aa4f-127d88aadcfb",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.019,
+          "self_ms": 0.019
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 0.245,
+          "self_ms": 0.142
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.083,
+          "self_ms": 0.083
+        }
+      },
+      "status": 200,
+      "total_ms": 1.51,
+      "worker": 56,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "fa4fa556-5a14-4fde-8c86-843f2bf0e9c4",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.296,
+          "self_ms": 0.296
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 0.374,
+          "self_ms": 0.073
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.004,
+          "self_ms": 0.004
+        }
+      },
+      "status": 200,
+      "total_ms": 1.04,
+      "worker": 56,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "ec83cf7b-1db9-4125-a691-3d10d950462c",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 17.764,
+          "self_ms": 0.236
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 17.908,
+          "self_ms": 0.135
+        },
+        "social_query_embedding": {
+          "calls": 1,
+          "inclusive_ms": 17.528,
+          "self_ms": 17.528
+        },
+        "social_reply": {
+          "calls": 1,
+          "inclusive_ms": 0.009,
+          "self_ms": 0.009
+        }
+      },
+      "status": 200,
+      "total_ms": 18.85,
+      "worker": 55,
+      "category": "social"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "4ff8689a-617e-44a2-888c-2a5ff383244d",
+      "route": "chat",
+      "sql_count": 4,
+      "sql_ms": 47.97,
+      "stages": {
+        "context_resolution": {
+          "calls": 1,
+          "inclusive_ms": 0.104,
+          "self_ms": 0.104
+        },
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.108,
+          "self_ms": 0.108
+        },
+        "followup_suggestions": {
+          "calls": 1,
+          "inclusive_ms": 22.149,
+          "self_ms": 22.149
+        },
+        "grounding": {
+          "calls": 5,
+          "inclusive_ms": 2.527,
+          "self_ms": 2.527
+        },
+        "normalization": {
+          "calls": 1,
+          "inclusive_ms": 0.019,
+          "self_ms": 0.019
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 148.592,
+          "self_ms": 0.808
+        },
+        "response_render": {
+          "calls": 1,
+          "inclusive_ms": 0.032,
+          "self_ms": 0.032
+        },
+        "retrieval": {
+          "calls": 1,
+          "inclusive_ms": 146.745,
+          "self_ms": 0.283
+        },
+        "structured_personnel": {
+          "calls": 1,
+          "inclusive_ms": 146.462,
+          "self_ms": 144.711
+        }
+      },
+      "status": 200,
+      "total_ms": 171.69,
+      "worker": 56,
+      "category": "mixed"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "287788ea-af43-437d-a61c-03211cf434c6",
+      "route": "chat",
+      "sql_count": 7,
+      "sql_ms": 52.14,
+      "stages": {
+        "context_resolution": {
+          "calls": 5,
+          "inclusive_ms": 1.441,
+          "self_ms": 1.043
+        },
+        "dialogue_routing": {
+          "calls": 3,
+          "inclusive_ms": 0.11,
+          "self_ms": 0.11
+        },
+        "followup_suggestions": {
+          "calls": 1,
+          "inclusive_ms": 23.459,
+          "self_ms": 23.459
+        },
+        "grounding": {
+          "calls": 10,
+          "inclusive_ms": 4.957,
+          "self_ms": 4.957
+        },
+        "normalization": {
+          "calls": 3,
+          "inclusive_ms": 0.059,
+          "self_ms": 0.059
+        },
+        "orchestration": {
+          "calls": 3,
+          "inclusive_ms": 462.976,
+          "self_ms": 2.067
+        },
+        "public_vocabulary": {
+          "calls": 1,
+          "inclusive_ms": 0.016,
+          "self_ms": 0.016
+        },
+        "response_render": {
+          "calls": 2,
+          "inclusive_ms": 0.065,
+          "self_ms": 0.065
+        },
+        "retrieval": {
+          "calls": 2,
+          "inclusive_ms": 227.272,
+          "self_ms": 0.663
+        },
+        "structured_personnel": {
+          "calls": 2,
+          "inclusive_ms": 226.609,
+          "self_ms": 223.296
+        }
+      },
+      "status": 200,
+      "total_ms": 256.88,
+      "worker": 56,
+      "category": "knowledge"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "cecc9266-71c9-4096-b21a-0d9039710849",
+      "route": "chat",
+      "sql_count": 2,
+      "sql_ms": 7.22,
+      "stages": {
+        "context_resolution": {
+          "calls": 1,
+          "inclusive_ms": 0.1,
+          "self_ms": 0.1
+        },
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.043,
+          "self_ms": 0.043
+        },
+        "exact_faq": {
+          "calls": 1,
+          "inclusive_ms": 26.602,
+          "self_ms": 26.32
+        },
+        "followup_suggestions": {
+          "calls": 1,
+          "inclusive_ms": 28.102,
+          "self_ms": 28.102
+        },
+        "grounding": {
+          "calls": 2,
+          "inclusive_ms": 0.516,
+          "self_ms": 0.516
+        },
+        "normalization": {
+          "calls": 1,
+          "inclusive_ms": 0.206,
+          "self_ms": 0.206
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 28.047,
+          "self_ms": 0.687
+        },
+        "response_render": {
+          "calls": 1,
+          "inclusive_ms": 0.024,
+          "self_ms": 0.024
+        },
+        "retrieval": {
+          "calls": 1,
+          "inclusive_ms": 26.752,
+          "self_ms": 0.144
+        },
+        "structured_personnel": {
+          "calls": 1,
+          "inclusive_ms": 0.006,
+          "self_ms": 0.006
+        }
+      },
+      "status": 200,
+      "total_ms": 57.2,
+      "worker": 56,
+      "category": "knowledge"
+    },
+    {
+      "event": "request_timing",
+      "providers": [],
+      "request_id": "90b83193-87f6-4ac6-8cf6-347895195a2f",
+      "route": "chat",
+      "sql_count": 0,
+      "sql_ms": 0.0,
+      "stages": {
+        "context_resolution": {
+          "calls": 1,
+          "inclusive_ms": 0.315,
+          "self_ms": 0.315
+        },
+        "dialogue_routing": {
+          "calls": 1,
+          "inclusive_ms": 0.037,
+          "self_ms": 0.037
+        },
+        "normalization": {
+          "calls": 1,
+          "inclusive_ms": 0.029,
+          "self_ms": 0.029
+        },
+        "orchestration": {
+          "calls": 1,
+          "inclusive_ms": 1.316,
+          "self_ms": 0.918
+        },
+        "public_vocabulary": {
+          "calls": 1,
+          "inclusive_ms": 0.018,
+          "self_ms": 0.018
+        }
+      },
+      "status": 200,
+      "total_ms": 2.36,
+      "worker": 57,
+      "category": "knowledge"
+    }
+  ],
+  "limitations": "36 sequential local HTTP requests per phase; n=3 per query; no concurrency capacity, universal accuracy or general RAG speedup claim"
+}

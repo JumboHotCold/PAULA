@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import ThemeToggle from './ThemeToggle';
+import { backendUrl } from '../utils/backendUrl';
 import MaterialIcon from './MaterialIcon';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell
@@ -80,7 +81,7 @@ function CampusPulseHeatmap({ data }) {
   const totalH = topLabelHeight + 7 * (cellSize + gap);
 
   return (
-    <svg viewBox={`0 0 ${totalW} ${totalH}`} width="100%" style={{ maxWidth: totalW }}>
+    <svg viewBox={`0 0 ${totalW} ${totalH}`} width="100%" style={{ maxWidth: totalW, minWidth: totalW }} role="img" aria-label="Chat volume by day and hour. Scroll horizontally to view all hours.">
       {/* Hour labels */}
       {Array.from({ length: 24 }, (_, h) => (
         <text
@@ -88,7 +89,7 @@ function CampusPulseHeatmap({ data }) {
           x={labelWidth + h * (cellSize + gap) + cellSize / 2}
           y={14}
           textAnchor="middle"
-          fontSize="7"
+          fontSize="9"
           fill="var(--text-light)"
         >
           {h}
@@ -101,7 +102,7 @@ function CampusPulseHeatmap({ data }) {
             x={labelWidth - 5}
             y={topLabelHeight + d * (cellSize + gap) + cellSize / 2 + 3}
             textAnchor="end"
-            fontSize="8"
+            fontSize="10"
             fill="var(--text-light)"
           >
             {DAY_LABELS[d]}
@@ -218,16 +219,16 @@ export default function AdminDashboard({ user, onBackToChat }) {
           <h1 className="admin-title">Institutional Analytics</h1>
           <p className="admin-subtitle">Campus-wide student needs overview — Real-time monitoring</p>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+        <div className="admin-header-actions" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
           <ThemeToggle />
           <a 
-            href="http://localhost:8000/admin/" 
+            href={backendUrl('/admin/')}
             target="_blank" 
             rel="noopener noreferrer"
             className="admin-action-btn primary"
             style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}
           >
-            <MaterialIcon name="shield" size={18} color="#ffffff" /> Full Power Admin (Unfold)
+            <MaterialIcon name="shield" size={18} color="#ffffff" /> Knowledge & User Administration
           </a>
           <button className="admin-back-btn" onClick={onBackToChat}>
             ← Back to Chat
@@ -495,7 +496,8 @@ export default function AdminDashboard({ user, onBackToChat }) {
           </div>
         ) : (
           <>
-            <div style={{ overflowX: 'auto' }}>
+            <p className="admin-table-scroll-hint">Swipe the table to see all columns.</p>
+            <div style={{ overflowX: 'auto' }} tabIndex={0} role="region" aria-label="Student cases. Scroll horizontally for more columns.">
               <table className="admin-data-table">
                 <thead>
                   <tr>

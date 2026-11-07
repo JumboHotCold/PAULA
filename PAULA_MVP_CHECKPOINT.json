@@ -1,0 +1,8 @@
+{
+    "commit":  "f2abed9b25467229117b292e70135e32ecd097b6",
+    "scope":  "Application source, configuration, public knowledge sources/assets, and PAULA reports. Existing working tree, normal index, database files/volumes and credentials preserved; no push.",
+    "files":  236,
+    "parent":  "d8947c6aa4eba8094279e31dac2d71bd14e3c32a",
+    "tree":  "649e4ed8c175472985a1ee34c31f4c21a3ac8882",
+    "ref":  "refs/heads/checkpoint/mvp-stabilization-20261107-23ba8e57"
+}

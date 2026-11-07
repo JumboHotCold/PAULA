@@ -2,16 +2,23 @@
 Management command to seed the Knowledge Base tables from the legacy data.py file.
 This migrates the hardcoded data into the PostgreSQL database so Faculty can manage it.
 """
-from django.core.management.base import BaseCommand
-from chatbot.models import Location, StaffMember, FAQ
+from django.core.management.base import BaseCommand, CommandError
+from django.db import connection, transaction
+from chatbot.models import Location, StaffMember, FAQ, WebResource
 from chatbot.data import LOCATIONS, STAFF, FAQS
 
 
 class Command(BaseCommand):
     help = 'Seed the Knowledge Base tables with initial data from data.py'
 
+    @transaction.atomic
     def handle(self, *args, **options):
-        self.stdout.write("Seeding Knowledge Base...")
+        if connection.vendor != 'postgresql':
+            raise CommandError('PAULA requires PostgreSQL.')
+        if any(model.objects.exists() for model in (Location, StaffMember, FAQ, WebResource)):
+            raise CommandError('Legacy seed is allowed only on an empty knowledge database. Existing facts were preserved. Use reviewed ingestion instead.')
+        self.stdout.write(self.style.WARNING('Legacy starter data is not the current reviewed knowledge base. Verify all facts before use.'))
+        self.stdout.write('Seeding empty knowledge database...')
 
         # Seed Locations
         for key, data in LOCATIONS.items():

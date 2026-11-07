@@ -1,0 +1,452 @@
+[
+  {
+    "screen": "entry",
+    "width": 320,
+    "height": 568,
+    "documentWidth": 320,
+    "header": null,
+    "composer": null,
+    "module": null,
+    "close": null,
+    "map": null,
+    "image": null,
+    "picker": null,
+    "mapHeader": null,
+    "tinyButtons": []
+  },
+  {
+    "screen": "entry",
+    "width": 375,
+    "height": 812,
+    "documentWidth": 375,
+    "header": null,
+    "composer": null,
+    "module": null,
+    "close": null,
+    "map": null,
+    "image": null,
+    "picker": null,
+    "mapHeader": null,
+    "tinyButtons": []
+  },
+  {
+    "screen": "entry",
+    "width": 768,
+    "height": 1024,
+    "documentWidth": 768,
+    "header": null,
+    "composer": null,
+    "module": null,
+    "close": null,
+    "map": null,
+    "image": null,
+    "picker": null,
+    "mapHeader": null,
+    "tinyButtons": []
+  },
+  {
+    "screen": "chat",
+    "width": 375,
+    "height": 812,
+    "documentWidth": 375,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 61,
+      "bottom": 61,
+      "right": 375
+    },
+    "composer": {
+      "x": 0,
+      "y": 743,
+      "width": 375,
+      "height": 69,
+      "bottom": 812,
+      "right": 375
+    },
+    "module": null,
+    "close": null,
+    "map": null,
+    "image": null,
+    "picker": null,
+    "mapHeader": null,
+    "tinyButtons": [
+      {
+        "label": "What programs are offered?",
+        "width": 104.70001220703125,
+        "height": 14.2828369140625
+      },
+      {
+        "label": "How do I enroll?",
+        "width": 104.70001220703125,
+        "height": 14.2828369140625
+      },
+      {
+        "label": "Where is the registrar office?",
+        "width": 104.70001220703125,
+        "height": 14.2828369140625
+      },
+      {
+        "label": "Does SPUS offer scholarships?",
+        "width": 104.70001220703125,
+        "height": 14.2828369140625
+      }
+    ]
+  },
+  {
+    "screen": "map",
+    "width": 320,
+    "height": 568,
+    "documentWidth": 320,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "bottom": 0,
+      "right": 0
+    },
+    "composer": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "bottom": 0,
+      "right": 0
+    },
+    "module": {
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 568,
+      "bottom": 568,
+      "right": 320
+    },
+    "close": {
+      "x": 180.34375,
+      "y": 4,
+      "width": 127.65625,
+      "height": 44,
+      "bottom": 48,
+      "right": 308
+    },
+    "map": {
+      "x": 4,
+      "y": 113,
+      "width": 312,
+      "height": 235.171875,
+      "bottom": 348.171875,
+      "right": 316
+    },
+    "image": {
+      "x": 34.03125,
+      "y": 179.078125,
+      "width": 251.921875,
+      "height": 156,
+      "bottom": 335.078125,
+      "right": 285.953125
+    },
+    "picker": {
+      "x": 4,
+      "y": 348.171875,
+      "width": 312,
+      "height": 215.828125,
+      "bottom": 564,
+      "right": 316
+    },
+    "mapHeader": {
+      "x": 4,
+      "y": 52,
+      "width": 312,
+      "height": 61,
+      "bottom": 113,
+      "right": 316
+    },
+    "tinyButtons": []
+  },
+  {
+    "screen": "map",
+    "width": 375,
+    "height": 812,
+    "documentWidth": 375,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "bottom": 0,
+      "right": 0
+    },
+    "composer": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "bottom": 0,
+      "right": 0
+    },
+    "module": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 812,
+      "bottom": 812,
+      "right": 375
+    },
+    "close": {
+      "x": 235.34375,
+      "y": 4,
+      "width": 127.65625,
+      "height": 44,
+      "bottom": 48,
+      "right": 363
+    },
+    "map": {
+      "x": 4,
+      "y": 113,
+      "width": 367,
+      "height": 386.453125,
+      "bottom": 499.453125,
+      "right": 371
+    },
+    "image": {
+      "x": 17,
+      "y": 227.015625,
+      "width": 341,
+      "height": 211.421875,
+      "bottom": 438.4375,
+      "right": 358
+    },
+    "picker": {
+      "x": 4,
+      "y": 499.453125,
+      "width": 367,
+      "height": 308.546875,
+      "bottom": 808,
+      "right": 371
+    },
+    "mapHeader": {
+      "x": 4,
+      "y": 52,
+      "width": 367,
+      "height": 61,
+      "bottom": 113,
+      "right": 371
+    },
+    "tinyButtons": []
+  },
+  {
+    "screen": "map",
+    "width": 812,
+    "height": 375,
+    "documentWidth": 812,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "bottom": 0,
+      "right": 0
+    },
+    "composer": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "bottom": 0,
+      "right": 0
+    },
+    "module": {
+      "x": 0,
+      "y": 0,
+      "width": 812,
+      "height": 375,
+      "bottom": 375,
+      "right": 812
+    },
+    "close": {
+      "x": 680.34375,
+      "y": 4,
+      "width": 127.65625,
+      "height": 44,
+      "bottom": 48,
+      "right": 808
+    },
+    "map": {
+      "x": 4,
+      "y": 103,
+      "width": 514.5625,
+      "height": 268,
+      "bottom": 371,
+      "right": 518.5625
+    },
+    "image": {
+      "x": 108.796875,
+      "y": 169,
+      "width": 304.953125,
+      "height": 189,
+      "bottom": 358,
+      "right": 413.75
+    },
+    "picker": {
+      "x": 518.5625,
+      "y": 103,
+      "width": 289.4375,
+      "height": 268,
+      "bottom": 371,
+      "right": 808
+    },
+    "mapHeader": {
+      "x": 4,
+      "y": 50,
+      "width": 804,
+      "height": 53,
+      "bottom": 103,
+      "right": 808
+    },
+    "tinyButtons": []
+  },
+  {
+    "screen": "map",
+    "width": 768,
+    "height": 1024,
+    "documentWidth": 768,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "bottom": 0,
+      "right": 0
+    },
+    "composer": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "bottom": 0,
+      "right": 0
+    },
+    "module": {
+      "x": 0,
+      "y": 0,
+      "width": 768,
+      "height": 1024,
+      "bottom": 1024,
+      "right": 768
+    },
+    "close": {
+      "x": 632.34375,
+      "y": 8,
+      "width": 127.65625,
+      "height": 44,
+      "bottom": 52,
+      "right": 760
+    },
+    "map": {
+      "x": 8,
+      "y": 121,
+      "width": 752,
+      "height": 585,
+      "bottom": 706,
+      "right": 760
+    },
+    "image": {
+      "x": 21,
+      "y": 214.515625,
+      "width": 726,
+      "height": 450.96875,
+      "bottom": 665.484375,
+      "right": 747
+    },
+    "picker": {
+      "x": 8,
+      "y": 706,
+      "width": 752,
+      "height": 310,
+      "bottom": 1016,
+      "right": 760
+    },
+    "mapHeader": {
+      "x": 8,
+      "y": 60,
+      "width": 752,
+      "height": 61,
+      "bottom": 121,
+      "right": 760
+    },
+    "tinyButtons": []
+  },
+  {
+    "screen": "map",
+    "width": 1280,
+    "height": 900,
+    "documentWidth": 1280,
+    "header": {
+      "x": 864.671875,
+      "y": 0,
+      "width": 415.328125,
+      "height": 75,
+      "bottom": 75,
+      "right": 1280
+    },
+    "composer": {
+      "x": 864.671875,
+      "y": 805,
+      "width": 415.328125,
+      "height": 95,
+      "bottom": 900,
+      "right": 1280
+    },
+    "module": {
+      "x": 0,
+      "y": 0,
+      "width": 863.671875,
+      "height": 900,
+      "bottom": 900,
+      "right": 863.671875
+    },
+    "close": {
+      "x": 719.015625,
+      "y": 16,
+      "width": 127.65625,
+      "height": 44,
+      "bottom": 60,
+      "right": 846.671875
+    },
+    "map": {
+      "x": 16,
+      "y": 133,
+      "width": 580.671875,
+      "height": 751,
+      "bottom": 884,
+      "right": 596.671875
+    },
+    "image": {
+      "x": 29,
+      "y": 362.71875,
+      "width": 555,
+      "height": 344.5625,
+      "bottom": 707.28125,
+      "right": 584
+    },
+    "picker": {
+      "x": 596.671875,
+      "y": 133,
+      "width": 250,
+      "height": 751,
+      "bottom": 884,
+      "right": 846.671875
+    },
+    "mapHeader": {
+      "x": 16,
+      "y": 68,
+      "width": 830.671875,
+      "height": 65,
+      "bottom": 133,
+      "right": 846.671875
+    },
+    "tinyButtons": []
+  }
+]

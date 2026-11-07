@@ -1,0 +1,263 @@
+[
+  {
+    "query": "why spus?",
+    "ms": 121.11,
+    "response": "Sure—here is the information from the stored sources.\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"Does SPUS offer Graduate School programs?\"]",
+    "sources": [
+      {
+        "title": "FAQ (Academics): Why choose SPUS?",
+        "page": null,
+        "url": null,
+        "source_type": "curated",
+        "source_office": null,
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ],
+    "mode": "knowledge",
+    "request_id": "431254f2-4305-496a-8557-c9b57d442317",
+    "passed": true
+  },
+  {
+    "query": "Why choose SPUS",
+    "ms": 76.18,
+    "response": "Sure—here is the information from the stored sources.\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"Does SPUS offer Graduate School programs?\"]",
+    "sources": [
+      {
+        "title": "FAQ (Academics): Why choose SPUS?",
+        "page": null,
+        "url": null,
+        "source_type": "curated",
+        "source_office": null,
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ],
+    "mode": "knowledge",
+    "request_id": "c3ffe984-fe04-4f0f-bd70-c06a9c3c3670",
+    "passed": true
+  },
+  {
+    "query": "wht is spus?",
+    "ms": 73.05,
+    "response": "Sure—here is the information from the stored sources.\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\n[SUGGESTIONS: \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+    "sources": [
+      {
+        "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+        "page": null,
+        "url": null,
+        "source_type": "curated",
+        "source_office": null,
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ],
+    "mode": "knowledge",
+    "request_id": "05a2c7ff-7212-4f0f-a57c-b7b415dc6507",
+    "passed": true
+  },
+  {
+    "query": "helo",
+    "ms": 29.19,
+    "response": "Hello! I'm PAULA. How can I help today?",
+    "sources": [],
+    "mode": "greeting",
+    "request_id": "1c540326-9045-4f54-900b-5648b0b8dc41",
+    "passed": true
+  },
+  {
+    "query": "asdasdasd",
+    "ms": 125.27,
+    "response": "I'm not sure what you mean yet. Could you rephrase or add a little more detail?",
+    "sources": [],
+    "mode": "repair",
+    "request_id": "671fd42a-4e1c-476d-a928-46fa737a91af",
+    "passed": true
+  },
+  {
+    "query": "who is the university preseidnt?",
+    "ms": 177.35,
+    "response": "Sure—here is the information from the stored sources.\n\nSr. Marie Rosanne Mallillin, SPCS — University President\n\n**Source review:** The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office.",
+    "sources": [
+      {
+        "title": "SPUS Personnel | TOP MANAGEMENT | University President | Sr. Marie Rosanne Mallillin, SPCS",
+        "page": null,
+        "url": "https://spus.edu.ph/administrator/",
+        "source_type": "website",
+        "source_office": "TOP MANAGEMENT",
+        "retrieved_at": "2026-10-27T14:12:30.619696+00:00",
+        "supporting_sources": [
+          {
+            "source_url": "https://spus.edu.ph/administrator/",
+            "document_title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | University President | Sr. Marie Rosanne Mallillin, SPCS",
+            "source_type": "website",
+            "record_type": "webresource",
+            "record_id": 99,
+            "retrieved_at": "2026-10-27T14:12:30.732196+00:00"
+          }
+        ],
+        "review_notes": [
+          "The local staff record uses different name formatting or credentials. Verify the exact form with the responsible office."
+        ]
+      }
+    ],
+    "mode": "knowledge",
+    "request_id": "52764605-6425-4be3-88e4-7316ecf577bc",
+    "passed": true
+  },
+  {
+    "query": "why choos SPUS?",
+    "ms": 69.31,
+    "response": "Sure—here is the information from the stored sources.\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"Does SPUS offer Graduate School programs?\"]",
+    "sources": [
+      {
+        "title": "FAQ (Academics): Why choose SPUS?",
+        "page": null,
+        "url": null,
+        "source_type": "curated",
+        "source_office": null,
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ],
+    "mode": "knowledge",
+    "request_id": "f60ddcc8-900f-4cf8-9731-6c35412c9d76",
+    "passed": true
+  },
+  {
+    "query": "bakit SPUS?",
+    "ms": 100.39,
+    "response": "Sige—narito ang impormasyon mula sa mga nakaimbak na sanggunian.\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"Does SPUS offer Graduate School programs?\"]",
+    "sources": [
+      {
+        "title": "FAQ (Academics): Why choose SPUS?",
+        "page": null,
+        "url": null,
+        "source_type": "curated",
+        "source_office": null,
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ],
+    "mode": "knowledge",
+    "request_id": "7a697ca0-3a5d-49bf-b775-c574fa4ad2de",
+    "passed": true
+  },
+  {
+    "query": "What progrms are offered at SPUS?",
+    "ms": 73.75,
+    "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+    "sources": [
+      {
+        "title": "FAQ (Academics): What programs are offered at SPUS?",
+        "page": null,
+        "url": null,
+        "source_type": "office",
+        "source_office": "Registrar",
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ],
+    "mode": "knowledge",
+    "request_id": "f7db9e46-602c-4b41-9403-8fa457c996e3",
+    "passed": true
+  },
+  {
+    "query": "hwo do I enorll at SPUS?",
+    "ms": 9.39,
+    "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+    "sources": [],
+    "mode": "knowledge",
+    "request_id": "a4ba5c9b-36cd-4e4c-af81-0f48bc24e653",
+    "passed": true
+  },
+  {
+    "query": "Wher is the registar?",
+    "ms": 10.95,
+    "response": "Opening the campus map for Registrar Office. Choose your starting location to calculate a route.",
+    "sources": [],
+    "mode": "knowledge",
+    "request_id": "dc8a0f96-f066-41ac-83a4-c239409172f3",
+    "passed": true
+  },
+  {
+    "query": "sorry typo",
+    "ms": 24.42,
+    "response": "No worries! Could you retype or rephrase what you'd like to ask?",
+    "sources": [],
+    "mode": "repair",
+    "request_id": "ea66678e-0db4-4461-b4b6-b2feef42ac33",
+    "passed": true
+  },
+  {
+    "query": "???",
+    "ms": 8.28,
+    "response": "No worries! Could you retype or rephrase what you'd like to ask?",
+    "sources": [],
+    "mode": "repair",
+    "request_id": "392f5f66-64d4-4651-80f3-6eda40f5c177",
+    "passed": true
+  },
+  {
+    "query": "why SPUS in 2030?",
+    "ms": 134.62,
+    "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"Why choose SPUS?\"]",
+    "sources": [],
+    "mode": "knowledge",
+    "request_id": "202c1df9-2c29-453e-a55a-2bb0f92517d3",
+    "passed": true
+  },
+  {
+    "query": "How do I enroll?",
+    "context_sequence": true,
+    "ms": 12.49,
+    "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+    "sources": [],
+    "mode": "knowledge",
+    "passed": true
+  },
+  {
+    "query": "sorry typo",
+    "context_sequence": true,
+    "ms": 10.98,
+    "response": "No worries! Could you retype or rephrase what you'd like to ask?",
+    "sources": [],
+    "mode": "repair",
+    "passed": true
+  },
+  {
+    "query": "asdasdasd",
+    "context_sequence": true,
+    "ms": 104.16,
+    "response": "I'm not sure what you mean yet. Could you rephrase or add a little more detail?",
+    "sources": [],
+    "mode": "repair",
+    "passed": true
+  },
+  {
+    "query": "I am a transferee",
+    "context_sequence": true,
+    "ms": 110.87,
+    "response": "Sure—here is the information from the stored sources.\n\nEnrollment procedure for Transferee Students in Higher Education (URO-PR-017):\n1. Dean's Office (Evaluation & Crediting): Submit Transfer Credentials and Curricular Checklist to the Dean's Office for transcript evaluation and crediting of previous subjects.\n2. Student Affairs Office (SAO) (Encoding & Information): Fill out the Student Information Sheet and submit required documents: Transfer Credentials (Honorable Dismissal / Transcript of Records), PSA Birth Certificate, Certificate of Good Moral Character, and 1 pc 2x2 ID picture.\n3. Finance Office (Payment): Pay the initial or full enrollment fee at the Cashier/Finance Office. Receive the Pre-registration Form and Official Receipt (OR).\n4. Registrar's Office (Validation & Official Enrollment): Proceed to the University Registrar's Office for validation and verification. Receive the official Study Load and Assessment stamped with 'OFFICIALLY ENROLLED'.\n5. ICT Office & Clinic: Proceed to the ICT Office for ID validation/processing, and visit the University Clinic for Health Services medical profiling.\n\n[SUGGESTIONS: \"What are the required documents for transferee students enrolling at SPUS?\" | \"Who must approve the subject adding, dropping, or withdrawal form?\" | \"Where is the registrar office?\"]",
+    "sources": [
+      {
+        "title": "FAQ (Registrar's Office): [Registrar] What is the step-by-step enrollment procedure for transferee students at SPUS (Document URO-PR-017)?",
+        "page": null,
+        "url": null,
+        "source_type": "office",
+        "source_office": "Registrar",
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      }
+    ],
+    "mode": "knowledge",
+    "passed": true
+  }
+]
