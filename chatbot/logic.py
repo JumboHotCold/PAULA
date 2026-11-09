@@ -24,7 +24,7 @@ from .performance import timed
 from .providers import ProviderPolicy, completion_options, generation_scope
 from .dialogue import route_turn, language_for, language_request
 from .social_responses import candidates as social_candidates
-from .response_style import frame_answer, strip_intro
+from .response_style import ACKS, frame_answer, strip_intro
 from .query_understanding import incomplete_request, short_reason_subject, REPHRASE_EN, REPHRASE_FIL
 
 logger = logging.getLogger(__name__)
@@ -253,7 +253,9 @@ class PauliBotLogic:
     def _social_reply(self, route, response_language, history):
         # A provider selecting the same reviewed choices added latency without
         # adding expressive range. Keep the whole social path local and bounded.
-        return social_candidates(route.kind, route.reply_language or response_language, history)[0]
+        reply = social_candidates(route.kind, route.reply_language or response_language, history)[0]
+        prefix = ACKS.get(route.acknowledgement, {}).get(response_language, '')
+        return prefix + '\n\n' + reply if prefix and not reply.startswith(prefix) else reply
 
     @generation_scope
     @timed('orchestration')

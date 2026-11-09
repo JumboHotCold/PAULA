@@ -153,20 +153,29 @@ def language_request(text):
     return None
 
 
+def local_self_intent(text):
+    """Whole-command self requests only; extra clauses retain normal retrieval."""
+    return next((kind for kind in ('identity', 'capabilities') if FAST_PATTERNS[kind].fullmatch(text)), None)
+
+
+def task_tail(text):
+    return bool(FACTUAL.search(text) or KNOWLEDGE.search(text) or FOLLOWUP.search(text) or local_self_intent(text))
+
+
 def social_edges(message):
     """Strip only whole social clauses at the edges; preserve the request span."""
     text, ack = message.strip(), ''
     for _ in range(2):
         for kind in EDGE_KINDS:
             match = re.match(r'^(?:' + FAST[kind] + r')(?:[!?,.:;]+\s*|\s+(?:and|at)\s+)(.+)$', text, re.I)
-            if match and (FACTUAL.search(match.group(1)) or KNOWLEDGE.search(match.group(1)) or FOLLOWUP.search(match.group(1))):
+            if match and task_tail(match.group(1)):
                 text, ack = match.group(1).strip(), 'greeting' if kind in ('greeting', 'wellbeing') else kind
                 break
         else:
             break
     # Remove a closing thank-you only when a substantive request remains.
     match = re.match(r'^(.*?)(?:[!.?,;]\s*|\s+)(?:' + FAST['thanks'] + r')[!.?\s]*$', text, re.I)
-    if match and (FACTUAL.search(match.group(1)) or KNOWLEDGE.search(match.group(1)) or FOLLOWUP.search(match.group(1))):
+    if match and task_tail(match.group(1)):
         text, ack = match.group(1).strip(), ack or 'thanks'
     # Abbreviations/typos may be stripped only as an isolated social edge.
     # Keep the factual span verbatim, including dates, negation, and identifiers.
@@ -174,13 +183,13 @@ def social_edges(message):
     if match:
         social = match_social(match.group(1))
         tail = match.group(2).strip()
-        if social and social.kind in EDGE_KINDS and (FACTUAL.search(tail) or KNOWLEDGE.search(tail) or FOLLOWUP.search(tail)):
+        if social and social.kind in EDGE_KINDS and task_tail(tail):
             text, ack = tail, 'greeting' if social.kind in ('greeting', 'wellbeing') else social.kind
     match = re.match(r'^(.*)[!?,;.]\s*([^!?,;.]+)[!?.\s]*$', text, re.S)
     if match:
         social = match_social(match.group(2))
         head = match.group(1).strip()
-        if social and social.kind == 'thanks' and (FACTUAL.search(head) or KNOWLEDGE.search(head) or FOLLOWUP.search(head)):
+        if social and social.kind == 'thanks' and task_tail(head):
             text, ack = head, ack or 'thanks'
     return text, ack
 
@@ -210,8 +219,9 @@ def route_turn(message, semantic=True):
         return DialogueRoute(social.kind, method=social.method, score=social.score, reply_language=social.reply_language)
     query, acknowledgement = social_edges(text)
     if query != text:
-        if FAST_PATTERNS['identity'].fullmatch(query):
-            return DialogueRoute('identity')
+        self_intent = local_self_intent(query)
+        if self_intent:
+            return DialogueRoute(self_intent, acknowledgement=acknowledgement)
         return DialogueRoute('knowledge', query, acknowledgement)
     # Explicit requests, domain entities, numerical conditions and references
     # cannot be answered by model memory, even if they contain a social phrase.
