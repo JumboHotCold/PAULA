@@ -122,7 +122,7 @@ def main():
                        sources=data.get('sources', []), parts=data.get('answer_parts', []),
                        answer_status=data.get('answer_status'), actual_mode=data.get('response_mode'))
             assert data['saved'] is False and data.get('conversation_id') is None, 'Guest persistence detected'
-            if expected in ('thanks', 'identity', 'greeting'):
+            if expected in ('thanks', 'identity', 'greeting', 'capabilities'):
                 row['passed'] = data.get('response_mode') == expected and not data.get('sources')
             elif expected == 'two_supported_parts':
                 row['passed'] = len(data.get('sources', [])) >= 2 and data.get('answer_status') == 'ok'
