@@ -1,0 +1,3733 @@
+{
+  "before": {
+    "dev": {
+      "startup_ms": 37697.76712999737,
+      "all": {
+        "n": 1096,
+        "passed": 739,
+        "accuracy": 0.67427,
+        "top1": 0,
+        "top3": 0,
+        "clarifications": 303,
+        "source_present_clarifications": 0,
+        "confirmed_avoidable_clean_faq": 0,
+        "errors": 0,
+        "wrong_person": 0,
+        "outcomes": {
+          "clarification": 303,
+          "social": 72,
+          "no_match": 582,
+          "ok": 139
+        },
+        "p50_api_ms": 120.59,
+        "p95_api_ms": 179.1,
+        "p50_observer_ms": 122.799,
+        "p95_observer_ms": 215.009,
+        "stages": {
+          "context_llm_edit": {
+            "n": 16,
+            "p50_ms": 0.003,
+            "p95_ms": 0.004
+          },
+          "context_resolution": {
+            "n": 875,
+            "p50_ms": 0.128,
+            "p95_ms": 0.204
+          },
+          "dialogue_routing": {
+            "n": 1096,
+            "p50_ms": 0.979,
+            "p95_ms": 29.353
+          },
+          "evidence_selection": {
+            "n": 58,
+            "p50_ms": 0.048,
+            "p95_ms": 0.078
+          },
+          "exact_faq": {
+            "n": 788,
+            "p50_ms": 4.735,
+            "p95_ms": 6.879
+          },
+          "followup_suggestions": {
+            "n": 721,
+            "p50_ms": 49.563,
+            "p95_ms": 65.83
+          },
+          "grounding": {
+            "n": 721,
+            "p50_ms": 15.418,
+            "p95_ms": 22.348
+          },
+          "hybrid_retrieval": {
+            "n": 788,
+            "p50_ms": 63.215,
+            "p95_ms": 87.579
+          },
+          "normalization": {
+            "n": 875,
+            "p50_ms": 0.093,
+            "p95_ms": 11.737
+          },
+          "orchestration": {
+            "n": 1096,
+            "p50_ms": 71.946,
+            "p95_ms": 124.861
+          },
+          "public_vocabulary": {
+            "n": 7,
+            "p50_ms": 0.025,
+            "p95_ms": 30.329
+          },
+          "query_embedding": {
+            "n": 788,
+            "p50_ms": 15.982,
+            "p95_ms": 30.008
+          },
+          "response_render": {
+            "n": 139,
+            "p50_ms": 0.03,
+            "p95_ms": 0.123
+          },
+          "retrieval": {
+            "n": 796,
+            "p50_ms": 71.414,
+            "p95_ms": 100.01
+          },
+          "social_matching": {
+            "n": 1064,
+            "p50_ms": 0.108,
+            "p95_ms": 0.436
+          },
+          "social_normalization": {
+            "n": 1064,
+            "p50_ms": 0.021,
+            "p95_ms": 0.047
+          },
+          "social_query_embedding": {
+            "n": 269,
+            "p50_ms": 17.713,
+            "p95_ms": 37.94
+          },
+          "social_reply": {
+            "n": 72,
+            "p50_ms": 0.009,
+            "p95_ms": 0.022
+          },
+          "spelling_matching": {
+            "n": 1096,
+            "p50_ms": 0.327,
+            "p95_ms": 32.2
+          },
+          "structured_personnel": {
+            "n": 796,
+            "p50_ms": 0.006,
+            "p95_ms": 0.167
+          }
+        }
+      },
+      "groups": {
+        "institutional": {
+          "n": 672,
+          "passed": 672,
+          "accuracy": 1.0,
+          "top1": 0,
+          "top3": 0,
+          "clarifications": 94,
+          "source_present_clarifications": 0,
+          "confirmed_avoidable_clean_faq": 0,
+          "errors": 0,
+          "wrong_person": 0,
+          "outcomes": {
+            "clarification": 94,
+            "no_match": 439,
+            "ok": 139
+          },
+          "p50_api_ms": 127.41,
+          "p95_api_ms": 172.24,
+          "p50_observer_ms": 128.885,
+          "p95_observer_ms": 189.955,
+          "social_false_positives": 0,
+          "stages": {
+            "context_resolution": {
+              "n": 641,
+              "p50_ms": 0.128,
+              "p95_ms": 0.201
+            },
+            "dialogue_routing": {
+              "n": 672,
+              "p50_ms": 0.49,
+              "p95_ms": 14.1
+            },
+            "evidence_selection": {
+              "n": 58,
+              "p50_ms": 0.048,
+              "p95_ms": 0.078
+            },
+            "exact_faq": {
+              "n": 570,
+              "p50_ms": 4.635,
+              "p95_ms": 6.982
+            },
+            "followup_suggestions": {
+              "n": 578,
+              "p50_ms": 49.162,
+              "p95_ms": 63.735
+            },
+            "grounding": {
+              "n": 578,
+              "p50_ms": 15.449,
+              "p95_ms": 22.393
+            },
+            "hybrid_retrieval": {
+              "n": 570,
+              "p50_ms": 64.384,
+              "p95_ms": 87.236
+            },
+            "normalization": {
+              "n": 641,
+              "p50_ms": 0.064,
+              "p95_ms": 10.566
+            },
+            "orchestration": {
+              "n": 672,
+              "p50_ms": 74.375,
+              "p95_ms": 117.546
+            },
+            "query_embedding": {
+              "n": 570,
+              "p50_ms": 15.272,
+              "p95_ms": 26.94
+            },
+            "response_render": {
+              "n": 139,
+              "p50_ms": 0.03,
+              "p95_ms": 0.123
+            },
+            "retrieval": {
+              "n": 578,
+              "p50_ms": 73.266,
+              "p95_ms": 97.847
+            },
+            "social_matching": {
+              "n": 672,
+              "p50_ms": 0.09,
+              "p95_ms": 0.18
+            },
+            "social_normalization": {
+              "n": 672,
+              "p50_ms": 0.02,
+              "p95_ms": 0.046
+            },
+            "spelling_matching": {
+              "n": 672,
+              "p50_ms": 0.319,
+              "p95_ms": 32.198
+            },
+            "structured_personnel": {
+              "n": 578,
+              "p50_ms": 0.005,
+              "p95_ms": 0.167
+            }
+          }
+        },
+        "social": {
+          "n": 424,
+          "passed": 67,
+          "accuracy": 0.158019,
+          "top1": 0,
+          "top3": 0,
+          "clarifications": 209,
+          "source_present_clarifications": 0,
+          "confirmed_avoidable_clean_faq": 0,
+          "errors": 0,
+          "wrong_person": 0,
+          "outcomes": {
+            "clarification": 209,
+            "social": 72,
+            "no_match": 143
+          },
+          "p50_api_ms": 68.27,
+          "p95_api_ms": 190.11,
+          "p50_observer_ms": 86.068,
+          "p95_observer_ms": 247.491,
+          "stages": {
+            "context_llm_edit": {
+              "n": 16,
+              "p50_ms": 0.003,
+              "p95_ms": 0.004
+            },
+            "context_resolution": {
+              "n": 234,
+              "p50_ms": 0.127,
+              "p95_ms": 0.276
+            },
+            "dialogue_routing": {
+              "n": 424,
+              "p50_ms": 16.133,
+              "p95_ms": 41.417
+            },
+            "exact_faq": {
+              "n": 218,
+              "p50_ms": 5.076,
+              "p95_ms": 6.817
+            },
+            "followup_suggestions": {
+              "n": 143,
+              "p50_ms": 53.451,
+              "p95_ms": 73.268
+            },
+            "grounding": {
+              "n": 143,
+              "p50_ms": 15.3,
+              "p95_ms": 22.148
+            },
+            "hybrid_retrieval": {
+              "n": 218,
+              "p50_ms": 59.615,
+              "p95_ms": 90.716
+            },
+            "normalization": {
+              "n": 234,
+              "p50_ms": 0.157,
+              "p95_ms": 12.533
+            },
+            "orchestration": {
+              "n": 424,
+              "p50_ms": 66.615,
+              "p95_ms": 137.972
+            },
+            "public_vocabulary": {
+              "n": 7,
+              "p50_ms": 0.025,
+              "p95_ms": 30.329
+            },
+            "query_embedding": {
+              "n": 218,
+              "p50_ms": 17.586,
+              "p95_ms": 39.893
+            },
+            "retrieval": {
+              "n": 218,
+              "p50_ms": 67.081,
+              "p95_ms": 101.709
+            },
+            "social_matching": {
+              "n": 392,
+              "p50_ms": 0.198,
+              "p95_ms": 0.64
+            },
+            "social_normalization": {
+              "n": 392,
+              "p50_ms": 0.024,
+              "p95_ms": 0.054
+            },
+            "social_query_embedding": {
+              "n": 269,
+              "p50_ms": 17.713,
+              "p95_ms": 37.94
+            },
+            "social_reply": {
+              "n": 72,
+              "p50_ms": 0.009,
+              "p95_ms": 0.022
+            },
+            "spelling_matching": {
+              "n": 424,
+              "p50_ms": 0.329,
+              "p95_ms": 32.2
+            },
+            "structured_personnel": {
+              "n": 218,
+              "p50_ms": 0.006,
+              "p95_ms": 0.167
+            }
+          }
+        }
+      }
+    },
+    "test": {
+      "startup_ms": 0.1774890006345231,
+      "all": {
+        "n": 472,
+        "passed": 312,
+        "accuracy": 0.661017,
+        "top1": 0,
+        "top3": 0,
+        "clarifications": 143,
+        "source_present_clarifications": 0,
+        "confirmed_avoidable_clean_faq": 0,
+        "errors": 0,
+        "wrong_person": 0,
+        "outcomes": {
+          "clarification": 143,
+          "no_match": 277,
+          "social": 24,
+          "ok": 28
+        },
+        "p50_api_ms": 123.77,
+        "p95_api_ms": 178.82,
+        "p50_observer_ms": 128.903,
+        "p95_observer_ms": 202.033,
+        "stages": {
+          "context_llm_edit": {
+            "n": 14,
+            "p50_ms": 0.002,
+            "p95_ms": 0.003
+          },
+          "context_resolution": {
+            "n": 362,
+            "p50_ms": 0.126,
+            "p95_ms": 0.234
+          },
+          "dialogue_routing": {
+            "n": 472,
+            "p50_ms": 0.858,
+            "p95_ms": 24.434
+          },
+          "evidence_selection": {
+            "n": 19,
+            "p50_ms": 0.051,
+            "p95_ms": 0.105
+          },
+          "exact_faq": {
+            "n": 327,
+            "p50_ms": 4.614,
+            "p95_ms": 6.505
+          },
+          "followup_suggestions": {
+            "n": 305,
+            "p50_ms": 51.791,
+            "p95_ms": 75.792
+          },
+          "grounding": {
+            "n": 305,
+            "p50_ms": 15.85,
+            "p95_ms": 25.524
+          },
+          "hybrid_retrieval": {
+            "n": 327,
+            "p50_ms": 64.043,
+            "p95_ms": 92.999
+          },
+          "normalization": {
+            "n": 362,
+            "p50_ms": 0.087,
+            "p95_ms": 12.893
+          },
+          "orchestration": {
+            "n": 472,
+            "p50_ms": 72.49,
+            "p95_ms": 117.868
+          },
+          "query_embedding": {
+            "n": 327,
+            "p50_ms": 17.158,
+            "p95_ms": 31.45
+          },
+          "response_render": {
+            "n": 28,
+            "p50_ms": 0.031,
+            "p95_ms": 0.155
+          },
+          "retrieval": {
+            "n": 327,
+            "p50_ms": 73.315,
+            "p95_ms": 103.393
+          },
+          "social_matching": {
+            "n": 459,
+            "p50_ms": 0.115,
+            "p95_ms": 0.438
+          },
+          "social_normalization": {
+            "n": 459,
+            "p50_ms": 0.02,
+            "p95_ms": 0.069
+          },
+          "social_query_embedding": {
+            "n": 93,
+            "p50_ms": 15.204,
+            "p95_ms": 21.279
+          },
+          "social_reply": {
+            "n": 24,
+            "p50_ms": 0.009,
+            "p95_ms": 0.014
+          },
+          "spelling_matching": {
+            "n": 472,
+            "p50_ms": 0.335,
+            "p95_ms": 34.658
+          },
+          "structured_personnel": {
+            "n": 327,
+            "p50_ms": 0.005,
+            "p95_ms": 0.151
+          }
+        }
+      },
+      "groups": {
+        "institutional": {
+          "n": 288,
+          "passed": 288,
+          "accuracy": 1.0,
+          "top1": 0,
+          "top3": 0,
+          "clarifications": 30,
+          "source_present_clarifications": 0,
+          "confirmed_avoidable_clean_faq": 0,
+          "errors": 0,
+          "wrong_person": 0,
+          "outcomes": {
+            "clarification": 30,
+            "no_match": 230,
+            "ok": 28
+          },
+          "p50_api_ms": 137.72,
+          "p95_api_ms": 188.57,
+          "p50_observer_ms": 142.344,
+          "p95_observer_ms": 205.358,
+          "social_false_positives": 0,
+          "stages": {
+            "context_resolution": {
+              "n": 279,
+              "p50_ms": 0.132,
+              "p95_ms": 0.237
+            },
+            "dialogue_routing": {
+              "n": 288,
+              "p50_ms": 0.555,
+              "p95_ms": 15.238
+            },
+            "evidence_selection": {
+              "n": 19,
+              "p50_ms": 0.051,
+              "p95_ms": 0.105
+            },
+            "exact_faq": {
+              "n": 258,
+              "p50_ms": 4.547,
+              "p95_ms": 6.682
+            },
+            "followup_suggestions": {
+              "n": 258,
+              "p50_ms": 52.413,
+              "p95_ms": 77.307
+            },
+            "grounding": {
+              "n": 258,
+              "p50_ms": 16.109,
+              "p95_ms": 26.122
+            },
+            "hybrid_retrieval": {
+              "n": 258,
+              "p50_ms": 66.678,
+              "p95_ms": 94.646
+            },
+            "normalization": {
+              "n": 279,
+              "p50_ms": 0.072,
+              "p95_ms": 13.442
+            },
+            "orchestration": {
+              "n": 288,
+              "p50_ms": 79.777,
+              "p95_ms": 120.588
+            },
+            "query_embedding": {
+              "n": 258,
+              "p50_ms": 17.486,
+              "p95_ms": 33.222
+            },
+            "response_render": {
+              "n": 28,
+              "p50_ms": 0.031,
+              "p95_ms": 0.155
+            },
+            "retrieval": {
+              "n": 258,
+              "p50_ms": 76.107,
+              "p95_ms": 104.948
+            },
+            "social_matching": {
+              "n": 288,
+              "p50_ms": 0.092,
+              "p95_ms": 0.242
+            },
+            "social_normalization": {
+              "n": 288,
+              "p50_ms": 0.02,
+              "p95_ms": 0.055
+            },
+            "spelling_matching": {
+              "n": 288,
+              "p50_ms": 0.377,
+              "p95_ms": 40.197
+            },
+            "structured_personnel": {
+              "n": 258,
+              "p50_ms": 0.005,
+              "p95_ms": 0.153
+            }
+          }
+        },
+        "social": {
+          "n": 184,
+          "passed": 24,
+          "accuracy": 0.130435,
+          "top1": 0,
+          "top3": 0,
+          "clarifications": 113,
+          "source_present_clarifications": 0,
+          "confirmed_avoidable_clean_faq": 0,
+          "errors": 0,
+          "wrong_person": 0,
+          "outcomes": {
+            "clarification": 113,
+            "no_match": 47,
+            "social": 24
+          },
+          "p50_api_ms": 18.05,
+          "p95_api_ms": 150.37,
+          "p50_observer_ms": 36.819,
+          "p95_observer_ms": 185.678,
+          "stages": {
+            "context_llm_edit": {
+              "n": 14,
+              "p50_ms": 0.002,
+              "p95_ms": 0.003
+            },
+            "context_resolution": {
+              "n": 83,
+              "p50_ms": 0.11,
+              "p95_ms": 0.18
+            },
+            "dialogue_routing": {
+              "n": 184,
+              "p50_ms": 12.277,
+              "p95_ms": 27.747
+            },
+            "exact_faq": {
+              "n": 69,
+              "p50_ms": 4.911,
+              "p95_ms": 5.883
+            },
+            "followup_suggestions": {
+              "n": 47,
+              "p50_ms": 50.019,
+              "p95_ms": 60.941
+            },
+            "grounding": {
+              "n": 47,
+              "p50_ms": 14.399,
+              "p95_ms": 18.373
+            },
+            "hybrid_retrieval": {
+              "n": 69,
+              "p50_ms": 53.162,
+              "p95_ms": 71.323
+            },
+            "normalization": {
+              "n": 83,
+              "p50_ms": 0.129,
+              "p95_ms": 11.322
+            },
+            "orchestration": {
+              "n": 184,
+              "p50_ms": 17.492,
+              "p95_ms": 106.001
+            },
+            "query_embedding": {
+              "n": 69,
+              "p50_ms": 15.765,
+              "p95_ms": 26.383
+            },
+            "retrieval": {
+              "n": 69,
+              "p50_ms": 60.714,
+              "p95_ms": 80.44
+            },
+            "social_matching": {
+              "n": 171,
+              "p50_ms": 0.197,
+              "p95_ms": 0.636
+            },
+            "social_normalization": {
+              "n": 171,
+              "p50_ms": 0.02,
+              "p95_ms": 0.1
+            },
+            "social_query_embedding": {
+              "n": 93,
+              "p50_ms": 15.204,
+              "p95_ms": 21.279
+            },
+            "social_reply": {
+              "n": 24,
+              "p50_ms": 0.009,
+              "p95_ms": 0.014
+            },
+            "spelling_matching": {
+              "n": 184,
+              "p50_ms": 0.277,
+              "p95_ms": 30.036
+            },
+            "structured_personnel": {
+              "n": 69,
+              "p50_ms": 0.005,
+              "p95_ms": 0.151
+            }
+          }
+        }
+      }
+    },
+    "golden": {
+      "startup_ms": 62869.14055800298,
+      "all": {
+        "n": 1284,
+        "passed": 847,
+        "accuracy": 0.659657,
+        "top1": 815,
+        "top3": 836,
+        "clarifications": 342,
+        "source_present_clarifications": 340,
+        "confirmed_avoidable_clean_faq": 11,
+        "errors": 0,
+        "wrong_person": 0,
+        "outcomes": {
+          "ok": 835,
+          "clarification": 342,
+          "no_match": 66,
+          "partial": 25,
+          "conflict": 2,
+          "social": 7,
+          "ambiguous": 7
+        },
+        "p50_api_ms": 62.69,
+        "p95_api_ms": 163.04,
+        "p50_observer_ms": 64.275,
+        "p95_observer_ms": 168.047,
+        "stages": {
+          "context_llm_edit": {
+            "n": 67,
+            "p50_ms": 0.002,
+            "p95_ms": 0.004
+          },
+          "context_resolution": {
+            "n": 1012,
+            "p50_ms": 0.515,
+            "p95_ms": 1.531
+          },
+          "dialogue_routing": {
+            "n": 1284,
+            "p50_ms": 1.129,
+            "p95_ms": 3.752
+          },
+          "evidence_selection": {
+            "n": 42,
+            "p50_ms": 0.071,
+            "p95_ms": 0.125
+          },
+          "exact_faq": {
+            "n": 866,
+            "p50_ms": 5.341,
+            "p95_ms": 10.011
+          },
+          "followup_suggestions": {
+            "n": 885,
+            "p50_ms": 55.749,
+            "p95_ms": 88.84
+          },
+          "grounding": {
+            "n": 888,
+            "p50_ms": 18.177,
+            "p95_ms": 34.305
+          },
+          "hybrid_retrieval": {
+            "n": 171,
+            "p50_ms": 86.642,
+            "p95_ms": 204.856
+          },
+          "normalization": {
+            "n": 1012,
+            "p50_ms": 0.068,
+            "p95_ms": 0.203
+          },
+          "orchestration": {
+            "n": 1284,
+            "p50_ms": 8.222,
+            "p95_ms": 110.726
+          },
+          "public_vocabulary": {
+            "n": 622,
+            "p50_ms": 0.018,
+            "p95_ms": 0.044
+          },
+          "query_embedding": {
+            "n": 171,
+            "p50_ms": 22.431,
+            "p95_ms": 86.022
+          },
+          "query_interpretation": {
+            "n": 1,
+            "p50_ms": 3.74,
+            "p95_ms": 3.74
+          },
+          "response_render": {
+            "n": 812,
+            "p50_ms": 0.039,
+            "p95_ms": 0.139
+          },
+          "retrieval": {
+            "n": 889,
+            "p50_ms": 6.411,
+            "p95_ms": 109.061
+          },
+          "social_matching": {
+            "n": 1284,
+            "p50_ms": 0.219,
+            "p95_ms": 0.887
+          },
+          "social_normalization": {
+            "n": 1096,
+            "p50_ms": 0.059,
+            "p95_ms": 0.19
+          },
+          "social_query_embedding": {
+            "n": 7,
+            "p50_ms": 29.047,
+            "p95_ms": 73.722
+          },
+          "social_reply": {
+            "n": 8,
+            "p50_ms": 0.006,
+            "p95_ms": 0.065
+          },
+          "spelling_matching": {
+            "n": 1284,
+            "p50_ms": 0.377,
+            "p95_ms": 1.0
+          },
+          "structured_enrollment": {
+            "n": 7,
+            "p50_ms": 4.264,
+            "p95_ms": 4.354
+          },
+          "structured_personnel": {
+            "n": 889,
+            "p50_ms": 0.007,
+            "p95_ms": 0.147
+          }
+        }
+      },
+      "groups": {
+        "compound": {
+          "n": 2,
+          "passed": 2,
+          "accuracy": 1.0,
+          "top1": 0,
+          "top3": 0,
+          "clarifications": 0,
+          "source_present_clarifications": 0,
+          "confirmed_avoidable_clean_faq": 0,
+          "errors": 0,
+          "wrong_person": 0,
+          "outcomes": {
+            "ok": 1,
+            "partial": 1
+          },
+          "p50_api_ms": 204.2,
+          "p95_api_ms": 230.15,
+          "p50_observer_ms": 205.711,
+          "p95_observer_ms": 232.373,
+          "stages": {
+            "context_resolution": {
+              "n": 2,
+              "p50_ms": 1.685,
+              "p95_ms": 2.478
+            },
+            "dialogue_routing": {
+              "n": 2,
+              "p50_ms": 1.581,
+              "p95_ms": 1.688
+            },
+            "exact_faq": {
+              "n": 1,
+              "p50_ms": 4.363,
+              "p95_ms": 4.363
+            },
+            "followup_suggestions": {
+              "n": 2,
+              "p50_ms": 53.937,
+              "p95_ms": 56.77
+            },
+            "grounding": {
+              "n": 2,
+              "p50_ms": 22.539,
+              "p95_ms": 23.044
+            },
+            "hybrid_retrieval": {
+              "n": 1,
+              "p50_ms": 57.288,
+              "p95_ms": 57.288
+            },
+            "normalization": {
+              "n": 2,
+              "p50_ms": 0.256,
+              "p95_ms": 0.363
+            },
+            "orchestration": {
+              "n": 2,
+              "p50_ms": 296.097,
+              "p95_ms": 340.669
+            },
+            "public_vocabulary": {
+              "n": 2,
+              "p50_ms": 0.017,
+              "p95_ms": 0.035
+            },
+            "query_embedding": {
+              "n": 1,
+              "p50_ms": 17.912,
+              "p95_ms": 17.912
+            },
+            "response_render": {
+              "n": 2,
+              "p50_ms": 0.034,
+              "p95_ms": 0.05
+            },
+            "retrieval": {
+              "n": 2,
+              "p50_ms": 143.165,
+              "p95_ms": 164.181
+            },
+            "social_matching": {
+              "n": 2,
+              "p50_ms": 0.372,
+              "p95_ms": 0.429
+            },
+            "social_normalization": {
+              "n": 2,
+              "p50_ms": 0.097,
+              "p95_ms": 0.109
+            },
+            "spelling_matching": {
+              "n": 2,
+              "p50_ms": 0.808,
+              "p95_ms": 0.859
+            },
+            "structured_personnel": {
+              "n": 2,
+              "p50_ms": 76.554,
+              "p95_ms": 163.523
+            }
+          }
+        },
+        "faq": {
+          "n": 1128,
+          "passed": 779,
+          "accuracy": 0.690603,
+          "top1": 766,
+          "top3": 779,
+          "clarifications": 262,
+          "source_present_clarifications": 262,
+          "confirmed_avoidable_clean_faq": 11,
+          "errors": 0,
+          "wrong_person": 0,
+          "outcomes": {
+            "ok": 775,
+            "clarification": 262,
+            "no_match": 58,
+            "partial": 24,
+            "conflict": 2,
+            "social": 7
+          },
+          "p50_api_ms": 63.75,
+          "p95_api_ms": 167.32,
+          "p50_observer_ms": 65.579,
+          "p95_observer_ms": 174.175,
+          "stages": {
+            "context_llm_edit": {
+              "n": 65,
+              "p50_ms": 0.002,
+              "p95_ms": 0.004
+            },
+            "context_resolution": {
+              "n": 926,
+              "p50_ms": 0.571,
+              "p95_ms": 1.538
+            },
+            "dialogue_routing": {
+              "n": 1128,
+              "p50_ms": 1.225,
+              "p95_ms": 3.859
+            },
+            "evidence_selection": {
+              "n": 42,
+              "p50_ms": 0.071,
+              "p95_ms": 0.125
+            },
+            "exact_faq": {
+              "n": 851,
+              "p50_ms": 5.384,
+              "p95_ms": 10.04
+            },
+            "followup_suggestions": {
+              "n": 856,
+              "p50_ms": 56.096,
+              "p95_ms": 89.965
+            },
+            "grounding": {
+              "n": 858,
+              "p50_ms": 18.332,
+              "p95_ms": 34.442
+            },
+            "hybrid_retrieval": {
+              "n": 164,
+              "p50_ms": 87.081,
+              "p95_ms": 204.856
+            },
+            "normalization": {
+              "n": 926,
+              "p50_ms": 0.069,
+              "p95_ms": 0.201
+            },
+            "orchestration": {
+              "n": 1128,
+              "p50_ms": 8.582,
+              "p95_ms": 124.237
+            },
+            "public_vocabulary": {
+              "n": 608,
+              "p50_ms": 0.018,
+              "p95_ms": 0.044
+            },
+            "query_embedding": {
+              "n": 164,
+              "p50_ms": 23.18,
+              "p95_ms": 86.022
+            },
+            "query_interpretation": {
+              "n": 1,
+              "p50_ms": 3.74,
+              "p95_ms": 3.74
+            },
+            "response_render": {
+              "n": 791,
+              "p50_ms": 0.039,
+              "p95_ms": 0.141
+            },
+            "retrieval": {
+              "n": 853,
+              "p50_ms": 6.3,
+              "p95_ms": 109.061
+            },
+            "social_matching": {
+              "n": 1128,
+              "p50_ms": 0.21,
+              "p95_ms": 0.826
+            },
+            "social_normalization": {
+              "n": 942,
+              "p50_ms": 0.067,
+              "p95_ms": 0.195
+            },
+            "social_query_embedding": {
+              "n": 6,
+              "p50_ms": 29.047,
+              "p95_ms": 73.722
+            },
+            "social_reply": {
+              "n": 8,
+              "p50_ms": 0.006,
+              "p95_ms": 0.065
+            },
+            "spelling_matching": {
+              "n": 1128,
+              "p50_ms": 0.417,
+              "p95_ms": 1.031
+            },
+            "structured_enrollment": {
+              "n": 7,
+              "p50_ms": 4.264,
+              "p95_ms": 4.354
+            },
+            "structured_personnel": {
+              "n": 853,
+              "p50_ms": 0.007,
+              "p95_ms": 0.017
+            }
+          }
+        },
+        "followup": {
+          "n": 2,
+          "passed": 1,
+          "accuracy": 0.5,
+          "top1": 0,
+          "top3": 0,
+          "clarifications": 1,
+          "source_present_clarifications": 0,
+          "confirmed_avoidable_clean_faq": 0,
+          "errors": 0,
+          "wrong_person": 0,
+          "outcomes": {
+            "clarification": 1,
+            "ok": 1
+          },
+          "p50_api_ms": 2.65,
+          "p95_api_ms": 58.76,
+          "p50_observer_ms": 3.404,
+          "p95_observer_ms": 60.233,
+          "stages": {
+            "context_llm_edit": {
+              "n": 1,
+              "p50_ms": 0.002,
+              "p95_ms": 0.002
+            },
+            "context_resolution": {
+              "n": 2,
+              "p50_ms": 0.334,
+              "p95_ms": 0.914
+            },
+            "dialogue_routing": {
+              "n": 2,
+              "p50_ms": 0.395,
+              "p95_ms": 0.994
+            },
+            "exact_faq": {
+              "n": 1,
+              "p50_ms": 7.53,
+              "p95_ms": 7.53
+            },
+            "followup_suggestions": {
+              "n": 1,
+              "p50_ms": 47.237,
+              "p95_ms": 47.237
+            },
+            "grounding": {
+              "n": 1,
+              "p50_ms": 15.477,
+              "p95_ms": 15.477
+            },
+            "normalization": {
+              "n": 2,
+              "p50_ms": 0.03,
+              "p95_ms": 0.041
+            },
+            "orchestration": {
+              "n": 2,
+              "p50_ms": 1.947,
+              "p95_ms": 10.497
+            },
+            "public_vocabulary": {
+              "n": 2,
+              "p50_ms": 0.014,
+              "p95_ms": 0.017
+            },
+            "response_render": {
+              "n": 1,
+              "p50_ms": 0.027,
+              "p95_ms": 0.027
+            },
+            "retrieval": {
+              "n": 1,
+              "p50_ms": 7.877,
+              "p95_ms": 7.877
+            },
+            "social_matching": {
+              "n": 2,
+              "p50_ms": 0.168,
+              "p95_ms": 0.315
+            },
+            "social_normalization": {
+              "n": 2,
+              "p50_ms": 0.042,
+              "p95_ms": 0.083
+            },
+            "spelling_matching": {
+              "n": 2,
+              "p50_ms": 0.102,
+              "p95_ms": 0.275
+            },
+            "structured_personnel": {
+              "n": 1,
+              "p50_ms": 0.004,
+              "p95_ms": 0.004
+            }
+          }
+        },
+        "location": {
+          "n": 48,
+          "passed": 39,
+          "accuracy": 0.8125,
+          "top1": 31,
+          "top3": 39,
+          "clarifications": 8,
+          "source_present_clarifications": 8,
+          "confirmed_avoidable_clean_faq": 0,
+          "errors": 0,
+          "wrong_person": 0,
+          "outcomes": {
+            "clarification": 8,
+            "ok": 40
+          },
+          "p50_api_ms": 60.5,
+          "p95_api_ms": 66.58,
+          "p50_observer_ms": 61.537,
+          "p95_observer_ms": 67.633,
+          "stages": {
+            "context_resolution": {
+              "n": 48,
+              "p50_ms": 0.097,
+              "p95_ms": 0.147
+            },
+            "dialogue_routing": {
+              "n": 48,
+              "p50_ms": 0.274,
+              "p95_ms": 0.379
+            },
+            "normalization": {
+              "n": 48,
+              "p50_ms": 0.035,
+              "p95_ms": 0.052
+            },
+            "orchestration": {
+              "n": 48,
+              "p50_ms": 1.103,
+              "p95_ms": 1.259
+            },
+            "social_matching": {
+              "n": 48,
+              "p50_ms": 0.085,
+              "p95_ms": 0.104
+            },
+            "social_normalization": {
+              "n": 48,
+              "p50_ms": 0.024,
+              "p95_ms": 0.033
+            },
+            "spelling_matching": {
+              "n": 48,
+              "p50_ms": 0.162,
+              "p95_ms": 0.222
+            }
+          }
+        },
+        "refusal": {
+          "n": 8,
+          "passed": 8,
+          "accuracy": 1.0,
+          "top1": 0,
+          "top3": 0,
+          "clarifications": 1,
+          "source_present_clarifications": 0,
+          "confirmed_avoidable_clean_faq": 0,
+          "errors": 0,
+          "wrong_person": 0,
+          "outcomes": {
+            "no_match": 6,
+            "clarification": 1,
+            "ambiguous": 1
+          },
+          "p50_api_ms": 127.75,
+          "p95_api_ms": 152.54,
+          "p50_observer_ms": 128.669,
+          "p95_observer_ms": 170.608,
+          "stages": {
+            "context_llm_edit": {
+              "n": 1,
+              "p50_ms": 0.001,
+              "p95_ms": 0.001
+            },
+            "context_resolution": {
+              "n": 8,
+              "p50_ms": 0.119,
+              "p95_ms": 0.175
+            },
+            "dialogue_routing": {
+              "n": 8,
+              "p50_ms": 0.251,
+              "p95_ms": 15.222
+            },
+            "exact_faq": {
+              "n": 6,
+              "p50_ms": 4.302,
+              "p95_ms": 8.551
+            },
+            "followup_suggestions": {
+              "n": 6,
+              "p50_ms": 50.95,
+              "p95_ms": 56.601
+            },
+            "grounding": {
+              "n": 7,
+              "p50_ms": 15.823,
+              "p95_ms": 18.048
+            },
+            "hybrid_retrieval": {
+              "n": 6,
+              "p50_ms": 63.68,
+              "p95_ms": 73.509
+            },
+            "normalization": {
+              "n": 8,
+              "p50_ms": 0.068,
+              "p95_ms": 8.491
+            },
+            "orchestration": {
+              "n": 8,
+              "p50_ms": 77.614,
+              "p95_ms": 98.099
+            },
+            "query_embedding": {
+              "n": 6,
+              "p50_ms": 17.838,
+              "p95_ms": 21.456
+            },
+            "retrieval": {
+              "n": 7,
+              "p50_ms": 78.423,
+              "p95_ms": 87.645
+            },
+            "social_matching": {
+              "n": 8,
+              "p50_ms": 0.098,
+              "p95_ms": 0.176
+            },
+            "social_normalization": {
+              "n": 6,
+              "p50_ms": 0.024,
+              "p95_ms": 0.035
+            },
+            "social_query_embedding": {
+              "n": 1,
+              "p50_ms": 14.577,
+              "p95_ms": 14.577
+            },
+            "spelling_matching": {
+              "n": 8,
+              "p50_ms": 0.224,
+              "p95_ms": 25.312
+            },
+            "structured_personnel": {
+              "n": 7,
+              "p50_ms": 0.006,
+              "p95_ms": 87.294
+            }
+          }
+        },
+        "staff": {
+          "n": 96,
+          "passed": 18,
+          "accuracy": 0.1875,
+          "top1": 18,
+          "top3": 18,
+          "clarifications": 70,
+          "source_present_clarifications": 70,
+          "confirmed_avoidable_clean_faq": 0,
+          "errors": 0,
+          "wrong_person": 0,
+          "outcomes": {
+            "ok": 18,
+            "clarification": 70,
+            "ambiguous": 6,
+            "no_match": 2
+          },
+          "p50_api_ms": 1.88,
+          "p95_api_ms": 139.72,
+          "p50_observer_ms": 3.553,
+          "p95_observer_ms": 141.562,
+          "stages": {
+            "context_resolution": {
+              "n": 26,
+              "p50_ms": 0.134,
+              "p95_ms": 0.322
+            },
+            "dialogue_routing": {
+              "n": 96,
+              "p50_ms": 0.864,
+              "p95_ms": 2.761
+            },
+            "exact_faq": {
+              "n": 7,
+              "p50_ms": 4.384,
+              "p95_ms": 5.202
+            },
+            "followup_suggestions": {
+              "n": 20,
+              "p50_ms": 47.005,
+              "p95_ms": 49.958
+            },
+            "grounding": {
+              "n": 20,
+              "p50_ms": 16.505,
+              "p95_ms": 19.38
+            },
+            "normalization": {
+              "n": 26,
+              "p50_ms": 0.07,
+              "p95_ms": 0.169
+            },
+            "orchestration": {
+              "n": 96,
+              "p50_ms": 0.98,
+              "p95_ms": 89.972
+            },
+            "public_vocabulary": {
+              "n": 10,
+              "p50_ms": 0.014,
+              "p95_ms": 0.049
+            },
+            "response_render": {
+              "n": 18,
+              "p50_ms": 0.027,
+              "p95_ms": 0.066
+            },
+            "retrieval": {
+              "n": 26,
+              "p50_ms": 77.362,
+              "p95_ms": 91.703
+            },
+            "social_matching": {
+              "n": 96,
+              "p50_ms": 0.53,
+              "p95_ms": 1.259
+            },
+            "social_normalization": {
+              "n": 96,
+              "p50_ms": 0.027,
+              "p95_ms": 0.075
+            },
+            "spelling_matching": {
+              "n": 96,
+              "p50_ms": 0.192,
+              "p95_ms": 0.426
+            },
+            "structured_personnel": {
+              "n": 26,
+              "p50_ms": 75.489,
+              "p95_ms": 89.582
+            }
+          }
+        }
+      },
+      "faq_clean": {
+        "n": 138,
+        "passed": 121,
+        "accuracy": 0.876812,
+        "top1": 120,
+        "top3": 121,
+        "clarifications": 11,
+        "source_present_clarifications": 11,
+        "confirmed_avoidable_clean_faq": 11,
+        "errors": 0,
+        "wrong_person": 0,
+        "outcomes": {
+          "ok": 119,
+          "clarification": 11,
+          "partial": 3,
+          "conflict": 1,
+          "no_match": 3,
+          "social": 1
+        },
+        "p50_api_ms": 69.12,
+        "p95_api_ms": 146.87,
+        "p50_observer_ms": 70.59,
+        "p95_observer_ms": 147.841,
+        "stages": {
+          "context_llm_edit": {
+            "n": 11,
+            "p50_ms": 0.002,
+            "p95_ms": 0.005
+          },
+          "context_resolution": {
+            "n": 137,
+            "p50_ms": 0.571,
+            "p95_ms": 1.574
+          },
+          "dialogue_routing": {
+            "n": 138,
+            "p50_ms": 1.034,
+            "p95_ms": 3.463
+          },
+          "evidence_selection": {
+            "n": 1,
+            "p50_ms": 0.208,
+            "p95_ms": 0.208
+          },
+          "exact_faq": {
+            "n": 124,
+            "p50_ms": 5.605,
+            "p95_ms": 9.087
+          },
+          "followup_suggestions": {
+            "n": 125,
+            "p50_ms": 58.242,
+            "p95_ms": 88.055
+          },
+          "grounding": {
+            "n": 126,
+            "p50_ms": 19.061,
+            "p95_ms": 30.707
+          },
+          "hybrid_retrieval": {
+            "n": 9,
+            "p50_ms": 91.028,
+            "p95_ms": 202.826
+          },
+          "normalization": {
+            "n": 137,
+            "p50_ms": 0.067,
+            "p95_ms": 0.194
+          },
+          "orchestration": {
+            "n": 138,
+            "p50_ms": 9.005,
+            "p95_ms": 98.063
+          },
+          "public_vocabulary": {
+            "n": 95,
+            "p50_ms": 0.018,
+            "p95_ms": 0.041
+          },
+          "query_embedding": {
+            "n": 9,
+            "p50_ms": 23.748,
+            "p95_ms": 56.161
+          },
+          "response_render": {
+            "n": 121,
+            "p50_ms": 0.039,
+            "p95_ms": 0.114
+          },
+          "retrieval": {
+            "n": 125,
+            "p50_ms": 6.135,
+            "p95_ms": 88.721
+          },
+          "social_matching": {
+            "n": 138,
+            "p50_ms": 0.231,
+            "p95_ms": 1.033
+          },
+          "social_normalization": {
+            "n": 122,
+            "p50_ms": 0.064,
+            "p95_ms": 0.189
+          },
+          "social_query_embedding": {
+            "n": 1,
+            "p50_ms": 19.599,
+            "p95_ms": 19.599
+          },
+          "social_reply": {
+            "n": 1,
+            "p50_ms": 0.065,
+            "p95_ms": 0.065
+          },
+          "spelling_matching": {
+            "n": 138,
+            "p50_ms": 0.266,
+            "p95_ms": 0.67
+          },
+          "structured_enrollment": {
+            "n": 1,
+            "p50_ms": 4.336,
+            "p95_ms": 4.336
+          },
+          "structured_personnel": {
+            "n": 125,
+            "p50_ms": 0.007,
+            "p95_ms": 0.025
+          }
+        }
+      },
+      "staff_clean": {
+        "n": 12,
+        "passed": 9,
+        "accuracy": 0.75,
+        "top1": 9,
+        "top3": 9,
+        "clarifications": 0,
+        "source_present_clarifications": 0,
+        "confirmed_avoidable_clean_faq": 0,
+        "errors": 0,
+        "wrong_person": 0,
+        "outcomes": {
+          "ok": 9,
+          "ambiguous": 3
+        },
+        "p50_api_ms": 126.97,
+        "p95_api_ms": 153.81,
+        "p50_observer_ms": 128.439,
+        "p95_observer_ms": 155.63,
+        "stages": {
+          "context_resolution": {
+            "n": 12,
+            "p50_ms": 0.108,
+            "p95_ms": 0.313
+          },
+          "dialogue_routing": {
+            "n": 12,
+            "p50_ms": 0.848,
+            "p95_ms": 2.761
+          },
+          "exact_faq": {
+            "n": 3,
+            "p50_ms": 4.384,
+            "p95_ms": 5.202
+          },
+          "followup_suggestions": {
+            "n": 9,
+            "p50_ms": 47.641,
+            "p95_ms": 62.094
+          },
+          "grounding": {
+            "n": 9,
+            "p50_ms": 16.433,
+            "p95_ms": 22.338
+          },
+          "normalization": {
+            "n": 12,
+            "p50_ms": 0.067,
+            "p95_ms": 0.088
+          },
+          "orchestration": {
+            "n": 12,
+            "p50_ms": 77.584,
+            "p95_ms": 92.93
+          },
+          "public_vocabulary": {
+            "n": 5,
+            "p50_ms": 0.016,
+            "p95_ms": 0.039
+          },
+          "response_render": {
+            "n": 9,
+            "p50_ms": 0.027,
+            "p95_ms": 0.03
+          },
+          "retrieval": {
+            "n": 12,
+            "p50_ms": 75.187,
+            "p95_ms": 90.072
+          },
+          "social_matching": {
+            "n": 12,
+            "p50_ms": 0.629,
+            "p95_ms": 1.371
+          },
+          "social_normalization": {
+            "n": 12,
+            "p50_ms": 0.04,
+            "p95_ms": 0.09
+          },
+          "spelling_matching": {
+            "n": 12,
+            "p50_ms": 0.227,
+            "p95_ms": 0.447
+          },
+          "structured_personnel": {
+            "n": 12,
+            "p50_ms": 73.59,
+            "p95_ms": 89.582
+          }
+        }
+      },
+      "spacing": {
+        "n": 156,
+        "passed": 68,
+        "accuracy": 0.435897,
+        "top1": 62,
+        "top3": 68,
+        "clarifications": 59,
+        "source_present_clarifications": 59,
+        "confirmed_avoidable_clean_faq": 0,
+        "errors": 0,
+        "wrong_person": 0,
+        "outcomes": {
+          "ok": 73,
+          "clarification": 59,
+          "no_match": 19,
+          "partial": 5
+        },
+        "p50_api_ms": 64.71,
+        "p95_api_ms": 242.66,
+        "p50_observer_ms": 66.899,
+        "p95_observer_ms": 245.626,
+        "stages": {
+          "context_llm_edit": {
+            "n": 7,
+            "p50_ms": 0.002,
+            "p95_ms": 0.006
+          },
+          "context_resolution": {
+            "n": 105,
+            "p50_ms": 0.673,
+            "p95_ms": 1.685
+          },
+          "dialogue_routing": {
+            "n": 156,
+            "p50_ms": 1.042,
+            "p95_ms": 3.906
+          },
+          "evidence_selection": {
+            "n": 28,
+            "p50_ms": 0.071,
+            "p95_ms": 0.108
+          },
+          "exact_faq": {
+            "n": 91,
+            "p50_ms": 4.921,
+            "p95_ms": 10.082
+          },
+          "followup_suggestions": {
+            "n": 91,
+            "p50_ms": 55.373,
+            "p95_ms": 94.749
+          },
+          "grounding": {
+            "n": 91,
+            "p50_ms": 22.201,
+            "p95_ms": 47.029
+          },
+          "hybrid_retrieval": {
+            "n": 68,
+            "p50_ms": 91.43,
+            "p95_ms": 173.407
+          },
+          "normalization": {
+            "n": 105,
+            "p50_ms": 0.074,
+            "p95_ms": 0.224
+          },
+          "orchestration": {
+            "n": 156,
+            "p50_ms": 11.375,
+            "p95_ms": 174.416
+          },
+          "public_vocabulary": {
+            "n": 64,
+            "p50_ms": 0.018,
+            "p95_ms": 0.049
+          },
+          "query_embedding": {
+            "n": 68,
+            "p50_ms": 25.523,
+            "p95_ms": 86.022
+          },
+          "response_render": {
+            "n": 72,
+            "p50_ms": 0.042,
+            "p95_ms": 0.17
+          },
+          "retrieval": {
+            "n": 91,
+            "p50_ms": 89.558,
+            "p95_ms": 181.67
+          },
+          "social_matching": {
+            "n": 156,
+            "p50_ms": 0.21,
+            "p95_ms": 0.787
+          },
+          "social_normalization": {
+            "n": 123,
+            "p50_ms": 0.055,
+            "p95_ms": 0.164
+          },
+          "social_query_embedding": {
+            "n": 2,
+            "p50_ms": 14.711,
+            "p95_ms": 73.722
+          },
+          "social_reply": {
+            "n": 1,
+            "p50_ms": 0.013,
+            "p95_ms": 0.013
+          },
+          "spelling_matching": {
+            "n": 156,
+            "p50_ms": 0.36,
+            "p95_ms": 0.975
+          },
+          "structured_personnel": {
+            "n": 91,
+            "p50_ms": 0.008,
+            "p95_ms": 0.02
+          }
+        }
+      },
+      "correct_refusal": {
+        "n": 8,
+        "correct": 8
+      }
+    }
+  },
+  "after": {
+    "dev": {
+      "startup_ms": 9572.65619700047,
+      "all": {
+        "n": 1096,
+        "passed": 963,
+        "accuracy": 0.87865,
+        "top1": 0,
+        "top3": 0,
+        "clarifications": 145,
+        "source_present_clarifications": 0,
+        "confirmed_avoidable_clean_faq": 0,
+        "errors": 0,
+        "wrong_person": 0,
+        "outcomes": {
+          "social": 311,
+          "clarification": 145,
+          "no_match": 501,
+          "ok": 139
+        },
+        "p50_api_ms": 113.31,
+        "p95_api_ms": 161.29,
+        "p50_observer_ms": 114.559,
+        "p95_observer_ms": 182.781,
+        "stages": {
+          "context_llm_edit": {
+            "n": 8,
+            "p50_ms": 0.003,
+            "p95_ms": 0.004
+          },
+          "context_resolution": {
+            "n": 728,
+            "p50_ms": 0.124,
+            "p95_ms": 0.191
+          },
+          "dialogue_routing": {
+            "n": 1096,
+            "p50_ms": 0.576,
+            "p95_ms": 20.526
+          },
+          "evidence_selection": {
+            "n": 58,
+            "p50_ms": 0.051,
+            "p95_ms": 0.08
+          },
+          "exact_faq": {
+            "n": 664,
+            "p50_ms": 4.643,
+            "p95_ms": 6.687
+          },
+          "followup_suggestions": {
+            "n": 686,
+            "p50_ms": 47.579,
+            "p95_ms": 59.199
+          },
+          "grounding": {
+            "n": 693,
+            "p50_ms": 14.686,
+            "p95_ms": 21.801
+          },
+          "hybrid_retrieval": {
+            "n": 664,
+            "p50_ms": 61.884,
+            "p95_ms": 90.004
+          },
+          "normalization": {
+            "n": 728,
+            "p50_ms": 0.097,
+            "p95_ms": 11.334
+          },
+          "orchestration": {
+            "n": 1096,
+            "p50_ms": 64.099,
+            "p95_ms": 113.599
+          },
+          "public_vocabulary": {
+            "n": 8,
+            "p50_ms": 0.02,
+            "p95_ms": 21.151
+          },
+          "query_embedding": {
+            "n": 664,
+            "p50_ms": 14.926,
+            "p95_ms": 25.852
+          },
+          "response_render": {
+            "n": 139,
+            "p50_ms": 0.032,
+            "p95_ms": 0.136
+          },
+          "retrieval": {
+            "n": 672,
+            "p50_ms": 70.569,
+            "p95_ms": 96.919
+          },
+          "social_matching": {
+            "n": 1064,
+            "p50_ms": 0.173,
+            "p95_ms": 0.55
+          },
+          "social_normalization": {
+            "n": 1064,
+            "p50_ms": 0.027,
+            "p95_ms": 0.079
+          },
+          "social_query_embedding": {
+            "n": 186,
+            "p50_ms": 14.674,
+            "p95_ms": 21.674
+          },
+          "social_reply": {
+            "n": 311,
+            "p50_ms": 0.006,
+            "p95_ms": 0.011
+          },
+          "spelling_evidence": {
+            "n": 18,
+            "p50_ms": 139.43,
+            "p95_ms": 219.708
+          },
+          "spelling_matching": {
+            "n": 1096,
+            "p50_ms": 0.32,
+            "p95_ms": 28.048
+          },
+          "structured_enrollment": {
+            "n": 46,
+            "p50_ms": 4.27,
+            "p95_ms": 4.971
+          },
+          "structured_personnel": {
+            "n": 672,
+            "p50_ms": 0.005,
+            "p95_ms": 0.165
+          }
+        }
+      },
+      "groups": {
+        "institutional": {
+          "n": 672,
+          "passed": 672,
+          "accuracy": 1.0,
+          "top1": 0,
+          "top3": 0,
+          "clarifications": 94,
+          "source_present_clarifications": 0,
+          "confirmed_avoidable_clean_faq": 0,
+          "errors": 0,
+          "wrong_person": 0,
+          "outcomes": {
+            "clarification": 94,
+            "no_match": 439,
+            "ok": 139
+          },
+          "p50_api_ms": 126.07,
+          "p95_api_ms": 163.69,
+          "p50_observer_ms": 127.754,
+          "p95_observer_ms": 184.752,
+          "social_false_positives": 0,
+          "stages": {
+            "context_resolution": {
+              "n": 644,
+              "p50_ms": 0.125,
+              "p95_ms": 0.186
+            },
+            "dialogue_routing": {
+              "n": 672,
+              "p50_ms": 0.624,
+              "p95_ms": 13.555
+            },
+            "evidence_selection": {
+              "n": 58,
+              "p50_ms": 0.051,
+              "p95_ms": 0.08
+            },
+            "exact_faq": {
+              "n": 584,
+              "p50_ms": 4.61,
+              "p95_ms": 6.481
+            },
+            "followup_suggestions": {
+              "n": 578,
+              "p50_ms": 47.843,
+              "p95_ms": 59.225
+            },
+            "grounding": {
+              "n": 585,
+              "p50_ms": 14.936,
+              "p95_ms": 22.164
+            },
+            "hybrid_retrieval": {
+              "n": 584,
+              "p50_ms": 62.909,
+              "p95_ms": 90.004
+            },
+            "normalization": {
+              "n": 644,
+              "p50_ms": 0.084,
+              "p95_ms": 10.014
+            },
+            "orchestration": {
+              "n": 672,
+              "p50_ms": 75.095,
+              "p95_ms": 116.686
+            },
+            "query_embedding": {
+              "n": 584,
+              "p50_ms": 14.981,
+              "p95_ms": 25.852
+            },
+            "response_render": {
+              "n": 139,
+              "p50_ms": 0.032,
+              "p95_ms": 0.136
+            },
+            "retrieval": {
+              "n": 592,
+              "p50_ms": 72.588,
+              "p95_ms": 96.919
+            },
+            "social_matching": {
+              "n": 672,
+              "p50_ms": 0.174,
+              "p95_ms": 0.352
+            },
+            "social_normalization": {
+              "n": 672,
+              "p50_ms": 0.038,
+              "p95_ms": 0.08
+            },
+            "spelling_evidence": {
+              "n": 14,
+              "p50_ms": 139.43,
+              "p95_ms": 219.708
+            },
+            "spelling_matching": {
+              "n": 672,
+              "p50_ms": 0.405,
+              "p95_ms": 30.059
+            },
+            "structured_personnel": {
+              "n": 592,
+              "p50_ms": 0.005,
+              "p95_ms": 0.166
+            }
+          }
+        },
+        "social": {
+          "n": 424,
+          "passed": 291,
+          "accuracy": 0.686321,
+          "top1": 0,
+          "top3": 0,
+          "clarifications": 51,
+          "source_present_clarifications": 0,
+          "confirmed_avoidable_clean_faq": 0,
+          "errors": 0,
+          "wrong_person": 0,
+          "outcomes": {
+            "social": 311,
+            "clarification": 51,
+            "no_match": 62
+          },
+          "p50_api_ms": 11.61,
+          "p95_api_ms": 141.22,
+          "p50_observer_ms": 12.6,
+          "p95_observer_ms": 171.318,
+          "stages": {
+            "context_llm_edit": {
+              "n": 8,
+              "p50_ms": 0.003,
+              "p95_ms": 0.004
+            },
+            "context_resolution": {
+              "n": 84,
+              "p50_ms": 0.111,
+              "p95_ms": 0.49
+            },
+            "dialogue_routing": {
+              "n": 424,
+              "p50_ms": 0.448,
+              "p95_ms": 25.678
+            },
+            "exact_faq": {
+              "n": 80,
+              "p50_ms": 4.829,
+              "p95_ms": 7.194
+            },
+            "followup_suggestions": {
+              "n": 108,
+              "p50_ms": 45.727,
+              "p95_ms": 55.835
+            },
+            "grounding": {
+              "n": 108,
+              "p50_ms": 13.63,
+              "p95_ms": 16.176
+            },
+            "hybrid_retrieval": {
+              "n": 80,
+              "p50_ms": 52.519,
+              "p95_ms": 72.779
+            },
+            "normalization": {
+              "n": 84,
+              "p50_ms": 0.185,
+              "p95_ms": 11.963
+            },
+            "orchestration": {
+              "n": 424,
+              "p50_ms": 0.573,
+              "p95_ms": 92.812
+            },
+            "public_vocabulary": {
+              "n": 8,
+              "p50_ms": 0.02,
+              "p95_ms": 21.151
+            },
+            "query_embedding": {
+              "n": 80,
+              "p50_ms": 13.833,
+              "p95_ms": 24.629
+            },
+            "retrieval": {
+              "n": 80,
+              "p50_ms": 59.372,
+              "p95_ms": 88.76
+            },
+            "social_matching": {
+              "n": 392,
+              "p50_ms": 0.17,
+              "p95_ms": 0.67
+            },
+            "social_normalization": {
+              "n": 392,
+              "p50_ms": 0.024,
+              "p95_ms": 0.079
+            },
+            "social_query_embedding": {
+              "n": 186,
+              "p50_ms": 14.674,
+              "p95_ms": 21.674
+            },
+            "social_reply": {
+              "n": 311,
+              "p50_ms": 0.006,
+              "p95_ms": 0.011
+            },
+            "spelling_evidence": {
+              "n": 4,
+              "p50_ms": 113.448,
+              "p95_ms": 175.137
+            },
+            "spelling_matching": {
+              "n": 424,
+              "p50_ms": 0.173,
+              "p95_ms": 14.567
+            },
+            "structured_enrollment": {
+              "n": 46,
+              "p50_ms": 4.27,
+              "p95_ms": 4.971
+            },
+            "structured_personnel": {
+              "n": 80,
+              "p50_ms": 0.005,
+              "p95_ms": 0.133
+            }
+          }
+        }
+      }
+    },
+    "test": {
+      "startup_ms": 1.9339680002303794,
+      "all": {
+        "n": 472,
+        "passed": 356,
+        "accuracy": 0.754237,
+        "top1": 0,
+        "top3": 0,
+        "clarifications": 92,
+        "source_present_clarifications": 0,
+        "confirmed_avoidable_clean_faq": 0,
+        "errors": 0,
+        "wrong_person": 0,
+        "outcomes": {
+          "clarification": 92,
+          "social": 84,
+          "no_match": 268,
+          "ok": 28
+        },
+        "p50_api_ms": 120.12,
+        "p95_api_ms": 171.6,
+        "p50_observer_ms": 121.948,
+        "p95_observer_ms": 198.141,
+        "stages": {
+          "context_llm_edit": {
+            "n": 14,
+            "p50_ms": 0.002,
+            "p95_ms": 0.004
+          },
+          "context_resolution": {
+            "n": 343,
+            "p50_ms": 0.127,
+            "p95_ms": 0.193
+          },
+          "dialogue_routing": {
+            "n": 472,
+            "p50_ms": 7.026,
+            "p95_ms": 27.751
+          },
+          "evidence_selection": {
+            "n": 19,
+            "p50_ms": 0.047,
+            "p95_ms": 0.094
+          },
+          "exact_faq": {
+            "n": 316,
+            "p50_ms": 4.615,
+            "p95_ms": 7.083
+          },
+          "followup_suggestions": {
+            "n": 311,
+            "p50_ms": 48.397,
+            "p95_ms": 63.373
+          },
+          "grounding": {
+            "n": 314,
+            "p50_ms": 14.854,
+            "p95_ms": 21.206
+          },
+          "hybrid_retrieval": {
+            "n": 316,
+            "p50_ms": 65.53,
+            "p95_ms": 92.307
+          },
+          "normalization": {
+            "n": 343,
+            "p50_ms": 0.102,
+            "p95_ms": 12.029
+          },
+          "orchestration": {
+            "n": 472,
+            "p50_ms": 71.421,
+            "p95_ms": 123.46
+          },
+          "query_embedding": {
+            "n": 316,
+            "p50_ms": 16.311,
+            "p95_ms": 29.466
+          },
+          "response_render": {
+            "n": 28,
+            "p50_ms": 0.029,
+            "p95_ms": 0.194
+          },
+          "retrieval": {
+            "n": 316,
+            "p50_ms": 71.92,
+            "p95_ms": 106.403
+          },
+          "social_matching": {
+            "n": 459,
+            "p50_ms": 0.197,
+            "p95_ms": 0.581
+          },
+          "social_normalization": {
+            "n": 459,
+            "p50_ms": 0.031,
+            "p95_ms": 0.099
+          },
+          "social_query_embedding": {
+            "n": 164,
+            "p50_ms": 15.695,
+            "p95_ms": 26.0
+          },
+          "social_reply": {
+            "n": 84,
+            "p50_ms": 0.008,
+            "p95_ms": 0.012
+          },
+          "spelling_evidence": {
+            "n": 9,
+            "p50_ms": 130.057,
+            "p95_ms": 203.585
+          },
+          "spelling_matching": {
+            "n": 472,
+            "p50_ms": 0.378,
+            "p95_ms": 32.632
+          },
+          "structured_enrollment": {
+            "n": 15,
+            "p50_ms": 4.539,
+            "p95_ms": 41.055
+          },
+          "structured_personnel": {
+            "n": 316,
+            "p50_ms": 0.005,
+            "p95_ms": 0.153
+          }
+        }
+      },
+      "groups": {
+        "institutional": {
+          "n": 288,
+          "passed": 288,
+          "accuracy": 1.0,
+          "top1": 0,
+          "top3": 0,
+          "clarifications": 30,
+          "source_present_clarifications": 0,
+          "confirmed_avoidable_clean_faq": 0,
+          "errors": 0,
+          "wrong_person": 0,
+          "outcomes": {
+            "clarification": 30,
+            "no_match": 230,
+            "ok": 28
+          },
+          "p50_api_ms": 128.85,
+          "p95_api_ms": 173.74,
+          "p50_observer_ms": 130.186,
+          "p95_observer_ms": 201.558,
+          "social_false_positives": 0,
+          "stages": {
+            "context_resolution": {
+              "n": 280,
+              "p50_ms": 0.128,
+              "p95_ms": 0.193
+            },
+            "dialogue_routing": {
+              "n": 288,
+              "p50_ms": 0.596,
+              "p95_ms": 16.019
+            },
+            "evidence_selection": {
+              "n": 19,
+              "p50_ms": 0.047,
+              "p95_ms": 0.094
+            },
+            "exact_faq": {
+              "n": 264,
+              "p50_ms": 4.599,
+              "p95_ms": 6.47
+            },
+            "followup_suggestions": {
+              "n": 258,
+              "p50_ms": 48.495,
+              "p95_ms": 64.473
+            },
+            "grounding": {
+              "n": 261,
+              "p50_ms": 15.124,
+              "p95_ms": 21.242
+            },
+            "hybrid_retrieval": {
+              "n": 264,
+              "p50_ms": 66.576,
+              "p95_ms": 89.714
+            },
+            "normalization": {
+              "n": 280,
+              "p50_ms": 0.082,
+              "p95_ms": 13.284
+            },
+            "orchestration": {
+              "n": 288,
+              "p50_ms": 77.507,
+              "p95_ms": 123.768
+            },
+            "query_embedding": {
+              "n": 264,
+              "p50_ms": 16.364,
+              "p95_ms": 27.334
+            },
+            "response_render": {
+              "n": 28,
+              "p50_ms": 0.029,
+              "p95_ms": 0.194
+            },
+            "retrieval": {
+              "n": 264,
+              "p50_ms": 73.396,
+              "p95_ms": 102.805
+            },
+            "social_matching": {
+              "n": 288,
+              "p50_ms": 0.152,
+              "p95_ms": 0.399
+            },
+            "social_normalization": {
+              "n": 288,
+              "p50_ms": 0.027,
+              "p95_ms": 0.079
+            },
+            "spelling_evidence": {
+              "n": 6,
+              "p50_ms": 130.057,
+              "p95_ms": 188.049
+            },
+            "spelling_matching": {
+              "n": 288,
+              "p50_ms": 0.402,
+              "p95_ms": 40.09
+            },
+            "structured_personnel": {
+              "n": 264,
+              "p50_ms": 0.005,
+              "p95_ms": 0.153
+            }
+          }
+        },
+        "social": {
+          "n": 184,
+          "passed": 68,
+          "accuracy": 0.369565,
+          "top1": 0,
+          "top3": 0,
+          "clarifications": 62,
+          "source_present_clarifications": 0,
+          "confirmed_avoidable_clean_faq": 0,
+          "errors": 0,
+          "wrong_person": 0,
+          "outcomes": {
+            "clarification": 62,
+            "social": 84,
+            "no_match": 38
+          },
+          "p50_api_ms": 22.23,
+          "p95_api_ms": 160.23,
+          "p50_observer_ms": 42.733,
+          "p95_observer_ms": 187.946,
+          "stages": {
+            "context_llm_edit": {
+              "n": 14,
+              "p50_ms": 0.002,
+              "p95_ms": 0.004
+            },
+            "context_resolution": {
+              "n": 63,
+              "p50_ms": 0.118,
+              "p95_ms": 0.179
+            },
+            "dialogue_routing": {
+              "n": 184,
+              "p50_ms": 16.557,
+              "p95_ms": 35.619
+            },
+            "exact_faq": {
+              "n": 52,
+              "p50_ms": 5.014,
+              "p95_ms": 8.359
+            },
+            "followup_suggestions": {
+              "n": 53,
+              "p50_ms": 47.593,
+              "p95_ms": 62.755
+            },
+            "grounding": {
+              "n": 53,
+              "p50_ms": 14.11,
+              "p95_ms": 19.263
+            },
+            "hybrid_retrieval": {
+              "n": 52,
+              "p50_ms": 57.072,
+              "p95_ms": 161.769
+            },
+            "normalization": {
+              "n": 63,
+              "p50_ms": 0.166,
+              "p95_ms": 11.209
+            },
+            "orchestration": {
+              "n": 184,
+              "p50_ms": 19.826,
+              "p95_ms": 116.053
+            },
+            "query_embedding": {
+              "n": 52,
+              "p50_ms": 15.646,
+              "p95_ms": 36.155
+            },
+            "retrieval": {
+              "n": 52,
+              "p50_ms": 63.626,
+              "p95_ms": 177.925
+            },
+            "social_matching": {
+              "n": 171,
+              "p50_ms": 0.29,
+              "p95_ms": 0.843
+            },
+            "social_normalization": {
+              "n": 171,
+              "p50_ms": 0.032,
+              "p95_ms": 0.201
+            },
+            "social_query_embedding": {
+              "n": 164,
+              "p50_ms": 15.695,
+              "p95_ms": 26.0
+            },
+            "social_reply": {
+              "n": 84,
+              "p50_ms": 0.008,
+              "p95_ms": 0.012
+            },
+            "spelling_evidence": {
+              "n": 3,
+              "p50_ms": 129.397,
+              "p95_ms": 203.585
+            },
+            "spelling_matching": {
+              "n": 184,
+              "p50_ms": 0.345,
+              "p95_ms": 27.948
+            },
+            "structured_enrollment": {
+              "n": 15,
+              "p50_ms": 4.539,
+              "p95_ms": 41.055
+            },
+            "structured_personnel": {
+              "n": 52,
+              "p50_ms": 0.005,
+              "p95_ms": 0.127
+            }
+          }
+        }
+      }
+    },
+    "golden": {
+      "startup_ms": 3.2665340004314203,
+      "all": {
+        "n": 1284,
+        "passed": 899,
+        "accuracy": 0.700156,
+        "top1": 855,
+        "top3": 888,
+        "clarifications": 279,
+        "source_present_clarifications": 277,
+        "confirmed_avoidable_clean_faq": 11,
+        "errors": 0,
+        "wrong_person": 0,
+        "outcomes": {
+          "ok": 891,
+          "no_match": 77,
+          "clarification": 279,
+          "partial": 27,
+          "conflict": 2,
+          "social": 7,
+          "ambiguous": 1
+        },
+        "p50_api_ms": 57.81,
+        "p95_api_ms": 158.83,
+        "p50_observer_ms": 59.738,
+        "p95_observer_ms": 163.323,
+        "stages": {
+          "context_llm_edit": {
+            "n": 74,
+            "p50_ms": 0.002,
+            "p95_ms": 0.004
+          },
+          "context_resolution": {
+            "n": 1085,
+            "p50_ms": 0.511,
+            "p95_ms": 1.013
+          },
+          "dialogue_routing": {
+            "n": 1284,
+            "p50_ms": 1.362,
+            "p95_ms": 3.474
+          },
+          "evidence_selection": {
+            "n": 75,
+            "p50_ms": 0.056,
+            "p95_ms": 0.135
+          },
+          "exact_faq": {
+            "n": 943,
+            "p50_ms": 4.906,
+            "p95_ms": 9.238
+          },
+          "followup_suggestions": {
+            "n": 954,
+            "p50_ms": 48.45,
+            "p95_ms": 65.491
+          },
+          "grounding": {
+            "n": 964,
+            "p50_ms": 15.491,
+            "p95_ms": 29.198
+          },
+          "hybrid_retrieval": {
+            "n": 242,
+            "p50_ms": 82.984,
+            "p95_ms": 215.741
+          },
+          "normalization": {
+            "n": 1085,
+            "p50_ms": 0.083,
+            "p95_ms": 0.183
+          },
+          "orchestration": {
+            "n": 1284,
+            "p50_ms": 8.214,
+            "p95_ms": 120.241
+          },
+          "public_vocabulary": {
+            "n": 676,
+            "p50_ms": 0.015,
+            "p95_ms": 0.028
+          },
+          "query_embedding": {
+            "n": 242,
+            "p50_ms": 19.282,
+            "p95_ms": 68.166
+          },
+          "query_interpretation": {
+            "n": 1,
+            "p50_ms": 3.833,
+            "p95_ms": 3.833
+          },
+          "response_render": {
+            "n": 870,
+            "p50_ms": 0.036,
+            "p95_ms": 0.103
+          },
+          "retrieval": {
+            "n": 960,
+            "p50_ms": 5.645,
+            "p95_ms": 115.54
+          },
+          "social_matching": {
+            "n": 1284,
+            "p50_ms": 0.358,
+            "p95_ms": 1.161
+          },
+          "social_normalization": {
+            "n": 1114,
+            "p50_ms": 0.09,
+            "p95_ms": 0.252
+          },
+          "social_query_embedding": {
+            "n": 12,
+            "p50_ms": 16.887,
+            "p95_ms": 27.177
+          },
+          "social_reply": {
+            "n": 8,
+            "p50_ms": 0.005,
+            "p95_ms": 0.384
+          },
+          "spelling_evidence": {
+            "n": 27,
+            "p50_ms": 89.444,
+            "p95_ms": 189.69
+          },
+          "spelling_matching": {
+            "n": 1284,
+            "p50_ms": 0.446,
+            "p95_ms": 0.945
+          },
+          "structured_enrollment": {
+            "n": 7,
+            "p50_ms": 4.284,
+            "p95_ms": 4.708
+          },
+          "structured_personnel": {
+            "n": 960,
+            "p50_ms": 0.006,
+            "p95_ms": 0.131
+          }
+        }
+      },
+      "groups": {
+        "compound": {
+          "n": 2,
+          "passed": 2,
+          "accuracy": 1.0,
+          "top1": 0,
+          "top3": 0,
+          "clarifications": 0,
+          "source_present_clarifications": 0,
+          "confirmed_avoidable_clean_faq": 0,
+          "errors": 0,
+          "wrong_person": 0,
+          "outcomes": {
+            "ok": 1,
+            "partial": 1
+          },
+          "p50_api_ms": 195.36,
+          "p95_api_ms": 198.84,
+          "p50_observer_ms": 196.849,
+          "p95_observer_ms": 200.059,
+          "stages": {
+            "context_resolution": {
+              "n": 2,
+              "p50_ms": 1.272,
+              "p95_ms": 1.56
+            },
+            "dialogue_routing": {
+              "n": 2,
+              "p50_ms": 1.684,
+              "p95_ms": 1.974
+            },
+            "exact_faq": {
+              "n": 1,
+              "p50_ms": 3.947,
+              "p95_ms": 3.947
+            },
+            "followup_suggestions": {
+              "n": 2,
+              "p50_ms": 49.122,
+              "p95_ms": 50.774
+            },
+            "grounding": {
+              "n": 2,
+              "p50_ms": 20.433,
+              "p95_ms": 20.946
+            },
+            "hybrid_retrieval": {
+              "n": 1,
+              "p50_ms": 56.246,
+              "p95_ms": 56.246
+            },
+            "normalization": {
+              "n": 2,
+              "p50_ms": 0.224,
+              "p95_ms": 0.235
+            },
+            "orchestration": {
+              "n": 2,
+              "p50_ms": 288.249,
+              "p95_ms": 291.957
+            },
+            "public_vocabulary": {
+              "n": 2,
+              "p50_ms": 0.013,
+              "p95_ms": 0.015
+            },
+            "query_embedding": {
+              "n": 1,
+              "p50_ms": 14.727,
+              "p95_ms": 14.727
+            },
+            "response_render": {
+              "n": 2,
+              "p50_ms": 0.027,
+              "p95_ms": 0.052
+            },
+            "retrieval": {
+              "n": 2,
+              "p50_ms": 139.639,
+              "p95_ms": 140.538
+            },
+            "social_matching": {
+              "n": 2,
+              "p50_ms": 0.55,
+              "p95_ms": 0.715
+            },
+            "social_normalization": {
+              "n": 2,
+              "p50_ms": 0.117,
+              "p95_ms": 0.164
+            },
+            "spelling_matching": {
+              "n": 2,
+              "p50_ms": 0.772,
+              "p95_ms": 0.833
+            },
+            "structured_personnel": {
+              "n": 2,
+              "p50_ms": 74.179,
+              "p95_ms": 139.855
+            }
+          }
+        },
+        "faq": {
+          "n": 1128,
+          "passed": 825,
+          "accuracy": 0.731383,
+          "top1": 800,
+          "top3": 825,
+          "clarifications": 199,
+          "source_present_clarifications": 199,
+          "confirmed_avoidable_clean_faq": 11,
+          "errors": 0,
+          "wrong_person": 0,
+          "outcomes": {
+            "ok": 825,
+            "no_match": 69,
+            "clarification": 199,
+            "partial": 26,
+            "conflict": 2,
+            "social": 7
+          },
+          "p50_api_ms": 57.83,
+          "p95_api_ms": 165.26,
+          "p50_observer_ms": 59.792,
+          "p95_observer_ms": 173.689,
+          "stages": {
+            "context_llm_edit": {
+              "n": 72,
+              "p50_ms": 0.002,
+              "p95_ms": 0.004
+            },
+            "context_resolution": {
+              "n": 999,
+              "p50_ms": 0.544,
+              "p95_ms": 1.015
+            },
+            "dialogue_routing": {
+              "n": 1128,
+              "p50_ms": 1.488,
+              "p95_ms": 3.493
+            },
+            "evidence_selection": {
+              "n": 75,
+              "p50_ms": 0.056,
+              "p95_ms": 0.135
+            },
+            "exact_faq": {
+              "n": 922,
+              "p50_ms": 4.907,
+              "p95_ms": 9.488
+            },
+            "followup_suggestions": {
+              "n": 919,
+              "p50_ms": 48.463,
+              "p95_ms": 66.291
+            },
+            "grounding": {
+              "n": 928,
+              "p50_ms": 15.49,
+              "p95_ms": 29.738
+            },
+            "hybrid_retrieval": {
+              "n": 235,
+              "p50_ms": 83.739,
+              "p95_ms": 228.279
+            },
+            "normalization": {
+              "n": 999,
+              "p50_ms": 0.083,
+              "p95_ms": 0.183
+            },
+            "orchestration": {
+              "n": 1128,
+              "p50_ms": 8.461,
+              "p95_ms": 139.938
+            },
+            "public_vocabulary": {
+              "n": 662,
+              "p50_ms": 0.015,
+              "p95_ms": 0.028
+            },
+            "query_embedding": {
+              "n": 235,
+              "p50_ms": 19.395,
+              "p95_ms": 70.892
+            },
+            "query_interpretation": {
+              "n": 1,
+              "p50_ms": 3.833,
+              "p95_ms": 3.833
+            },
+            "response_render": {
+              "n": 843,
+              "p50_ms": 0.036,
+              "p95_ms": 0.105
+            },
+            "retrieval": {
+              "n": 924,
+              "p50_ms": 5.592,
+              "p95_ms": 115.54
+            },
+            "social_matching": {
+              "n": 1128,
+              "p50_ms": 0.334,
+              "p95_ms": 1.132
+            },
+            "social_normalization": {
+              "n": 960,
+              "p50_ms": 0.101,
+              "p95_ms": 0.257
+            },
+            "social_query_embedding": {
+              "n": 11,
+              "p50_ms": 17.489,
+              "p95_ms": 27.177
+            },
+            "social_reply": {
+              "n": 8,
+              "p50_ms": 0.005,
+              "p95_ms": 0.384
+            },
+            "spelling_evidence": {
+              "n": 27,
+              "p50_ms": 89.444,
+              "p95_ms": 189.69
+            },
+            "spelling_matching": {
+              "n": 1128,
+              "p50_ms": 0.484,
+              "p95_ms": 0.978
+            },
+            "structured_enrollment": {
+              "n": 7,
+              "p50_ms": 4.284,
+              "p95_ms": 4.708
+            },
+            "structured_personnel": {
+              "n": 924,
+              "p50_ms": 0.006,
+              "p95_ms": 0.018
+            }
+          }
+        },
+        "followup": {
+          "n": 2,
+          "passed": 1,
+          "accuracy": 0.5,
+          "top1": 0,
+          "top3": 0,
+          "clarifications": 1,
+          "source_present_clarifications": 0,
+          "confirmed_avoidable_clean_faq": 0,
+          "errors": 0,
+          "wrong_person": 0,
+          "outcomes": {
+            "clarification": 1,
+            "ok": 1
+          },
+          "p50_api_ms": 2.78,
+          "p95_api_ms": 60.72,
+          "p50_observer_ms": 3.678,
+          "p95_observer_ms": 61.96,
+          "stages": {
+            "context_llm_edit": {
+              "n": 1,
+              "p50_ms": 0.002,
+              "p95_ms": 0.002
+            },
+            "context_resolution": {
+              "n": 2,
+              "p50_ms": 0.338,
+              "p95_ms": 0.842
+            },
+            "dialogue_routing": {
+              "n": 2,
+              "p50_ms": 0.64,
+              "p95_ms": 1.272
+            },
+            "exact_faq": {
+              "n": 1,
+              "p50_ms": 6.632,
+              "p95_ms": 6.632
+            },
+            "followup_suggestions": {
+              "n": 1,
+              "p50_ms": 50.249,
+              "p95_ms": 50.249
+            },
+            "grounding": {
+              "n": 1,
+              "p50_ms": 15.152,
+              "p95_ms": 15.152
+            },
+            "normalization": {
+              "n": 2,
+              "p50_ms": 0.052,
+              "p95_ms": 0.078
+            },
+            "orchestration": {
+              "n": 2,
+              "p50_ms": 2.089,
+              "p95_ms": 9.554
+            },
+            "public_vocabulary": {
+              "n": 2,
+              "p50_ms": 0.013,
+              "p95_ms": 0.015
+            },
+            "response_render": {
+              "n": 1,
+              "p50_ms": 0.026,
+              "p95_ms": 0.026
+            },
+            "retrieval": {
+              "n": 1,
+              "p50_ms": 6.992,
+              "p95_ms": 6.992
+            },
+            "social_matching": {
+              "n": 2,
+              "p50_ms": 0.326,
+              "p95_ms": 0.519
+            },
+            "social_normalization": {
+              "n": 2,
+              "p50_ms": 0.079,
+              "p95_ms": 0.122
+            },
+            "spelling_matching": {
+              "n": 2,
+              "p50_ms": 0.199,
+              "p95_ms": 0.334
+            },
+            "structured_personnel": {
+              "n": 1,
+              "p50_ms": 0.005,
+              "p95_ms": 0.005
+            }
+          }
+        },
+        "location": {
+          "n": 48,
+          "passed": 39,
+          "accuracy": 0.8125,
+          "top1": 31,
+          "top3": 39,
+          "clarifications": 8,
+          "source_present_clarifications": 8,
+          "confirmed_avoidable_clean_faq": 0,
+          "errors": 0,
+          "wrong_person": 0,
+          "outcomes": {
+            "clarification": 8,
+            "ok": 40
+          },
+          "p50_api_ms": 66.07,
+          "p95_api_ms": 77.2,
+          "p50_observer_ms": 67.303,
+          "p95_observer_ms": 78.283,
+          "stages": {
+            "context_resolution": {
+              "n": 48,
+              "p50_ms": 0.099,
+              "p95_ms": 0.171
+            },
+            "dialogue_routing": {
+              "n": 48,
+              "p50_ms": 0.366,
+              "p95_ms": 0.496
+            },
+            "normalization": {
+              "n": 48,
+              "p50_ms": 0.049,
+              "p95_ms": 0.107
+            },
+            "orchestration": {
+              "n": 48,
+              "p50_ms": 1.233,
+              "p95_ms": 1.557
+            },
+            "social_matching": {
+              "n": 48,
+              "p50_ms": 0.164,
+              "p95_ms": 0.215
+            },
+            "social_normalization": {
+              "n": 48,
+              "p50_ms": 0.042,
+              "p95_ms": 0.068
+            },
+            "spelling_matching": {
+              "n": 48,
+              "p50_ms": 0.192,
+              "p95_ms": 0.289
+            }
+          }
+        },
+        "refusal": {
+          "n": 8,
+          "passed": 8,
+          "accuracy": 1.0,
+          "top1": 0,
+          "top3": 0,
+          "clarifications": 1,
+          "source_present_clarifications": 0,
+          "confirmed_avoidable_clean_faq": 0,
+          "errors": 0,
+          "wrong_person": 0,
+          "outcomes": {
+            "no_match": 6,
+            "clarification": 1,
+            "ambiguous": 1
+          },
+          "p50_api_ms": 119.93,
+          "p95_api_ms": 144.64,
+          "p50_observer_ms": 120.928,
+          "p95_observer_ms": 163.527,
+          "stages": {
+            "context_llm_edit": {
+              "n": 1,
+              "p50_ms": 0.002,
+              "p95_ms": 0.002
+            },
+            "context_resolution": {
+              "n": 8,
+              "p50_ms": 0.111,
+              "p95_ms": 0.136
+            },
+            "dialogue_routing": {
+              "n": 8,
+              "p50_ms": 0.323,
+              "p95_ms": 15.12
+            },
+            "exact_faq": {
+              "n": 6,
+              "p50_ms": 4.782,
+              "p95_ms": 8.364
+            },
+            "followup_suggestions": {
+              "n": 6,
+              "p50_ms": 46.523,
+              "p95_ms": 48.443
+            },
+            "grounding": {
+              "n": 7,
+              "p50_ms": 14.084,
+              "p95_ms": 15.037
+            },
+            "hybrid_retrieval": {
+              "n": 6,
+              "p50_ms": 61.328,
+              "p95_ms": 68.021
+            },
+            "normalization": {
+              "n": 8,
+              "p50_ms": 0.101,
+              "p95_ms": 8.525
+            },
+            "orchestration": {
+              "n": 8,
+              "p50_ms": 72.368,
+              "p95_ms": 97.593
+            },
+            "query_embedding": {
+              "n": 6,
+              "p50_ms": 17.635,
+              "p95_ms": 20.898
+            },
+            "retrieval": {
+              "n": 7,
+              "p50_ms": 71.21,
+              "p95_ms": 78.871
+            },
+            "social_matching": {
+              "n": 8,
+              "p50_ms": 0.17,
+              "p95_ms": 0.245
+            },
+            "social_normalization": {
+              "n": 6,
+              "p50_ms": 0.038,
+              "p95_ms": 0.044
+            },
+            "social_query_embedding": {
+              "n": 1,
+              "p50_ms": 14.354,
+              "p95_ms": 14.354
+            },
+            "spelling_matching": {
+              "n": 8,
+              "p50_ms": 0.299,
+              "p95_ms": 26.172
+            },
+            "structured_personnel": {
+              "n": 7,
+              "p50_ms": 0.005,
+              "p95_ms": 68.403
+            }
+          }
+        },
+        "staff": {
+          "n": 96,
+          "passed": 24,
+          "accuracy": 0.25,
+          "top1": 24,
+          "top3": 24,
+          "clarifications": 70,
+          "source_present_clarifications": 70,
+          "confirmed_avoidable_clean_faq": 0,
+          "errors": 0,
+          "wrong_person": 0,
+          "outcomes": {
+            "ok": 24,
+            "clarification": 70,
+            "no_match": 2
+          },
+          "p50_api_ms": 2.05,
+          "p95_api_ms": 137.39,
+          "p50_observer_ms": 3.922,
+          "p95_observer_ms": 140.067,
+          "stages": {
+            "context_resolution": {
+              "n": 26,
+              "p50_ms": 0.108,
+              "p95_ms": 0.293
+            },
+            "dialogue_routing": {
+              "n": 96,
+              "p50_ms": 1.149,
+              "p95_ms": 3.5
+            },
+            "exact_faq": {
+              "n": 13,
+              "p50_ms": 4.655,
+              "p95_ms": 6.262
+            },
+            "followup_suggestions": {
+              "n": 26,
+              "p50_ms": 48.306,
+              "p95_ms": 55.891
+            },
+            "grounding": {
+              "n": 26,
+              "p50_ms": 16.585,
+              "p95_ms": 18.926
+            },
+            "normalization": {
+              "n": 26,
+              "p50_ms": 0.095,
+              "p95_ms": 0.122
+            },
+            "orchestration": {
+              "n": 96,
+              "p50_ms": 1.243,
+              "p95_ms": 87.566
+            },
+            "public_vocabulary": {
+              "n": 10,
+              "p50_ms": 0.016,
+              "p95_ms": 0.107
+            },
+            "response_render": {
+              "n": 24,
+              "p50_ms": 0.027,
+              "p95_ms": 0.035
+            },
+            "retrieval": {
+              "n": 26,
+              "p50_ms": 79.514,
+              "p95_ms": 88.587
+            },
+            "social_matching": {
+              "n": 96,
+              "p50_ms": 0.698,
+              "p95_ms": 1.75
+            },
+            "social_normalization": {
+              "n": 96,
+              "p50_ms": 0.051,
+              "p95_ms": 0.13
+            },
+            "spelling_matching": {
+              "n": 96,
+              "p50_ms": 0.26,
+              "p95_ms": 0.405
+            },
+            "structured_personnel": {
+              "n": 26,
+              "p50_ms": 75.345,
+              "p95_ms": 85.514
+            }
+          }
+        }
+      },
+      "faq_clean": {
+        "n": 138,
+        "passed": 121,
+        "accuracy": 0.876812,
+        "top1": 120,
+        "top3": 121,
+        "clarifications": 11,
+        "source_present_clarifications": 11,
+        "confirmed_avoidable_clean_faq": 11,
+        "errors": 0,
+        "wrong_person": 0,
+        "outcomes": {
+          "ok": 119,
+          "clarification": 11,
+          "partial": 3,
+          "conflict": 1,
+          "no_match": 3,
+          "social": 1
+        },
+        "p50_api_ms": 57.21,
+        "p95_api_ms": 141.6,
+        "p50_observer_ms": 58.735,
+        "p95_observer_ms": 147.757,
+        "stages": {
+          "context_llm_edit": {
+            "n": 11,
+            "p50_ms": 0.002,
+            "p95_ms": 0.004
+          },
+          "context_resolution": {
+            "n": 137,
+            "p50_ms": 0.546,
+            "p95_ms": 1.012
+          },
+          "dialogue_routing": {
+            "n": 138,
+            "p50_ms": 1.183,
+            "p95_ms": 3.291
+          },
+          "evidence_selection": {
+            "n": 1,
+            "p50_ms": 0.05,
+            "p95_ms": 0.05
+          },
+          "exact_faq": {
+            "n": 124,
+            "p50_ms": 4.92,
+            "p95_ms": 8.014
+          },
+          "followup_suggestions": {
+            "n": 125,
+            "p50_ms": 48.295,
+            "p95_ms": 64.555
+          },
+          "grounding": {
+            "n": 126,
+            "p50_ms": 15.272,
+            "p95_ms": 25.084
+          },
+          "hybrid_retrieval": {
+            "n": 9,
+            "p50_ms": 88.012,
+            "p95_ms": 146.739
+          },
+          "normalization": {
+            "n": 137,
+            "p50_ms": 0.08,
+            "p95_ms": 0.163
+          },
+          "orchestration": {
+            "n": 138,
+            "p50_ms": 7.911,
+            "p95_ms": 106.708
+          },
+          "public_vocabulary": {
+            "n": 95,
+            "p50_ms": 0.014,
+            "p95_ms": 0.025
+          },
+          "query_embedding": {
+            "n": 9,
+            "p50_ms": 23.413,
+            "p95_ms": 34.746
+          },
+          "response_render": {
+            "n": 121,
+            "p50_ms": 0.036,
+            "p95_ms": 0.076
+          },
+          "retrieval": {
+            "n": 125,
+            "p50_ms": 5.329,
+            "p95_ms": 91.754
+          },
+          "social_matching": {
+            "n": 138,
+            "p50_ms": 0.324,
+            "p95_ms": 1.116
+          },
+          "social_normalization": {
+            "n": 122,
+            "p50_ms": 0.094,
+            "p95_ms": 0.24
+          },
+          "social_query_embedding": {
+            "n": 1,
+            "p50_ms": 27.177,
+            "p95_ms": 27.177
+          },
+          "social_reply": {
+            "n": 1,
+            "p50_ms": 0.384,
+            "p95_ms": 0.384
+          },
+          "spelling_matching": {
+            "n": 138,
+            "p50_ms": 0.351,
+            "p95_ms": 0.644
+          },
+          "structured_enrollment": {
+            "n": 1,
+            "p50_ms": 4.284,
+            "p95_ms": 4.284
+          },
+          "structured_personnel": {
+            "n": 125,
+            "p50_ms": 0.006,
+            "p95_ms": 0.011
+          }
+        }
+      },
+      "staff_clean": {
+        "n": 12,
+        "passed": 12,
+        "accuracy": 1.0,
+        "top1": 12,
+        "top3": 12,
+        "clarifications": 0,
+        "source_present_clarifications": 0,
+        "confirmed_avoidable_clean_faq": 0,
+        "errors": 0,
+        "wrong_person": 0,
+        "outcomes": {
+          "ok": 12
+        },
+        "p50_api_ms": 133.26,
+        "p95_api_ms": 160.17,
+        "p50_observer_ms": 135.155,
+        "p95_observer_ms": 161.95,
+        "stages": {
+          "context_resolution": {
+            "n": 12,
+            "p50_ms": 0.107,
+            "p95_ms": 0.267
+          },
+          "dialogue_routing": {
+            "n": 12,
+            "p50_ms": 1.149,
+            "p95_ms": 3.873
+          },
+          "exact_faq": {
+            "n": 6,
+            "p50_ms": 3.932,
+            "p95_ms": 5.635
+          },
+          "followup_suggestions": {
+            "n": 12,
+            "p50_ms": 48.506,
+            "p95_ms": 56.487
+          },
+          "grounding": {
+            "n": 12,
+            "p50_ms": 16.675,
+            "p95_ms": 18.338
+          },
+          "normalization": {
+            "n": 12,
+            "p50_ms": 0.082,
+            "p95_ms": 0.111
+          },
+          "orchestration": {
+            "n": 12,
+            "p50_ms": 83.173,
+            "p95_ms": 103.439
+          },
+          "public_vocabulary": {
+            "n": 5,
+            "p50_ms": 0.015,
+            "p95_ms": 0.019
+          },
+          "response_render": {
+            "n": 12,
+            "p50_ms": 0.027,
+            "p95_ms": 0.07
+          },
+          "retrieval": {
+            "n": 12,
+            "p50_ms": 79.955,
+            "p95_ms": 100.862
+          },
+          "social_matching": {
+            "n": 12,
+            "p50_ms": 0.951,
+            "p95_ms": 1.873
+          },
+          "social_normalization": {
+            "n": 12,
+            "p50_ms": 0.065,
+            "p95_ms": 0.164
+          },
+          "spelling_matching": {
+            "n": 12,
+            "p50_ms": 0.29,
+            "p95_ms": 0.454
+          },
+          "structured_personnel": {
+            "n": 12,
+            "p50_ms": 75.345,
+            "p95_ms": 85.514
+          }
+        }
+      },
+      "spacing": {
+        "n": 156,
+        "passed": 77,
+        "accuracy": 0.49359,
+        "top1": 67,
+        "top3": 77,
+        "clarifications": 48,
+        "source_present_clarifications": 48,
+        "confirmed_avoidable_clean_faq": 0,
+        "errors": 0,
+        "wrong_person": 0,
+        "outcomes": {
+          "ok": 82,
+          "clarification": 48,
+          "no_match": 20,
+          "partial": 6
+        },
+        "p50_api_ms": 108.88,
+        "p95_api_ms": 269.6,
+        "p50_observer_ms": 109.71,
+        "p95_observer_ms": 271.39,
+        "stages": {
+          "context_llm_edit": {
+            "n": 9,
+            "p50_ms": 0.002,
+            "p95_ms": 0.021
+          },
+          "context_resolution": {
+            "n": 119,
+            "p50_ms": 0.635,
+            "p95_ms": 1.337
+          },
+          "dialogue_routing": {
+            "n": 156,
+            "p50_ms": 1.274,
+            "p95_ms": 3.797
+          },
+          "evidence_selection": {
+            "n": 37,
+            "p50_ms": 0.056,
+            "p95_ms": 0.155
+          },
+          "exact_faq": {
+            "n": 103,
+            "p50_ms": 4.721,
+            "p95_ms": 13.142
+          },
+          "followup_suggestions": {
+            "n": 102,
+            "p50_ms": 48.217,
+            "p95_ms": 63.186
+          },
+          "grounding": {
+            "n": 102,
+            "p50_ms": 17.306,
+            "p95_ms": 40.084
+          },
+          "hybrid_retrieval": {
+            "n": 80,
+            "p50_ms": 82.984,
+            "p95_ms": 283.498
+          },
+          "normalization": {
+            "n": 119,
+            "p50_ms": 0.09,
+            "p95_ms": 0.192
+          },
+          "orchestration": {
+            "n": 156,
+            "p50_ms": 61.455,
+            "p95_ms": 276.211
+          },
+          "public_vocabulary": {
+            "n": 75,
+            "p50_ms": 0.014,
+            "p95_ms": 0.022
+          },
+          "query_embedding": {
+            "n": 80,
+            "p50_ms": 19.169,
+            "p95_ms": 102.076
+          },
+          "response_render": {
+            "n": 82,
+            "p50_ms": 0.038,
+            "p95_ms": 0.127
+          },
+          "retrieval": {
+            "n": 103,
+            "p50_ms": 84.847,
+            "p95_ms": 266.04
+          },
+          "social_matching": {
+            "n": 156,
+            "p50_ms": 0.349,
+            "p95_ms": 1.202
+          },
+          "social_normalization": {
+            "n": 123,
+            "p50_ms": 0.102,
+            "p95_ms": 0.262
+          },
+          "social_query_embedding": {
+            "n": 2,
+            "p50_ms": 15.652,
+            "p95_ms": 17.489
+          },
+          "social_reply": {
+            "n": 1,
+            "p50_ms": 0.009,
+            "p95_ms": 0.009
+          },
+          "spelling_evidence": {
+            "n": 5,
+            "p50_ms": 179.342,
+            "p95_ms": 250.318
+          },
+          "spelling_matching": {
+            "n": 156,
+            "p50_ms": 0.457,
+            "p95_ms": 0.978
+          },
+          "structured_personnel": {
+            "n": 103,
+            "p50_ms": 0.007,
+            "p95_ms": 0.023
+          }
+        }
+      },
+      "correct_refusal": {
+        "n": 8,
+        "correct": 8
+      }
+    }
+  },
+  "spacing_disabled": {
+    "n": 156,
+    "passed": 56,
+    "accuracy": 0.358974,
+    "top1": 45,
+    "top3": 56,
+    "clarifications": 68,
+    "source_present_clarifications": 68,
+    "confirmed_avoidable_clean_faq": 0,
+    "errors": 0,
+    "wrong_person": 0,
+    "outcomes": {
+      "clarification": 68,
+      "ok": 63,
+      "no_match": 19,
+      "partial": 6
+    },
+    "p50_api_ms": 124.31,
+    "p95_api_ms": 236.25,
+    "p50_observer_ms": 125.784,
+    "p95_observer_ms": 238.092,
+    "stages": {
+      "context_llm_edit": {
+        "n": 8,
+        "p50_ms": 0.002,
+        "p95_ms": 0.002
+      },
+      "context_resolution": {
+        "n": 101,
+        "p50_ms": 0.663,
+        "p95_ms": 1.52
+      },
+      "dialogue_routing": {
+        "n": 156,
+        "p50_ms": 1.667,
+        "p95_ms": 29.017
+      },
+      "evidence_selection": {
+        "n": 41,
+        "p50_ms": 0.058,
+        "p95_ms": 0.098
+      },
+      "exact_faq": {
+        "n": 90,
+        "p50_ms": 4.682,
+        "p95_ms": 13.69
+      },
+      "followup_suggestions": {
+        "n": 87,
+        "p50_ms": 48.462,
+        "p95_ms": 56.975
+      },
+      "grounding": {
+        "n": 87,
+        "p50_ms": 19.338,
+        "p95_ms": 39.413
+      },
+      "hybrid_retrieval": {
+        "n": 89,
+        "p50_ms": 85.318,
+        "p95_ms": 219.834
+      },
+      "normalization": {
+        "n": 101,
+        "p50_ms": 0.087,
+        "p95_ms": 0.194
+      },
+      "orchestration": {
+        "n": 156,
+        "p50_ms": 75.989,
+        "p95_ms": 266.601
+      },
+      "public_vocabulary": {
+        "n": 63,
+        "p50_ms": 0.016,
+        "p95_ms": 0.029
+      },
+      "query_embedding": {
+        "n": 89,
+        "p50_ms": 20.14,
+        "p95_ms": 50.892
+      },
+      "response_render": {
+        "n": 68,
+        "p50_ms": 0.042,
+        "p95_ms": 0.102
+      },
+      "retrieval": {
+        "n": 90,
+        "p50_ms": 90.913,
+        "p95_ms": 234.999
+      },
+      "social_matching": {
+        "n": 156,
+        "p50_ms": 0.355,
+        "p95_ms": 1.287
+      },
+      "social_normalization": {
+        "n": 122,
+        "p50_ms": 0.103,
+        "p95_ms": 0.285
+      },
+      "social_query_embedding": {
+        "n": 4,
+        "p50_ms": 12.076,
+        "p95_ms": 17.415
+      },
+      "social_reply": {
+        "n": 1,
+        "p50_ms": 0.012,
+        "p95_ms": 0.012
+      },
+      "spelling_evidence": {
+        "n": 8,
+        "p50_ms": 183.377,
+        "p95_ms": 471.129
+      },
+      "spelling_matching": {
+        "n": 156,
+        "p50_ms": 0.503,
+        "p95_ms": 36.064
+      },
+      "structured_personnel": {
+        "n": 90,
+        "p50_ms": 0.007,
+        "p95_ms": 0.026
+      }
+    }
+  },
+  "protocol": {
+    "test_tuning": false,
+    "private_student_file_accessed": false,
+    "provider_calls": "disabled in synthetic measurements; opt-in live smoke not run",
+    "source_present_clarification": "upper bound requiring manual review; not proof of avoidability",
+    "latency": "API trace excludes transport/browser; observer includes introspection/navigation score probes"
+  }
+}

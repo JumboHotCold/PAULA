@@ -1,0 +1,123 @@
+{
+  "scope": "Isolated CI account and tmpfs database; no personal browser profile or production account",
+  "backend": {
+    "ready": true,
+    "build_commit": "cb7e3a37684f93db84447c50822ff5bb3b5a9fbd",
+    "build_source": "git",
+    "build_source_digest": "c35de1580582e458eb254f980bc10200cd177e4025de4f4c42c398fdcbc7ef47",
+    "build_consistent": true,
+    "expected_workers": 1,
+    "ready_workers": 1,
+    "workers": [
+      {
+        "worker": 159,
+        "ready": true,
+        "social_router_ready": true,
+        "spelling_vocabulary_ready": true,
+        "dimensions": 384,
+        "startup_ms": 41858.43,
+        "build_commit": "cb7e3a37684f93db84447c50822ff5bb3b5a9fbd",
+        "build_source": "git",
+        "build_source_digest": "c35de1580582e458eb254f980bc10200cd177e4025de4f4c42c398fdcbc7ef47"
+      }
+    ],
+    "database_ready": true,
+    "knowledge_available": true,
+    "index_complete": true,
+    "knowledge": {
+      "FAQ": {
+        "total": 3,
+        "missing": 0
+      },
+      "Location": {
+        "total": 0,
+        "missing": 0
+      },
+      "StaffMember": {
+        "total": 0,
+        "missing": 0
+      },
+      "WebResource": {
+        "total": 0,
+        "missing": 0
+      }
+    }
+  },
+  "requests": [
+    {
+      "message": "What is the fixture president?",
+      "mode": "authenticated",
+      "conversation_id": null,
+      "has_context_token": false
+    },
+    {
+      "message": "What is the fixture preseidnt?",
+      "mode": "authenticated",
+      "conversation_id": 5,
+      "has_context_token": true
+    },
+    {
+      "message": "What is the fixture president?",
+      "mode": "authenticated",
+      "conversation_id": 5,
+      "has_context_token": false
+    },
+    {
+      "message": "What is the fixture preseidnt?",
+      "mode": "authenticated",
+      "conversation_id": 5,
+      "has_context_token": true
+    },
+    {
+      "message": "yes",
+      "mode": "authenticated",
+      "conversation_id": 5,
+      "has_context_token": false
+    },
+    {
+      "message": "What programs are offered at SPUS?",
+      "mode": "authenticated",
+      "conversation_id": 5,
+      "has_context_token": true
+    }
+  ],
+  "logged_in": true,
+  "before_refresh": {
+    "chips": [
+      {
+        "text": "What is the fixture president?",
+        "disabled": false
+      }
+    ]
+  },
+  "after_refresh": {
+    "chips": [
+      {
+        "text": "What is the fixture president?",
+        "disabled": false
+      }
+    ]
+  },
+  "choice_hit_target": {
+    "x": 155.78125,
+    "y": 343.234375,
+    "width": 185.5625,
+    "height": 44,
+    "opacity": "1"
+  },
+  "clicked_choice_answer": true,
+  "yes_after_refresh": true,
+  "list_items": 21,
+  "bullet_style": "disc",
+  "layout": {
+    "viewport": 390,
+    "document": 390,
+    "build": {
+      "git_commit": "cb7e3a37684f93db84447c50822ff5bb3b5a9fbd",
+      "build_source": "git",
+      "source_digest": "2154e44186e86966df2258482489b9ae63e440d8a194d6b2a8b7f4968d4128a7",
+      "worktree_dirty": false
+    }
+  },
+  "passed": true
+}

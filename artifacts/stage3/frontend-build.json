@@ -1,0 +1,11 @@
+{
+  "git_commit": "cb7e3a37684f93db84447c50822ff5bb3b5a9fbd",
+  "build_source": "git",
+  "source_digest": "2154e44186e86966df2258482489b9ae63e440d8a194d6b2a8b7f4968d4128a7",
+  "worktree_dirty": false,
+  "assets": {
+    "assets/index-cMcyP19i.css": "fba30c490318c6ad2be2fd655bc1f8d001dd42b3abfa6421d1117b80238ec937",
+    "assets/index-C179KCW8.js": "ea760fa5b2b0efd5917b51fdea3b5be2bb53dce4a58d645f1288c5106b4039c0",
+    "assets/sweetalert2.esm.all-i0D1jcg2.js": "396bb1a6a1388422bf61d3f17d57dc0e8bd3ffb0416c1c495bbfd470c4ad111a"
+  }
+}
