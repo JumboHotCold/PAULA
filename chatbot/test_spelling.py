@@ -93,7 +93,8 @@ class SpellingSafetyTests(SimpleTestCase):
         pending={'kind':'enrollment','query':'How do I enroll?'}
         result=local_bot().process_query('What is the preseidnt?',context_query='How do I enroll?',
                                         dialogue_state={'pending':pending,'language':'fil'})
-        self.assertEqual(result.pending_clarification,pending)
+        self.assertEqual(result.pending_clarification['resume'],pending)
+        self.assertEqual(result.pending_clarification['kind'],'spelling')
         self.assertEqual(result.context_query,'How do I enroll?')
         self.assertEqual(result.language_preference,'fil')
 

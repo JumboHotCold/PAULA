@@ -26,6 +26,7 @@ from .dialogue import route_turn, language_for, language_request
 from .social_responses import candidates as social_candidates
 from .response_style import ACKS, frame_answer, strip_intro
 from .query_understanding import incomplete_request, short_reason_subject, REPHRASE_EN, REPHRASE_FIL
+from .clarifications import validated_pending,spelling_pending
 
 logger = logging.getLogger(__name__)
 
@@ -298,11 +299,7 @@ class PauliBotLogic:
                 else:spelling_choices=resolved_spelling.choices
         clean_history = None
         anchor = context_query
-        pending = state.get('pending')
-        if not (isinstance(pending, dict) and set(pending) == {'kind', 'query'} and
-                pending.get('kind') in ('enrollment', 'navigation') and isinstance(pending.get('query'), str) and
-                0 < len(pending['query']) <= 2000):
-            pending = None
+        pending=validated_pending(state.get('pending'))
         if not anchor or (route.kind not in ('knowledge', 'feedback') and pending is None):
             clean_history = dialogue_history(history)
             anchor = anchor or conversation_anchor(clean_history, filtered=True)
@@ -313,6 +310,21 @@ class PauliBotLogic:
                     pending = {'kind': 'enrollment', 'query': previous['content']}
                 elif body.startswith((NAV_QUESTION, NAV_QUESTION_FIL)):
                     pending = {'kind': 'navigation', 'query': previous['content']}
+        if pending and pending['kind']=='spelling':
+            if route.kind=='negation':
+                return ConversationAnswer((self._social_reply(route,response_language,history),[],None,None),anchor,
+                    status='social',mode='negation',language=preference,pending=pending.get('resume'))
+            if route.kind in ('affirmation','acknowledgement'):
+                choices=pending['choices']
+                if len(choices)==1:
+                    return self.process_query(choices[0],history,anchor,_atomic=_atomic,_selection_budget=_selection_budget,
+                        dialogue_state={'language':preference,'pending':pending.get('resume')})
+                text=('Alin sa mga tanong ang ibig mong sabihin?' if response_language=='fil' else 'Which question did you mean? Please choose one.')
+                text+='\n\n[SUGGESTIONS: '+' | '.join(json.dumps(q) for q in choices)+']'
+                return ConversationAnswer((text,[],None,None),anchor,status='clarification',mode='spelling_confirmation',
+                    language=preference,pending=pending)
+            # A selected full question or a new topic replaces the spelling task.
+            pending=pending.get('resume')
         if route.method in ('spelling_confirmation','protected_name'):
             if route.method == 'protected_name':
                 text = ('Maaari mong kumpirmahin ang eksaktong pangalan o tungkulin ng taong tinutukoy mo? Hindi ako manghuhula ng pangalan batay sa baybay.'
@@ -324,6 +336,7 @@ class PauliBotLogic:
                 text = ('Ang ibig mo bang sabihin ay ' if response_language=='fil' else 'Did you mean ') + \
                     (' o ' if response_language=='fil' else ' or ').join(json.dumps(query,ensure_ascii=False) for query in questions) + '?'
                 text += '\n\n[SUGGESTIONS: ' + ' | '.join(json.dumps(query,ensure_ascii=False) for query in questions) + ']'
+                pending=spelling_pending(user_message,questions,pending)
             return ConversationAnswer((text,[],None,None),anchor,status='clarification',mode=route.method,
                                       language=preference,pending=pending)
         if route.kind not in ('knowledge', 'feedback'):

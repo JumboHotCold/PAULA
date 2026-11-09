@@ -1,0 +1,8 @@
+﻿{
+    "step":  "04-confirmation",
+    "revision":  "7ae0947eb89ccb2bd3ddb17809d225a69c8bfe22",
+    "backend_exit":  0,
+    "frontend_exit":  0,
+    "backend_tests":  "483",
+    "frontend_tests":  "27"
+}

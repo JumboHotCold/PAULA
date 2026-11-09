@@ -2,6 +2,7 @@
 from django.core import signing
 
 from .conversation_context import CONTEXT_TTL
+from .clarifications import validated_pending
 
 SALT = 'paula.conversation.intent.v1'
 
@@ -25,9 +26,8 @@ def encode_context(query, owner, thread, anchor=None, language=None, pending=Non
     state = {'query':query, 'owner':str(owner), 'thread':str(thread), 'anchor':anchor}
     if language in ('en', 'fil'):
         state['language'] = language
-    if isinstance(pending, dict) and set(pending) == {'kind', 'query'} and pending.get('kind') in ('enrollment', 'navigation'):
-        if isinstance(pending.get('query'), str) and 0 < len(pending['query']) <= 2000:
-            state['pending'] = pending
+    pending=validated_pending(pending)
+    if pending:state['pending']=pending
     if not query and 'language' not in state and 'pending' not in state:
         return None
     return signing.dumps(state, salt=SALT, compress=True)
@@ -51,10 +51,8 @@ def decode_dialogue_state(token, owner, thread, anchor=None):
     if data.get('language') in ('en', 'fil'):
         state['language'] = data['language']
     pending = data.get('pending')
-    if (isinstance(pending, dict) and set(pending) == {'kind', 'query'} and
-            pending.get('kind') in ('enrollment', 'navigation') and isinstance(pending.get('query'), str) and
-            0 < len(pending['query']) <= 2000):
-        state['pending'] = pending
+    pending=validated_pending(pending)
+    if pending:state['pending']=pending
     return state
 
 

@@ -310,6 +310,7 @@ def chat_api(request):
         # used only for routing; persisted history from an owned thread wins.
         history_msgs = bounded_history(data.get('history'))
         context_anchor = None
+        restored_pending=None
         if conversation_id and persist:
             # Fetch last 5 interactions (10 messages total) for context to stay within token limits
             past_chats = ChatHistory.objects.filter(
@@ -321,6 +322,8 @@ def chat_api(request):
             
             # Reverse to get chronological order [ oldest -> newest ]
             for chat in reversed(past_chats):
+                from .clarifications import pending_from_stored_reply
+                restored_pending=pending_from_stored_reply(chat.message,chat.response)
                 context_anchor = getattr(chat, 'id', None)
                 timestamp = getattr(chat, 'timestamp', None)
                 when = {'timestamp': timestamp.timestamp()} if hasattr(timestamp, 'timestamp') else {}
@@ -335,6 +338,8 @@ def chat_api(request):
         guest_id = guest_id if isinstance(guest_id, str) and len(guest_id) <= 100 else ''
         thread = conversation_id if persist else guest_id
         dialogue_state = decode_dialogue_state(data.get('context_token'), owner, thread, context_anchor)
+        if persist and restored_pending and not dialogue_state.get('pending'):
+            dialogue_state['pending']=restored_pending
         effective_context = dialogue_state.get('query', '')
         dialogue_options = {'dialogue_state': dialogue_state} if dialogue_state.get('language') or dialogue_state.get('pending') else {}
         if effective_context:
