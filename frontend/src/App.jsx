@@ -32,8 +32,6 @@ function chatSession(user, fresh = false) {
   return value;
 }
 
-const GUEST_GREETING = "Hello! Welcome to Saint Paul University Surigao!\n\nI'm PAULA (Paulinian Artificial User Support and Learning Assistant), your virtual campus assistant. I can help you with admissions, office locations, tuition fees, staff info, and more.\n\nHow may I assist you today?";
-
 function AdminLogin({ onLogin, onBack }) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');

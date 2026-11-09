@@ -5,6 +5,7 @@ negation, qualification and historical language are deliberately preserved.
 """
 import re
 import unicodedata
+from dataclasses import dataclass
 
 FRESHNESS_WORDS = {'currently', 'now', 'today', 'ngayon', 'kasalukuyan'}
 ROLE_WORDS = {'president', 'vp', 'dean', 'director', 'principal', 'registrar', 'moderator', 'head'}
@@ -14,9 +15,23 @@ ALIASES = {
 }
 
 
-def normalized_text(value):
+@dataclass(frozen=True)
+class NormalizedInput:
+    original: str
+    spaced: str
+    squashed: str
+    punctuated: str
+
+
+def normalize_input(value):
+    original = value or ''
     value=unicodedata.normalize('NFKC',value or '')
-    return ' '.join(re.findall(r'\w+',value.casefold().replace('&',' and ')))
+    spaced = ' '.join(re.findall(r'\w+',value.casefold().replace('&',' and ')))
+    return NormalizedInput(original, spaced, spaced.replace(' ', ''), ' '.join(value.casefold().split()))
+
+
+def normalized_text(value):
+    return normalize_input(value).spaced
 
 
 def faq_question_key(value):

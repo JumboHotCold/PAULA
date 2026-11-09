@@ -1,39 +1,17 @@
 """Conservative social/knowledge routing; no answers or user state in the router."""
+from .conversation_config import conversation_config
 from dataclasses import dataclass
 import re
 from threading import Lock
 
 from .performance import timed, stage
-from .query_normalization import normalized_text
+from .query_normalization import normalize_input, normalized_text
 from .intents import normalize_query
 from .social_normalization import match_social
 
 
 # Public intent examples only. These never enter the knowledge vector space.
-SOCIAL_EXAMPLES = {
-    'wellbeing': ('How are things going with you?', 'How is your day going?', 'Are you doing okay?',
-                  'Kumusta ka ngayon?', 'Kamusta ang araw mo?', 'How are you naman?'),
-    'thanks': ('I appreciate your help a lot', 'That was really helpful, thank you', 'You helped me understand',
-               'Maraming salamat sa tulong', 'Thank you, malaking tulong ito'),
-    'acknowledgement': ('Okay, I understand now', 'That makes sense to me', 'All clear, got it',
-                        'Sige, naiintindihan ko na', 'Ah okay, gets ko na'),
-    'farewell': ('I will talk to you later', 'Goodbye and take care', 'See you next time',
-                 'Sige, paalam muna', 'Usap tayo ulit mamaya'),
-    'joke': ('Say something funny to cheer me up', 'Can you tell me a short joke?', 'Make me laugh a little',
-             'Patawanin mo naman ako', 'May joke ka ba?', 'Something funny naman'),
-    'support': ('I have had a tiring day', 'I am feeling nervous and overwhelmed', 'I feel discouraged today',
-                'Pagod na ako ngayon', 'Medyo kinakabahan ako', 'Nakaka-stress ang araw na ito'),
-    'celebration': ('I am happy about my progress', 'I finally finished my work', 'I did it and feel proud',
-                    'Masaya ako ngayon', 'Natapos ko na ang gawain ko', 'Finally, tapos na!'),
-    'preference': ('What is your favorite food?', 'Do you have any hobbies?', 'What do you do for fun?',
-                   'Ano ang paborito mong pagkain?', 'May hobbies ka ba?', 'What music do you like?'),
-    'capabilities': ('What can you help me with?', 'Can we have a casual conversation?', 'What are you able to do?',
-                     'Ano ang kaya mong gawin?', 'Pwede ba tayong mag-usap lang?', 'Can we just chat for a bit?'),
-    'knowledge': ('Who is the university president?', 'How do I enroll as a transferee?', 'What are the library rules?',
-                  'Where is the finance office?', 'What documents are required?', 'Who teaches engineering?',
-                  'How much is tuition?', 'What is the deadline?', 'What programs are available?',
-                  'Sino ang dekano?', 'Paano mag-enroll?', 'Magkano ang bayad?', 'Ano ang requirements?'),
-}
+SOCIAL_EXAMPLES = conversation_config()['semantic']['exemplars']
 
 KNOWLEDGE = re.compile(
     r'\b(?:spus|spu|university|campus|college|school|faculty|faculties|dean|president|director|principal|registrar|'
@@ -49,26 +27,7 @@ SELF_SOCIAL = re.compile(r'\b(?:you|your|ka|mo|ikaw|tayo|joke|funny|laugh|patawa
 EMOTION = re.compile(r'\b(?:tired|stressed|nervous|overwhelmed|discouraged|frustrated|sad|bored|pagod|kinakabahan|lungkot|nakakainis|stress)\b', re.I)
 FIRST_PERSON = re.compile(r"^(?:i\b|i['’]m\b|im\b|feeling\b|medyo\b|pagod\b|kinakabahan\b|ako\b|nakaka\w*\b)", re.I)
 
-FAST = {
-    'greeting': r'(?:hi|hello|hey|huy|mabuhay|good morning|good afternoon|good evening|kamusta|kumusta)(?:\s+(?:there|paula|po|naman))*',
-    'wellbeing': r"(?:how are you(?: doing)?(?: today)?|how['’]s it going|what['’]s up|kumusta ka(?: na)?|kamusta ka(?: na)?)(?:\s+(?:paula|po|naman))*",
-    'thanks': r'(?:thanks|thank you|thank you so much|thanks a lot|salamat|maraming salamat)(?:\s+(?:paula|po|so much|for your help|sa tulong|that helped|malaking tulong))*',
-    'acknowledgement': r'(?:ok|okay|alright|got it|understood|noted|makes sense|sige|gets ko na|naiintindihan ko na|all clear)(?:\s+(?:na|po|paula))*',
-    'farewell': r'(?:bye|goodbye|see you|see you later|good night|paalam|ingat)(?:\s+(?:paula|po|muna))*',
-    'feedback': r"(?:that['’]s wrong|that is wrong|your answer is wrong|that['’]s incorrect|mali yan|mali iyon|mali ang sagot|that doesn['’]t answer my question)",
-    'identity': (r'(?:who(?:\s+(?:are|r))?\s+(?:you|u)|what(?: are| r) you|what do you do|'
-                 r'what is your (?:name|purpose|role|function)|what[\x27\u2019]s your (?:name|purpose|role)|'
-                 r'what is paula|who is paula|what does paula stand for|are you human|'
-                 r'(?:please\s+)?(?:tell me(?: a bit| something| more)? about|introduce|describe)\s+(?:yourself|urself|you|paula)|'
-                 r'(?:can|could|would) you(?: please)? (?:introduce|describe) yourself|'
-                 r'sino ka(?: ba| po)?|ano ang paula|pakilala ka(?: naman| po)?|magpakilala ka(?: naman| po)?)'
-                 r'(?:\s+(?:please|po|paula))*'),
-    'repair': r'(?:oops|oops sorry|sorry typo|sorry that was a typo|typo|wrong message|wrong input|accidentally sent|sorry wrong message|maling pindot|mali ang na-type|sorry maling type)',
-    'affirmation': r'(?:yes|yep|yeah|sure|oo|opo|oo naman)(?:\s+(?:po|paula))*',
-    'negation': r'(?:no|nope|no thanks|no thank you|hindi|dili)(?:\s+(?:po|paula))*',
-    'capabilities': r'(?:help|help me|tulong|patulong|what can you do|what can you help me with|can you help me)(?:\s+(?:please|po|paula))*',
-    'clarification': r'(?:explain|please explain|explain again|what do you mean|could you clarify|please clarify|clarify that)(?:\s+(?:please|po|paula))*',
-}
+FAST = conversation_config()['social']['fast_patterns']
 FAST_PATTERNS = {key: re.compile(r'^(?:' + value + r')[!.?,\s]*$', re.I) for key, value in FAST.items()}
 EDGE_KINDS = ('greeting', 'wellbeing', 'thanks')
 
@@ -207,7 +166,7 @@ def route_turn(message, semantic=True):
         return DialogueRoute('language', method='rule')
     # A comma before a vocative ("Hello, PAULA") is punctuation, not a
     # second request. Do not normalize the substantive retrieval query.
-    social_text = re.sub(r'[,;:]\s*', ' ', text)
+    social_text = re.sub(r'[,;:]\s*', ' ', normalize_input(text).punctuated)
     # Correct a greeting typo only as a whole social utterance; never change
     # these spans in a factual request or somebody's name.
     social_text = re.sub(r'^(?:helo|helloo|hllo)(?=\b)', 'hello', social_text, flags=re.I)

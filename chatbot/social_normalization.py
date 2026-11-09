@@ -4,22 +4,17 @@ Canonical phrases and abbreviations are maintained, not every spelling error.
 Only one confident edit is allowed, with a protected prefix and conservative
 substitutions. Ambiguous short words and unknown content fail closed.
 """
+from .conversation_config import conversation_config
 from dataclasses import dataclass
 import re
 from .intents import _distance
 from .performance import timed
-from .query_normalization import normalized_text
+from .query_normalization import normalize_input
 
 
-FORMS = {
-    'greeting': ('hello', 'good morning', 'good afternoon', 'good evening', 'kumusta', 'kamusta'),
-    'wellbeing': ('how are you',),
-    'thanks': ('thanks', 'thank you', 'thank you so much', 'salamat', 'maraming salamat',
-               'daghang salamat', 'salamat kaayo', 'daghang salamat kaayo'),
-    'farewell': ('goodbye', 'see you', 'see you later', 'good night', 'paalam'),
-}
-ABBREVIATIONS = {'ty': 'thanks', 'thx': 'thanks', 'tnx': 'thanks', 'tq': 'thanks', 'tysm': 'thanks'}
-SUFFIX = re.compile(r'(?:\s+(?:paula|po|naman|kaayo))+$')
+FORMS = conversation_config()['social']['forms']
+ABBREVIATIONS = conversation_config()['social']['abbreviations']
+SUFFIX = re.compile(conversation_config()['social']['suffix_pattern'])
 EXACT = {phrase.replace(' ', ''): kind for kind, forms in FORMS.items() for phrase in forms}
 TARGETS = tuple((phrase.replace(' ', ''), kind, len(phrase.split())) for kind, forms in FORMS.items() for phrase in forms)
 
@@ -39,15 +34,19 @@ def match_social(message):
     # Numbers, URLs, identifiers, and explicit controls never enter this path.
     if re.search(r'\d|https?://|[_/\\\[\]<>]', message, re.I):
         return None
-    text = normalized_text(message)
+    view = normalize_input(message)
+    text = view.spaced
     language = 'ceb' if re.search(r'\b(?:daghang|kaayo)\b', text) else None
-    text = SUFFIX.sub('', text)
+    without_suffix = SUFFIX.sub('', text)
+    if without_suffix != text:
+        view = normalize_input(without_suffix)
+        text = view.spaced
     if text in ABBREVIATIONS:
         return SocialMatch(ABBREVIATIONS[text], 'abbreviation', reply_language=language)
     words = text.split()
     if not words or len(words) > 5:
         return None
-    compact = ''.join(words)
+    compact = view.squashed
     if compact in EXACT:
         if compact.startswith('daghang') or compact.endswith('kaayo'):
             language = 'ceb'
