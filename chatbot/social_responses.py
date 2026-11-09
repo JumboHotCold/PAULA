@@ -6,6 +6,7 @@ REPLIES = conversation_config()['replies']
 
 
 def candidates(kind, language='en', history=()):
-    choices = REPLIES.get(kind, REPLIES['chat_clarification']).get(language, REPLIES['chat_clarification']['en'])
+    languages=REPLIES.get(kind,REPLIES['chat_clarification'])
+    choices=languages.get(language,languages['en'])
     prior = {row.get('content', '').strip() for row in history if row.get('role') == 'assistant'}
     return [text for text in choices if text not in prior] or list(choices)

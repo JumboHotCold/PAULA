@@ -78,7 +78,8 @@ def _match_social(message):
 def _local_phrases():
     config = conversation_config()
     phrases = [(normalize_input(text).spaced, kind) for kind, texts in config['social']['forms'].items() for text in texts]
-    phrases += [(normalize_input(text).spaced,kind) for kind,texts in config['semantic']['exemplars'].items()
+    from .chat_language import expand_shorthand
+    phrases += [(normalize_input(expand_shorthand(text)).spaced,kind) for kind,texts in config['semantic']['exemplars'].items()
                 if kind!='knowledge' for text in texts]
     for kind, pattern in config['social']['fast_patterns'].items():
         full = re.compile(r'^(?:'+pattern+r')[!.?,\s]*$', re.I)
@@ -97,15 +98,20 @@ def match_social(message):
     """Whole social/self utterances only; intent consensus never rewrites tokens."""
     if not isinstance(message,str) or len(message)>120 or re.search(r'\d|https?://|[_/\\\[\]<>]',message,re.I):
         return None
-    for variant in social_variants(message):
+    from .chat_language import social_core
+    core,modifier_language=social_core(message)
+    for variant in (*social_variants(message),*social_variants(core)):
         exact = _match_social(variant)
         if exact:
+            if modifier_language:
+                from dataclasses import replace
+                return replace(exact,reply_language=modifier_language)
             return exact
         from .dialogue import FAST_PATTERNS, KNOWLEDGE
         social_text = normalize_input(variant).punctuated
         local = next((kind for kind,pattern in FAST_PATTERNS.items() if pattern.fullmatch(social_text)),None)
         if local:
-            return SocialMatch(local,'normalized_local')
+            return SocialMatch(local,'normalized_local',reply_language=modifier_language)
         kinds=LOCAL_EXACT.get(normalize_input(variant).spaced,())
         if len(kinds)==1:
             return SocialMatch(next(iter(kinds)),'configured_exemplar')

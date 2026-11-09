@@ -232,6 +232,8 @@ def matching_plan(message, lexicon=None):
     # Preserve the original capitalization/punctuation in the matching view
     # unless replacing a token; existing uppercase acronym gates still apply.
     text = normalize_input(original).cased
+    from .chat_language import expand_shorthand
+    text=expand_shorthand(text,person_lookup=person_lookup_request(text,lexicon))
     if len(text)>2000:
         return SpellingPlan(original,text)
     corrections, ambiguous = [], []

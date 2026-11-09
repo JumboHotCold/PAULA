@@ -80,7 +80,8 @@ class SemanticSocialRouter:
         score, kind = ranked[0]
         # Intent similarity thresholds are independent of the unchanged .45
         # document-retrieval cutoff. Low-margin cases fail toward clarification.
-        if kind == 'knowledge' or score < 0.65 or score - ranked[1][0] < 0.08:
+        semantic=conversation_config()['semantic']
+        if kind == 'knowledge' or score < semantic.get('min_similarity',.65) or score - ranked[1][0] < semantic.get('min_margin',.08):
             return None
         return kind, round(score, 4)
 

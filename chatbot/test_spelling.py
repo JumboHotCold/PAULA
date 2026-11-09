@@ -33,8 +33,10 @@ class SpellingSafetyTests(SimpleTestCase):
         self.addCleanup(snapshot.stop)
 
     def test_known_tokens_are_never_corrected(self):
+        from .conversation_config import conversation_config
+        aliases=conversation_config().get('matching',{}).get('shorthand',{})
         for word in self.lexicon.words:
-            self.assertEqual(matching_plan(word).matching,word)
+            self.assertEqual(matching_plan(word).matching,aliases.get(word,word))
 
     def test_unique_edits_use_length_aware_distance(self):
         for word,target,distance in (('abuot','about',1),('ofered','offered',1),

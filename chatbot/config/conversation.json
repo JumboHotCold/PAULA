@@ -1,5 +1,13 @@
 {
   "schema_version": 1,
+  "matching": {
+    "shorthand": {"u":"you", "ur":"your", "urself":"yourself", "r":"are", "abt":"about", "wat":"what", "pls":"please", "thx":"thanks"},
+    "modifiers": {
+      "politeness": {"tokens":["po","ho","please"], "language":null},
+      "intensifier": {"tokens":["kaayo","gyud","jud","man"], "language":"ceb"},
+      "discourse": {"tokens":["lang","naman","muna"], "language":null}
+    }
+  },
   "social": {
     "forms": {
       "greeting": [
@@ -55,7 +63,11 @@
     "suffix_pattern": "(?:\\s+(?:paula|po|naman|kaayo))+$"
   },
   "semantic": {
+    "min_similarity": 0.65,
+    "min_margin": 0.08,
     "exemplars": {
+      "identity": ["Tell me about yourself", "Could you introduce yourself please?", "Can u explain ur role?", "Unsay imong ngalan?", "Kinsa ka?", "Pakilala naman po"],
+      "greeting": ["Maayong buntag", "Maayong adlaw", "Magandang umaga", "Hello po, PAULA"],
       "wellbeing": [
         "How are things going with you?",
         "How is your day going?",
@@ -65,6 +77,7 @@
         "How are you naman?"
       ],
       "thanks": [
+        "Dako akong pasalamat sa imong tabang", "You were helpful, salamat", "I really appreciate that po",
         "I appreciate your help a lot",
         "That was really helpful, thank you",
         "You helped me understand",

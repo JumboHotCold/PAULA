@@ -116,10 +116,11 @@ class PrototypeTests(unittest.TestCase):
     def test_margin_and_knowledge_class_fail_closed(self):
         router, model = SemanticSocialRouter(), self.model()
         router.prepare(model)
-        for values, expected in (([1] + [0]*383, 'wellbeing'),
-                                 ([.7, .68] + [0]*382, None), ([0]*9 + [1] + [0]*374, None),
-                                 ([.5] + [0]*383, None)):
-            model.encode.return_value = np.array(values)
+        for scores, expected in (({'wellbeing':1},'wellbeing'),({'wellbeing':.7,'thanks':.68},None),
+                                  ({'knowledge':1},None),({'wellbeing':.5},None)):
+            values=np.zeros(384)
+            for label,score in scores.items():values[list(SOCIAL_EXAMPLES).index(label)]=score
+            model.encode.return_value = values
             result = router.classify('synthetic')
             self.assertEqual(result[0] if result else None, expected)
 

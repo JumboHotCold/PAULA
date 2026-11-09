@@ -35,6 +35,13 @@ def validate_conversation_config(data):
             raise ValueError('Unknown local intent')
         re.compile(pattern, re.I)
     re.compile(social['suffix_pattern'])
+    matching=data.get('matching',{})
+    for alias,target in matching.get('shorthand',{}).items():
+        if not re.fullmatch(r'[a-z]+',alias) or not re.fullmatch(r'[a-z]+',target):raise ValueError('Invalid shorthand')
+    for spec in matching.get('modifiers',{}).values():
+        if not spec.get('tokens') or not all(re.fullmatch(r'[a-z]+',word) for word in spec['tokens']):raise ValueError('Invalid modifiers')
+        if spec.get('language') not in (None,'en','fil','ceb'):raise ValueError('Invalid modifier language')
+    if not 0<=data['semantic'].get('min_similarity',.65)<=1 or not 0<=data['semantic'].get('min_margin',.08)<=1:raise ValueError('Invalid semantic thresholds')
     for kind, forms in social['forms'].items():
         if kind not in replies or not isinstance(forms, list) or not forms or not all(isinstance(value, str) and value.strip() for value in forms):
             raise ValueError('Invalid social forms')
