@@ -41,6 +41,7 @@ PAULA_EMBEDDING_REVISION = config('PAULA_EMBEDDING_REVISION', default='1110a243f
 PAULA_EMBEDDING_MODEL_PATH = config('PAULA_EMBEDDING_MODEL_PATH', default='')
 PAULA_RUNTIME_DIR = config('PAULA_RUNTIME_DIR', default='/tmp/paula-runtime')
 PAULA_BUILD_COMMIT = config('PAULA_BUILD_COMMIT', default='')
+PAULA_LOG_UNANSWERED_QUERIES = config('PAULA_LOG_UNANSWERED_QUERIES', default=False, cast=bool)
 
 # OpenAI API Key (Fallback AI Engine)
 OPENAI_API_KEY = config('OPENAI_API_KEY', default='')
@@ -317,7 +318,10 @@ LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'handlers': {'paula_console': {'class': 'logging.StreamHandler'}},
-    'loggers': {'paula.performance': {'handlers': ['paula_console'], 'level': 'INFO', 'propagate': False}},
+    'loggers': {
+        'paula.performance': {'handlers': ['paula_console'], 'level': 'INFO', 'propagate': False},
+        'paula.rehearsal': {'handlers': ['paula_console'], 'level': 'INFO', 'propagate': False},
+    },
 }
 
 MEDIA_URL = '/media/'

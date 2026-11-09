@@ -20,7 +20,7 @@ from .conversation_context import (
 )
 from .context_tokens import ConversationAnswer
 from .query_normalization import freshness_requested
-from .performance import timed
+from .performance import timed, diagnostic_error
 from .providers import ProviderPolicy, completion_options, generation_scope
 from .dialogue import route_turn, language_for, language_request
 from .social_responses import candidates as social_candidates
@@ -478,5 +478,6 @@ class PauliBotLogic:
                                        displayed_sources, None, None),
                                       resolution.queries[0] if len(resolution.queries) == 1 else '')
         except Exception as exc:
+            diagnostic_error('knowledge', 'KNOWLEDGE_PIPELINE_ERROR', exc)
             logger.warning('Knowledge retrieval unavailable (%s)', type(exc).__name__)
             return self._abstain(message, unavailable=True)

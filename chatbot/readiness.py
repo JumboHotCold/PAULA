@@ -7,7 +7,7 @@ from uuid import UUID
 
 from django.conf import settings
 from .embedding_runtime import runtime, DIMENSIONS
-from .performance import emit
+from .performance import emit, diagnostic_error
 from .build_info import build_info
 
 
@@ -39,8 +39,9 @@ def initialize_worker(worker):
         from .dialogue import social_router
         social_router.prepare(model)
         social_ready = True
-    except Exception:
-        pass  # Failed workers remain explicitly unready; no request-time retry.
+    except Exception as exc:
+        diagnostic_error('startup', 'WORKER_PREPARATION_ERROR', exc)
+        # Failed workers remain explicitly unready; no request-time retry.
     worker.notify()
     directory = boot_directory()
     record = {'worker': os.getpid(), 'ready': runtime.status == 'ready' and social_ready,
@@ -72,7 +73,7 @@ def readiness_state():
         workers = [{'worker': os.getpid(), 'ready': True, 'dimensions': DIMENSIONS, 'startup_ms': runtime.startup_ms}]
     workers = list({record['worker']: record for record in workers}.values())
     stamp = build_info()
-    consistent = bool(stamp['build_commit']) and bool(workers) and all(
+    consistent = bool(stamp['build_commit']) and bool(stamp['build_source_digest']) and len(workers) >= expected and all(
         record.get('build_commit') == stamp['build_commit'] and
         record.get('build_source_digest') == stamp['build_source_digest'] for record in workers)
     return {'ready': runtime.status == 'ready' and len(workers) >= expected, **stamp, 'build_consistent': consistent,

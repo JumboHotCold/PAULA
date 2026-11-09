@@ -4,7 +4,7 @@ from dataclasses import dataclass
 import re
 from threading import Lock
 
-from .performance import timed, stage
+from .performance import timed, stage, diagnostic_error
 from .query_normalization import normalize_input, normalized_text
 from .intents import normalize_query
 from .social_normalization import match_social
@@ -206,7 +206,8 @@ def route_turn(message, semantic=True):
     if semantic:
         try:
             result = social_router.classify(text)
-        except Exception:
+        except Exception as exc:
+            diagnostic_error('classifier', 'CLASSIFIER_ERROR', exc)
             result = None
         if result:
             kind, score = result

@@ -6,13 +6,14 @@ import time
 from threading import Lock
 
 from django.conf import settings
+from django.db import DatabaseError
 from django.db.models import Q
 from pgvector.django import CosineDistance
 
 from .grounding import DEPARTMENTS, departments, normalize, rank_evidence, terms
 from .retrieval_types import EvidenceList, RetrievalOutcome
 from .evidence_identity import consolidate_evidence
-from .performance import timed, stage
+from .performance import timed, stage, diagnostic_error, diagnostic_outcome
 from .query_normalization import faq_question_key, normalized_text
 
 logger = logging.getLogger(__name__)
@@ -155,9 +156,12 @@ class RAGSearcher:
             if any(len(values) > 1 for values in answers.values()):
                 return RetrievalOutcome(status='conflict', attempts=attempts,
                                         elapsed_ms=(time.perf_counter() - started) * 1000)
+            if not rows and status == 'no_match':
+                diagnostic_outcome('retrieval', 'NO_MATCH')
             return RetrievalOutcome(list(rows), 'ok' if rows else status, attempts,
                                     (time.perf_counter() - started) * 1000)
         except Exception as exc:
+            diagnostic_error('retrieval', 'DB_ERROR' if isinstance(exc, DatabaseError) else 'RETRIEVAL_ERROR', exc)
             logger.warning('Retrieval failed (%s)', type(exc).__name__)
             return RetrievalOutcome(status='unavailable', elapsed_ms=(time.perf_counter() - started) * 1000)
 

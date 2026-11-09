@@ -7,6 +7,7 @@ from unittest.mock import Mock, patch
 from django.test import SimpleTestCase, RequestFactory, override_settings
 from .build_info import _build_snapshot, build_info
 from .readiness import initialize_worker
+from .readiness import readiness_state
 from .views import health_live
 
 SHA = 'a' * 40
@@ -82,3 +83,16 @@ class BuildStampTests(SimpleTestCase):
         records = [json.loads(value.split(':', 2)[2]) for value in logs.output]
         self.assertEqual([row['event'] for row in records], ['worker_initializing', 'worker_startup'])
         self.assertTrue(all(row['build_commit'] == SHA for row in records))
+
+    def test_mixed_worker_revisions_are_visible_in_readiness(self):
+        stamp = {'build_commit': SHA, 'build_source': 'git', 'build_source_digest': 'c' * 64}
+        with TemporaryDirectory() as directory:
+            Path(directory, 'fixture.json').write_text(json.dumps({'worker': 123, 'ready': True, 'dimensions': 384,
+                'build_commit': 'b' * 40, 'build_source_digest': 'c' * 64}))
+            with patch('chatbot.readiness.boot_directory', return_value=Path(directory)), \
+                    patch('chatbot.readiness.runtime', SimpleNamespace(status='ready')), \
+                    patch('chatbot.readiness.build_info', return_value=stamp), patch('chatbot.readiness.os.kill'), \
+                    patch.dict('os.environ', {'PAULA_WORKER_COUNT': '1'}):
+                state = readiness_state()
+        self.assertFalse(state['build_consistent'])
+        self.assertEqual(state['build_commit'], SHA)

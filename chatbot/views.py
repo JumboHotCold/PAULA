@@ -24,6 +24,7 @@ from rest_framework.response import Response
 from rest_framework.exceptions import ParseError, UnsupportedMediaType
 from .api_errors import failure
 from .build_info import build_info
+from .diagnostics import record_answer_outcome
 
 from .logic import PauliBotLogic
 from .intents import guest_clarification_history
@@ -341,6 +342,7 @@ def chat_api(request):
         else:
             result = bot.process_query(user_message, history=history_msgs, **dialogue_options)
         bot_response, sources, action, action_data = result
+        record_answer_outcome(user_message, result)
         bot_response, suggestions, suggestions_kind = response_suggestions(
             result, user_message, history_msgs, bounded_questions(data.get('asked_questions')))
         

@@ -105,11 +105,21 @@ def diagnostic_error(stage_name, code, exception=None):
     trace = _trace.get()
     request_id = trace.request_id if trace is not None else None
     record = {'event': 'request_error', 'request_id': request_id, 'worker': os.getpid(),
-              'stage': stage_name, 'error_code': code}
+              'stage': stage_name, 'error_code': code, 'reason_code': code}
     if exception is not None:
         record['error_type'] = type(exception).__name__
     emit(record)
     return request_id
+
+
+def diagnostic_outcome(stage_name, reason_code, **counts):
+    """Only call with internal status/count metadata, never user/source strings."""
+    trace = _trace.get()
+    record = {'event': 'pipeline_outcome', 'request_id': trace.request_id if trace else None,
+              'worker': os.getpid(), 'build_commit': build_info()['build_commit'],
+              'stage': stage_name, 'reason_code': reason_code, **counts}
+    emit(record)
+    return record['request_id']
 
 
 class RequestTimingMiddleware:
