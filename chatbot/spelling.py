@@ -9,12 +9,23 @@ from functools import lru_cache
 import re
 from threading import Lock
 from types import MappingProxyType
+from contextvars import ContextVar
+from contextlib import contextmanager
 
 from .conversation_config import conversation_config
 from .performance import timed
 from .query_normalization import normalize_input, person_key
 
 WORD = re.compile(r"\b[^\W\d_]+\b", re.UNICODE)
+_spacing=ContextVar('paula_matching_spacing',default=True)
+
+
+@contextmanager
+def spacing_policy(enabled):
+    """Evaluation-only ablation, isolated to the current request context."""
+    token=_spacing.set(bool(enabled))
+    try:yield
+    finally:_spacing.reset(token)
 
 
 def edit_distance(left, right):
@@ -246,7 +257,7 @@ def matching_plan(message, lexicon=None):
     for index,(left,right) in enumerate(zip(matches,matches[1:])):
         a,b=left.group().casefold(),right.group().casefold()
         joined=a+b
-        if (index not in covered and text[left.end():right.start()].isspace() and
+        if (_spacing.get() and index not in covered and text[left.end():right.start()].isspace() and
                 not any(start<=left.start()<end or start<=right.start()<end for start,end in opaque) and
                 a not in lexicon.words and b not in lexicon.words and joined in lexicon.words and
                 len(joined)>=6 and joined not in lexicon.names|lexicon.acronyms and
@@ -293,7 +304,7 @@ def matching_plan(message, lexicon=None):
             corrections.append(Correction(raw,target,distance,round(score,6)))
             replacements.append((match.start(),match.end(),target))
         else:
-            splits = _segments(word,lexicon)
+            splits = _segments(word,lexicon) if _spacing.get() else ()
             if len(splits)==1:
                 target = ' '.join(splits[0])
                 corrections.append(Correction(raw,target,1,.78))

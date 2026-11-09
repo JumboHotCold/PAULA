@@ -66,17 +66,22 @@ class SemanticSocialRouter:
                 raise ValueError('Invalid social routing prototype vectors')
             self.model, self.labels, self.matrix = model, tuple(labels), matrix
 
-    def classify(self, text):
+    def rank(self, text):
         if self.matrix is None:
-            return None
+            return ()
         import numpy as np
         with stage('social_query_embedding'):
             vector = np.asarray(self.model.encode(text, normalize_embeddings=True, show_progress_bar=False), dtype=float)
         if vector.shape != (384,) or not np.isfinite(vector).all():
-            return None
+            return ()
         scores = self.matrix @ vector
         ranked = sorted(((max(float(scores[i]) for i, label in enumerate(self.labels) if label == kind), kind)
                          for kind in SOCIAL_EXAMPLES), reverse=True)
+        return tuple(ranked)
+
+    def classify(self,text):
+        ranked=self.rank(text)
+        if not ranked:return None
         score, kind = ranked[0]
         # Intent similarity thresholds are independent of the unchanged .45
         # document-retrieval cutoff. Low-margin cases fail toward clarification.
