@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
 import { createSendGuard } from './sendGuard';
+import { restoredMessages } from './suggestions';
 import './App.css';
 import MaterialIcon from './components/MaterialIcon';
 
@@ -214,7 +215,7 @@ export default function App() {
             const details = await fetchConversationDetails(active.id);
             if (cancelled || epoch !== chatEpoch.current) return;
             setConversationId(active.id);
-            setMessages(details.flatMap(row => [{ text: row.message, isUser: true }, { text: row.response, isUser: false }]));
+            setMessages(restoredMessages(details));
           }
         })
         .catch(console.error);
@@ -482,7 +483,7 @@ export default function App() {
         setIsTyping(false);
         const details = await fetchConversationDetails(id);
         if (epoch !== chatEpoch.current) return;
-        setMessages(details.map(d => ({ text: d.message, isUser: true })).flatMap((m, i) => [m, { text: details[i].response, isUser: false}]));
+        setMessages(restoredMessages(details));
         setConversationId(id);
         sessionStorage.setItem(`paula-thread:${user.id}`, String(id));
         const session = conversations.find(conversation => conversation.id === id)?.client_session_id;

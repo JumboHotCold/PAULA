@@ -1,0 +1,8 @@
+﻿{
+    "step":  "05-frontend",
+    "revision":  "bd3e2d99f6ea79f9e908cdcd60a3fa324e7ad512",
+    "backend_exit":  0,
+    "frontend_exit":  0,
+    "backend_tests":  "483",
+    "frontend_tests":  "29"
+}
