@@ -210,6 +210,21 @@ def _segments(word, lexicon):
                  not ({word[:i],word[i:]} & (lexicon.names | lexicon.acronyms)))
 
 
+def person_lookup_request(text,lexicon):
+    """Protection is scoped to a request for a person, never a nearby noun."""
+    from .dialogue import local_self_intent
+    if local_self_intent(text):
+        return False
+    if re.match(r'^(?:please\s+)?(?:who\s+is|who\s+are|sino\s+(?:si|ang)|(?:contact|email|phone)(?:\s+(?:of|for))?|(?:dean|head|director)\s+of)\b',text,re.I):
+        return True
+    if re.match(r'^(?:please\s+)?tell\s+me\s+about\b',text,re.I):
+        # A named-person request can use this frame, but an institutional
+        # policy/program request cannot acquire a person guard through it.
+        from .dialogue import KNOWLEDGE
+        return not KNOWLEDGE.search(text) and bool(set(normalize_input(text).spaced.split()) & lexicon.names)
+    return False
+
+
 @timed('spelling_matching')
 def matching_plan(message, lexicon=None):
     lexicon = lexicon or vocabulary()
@@ -221,6 +236,7 @@ def matching_plan(message, lexicon=None):
         return SpellingPlan(original,text)
     corrections, ambiguous = [], []
     name_risk = False
+    person_lookup=person_lookup_request(text,lexicon)
     matches = list(WORD.finditer(text))
     replacements = []
     opaque = [(m.start(),m.end()) for m in re.finditer(r'https?://\S+|\b\S+@\S+\b|\b[\w.-]*\d[\w.-]*\b',text,re.I)]
@@ -252,7 +268,7 @@ def matching_plan(message, lexicon=None):
         name_candidates |= {word[:i]+word[i+1]+word[i]+word[i+2:] for i in range(len(word)-1)} & lexicon.names
         close_name = any(edit_distance(word,name)<=1 for name in name_candidates if len(name)>=3)
         if close_name:
-            name_risk = True
+            name_risk = person_lookup
             continue
         if raw[0].isupper() and match.start() and re.search(r'\b(?:who|sino|name)\b',text,re.I):
             # Unknown proper names cannot be inferred from their nearest noun.
@@ -283,7 +299,7 @@ def matching_plan(message, lexicon=None):
     for start,end,target in sorted(replacements,reverse=True):
         text = text[:start]+target+text[end:]
     from .personnel import name_request
-    if name_request(text) in lexicon.name_collisions:
+    if person_lookup and name_request(text) in lexicon.name_collisions:
         name_risk=True
     return SpellingPlan(original,text,tuple(corrections),tuple(ambiguous),name_risk)
 
