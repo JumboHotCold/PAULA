@@ -1,0 +1,4488 @@
+{
+  "measured_at": "2026-11-09T12:38:32.962632+00:00",
+  "build": {
+    "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+    "build_source": "git",
+    "build_source_digest": "9160df18cc7ec64979aa24795647b356c5af5c1a219073878cc0fcfdebd62f7f"
+  },
+  "scope": "In-process DRF guest API, not HTTP/Vite/browser rendering; no shared worker reload.",
+  "startup_ms": 8508.048776002397,
+  "vocabulary_prepare_ms": 81.71195100294426,
+  "lexicon": {
+    "faq": 138,
+    "staff": 12,
+    "location": 6,
+    "website_people": 407
+  },
+  "words": 1653,
+  "name_tokens": 717,
+  "rows": [
+    {
+      "query": "tell me abuot yourself",
+      "expected": "identity",
+      "iteration": 0,
+      "passed": true,
+      "elapsed_ms": 28.955063000466907,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "suggestions": [
+        "What programs are offered at SPUS?",
+        "How do I enroll at SPUS?",
+        "Where is the Registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "identity",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "01902431-e085-4714-b9b4-9fe40f48836b",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 28.93,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.891,
+            "self_ms": 0.891
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 1.052,
+            "self_ms": 0.161
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.013,
+            "self_ms": 0.013
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 2.205,
+            "self_ms": 1.14
+          },
+          "grounding": {
+            "calls": 5,
+            "inclusive_ms": 4.375,
+            "self_ms": 4.375
+          },
+          "structured_enrollment": {
+            "calls": 3,
+            "inclusive_ms": 4.992,
+            "self_ms": 1.512
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 25.996,
+            "self_ms": 20.109
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "hi, tell me about yourself?",
+      "expected": "identity",
+      "iteration": 0,
+      "passed": true,
+      "elapsed_ms": 12.598058998264605,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "suggestions": [
+        "What programs are offered at SPUS?",
+        "How do I enroll at SPUS?",
+        "Where is the Registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "identity",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "83572877-4926-4462-a9c3-457f28822b14",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 12.58,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 3,
+            "inclusive_ms": 0.117,
+            "self_ms": 0.117
+          },
+          "social_normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.082,
+            "self_ms": 0.082
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.454,
+            "self_ms": 0.372
+          },
+          "dialogue_routing": {
+            "calls": 3,
+            "inclusive_ms": 0.908,
+            "self_ms": 0.231
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.007,
+            "self_ms": 0.007
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.875,
+            "self_ms": 0.067
+          },
+          "grounding": {
+            "calls": 5,
+            "inclusive_ms": 4.039,
+            "self_ms": 4.039
+          },
+          "structured_enrollment": {
+            "calls": 3,
+            "inclusive_ms": 4.325,
+            "self_ms": 1.143
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 11.287,
+            "self_ms": 6.103
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "who r u",
+      "expected": "identity",
+      "iteration": 0,
+      "passed": true,
+      "elapsed_ms": 16.119507999974303,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "suggestions": [
+        "What programs are offered at SPUS?",
+        "How do I enroll at SPUS?",
+        "Where is the Registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "identity",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "fef08d41-0cf8-43ed-ad20-4aa43c180008",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 16.1,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.044,
+            "self_ms": 0.044
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.079,
+            "self_ms": 0.034
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.008,
+            "self_ms": 0.008
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.164,
+            "self_ms": 0.077
+          },
+          "grounding": {
+            "calls": 5,
+            "inclusive_ms": 6.635,
+            "self_ms": 6.635
+          },
+          "structured_enrollment": {
+            "calls": 3,
+            "inclusive_ms": 6.57,
+            "self_ms": 1.868
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 15.49,
+            "self_ms": 6.987
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "wat can u do",
+      "expected": "capabilities",
+      "iteration": 0,
+      "passed": true,
+      "elapsed_ms": 12.42494399775751,
+      "response": "I can help you look up campus information, work through a question, or chat for a bit. What would you like to do?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "suggestions": [
+        "What programs are offered at SPUS?",
+        "How do I enroll at SPUS?",
+        "Where is the Registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "capabilities",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "e4384442-28de-46a8-a131-334a1e5274d9",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 12.4,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.164,
+            "self_ms": 0.164
+          },
+          "social_normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.018,
+            "self_ms": 0.018
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.271,
+            "self_ms": 0.253
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.482,
+            "self_ms": 0.047
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.007,
+            "self_ms": 0.007
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.568,
+            "self_ms": 0.079
+          },
+          "grounding": {
+            "calls": 5,
+            "inclusive_ms": 3.952,
+            "self_ms": 3.952
+          },
+          "structured_enrollment": {
+            "calls": 3,
+            "inclusive_ms": 4.528,
+            "self_ms": 1.323
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 11.402,
+            "self_ms": 6.125
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "thnx",
+      "expected": "thanks",
+      "iteration": 0,
+      "passed": true,
+      "elapsed_ms": 0.6990980000409763,
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "suggestions": [],
+      "suggestions_kind": "related",
+      "mode": "thanks",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "85d0edcb-b8d3-45b1-b57c-2dc2472e5cf2",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 0.68,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.131,
+            "self_ms": 0.131
+          },
+          "social_normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.018,
+            "self_ms": 0.018
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.102,
+            "self_ms": 0.084
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.278,
+            "self_ms": 0.045
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.007,
+            "self_ms": 0.007
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.362,
+            "self_ms": 0.076
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "thankyouuu",
+      "expected": "thanks",
+      "iteration": 0,
+      "passed": true,
+      "elapsed_ms": 10.019655001087813,
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "suggestions": [],
+      "suggestions_kind": "related",
+      "mode": "thanks",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "56be9e04-55bb-4f8f-a8f3-dc839b45431f",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 10.0,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 9.417,
+            "self_ms": 9.417
+          },
+          "social_normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.034,
+            "self_ms": 0.034
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.078,
+            "self_ms": 0.044
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 9.591,
+            "self_ms": 0.096
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.01,
+            "self_ms": 0.01
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 9.681,
+            "self_ms": 0.08
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "who r u, wat can u do, thnx, thankyouuu",
+      "expected": "social_bundle",
+      "iteration": 0,
+      "passed": true,
+      "elapsed_ms": 22.92061099797138,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant.\n\nI can help you look up campus information, work through a question, or chat for a bit.\n\nYou're welcome!",
+      "sources": [],
+      "suggestions": [],
+      "suggestions_kind": "related",
+      "mode": "social_bundle",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "d9080573-5566-4074-878b-87abe04bdd4c",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 22.91,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 5,
+            "inclusive_ms": 20.855,
+            "self_ms": 20.855
+          },
+          "social_normalization": {
+            "calls": 7,
+            "inclusive_ms": 0.12,
+            "self_ms": 0.12
+          },
+          "social_matching": {
+            "calls": 4,
+            "inclusive_ms": 0.83,
+            "self_ms": 0.708
+          },
+          "dialogue_routing": {
+            "calls": 5,
+            "inclusive_ms": 31.783,
+            "self_ms": 0.416
+          },
+          "social_reply": {
+            "calls": 4,
+            "inclusive_ms": 0.248,
+            "self_ms": 0.226
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 22.427,
+            "self_ms": 0.101
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "hi, what are the programs ofered",
+      "expected": "evidence",
+      "iteration": 0,
+      "passed": true,
+      "elapsed_ms": 110.76603100082139,
+      "response": "Hi!\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "suggestions": [
+        "Does SPUS offer Graduate School programs?",
+        "Why choose SPUS?",
+        "Where is the registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "mixed",
+      "status": "ok",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "834481a5-0455-4657-ba4f-cc313a8ffe0b",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 110.75,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 5,
+            "inclusive_ms": 0.445,
+            "self_ms": 0.445
+          },
+          "social_normalization": {
+            "calls": 4,
+            "inclusive_ms": 0.066,
+            "self_ms": 0.066
+          },
+          "social_matching": {
+            "calls": 2,
+            "inclusive_ms": 0.272,
+            "self_ms": 0.205
+          },
+          "dialogue_routing": {
+            "calls": 3,
+            "inclusive_ms": 5.827,
+            "self_ms": 2.563
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.088,
+            "self_ms": 0.017
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 1.153,
+            "self_ms": 1.153
+          },
+          "structured_personnel": {
+            "calls": 1,
+            "inclusive_ms": 0.079,
+            "self_ms": 0.079
+          },
+          "grounding": {
+            "calls": 48,
+            "inclusive_ms": 21.939,
+            "self_ms": 21.939
+          },
+          "exact_faq": {
+            "calls": 1,
+            "inclusive_ms": 9.474,
+            "self_ms": 8.767
+          },
+          "retrieval": {
+            "calls": 1,
+            "inclusive_ms": 9.926,
+            "self_ms": 0.32
+          },
+          "response_render": {
+            "calls": 1,
+            "inclusive_ms": 0.111,
+            "self_ms": 0.111
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 21.546,
+            "self_ms": 6.511
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 87.658,
+            "self_ms": 67.028
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "What progrmas are offered at SPUS?",
+      "expected": "evidence",
+      "iteration": 0,
+      "passed": true,
+      "elapsed_ms": 141.86381500257994,
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "suggestions": [
+        "Does SPUS offer Graduate School programs?",
+        "Why choose SPUS?",
+        "Where is the registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "knowledge",
+      "status": "ok",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "d61c33b2-0e23-45e5-aec6-1ba051ed4400",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 141.81,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 5,
+            "inclusive_ms": 1.878,
+            "self_ms": 1.878
+          },
+          "social_normalization": {
+            "calls": 5,
+            "inclusive_ms": 0.155,
+            "self_ms": 0.155
+          },
+          "social_matching": {
+            "calls": 3,
+            "inclusive_ms": 0.574,
+            "self_ms": 0.419
+          },
+          "dialogue_routing": {
+            "calls": 3,
+            "inclusive_ms": 3.42,
+            "self_ms": 0.537
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.1,
+            "self_ms": 0.025
+          },
+          "public_vocabulary": {
+            "calls": 1,
+            "inclusive_ms": 58.886,
+            "self_ms": 58.886
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.736,
+            "self_ms": 0.736
+          },
+          "structured_personnel": {
+            "calls": 1,
+            "inclusive_ms": 0.014,
+            "self_ms": 0.014
+          },
+          "grounding": {
+            "calls": 48,
+            "inclusive_ms": 16.754,
+            "self_ms": 16.754
+          },
+          "exact_faq": {
+            "calls": 1,
+            "inclusive_ms": 17.313,
+            "self_ms": 16.583
+          },
+          "retrieval": {
+            "calls": 1,
+            "inclusive_ms": 18.556,
+            "self_ms": 0.508
+          },
+          "response_render": {
+            "calls": 1,
+            "inclusive_ms": 0.052,
+            "self_ms": 0.052
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 83.147,
+            "self_ms": 2.046
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 57.137,
+            "self_ms": 41.692
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "expected": "compound",
+      "iteration": 0,
+      "passed": true,
+      "elapsed_ms": 286.762917003216,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "suggestions": [
+        "What programs does the College of Education, Arts and Sciences offer?",
+        "What TVET or TESDA programs are offered?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "knowledge",
+      "status": "ok",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "c6645fe8-c163-4e13-8f4d-bfe270e417fd",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 286.73,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 10,
+            "inclusive_ms": 0.823,
+            "self_ms": 0.823
+          },
+          "social_normalization": {
+            "calls": 5,
+            "inclusive_ms": 0.172,
+            "self_ms": 0.172
+          },
+          "social_matching": {
+            "calls": 5,
+            "inclusive_ms": 0.436,
+            "self_ms": 0.263
+          },
+          "dialogue_routing": {
+            "calls": 5,
+            "inclusive_ms": 1.673,
+            "self_ms": 0.532
+          },
+          "normalization": {
+            "calls": 3,
+            "inclusive_ms": 0.318,
+            "self_ms": 0.045
+          },
+          "public_vocabulary": {
+            "calls": 1,
+            "inclusive_ms": 0.026,
+            "self_ms": 0.026
+          },
+          "context_resolution": {
+            "calls": 5,
+            "inclusive_ms": 1.508,
+            "self_ms": 1.188
+          },
+          "grounding": {
+            "calls": 56,
+            "inclusive_ms": 20.428,
+            "self_ms": 20.428
+          },
+          "structured_personnel": {
+            "calls": 2,
+            "inclusive_ms": 222.495,
+            "self_ms": 217.789
+          },
+          "retrieval": {
+            "calls": 2,
+            "inclusive_ms": 223.923,
+            "self_ms": 1.259
+          },
+          "response_render": {
+            "calls": 2,
+            "inclusive_ms": 0.099,
+            "self_ms": 0.099
+          },
+          "orchestration": {
+            "calls": 3,
+            "inclusive_ms": 469.02,
+            "self_ms": 7.23
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 47.153,
+            "self_ms": 33.497
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "TELL ME ABOUT SPUS AND WHY SHOULD I ENROL",
+      "expected": "compound",
+      "iteration": 0,
+      "passed": true,
+      "elapsed_ms": 73.8313459987694,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. TELL ME ABOUT SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. WHY SHOULD I ENROL at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "TELL ME ABOUT SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "WHY SHOULD I ENROL at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "suggestions": [
+        "What college courses or programs are available?",
+        "What is the SPUS Vision and Mission?",
+        "What are the Paulinian Core Values?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "knowledge",
+      "status": "ok",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "69fdae84-77b2-48b2-870b-4cc1a6a747d0",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 73.81,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 12,
+            "inclusive_ms": 0.671,
+            "self_ms": 0.671
+          },
+          "social_normalization": {
+            "calls": 10,
+            "inclusive_ms": 0.173,
+            "self_ms": 0.173
+          },
+          "social_matching": {
+            "calls": 7,
+            "inclusive_ms": 0.823,
+            "self_ms": 0.65
+          },
+          "dialogue_routing": {
+            "calls": 7,
+            "inclusive_ms": 3.515,
+            "self_ms": 1.822
+          },
+          "normalization": {
+            "calls": 3,
+            "inclusive_ms": 0.204,
+            "self_ms": 0.032
+          },
+          "public_vocabulary": {
+            "calls": 2,
+            "inclusive_ms": 0.024,
+            "self_ms": 0.024
+          },
+          "context_resolution": {
+            "calls": 5,
+            "inclusive_ms": 2.698,
+            "self_ms": 2.373
+          },
+          "structured_personnel": {
+            "calls": 2,
+            "inclusive_ms": 0.081,
+            "self_ms": 0.081
+          },
+          "grounding": {
+            "calls": 50,
+            "inclusive_ms": 15.247,
+            "self_ms": 15.247
+          },
+          "exact_faq": {
+            "calls": 2,
+            "inclusive_ms": 8.941,
+            "self_ms": 8.302
+          },
+          "retrieval": {
+            "calls": 2,
+            "inclusive_ms": 9.513,
+            "self_ms": 0.393
+          },
+          "response_render": {
+            "calls": 2,
+            "inclusive_ms": 0.133,
+            "self_ms": 0.133
+          },
+          "orchestration": {
+            "calls": 3,
+            "inclusive_ms": 42.97,
+            "self_ms": 6.849
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 50.571,
+            "self_ms": 36.473
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "Where is the registar office?",
+      "expected": "clarification",
+      "iteration": 0,
+      "passed": true,
+      "elapsed_ms": 1.4131649986666162,
+      "response": "Did you mean \"Where is the register office?\" or \"Where is the registrar office?\"?\n\n[SUGGESTIONS: \"Where is the register office?\" | \"Where is the registrar office?\"]",
+      "sources": [],
+      "suggestions": [
+        "Where is the register office?",
+        "Where is the registrar office?"
+      ],
+      "suggestions_kind": "choice",
+      "mode": "spelling_confirmation",
+      "status": "clarification",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "c885f745-81be-489b-8428-21eeeee91712",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 1.39,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 2,
+            "inclusive_ms": 0.344,
+            "self_ms": 0.344
+          },
+          "social_normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.03,
+            "self_ms": 0.03
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.099,
+            "self_ms": 0.07
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.36,
+            "self_ms": 0.057
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.764,
+            "self_ms": 0.264
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "Where is the registrra office?",
+      "expected": "navigate_map",
+      "iteration": 0,
+      "passed": true,
+      "elapsed_ms": 2.004336001846241,
+      "response": "Opening the campus map for Registrar Office. Choose your starting location to calculate a route.",
+      "sources": [],
+      "suggestions": [],
+      "suggestions_kind": "related",
+      "mode": "knowledge",
+      "status": "ok",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "929d9dfb-ba8b-41c4-ae2c-3e3d76cec608",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 1.98,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 2,
+            "inclusive_ms": 0.301,
+            "self_ms": 0.301
+          },
+          "social_normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.04,
+            "self_ms": 0.04
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.149,
+            "self_ms": 0.109
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.538,
+            "self_ms": 0.131
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.052,
+            "self_ms": 0.009
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.111,
+            "self_ms": 0.111
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 1.426,
+            "self_ms": 0.724
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "What is the exact tuition fee in 2037?",
+      "expected": "unsupported",
+      "iteration": 0,
+      "passed": true,
+      "elapsed_ms": 139.1928180019022,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"How much is the tuition?\"]",
+      "sources": [],
+      "suggestions": [
+        "How much is the tuition?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "knowledge",
+      "status": "no_match",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "5ca1508a-560e-420c-a353-0b276f153e5a",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 139.18,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 3,
+            "inclusive_ms": 0.251,
+            "self_ms": 0.251
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.005,
+            "self_ms": 0.005
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.193,
+            "self_ms": 0.087
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.103,
+            "self_ms": 0.012
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.114,
+            "self_ms": 0.114
+          },
+          "structured_personnel": {
+            "calls": 1,
+            "inclusive_ms": 0.006,
+            "self_ms": 0.006
+          },
+          "exact_faq": {
+            "calls": 1,
+            "inclusive_ms": 4.669,
+            "self_ms": 4.669
+          },
+          "query_embedding": {
+            "calls": 1,
+            "inclusive_ms": 17.805,
+            "self_ms": 17.805
+          },
+          "hybrid_retrieval": {
+            "calls": 1,
+            "inclusive_ms": 65.82,
+            "self_ms": 48.015
+          },
+          "retrieval": {
+            "calls": 1,
+            "inclusive_ms": 71.167,
+            "self_ms": 0.613
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 72.412,
+            "self_ms": 0.836
+          },
+          "grounding": {
+            "calls": 46,
+            "inclusive_ms": 21.483,
+            "self_ms": 21.483
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 65.97,
+            "self_ms": 44.486
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "Who is Dr. Antonio Talaera?",
+      "expected": "clarification",
+      "iteration": 0,
+      "passed": true,
+      "elapsed_ms": 1.7746569974406157,
+      "response": "Could you confirm the person's exact name or their role? I won't guess a name from a spelling similarity.",
+      "sources": [],
+      "suggestions": [],
+      "suggestions_kind": "related",
+      "mode": "protected_name",
+      "status": "clarification",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "bc337b8a-0ec7-4d2c-955a-45159a6e7723",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 1.76,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.133,
+            "self_ms": 0.133
+          },
+          "social_normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.02,
+            "self_ms": 0.02
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.727,
+            "self_ms": 0.707
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.961,
+            "self_ms": 0.101
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 1.089,
+            "self_ms": 0.129
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "What is the preseidnt?",
+      "expected": "clarification",
+      "iteration": 0,
+      "passed": true,
+      "elapsed_ms": 25.111849998211255,
+      "response": "Did you mean \"What is the president?\"?\n\n[SUGGESTIONS: \"What is the president?\"]",
+      "sources": [],
+      "suggestions": [
+        "What is the president?"
+      ],
+      "suggestions_kind": "choice",
+      "mode": "spelling_confirmation",
+      "status": "clarification",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "566b4d61-2e91-474e-a04e-137f9befe6e3",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 25.14,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 2,
+            "inclusive_ms": 23.213,
+            "self_ms": 23.213
+          },
+          "social_normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.025,
+            "self_ms": 0.025
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.087,
+            "self_ms": 0.062
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 11.481,
+            "self_ms": 0.126
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 23.609,
+            "self_ms": 0.184
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "Anong mga kursong inaalok sa SPUS?",
+      "expected": "evidence",
+      "iteration": 0,
+      "passed": true,
+      "elapsed_ms": 82.10289199996623,
+      "response": "Sige—narito ang impormasyon mula sa mga nakaimbak na sanggunian.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "suggestions": [
+        "Does SPUS offer Graduate School programs?",
+        "Why choose SPUS?",
+        "Where is the registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "knowledge",
+      "status": "ok",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "c24f1f4e-663a-4cf8-afcf-46bf1313b54d",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 82.06,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 3,
+            "inclusive_ms": 0.241,
+            "self_ms": 0.241
+          },
+          "social_normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.049,
+            "self_ms": 0.049
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.22,
+            "self_ms": 0.171
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.515,
+            "self_ms": 0.192
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.077,
+            "self_ms": 0.018
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.236,
+            "self_ms": 0.236
+          },
+          "structured_personnel": {
+            "calls": 1,
+            "inclusive_ms": 0.006,
+            "self_ms": 0.006
+          },
+          "grounding": {
+            "calls": 48,
+            "inclusive_ms": 22.988,
+            "self_ms": 22.988
+          },
+          "exact_faq": {
+            "calls": 1,
+            "inclusive_ms": 9.753,
+            "self_ms": 9.089
+          },
+          "retrieval": {
+            "calls": 1,
+            "inclusive_ms": 10.244,
+            "self_ms": 0.407
+          },
+          "response_render": {
+            "calls": 1,
+            "inclusive_ms": 0.034,
+            "self_ms": 0.034
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 13.435,
+            "self_ms": 1.434
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 67.655,
+            "self_ms": 46.223
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "tell me abuot yourself",
+      "expected": "identity",
+      "iteration": 1,
+      "passed": true,
+      "elapsed_ms": 18.88263100045151,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "suggestions": [
+        "What programs are offered at SPUS?",
+        "How do I enroll at SPUS?",
+        "Where is the Registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "identity",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "e117d12f-e68e-4fa5-978c-6d7e65723761",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 18.83,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.377,
+            "self_ms": 0.377
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.433,
+            "self_ms": 0.056
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.009,
+            "self_ms": 0.009
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.554,
+            "self_ms": 0.113
+          },
+          "grounding": {
+            "calls": 5,
+            "inclusive_ms": 5.879,
+            "self_ms": 5.879
+          },
+          "structured_enrollment": {
+            "calls": 3,
+            "inclusive_ms": 7.534,
+            "self_ms": 2.398
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 17.632,
+            "self_ms": 9.355
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "hi, tell me about yourself?",
+      "expected": "identity",
+      "iteration": 1,
+      "passed": true,
+      "elapsed_ms": 16.850738000357524,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "suggestions": [
+        "What programs are offered at SPUS?",
+        "How do I enroll at SPUS?",
+        "Where is the Registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "identity",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "60772bd7-293a-4598-9918-58e57f70ced7",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 16.82,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 3,
+            "inclusive_ms": 0.232,
+            "self_ms": 0.232
+          },
+          "social_normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.101,
+            "self_ms": 0.101
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.276,
+            "self_ms": 0.175
+          },
+          "dialogue_routing": {
+            "calls": 3,
+            "inclusive_ms": 0.916,
+            "self_ms": 0.196
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.01,
+            "self_ms": 0.01
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.809,
+            "self_ms": 0.097
+          },
+          "grounding": {
+            "calls": 5,
+            "inclusive_ms": 5.942,
+            "self_ms": 5.942
+          },
+          "structured_enrollment": {
+            "calls": 3,
+            "inclusive_ms": 6.619,
+            "self_ms": 1.514
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 15.48,
+            "self_ms": 8.024
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "who r u",
+      "expected": "identity",
+      "iteration": 1,
+      "passed": true,
+      "elapsed_ms": 14.50642700001481,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "suggestions": [
+        "What programs are offered at SPUS?",
+        "How do I enroll at SPUS?",
+        "Where is the Registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "identity",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "67381ba8-8030-440a-8bb6-68ec64c60cb4",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 14.45,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.043,
+            "self_ms": 0.043
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.075,
+            "self_ms": 0.032
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.007,
+            "self_ms": 0.007
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.145,
+            "self_ms": 0.063
+          },
+          "grounding": {
+            "calls": 5,
+            "inclusive_ms": 5.525,
+            "self_ms": 5.525
+          },
+          "structured_enrollment": {
+            "calls": 3,
+            "inclusive_ms": 6.253,
+            "self_ms": 1.421
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 13.656,
+            "self_ms": 6.71
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "wat can u do",
+      "expected": "capabilities",
+      "iteration": 1,
+      "passed": true,
+      "elapsed_ms": 16.704808000213234,
+      "response": "I can help you look up campus information, work through a question, or chat for a bit. What would you like to do?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "suggestions": [
+        "What programs are offered at SPUS?",
+        "How do I enroll at SPUS?",
+        "Where is the Registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "capabilities",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "01ff2b3c-4885-49f5-8cb1-f9d8cb3334b3",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 16.66,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.384,
+            "self_ms": 0.384
+          },
+          "social_normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.033,
+            "self_ms": 0.033
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.405,
+            "self_ms": 0.372
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.903,
+            "self_ms": 0.114
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.01,
+            "self_ms": 0.01
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 1.042,
+            "self_ms": 0.129
+          },
+          "grounding": {
+            "calls": 5,
+            "inclusive_ms": 5.117,
+            "self_ms": 5.117
+          },
+          "structured_enrollment": {
+            "calls": 3,
+            "inclusive_ms": 6.82,
+            "self_ms": 2.396
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 14.934,
+            "self_ms": 7.422
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "thnx",
+      "expected": "thanks",
+      "iteration": 1,
+      "passed": true,
+      "elapsed_ms": 0.7275040006788913,
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "suggestions": [],
+      "suggestions_kind": "related",
+      "mode": "thanks",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "6adb620a-81ca-456b-99ea-cf31f6610631",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 0.71,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.132,
+            "self_ms": 0.132
+          },
+          "social_normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.017,
+            "self_ms": 0.017
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.102,
+            "self_ms": 0.085
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.28,
+            "self_ms": 0.046
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.006,
+            "self_ms": 0.006
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.356,
+            "self_ms": 0.07
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "thankyouuu",
+      "expected": "thanks",
+      "iteration": 1,
+      "passed": true,
+      "elapsed_ms": 11.819063001894392,
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "suggestions": [],
+      "suggestions_kind": "related",
+      "mode": "thanks",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "fa140be9-59d9-4e54-b3f0-95bc6093a3a5",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 11.75,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 11.139,
+            "self_ms": 11.139
+          },
+          "social_normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.033,
+            "self_ms": 0.033
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.077,
+            "self_ms": 0.044
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 11.321,
+            "self_ms": 0.105
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.011,
+            "self_ms": 0.011
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 11.425,
+            "self_ms": 0.093
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "who r u, wat can u do, thnx, thankyouuu",
+      "expected": "social_bundle",
+      "iteration": 1,
+      "passed": true,
+      "elapsed_ms": 29.687236998142907,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant.\n\nI can help you look up campus information, work through a question, or chat for a bit.\n\nYou're welcome!",
+      "sources": [],
+      "suggestions": [],
+      "suggestions_kind": "related",
+      "mode": "social_bundle",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "a69e4f7e-a427-4898-9bb7-6ff47ed4fd1e",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 29.67,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 5,
+            "inclusive_ms": 26.831,
+            "self_ms": 26.831
+          },
+          "social_normalization": {
+            "calls": 7,
+            "inclusive_ms": 0.185,
+            "self_ms": 0.185
+          },
+          "social_matching": {
+            "calls": 4,
+            "inclusive_ms": 1.333,
+            "self_ms": 1.146
+          },
+          "dialogue_routing": {
+            "calls": 5,
+            "inclusive_ms": 43.27,
+            "self_ms": 0.717
+          },
+          "social_reply": {
+            "calls": 4,
+            "inclusive_ms": 0.279,
+            "self_ms": 0.257
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 29.245,
+            "self_ms": 0.109
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "hi, what are the programs ofered",
+      "expected": "evidence",
+      "iteration": 1,
+      "passed": true,
+      "elapsed_ms": 96.48807999838027,
+      "response": "Hi!\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "suggestions": [
+        "Does SPUS offer Graduate School programs?",
+        "Why choose SPUS?",
+        "Where is the registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "mixed",
+      "status": "ok",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "213dfe4d-705c-42f2-8f55-7f22b2e04efe",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 96.46,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 5,
+            "inclusive_ms": 0.455,
+            "self_ms": 0.455
+          },
+          "social_normalization": {
+            "calls": 4,
+            "inclusive_ms": 0.069,
+            "self_ms": 0.069
+          },
+          "social_matching": {
+            "calls": 2,
+            "inclusive_ms": 0.264,
+            "self_ms": 0.197
+          },
+          "dialogue_routing": {
+            "calls": 3,
+            "inclusive_ms": 1.322,
+            "self_ms": 0.294
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.07,
+            "self_ms": 0.014
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.193,
+            "self_ms": 0.193
+          },
+          "structured_personnel": {
+            "calls": 1,
+            "inclusive_ms": 0.007,
+            "self_ms": 0.007
+          },
+          "grounding": {
+            "calls": 48,
+            "inclusive_ms": 30.149,
+            "self_ms": 30.149
+          },
+          "exact_faq": {
+            "calls": 1,
+            "inclusive_ms": 8.672,
+            "self_ms": 7.954
+          },
+          "retrieval": {
+            "calls": 1,
+            "inclusive_ms": 9.109,
+            "self_ms": 0.351
+          },
+          "response_render": {
+            "calls": 1,
+            "inclusive_ms": 0.038,
+            "self_ms": 0.038
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 12.109,
+            "self_ms": 1.064
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 83.524,
+            "self_ms": 54.848
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "What progrmas are offered at SPUS?",
+      "expected": "evidence",
+      "iteration": 1,
+      "passed": true,
+      "elapsed_ms": 78.58545199997025,
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "suggestions": [
+        "Does SPUS offer Graduate School programs?",
+        "Why choose SPUS?",
+        "Where is the registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "knowledge",
+      "status": "ok",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "e705d713-ce44-4f54-a9fd-694aee4b58c0",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 78.56,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 5,
+            "inclusive_ms": 0.757,
+            "self_ms": 0.757
+          },
+          "social_normalization": {
+            "calls": 5,
+            "inclusive_ms": 0.092,
+            "self_ms": 0.092
+          },
+          "social_matching": {
+            "calls": 3,
+            "inclusive_ms": 0.413,
+            "self_ms": 0.323
+          },
+          "dialogue_routing": {
+            "calls": 3,
+            "inclusive_ms": 2.151,
+            "self_ms": 0.297
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.064,
+            "self_ms": 0.015
+          },
+          "public_vocabulary": {
+            "calls": 1,
+            "inclusive_ms": 0.022,
+            "self_ms": 0.022
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.278,
+            "self_ms": 0.278
+          },
+          "structured_personnel": {
+            "calls": 1,
+            "inclusive_ms": 0.009,
+            "self_ms": 0.009
+          },
+          "grounding": {
+            "calls": 48,
+            "inclusive_ms": 20.992,
+            "self_ms": 20.992
+          },
+          "exact_faq": {
+            "calls": 1,
+            "inclusive_ms": 8.852,
+            "self_ms": 8.297
+          },
+          "retrieval": {
+            "calls": 1,
+            "inclusive_ms": 9.266,
+            "self_ms": 0.349
+          },
+          "response_render": {
+            "calls": 1,
+            "inclusive_ms": 0.038,
+            "self_ms": 0.038
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 12.672,
+            "self_ms": 1.092
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 65.229,
+            "self_ms": 45.341
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "expected": "compound",
+      "iteration": 1,
+      "passed": true,
+      "elapsed_ms": 197.44674899993697,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "suggestions": [
+        "What programs does the College of Education, Arts and Sciences offer?",
+        "What TVET or TESDA programs are offered?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "knowledge",
+      "status": "ok",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "ac497cf4-0781-4388-8023-a4eb6e618a68",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 197.43,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 10,
+            "inclusive_ms": 0.477,
+            "self_ms": 0.477
+          },
+          "social_normalization": {
+            "calls": 5,
+            "inclusive_ms": 0.07,
+            "self_ms": 0.07
+          },
+          "social_matching": {
+            "calls": 5,
+            "inclusive_ms": 0.276,
+            "self_ms": 0.205
+          },
+          "dialogue_routing": {
+            "calls": 5,
+            "inclusive_ms": 1.122,
+            "self_ms": 0.322
+          },
+          "normalization": {
+            "calls": 3,
+            "inclusive_ms": 0.141,
+            "self_ms": 0.025
+          },
+          "public_vocabulary": {
+            "calls": 1,
+            "inclusive_ms": 0.013,
+            "self_ms": 0.013
+          },
+          "context_resolution": {
+            "calls": 5,
+            "inclusive_ms": 1.267,
+            "self_ms": 0.934
+          },
+          "grounding": {
+            "calls": 56,
+            "inclusive_ms": 20.351,
+            "self_ms": 20.351
+          },
+          "structured_personnel": {
+            "calls": 2,
+            "inclusive_ms": 140.965,
+            "self_ms": 137.051
+          },
+          "retrieval": {
+            "calls": 2,
+            "inclusive_ms": 141.603,
+            "self_ms": 0.547
+          },
+          "response_render": {
+            "calls": 2,
+            "inclusive_ms": 0.061,
+            "self_ms": 0.061
+          },
+          "orchestration": {
+            "calls": 3,
+            "inclusive_ms": 292.76,
+            "self_ms": 1.906
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 49.582,
+            "self_ms": 34.926
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "TELL ME ABOUT SPUS AND WHY SHOULD I ENROL",
+      "expected": "compound",
+      "iteration": 1,
+      "passed": true,
+      "elapsed_ms": 65.3321709978627,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. TELL ME ABOUT SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. WHY SHOULD I ENROL at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "TELL ME ABOUT SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "WHY SHOULD I ENROL at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "suggestions": [
+        "What college courses or programs are available?",
+        "What is the SPUS Vision and Mission?",
+        "What are the Paulinian Core Values?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "knowledge",
+      "status": "ok",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "3ff22eaf-6ff1-493f-905c-73f63fea6cf6",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 65.31,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 12,
+            "inclusive_ms": 0.567,
+            "self_ms": 0.567
+          },
+          "social_normalization": {
+            "calls": 10,
+            "inclusive_ms": 0.117,
+            "self_ms": 0.117
+          },
+          "social_matching": {
+            "calls": 7,
+            "inclusive_ms": 0.525,
+            "self_ms": 0.41
+          },
+          "dialogue_routing": {
+            "calls": 7,
+            "inclusive_ms": 1.733,
+            "self_ms": 0.37
+          },
+          "normalization": {
+            "calls": 3,
+            "inclusive_ms": 0.254,
+            "self_ms": 0.029
+          },
+          "public_vocabulary": {
+            "calls": 2,
+            "inclusive_ms": 0.026,
+            "self_ms": 0.026
+          },
+          "context_resolution": {
+            "calls": 5,
+            "inclusive_ms": 1.091,
+            "self_ms": 0.803
+          },
+          "structured_personnel": {
+            "calls": 2,
+            "inclusive_ms": 0.008,
+            "self_ms": 0.008
+          },
+          "grounding": {
+            "calls": 50,
+            "inclusive_ms": 15.601,
+            "self_ms": 15.601
+          },
+          "exact_faq": {
+            "calls": 2,
+            "inclusive_ms": 10.696,
+            "self_ms": 10.126
+          },
+          "retrieval": {
+            "calls": 2,
+            "inclusive_ms": 11.088,
+            "self_ms": 0.309
+          },
+          "response_render": {
+            "calls": 2,
+            "inclusive_ms": 0.048,
+            "self_ms": 0.048
+          },
+          "orchestration": {
+            "calls": 3,
+            "inclusive_ms": 29.153,
+            "self_ms": 1.583
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 49.11,
+            "self_ms": 34.567
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "Where is the registar office?",
+      "expected": "clarification",
+      "iteration": 1,
+      "passed": true,
+      "elapsed_ms": 1.5764109994051978,
+      "response": "Did you mean \"Where is the register office?\" or \"Where is the registrar office?\"?\n\n[SUGGESTIONS: \"Where is the register office?\" | \"Where is the registrar office?\"]",
+      "sources": [],
+      "suggestions": [
+        "Where is the register office?",
+        "Where is the registrar office?"
+      ],
+      "suggestions_kind": "choice",
+      "mode": "spelling_confirmation",
+      "status": "clarification",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "b60cbd11-5a84-4ea6-859d-0bde8a2f4abc",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 1.55,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 2,
+            "inclusive_ms": 0.393,
+            "self_ms": 0.393
+          },
+          "social_normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.029,
+            "self_ms": 0.029
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.102,
+            "self_ms": 0.072
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.427,
+            "self_ms": 0.07
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.839,
+            "self_ms": 0.274
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "Where is the registrra office?",
+      "expected": "navigate_map",
+      "iteration": 1,
+      "passed": true,
+      "elapsed_ms": 1.7004280016408302,
+      "response": "Opening the campus map for Registrar Office. Choose your starting location to calculate a route.",
+      "sources": [],
+      "suggestions": [],
+      "suggestions_kind": "related",
+      "mode": "knowledge",
+      "status": "ok",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "73b9a76c-7b74-4b16-950d-38c787fccffd",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 1.69,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 2,
+            "inclusive_ms": 0.237,
+            "self_ms": 0.237
+          },
+          "social_normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.03,
+            "self_ms": 0.03
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.099,
+            "self_ms": 0.069
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.39,
+            "self_ms": 0.085
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.043,
+            "self_ms": 0.012
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.117,
+            "self_ms": 0.117
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 1.242,
+            "self_ms": 0.693
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "What is the exact tuition fee in 2037?",
+      "expected": "unsupported",
+      "iteration": 1,
+      "passed": true,
+      "elapsed_ms": 117.81098099891096,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"How much is the tuition?\"]",
+      "sources": [],
+      "suggestions": [
+        "How much is the tuition?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "knowledge",
+      "status": "no_match",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "2d618682-943d-47cd-96d7-d37aac06cd60",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 117.79,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 3,
+            "inclusive_ms": 0.273,
+            "self_ms": 0.273
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.005,
+            "self_ms": 0.005
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.257,
+            "self_ms": 0.09
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.063,
+            "self_ms": 0.01
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.113,
+            "self_ms": 0.113
+          },
+          "structured_personnel": {
+            "calls": 1,
+            "inclusive_ms": 0.005,
+            "self_ms": 0.005
+          },
+          "exact_faq": {
+            "calls": 1,
+            "inclusive_ms": 3.739,
+            "self_ms": 3.739
+          },
+          "query_embedding": {
+            "calls": 1,
+            "inclusive_ms": 20.19,
+            "self_ms": 20.19
+          },
+          "hybrid_retrieval": {
+            "calls": 1,
+            "inclusive_ms": 64.097,
+            "self_ms": 43.907
+          },
+          "retrieval": {
+            "calls": 1,
+            "inclusive_ms": 68.317,
+            "self_ms": 0.419
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 69.483,
+            "self_ms": 0.732
+          },
+          "grounding": {
+            "calls": 46,
+            "inclusive_ms": 13.923,
+            "self_ms": 13.923
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 47.558,
+            "self_ms": 33.634
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "Who is Dr. Antonio Talaera?",
+      "expected": "clarification",
+      "iteration": 1,
+      "passed": true,
+      "elapsed_ms": 1.2642869987757877,
+      "response": "Could you confirm the person's exact name or their role? I won't guess a name from a spelling similarity.",
+      "sources": [],
+      "suggestions": [],
+      "suggestions_kind": "related",
+      "mode": "protected_name",
+      "status": "clarification",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "a8ffe8e0-3652-45d0-93a2-8093711a4c08",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 1.25,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.131,
+            "self_ms": 0.131
+          },
+          "social_normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.019,
+            "self_ms": 0.019
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.505,
+            "self_ms": 0.486
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.691,
+            "self_ms": 0.054
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.766,
+            "self_ms": 0.076
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "What is the preseidnt?",
+      "expected": "clarification",
+      "iteration": 1,
+      "passed": true,
+      "elapsed_ms": 18.84749100281624,
+      "response": "Did you mean \"What is the president?\"?\n\n[SUGGESTIONS: \"What is the president?\"]",
+      "sources": [],
+      "suggestions": [
+        "What is the president?"
+      ],
+      "suggestions_kind": "choice",
+      "mode": "spelling_confirmation",
+      "status": "clarification",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "2e3a9320-7656-4517-9555-72d971737e0f",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 18.84,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 2,
+            "inclusive_ms": 18.006,
+            "self_ms": 18.006
+          },
+          "social_normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.021,
+            "self_ms": 0.021
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.088,
+            "self_ms": 0.067
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 9.451,
+            "self_ms": 0.104
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 18.343,
+            "self_ms": 0.146
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "Anong mga kursong inaalok sa SPUS?",
+      "expected": "evidence",
+      "iteration": 1,
+      "passed": true,
+      "elapsed_ms": 60.053067001717864,
+      "response": "Sige—narito ang impormasyon mula sa mga nakaimbak na sanggunian.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "suggestions": [
+        "Does SPUS offer Graduate School programs?",
+        "Why choose SPUS?",
+        "Where is the registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "knowledge",
+      "status": "ok",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "4d162532-ca06-45fb-9db5-18fbca2cd191",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 60.04,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 3,
+            "inclusive_ms": 0.115,
+            "self_ms": 0.115
+          },
+          "social_normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.024,
+            "self_ms": 0.024
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.1,
+            "self_ms": 0.076
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.221,
+            "self_ms": 0.079
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.042,
+            "self_ms": 0.01
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.103,
+            "self_ms": 0.103
+          },
+          "structured_personnel": {
+            "calls": 1,
+            "inclusive_ms": 0.005,
+            "self_ms": 0.005
+          },
+          "grounding": {
+            "calls": 48,
+            "inclusive_ms": 16.195,
+            "self_ms": 16.195
+          },
+          "exact_faq": {
+            "calls": 1,
+            "inclusive_ms": 6.609,
+            "self_ms": 5.993
+          },
+          "retrieval": {
+            "calls": 1,
+            "inclusive_ms": 6.912,
+            "self_ms": 0.258
+          },
+          "response_render": {
+            "calls": 1,
+            "inclusive_ms": 0.027,
+            "self_ms": 0.027
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 8.655,
+            "self_ms": 0.713
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 50.736,
+            "self_ms": 35.794
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "tell me abuot yourself",
+      "expected": "identity",
+      "iteration": 2,
+      "passed": true,
+      "elapsed_ms": 11.699614999088226,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "suggestions": [
+        "What programs are offered at SPUS?",
+        "How do I enroll at SPUS?",
+        "Where is the Registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "identity",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "5f22cbd8-57c8-479c-ba2d-e6f5156449db",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 11.67,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.208,
+            "self_ms": 0.208
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.31,
+            "self_ms": 0.101
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.009,
+            "self_ms": 0.009
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.439,
+            "self_ms": 0.12
+          },
+          "grounding": {
+            "calls": 5,
+            "inclusive_ms": 3.808,
+            "self_ms": 3.808
+          },
+          "structured_enrollment": {
+            "calls": 3,
+            "inclusive_ms": 4.186,
+            "self_ms": 1.121
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 10.711,
+            "self_ms": 5.784
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "hi, tell me about yourself?",
+      "expected": "identity",
+      "iteration": 2,
+      "passed": true,
+      "elapsed_ms": 14.096855000389041,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "suggestions": [
+        "What programs are offered at SPUS?",
+        "How do I enroll at SPUS?",
+        "Where is the Registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "identity",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "c1223cb7-0845-4708-9444-bc38cb14051e",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 14.08,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 3,
+            "inclusive_ms": 0.119,
+            "self_ms": 0.119
+          },
+          "social_normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.03,
+            "self_ms": 0.03
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.149,
+            "self_ms": 0.119
+          },
+          "dialogue_routing": {
+            "calls": 3,
+            "inclusive_ms": 0.497,
+            "self_ms": 0.123
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.007,
+            "self_ms": 0.007
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.475,
+            "self_ms": 0.076
+          },
+          "grounding": {
+            "calls": 5,
+            "inclusive_ms": 3.825,
+            "self_ms": 3.825
+          },
+          "structured_enrollment": {
+            "calls": 3,
+            "inclusive_ms": 4.079,
+            "self_ms": 0.955
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 13.266,
+            "self_ms": 8.486
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "who r u",
+      "expected": "identity",
+      "iteration": 2,
+      "passed": true,
+      "elapsed_ms": 11.877610002557049,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "suggestions": [
+        "What programs are offered at SPUS?",
+        "How do I enroll at SPUS?",
+        "Where is the Registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "identity",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "b59851d0-d6cc-4eb1-b474-70ccfc81a451",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 11.87,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.037,
+            "self_ms": 0.037
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.066,
+            "self_ms": 0.029
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.006,
+            "self_ms": 0.006
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.128,
+            "self_ms": 0.056
+          },
+          "grounding": {
+            "calls": 5,
+            "inclusive_ms": 3.989,
+            "self_ms": 3.989
+          },
+          "structured_enrollment": {
+            "calls": 3,
+            "inclusive_ms": 4.364,
+            "self_ms": 1.038
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 11.407,
+            "self_ms": 6.381
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "wat can u do",
+      "expected": "capabilities",
+      "iteration": 2,
+      "passed": true,
+      "elapsed_ms": 12.562378997245105,
+      "response": "I can help you look up campus information, work through a question, or chat for a bit. What would you like to do?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "suggestions": [
+        "What programs are offered at SPUS?",
+        "How do I enroll at SPUS?",
+        "Where is the Registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "capabilities",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "0ccde024-9190-4dae-ad43-ba4a2676ef37",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 12.55,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.144,
+            "self_ms": 0.144
+          },
+          "social_normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.017,
+            "self_ms": 0.017
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.254,
+            "self_ms": 0.237
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.441,
+            "self_ms": 0.043
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.006,
+            "self_ms": 0.006
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.509,
+            "self_ms": 0.062
+          },
+          "grounding": {
+            "calls": 5,
+            "inclusive_ms": 3.978,
+            "self_ms": 3.978
+          },
+          "structured_enrollment": {
+            "calls": 3,
+            "inclusive_ms": 4.466,
+            "self_ms": 1.136
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 11.629,
+            "self_ms": 6.514
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "thnx",
+      "expected": "thanks",
+      "iteration": 2,
+      "passed": true,
+      "elapsed_ms": 0.5390880032791756,
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "suggestions": [],
+      "suggestions_kind": "related",
+      "mode": "thanks",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "1d5d7131-8e3f-456d-9cdf-a4099ca61332",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 0.52,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.112,
+            "self_ms": 0.112
+          },
+          "social_normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.016,
+            "self_ms": 0.016
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.093,
+            "self_ms": 0.077
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.243,
+            "self_ms": 0.038
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.006,
+            "self_ms": 0.006
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.303,
+            "self_ms": 0.054
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "thankyouuu",
+      "expected": "thanks",
+      "iteration": 2,
+      "passed": true,
+      "elapsed_ms": 8.302153000840917,
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "suggestions": [],
+      "suggestions_kind": "related",
+      "mode": "thanks",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "72789280-de2a-4106-942a-b3b48d1f3888",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 8.29,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 7.88,
+            "self_ms": 7.88
+          },
+          "social_normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.033,
+            "self_ms": 0.033
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.081,
+            "self_ms": 0.049
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 8.04,
+            "self_ms": 0.079
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.008,
+            "self_ms": 0.008
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 8.104,
+            "self_ms": 0.055
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "who r u, wat can u do, thnx, thankyouuu",
+      "expected": "social_bundle",
+      "iteration": 2,
+      "passed": true,
+      "elapsed_ms": 17.375147999700857,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant.\n\nI can help you look up campus information, work through a question, or chat for a bit.\n\nYou're welcome!",
+      "sources": [],
+      "suggestions": [],
+      "suggestions_kind": "related",
+      "mode": "social_bundle",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "5f09070c-bb24-41f3-ab57-dd422e0bc028",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 17.36,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 5,
+            "inclusive_ms": 16.006,
+            "self_ms": 16.006
+          },
+          "social_normalization": {
+            "calls": 7,
+            "inclusive_ms": 0.097,
+            "self_ms": 0.097
+          },
+          "social_matching": {
+            "calls": 4,
+            "inclusive_ms": 0.601,
+            "self_ms": 0.503
+          },
+          "dialogue_routing": {
+            "calls": 5,
+            "inclusive_ms": 25.482,
+            "self_ms": 0.308
+          },
+          "social_reply": {
+            "calls": 4,
+            "inclusive_ms": 0.052,
+            "self_ms": 0.041
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 17.047,
+            "self_ms": 0.091
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "hi, what are the programs ofered",
+      "expected": "evidence",
+      "iteration": 2,
+      "passed": true,
+      "elapsed_ms": 58.368030997371534,
+      "response": "Hi!\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "suggestions": [
+        "Does SPUS offer Graduate School programs?",
+        "Why choose SPUS?",
+        "Where is the registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "mixed",
+      "status": "ok",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "d820fa49-451f-4c40-96ae-9c13f115210f",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 58.35,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 5,
+            "inclusive_ms": 0.29,
+            "self_ms": 0.29
+          },
+          "social_normalization": {
+            "calls": 4,
+            "inclusive_ms": 0.044,
+            "self_ms": 0.044
+          },
+          "social_matching": {
+            "calls": 2,
+            "inclusive_ms": 0.171,
+            "self_ms": 0.128
+          },
+          "dialogue_routing": {
+            "calls": 3,
+            "inclusive_ms": 0.792,
+            "self_ms": 0.152
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.037,
+            "self_ms": 0.009
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.103,
+            "self_ms": 0.103
+          },
+          "structured_personnel": {
+            "calls": 1,
+            "inclusive_ms": 0.005,
+            "self_ms": 0.005
+          },
+          "grounding": {
+            "calls": 48,
+            "inclusive_ms": 15.46,
+            "self_ms": 15.46
+          },
+          "exact_faq": {
+            "calls": 1,
+            "inclusive_ms": 7.322,
+            "self_ms": 6.551
+          },
+          "retrieval": {
+            "calls": 1,
+            "inclusive_ms": 7.697,
+            "self_ms": 0.33
+          },
+          "response_render": {
+            "calls": 1,
+            "inclusive_ms": 0.029,
+            "self_ms": 0.029
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 9.75,
+            "self_ms": 0.733
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 47.951,
+            "self_ms": 33.867
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "What progrmas are offered at SPUS?",
+      "expected": "evidence",
+      "iteration": 2,
+      "passed": true,
+      "elapsed_ms": 57.903442000679206,
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "suggestions": [
+        "Does SPUS offer Graduate School programs?",
+        "Why choose SPUS?",
+        "Where is the registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "knowledge",
+      "status": "ok",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "398f28a1-85e1-4f0d-96ec-2d11af6bccfb",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 57.89,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 5,
+            "inclusive_ms": 0.456,
+            "self_ms": 0.456
+          },
+          "social_normalization": {
+            "calls": 5,
+            "inclusive_ms": 0.055,
+            "self_ms": 0.055
+          },
+          "social_matching": {
+            "calls": 3,
+            "inclusive_ms": 0.205,
+            "self_ms": 0.148
+          },
+          "dialogue_routing": {
+            "calls": 3,
+            "inclusive_ms": 1.111,
+            "self_ms": 0.159
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.037,
+            "self_ms": 0.008
+          },
+          "public_vocabulary": {
+            "calls": 1,
+            "inclusive_ms": 0.016,
+            "self_ms": 0.016
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.198,
+            "self_ms": 0.198
+          },
+          "structured_personnel": {
+            "calls": 1,
+            "inclusive_ms": 0.005,
+            "self_ms": 0.005
+          },
+          "grounding": {
+            "calls": 48,
+            "inclusive_ms": 15.323,
+            "self_ms": 15.323
+          },
+          "exact_faq": {
+            "calls": 1,
+            "inclusive_ms": 6.463,
+            "self_ms": 5.919
+          },
+          "retrieval": {
+            "calls": 1,
+            "inclusive_ms": 6.8,
+            "self_ms": 0.288
+          },
+          "response_render": {
+            "calls": 1,
+            "inclusive_ms": 0.041,
+            "self_ms": 0.041
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 9.125,
+            "self_ms": 0.836
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 47.987,
+            "self_ms": 33.66
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "expected": "compound",
+      "iteration": 2,
+      "passed": true,
+      "elapsed_ms": 233.5015940006997,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "suggestions": [
+        "What programs does the College of Education, Arts and Sciences offer?",
+        "What TVET or TESDA programs are offered?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "knowledge",
+      "status": "ok",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "d7a00600-d25d-47d4-8359-6353be5ef581",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 233.48,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 10,
+            "inclusive_ms": 0.479,
+            "self_ms": 0.479
+          },
+          "social_normalization": {
+            "calls": 5,
+            "inclusive_ms": 0.07,
+            "self_ms": 0.07
+          },
+          "social_matching": {
+            "calls": 5,
+            "inclusive_ms": 0.258,
+            "self_ms": 0.186
+          },
+          "dialogue_routing": {
+            "calls": 5,
+            "inclusive_ms": 1.083,
+            "self_ms": 0.299
+          },
+          "normalization": {
+            "calls": 3,
+            "inclusive_ms": 0.138,
+            "self_ms": 0.024
+          },
+          "public_vocabulary": {
+            "calls": 1,
+            "inclusive_ms": 0.015,
+            "self_ms": 0.015
+          },
+          "context_resolution": {
+            "calls": 5,
+            "inclusive_ms": 1.167,
+            "self_ms": 0.871
+          },
+          "grounding": {
+            "calls": 56,
+            "inclusive_ms": 26.612,
+            "self_ms": 26.612
+          },
+          "structured_personnel": {
+            "calls": 2,
+            "inclusive_ms": 159.932,
+            "self_ms": 154.526
+          },
+          "retrieval": {
+            "calls": 2,
+            "inclusive_ms": 160.619,
+            "self_ms": 0.609
+          },
+          "response_render": {
+            "calls": 2,
+            "inclusive_ms": 0.103,
+            "self_ms": 0.103
+          },
+          "orchestration": {
+            "calls": 3,
+            "inclusive_ms": 331.875,
+            "self_ms": 2.055
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 65.819,
+            "self_ms": 46.829
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "TELL ME ABOUT SPUS AND WHY SHOULD I ENROL",
+      "expected": "compound",
+      "iteration": 2,
+      "passed": true,
+      "elapsed_ms": 71.5293670000392,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. TELL ME ABOUT SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. WHY SHOULD I ENROL at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "TELL ME ABOUT SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "WHY SHOULD I ENROL at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "suggestions": [
+        "What college courses or programs are available?",
+        "What is the SPUS Vision and Mission?",
+        "What are the Paulinian Core Values?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "knowledge",
+      "status": "ok",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "b66a348c-da1e-449c-88a4-6b28ddfb7372",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 71.5,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 12,
+            "inclusive_ms": 0.73,
+            "self_ms": 0.73
+          },
+          "social_normalization": {
+            "calls": 10,
+            "inclusive_ms": 0.174,
+            "self_ms": 0.174
+          },
+          "social_matching": {
+            "calls": 7,
+            "inclusive_ms": 0.681,
+            "self_ms": 0.506
+          },
+          "dialogue_routing": {
+            "calls": 7,
+            "inclusive_ms": 2.428,
+            "self_ms": 0.598
+          },
+          "normalization": {
+            "calls": 3,
+            "inclusive_ms": 0.225,
+            "self_ms": 0.042
+          },
+          "public_vocabulary": {
+            "calls": 2,
+            "inclusive_ms": 0.048,
+            "self_ms": 0.048
+          },
+          "context_resolution": {
+            "calls": 5,
+            "inclusive_ms": 1.585,
+            "self_ms": 1.171
+          },
+          "structured_personnel": {
+            "calls": 2,
+            "inclusive_ms": 0.01,
+            "self_ms": 0.01
+          },
+          "grounding": {
+            "calls": 50,
+            "inclusive_ms": 15.835,
+            "self_ms": 15.835
+          },
+          "exact_faq": {
+            "calls": 2,
+            "inclusive_ms": 13.74,
+            "self_ms": 12.949
+          },
+          "retrieval": {
+            "calls": 2,
+            "inclusive_ms": 14.33,
+            "self_ms": 0.456
+          },
+          "response_render": {
+            "calls": 2,
+            "inclusive_ms": 0.074,
+            "self_ms": 0.074
+          },
+          "orchestration": {
+            "calls": 3,
+            "inclusive_ms": 38.539,
+            "self_ms": 2.291
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 50.301,
+            "self_ms": 35.922
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "Where is the registar office?",
+      "expected": "clarification",
+      "iteration": 2,
+      "passed": true,
+      "elapsed_ms": 1.2653490011871327,
+      "response": "Did you mean \"Where is the register office?\" or \"Where is the registrar office?\"?\n\n[SUGGESTIONS: \"Where is the register office?\" | \"Where is the registrar office?\"]",
+      "sources": [],
+      "suggestions": [
+        "Where is the register office?",
+        "Where is the registrar office?"
+      ],
+      "suggestions_kind": "choice",
+      "mode": "spelling_confirmation",
+      "status": "clarification",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "952eb8a9-fefb-41e7-b962-82148188d028",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 1.25,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 2,
+            "inclusive_ms": 0.343,
+            "self_ms": 0.343
+          },
+          "social_normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.03,
+            "self_ms": 0.03
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.1,
+            "self_ms": 0.07
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.359,
+            "self_ms": 0.055
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.698,
+            "self_ms": 0.2
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "Where is the registrra office?",
+      "expected": "navigate_map",
+      "iteration": 2,
+      "passed": true,
+      "elapsed_ms": 1.7786550015443936,
+      "response": "Opening the campus map for Registrar Office. Choose your starting location to calculate a route.",
+      "sources": [],
+      "suggestions": [],
+      "suggestions_kind": "related",
+      "mode": "knowledge",
+      "status": "ok",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "51a43f9e-4808-4ef1-a4ab-b92774edf9ac",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 1.76,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 2,
+            "inclusive_ms": 0.227,
+            "self_ms": 0.227
+          },
+          "social_normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.076,
+            "self_ms": 0.076
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.168,
+            "self_ms": 0.092
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.447,
+            "self_ms": 0.084
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.042,
+            "self_ms": 0.009
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.111,
+            "self_ms": 0.111
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 1.349,
+            "self_ms": 0.75
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "What is the exact tuition fee in 2037?",
+      "expected": "unsupported",
+      "iteration": 2,
+      "passed": true,
+      "elapsed_ms": 115.79509200237226,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"How much is the tuition?\"]",
+      "sources": [],
+      "suggestions": [
+        "How much is the tuition?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "knowledge",
+      "status": "no_match",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "d11d2555-5e74-4405-96cf-7262cd0d6ad4",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 115.78,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 3,
+            "inclusive_ms": 0.187,
+            "self_ms": 0.187
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.004,
+            "self_ms": 0.004
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.163,
+            "self_ms": 0.076
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.058,
+            "self_ms": 0.009
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.111,
+            "self_ms": 0.111
+          },
+          "structured_personnel": {
+            "calls": 1,
+            "inclusive_ms": 0.005,
+            "self_ms": 0.005
+          },
+          "exact_faq": {
+            "calls": 1,
+            "inclusive_ms": 4.971,
+            "self_ms": 4.971
+          },
+          "query_embedding": {
+            "calls": 1,
+            "inclusive_ms": 18.045,
+            "self_ms": 18.045
+          },
+          "hybrid_retrieval": {
+            "calls": 1,
+            "inclusive_ms": 58.766,
+            "self_ms": 40.721
+          },
+          "retrieval": {
+            "calls": 1,
+            "inclusive_ms": 64.137,
+            "self_ms": 0.339
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 65.153,
+            "self_ms": 0.685
+          },
+          "grounding": {
+            "calls": 46,
+            "inclusive_ms": 14.756,
+            "self_ms": 14.756
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 50.001,
+            "self_ms": 35.247
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "Who is Dr. Antonio Talaera?",
+      "expected": "clarification",
+      "iteration": 2,
+      "passed": true,
+      "elapsed_ms": 1.1864609987242147,
+      "response": "Could you confirm the person's exact name or their role? I won't guess a name from a spelling similarity.",
+      "sources": [],
+      "suggestions": [],
+      "suggestions_kind": "related",
+      "mode": "protected_name",
+      "status": "clarification",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "0e4e0860-daee-4e28-8d7e-d610fbc31e24",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 1.17,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.121,
+            "self_ms": 0.121
+          },
+          "social_normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.019,
+            "self_ms": 0.019
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.497,
+            "self_ms": 0.479
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.667,
+            "self_ms": 0.049
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.73,
+            "self_ms": 0.063
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "What is the preseidnt?",
+      "expected": "clarification",
+      "iteration": 2,
+      "passed": true,
+      "elapsed_ms": 18.368552999163512,
+      "response": "Did you mean \"What is the president?\"?\n\n[SUGGESTIONS: \"What is the president?\"]",
+      "sources": [],
+      "suggestions": [
+        "What is the president?"
+      ],
+      "suggestions_kind": "choice",
+      "mode": "spelling_confirmation",
+      "status": "clarification",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "72403410-53fc-43b9-b393-8fb970b3be19",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 18.36,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 2,
+            "inclusive_ms": 17.637,
+            "self_ms": 17.637
+          },
+          "social_normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.02,
+            "self_ms": 0.02
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.067,
+            "self_ms": 0.047
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 9.066,
+            "self_ms": 0.093
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 17.906,
+            "self_ms": 0.109
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "Anong mga kursong inaalok sa SPUS?",
+      "expected": "evidence",
+      "iteration": 2,
+      "passed": true,
+      "elapsed_ms": 59.978821002005134,
+      "response": "Sige—narito ang impormasyon mula sa mga nakaimbak na sanggunian.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "suggestions": [
+        "Does SPUS offer Graduate School programs?",
+        "Why choose SPUS?",
+        "Where is the registrar office?"
+      ],
+      "suggestions_kind": "related",
+      "mode": "knowledge",
+      "status": "ok",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "f897085d-a968-49af-b0cf-029a17543a22",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_api",
+        "status": 200,
+        "total_ms": 59.97,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 3,
+            "inclusive_ms": 0.121,
+            "self_ms": 0.121
+          },
+          "social_normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.022,
+            "self_ms": 0.022
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.099,
+            "self_ms": 0.077
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.227,
+            "self_ms": 0.081
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.04,
+            "self_ms": 0.01
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.109,
+            "self_ms": 0.109
+          },
+          "structured_personnel": {
+            "calls": 1,
+            "inclusive_ms": 0.005,
+            "self_ms": 0.005
+          },
+          "grounding": {
+            "calls": 48,
+            "inclusive_ms": 15.072,
+            "self_ms": 15.072
+          },
+          "exact_faq": {
+            "calls": 1,
+            "inclusive_ms": 7.555,
+            "self_ms": 6.917
+          },
+          "retrieval": {
+            "calls": 1,
+            "inclusive_ms": 7.876,
+            "self_ms": 0.272
+          },
+          "response_render": {
+            "calls": 1,
+            "inclusive_ms": 0.032,
+            "self_ms": 0.032
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 9.771,
+            "self_ms": 0.798
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 49.495,
+            "self_ms": 35.75
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "How do I enorll?",
+      "expected": "clarification",
+      "flow": "enrollment_social_followup",
+      "passed": true,
+      "elapsed_ms": 2.342741998290876,
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "mode": "knowledge",
+      "status": "clarification",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "a62e528e-1e76-40e0-989c-a35317205438",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_followup",
+        "status": 200,
+        "total_ms": 2.32,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 2,
+            "inclusive_ms": 0.271,
+            "self_ms": 0.271
+          },
+          "social_normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.039,
+            "self_ms": 0.039
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.139,
+            "self_ms": 0.1
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.472,
+            "self_ms": 0.11
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.064,
+            "self_ms": 0.016
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.122,
+            "self_ms": 0.122
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 1.38,
+            "self_ms": 0.722
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "Old/continuing college student",
+      "expected": "evidence",
+      "flow": "enrollment_social_followup",
+      "passed": true,
+      "elapsed_ms": 63.76633000036236,
+      "response": "Sure—here is the information from the stored sources.\n\nEnrollment procedure for Old / Continuing Students in Higher Education (URO-PR-016):\n1. Academic Advising: Go to the Dean's or Program Chair's office for curriculum advising and evaluation. Obtain the printed Pre-Registration Form.\n2. Assessment of Fees: Proceed to the Student Accounts / Finance Office for assessment of tuition and fees. Obtain the printed Assessment Form.\n3. Payment: Pay the required enrollment fee at the Cashier's counter and receive the Official Receipt (OR).\n4. Encoding and Validation: Proceed to the Registrar's Clerk for system encoding and validation. The student's enrollment is finalized upon receipt of the validated registration.\n\n[SUGGESTIONS: \"Who must approve the subject adding, dropping, or withdrawal form?\" | \"Where is the registrar office?\" | \"What college courses or programs are available?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] How can an old or continuing college student enroll at SPUS (Document URO-PR-016)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "mode": "knowledge",
+      "status": "ok",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "950a88c9-c0e6-4fb2-bf02-032cd7370905",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_followup",
+        "status": 200,
+        "total_ms": 63.73,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 4,
+            "inclusive_ms": 0.202,
+            "self_ms": 0.202
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.006,
+            "self_ms": 0.006
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.211,
+            "self_ms": 0.123
+          },
+          "normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.105,
+            "self_ms": 0.025
+          },
+          "public_vocabulary": {
+            "calls": 1,
+            "inclusive_ms": 0.027,
+            "self_ms": 0.027
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.292,
+            "self_ms": 0.292
+          },
+          "grounding": {
+            "calls": 48,
+            "inclusive_ms": 16.691,
+            "self_ms": 16.691
+          },
+          "structured_enrollment": {
+            "calls": 1,
+            "inclusive_ms": 6.073,
+            "self_ms": 5.056
+          },
+          "retrieval": {
+            "calls": 1,
+            "inclusive_ms": 6.786,
+            "self_ms": 0.674
+          },
+          "response_render": {
+            "calls": 1,
+            "inclusive_ms": 0.066,
+            "self_ms": 0.066
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 10.2,
+            "self_ms": 1.037
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 52.669,
+            "self_ms": 38.671
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "thnx",
+      "expected": "thanks",
+      "flow": "enrollment_social_followup",
+      "passed": true,
+      "elapsed_ms": 0.7492170007026289,
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "mode": "thanks",
+      "status": "social",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "339743db-d130-4fd0-9385-1482f2be5968",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_followup",
+        "status": 200,
+        "total_ms": 0.71,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.122,
+            "self_ms": 0.122
+          },
+          "social_normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.017,
+            "self_ms": 0.017
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.096,
+            "self_ms": 0.079
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.258,
+            "self_ms": 0.04
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.006,
+            "self_ms": 0.006
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.319,
+            "self_ms": 0.055
+          }
+        },
+        "providers": []
+      }
+    },
+    {
+      "query": "How about transferee?",
+      "expected": "evidence",
+      "flow": "enrollment_social_followup",
+      "passed": true,
+      "elapsed_ms": 55.52079200060689,
+      "response": "Here is the information from the SPUS sources for your follow-up.\n\nEnrollment procedure for Transferee Students in Higher Education (URO-PR-017):\n1. Dean's Office (Evaluation & Crediting): Submit Transfer Credentials and Curricular Checklist to the Dean's Office for transcript evaluation and crediting of previous subjects.\n2. Student Affairs Office (SAO) (Encoding & Information): Fill out the Student Information Sheet and submit required documents: Transfer Credentials (Honorable Dismissal / Transcript of Records), PSA Birth Certificate, Certificate of Good Moral Character, and 1 pc 2x2 ID picture.\n3. Finance Office (Payment): Pay the initial or full enrollment fee at the Cashier/Finance Office. Receive the Pre-registration Form and Official Receipt (OR).\n4. Registrar's Office (Validation & Official Enrollment): Proceed to the University Registrar's Office for validation and verification. Receive the official Study Load and Assessment stamped with 'OFFICIALLY ENROLLED'.\n5. ICT Office & Clinic: Proceed to the ICT Office for ID validation/processing, and visit the University Clinic for Health Services medical profiling.\n\n[SUGGESTIONS: \"What are the required documents for transferee students enrolling at SPUS?\" | \"Who must approve the subject adding, dropping, or withdrawal form?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What is the step-by-step enrollment procedure for transferee students at SPUS (Document URO-PR-017)?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "mode": "knowledge",
+      "status": "ok",
+      "trace": {
+        "event": "request_timing",
+        "request_id": "03872b51-6e7c-465b-86b6-8a6ec7f92fa6",
+        "worker": 5744,
+        "build_commit": "a1eb6c17ace88526db8654df529c50243a466406",
+        "route": "spelling_guest_followup",
+        "status": 200,
+        "total_ms": 55.51,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 3,
+            "inclusive_ms": 0.09,
+            "self_ms": 0.09
+          },
+          "social_normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.022,
+            "self_ms": 0.022
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.08,
+            "self_ms": 0.059
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.167,
+            "self_ms": 0.058
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.031,
+            "self_ms": 0.009
+          },
+          "public_vocabulary": {
+            "calls": 1,
+            "inclusive_ms": 0.013,
+            "self_ms": 0.013
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.685,
+            "self_ms": 0.685
+          },
+          "grounding": {
+            "calls": 48,
+            "inclusive_ms": 15.997,
+            "self_ms": 15.997
+          },
+          "structured_enrollment": {
+            "calls": 1,
+            "inclusive_ms": 5.28,
+            "self_ms": 4.142
+          },
+          "retrieval": {
+            "calls": 1,
+            "inclusive_ms": 5.761,
+            "self_ms": 0.442
+          },
+          "response_render": {
+            "calls": 1,
+            "inclusive_ms": 0.026,
+            "self_ms": 0.026
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 8.26,
+            "self_ms": 0.452
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 46.765,
+            "self_ms": 33.035
+          }
+        },
+        "providers": []
+      }
+    }
+  ],
+  "external_calls": 0,
+  "passed": 55,
+  "integrity": {
+    "before": {
+      "FAQ": {
+        "count": 138,
+        "sha256": "bc8e18e7bf2b26cf44956da8aed3a4c03e3f77c9fff8b5e21180cc13641cedbd"
+      },
+      "Location": {
+        "count": 6,
+        "sha256": "d54138abcc6b41302f1bc394cbbf0447c3e5de502cb48060c1ea1305c9e88fac"
+      },
+      "StaffMember": {
+        "count": 12,
+        "sha256": "5a618bd4a3d718185a5e06dfb45e3976d94437efea8debbbc2ca8954e68c6f00"
+      },
+      "WebResource": {
+        "count": 476,
+        "sha256": "3fef4ff4d54763878bf1dab2a5acb5cbc41ff4484caa9864118e23bd7f474f83"
+      },
+      "Conversation": {
+        "count": 140,
+        "sha256": "13203c013924f38803eeac24320d116a32c9bef446327630a2e7f45ac8356bf9"
+      },
+      "ChatHistory": {
+        "count": 177,
+        "sha256": "5b709be6248a830587edaf81d62e3e50c2c4220021343764558b299fca393628"
+      }
+    },
+    "after": {
+      "FAQ": {
+        "count": 138,
+        "sha256": "bc8e18e7bf2b26cf44956da8aed3a4c03e3f77c9fff8b5e21180cc13641cedbd"
+      },
+      "Location": {
+        "count": 6,
+        "sha256": "d54138abcc6b41302f1bc394cbbf0447c3e5de502cb48060c1ea1305c9e88fac"
+      },
+      "StaffMember": {
+        "count": 12,
+        "sha256": "5a618bd4a3d718185a5e06dfb45e3976d94437efea8debbbc2ca8954e68c6f00"
+      },
+      "WebResource": {
+        "count": 476,
+        "sha256": "3fef4ff4d54763878bf1dab2a5acb5cbc41ff4484caa9864118e23bd7f474f83"
+      },
+      "Conversation": {
+        "count": 140,
+        "sha256": "13203c013924f38803eeac24320d116a32c9bef446327630a2e7f45ac8356bf9"
+      },
+      "ChatHistory": {
+        "count": 177,
+        "sha256": "5b709be6248a830587edaf81d62e3e50c2c4220021343764558b299fca393628"
+      }
+    },
+    "unchanged": true
+  }
+}

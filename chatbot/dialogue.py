@@ -6,8 +6,8 @@ from threading import Lock
 
 from .performance import timed, stage, diagnostic_error
 from .query_normalization import normalize_input, normalized_text
-from .intents import normalize_query
 from .social_normalization import match_social
+from .spelling import matching_plan
 
 
 # Public intent examples only. These never enter the knowledge vector space.
@@ -40,6 +40,7 @@ class DialogueRoute:
     method: str = 'rule'
     score: float | None = None
     reply_language: str | None = None
+    segments: tuple = ()
 
 
 class SemanticSocialRouter:
@@ -154,10 +155,11 @@ def social_edges(message):
 
 
 @timed('dialogue_routing')
-def route_turn(message, semantic=True):
+def route_turn(message, semantic=True, *, _bundle=True):
     if not isinstance(message, str) or not message.strip():
         return DialogueRoute('knowledge', message if isinstance(message, str) else '')
-    text = normalize_query(message)
+    plan = matching_plan(message)
+    text = plan.matching
     if len(text) > 2000:
         return DialogueRoute('knowledge', text)
     if not re.search(r'\w', text, re.UNICODE):
@@ -167,15 +169,28 @@ def route_turn(message, semantic=True):
     # A comma before a vocative ("Hello, PAULA") is punctuation, not a
     # second request. Do not normalize the substantive retrieval query.
     social_text = re.sub(r'[,;:]\s*', ' ', normalize_input(text).punctuated)
-    # Correct a greeting typo only as a whole social utterance; never change
-    # these spans in a factual request or somebody's name.
-    social_text = re.sub(r'^(?:helo|helloo|hllo)(?=\b)', 'hello', social_text, flags=re.I)
     for kind, pattern in FAST_PATTERNS.items():
         if pattern.fullmatch(social_text):
             return DialogueRoute(kind)
     social = match_social(social_text)
     if social:
         return DialogueRoute(social.kind, method=social.method, score=social.score, reply_language=social.reply_language)
+    if _bundle:
+        clauses = [part.strip() for part in re.split(r'[,;!?]+\s*|\s+(?:and|at|pati|tsaka|&)\s+',message,flags=re.I) if part.strip()]
+        if 2<=len(clauses)<=6:
+            routes = tuple(route_turn(part,semantic=False,_bundle=False) for part in clauses)
+            allowed = {'greeting','wellbeing','thanks','identity','capabilities','affirmation','negation','acknowledgement','farewell'}
+            if all(route.kind in allowed for route in routes):
+                if len({route.kind for route in routes})==1:
+                    return routes[0]
+                if len(routes)==2 and routes[0].kind in EDGE_KINDS and routes[1].kind in ('identity','capabilities'):
+                    from dataclasses import replace
+                    return replace(routes[1],acknowledgement='greeting' if routes[0].kind in ('greeting','wellbeing') else 'thanks')
+                return DialogueRoute('social_bundle',method='composition',segments=routes)
+    if plan.protected_name:
+        return DialogueRoute('knowledge',message,method='protected_name')
+    if plan.needs_confirmation:
+        return DialogueRoute('knowledge',text,method='spelling_confirmation',score=min((c.confidence for c in plan.corrections),default=None))
     query, acknowledgement = social_edges(text)
     if query != text:
         self_intent = local_self_intent(query)

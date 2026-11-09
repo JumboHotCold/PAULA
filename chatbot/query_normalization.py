@@ -21,13 +21,14 @@ class NormalizedInput:
     spaced: str
     squashed: str
     punctuated: str
+    cased: str
 
 
 def normalize_input(value):
     original = value or ''
     value=unicodedata.normalize('NFKC',value or '')
     spaced = ' '.join(re.findall(r'\w+',value.casefold().replace('&',' and ')))
-    return NormalizedInput(original, spaced, spaced.replace(' ', ''), ' '.join(value.casefold().split()))
+    return NormalizedInput(original, spaced, spaced.replace(' ', ''), ' '.join(value.casefold().split()), ' '.join(value.split()))
 
 
 def normalized_text(value):

@@ -253,6 +253,17 @@ class PauliBotLogic:
     def _social_reply(self, route, response_language, history):
         # A provider selecting the same reviewed choices added latency without
         # adding expressive range. Keep the whole social path local and bounded.
+        if route.kind == 'social_bundle':
+            # Preserve order, acknowledge each distinct local intent once.
+            seen, replies = set(), []
+            for segment in route.segments:
+                if segment.kind not in seen:
+                    seen.add(segment.kind)
+                    reply=self._social_reply(segment,response_language,history)
+                    # Reuse reviewed prose, with brief excerpts per intent.
+                    sentences=re.split(r'(?<=[.!?])\s+',reply)
+                    replies.append(' '.join(sentences[:2 if segment.kind=='identity' else 1]))
+            return '\n\n'.join(replies)
         reply = social_candidates(route.kind, route.reply_language or response_language, history)[0]
         prefix = ACKS.get(route.acknowledgement, {}).get(response_language, '')
         return prefix + '\n\n' + reply if prefix and not reply.startswith(prefix) else reply
@@ -287,6 +298,19 @@ class PauliBotLogic:
                     pending = {'kind': 'enrollment', 'query': previous['content']}
                 elif body.startswith((NAV_QUESTION, NAV_QUESTION_FIL)):
                     pending = {'kind': 'navigation', 'query': previous['content']}
+        if route.method in ('spelling_confirmation','protected_name'):
+            if route.method == 'protected_name':
+                text = ('Maaari mong kumpirmahin ang eksaktong pangalan o tungkulin ng taong tinutukoy mo? Hindi ako manghuhula ng pangalan batay sa baybay.'
+                        if response_language=='fil' else
+                        'Could you confirm the person\'s exact name or their role? I won\'t guess a name from a spelling similarity.')
+            else:
+                from .spelling import matching_plan, confirmation_questions
+                questions = confirmation_questions(matching_plan(user_message))
+                text = ('Ang ibig mo bang sabihin ay ' if response_language=='fil' else 'Did you mean ') + \
+                    (' o ' if response_language=='fil' else ' or ').join(json.dumps(query,ensure_ascii=False) for query in questions) + '?'
+                text += '\n\n[SUGGESTIONS: ' + ' | '.join(json.dumps(query,ensure_ascii=False) for query in questions) + ']'
+            return ConversationAnswer((text,[],None,None),anchor,status='clarification',mode=route.method,
+                                      language=preference,pending=pending)
         if route.kind not in ('knowledge', 'feedback'):
             if preference and route.reply_language:
                 route = replace(route, reply_language=None)

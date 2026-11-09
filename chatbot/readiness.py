@@ -31,6 +31,7 @@ def initialize_worker(worker):
     emit({'event': 'worker_initializing', 'worker': os.getpid(), **stamp})
     worker.notify()
     social_ready = False
+    spelling_ready = False
     try:
         model = runtime.initialize()
         if bot.rag is None:
@@ -38,14 +39,18 @@ def initialize_worker(worker):
         bot.rag.model = model  # Same process singleton; no second model.
         from .dialogue import social_router
         social_router.prepare(model)
+        from .spelling import prepare_vocabulary
+        prepare_vocabulary()
+        spelling_ready = True
         social_ready = True
     except Exception as exc:
         diagnostic_error('startup', 'WORKER_PREPARATION_ERROR', exc)
         # Failed workers remain explicitly unready; no request-time retry.
     worker.notify()
     directory = boot_directory()
-    record = {'worker': os.getpid(), 'ready': runtime.status == 'ready' and social_ready,
+    record = {'worker': os.getpid(), 'ready': runtime.status == 'ready' and social_ready and spelling_ready,
               'social_router_ready': social_ready,
+              'spelling_vocabulary_ready': spelling_ready,
               'dimensions': DIMENSIONS, 'startup_ms': round((time.perf_counter()-start)*1000, 2), **stamp}
     if directory is not None:
         directory.mkdir(mode=0o700, parents=True, exist_ok=True)

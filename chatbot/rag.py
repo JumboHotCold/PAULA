@@ -133,6 +133,11 @@ class RAGSearcher:
     def retrieve(self, query, limit=5, allow_fallback=False):
         started = time.perf_counter()
         try:
+            from .spelling import matching_plan
+            plan = matching_plan(query)
+            if plan.protected_name or plan.needs_confirmation:
+                return RetrievalOutcome(status='ambiguous', elapsed_ms=(time.perf_counter()-started)*1000)
+            query = plan.matching
             rows = self.search(query, limit)
             rows_status = getattr(rows, 'status', None)
             rows = consolidate_evidence(rows)
@@ -200,6 +205,22 @@ class RAGSearcher:
         exact_faq = self._exact_faq_lookup(query)
         if exact_faq or exact_faq.status == 'conflict':
             return exact_faq
+        if lookup_kind(query) == 'name':
+            # Literal names are identifiers. A nearby vector cannot establish
+            # that two different people are the same person, even when they
+            # share a title or a first name. Preserve local, manually maintained
+            # identities independently of website spelling discrepancies.
+            from .personnel import name_request
+            from .query_normalization import person_key
+            requested = name_request(query)
+            matches = [obj for obj in StaffMember.objects.all() if person_key(obj.name)==requested]
+            rows = [dict(question=f'Who is {obj.name}?', document_title=f'Staff Directory: {obj.position}',
+                         answer=f'{obj.name} is the {obj.position}.' + (f' Office located at {obj.office}.' if obj.office else ''),
+                         personnel_name=obj.name, personnel_role=obj.position, source_type='staff_directory',
+                         source_office=obj.office, source_url=None, record_type='staffmember',record_id=obj.pk,
+                         retrieval_method='exact_staff_name') for obj in matches]
+            from .grounding import eligible_evidence
+            return EvidenceList([row for row in rows if eligible_evidence(query,row)][:limit],status='ok' if rows else 'no_match')
         # Mentioning announcements does not make an office procedure a news
         # request. Exact knowledge and its conflicts take precedence. An empty
         # announcements table is not evidence that other sources lack an answer.

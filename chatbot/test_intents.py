@@ -106,7 +106,10 @@ class IntentTests(unittest.TestCase):
 
     def test_typo_navigation_works_without_llm_or_kb(self):
         bot = self.bot()
-        _, _, action, data = bot.process_query('Wher is the registar?')
+        # "wher" ties when/where and is now clarified rather than guessed.
+        ambiguous = bot.process_query('Wher is the registar?')
+        self.assertEqual(ambiguous.answer_status,'clarification')
+        _, _, action, data = bot.process_query('Wheere is the registar?')
         self.assertEqual(action, 'navigate_map')
         self.assertEqual(data, {'destination': 'registrar_office'})
         bot.rag.search.assert_not_called()

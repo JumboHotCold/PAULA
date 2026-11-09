@@ -1,0 +1,1304 @@
+{
+  "corpus_sha256": "14a132b947ed9ea66bb99f7ebac311e46e5b4b0fdd4fa9ac49f02a6adee5e8b2",
+  "samples": 1995,
+  "groups": {
+    "before": {
+      "faq": {
+        "n": 1104,
+        "p50_ms": 73.223,
+        "p95_ms": 97.288,
+        "outcomes": {
+          "ok": 828,
+          "no_match": 274,
+          "conflict": 2
+        },
+        "top1": 671,
+        "top1_recall": 0.60779,
+        "top3": 762,
+        "top3_recall": 0.690217
+      },
+      "staff": {
+        "n": 96,
+        "p50_ms": 126.049,
+        "p95_ms": 143.271,
+        "outcomes": {
+          "ok": 46,
+          "ambiguous": 10,
+          "no_match": 40
+        },
+        "top1": 40,
+        "top1_recall": 0.416667,
+        "top3": 44,
+        "top3_recall": 0.458333,
+        "wrong_person": 5,
+        "raw_name_variant_rows": 6,
+        "top1_identity_key": 41,
+        "top1_identity_recall": 0.427083,
+        "top3_identity_key": 45,
+        "top3_identity_recall": 0.46875
+      },
+      "location": {
+        "n": 48,
+        "p50_ms": 58.749,
+        "p95_ms": 75.02,
+        "outcomes": {
+          "ok": 41,
+          "no_match": 7
+        },
+        "top1": 34,
+        "top1_recall": 0.708333,
+        "top3": 41,
+        "top3_recall": 0.854167
+      },
+      "intent": {
+        "n": 736,
+        "p50_ms": 12.611,
+        "p95_ms": 18.167,
+        "outcomes": {
+          "wellbeing": 46,
+          "knowledge": 302,
+          "thanks": 91,
+          "acknowledgement": 21,
+          "farewell": 60,
+          "joke": 40,
+          "support": 44,
+          "celebration": 43,
+          "preference": 28,
+          "capabilities": 24,
+          "greeting": 33,
+          "identity": 4
+        },
+        "correct": 537,
+        "accuracy": 0.72962
+      },
+      "negative": {
+        "n": 11,
+        "p50_ms": 0.483,
+        "p95_ms": 18.403,
+        "outcomes": {
+          "knowledge": 11
+        },
+        "correct": 11,
+        "accuracy": 1.0
+      }
+    },
+    "after": {
+      "faq": {
+        "n": 1104,
+        "p50_ms": 5.561,
+        "p95_ms": 60.72,
+        "outcomes": {
+          "ok": 874,
+          "spelling_confirmation": 143,
+          "protected_name": 48,
+          "no_match": 28,
+          "conflict": 3,
+          "identity": 8
+        },
+        "top1": 867,
+        "top1_recall": 0.785326,
+        "top3": 869,
+        "top3_recall": 0.787138
+      },
+      "staff": {
+        "n": 96,
+        "p50_ms": 0.78,
+        "p95_ms": 82.188,
+        "outcomes": {
+          "ok": 18,
+          "protected_name": 68,
+          "ambiguous": 6,
+          "no_match": 3,
+          "spelling_confirmation": 1
+        },
+        "top1": 17,
+        "top1_recall": 0.177083,
+        "top3": 17,
+        "top3_recall": 0.177083,
+        "wrong_person": 0,
+        "raw_name_variant_rows": 1,
+        "top1_identity_key": 18,
+        "top1_identity_recall": 0.1875,
+        "top3_identity_key": 18,
+        "top3_identity_recall": 0.1875
+      },
+      "location": {
+        "n": 48,
+        "p50_ms": 57.425,
+        "p95_ms": 71.762,
+        "outcomes": {
+          "ok": 39,
+          "spelling_confirmation": 6,
+          "no_match": 2,
+          "protected_name": 1
+        },
+        "top1": 33,
+        "top1_recall": 0.6875,
+        "top3": 39,
+        "top3_recall": 0.8125
+      },
+      "intent": {
+        "n": 736,
+        "p50_ms": 0.141,
+        "p95_ms": 0.686,
+        "outcomes": {
+          "wellbeing": 55,
+          "thanks": 108,
+          "knowledge": 174,
+          "acknowledgement": 38,
+          "farewell": 74,
+          "joke": 45,
+          "support": 48,
+          "celebration": 47,
+          "preference": 46,
+          "capabilities": 52,
+          "greeting": 39,
+          "identity": 10
+        },
+        "correct": 665,
+        "accuracy": 0.903533
+      },
+      "negative": {
+        "n": 11,
+        "p50_ms": 0.158,
+        "p95_ms": 6.43,
+        "outcomes": {
+          "knowledge": 11
+        },
+        "correct": 11,
+        "accuracy": 1.0
+      }
+    }
+  },
+  "operations": {
+    "before": {
+      "faq": {
+        "clean": {
+          "n": 138,
+          "p50_ms": 8.026,
+          "p95_ms": 84.711,
+          "outcomes": {
+            "ok": 131,
+            "no_match": 6,
+            "conflict": 1
+          },
+          "top1": 131,
+          "top1_recall": 0.949275,
+          "top3": 131,
+          "top3_recall": 0.949275
+        },
+        "transposition": {
+          "n": 138,
+          "p50_ms": 83.021,
+          "p95_ms": 98.802,
+          "outcomes": {
+            "ok": 96,
+            "no_match": 42
+          },
+          "top1": 69,
+          "top1_recall": 0.5,
+          "top3": 86,
+          "top3_recall": 0.623188
+        },
+        "deletion": {
+          "n": 138,
+          "p50_ms": 80.598,
+          "p95_ms": 106.0,
+          "outcomes": {
+            "no_match": 44,
+            "ok": 94
+          },
+          "top1": 65,
+          "top1_recall": 0.471014,
+          "top3": 81,
+          "top3_recall": 0.586957
+        },
+        "insertion": {
+          "n": 138,
+          "p50_ms": 80.077,
+          "p95_ms": 102.006,
+          "outcomes": {
+            "ok": 95,
+            "no_match": 43
+          },
+          "top1": 70,
+          "top1_recall": 0.507246,
+          "top3": 85,
+          "top3_recall": 0.615942
+        },
+        "substitution": {
+          "n": 138,
+          "p50_ms": 82.153,
+          "p95_ms": 97.571,
+          "outcomes": {
+            "no_match": 45,
+            "ok": 93
+          },
+          "top1": 69,
+          "top1_recall": 0.5,
+          "top3": 81,
+          "top3_recall": 0.586957
+        },
+        "doubled": {
+          "n": 138,
+          "p50_ms": 80.196,
+          "p95_ms": 97.42,
+          "outcomes": {
+            "ok": 102,
+            "no_match": 36
+          },
+          "top1": 75,
+          "top1_recall": 0.543478,
+          "top3": 94,
+          "top3_recall": 0.681159
+        },
+        "spacing": {
+          "n": 138,
+          "p50_ms": 81.282,
+          "p95_ms": 102.313,
+          "outcomes": {
+            "no_match": 52,
+            "ok": 86
+          },
+          "top1": 61,
+          "top1_recall": 0.442029,
+          "top3": 73,
+          "top3_recall": 0.528986
+        },
+        "case": {
+          "n": 138,
+          "p50_ms": 8.435,
+          "p95_ms": 84.635,
+          "outcomes": {
+            "ok": 131,
+            "no_match": 6,
+            "conflict": 1
+          },
+          "top1": 131,
+          "top1_recall": 0.949275,
+          "top3": 131,
+          "top3_recall": 0.949275
+        }
+      },
+      "staff": {
+        "clean": {
+          "n": 12,
+          "p50_ms": 76.276,
+          "p95_ms": 160.564,
+          "outcomes": {
+            "ok": 9,
+            "ambiguous": 3
+          },
+          "top1": 8,
+          "top1_recall": 0.666667,
+          "top3": 9,
+          "top3_recall": 0.75,
+          "wrong_person": 1,
+          "raw_name_variant_rows": 1,
+          "top1_identity_key": 8,
+          "top1_identity_recall": 0.666667,
+          "top3_identity_key": 9,
+          "top3_identity_recall": 0.75
+        },
+        "transposition": {
+          "n": 12,
+          "p50_ms": 127.804,
+          "p95_ms": 147.71,
+          "outcomes": {
+            "ok": 5,
+            "no_match": 7
+          },
+          "top1": 5,
+          "top1_recall": 0.416667,
+          "top3": 5,
+          "top3_recall": 0.416667,
+          "wrong_person": 0,
+          "raw_name_variant_rows": 0,
+          "top1_identity_key": 5,
+          "top1_identity_recall": 0.416667,
+          "top3_identity_key": 5,
+          "top3_identity_recall": 0.416667
+        },
+        "deletion": {
+          "n": 12,
+          "p50_ms": 128.201,
+          "p95_ms": 139.583,
+          "outcomes": {
+            "ok": 6,
+            "no_match": 6
+          },
+          "top1": 5,
+          "top1_recall": 0.416667,
+          "top3": 6,
+          "top3_recall": 0.5,
+          "wrong_person": 1,
+          "raw_name_variant_rows": 1,
+          "top1_identity_key": 5,
+          "top1_identity_recall": 0.416667,
+          "top3_identity_key": 6,
+          "top3_identity_recall": 0.5
+        },
+        "insertion": {
+          "n": 12,
+          "p50_ms": 124.409,
+          "p95_ms": 139.434,
+          "outcomes": {
+            "ambiguous": 2,
+            "no_match": 6,
+            "ok": 4
+          },
+          "top1": 3,
+          "top1_recall": 0.25,
+          "top3": 4,
+          "top3_recall": 0.333333,
+          "wrong_person": 1,
+          "raw_name_variant_rows": 1,
+          "top1_identity_key": 3,
+          "top1_identity_recall": 0.25,
+          "top3_identity_key": 4,
+          "top3_identity_recall": 0.333333
+        },
+        "substitution": {
+          "n": 12,
+          "p50_ms": 126.049,
+          "p95_ms": 134.474,
+          "outcomes": {
+            "ambiguous": 1,
+            "no_match": 7,
+            "ok": 4
+          },
+          "top1": 4,
+          "top1_recall": 0.333333,
+          "top3": 4,
+          "top3_recall": 0.333333,
+          "wrong_person": 0,
+          "raw_name_variant_rows": 0,
+          "top1_identity_key": 4,
+          "top1_identity_recall": 0.333333,
+          "top3_identity_key": 4,
+          "top3_identity_recall": 0.333333
+        },
+        "doubled": {
+          "n": 12,
+          "p50_ms": 132.05,
+          "p95_ms": 142.44,
+          "outcomes": {
+            "ok": 4,
+            "no_match": 8
+          },
+          "top1": 4,
+          "top1_recall": 0.333333,
+          "top3": 4,
+          "top3_recall": 0.333333,
+          "wrong_person": 0,
+          "raw_name_variant_rows": 0,
+          "top1_identity_key": 4,
+          "top1_identity_recall": 0.333333,
+          "top3_identity_key": 4,
+          "top3_identity_recall": 0.333333
+        },
+        "spacing": {
+          "n": 12,
+          "p50_ms": 128.067,
+          "p95_ms": 150.649,
+          "outcomes": {
+            "ambiguous": 1,
+            "no_match": 6,
+            "ok": 5
+          },
+          "top1": 4,
+          "top1_recall": 0.333333,
+          "top3": 4,
+          "top3_recall": 0.333333,
+          "wrong_person": 1,
+          "raw_name_variant_rows": 1,
+          "top1_identity_key": 4,
+          "top1_identity_recall": 0.333333,
+          "top3_identity_key": 4,
+          "top3_identity_recall": 0.333333
+        },
+        "case": {
+          "n": 12,
+          "p50_ms": 76.776,
+          "p95_ms": 129.815,
+          "outcomes": {
+            "ok": 9,
+            "ambiguous": 3
+          },
+          "top1": 7,
+          "top1_recall": 0.583333,
+          "top3": 8,
+          "top3_recall": 0.666667,
+          "wrong_person": 1,
+          "raw_name_variant_rows": 2,
+          "top1_identity_key": 8,
+          "top1_identity_recall": 0.666667,
+          "top3_identity_key": 9,
+          "top3_identity_recall": 0.75
+        }
+      },
+      "location": {
+        "clean": {
+          "n": 6,
+          "p50_ms": 59.929,
+          "p95_ms": 84.255,
+          "outcomes": {
+            "ok": 6
+          },
+          "top1": 5,
+          "top1_recall": 0.833333,
+          "top3": 6,
+          "top3_recall": 1.0
+        },
+        "transposition": {
+          "n": 6,
+          "p50_ms": 58.246,
+          "p95_ms": 71.458,
+          "outcomes": {
+            "ok": 6
+          },
+          "top1": 5,
+          "top1_recall": 0.833333,
+          "top3": 6,
+          "top3_recall": 1.0
+        },
+        "deletion": {
+          "n": 6,
+          "p50_ms": 57.638,
+          "p95_ms": 70.548,
+          "outcomes": {
+            "ok": 6
+          },
+          "top1": 5,
+          "top1_recall": 0.833333,
+          "top3": 6,
+          "top3_recall": 1.0
+        },
+        "insertion": {
+          "n": 6,
+          "p50_ms": 55.617,
+          "p95_ms": 78.251,
+          "outcomes": {
+            "ok": 5,
+            "no_match": 1
+          },
+          "top1": 4,
+          "top1_recall": 0.666667,
+          "top3": 5,
+          "top3_recall": 0.833333
+        },
+        "substitution": {
+          "n": 6,
+          "p50_ms": 57.432,
+          "p95_ms": 74.988,
+          "outcomes": {
+            "ok": 5,
+            "no_match": 1
+          },
+          "top1": 4,
+          "top1_recall": 0.666667,
+          "top3": 5,
+          "top3_recall": 0.833333
+        },
+        "doubled": {
+          "n": 6,
+          "p50_ms": 60.221,
+          "p95_ms": 72.761,
+          "outcomes": {
+            "ok": 6
+          },
+          "top1": 5,
+          "top1_recall": 0.833333,
+          "top3": 6,
+          "top3_recall": 1.0
+        },
+        "spacing": {
+          "n": 6,
+          "p50_ms": 59.389,
+          "p95_ms": 72.913,
+          "outcomes": {
+            "ok": 1,
+            "no_match": 5
+          },
+          "top1": 1,
+          "top1_recall": 0.166667,
+          "top3": 1,
+          "top3_recall": 0.166667
+        },
+        "case": {
+          "n": 6,
+          "p50_ms": 58.19,
+          "p95_ms": 75.02,
+          "outcomes": {
+            "ok": 6
+          },
+          "top1": 5,
+          "top1_recall": 0.833333,
+          "top3": 6,
+          "top3_recall": 1.0
+        }
+      },
+      "intent": {
+        "clean": {
+          "n": 92,
+          "p50_ms": 1.758,
+          "p95_ms": 18.167,
+          "outcomes": {
+            "wellbeing": 7,
+            "thanks": 18,
+            "acknowledgement": 5,
+            "farewell": 10,
+            "joke": 6,
+            "support": 6,
+            "celebration": 6,
+            "preference": 5,
+            "knowledge": 16,
+            "capabilities": 5,
+            "greeting": 6,
+            "identity": 2
+          },
+          "correct": 89,
+          "accuracy": 0.967391
+        },
+        "transposition": {
+          "n": 92,
+          "p50_ms": 12.953,
+          "p95_ms": 17.602,
+          "outcomes": {
+            "wellbeing": 5,
+            "knowledge": 41,
+            "thanks": 10,
+            "acknowledgement": 2,
+            "farewell": 7,
+            "joke": 5,
+            "support": 6,
+            "celebration": 4,
+            "preference": 4,
+            "capabilities": 3,
+            "greeting": 5
+          },
+          "correct": 64,
+          "accuracy": 0.695652
+        },
+        "deletion": {
+          "n": 92,
+          "p50_ms": 12.288,
+          "p95_ms": 18.418,
+          "outcomes": {
+            "knowledge": 42,
+            "wellbeing": 5,
+            "thanks": 9,
+            "acknowledgement": 3,
+            "farewell": 7,
+            "joke": 5,
+            "support": 5,
+            "celebration": 5,
+            "preference": 4,
+            "capabilities": 3,
+            "greeting": 4
+          },
+          "correct": 62,
+          "accuracy": 0.673913
+        },
+        "insertion": {
+          "n": 92,
+          "p50_ms": 13.23,
+          "p95_ms": 19.029,
+          "outcomes": {
+            "wellbeing": 7,
+            "knowledge": 48,
+            "thanks": 10,
+            "acknowledgement": 1,
+            "farewell": 6,
+            "joke": 3,
+            "support": 4,
+            "celebration": 5,
+            "preference": 4,
+            "capabilities": 2,
+            "greeting": 2
+          },
+          "correct": 57,
+          "accuracy": 0.619565
+        },
+        "substitution": {
+          "n": 92,
+          "p50_ms": 13.139,
+          "p95_ms": 17.304,
+          "outcomes": {
+            "wellbeing": 3,
+            "knowledge": 57,
+            "thanks": 4,
+            "acknowledgement": 1,
+            "farewell": 5,
+            "joke": 5,
+            "support": 6,
+            "celebration": 6,
+            "preference": 1,
+            "capabilities": 3,
+            "greeting": 1
+          },
+          "correct": 48,
+          "accuracy": 0.521739
+        },
+        "doubled": {
+          "n": 92,
+          "p50_ms": 12.441,
+          "p95_ms": 18.733,
+          "outcomes": {
+            "wellbeing": 6,
+            "knowledge": 43,
+            "thanks": 11,
+            "acknowledgement": 2,
+            "farewell": 7,
+            "joke": 4,
+            "support": 6,
+            "celebration": 6,
+            "preference": 3,
+            "capabilities": 1,
+            "greeting": 3
+          },
+          "correct": 62,
+          "accuracy": 0.673913
+        },
+        "spacing": {
+          "n": 92,
+          "p50_ms": 12.58,
+          "p95_ms": 18.465,
+          "outcomes": {
+            "wellbeing": 6,
+            "knowledge": 39,
+            "thanks": 11,
+            "acknowledgement": 2,
+            "farewell": 8,
+            "joke": 6,
+            "support": 5,
+            "celebration": 5,
+            "preference": 2,
+            "capabilities": 2,
+            "greeting": 6
+          },
+          "correct": 66,
+          "accuracy": 0.717391
+        },
+        "case": {
+          "n": 92,
+          "p50_ms": 1.384,
+          "p95_ms": 17.33,
+          "outcomes": {
+            "wellbeing": 7,
+            "thanks": 18,
+            "acknowledgement": 5,
+            "farewell": 10,
+            "joke": 6,
+            "support": 6,
+            "celebration": 6,
+            "preference": 5,
+            "knowledge": 16,
+            "capabilities": 5,
+            "greeting": 6,
+            "identity": 2
+          },
+          "correct": 89,
+          "accuracy": 0.967391
+        }
+      }
+    },
+    "after": {
+      "faq": {
+        "clean": {
+          "n": 138,
+          "p50_ms": 5.531,
+          "p95_ms": 7.685,
+          "outcomes": {
+            "ok": 136,
+            "conflict": 1,
+            "identity": 1
+          },
+          "top1": 136,
+          "top1_recall": 0.985507,
+          "top3": 136,
+          "top3_recall": 0.985507
+        },
+        "transposition": {
+          "n": 138,
+          "p50_ms": 5.291,
+          "p95_ms": 7.882,
+          "outcomes": {
+            "ok": 90,
+            "spelling_confirmation": 41,
+            "protected_name": 5,
+            "no_match": 1,
+            "identity": 1
+          },
+          "top1": 90,
+          "top1_recall": 0.652174,
+          "top3": 90,
+          "top3_recall": 0.652174
+        },
+        "deletion": {
+          "n": 138,
+          "p50_ms": 5.433,
+          "p95_ms": 8.034,
+          "outcomes": {
+            "ok": 93,
+            "spelling_confirmation": 25,
+            "protected_name": 16,
+            "no_match": 3,
+            "identity": 1
+          },
+          "top1": 93,
+          "top1_recall": 0.673913,
+          "top3": 93,
+          "top3_recall": 0.673913
+        },
+        "insertion": {
+          "n": 138,
+          "p50_ms": 5.792,
+          "p95_ms": 8.218,
+          "outcomes": {
+            "ok": 129,
+            "spelling_confirmation": 4,
+            "protected_name": 2,
+            "no_match": 2,
+            "identity": 1
+          },
+          "top1": 129,
+          "top1_recall": 0.934783,
+          "top3": 129,
+          "top3_recall": 0.934783
+        },
+        "substitution": {
+          "n": 138,
+          "p50_ms": 5.221,
+          "p95_ms": 8.403,
+          "outcomes": {
+            "spelling_confirmation": 36,
+            "ok": 90,
+            "protected_name": 8,
+            "no_match": 3,
+            "identity": 1
+          },
+          "top1": 90,
+          "top1_recall": 0.652174,
+          "top3": 90,
+          "top3_recall": 0.652174
+        },
+        "doubled": {
+          "n": 138,
+          "p50_ms": 5.734,
+          "p95_ms": 7.837,
+          "outcomes": {
+            "ok": 129,
+            "protected_name": 5,
+            "no_match": 1,
+            "spelling_confirmation": 2,
+            "identity": 1
+          },
+          "top1": 129,
+          "top1_recall": 0.934783,
+          "top3": 129,
+          "top3_recall": 0.934783
+        },
+        "spacing": {
+          "n": 138,
+          "p50_ms": 5.665,
+          "p95_ms": 91.166,
+          "outcomes": {
+            "ok": 71,
+            "spelling_confirmation": 35,
+            "protected_name": 12,
+            "no_match": 18,
+            "conflict": 1,
+            "identity": 1
+          },
+          "top1": 64,
+          "top1_recall": 0.463768,
+          "top3": 66,
+          "top3_recall": 0.478261
+        },
+        "case": {
+          "n": 138,
+          "p50_ms": 5.51,
+          "p95_ms": 7.585,
+          "outcomes": {
+            "ok": 136,
+            "conflict": 1,
+            "identity": 1
+          },
+          "top1": 136,
+          "top1_recall": 0.985507,
+          "top3": 136,
+          "top3_recall": 0.985507
+        }
+      },
+      "staff": {
+        "clean": {
+          "n": 12,
+          "p50_ms": 75.941,
+          "p95_ms": 86.967,
+          "outcomes": {
+            "ok": 9,
+            "ambiguous": 3
+          },
+          "top1": 9,
+          "top1_recall": 0.75,
+          "top3": 9,
+          "top3_recall": 0.75,
+          "wrong_person": 0,
+          "raw_name_variant_rows": 0,
+          "top1_identity_key": 9,
+          "top1_identity_recall": 0.75,
+          "top3_identity_key": 9,
+          "top3_identity_recall": 0.75
+        },
+        "transposition": {
+          "n": 12,
+          "p50_ms": 0.717,
+          "p95_ms": 1.582,
+          "outcomes": {
+            "protected_name": 11,
+            "spelling_confirmation": 1
+          },
+          "top1": 0,
+          "top1_recall": 0.0,
+          "top3": 0,
+          "top3_recall": 0.0,
+          "wrong_person": 0,
+          "raw_name_variant_rows": 0,
+          "top1_identity_key": 0,
+          "top1_identity_recall": 0.0,
+          "top3_identity_key": 0,
+          "top3_identity_recall": 0.0
+        },
+        "deletion": {
+          "n": 12,
+          "p50_ms": 0.565,
+          "p95_ms": 1.32,
+          "outcomes": {
+            "protected_name": 12
+          },
+          "top1": 0,
+          "top1_recall": 0.0,
+          "top3": 0,
+          "top3_recall": 0.0,
+          "wrong_person": 0,
+          "raw_name_variant_rows": 0,
+          "top1_identity_key": 0,
+          "top1_identity_recall": 0.0,
+          "top3_identity_key": 0,
+          "top3_identity_recall": 0.0
+        },
+        "insertion": {
+          "n": 12,
+          "p50_ms": 0.559,
+          "p95_ms": 1.491,
+          "outcomes": {
+            "protected_name": 12
+          },
+          "top1": 0,
+          "top1_recall": 0.0,
+          "top3": 0,
+          "top3_recall": 0.0,
+          "wrong_person": 0,
+          "raw_name_variant_rows": 0,
+          "top1_identity_key": 0,
+          "top1_identity_recall": 0.0,
+          "top3_identity_key": 0,
+          "top3_identity_recall": 0.0
+        },
+        "substitution": {
+          "n": 12,
+          "p50_ms": 0.473,
+          "p95_ms": 1.328,
+          "outcomes": {
+            "protected_name": 12
+          },
+          "top1": 0,
+          "top1_recall": 0.0,
+          "top3": 0,
+          "top3_recall": 0.0,
+          "wrong_person": 0,
+          "raw_name_variant_rows": 0,
+          "top1_identity_key": 0,
+          "top1_identity_recall": 0.0,
+          "top3_identity_key": 0,
+          "top3_identity_recall": 0.0
+        },
+        "doubled": {
+          "n": 12,
+          "p50_ms": 0.582,
+          "p95_ms": 1.364,
+          "outcomes": {
+            "protected_name": 12
+          },
+          "top1": 0,
+          "top1_recall": 0.0,
+          "top3": 0,
+          "top3_recall": 0.0,
+          "wrong_person": 0,
+          "raw_name_variant_rows": 0,
+          "top1_identity_key": 0,
+          "top1_identity_recall": 0.0,
+          "top3_identity_key": 0,
+          "top3_identity_recall": 0.0
+        },
+        "spacing": {
+          "n": 12,
+          "p50_ms": 0.597,
+          "p95_ms": 79.266,
+          "outcomes": {
+            "protected_name": 9,
+            "no_match": 3
+          },
+          "top1": 0,
+          "top1_recall": 0.0,
+          "top3": 0,
+          "top3_recall": 0.0,
+          "wrong_person": 0,
+          "raw_name_variant_rows": 0,
+          "top1_identity_key": 0,
+          "top1_identity_recall": 0.0,
+          "top3_identity_key": 0,
+          "top3_identity_recall": 0.0
+        },
+        "case": {
+          "n": 12,
+          "p50_ms": 75.546,
+          "p95_ms": 87.404,
+          "outcomes": {
+            "ok": 9,
+            "ambiguous": 3
+          },
+          "top1": 8,
+          "top1_recall": 0.666667,
+          "top3": 8,
+          "top3_recall": 0.666667,
+          "wrong_person": 0,
+          "raw_name_variant_rows": 1,
+          "top1_identity_key": 9,
+          "top1_identity_recall": 0.75,
+          "top3_identity_key": 9,
+          "top3_identity_recall": 0.75
+        }
+      },
+      "location": {
+        "clean": {
+          "n": 6,
+          "p50_ms": 60.77,
+          "p95_ms": 72.74,
+          "outcomes": {
+            "ok": 6
+          },
+          "top1": 5,
+          "top1_recall": 0.833333,
+          "top3": 6,
+          "top3_recall": 1.0
+        },
+        "transposition": {
+          "n": 6,
+          "p50_ms": 0.464,
+          "p95_ms": 73.117,
+          "outcomes": {
+            "ok": 3,
+            "spelling_confirmation": 3
+          },
+          "top1": 3,
+          "top1_recall": 0.5,
+          "top3": 3,
+          "top3_recall": 0.5
+        },
+        "deletion": {
+          "n": 6,
+          "p50_ms": 52.826,
+          "p95_ms": 60.448,
+          "outcomes": {
+            "spelling_confirmation": 1,
+            "ok": 4,
+            "protected_name": 1
+          },
+          "top1": 3,
+          "top1_recall": 0.5,
+          "top3": 4,
+          "top3_recall": 0.666667
+        },
+        "insertion": {
+          "n": 6,
+          "p50_ms": 60.985,
+          "p95_ms": 70.33,
+          "outcomes": {
+            "ok": 6
+          },
+          "top1": 5,
+          "top1_recall": 0.833333,
+          "top3": 6,
+          "top3_recall": 1.0
+        },
+        "substitution": {
+          "n": 6,
+          "p50_ms": 51.986,
+          "p95_ms": 62.104,
+          "outcomes": {
+            "spelling_confirmation": 1,
+            "ok": 5
+          },
+          "top1": 4,
+          "top1_recall": 0.666667,
+          "top3": 5,
+          "top3_recall": 0.833333
+        },
+        "doubled": {
+          "n": 6,
+          "p50_ms": 60.084,
+          "p95_ms": 71.762,
+          "outcomes": {
+            "ok": 6
+          },
+          "top1": 5,
+          "top1_recall": 0.833333,
+          "top3": 6,
+          "top3_recall": 1.0
+        },
+        "spacing": {
+          "n": 6,
+          "p50_ms": 55.214,
+          "p95_ms": 60.83,
+          "outcomes": {
+            "spelling_confirmation": 1,
+            "no_match": 2,
+            "ok": 3
+          },
+          "top1": 3,
+          "top1_recall": 0.5,
+          "top3": 3,
+          "top3_recall": 0.5
+        },
+        "case": {
+          "n": 6,
+          "p50_ms": 58.208,
+          "p95_ms": 71.088,
+          "outcomes": {
+            "ok": 6
+          },
+          "top1": 5,
+          "top1_recall": 0.833333,
+          "top3": 6,
+          "top3_recall": 1.0
+        }
+      },
+      "intent": {
+        "clean": {
+          "n": 92,
+          "p50_ms": 0.076,
+          "p95_ms": 0.14,
+          "outcomes": {
+            "wellbeing": 7,
+            "thanks": 18,
+            "acknowledgement": 5,
+            "farewell": 10,
+            "joke": 6,
+            "support": 6,
+            "celebration": 6,
+            "preference": 6,
+            "capabilities": 7,
+            "knowledge": 13,
+            "greeting": 6,
+            "identity": 2
+          },
+          "correct": 92,
+          "accuracy": 1.0
+        },
+        "transposition": {
+          "n": 92,
+          "p50_ms": 0.17,
+          "p95_ms": 0.364,
+          "outcomes": {
+            "wellbeing": 7,
+            "thanks": 12,
+            "acknowledgement": 5,
+            "farewell": 10,
+            "joke": 5,
+            "knowledge": 22,
+            "support": 6,
+            "celebration": 6,
+            "preference": 6,
+            "capabilities": 7,
+            "greeting": 5,
+            "identity": 1
+          },
+          "correct": 83,
+          "accuracy": 0.902174
+        },
+        "deletion": {
+          "n": 92,
+          "p50_ms": 0.162,
+          "p95_ms": 0.607,
+          "outcomes": {
+            "wellbeing": 7,
+            "thanks": 11,
+            "knowledge": 27,
+            "acknowledgement": 4,
+            "farewell": 9,
+            "joke": 5,
+            "support": 6,
+            "celebration": 6,
+            "preference": 6,
+            "capabilities": 6,
+            "greeting": 4,
+            "identity": 1
+          },
+          "correct": 77,
+          "accuracy": 0.836957
+        },
+        "insertion": {
+          "n": 92,
+          "p50_ms": 0.165,
+          "p95_ms": 0.374,
+          "outcomes": {
+            "wellbeing": 7,
+            "thanks": 13,
+            "acknowledgement": 5,
+            "farewell": 9,
+            "joke": 6,
+            "support": 6,
+            "celebration": 6,
+            "preference": 6,
+            "capabilities": 7,
+            "knowledge": 22,
+            "greeting": 4,
+            "identity": 1
+          },
+          "correct": 83,
+          "accuracy": 0.902174
+        },
+        "substitution": {
+          "n": 92,
+          "p50_ms": 0.145,
+          "p95_ms": 0.678,
+          "outcomes": {
+            "wellbeing": 6,
+            "thanks": 11,
+            "acknowledgement": 5,
+            "farewell": 7,
+            "joke": 6,
+            "support": 6,
+            "celebration": 6,
+            "preference": 6,
+            "capabilities": 7,
+            "knowledge": 28,
+            "greeting": 3,
+            "identity": 1
+          },
+          "correct": 77,
+          "accuracy": 0.836957
+        },
+        "doubled": {
+          "n": 92,
+          "p50_ms": 0.152,
+          "p95_ms": 0.31,
+          "outcomes": {
+            "wellbeing": 7,
+            "thanks": 16,
+            "acknowledgement": 5,
+            "farewell": 10,
+            "joke": 6,
+            "support": 6,
+            "celebration": 6,
+            "preference": 6,
+            "capabilities": 7,
+            "knowledge": 15,
+            "greeting": 6,
+            "identity": 2
+          },
+          "correct": 90,
+          "accuracy": 0.978261
+        },
+        "spacing": {
+          "n": 92,
+          "p50_ms": 0.294,
+          "p95_ms": 14.648,
+          "outcomes": {
+            "wellbeing": 7,
+            "thanks": 9,
+            "acknowledgement": 4,
+            "knowledge": 34,
+            "farewell": 9,
+            "joke": 5,
+            "support": 6,
+            "celebration": 5,
+            "preference": 4,
+            "capabilities": 4,
+            "greeting": 5
+          },
+          "correct": 71,
+          "accuracy": 0.771739
+        },
+        "case": {
+          "n": 92,
+          "p50_ms": 0.095,
+          "p95_ms": 0.195,
+          "outcomes": {
+            "wellbeing": 7,
+            "thanks": 18,
+            "acknowledgement": 5,
+            "farewell": 10,
+            "joke": 6,
+            "support": 6,
+            "celebration": 6,
+            "preference": 6,
+            "capabilities": 7,
+            "knowledge": 13,
+            "greeting": 6,
+            "identity": 2
+          },
+          "correct": 92,
+          "accuracy": 1.0
+        }
+      }
+    }
+  },
+  "institutional_social_intercepts": {
+    "before": [],
+    "after": [
+      {
+        "query": "Who are you? What is PAULA? What does PAULA stand for?",
+        "group": "faq",
+        "route": "identity"
+      },
+      {
+        "query": "Who are you? What is PAULA? hWat does PAULA stand for?",
+        "group": "faq",
+        "route": "identity"
+      },
+      {
+        "query": "Who are you? Wat is PAULA? What does PAULA stand for?",
+        "group": "faq",
+        "route": "identity"
+      },
+      {
+        "query": "Who are you? What is PAULA? What edoes PAULA stand for?",
+        "group": "faq",
+        "route": "identity"
+      },
+      {
+        "query": "Who are you? Wzat is PAULA? What does PAULA stand for?",
+        "group": "faq",
+        "route": "identity"
+      },
+      {
+        "query": "Who are you? Whhat is PAULA? What does PAULA stand for?",
+        "group": "faq",
+        "route": "identity"
+      },
+      {
+        "query": "Who are you? W hat is PAULA? What does PAULA stand for?",
+        "group": "faq",
+        "route": "identity"
+      },
+      {
+        "query": "wHo aRe yOu? WhAt iS PaUlA? wHaT DoEs pAuLa sTaNd fOr?",
+        "group": "faq",
+        "route": "identity"
+      }
+    ]
+  }
+}

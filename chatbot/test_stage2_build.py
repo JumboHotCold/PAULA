@@ -78,6 +78,7 @@ class BuildStampTests(SimpleTestCase):
         model_runtime = Mock(status='ready')
         with patch('chatbot.readiness.build_info', return_value=stamp), patch('chatbot.readiness.runtime', model_runtime), \
                 patch('chatbot.views.bot', SimpleNamespace(rag=Mock())), patch('chatbot.dialogue.social_router.prepare'), \
+                patch('chatbot.spelling.prepare_vocabulary'), \
                 patch('chatbot.readiness.boot_directory', return_value=None), self.assertLogs('paula.performance') as logs:
             initialize_worker(Mock())
         records = [json.loads(value.split(':', 2)[2]) for value in logs.output]

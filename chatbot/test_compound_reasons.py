@@ -16,7 +16,8 @@ class ReasonResolutionTests(unittest.TestCase):
     def test_missing_reason_object_reuses_the_explicit_prior_subject(self):
         query = normalize_query('TELL ME ABOUT SPUS AND WHY SHOULD I ENROL')
         plan = resolve_turn(query)
-        self.assertEqual(plan.queries, ('TELL ME ABOUT SPUS?', 'WHY SHOULD I enroll at SPUS?'))
+        # ENROL is a valid vocabulary token, not an opaque spelling alias.
+        self.assertEqual(plan.queries, ('TELL ME ABOUT SPUS?', 'WHY SHOULD I ENROL at SPUS?'))
 
     def test_future_subjects_and_multiple_reason_actions(self):
         for subject, verb, expected in (

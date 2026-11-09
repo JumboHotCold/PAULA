@@ -292,6 +292,7 @@ class ReadinessTests(unittest.TestCase):
         with patch.object(views, 'bot', value), patch.object(readiness.runtime, 'initialize', return_value=model), \
                 patch.object(readiness.runtime, 'status', 'ready'), patch.object(readiness.runtime, 'web_worker', False), \
                 patch('chatbot.dialogue.social_router.prepare') as prepare, \
+                patch('chatbot.spelling.prepare_vocabulary'), \
                 patch.object(readiness, 'boot_directory', return_value=None), patch.object(readiness, 'emit') as emit:
             readiness.initialize_worker(worker)
         prepare.assert_called_once_with(model)
