@@ -3,6 +3,7 @@ import json
 import math
 from pathlib import Path
 import subprocess
+from datetime import datetime, timedelta
 
 
 def percentile(values, fraction):
@@ -13,7 +14,9 @@ before = json.loads(Path('artifacts/stage1/audit.json').read_text(encoding='utf-
 after = json.loads(Path('artifacts/stage2/live/audit.json').read_text(encoding='utf-8'))
 old_metrics = json.loads(Path('artifacts/stage1/metrics.json').read_text(encoding='utf-8'))
 ids = {row['request_id'] for row in after['rows']}
-logs = subprocess.run(['docker', 'logs', '--since', '2h', 'paulibot_web'], check=True, capture_output=True)
+measured = datetime.fromisoformat(after['measured_at'])
+logs = subprocess.run(['docker', 'logs', '--since', (measured-timedelta(minutes=5)).isoformat(),
+                       '--until', (measured+timedelta(minutes=10)).isoformat(), 'paulibot_web'], check=True, capture_output=True)
 traces, outcomes, startup = {}, [], []
 for line in (logs.stdout + logs.stderr).decode('utf-8', errors='replace').splitlines():
     try:
@@ -39,6 +42,7 @@ assert len(traces) == len(ids), 'Missing timing traces for live audit requests'
 result = dict(original_before=before['summary'], original_after=dict(samples=len(before['rows']),
     passed=sum(row['passed'] for row in after['rows'] if row['query'] in comparisons)),
     expanded_after=after['summary'], timings_captured=len(traces), comparisons=comparisons,
+    provider_calls=sum(len(row['providers']) for row in traces.values()),
     no_match_reason_codes=outcomes, normal_mode_query_text_logged=False, worker_startup_records=startup[-3:],
     limitations='Three sequential samples per query; correctness and path-use regression evidence, not general intent accuracy, load capacity or calibrated retrieval recall.')
 Path('artifacts/stage2/comparison.json').write_text(json.dumps(result, indent=2), encoding='utf-8')

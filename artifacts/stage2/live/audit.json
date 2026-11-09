@@ -1,0 +1,4320 @@
+{
+  "measured_at": "2026-11-09T05:29:03.237176+00:00",
+  "database": {
+    "database_vendor": "postgresql",
+    "model_revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+    "cutoff": 0.45,
+    "debug": true,
+    "models": {
+      "FAQ": {
+        "count": 138,
+        "missing_embeddings": 0,
+        "invalid_embeddings": 0,
+        "zero_vectors": 0,
+        "column_type": "vector(384)"
+      },
+      "Location": {
+        "count": 6,
+        "missing_embeddings": 0,
+        "invalid_embeddings": 0,
+        "zero_vectors": 0,
+        "column_type": "vector(384)"
+      },
+      "StaffMember": {
+        "count": 12,
+        "missing_embeddings": 0,
+        "invalid_embeddings": 0,
+        "zero_vectors": 0,
+        "column_type": "vector(384)"
+      },
+      "WebResource": {
+        "count": 476,
+        "missing_embeddings": 0,
+        "invalid_embeddings": 0,
+        "zero_vectors": 0,
+        "column_type": "vector(384)"
+      }
+    },
+    "faq_conflicts": [],
+    "postgres_version": "15.4 (Debian 15.4-2.pgdg120+1)",
+    "vector_extension": "0.5.1",
+    "faq_self_matches": {
+      "ok": 138
+    },
+    "faq_self_match_failures": [],
+    "dependencies": {
+      "Django": "4.2.10",
+      "djangorestframework": "3.14.0",
+      "django-unfold": "0.80.2",
+      "pgvector": "0.5.0",
+      "groq": "1.7.0",
+      "torch": "2.10.0",
+      "sentence-transformers": "5.2.3",
+      "transformers": "5.2.0",
+      "whitenoise": "6.12.0",
+      "numpy": "2.4.2",
+      "opencv-python-headless": "5.0.0.93",
+      "gunicorn": "21.2.0"
+    }
+  },
+  "runtime": {
+    "engine": "django.db.backends.postgresql",
+    "groq_model": "openai/gpt-oss-20b",
+    "groq_enabled": true,
+    "openai_enabled": false,
+    "groq_key_configured": true,
+    "openai_key_configured": true,
+    "gemini_key_configured": true,
+    "key_status": {
+      "GROQ_API_KEY": "configured_unverified",
+      "OPENAI_API_KEY": "configured_unverified",
+      "GEMINI_API_KEY": "placeholder"
+    },
+    "groq_client_constructed": true,
+    "openai_client_constructed": false,
+    "gemini_client_constructed": false,
+    "call_timeout_seconds": 3.0,
+    "generation_deadline_seconds": 4.0
+  },
+  "rows": [
+    {
+      "query": "ty",
+      "iteration": 0,
+      "expected": "thanks",
+      "route": {
+        "kind": "thanks",
+        "query": "",
+        "acknowledgement": "",
+        "method": "abbreviation",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "ty"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "7b25dd5e-bf4b-4fd8-a0bf-57d43b65e517",
+      "worker": "72",
+      "server_timing": "total;dur=5.06, sql;dur=0.0",
+      "ms": 10.04,
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "thanks",
+      "passed": true
+    },
+    {
+      "query": "thankyoui",
+      "iteration": 0,
+      "expected": "thanks",
+      "route": {
+        "kind": "thanks",
+        "query": "",
+        "acknowledgement": "",
+        "method": "social_typo",
+        "score": 0.8888888888888888,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "thankyoui"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "859e8a91-27b5-4d6b-aec8-a6f77438a3ae",
+      "worker": "71",
+      "server_timing": "total;dur=7.92, sql;dur=0.0",
+      "ms": 11.85,
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "thanks",
+      "passed": true
+    },
+    {
+      "query": "thank you",
+      "iteration": 0,
+      "expected": "thanks",
+      "route": {
+        "kind": "thanks",
+        "query": "",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "thank you"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "b6c8f9f4-d556-46bb-8199-9c607b3e5794",
+      "worker": "71",
+      "server_timing": "total;dur=1.71, sql;dur=0.0",
+      "ms": 4.18,
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "thanks",
+      "passed": true
+    },
+    {
+      "query": "hi",
+      "iteration": 0,
+      "expected": "greeting",
+      "route": {
+        "kind": "greeting",
+        "query": "",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "hi"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "4ecbc853-1c3f-435f-9d59-5a1a9a0caec1",
+      "worker": "72",
+      "server_timing": "total;dur=1.55, sql;dur=0.0",
+      "ms": 3.92,
+      "response": "Hello! I'm PAULA. How can I help today?",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "greeting",
+      "passed": true
+    },
+    {
+      "query": "tell me about yourself",
+      "iteration": 0,
+      "expected": "identity",
+      "route": {
+        "kind": "identity",
+        "query": "",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "tell me about yourself"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "1e7c5f0e-1a05-44b9-9cc8-052723d898ff",
+      "worker": "72",
+      "server_timing": "total;dur=163.26, sql;dur=12.01",
+      "ms": 165.31,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "identity",
+      "passed": true
+    },
+    {
+      "query": "hi, tell me about yourself",
+      "iteration": 0,
+      "expected": "identity",
+      "route": {
+        "kind": "identity",
+        "query": "",
+        "acknowledgement": "greeting",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "hi, tell me about yourself"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "156a6b79-090c-436b-9cf8-5b4723f2eae8",
+      "worker": "72",
+      "server_timing": "total;dur=42.28, sql;dur=4.36",
+      "ms": 44.22,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "identity",
+      "passed": true
+    },
+    {
+      "query": "hi, tell me about yourself?",
+      "iteration": 0,
+      "expected": "identity",
+      "route": {
+        "kind": "identity",
+        "query": "",
+        "acknowledgement": "greeting",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "hi, tell me about yourself?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "55ffba10-eef8-4e63-96ad-8c1cef439d4d",
+      "worker": "72",
+      "server_timing": "total;dur=86.57, sql;dur=8.65",
+      "ms": 88.87,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "identity",
+      "passed": true
+    },
+    {
+      "query": "tell me about SPUS and why should i enroll in this institution",
+      "iteration": 0,
+      "expected": "two_supported_parts",
+      "route": {
+        "kind": "knowledge",
+        "query": "tell me about SPUS and why should i enroll in this institution",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "tell me about SPUS?",
+          "why should i enroll at SPUS?"
+        ],
+        "relation": "compound",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "9f45289e-fd9f-48de-b6c6-86f9d7ef8b42",
+      "worker": "72",
+      "server_timing": "total;dur=128.62, sql;dur=17.71",
+      "ms": 130.57,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. tell me about SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. why should i enroll at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "tell me about SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "why should i enroll at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "parts": [
+        {
+          "query": "tell me about SPUS?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "why should i enroll at SPUS?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "tell me about SPUS and why should i enroll at SPUS",
+      "iteration": 0,
+      "expected": "two_supported_parts",
+      "route": {
+        "kind": "knowledge",
+        "query": "tell me about SPUS and why should i enroll at SPUS",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "tell me about SPUS?",
+          "why should i enroll at SPUS?"
+        ],
+        "relation": "compound",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "1611d7db-fde9-4f2a-8a4b-8c8075c1d0f6",
+      "worker": "72",
+      "server_timing": "total;dur=87.34, sql;dur=7.63",
+      "ms": 89.87,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. tell me about SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. why should i enroll at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "tell me about SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "why should i enroll at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "parts": [
+        {
+          "query": "tell me about SPUS?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "why should i enroll at SPUS?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "What programs are offered?",
+      "iteration": 0,
+      "expected": "evidence",
+      "route": {
+        "kind": "knowledge",
+        "query": "What programs are offered?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "What programs are offered?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "f6af58f9-51e5-4402-b33f-c0c1480eafba",
+      "worker": "72",
+      "server_timing": "total;dur=79.25, sql;dur=4.35",
+      "ms": 81.67,
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "parts": [],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "why spus?",
+      "iteration": 0,
+      "expected": "evidence",
+      "route": {
+        "kind": "knowledge",
+        "query": "why spus?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "why spus?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "572adb63-5f01-46a5-a1f9-1a5555883072",
+      "worker": "72",
+      "server_timing": "total;dur=81.5, sql;dur=12.39",
+      "ms": 83.47,
+      "response": "Sure—here is the information from the stored sources.\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "parts": [],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "iteration": 0,
+      "expected": "two_supported_parts",
+      "route": {
+        "kind": "knowledge",
+        "query": "Who is the ICT Director and CEIT Dean?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "Who is the ICT Director?",
+          "Who is the CEIT Dean?"
+        ],
+        "relation": "compound",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "8e92c99c-8964-4302-b712-017525b5cdbf",
+      "worker": "71",
+      "server_timing": "total;dur=419.79, sql;dur=148.15",
+      "ms": 422.42,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "parts": [
+        {
+          "query": "Who is the ICT Director?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "Who is the CEIT Dean?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "How do I enroll?",
+      "iteration": 0,
+      "expected": "clarification",
+      "route": {
+        "kind": "knowledge",
+        "query": "How do I enroll?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "How do I enroll?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "6843e8e0-d638-4484-aaa1-f1250271b1b5",
+      "worker": "72",
+      "server_timing": "total;dur=2.33, sql;dur=0.0",
+      "ms": 4.42,
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "clarification",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "Where is the Registrar office?",
+      "iteration": 0,
+      "expected": "navigation",
+      "route": {
+        "kind": "knowledge",
+        "query": "Where is the Registrar office?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "Where is the Registrar office?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "11c820c3-b7e7-40dc-9c5b-047eaa1f683c",
+      "worker": "73",
+      "server_timing": "total;dur=10.65, sql;dur=0.0",
+      "ms": 17.31,
+      "response": "Opening the campus map for Registrar Office. Choose your starting location to calculate a route.",
+      "sources": [],
+      "parts": [],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "What is the exact enrollment fee for transferees in 2037?",
+      "iteration": 0,
+      "expected": "unsupported",
+      "route": {
+        "kind": "knowledge",
+        "query": "What is the exact enrollment fee for transferees in 2037?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "What is the exact enrollment fee for transferees in 2037?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "dfc353f0-fcc2-4615-94f3-6c9f8f89ce9d",
+      "worker": "73",
+      "server_timing": "total;dur=178.74, sql;dur=33.34",
+      "ms": 180.94,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What are the required documents for transferee students enrolling at SPUS?\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "no_match",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "tell me about SPUS and why should i enroll in this school",
+      "iteration": 0,
+      "expected": "two_supported_parts",
+      "route": {
+        "kind": "knowledge",
+        "query": "tell me about SPUS and why should i enroll in this school",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "tell me about SPUS?",
+          "why should i enroll at SPUS?"
+        ],
+        "relation": "compound",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "4cc0459b-bb2c-4e8b-8800-67cf9217baac",
+      "worker": "73",
+      "server_timing": "total;dur=112.5, sql;dur=15.32",
+      "ms": 114.74,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. tell me about SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. why should i enroll at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "tell me about SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "why should i enroll at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "parts": [
+        {
+          "query": "tell me about SPUS?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "why should i enroll at SPUS?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "tell me about SPUS and why should i enroll in this university",
+      "iteration": 0,
+      "expected": "two_supported_parts",
+      "route": {
+        "kind": "knowledge",
+        "query": "tell me about SPUS and why should i enroll in this university",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "tell me about SPUS?",
+          "why should i enroll at SPUS?"
+        ],
+        "relation": "compound",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "e12b1683-0bf1-4be8-acfa-1940d2868a03",
+      "worker": "73",
+      "server_timing": "total;dur=77.78, sql;dur=6.24",
+      "ms": 80.1,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. tell me about SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. why should i enroll at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "tell me about SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "why should i enroll at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "parts": [
+        {
+          "query": "tell me about SPUS?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "why should i enroll at SPUS?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "tell me about SPUS and why should i enroll in this campus",
+      "iteration": 0,
+      "expected": "two_supported_parts",
+      "route": {
+        "kind": "knowledge",
+        "query": "tell me about SPUS and why should i enroll in this campus",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "tell me about SPUS?",
+          "why should i enroll at SPUS?"
+        ],
+        "relation": "compound",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "f1557acd-35e5-4fe0-882a-f781bef08ea5",
+      "worker": "73",
+      "server_timing": "total;dur=78.85, sql;dur=5.82",
+      "ms": 80.83,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. tell me about SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. why should i enroll at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "tell me about SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "why should i enroll at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "parts": [
+        {
+          "query": "tell me about SPUS?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "why should i enroll at SPUS?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "Hello, what can you do?",
+      "iteration": 0,
+      "expected": "capabilities",
+      "route": {
+        "kind": "capabilities",
+        "query": "",
+        "acknowledgement": "greeting",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "Hello, what can you do?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "45c4227e-99fe-4f69-a711-72b07941fd74",
+      "worker": "73",
+      "server_timing": "total;dur=37.59, sql;dur=4.48",
+      "ms": 40.03,
+      "response": "Hi!\n\nI can help you look up campus information, work through a question, or chat for a bit. What would you like to do?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "capabilities",
+      "passed": true
+    },
+    {
+      "query": "Kumusta; tell me about yourself?",
+      "iteration": 0,
+      "expected": "identity",
+      "route": {
+        "kind": "identity",
+        "query": "",
+        "acknowledgement": "greeting",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "Kumusta; tell me about yourself?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "fil",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "98c714e8-392f-4a23-9169-fffc411d2811",
+      "worker": "73",
+      "server_timing": "total;dur=30.55, sql;dur=3.44",
+      "ms": 32.42,
+      "response": "Kumusta! Ako si PAULA, ang Paulinian Artificial User Support and Learning Assistant. AI assistant ako para sa St. Paul University Surigao. Puwede kitang tulungan sa impormasyon tungkol sa programs, enrollment, mga opisina, at campus navigation, o makipagkuwentuhan muna. Gumagamit ako ng mga nakaimbak na SPUS sources para sa mga tanong tungkol sa unibersidad. Ano ang gusto mong malaman?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "identity",
+      "passed": true
+    },
+    {
+      "query": "ty",
+      "iteration": 1,
+      "expected": "thanks",
+      "route": {
+        "kind": "thanks",
+        "query": "",
+        "acknowledgement": "",
+        "method": "abbreviation",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "ty"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "453fc4b4-0a71-4a12-a7c0-cb605fe722b6",
+      "worker": "72",
+      "server_timing": "total;dur=1.11, sql;dur=0.0",
+      "ms": 3.28,
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "thanks",
+      "passed": true
+    },
+    {
+      "query": "thankyoui",
+      "iteration": 1,
+      "expected": "thanks",
+      "route": {
+        "kind": "thanks",
+        "query": "",
+        "acknowledgement": "",
+        "method": "social_typo",
+        "score": 0.8888888888888888,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "thankyoui"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "25bcca6e-23bd-4426-ac7c-a9ba9fb3e6b2",
+      "worker": "72",
+      "server_timing": "total;dur=2.46, sql;dur=0.0",
+      "ms": 4.35,
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "thanks",
+      "passed": true
+    },
+    {
+      "query": "thank you",
+      "iteration": 1,
+      "expected": "thanks",
+      "route": {
+        "kind": "thanks",
+        "query": "",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "thank you"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "0b5f49be-1698-4b2f-87cb-e0790cee5eb2",
+      "worker": "73",
+      "server_timing": "total;dur=1.47, sql;dur=0.0",
+      "ms": 3.25,
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "thanks",
+      "passed": true
+    },
+    {
+      "query": "hi",
+      "iteration": 1,
+      "expected": "greeting",
+      "route": {
+        "kind": "greeting",
+        "query": "",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "hi"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "1b0becde-6515-409c-902a-7c1f0231a665",
+      "worker": "73",
+      "server_timing": "total;dur=1.43, sql;dur=0.0",
+      "ms": 3.61,
+      "response": "Hello! I'm PAULA. How can I help today?",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "greeting",
+      "passed": true
+    },
+    {
+      "query": "tell me about yourself",
+      "iteration": 1,
+      "expected": "identity",
+      "route": {
+        "kind": "identity",
+        "query": "",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "tell me about yourself"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "5b57849a-7f3d-4fb0-8286-7fbebba6b8c7",
+      "worker": "73",
+      "server_timing": "total;dur=26.97, sql;dur=2.65",
+      "ms": 28.93,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "identity",
+      "passed": true
+    },
+    {
+      "query": "hi, tell me about yourself",
+      "iteration": 1,
+      "expected": "identity",
+      "route": {
+        "kind": "identity",
+        "query": "",
+        "acknowledgement": "greeting",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "hi, tell me about yourself"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "2c34fcd9-da98-40a1-ad38-5437b9c649d6",
+      "worker": "71",
+      "server_timing": "total;dur=26.97, sql;dur=2.45",
+      "ms": 29.29,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "identity",
+      "passed": true
+    },
+    {
+      "query": "hi, tell me about yourself?",
+      "iteration": 1,
+      "expected": "identity",
+      "route": {
+        "kind": "identity",
+        "query": "",
+        "acknowledgement": "greeting",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "hi, tell me about yourself?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "82b04a11-239b-4b18-b69c-adcf6546181f",
+      "worker": "73",
+      "server_timing": "total;dur=30.54, sql;dur=2.84",
+      "ms": 32.37,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "identity",
+      "passed": true
+    },
+    {
+      "query": "tell me about SPUS and why should i enroll in this institution",
+      "iteration": 1,
+      "expected": "two_supported_parts",
+      "route": {
+        "kind": "knowledge",
+        "query": "tell me about SPUS and why should i enroll in this institution",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "tell me about SPUS?",
+          "why should i enroll at SPUS?"
+        ],
+        "relation": "compound",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "fd462bf5-c7ab-4906-97d8-77d542d6d10a",
+      "worker": "72",
+      "server_timing": "total;dur=98.13, sql;dur=6.37",
+      "ms": 100.37,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. tell me about SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. why should i enroll at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "tell me about SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "why should i enroll at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "parts": [
+        {
+          "query": "tell me about SPUS?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "why should i enroll at SPUS?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "tell me about SPUS and why should i enroll at SPUS",
+      "iteration": 1,
+      "expected": "two_supported_parts",
+      "route": {
+        "kind": "knowledge",
+        "query": "tell me about SPUS and why should i enroll at SPUS",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "tell me about SPUS?",
+          "why should i enroll at SPUS?"
+        ],
+        "relation": "compound",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "b4b5e997-c311-47ea-8775-7f4920196598",
+      "worker": "72",
+      "server_timing": "total;dur=81.67, sql;dur=5.32",
+      "ms": 84.87,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. tell me about SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. why should i enroll at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "tell me about SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "why should i enroll at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "parts": [
+        {
+          "query": "tell me about SPUS?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "why should i enroll at SPUS?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "What programs are offered?",
+      "iteration": 1,
+      "expected": "evidence",
+      "route": {
+        "kind": "knowledge",
+        "query": "What programs are offered?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "What programs are offered?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "24427b52-febe-48cf-a59f-70f7ebc1bf39",
+      "worker": "72",
+      "server_timing": "total;dur=73.42, sql;dur=3.65",
+      "ms": 75.65,
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "parts": [],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "why spus?",
+      "iteration": 1,
+      "expected": "evidence",
+      "route": {
+        "kind": "knowledge",
+        "query": "why spus?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "why spus?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "bfba63f2-7d52-4d29-9d77-daf26e1afc63",
+      "worker": "73",
+      "server_timing": "total;dur=68.36, sql;dur=5.26",
+      "ms": 70.42,
+      "response": "Sure—here is the information from the stored sources.\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "parts": [],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "iteration": 1,
+      "expected": "two_supported_parts",
+      "route": {
+        "kind": "knowledge",
+        "query": "Who is the ICT Director and CEIT Dean?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "Who is the ICT Director?",
+          "Who is the CEIT Dean?"
+        ],
+        "relation": "compound",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "f3540ee8-49c2-4ecc-8a5a-3db9fed3df7d",
+      "worker": "73",
+      "server_timing": "total;dur=330.01, sql;dur=42.55",
+      "ms": 332.17,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "parts": [
+        {
+          "query": "Who is the ICT Director?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "Who is the CEIT Dean?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "How do I enroll?",
+      "iteration": 1,
+      "expected": "clarification",
+      "route": {
+        "kind": "knowledge",
+        "query": "How do I enroll?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "How do I enroll?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "55ff6ad7-557b-4254-9997-66fe927926b5",
+      "worker": "73",
+      "server_timing": "total;dur=2.54, sql;dur=0.0",
+      "ms": 4.33,
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "clarification",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "Where is the Registrar office?",
+      "iteration": 1,
+      "expected": "navigation",
+      "route": {
+        "kind": "knowledge",
+        "query": "Where is the Registrar office?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "Where is the Registrar office?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "ccdb2dc3-9289-49a7-8af9-a4f6449b871d",
+      "worker": "73",
+      "server_timing": "total;dur=1.95, sql;dur=0.0",
+      "ms": 3.88,
+      "response": "Opening the campus map for Registrar Office. Choose your starting location to calculate a route.",
+      "sources": [],
+      "parts": [],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "What is the exact enrollment fee for transferees in 2037?",
+      "iteration": 1,
+      "expected": "unsupported",
+      "route": {
+        "kind": "knowledge",
+        "query": "What is the exact enrollment fee for transferees in 2037?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "What is the exact enrollment fee for transferees in 2037?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "a5e55906-b950-411d-866d-c0028f809983",
+      "worker": "73",
+      "server_timing": "total;dur=127.51, sql;dur=32.47",
+      "ms": 129.16,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What are the required documents for transferee students enrolling at SPUS?\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "no_match",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "tell me about SPUS and why should i enroll in this school",
+      "iteration": 1,
+      "expected": "two_supported_parts",
+      "route": {
+        "kind": "knowledge",
+        "query": "tell me about SPUS and why should i enroll in this school",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "tell me about SPUS?",
+          "why should i enroll at SPUS?"
+        ],
+        "relation": "compound",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "47e87047-1816-4097-bd4e-d73dd6084c94",
+      "worker": "73",
+      "server_timing": "total;dur=86.63, sql;dur=9.06",
+      "ms": 89.06,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. tell me about SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. why should i enroll at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "tell me about SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "why should i enroll at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "parts": [
+        {
+          "query": "tell me about SPUS?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "why should i enroll at SPUS?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "tell me about SPUS and why should i enroll in this university",
+      "iteration": 1,
+      "expected": "two_supported_parts",
+      "route": {
+        "kind": "knowledge",
+        "query": "tell me about SPUS and why should i enroll in this university",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "tell me about SPUS?",
+          "why should i enroll at SPUS?"
+        ],
+        "relation": "compound",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "37be9940-5709-4c9c-9c75-e8ac5e73d567",
+      "worker": "72",
+      "server_timing": "total;dur=76.43, sql;dur=6.02",
+      "ms": 78.69,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. tell me about SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. why should i enroll at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "tell me about SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "why should i enroll at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "parts": [
+        {
+          "query": "tell me about SPUS?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "why should i enroll at SPUS?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "tell me about SPUS and why should i enroll in this campus",
+      "iteration": 1,
+      "expected": "two_supported_parts",
+      "route": {
+        "kind": "knowledge",
+        "query": "tell me about SPUS and why should i enroll in this campus",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "tell me about SPUS?",
+          "why should i enroll at SPUS?"
+        ],
+        "relation": "compound",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "42a5ddb8-7d83-456f-a7b4-3cf49f767ca3",
+      "worker": "71",
+      "server_timing": "total;dur=92.79, sql;dur=5.46",
+      "ms": 95.02,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. tell me about SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. why should i enroll at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "tell me about SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "why should i enroll at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "parts": [
+        {
+          "query": "tell me about SPUS?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "why should i enroll at SPUS?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "Hello, what can you do?",
+      "iteration": 1,
+      "expected": "capabilities",
+      "route": {
+        "kind": "capabilities",
+        "query": "",
+        "acknowledgement": "greeting",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "Hello, what can you do?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "f7074fc1-914f-448c-b976-f6c6cf42a02e",
+      "worker": "71",
+      "server_timing": "total;dur=25.64, sql;dur=2.8",
+      "ms": 27.5,
+      "response": "Hi!\n\nI can help you look up campus information, work through a question, or chat for a bit. What would you like to do?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "capabilities",
+      "passed": true
+    },
+    {
+      "query": "Kumusta; tell me about yourself?",
+      "iteration": 1,
+      "expected": "identity",
+      "route": {
+        "kind": "identity",
+        "query": "",
+        "acknowledgement": "greeting",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "Kumusta; tell me about yourself?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "fil",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "26b00342-4632-430c-8a80-11439cb4915e",
+      "worker": "73",
+      "server_timing": "total;dur=26.0, sql;dur=2.79",
+      "ms": 27.82,
+      "response": "Kumusta! Ako si PAULA, ang Paulinian Artificial User Support and Learning Assistant. AI assistant ako para sa St. Paul University Surigao. Puwede kitang tulungan sa impormasyon tungkol sa programs, enrollment, mga opisina, at campus navigation, o makipagkuwentuhan muna. Gumagamit ako ng mga nakaimbak na SPUS sources para sa mga tanong tungkol sa unibersidad. Ano ang gusto mong malaman?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "identity",
+      "passed": true
+    },
+    {
+      "query": "ty",
+      "iteration": 2,
+      "expected": "thanks",
+      "route": {
+        "kind": "thanks",
+        "query": "",
+        "acknowledgement": "",
+        "method": "abbreviation",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "ty"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "702ef850-a5fe-4870-9225-13d9db6cb3d7",
+      "worker": "72",
+      "server_timing": "total;dur=1.08, sql;dur=0.0",
+      "ms": 3.2,
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "thanks",
+      "passed": true
+    },
+    {
+      "query": "thankyoui",
+      "iteration": 2,
+      "expected": "thanks",
+      "route": {
+        "kind": "thanks",
+        "query": "",
+        "acknowledgement": "",
+        "method": "social_typo",
+        "score": 0.8888888888888888,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "thankyoui"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "0a4b43b1-6abb-4fb2-878d-8221c2ef2c94",
+      "worker": "72",
+      "server_timing": "total;dur=2.61, sql;dur=0.0",
+      "ms": 4.62,
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "thanks",
+      "passed": true
+    },
+    {
+      "query": "thank you",
+      "iteration": 2,
+      "expected": "thanks",
+      "route": {
+        "kind": "thanks",
+        "query": "",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "thank you"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "38894731-f1a1-4b10-8a28-2d2421f82687",
+      "worker": "72",
+      "server_timing": "total;dur=1.27, sql;dur=0.0",
+      "ms": 3.47,
+      "response": "You're welcome! Glad that helped.",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "thanks",
+      "passed": true
+    },
+    {
+      "query": "hi",
+      "iteration": 2,
+      "expected": "greeting",
+      "route": {
+        "kind": "greeting",
+        "query": "",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "hi"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "bdda7a4d-34eb-4b2e-b998-d8d04fdebba7",
+      "worker": "73",
+      "server_timing": "total;dur=0.82, sql;dur=0.0",
+      "ms": 2.9,
+      "response": "Hello! I'm PAULA. How can I help today?",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "greeting",
+      "passed": true
+    },
+    {
+      "query": "tell me about yourself",
+      "iteration": 2,
+      "expected": "identity",
+      "route": {
+        "kind": "identity",
+        "query": "",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "tell me about yourself"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "5c9f4079-07dc-45ef-83f0-b845d1465cb0",
+      "worker": "72",
+      "server_timing": "total;dur=29.07, sql;dur=3.0",
+      "ms": 31.05,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "identity",
+      "passed": true
+    },
+    {
+      "query": "hi, tell me about yourself",
+      "iteration": 2,
+      "expected": "identity",
+      "route": {
+        "kind": "identity",
+        "query": "",
+        "acknowledgement": "greeting",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "hi, tell me about yourself"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "201c6338-589a-4778-99d7-45f51c3f2c5a",
+      "worker": "73",
+      "server_timing": "total;dur=29.35, sql;dur=2.29",
+      "ms": 31.41,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "identity",
+      "passed": true
+    },
+    {
+      "query": "hi, tell me about yourself?",
+      "iteration": 2,
+      "expected": "identity",
+      "route": {
+        "kind": "identity",
+        "query": "",
+        "acknowledgement": "greeting",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "hi, tell me about yourself?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "add417fe-5818-4f04-8159-c45239de2dcf",
+      "worker": "73",
+      "server_timing": "total;dur=27.53, sql;dur=2.44",
+      "ms": 29.92,
+      "response": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "identity",
+      "passed": true
+    },
+    {
+      "query": "tell me about SPUS and why should i enroll in this institution",
+      "iteration": 2,
+      "expected": "two_supported_parts",
+      "route": {
+        "kind": "knowledge",
+        "query": "tell me about SPUS and why should i enroll in this institution",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "tell me about SPUS?",
+          "why should i enroll at SPUS?"
+        ],
+        "relation": "compound",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "96f522b8-4921-461a-8881-53d7640e574f",
+      "worker": "72",
+      "server_timing": "total;dur=84.61, sql;dur=6.78",
+      "ms": 86.45,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. tell me about SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. why should i enroll at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "tell me about SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "why should i enroll at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "parts": [
+        {
+          "query": "tell me about SPUS?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "why should i enroll at SPUS?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "tell me about SPUS and why should i enroll at SPUS",
+      "iteration": 2,
+      "expected": "two_supported_parts",
+      "route": {
+        "kind": "knowledge",
+        "query": "tell me about SPUS and why should i enroll at SPUS",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "tell me about SPUS?",
+          "why should i enroll at SPUS?"
+        ],
+        "relation": "compound",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "80925f74-d03d-44eb-beac-f4ffb7225460",
+      "worker": "72",
+      "server_timing": "total;dur=86.01, sql;dur=7.74",
+      "ms": 88.32,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. tell me about SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. why should i enroll at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "tell me about SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "why should i enroll at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "parts": [
+        {
+          "query": "tell me about SPUS?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "why should i enroll at SPUS?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "What programs are offered?",
+      "iteration": 2,
+      "expected": "evidence",
+      "route": {
+        "kind": "knowledge",
+        "query": "What programs are offered?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "What programs are offered?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "d86f4552-dc5a-4a97-aa71-ea6b9a832fcd",
+      "worker": "72",
+      "server_timing": "total;dur=74.38, sql;dur=4.12",
+      "ms": 79.26,
+      "response": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "parts": [],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "why spus?",
+      "iteration": 2,
+      "expected": "evidence",
+      "route": {
+        "kind": "knowledge",
+        "query": "why spus?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "why spus?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "cfa1ab41-f938-40e1-b56b-7c62b50077c5",
+      "worker": "72",
+      "server_timing": "total;dur=69.49, sql;dur=5.37",
+      "ms": 71.16,
+      "response": "Sure—here is the information from the stored sources.\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"Does SPUS offer Graduate School programs?\"]",
+      "sources": [
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "parts": [],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "Who is the ICT Director and CEIT Dean?",
+      "iteration": 2,
+      "expected": "two_supported_parts",
+      "route": {
+        "kind": "knowledge",
+        "query": "Who is the ICT Director and CEIT Dean?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "Who is the ICT Director?",
+          "Who is the CEIT Dean?"
+        ],
+        "relation": "compound",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "0a1cf175-6871-4e90-9e3a-1dcb3a52a2a0",
+      "worker": "73",
+      "server_timing": "total;dur=280.0, sql;dur=53.78",
+      "ms": 282.29,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. Who is the ICT Director?**\n\nEngr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services\n\nSources: 1\n\n**2. Who is the CEIT Dean?**\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\nSources: 2\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "sources": [
+        {
+          "title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 1,
+          "query": "Who is the ICT Director?",
+          "citation_index": 1
+        },
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": [],
+          "part": 2,
+          "query": "Who is the CEIT Dean?",
+          "citation_index": 2
+        }
+      ],
+      "parts": [
+        {
+          "query": "Who is the ICT Director?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "Who is the CEIT Dean?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "How do I enroll?",
+      "iteration": 2,
+      "expected": "clarification",
+      "route": {
+        "kind": "knowledge",
+        "query": "How do I enroll?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "How do I enroll?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "1cb5ac41-51fc-48af-a4cb-76a3e51c0313",
+      "worker": "72",
+      "server_timing": "total;dur=2.63, sql;dur=0.0",
+      "ms": 4.79,
+      "response": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "clarification",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "Where is the Registrar office?",
+      "iteration": 2,
+      "expected": "navigation",
+      "route": {
+        "kind": "knowledge",
+        "query": "Where is the Registrar office?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "Where is the Registrar office?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "3ce4c64b-93aa-498b-bf98-9391f2ad405e",
+      "worker": "73",
+      "server_timing": "total;dur=1.89, sql;dur=0.0",
+      "ms": 3.82,
+      "response": "Opening the campus map for Registrar Office. Choose your starting location to calculate a route.",
+      "sources": [],
+      "parts": [],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "What is the exact enrollment fee for transferees in 2037?",
+      "iteration": 2,
+      "expected": "unsupported",
+      "route": {
+        "kind": "knowledge",
+        "query": "What is the exact enrollment fee for transferees in 2037?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "What is the exact enrollment fee for transferees in 2037?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "41797923-66a7-4c0e-8bc2-b2ba11ae5d37",
+      "worker": "73",
+      "server_timing": "total;dur=159.52, sql;dur=47.34",
+      "ms": 161.44,
+      "response": "I don't have enough verified information to answer that yet. Could you rephrase your question or add a little more detail?\n\nFor confirmation, you can also contact the relevant university office or check the [official SPUS website](https://spus.edu.ph).\n\n[SUGGESTIONS: \"What are the required documents for transferee students enrolling at SPUS?\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "no_match",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "tell me about SPUS and why should i enroll in this school",
+      "iteration": 2,
+      "expected": "two_supported_parts",
+      "route": {
+        "kind": "knowledge",
+        "query": "tell me about SPUS and why should i enroll in this school",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "tell me about SPUS?",
+          "why should i enroll at SPUS?"
+        ],
+        "relation": "compound",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "8d2aa69b-db85-4c61-9743-001758846801",
+      "worker": "73",
+      "server_timing": "total;dur=80.49, sql;dur=6.82",
+      "ms": 82.6,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. tell me about SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. why should i enroll at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "tell me about SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "why should i enroll at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "parts": [
+        {
+          "query": "tell me about SPUS?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "why should i enroll at SPUS?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "tell me about SPUS and why should i enroll in this university",
+      "iteration": 2,
+      "expected": "two_supported_parts",
+      "route": {
+        "kind": "knowledge",
+        "query": "tell me about SPUS and why should i enroll in this university",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "tell me about SPUS?",
+          "why should i enroll at SPUS?"
+        ],
+        "relation": "compound",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "1cd56a1d-5b22-4606-a3b0-51c977d6564f",
+      "worker": "72",
+      "server_timing": "total;dur=73.41, sql;dur=5.63",
+      "ms": 75.57,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. tell me about SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. why should i enroll at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "tell me about SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "why should i enroll at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "parts": [
+        {
+          "query": "tell me about SPUS?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "why should i enroll at SPUS?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "tell me about SPUS and why should i enroll in this campus",
+      "iteration": 2,
+      "expected": "two_supported_parts",
+      "route": {
+        "kind": "knowledge",
+        "query": "tell me about SPUS and why should i enroll in this campus",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "tell me about SPUS?",
+          "why should i enroll at SPUS?"
+        ],
+        "relation": "compound",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "86b0122b-dbd9-4deb-a55a-746fc06c54e7",
+      "worker": "72",
+      "server_timing": "total;dur=76.83, sql;dur=6.09",
+      "ms": 78.75,
+      "response": "Sure—here is the information from the stored sources.\n\n**1. tell me about SPUS?**\n\nThe Saint Paul University Surigao, also referred to as SPUS or SPU Surigao, is a private, Catholic basic and higher education institution run by the Sisters of St. Paul of Chartres (SPC) in Surigao City, Surigao del Norte, Philippines.\n\nSources: 1\n\n**2. why should i enroll at SPUS?**\n\nChoosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support.\n\nSources: 2\n\n[SUGGESTIONS: \"What college courses or programs are available?\" | \"What is the SPUS Vision and Mission?\" | \"What are the Paulinian Core Values?\"]",
+      "sources": [
+        {
+          "title": "FAQ (About SPUS): [About SPUS.txt] What is SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 1,
+          "query": "tell me about SPUS?",
+          "citation_index": 1
+        },
+        {
+          "title": "FAQ (Academics): Why choose SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "curated",
+          "source_office": null,
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": [],
+          "part": 2,
+          "query": "why should i enroll at SPUS?",
+          "citation_index": 2
+        }
+      ],
+      "parts": [
+        {
+          "query": "tell me about SPUS?",
+          "status": "ok",
+          "source_indices": [
+            1
+          ]
+        },
+        {
+          "query": "why should i enroll at SPUS?",
+          "status": "ok",
+          "source_indices": [
+            2
+          ]
+        }
+      ],
+      "answer_status": "ok",
+      "actual_mode": "knowledge",
+      "passed": true
+    },
+    {
+      "query": "Hello, what can you do?",
+      "iteration": 2,
+      "expected": "capabilities",
+      "route": {
+        "kind": "capabilities",
+        "query": "",
+        "acknowledgement": "greeting",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "Hello, what can you do?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "en",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "aade8b88-4812-4f20-8175-4c0640626c5c",
+      "worker": "72",
+      "server_timing": "total;dur=27.39, sql;dur=2.53",
+      "ms": 29.25,
+      "response": "Hi!\n\nI can help you look up campus information, work through a question, or chat for a bit. What would you like to do?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "capabilities",
+      "passed": true
+    },
+    {
+      "query": "Kumusta; tell me about yourself?",
+      "iteration": 2,
+      "expected": "identity",
+      "route": {
+        "kind": "identity",
+        "query": "",
+        "acknowledgement": "greeting",
+        "method": "rule",
+        "score": null,
+        "reply_language": null
+      },
+      "resolution": {
+        "queries": [
+          "Kumusta; tell me about yourself?"
+        ],
+        "relation": "standalone",
+        "clarification": "",
+        "reference": null,
+        "previous": "",
+        "entity": "",
+        "language": "fil",
+        "provider_used": false,
+        "blocked": false
+      },
+      "request_id": "200dac07-1608-470c-b120-e6865bd67fd3",
+      "worker": "72",
+      "server_timing": "total;dur=26.52, sql;dur=2.36",
+      "ms": 29.51,
+      "response": "Kumusta! Ako si PAULA, ang Paulinian Artificial User Support and Learning Assistant. AI assistant ako para sa St. Paul University Surigao. Puwede kitang tulungan sa impormasyon tungkol sa programs, enrollment, mga opisina, at campus navigation, o makipagkuwentuhan muna. Gumagamit ako ng mga nakaimbak na SPUS sources para sa mga tanong tungkol sa unibersidad. Ano ang gusto mong malaman?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "sources": [],
+      "parts": [],
+      "answer_status": "social",
+      "actual_mode": "identity",
+      "passed": true
+    }
+  ],
+  "faq_catalog": [
+    {
+      "id": 1,
+      "question": "What is the enrollment information?",
+      "category": "Enrollment",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 2,
+      "question": "What is the tuition information?",
+      "category": "Tuition",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 3,
+      "question": "What is the scholarship information? What financial assistance or grants does SPUS offer?",
+      "category": "Scholarships",
+      "source_type": "office",
+      "source_office": "Guidance"
+    },
+    {
+      "id": 4,
+      "question": "What is the courses information?",
+      "category": "Courses",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 11,
+      "question": "Handbook: HISTORY OF THE SISTERS OF ST. PAUL OF CHARTRES (Page 1, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 12,
+      "question": "Handbook: HISTORY OF THE SISTERS OF ST. PAUL OF CHARTRES (Page 1, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 13,
+      "question": "Handbook: HISTORY OF THE SISTERS OF ST. PAUL OF CHARTRES (Page 1, Part 3)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 14,
+      "question": "Handbook: INTERVENTIONS (Page 275, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 15,
+      "question": "Handbook: INTERVENTIONS (Page 275, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 16,
+      "question": "Handbook: members, Barangay Health Workers, and the residents. To respond to the alarming  (Page 55, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 17,
+      "question": "Handbook: members, Barangay Health Workers, and the residents. To respond to the alarming  (Page 55, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 18,
+      "question": "Handbook: members, Barangay Health Workers, and the residents. To respond to the alarming  (Page 55, Part 3)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 19,
+      "question": "Handbook: Sliva (Chairman and Accreditor for Areas of Philosophy and Objectives & Administ (Page 82, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 20,
+      "question": "Handbook: Sliva (Chairman and Accreditor for Areas of Philosophy and Objectives & Administ (Page 82, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 21,
+      "question": "Handbook: July 23, 2021, St. Paul University Surigao Basic Education Department successful (Page 83, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 22,
+      "question": "Handbook: July 23, 2021, St. Paul University Surigao Basic Education Department successful (Page 83, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 23,
+      "question": "Handbook: Three Basic Education Paulinians, Azineth Jean Mosqueda, a Grade 11 student, and (Page 84, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 24,
+      "question": "Handbook: Three Basic Education Paulinians, Azineth Jean Mosqueda, a Grade 11 student, and (Page 84, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 25,
+      "question": "Handbook: Three Basic Education Paulinians, Azineth Jean Mosqueda, a Grade 11 student, and (Page 84, Part 3)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 26,
+      "question": "Handbook: Candidate status was awarded for the following programs: Doctor of Philosophy in (Page 85, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 27,
+      "question": "Handbook: Candidate status was awarded for the following programs: Doctor of Philosophy in (Page 85, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 28,
+      "question": "Handbook: On August 4, 2021, consistent honor student Rhea Marie B. Mula of Grade 12 HUMSS (Page 86, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 29,
+      "question": "Handbook: On August 4, 2021, consistent honor student Rhea Marie B. Mula of Grade 12 HUMSS (Page 86, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 30,
+      "question": "Handbook: On August 4, 2021, consistent honor student Rhea Marie B. Mula of Grade 12 HUMSS (Page 86, Part 3)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 31,
+      "question": "Handbook: Bronze medalist Azineth Mosqueda said she felt happy, amazed, and proud that she (Page 87, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 32,
+      "question": "Handbook: Bronze medalist Azineth Mosqueda said she felt happy, amazed, and proud that she (Page 87, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 33,
+      "question": "Handbook: The event, \"Realizing the Spirit of Leadership amidst Pandemic,\" featured two sp (Page 88, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 34,
+      "question": "Handbook: The event, \"Realizing the Spirit of Leadership amidst Pandemic,\" featured two sp (Page 88, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 35,
+      "question": "Handbook: The event, \"Realizing the Spirit of Leadership amidst Pandemic,\" featured two sp (Page 88, Part 3)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 36,
+      "question": "Handbook: Three (3) outstanding professional researchers, namely: Dr. Leslie E. Sauzon, Dr (Page 89, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 37,
+      "question": "Handbook: Three (3) outstanding professional researchers, namely: Dr. Leslie E. Sauzon, Dr (Page 89, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 38,
+      "question": "Handbook: 2. Consistently provide integral Catholic education marked by academic excellenc (Page 90, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 39,
+      "question": "Handbook: 2. Consistently provide integral Catholic education marked by academic excellenc (Page 90, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 40,
+      "question": "Handbook: research and community service; (Page 91, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 41,
+      "question": "Handbook: research and community service; (Page 91, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 42,
+      "question": "Handbook: and teaming, and collaborative teachers and administrators (Page 92, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 43,
+      "question": "Handbook: and teaming, and collaborative teachers and administrators (Page 92, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 44,
+      "question": "Handbook: PRIORITY PAULINIAN ROOTS, IDENTITY, SPIRITUALITY, AND MISSION (PRISM) (Page 93)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 45,
+      "question": "Handbook: students in outcome-based learning. (Page 94)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 46,
+      "question": "Handbook: (revisit and innovate) systems to respond to the needs of every stakeholder we a (Page 95, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 47,
+      "question": "Handbook: (revisit and innovate) systems to respond to the needs of every stakeholder we a (Page 95, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 48,
+      "question": "Handbook: 2. COMMISSION (Page 96, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 49,
+      "question": "Handbook: 2. COMMISSION (Page 96, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 50,
+      "question": "Handbook: In this spirit, we shall take upon ourselves the responsibility of putting into  (Page 97, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 51,
+      "question": "Handbook: In this spirit, we shall take upon ourselves the responsibility of putting into  (Page 97, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 52,
+      "question": "Handbook: *   Strive for total quality as a way of life towards union with Christ. (Page 98)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 53,
+      "question": "Handbook: The coat of arms of the Sisters of St. Paul of Chartres (SPC), the founder and o (Page 99, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 54,
+      "question": "Handbook: The coat of arms of the Sisters of St. Paul of Chartres (SPC), the founder and o (Page 99, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 55,
+      "question": "Handbook: perpetual learning. It is a systematic and disciplined effort to teach and learn (Page 100, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 56,
+      "question": "Handbook: perpetual learning. It is a systematic and disciplined effort to teach and learn (Page 100, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 57,
+      "question": "Handbook: SYMBOLS (Page 101, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 58,
+      "question": "Handbook: SYMBOLS (Page 101, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 59,
+      "question": "Handbook: LAUREL LEAF (Page 102, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 60,
+      "question": "Handbook: LAUREL LEAF (Page 102, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 61,
+      "question": "Handbook: gospel of Christ, connect with and serve others, pursue excellence and balance t (Page 103, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 62,
+      "question": "Handbook: gospel of Christ, connect with and serve others, pursue excellence and balance t (Page 103, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 63,
+      "question": "Handbook: P06 Resolve business issues and problems with a global strategic perspective usi (Page 127, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 64,
+      "question": "Handbook: P06 Resolve business issues and problems with a global strategic perspective usi (Page 127, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 65,
+      "question": "Handbook: PO6 OPERATIONS MANAGER (Page 136, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 66,
+      "question": "Handbook: PO6 OPERATIONS MANAGER (Page 136, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 67,
+      "question": "Handbook: library/instructional media center materials to students, faculty members and ot (Page 171, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 68,
+      "question": "Handbook: library/instructional media center materials to students, faculty members and ot (Page 171, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 69,
+      "question": "Handbook: policies, rules and regulations for the effective management of the dormitory to (Page 173, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 70,
+      "question": "Handbook: policies, rules and regulations for the effective management of the dormitory to (Page 173, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 71,
+      "question": "Handbook: The University Committees are administrative bodies organized by the President t (Page 174, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 72,
+      "question": "Handbook: The University Committees are administrative bodies organized by the President t (Page 174, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 73,
+      "question": "Handbook: On terms and conditions and available scholarship, the student may see the Schol (Page 227, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 74,
+      "question": "Handbook: On terms and conditions and available scholarship, the student may see the Schol (Page 227, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 75,
+      "question": "Handbook: 77-79 2.75 (Page 235, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 76,
+      "question": "Handbook: 77-79 2.75 (Page 235, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 77,
+      "question": "Handbook: SANCTIONABLE ACTS OR OMISSIONS (Page 255, Part 1)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 78,
+      "question": "Handbook: SANCTIONABLE ACTS OR OMISSIONS (Page 255, Part 2)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 79,
+      "question": "Handbook: *   intimacy in and on campus, posting daring pictures and videos in social netw (Page 256)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 80,
+      "question": "Handbook: or by reference are hereby repealed. (Page 287)",
+      "category": "Student Handbook",
+      "source_type": "handbook",
+      "source_office": "Student Affairs"
+    },
+    {
+      "id": 91,
+      "question": "What are the enrollment requirements for incoming Grade 7 students?",
+      "category": "Admissions",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 92,
+      "question": "What are the enrollment requirements for Nursery, Kindergarten, and Grade 1?",
+      "category": "Admissions",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 93,
+      "question": "What are the enrollment requirements for incoming Grade 11 (SHS) students?",
+      "category": "Admissions",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 94,
+      "question": "What is the SPUS Webometrics 2026 ranking?",
+      "category": "About SPUS",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 95,
+      "question": "What is Saint Paul University Surigao (SPUS)?",
+      "category": "About SPUS",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 96,
+      "question": "What is the SPUS Vision and Mission?",
+      "category": "About SPUS",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 97,
+      "question": "What are the Paulinian Core Values?",
+      "category": "About SPUS",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 98,
+      "question": "Why choose SPUS? What makes SPUS special?",
+      "category": "About SPUS",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 99,
+      "question": "What Graduate School programs does SPUS offer? What are the GSPS programs?",
+      "category": "Academics - Graduate School",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 100,
+      "question": "What is the SPUS College Department? How do I contact the registrar?",
+      "category": "Academics - College",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 101,
+      "question": "What programs does the SPUS College of Health Sciences offer? Does SPUS offer Nursing or Psychology?",
+      "category": "Academics - College of Health Sciences",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 102,
+      "question": "What programs does the College of Education, Arts and Sciences offer?",
+      "category": "Academics - College of Education",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 103,
+      "question": "What programs does the College of Business Management and Accountancy offer? Does SPUS offer Accountancy or HRM?",
+      "category": "Academics - College of Business",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 104,
+      "question": "What programs does the College of Engineering and Information Technology offer? Does SPUS offer IT or Engineering?",
+      "category": "Academics - College of Engineering & IT",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 105,
+      "question": "What programs does the College of Criminal Justice Education offer? Does SPUS offer Criminology or Forensic Science?",
+      "category": "Academics - College of Criminal Justice",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 106,
+      "question": "What TVET or TESDA programs does SPUS offer? What are the TESDA training and assessment center programs?",
+      "category": "TVET / TESDA",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 107,
+      "question": "What is the SPUS Quality Policy?",
+      "category": "About SPUS",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 108,
+      "question": "What is the SPUS Data Privacy Policy?",
+      "category": "About SPUS",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 109,
+      "question": "How do I enroll in Grade 7?",
+      "category": "Admissions",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 110,
+      "question": "What are the requirements for Nursery, Kindergarten, and Grade 1?",
+      "category": "Admissions",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 111,
+      "question": "What are the requirements for incoming Grade 11 (SHS)?",
+      "category": "Admissions",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 112,
+      "question": "How much is the tuition?",
+      "category": "Tuition and Finance",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 113,
+      "question": "Does SPUS offer scholarships? Are there scholarships available? What scholarships are offered?",
+      "category": "Scholarships",
+      "source_type": "office",
+      "source_office": "Guidance"
+    },
+    {
+      "id": 114,
+      "question": "What college courses or programs are available?",
+      "category": "Academics",
+      "source_type": "office",
+      "source_office": "Registrar"
+    },
+    {
+      "id": 115,
+      "question": "Does SPUS offer Graduate School programs?",
+      "category": "Academics",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 116,
+      "question": "Why choose SPUS?",
+      "category": "Academics",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 117,
+      "question": "What TVET or TESDA programs are offered?",
+      "category": "TVET / TESDA",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 118,
+      "question": "What is the SPUS Webometrics Ranking?",
+      "category": "About SPUS",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 119,
+      "question": "What is the university's Vision and Mission?",
+      "category": "About SPUS",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 120,
+      "question": "What is the history of SPUS?",
+      "category": "About SPUS",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 121,
+      "question": "What is the university's Data Privacy Policy?",
+      "category": "About SPUS",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 122,
+      "question": "Where is the register?",
+      "category": "Location",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 123,
+      "question": "Where is the registrar office?",
+      "category": "Location",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 124,
+      "question": "[PBMO] What is the Publication, Brand, and Marketing Office (PBMO) and what services does it provide?",
+      "category": "Publication, Brand, and Marketing Office (PBMO)",
+      "source_type": "office",
+      "source_office": "PBMO"
+    },
+    {
+      "id": 125,
+      "question": "[PBMO] What is the procedure for submitting materials or reporting school events for publication to PBMO?",
+      "category": "Publication, Brand, and Marketing Office (PBMO)",
+      "source_type": "office",
+      "source_office": "PBMO"
+    },
+    {
+      "id": 126,
+      "question": "[PBMO] Are university employees required to report external seminars or trainings to PBMO?",
+      "category": "Publication, Brand, and Marketing Office (PBMO)",
+      "source_type": "office",
+      "source_office": "PBMO"
+    },
+    {
+      "id": 127,
+      "question": "[PBMO] How are announcements and promotional materials broadcast across the SPUS campus?",
+      "category": "Publication, Brand, and Marketing Office (PBMO)",
+      "source_type": "office",
+      "source_office": "PBMO"
+    },
+    {
+      "id": 128,
+      "question": "[PBMO] Do posters and promotional materials require PBMO review before posting or broadcasting?",
+      "category": "Publication, Brand, and Marketing Office (PBMO)",
+      "source_type": "office",
+      "source_office": "PBMO"
+    },
+    {
+      "id": 129,
+      "question": "[PBMO] What are the guidelines for using official SPUS logos, seals, and brand assets?",
+      "category": "Publication, Brand, and Marketing Office (PBMO)",
+      "source_type": "office",
+      "source_office": "PBMO"
+    },
+    {
+      "id": 130,
+      "question": "[PBMO] How do departments or student organizations request photo or video event coverage from PBMO?",
+      "category": "Publication, Brand, and Marketing Office (PBMO)",
+      "source_type": "office",
+      "source_office": "PBMO"
+    },
+    {
+      "id": 131,
+      "question": "[PBMO] How far in advance must materials be submitted for social media or student portal posting?",
+      "category": "Publication, Brand, and Marketing Office (PBMO)",
+      "source_type": "office",
+      "source_office": "PBMO"
+    },
+    {
+      "id": 132,
+      "question": "[PBMO] What are the operating hours of the Publication, Brand, and Marketing Office (PBMO)?",
+      "category": "Publication, Brand, and Marketing Office (PBMO)",
+      "source_type": "office",
+      "source_office": "PBMO"
+    },
+    {
+      "id": 133,
+      "question": "[PBMO] Who is the Director of the Publication, Brand, and Marketing Office (PBMO)?",
+      "category": "Publication, Brand, and Marketing Office (PBMO)",
+      "source_type": "office",
+      "source_office": "PBMO"
+    },
+    {
+      "id": 134,
+      "question": "[PBMO] What is the SPUS Policy on Online Posting (Document PBMO-PO-010 / PBMO-PR-009)?",
+      "category": "Publication, Brand, and Marketing Office (PBMO)",
+      "source_type": "office",
+      "source_office": "PBMO"
+    },
+    {
+      "id": 135,
+      "question": "[PBMO] What are the 4 steps in the PBMO procedure for online posting of materials?",
+      "category": "Publication, Brand, and Marketing Office (PBMO)",
+      "source_type": "office",
+      "source_office": "PBMO"
+    },
+    {
+      "id": 136,
+      "question": "[PBMO] What are the official colors and brand palette of St. Paul University Surigao (SPUS)?",
+      "category": "Publication, Brand, and Marketing Office (PBMO)",
+      "source_type": "office",
+      "source_office": "PBMO"
+    },
+    {
+      "id": 137,
+      "question": "[PBMO] What does the St. Paul University Surigao seal represent?",
+      "category": "Publication, Brand, and Marketing Office (PBMO)",
+      "source_type": "office",
+      "source_office": "PBMO"
+    },
+    {
+      "id": 138,
+      "question": "[Registrar] What is the procedure for Changing, Adding, Dropping, or Withdrawing subjects (Document URO-PR-007)?",
+      "category": "Registrar's Office",
+      "source_type": "office",
+      "source_office": "Registrar"
+    },
+    {
+      "id": 139,
+      "question": "[Registrar] How can an old or continuing college student enroll at SPUS (Document URO-PR-016)?",
+      "category": "Registrar's Office",
+      "source_type": "office",
+      "source_office": "Registrar"
+    },
+    {
+      "id": 140,
+      "question": "[Registrar] What is the step-by-step enrollment procedure for transferee students at SPUS (Document URO-PR-017)?",
+      "category": "Registrar's Office",
+      "source_type": "office",
+      "source_office": "Registrar"
+    },
+    {
+      "id": 141,
+      "question": "[Registrar] What are the required documents for transferee students enrolling at SPUS?",
+      "category": "Registrar's Office",
+      "source_type": "office",
+      "source_office": "Registrar"
+    },
+    {
+      "id": 142,
+      "question": "[Registrar] What is the step-by-step enrollment procedure for incoming freshmen at SPUS (Document URO-PR-005)?",
+      "category": "Registrar's Office",
+      "source_type": "office",
+      "source_office": "Registrar"
+    },
+    {
+      "id": 143,
+      "question": "[Registrar] What are the required admission and enrollment documents for incoming freshmen at SPUS?",
+      "category": "Registrar's Office",
+      "source_type": "office",
+      "source_office": "Registrar"
+    },
+    {
+      "id": 144,
+      "question": "[Registrar] Where do students get their official school ID and what are the requirements?",
+      "category": "Registrar's Office",
+      "source_type": "office",
+      "source_office": "Registrar"
+    },
+    {
+      "id": 145,
+      "question": "[Registrar] Who must approve the subject adding, dropping, or withdrawal form?",
+      "category": "Registrar's Office",
+      "source_type": "office",
+      "source_office": "Registrar"
+    },
+    {
+      "id": 146,
+      "question": "What programs are offered at SPUS?",
+      "category": "Academics",
+      "source_type": "office",
+      "source_office": "Registrar"
+    },
+    {
+      "id": 147,
+      "question": "What programs are offered at SPUS? What are the available undergraduate programs? What courses are available?",
+      "category": "Academics",
+      "source_type": "office",
+      "source_office": "Registrar"
+    },
+    {
+      "id": 148,
+      "question": "Who are you? What is PAULA? What does PAULA stand for?",
+      "category": "About PAULA",
+      "source_type": "curated",
+      "source_office": "Administration"
+    },
+    {
+      "id": 149,
+      "question": "Are there scholarships available?",
+      "category": "Scholarships",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 150,
+      "question": "What is the school calendar? What are the academic calendar activities and important dates?",
+      "category": "Academics",
+      "source_type": "office",
+      "source_office": "Registrar"
+    },
+    {
+      "id": 151,
+      "question": "[About SPUS.txt] What is SPUS?",
+      "category": "About SPUS",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 152,
+      "question": "[About SPUS.txt] What are the complete definitions of the Paulinian core values at SPUS?",
+      "category": "About SPUS",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 153,
+      "question": "[About SPUS.txt] What are the SPUS campuses and what does each campus house?",
+      "category": "About SPUS",
+      "source_type": "curated",
+      "source_office": null
+    },
+    {
+      "id": 154,
+      "question": "[About SPUS.txt] What is the early history of SPUS?",
+      "category": "About SPUS",
+      "source_type": "curated",
+      "source_office": null
+    }
+  ],
+  "reason_sources": [
+    {
+      "id": 98,
+      "question": "Why choose SPUS? What makes SPUS special?",
+      "answer": "Why Choose SPUS?\n\nFaith-Based Education\nWe integrate Catholic Christian values and Paulinian spirituality across all programs, forming graduates who are ethically grounded, compassionate, and Christ-centered leaders.\n\nAcademic Excellence\nOur Outcomes-Based Education (OBE) framework, delivered by expert faculty, ensures rigorous academics and industry-relevant skills that prepare you for success in today's global economy.\n\nVibrant Campus Life\nExperience a dynamic and supportive community through diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n\nGlobal Alumni Network\nJoin a vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support."
+    },
+    {
+      "id": 116,
+      "question": "Why choose SPUS?",
+      "answer": "Choosing SPUS means embracing:\n- Faith-Based Education: Integrating Catholic Christian values and Paulinian spirituality forming ethically grounded, compassionate, and Christ-centered leaders.\n- Academic Excellence: An Outcomes-Based Education (OBE) framework delivered by expert faculty ensuring rigorous academics and industry-relevant skills for success in today's global economy.\n- Vibrant Campus Life: Diverse student organizations, engaging campus events, and opportunities for service and holistic personal growth.\n- Global Alumni Network: A vast, interconnected community of competent and compassionate Paulinian graduates worldwide, offering mentorship, professional connections, and lifelong support."
+    }
+  ],
+  "provider_faults": [
+    {
+      "mode": "unauthorized",
+      "events": [
+        {
+          "provider": "groq",
+          "outcome": "credentials_unavailable",
+          "elapsed_ms": 0.83,
+          "error_type": "SyntheticProviderError",
+          "http_status": 401
+        }
+      ],
+      "selected_stored_evidence": true,
+      "displayed_text": "Approved fixture text for the audit.",
+      "policy_state": {
+        "until": 1794205748.9731097,
+        "reason": "credentials_unavailable"
+      }
+    },
+    {
+      "mode": "forbidden",
+      "events": [
+        {
+          "provider": "groq",
+          "outcome": "credentials_unavailable",
+          "elapsed_ms": 0.3,
+          "error_type": "SyntheticProviderError",
+          "http_status": 403
+        }
+      ],
+      "selected_stored_evidence": true,
+      "displayed_text": "Approved fixture text for the audit.",
+      "policy_state": {
+        "until": 1794205748.9739058,
+        "reason": "credentials_unavailable"
+      }
+    },
+    {
+      "mode": "missing_model",
+      "events": [
+        {
+          "provider": "groq",
+          "outcome": "model_unavailable",
+          "elapsed_ms": 0.4,
+          "error_type": "SyntheticProviderError",
+          "http_status": 404
+        }
+      ],
+      "selected_stored_evidence": true,
+      "displayed_text": "Approved fixture text for the audit.",
+      "policy_state": {
+        "until": 1794205748.9746258,
+        "reason": "model_unavailable"
+      }
+    },
+    {
+      "mode": "model_permission",
+      "events": [
+        {
+          "provider": "groq",
+          "outcome": "model_permission_blocked",
+          "elapsed_ms": 0.45,
+          "error_type": "SyntheticProviderError",
+          "http_status": 403
+        }
+      ],
+      "selected_stored_evidence": true,
+      "displayed_text": "Approved fixture text for the audit.",
+      "policy_state": {
+        "until": 1794205748.9753895,
+        "reason": "model_permission_blocked"
+      }
+    },
+    {
+      "mode": "quota",
+      "events": [
+        {
+          "provider": "groq",
+          "outcome": "credits_exhausted",
+          "elapsed_ms": 0.33,
+          "error_type": "SyntheticProviderError",
+          "http_status": 429
+        }
+      ],
+      "selected_stored_evidence": true,
+      "displayed_text": "Approved fixture text for the audit.",
+      "policy_state": {
+        "until": 1794205748.976032,
+        "reason": "credits_exhausted"
+      }
+    },
+    {
+      "mode": "rate_limit",
+      "events": [
+        {
+          "provider": "groq",
+          "outcome": "rate_limited",
+          "elapsed_ms": 0.22,
+          "error_type": "SyntheticProviderError",
+          "http_status": 429
+        }
+      ],
+      "selected_stored_evidence": true,
+      "displayed_text": "Approved fixture text for the audit.",
+      "policy_state": {
+        "until": 1794202150.9765816,
+        "reason": "rate_limited"
+      }
+    },
+    {
+      "mode": "timeout",
+      "events": [
+        {
+          "provider": "groq",
+          "outcome": "timeout",
+          "elapsed_ms": 0.21,
+          "error_type": "TimeoutError"
+        }
+      ],
+      "selected_stored_evidence": true,
+      "displayed_text": "Approved fixture text for the audit.",
+      "policy_state": {
+        "until": 1794202163.9770868,
+        "reason": "timeout"
+      }
+    },
+    {
+      "mode": "api_error",
+      "events": [
+        {
+          "provider": "groq",
+          "outcome": "api_error",
+          "elapsed_ms": 0.25,
+          "error_type": "SyntheticProviderError",
+          "http_status": 500
+        }
+      ],
+      "selected_stored_evidence": true,
+      "displayed_text": "Approved fixture text for the audit.",
+      "policy_state": {
+        "until": 1794202178.9776342,
+        "reason": "api_error"
+      }
+    }
+  ],
+  "integrity": {
+    "before": {
+      "FAQ": {
+        "count": 138,
+        "sha256": "bc8e18e7bf2b26cf44956da8aed3a4c03e3f77c9fff8b5e21180cc13641cedbd"
+      },
+      "Location": {
+        "count": 6,
+        "sha256": "d54138abcc6b41302f1bc394cbbf0447c3e5de502cb48060c1ea1305c9e88fac"
+      },
+      "StaffMember": {
+        "count": 12,
+        "sha256": "5a618bd4a3d718185a5e06dfb45e3976d94437efea8debbbc2ca8954e68c6f00"
+      },
+      "WebResource": {
+        "count": 476,
+        "sha256": "3fef4ff4d54763878bf1dab2a5acb5cbc41ff4484caa9864118e23bd7f474f83"
+      },
+      "Conversation": {
+        "count": 140,
+        "sha256": "13203c013924f38803eeac24320d116a32c9bef446327630a2e7f45ac8356bf9"
+      },
+      "ChatHistory": {
+        "count": 177,
+        "sha256": "5b709be6248a830587edaf81d62e3e50c2c4220021343764558b299fca393628"
+      }
+    },
+    "after": {
+      "FAQ": {
+        "count": 138,
+        "sha256": "bc8e18e7bf2b26cf44956da8aed3a4c03e3f77c9fff8b5e21180cc13641cedbd"
+      },
+      "Location": {
+        "count": 6,
+        "sha256": "d54138abcc6b41302f1bc394cbbf0447c3e5de502cb48060c1ea1305c9e88fac"
+      },
+      "StaffMember": {
+        "count": 12,
+        "sha256": "5a618bd4a3d718185a5e06dfb45e3976d94437efea8debbbc2ca8954e68c6f00"
+      },
+      "WebResource": {
+        "count": 476,
+        "sha256": "3fef4ff4d54763878bf1dab2a5acb5cbc41ff4484caa9864118e23bd7f474f83"
+      },
+      "Conversation": {
+        "count": 140,
+        "sha256": "13203c013924f38803eeac24320d116a32c9bef446327630a2e7f45ac8356bf9"
+      },
+      "ChatHistory": {
+        "count": 177,
+        "sha256": "5b709be6248a830587edaf81d62e3e50c2c4220021343764558b299fca393628"
+      }
+    },
+    "unchanged": true
+  },
+  "summary": {
+    "samples": 60,
+    "passed": 60,
+    "failed_queries": []
+  }
+}
