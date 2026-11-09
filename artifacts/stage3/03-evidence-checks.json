@@ -1,0 +1,8 @@
+﻿{
+    "step":  "03-evidence",
+    "revision":  "48a0bb53aecd976699438b82b44b4c509b18ad70",
+    "backend_exit":  0,
+    "frontend_exit":  0,
+    "backend_tests":  "479",
+    "frontend_tests":  "27"
+}

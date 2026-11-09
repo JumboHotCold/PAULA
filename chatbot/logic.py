@@ -281,6 +281,21 @@ class PauliBotLogic:
                                for value in [language_request(row['content'])] if value), None)
         response_language = language_for(user_message, history, preference)
         route = route_turn(user_message)
+        spelling_choices=None
+        if route.method=='spelling_confirmation':
+            from .spelling import matching_plan
+            plan=matching_plan(user_message)
+            if plan.ambiguous and (self.rag is None or callable(getattr(type(self.rag),'retrieve',None))):
+                from .spelling_evidence import resolve_candidates
+                if self.rag is None:
+                    from .rag import RAGSearcher
+                    self.rag=RAGSearcher()
+                resolved_spelling=resolve_candidates(plan,self.rag)
+                if resolved_spelling.status=='resolved':
+                    route=replace(route,query=resolved_spelling.query,method='evidence_spelling')
+                elif resolved_spelling.status=='unavailable':
+                    return self._abstain(user_message,unavailable=True)
+                else:spelling_choices=resolved_spelling.choices
         clean_history = None
         anchor = context_query
         pending = state.get('pending')
@@ -305,7 +320,7 @@ class PauliBotLogic:
                         'Could you confirm the person\'s exact name or their role? I won\'t guess a name from a spelling similarity.')
             else:
                 from .spelling import matching_plan, confirmation_questions
-                questions = confirmation_questions(matching_plan(user_message))
+                questions = spelling_choices or confirmation_questions(matching_plan(user_message))
                 text = ('Ang ibig mo bang sabihin ay ' if response_language=='fil' else 'Did you mean ') + \
                     (' o ' if response_language=='fil' else ' or ').join(json.dumps(query,ensure_ascii=False) for query in questions) + '?'
                 text += '\n\n[SUGGESTIONS: ' + ' | '.join(json.dumps(query,ensure_ascii=False) for query in questions) + ']'

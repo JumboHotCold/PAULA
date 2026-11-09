@@ -146,7 +146,8 @@ class PostgreSQLCompletionTests(TestCase):
         self.bot.rag.ensure_embeddings.assert_not_called()
 
     def test_ambiguous_question_typo_asks_before_selecting_an_intent(self):
-        result = self.bot.process_query('hwo do I enorll?')
+        with patch.object(self.bot.rag,'_hybrid_search',return_value=[]):
+            result = self.bot.process_query('hwo do I enorll?')
         self.assertEqual(result.answer_status,'clarification')
         self.assertIn('Did you mean',result[0])
         self.assertIn('how do I enroll',result[0])
