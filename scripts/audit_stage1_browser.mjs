@@ -4,8 +4,10 @@ import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
 import { mkdtemp, mkdir, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
-import { join } from 'node:path';
+import { dirname, join } from 'node:path';
+import { parseArgs } from 'node:util';
 import { connect } from './mobile_browser.mjs';
+const { values: { output = 'artifacts/stage1/browser.json' } } = parseArgs({ options: { output: { type: 'string' } } });
 
 let occupied = false;
 try { await fetch('http://127.0.0.1:9340/json/version'); occupied = true; } catch { /* No existing debugger. */ }
@@ -73,8 +75,8 @@ try {
   assert.equal(result.separateDoubleClick.requests, 1);
   assert.equal(result.sameFrameStarterClicks.requests, 1, 'Same-frame starter activation must not submit the same turn twice');
 } finally {
-  await mkdir('artifacts/stage1', {recursive:true});
-  await writeFile('artifacts/stage1/browser.json', JSON.stringify(result, null, 2));
+  await mkdir(dirname(output), {recursive:true});
+  await writeFile(output, JSON.stringify(result, null, 2));
   if (page) {
     await Promise.race([page.command('Browser.close').catch(() => {}), new Promise(resolve => setTimeout(resolve, 2000))]);
     page.close();

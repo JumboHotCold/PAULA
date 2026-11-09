@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
+import { createSendGuard } from './sendGuard';
 import './App.css';
 import MaterialIcon from './components/MaterialIcon';
 
@@ -143,6 +144,8 @@ export default function App() {
   const [chatSessionId, setChatSessionId] = useState(null);
   const [isRestoring, setIsRestoring] = useState(true);
   const chatEpoch = useRef(0);
+  const sendGuard = useRef(null);
+  if (!sendGuard.current) sendGuard.current = createSendGuard();
 
   // Restore session
   useEffect(() => {
@@ -366,7 +369,10 @@ export default function App() {
 
   const handleSend = useCallback(
     async (text) => {
+      if (typeof text !== 'string' || !text.trim()) return;
       const epoch = chatEpoch.current;
+      const ticket = sendGuard.current.acquire(epoch);
+      if (!ticket) return;
       setMessages((prev) => [...prev, { text, isUser: true, timestamp: Date.now() / 1000 }]);
       setIsTyping(true);
 
@@ -412,6 +418,8 @@ export default function App() {
           ...prev,
           { text: chatErrorMessage(err), isUser: false },
         ]);
+      } finally {
+        sendGuard.current.release(ticket);
       }
     },
     [conversationId, user, messages, chatSessionId]
