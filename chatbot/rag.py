@@ -180,7 +180,7 @@ class RAGSearcher:
             return EvidenceList(rows[:limit], status=getattr(rows, 'status', 'ok' if rows else 'no_match'))
         from .personnel import exact_personnel_lookup, lookup_kind
         exact = exact_personnel_lookup(query)
-        if getattr(exact, 'status', '') in ('ambiguous', 'conflict'):
+        if getattr(exact, 'status', '') == 'conflict' or (getattr(exact,'status','')=='ambiguous' and lookup_kind(query)!='name'):
             return exact
         if exact:
             return exact[:limit]
@@ -215,12 +215,16 @@ class RAGSearcher:
             requested = name_request(query)
             matches = [obj for obj in StaffMember.objects.all() if person_key(obj.name)==requested]
             rows = [dict(question=f'Who is {obj.name}?', document_title=f'Staff Directory: {obj.position}',
-                         answer=f'{obj.name} is the {obj.position}.' + (f' Office located at {obj.office}.' if obj.office else ''),
+                         answer=f'The local staff record lists {obj.name} as {obj.position}.' + (f' Office: {obj.office}.' if obj.office else ''),
                          personnel_name=obj.name, personnel_role=obj.position, source_type='staff_directory',
                          source_office=obj.office, source_url=None, record_type='staffmember',record_id=obj.pk,
                          retrieval_method='exact_staff_name') for obj in matches]
             from .grounding import eligible_evidence
-            return EvidenceList([row for row in rows if eligible_evidence(query,row)][:limit],status='ok' if rows else 'no_match')
+            if getattr(exact,'status','')=='ambiguous':
+                for row in rows:
+                    row['review_notes']=['The website has a possible name-format or role variant. This is the exact local record; the records have not been merged, and current details need institutional confirmation.']
+            return EvidenceList([row for row in rows if eligible_evidence(query,row)][:limit],
+                                status='ok' if rows else getattr(exact,'status','no_match'))
         # Mentioning announcements does not make an office procedure a news
         # request. Exact knowledge and its conflicts take precedence. An empty
         # announcements table is not evidence that other sources lack an answer.
