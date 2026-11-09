@@ -16,6 +16,8 @@ services:
       retries: 10
   web:
     build: .
+    ports:
+      - '127.0.0.1:18081:8000'
     command: ['python', '-c', 'import time; time.sleep(1800)']
     environment:
       USE_POSTGRES: 'true'

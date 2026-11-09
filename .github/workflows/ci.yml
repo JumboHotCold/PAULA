@@ -30,3 +30,10 @@ jobs:
           npm ci
           npm test
           npm run build
+      - name: Frontend transport to isolated Django HTTP integration
+        run: |
+          docker compose -p paula-ci -f docker-compose.ci.yml exec -d web python manage.py runserver 0.0.0.0:8000 --noreload
+          node scripts/verify_stage3_transport.mjs
+      - name: Stop isolated test services
+        if: always()
+        run: docker compose -p paula-ci -f docker-compose.ci.yml down
