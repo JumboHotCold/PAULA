@@ -1,0 +1,9 @@
+﻿{
+    "retrieved_utc":  "2026-11-09T04:47:21.7008634+00:00",
+    "shutdown_date":  "2025-09-29",
+    "lifecycle":  "shut_down",
+    "method":  "Read official September 29, 2025 changelog section using public HTTPS; no API key.",
+    "model":  "gemini-1.5-flash",
+    "url":  "https://ai.google.dev/gemini-api/docs/changelog",
+    "status":  200
+}

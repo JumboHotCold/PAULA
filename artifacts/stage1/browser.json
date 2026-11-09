@@ -1,0 +1,19 @@
+{
+  "singleSubmit": {
+    "requests": 1,
+    "users": 1,
+    "answers": 1
+  },
+  "sameFrameStarterClicks": {
+    "starter": "What programs are offered?",
+    "requests": 2,
+    "users": 2,
+    "answers": 2
+  },
+  "separateDoubleClick": {
+    "requests": 1,
+    "users": 1,
+    "answers": 1
+  },
+  "limitation": "Synthetic guest UI reproduction; the same-frame stress case does not prove what caused past user-visible duplicates."
+}
