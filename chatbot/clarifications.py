@@ -1,4 +1,14 @@
 """Bounded task state only; never answer evidence or arbitrary instructions."""
+import re
+
+
+def selection_view(message):
+    """Remove a conversational wrapper only; the caller must validate the
+    complete remainder against its pending task's allowed choices/constraints.
+    """
+    from .conversation_context import FOLLOW
+    match=FOLLOW.fullmatch(message.strip())
+    return re.sub(r'^(?:for|sa|para sa)\s+','',match.group(1),flags=re.I) if match else message
 
 
 def validated_pending(value):

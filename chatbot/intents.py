@@ -105,8 +105,12 @@ def enrollment_request(message):
 def enrollment_resolution(message, history=None):
     """Return (needs_category, resolved_query), using only a pending question."""
     request = message
-    if not enrollment_request(request):
-        previous = pending_request(history, 'enrollment')
+    selector=message
+    previous = pending_request(history, 'enrollment')
+    if previous:
+        from .clarifications import selection_view
+        selector=selection_view(message)
+    if not enrollment_request(request) or selector != message:
         # These exact labels are enrollment controls supplied by PAULA. Recover
         # their procedure intent if an older client lost its clarification pair.
         # Other statements ('I am an old student') still require pending context.
@@ -114,15 +118,15 @@ def enrollment_resolution(message, history=None):
         if not previous and choice:
             previous = 'How do I enroll at SPUS?'
         # Only a short category reply can resolve a pending clarification.
-        reply_words = set(re.findall(r'\w+', message.lower()))
+        reply_words = set(re.findall(r'\w+', selector.lower()))
         allowed = set('i am im m a an incoming college freshman freshmen first year new transferee transferees transfer '
                       'student students old continuing po ako ay isang na'.split())
-        if not previous or len(message.split()) > 10 or not enrollment_category(message) or not reply_words.issubset(allowed):
+        if not previous or len(message.split()) > 10 or not enrollment_category(selector) or not reply_words.issubset(allowed):
             return False, message
         request = previous
     if re.search(r'\b(grade\s*\d+|kindergarten|nursery|senior high|junior high|basic education|graduate|masters|doctoral)\b', request, re.I):
         return False, message
-    category = enrollment_category(message)
+    category = enrollment_category(selector)
     if category is None:
         return True, message
     # SPUS is the implicit institution for a generic campus-assistant question.
@@ -194,6 +198,8 @@ def navigation_destinations(message):
 def navigation_choice(message, history):
     if not pending_request(history, 'navigation'):
         return False
+    from .clarifications import selection_view
+    message=selection_view(message)
     text = ' '.join(re.findall(r'\w+', message.lower()))
     text = re.sub(r'^(?:the |please )| please$', '', text).strip()
     return any(text in aliases or text == label.lower()
