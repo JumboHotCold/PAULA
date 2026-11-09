@@ -1,0 +1,8 @@
+﻿{
+    "step":  "09-failure-ci",
+    "revision":  "32a4dcbc7ed8b72e78dd622845ae2f5a8732b013",
+    "backend_exit":  0,
+    "frontend_exit":  0,
+    "backend_tests":  "490",
+    "frontend_tests":  "30"
+}

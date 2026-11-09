@@ -12,7 +12,7 @@ class ConversationConfigTests(SimpleTestCase):
     def test_migration_preserves_all_existing_copy_patterns_and_exemplars(self):
         data = json.loads(CONFIG_PATH.read_text(encoding='utf-8'))
         from pathlib import Path
-        original=json.loads((Path(__file__).resolve().parent.parent/'artifacts/stage3/conversation_before.json').read_text(encoding='utf-8'))
+        original=json.loads((Path(__file__).with_name('testdata')/'conversation_v1.json').read_text(encoding='utf-8'))
         def project(current,old):
             if isinstance(old,dict):return {key:project(current[key],value) for key,value in old.items()}
             if isinstance(old,list):

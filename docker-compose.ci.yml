@@ -7,6 +7,8 @@ services:
       POSTGRES_USER: paulibot_ci
       POSTGRES_PASSWORD: ci-only-password
     tmpfs: ['/var/lib/postgresql/data']
+    volumes:
+      - ./scripts/ci_pgvector.sql:/docker-entrypoint-initdb.d/01-vector.sql:ro
     healthcheck:
       test: ['CMD-SHELL', 'pg_isready -U paulibot_ci -d paulibot_ci']
       interval: 5s
