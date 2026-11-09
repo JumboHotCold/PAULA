@@ -67,7 +67,7 @@ function MarkdownRenderer({ text }) {
         if (block.type==='list') {
           const Tag=block.ordered?'ol':'ul';
           return <Tag key={idx} className="answer-list" start={block.ordered?block.items[0].number:undefined}
-            style={{paddingInlineStart:'24px',margin:'0 0 8px',overflowWrap:'anywhere'}}>
+            style={{paddingInlineStart:'24px',margin:'0 0 8px',overflowWrap:'anywhere',listStyleType:block.ordered?'decimal':'disc'}}>
             {block.items.map((item,i)=><li key={i} value={item.number} style={{marginBottom:'8px',lineHeight:1.6,marginLeft:`${item.indent*8}px`}}>{renderFormattedText(item.text)}</li>)}
           </Tag>;
         }
