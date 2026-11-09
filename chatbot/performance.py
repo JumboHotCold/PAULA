@@ -8,6 +8,7 @@ import os
 from threading import Lock
 import time
 from uuid import uuid4
+from .build_info import build_info
 
 logger = logging.getLogger('paula.performance')
 _trace = ContextVar('paula_performance_trace', default=None)
@@ -19,6 +20,7 @@ class Trace:
         self.request_id = str(uuid4())
         self.worker = os.getpid()
         self.route = route
+        self.build_commit = build_info()['build_commit']
         self.started = time.perf_counter()
         self.stages = {}
         self.providers = []
@@ -28,7 +30,7 @@ class Trace:
         self.lock = Lock()
 
     def summary(self, status=200):
-        return {'event': 'request_timing', 'request_id': self.request_id, 'worker': self.worker,
+        return {'event': 'request_timing', 'request_id': self.request_id, 'worker': self.worker, 'build_commit': self.build_commit,
                 'route': self.route, 'status': status,
                 'total_ms': round((time.perf_counter()-self.started)*1000, 2),
                 'sql_count': self.sql_count, 'sql_ms': round(self.sql_ms, 2),

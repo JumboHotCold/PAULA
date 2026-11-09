@@ -23,6 +23,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.exceptions import ParseError, UnsupportedMediaType
 from .api_errors import failure
+from .build_info import build_info
 
 from .logic import PauliBotLogic
 from .intents import guest_clarification_history
@@ -49,7 +50,7 @@ bot = PauliBotLogic()
 
 @require_GET
 def health_live(request):
-    return JsonResponse({'live': True})
+    return JsonResponse({'live': True, **build_info()})
 
 
 @require_GET

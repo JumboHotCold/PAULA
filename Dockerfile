@@ -15,6 +15,9 @@
 # ==============================================================================
 
 FROM python:3.11-slim
+ARG PAULA_BUILD_COMMIT=unknown
+ENV PAULA_BUILD_COMMIT=${PAULA_BUILD_COMMIT}
+LABEL org.opencontainers.image.revision=${PAULA_BUILD_COMMIT}
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE=1

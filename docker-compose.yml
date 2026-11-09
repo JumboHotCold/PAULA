@@ -54,6 +54,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        PAULA_BUILD_COMMIT: ${PAULA_BUILD_COMMIT:-unknown}
     container_name: paulibot_web
     restart: unless-stopped
 
