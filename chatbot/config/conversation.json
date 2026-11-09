@@ -1,11 +1,42 @@
 {
   "schema_version": 1,
   "matching": {
-    "shorthand": {"u":"you", "ur":"your", "urself":"yourself", "r":"are", "abt":"about", "wat":"what", "pls":"please", "thx":"thanks"},
+    "shorthand": {
+      "u": "you",
+      "ur": "your",
+      "urself": "yourself",
+      "r": "are",
+      "abt": "about",
+      "wat": "what",
+      "pls": "please",
+      "thx": "thanks"
+    },
     "modifiers": {
-      "politeness": {"tokens":["po","ho","please"], "language":null},
-      "intensifier": {"tokens":["kaayo","gyud","jud","man"], "language":"ceb"},
-      "discourse": {"tokens":["lang","naman","muna"], "language":null}
+      "politeness": {
+        "tokens": [
+          "po",
+          "ho",
+          "please"
+        ],
+        "language": null
+      },
+      "intensifier": {
+        "tokens": [
+          "kaayo",
+          "gyud",
+          "jud",
+          "man"
+        ],
+        "language": "ceb"
+      },
+      "discourse": {
+        "tokens": [
+          "lang",
+          "naman",
+          "muna"
+        ],
+        "language": null
+      }
     }
   },
   "social": {
@@ -63,40 +94,67 @@
     "suffix_pattern": "(?:\\s+(?:paula|po|naman|kaayo))+$"
   },
   "semantic": {
-    "min_similarity": 0.65,
-    "min_margin": 0.08,
+    "min_similarity": 0.55,
+    "min_margin": 0.05,
     "exemplars": {
-      "identity": ["Tell me about yourself", "Could you introduce yourself please?", "Can u explain ur role?", "Unsay imong ngalan?", "Kinsa ka?", "Pakilala naman po"],
-      "greeting": ["Maayong buntag", "Maayong adlaw", "Magandang umaga", "Hello po, PAULA"],
+      "identity": [
+        "Tell me about yourself",
+        "Could you introduce yourself please?",
+        "Can u explain ur role?",
+        "Unsay imong ngalan?",
+        "Kinsa ka?",
+        "Pakilala naman po",
+        "Please explain who you are",
+        "Ano ang ibig sabihin ng pangalan mo",
+        "Unsay ngalan nimo"
+      ],
+      "greeting": [
+        "Maayong buntag",
+        "Maayong adlaw",
+        "Magandang umaga",
+        "Hello po, PAULA",
+        "Good day PAULA",
+        "Maayong gabii"
+      ],
       "wellbeing": [
         "How are things going with you?",
         "How is your day going?",
         "Are you doing okay?",
         "Kumusta ka ngayon?",
         "Kamusta ang araw mo?",
-        "How are you naman?"
+        "How are you naman?",
+        "How are you feeling today",
+        "Kumusta imong adlaw"
       ],
       "thanks": [
-        "Dako akong pasalamat sa imong tabang", "You were helpful, salamat", "I really appreciate that po",
+        "Dako akong pasalamat sa imong tabang",
+        "You were helpful, salamat",
+        "I really appreciate that po",
         "I appreciate your help a lot",
         "That was really helpful, thank you",
         "You helped me understand",
         "Maraming salamat sa tulong",
-        "Thank you, malaking tulong ito"
+        "Thank you, malaking tulong ito",
+        "That helped me a lot",
+        "Maraming salamat sa iyo"
       ],
       "acknowledgement": [
         "Okay, I understand now",
         "That makes sense to me",
         "All clear, got it",
         "Sige, naiintindihan ko na",
-        "Ah okay, gets ko na"
+        "Ah okay, gets ko na",
+        "Okay po",
+        "Gets ko na po"
       ],
       "farewell": [
         "I will talk to you later",
         "Goodbye and take care",
         "See you next time",
         "Sige, paalam muna",
-        "Usap tayo ulit mamaya"
+        "Usap tayo ulit mamaya",
+        "I have to go now",
+        "Babalik ako mamaya"
       ],
       "joke": [
         "Say something funny to cheer me up",
@@ -104,7 +162,10 @@
         "Make me laugh a little",
         "Patawanin mo naman ako",
         "May joke ka ba?",
-        "Something funny naman"
+        "Something funny naman",
+        "Could you share something funny",
+        "Patawa ka naman ng konti",
+        "Pwede ko nimo pakataw on"
       ],
       "support": [
         "I have had a tiring day",
@@ -112,7 +173,10 @@
         "I feel discouraged today",
         "Pagod na ako ngayon",
         "Medyo kinakabahan ako",
-        "Nakaka-stress ang araw na ito"
+        "Nakaka-stress ang araw na ito",
+        "I feel exhausted after today",
+        "Nalulungkot ako ngayon",
+        "Gikapoy ko karon"
       ],
       "celebration": [
         "I am happy about my progress",
@@ -120,7 +184,9 @@
         "I did it and feel proud",
         "Masaya ako ngayon",
         "Natapos ko na ang gawain ko",
-        "Finally, tapos na!"
+        "Finally, tapos na!",
+        "I finished my project today",
+        "Nagawa ko na sa wakas"
       ],
       "preference": [
         "What is your favorite food?",
@@ -128,7 +194,10 @@
         "What do you do for fun?",
         "Ano ang paborito mong pagkain?",
         "May hobbies ka ba?",
-        "What music do you like?"
+        "What music do you like?",
+        "What food do you enjoy most",
+        "Ano ang hilig mong gawin",
+        "Unsa imong ganahan nga pagkaon"
       ],
       "capabilities": [
         "What can you help me with?",
@@ -136,7 +205,9 @@
         "What are you able to do?",
         "Ano ang kaya mong gawin?",
         "Pwede ba tayong mag-usap lang?",
-        "Can we just chat for a bit?"
+        "Can we just chat for a bit?",
+        "How can you assist me today",
+        "Unsa imong ikatabang nako"
       ],
       "knowledge": [
         "Who is the university president?",
@@ -152,6 +223,12 @@
         "Paano mag-enroll?",
         "Magkano ang bayad?",
         "Ano ang requirements?"
+      ],
+      "affirmation": [
+        "Yes please"
+      ],
+      "negation": [
+        "No please"
       ]
     }
   },

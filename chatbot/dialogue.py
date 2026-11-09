@@ -196,6 +196,18 @@ def route_turn(message, semantic=True, *, _bundle=True):
     if plan.protected_name:
         return DialogueRoute('knowledge',message,method='protected_name')
     if plan.needs_confirmation:
+        # Unknown conversational words can resemble several factual nouns.
+        # Try the existing social fallback on the uncorrected shorthand view
+        # before asking a factual spelling question. Institutional constraints
+        # and person requests retain their stricter paths.
+        from .chat_language import expand_shorthand
+        raw=expand_shorthand(normalize_input(message).cased)
+        if semantic and len(normalize_input(raw).spaced.split())>1 and not (KNOWLEDGE.search(raw) or FOLLOWUP.search(raw) or INSTRUCTION.search(raw) or re.search(r'\d|https?://',raw)):
+            try:prediction=social_router.classify(raw)
+            except Exception as exc:
+                diagnostic_error('classifier','CLASSIFIER_ERROR',exc);prediction=None
+            if prediction and ((not FACTUAL.search(raw) and not REQUEST.search(raw)) or SELF_SOCIAL.search(raw)):
+                return DialogueRoute(prediction[0],method='semantic',score=prediction[1])
         return DialogueRoute('knowledge',text,method='spelling_confirmation',score=min((c.confidence for c in plan.corrections),default=None))
     query, acknowledgement = social_edges(text)
     if query != text:
