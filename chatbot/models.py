@@ -12,6 +12,26 @@ Models:
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils import timezone
+from uuid import uuid4
+
+
+class CampusMapNode(models.Model):
+    """Named map pins added by administrators, using percentage coordinates."""
+    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+    name = models.CharField(max_length=120)
+    x = models.FloatField()
+    y = models.FloatField()
+
+    class Meta:
+        ordering = ['name']
+        constraints = [
+            models.UniqueConstraint(models.functions.Lower('name'), name='unique_campus_node_name'),
+            models.CheckConstraint(check=models.Q(x__gte=0, x__lte=100, y__gte=0, y__lte=100),
+                                   name='campus_node_coordinates_in_bounds'),
+        ]
+
+    def __str__(self):
+        return self.name
 
 
 def invalidate_changed_embedding(instance, kwargs, fields):

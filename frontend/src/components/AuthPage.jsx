@@ -43,7 +43,7 @@ export default function AuthPage({ onLogin, onNavigateRegister }) {
   };
 
   return (
-    <>
+    <div className="auth-page">
       <nav className="navbar">
         <a href="#" className="brand">
           <img 
@@ -155,8 +155,8 @@ export default function AuthPage({ onLogin, onNavigateRegister }) {
       </div>
 
       <footer className="footer">
-        &copy; {new Date().getFullYear()} Saint Paul University Surigao. All Rights Reserved.
+        <p>&copy; {new Date().getFullYear()} Saint Paul University Surigao. All Rights Reserved.</p>
       </footer>
-    </>
+    </div>
   );
 }
