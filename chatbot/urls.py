@@ -6,6 +6,7 @@ URL patterns for chatbot application endpoints.
 
 from django.urls import path
 from . import views
+from .map_node_views import campus_map_nodes
 
 urlpatterns = [
     # Frontend Pages
@@ -46,5 +47,6 @@ urlpatterns = [
     path('api/profile', views.update_profile, name='api_profile'),
     
     # Campus Navigation API
+    path('api/navigation/nodes/', campus_map_nodes, name='campus_map_nodes'),
     path('api/navigation/route/', views.calculate_campus_route, name='calculate_campus_route'),
 ]

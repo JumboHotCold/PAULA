@@ -270,8 +270,19 @@ html[data-theme='dark'] .error-message {
 /* =========================================
    LANDING PAGE (AuthPage.jsx)
    ========================================= */
+.auth-page {
+    --auth-brand-background: linear-gradient(135deg, #0A4D2E 0%, #083d25 100%);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+    width: 100%;
+}
+html[data-theme='dark'] .auth-page {
+    --auth-brand-background: linear-gradient(135deg, #064E3B 0%, #022C22 100%);
+}
 .navbar {
-    background-color: var(--color-spus-green);
+    background: var(--auth-brand-background);
     border-bottom: 2px solid var(--color-spus-gold);
     padding: 15px 40px;
     display: flex;
@@ -378,7 +389,7 @@ html[data-theme='dark'] .landing-card {
     background-color: rgba(16, 185, 129, 0.1);
 }
 .guest-section {
-    background: linear-gradient(135deg, var(--spus-green) 0%, #083d25 100%);
+    background: var(--auth-brand-background);
     color: #ffffff;
     padding: 50px;
     display: flex;
@@ -386,9 +397,6 @@ html[data-theme='dark'] .landing-card {
     justify-content: center;
     position: relative;
     overflow: hidden;
-}
-html[data-theme='dark'] .guest-section {
-    background: linear-gradient(135deg, #064E3B 0%, #022C22 100%);
 }
 .guest-section::before {
     content: "";
@@ -450,6 +458,9 @@ html[data-theme='dark'] .guest-section {
     text-align: center;
 }
 .footer {
+    width: 100%;
+    display: grid;
+    place-items: center;
     background-color: var(--color-surface);
     padding: 20px;
     text-align: center;
@@ -457,6 +468,12 @@ html[data-theme='dark'] .guest-section {
     color: var(--color-text-muted);
     border-top: 1px solid var(--color-border);
     flex-shrink: 0;
+}
+.footer p {
+    margin: 0;
+    max-width: 100%;
+    line-height: 1.6;
+    text-wrap: balance;
 }
 
 @media (max-width: 768px) {

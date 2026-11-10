@@ -17,6 +17,9 @@ CATEGORY_LABELS = {
 # Deliberately exclude ambiguous aliases such as "it", "dean", "payment",
 # "scholarship", and "community". IDs match frontend CAMPUS_NODES.
 DESTINATIONS = {
+    'cbma': ('College of Business Management and Accountancy', ('cbma', 'college of business management and accountancy', 'business management', 'accountancy')),
+    'chs': ('College of Health Sciences', ('chs', 'college of health sciences', 'health sciences', 'nursing')),
+    'maclab': ('MacLab', ('maclab', 'mac lab', 'mac laboratory')),
     'registrar_office': ('Registrar Office', ('registrar', 'registrar office', 'registrars office', 'registration office')),
     'finance_office': ('Finance Office', ('finance office', 'finance', 'cashier', 'accounting office')),
     'guidance_office': ('Guidance Office', ('guidance', 'guidance office', 'counseling office')),
@@ -33,7 +36,7 @@ DESTINATIONS = {
     'open_court': ('Open Court', ('open court', 'court', 'basketball court')),
     'student_lounge_upper': ('Student Lounge Upper', ('student lounge upper', 'upper lounge')),
     'student_lounge_lower': ('Student Lounge Lower', ('student lounge lower', 'lower lounge')),
-    'cfo': ('CFO', ('cfo', 'campus front office')),
+    'cfo': ('PRISM (CFO)', ('prism', 'prism cfo', 'cfo', 'campus front office')),
     'ccje': ('College of Criminal Justice Education', ('ccje', 'criminal justice', 'criminology')),
     'ceit': ('College of Engineering and Information Technology', ('ceit', 'engineering', 'information technology')),
     'community_dev': ('Community Development Services', ('community development', 'community development services')),

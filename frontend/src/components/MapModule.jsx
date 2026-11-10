@@ -1,20 +1,14 @@
-import React, { useState, useRef, useCallback, useEffect } from 'react';
+import React, { useState, useRef, useCallback, useEffect, useMemo } from 'react';
 import { CAMPUS_NODES, resolveLocationFromText } from '../data/campusGraph';
-import { fetchCampusRoute, sessionStatus } from '../api/chatApi';
+import { fetchCampusRoute, sessionStatus, fetchCampusNodes, createCampusNode } from '../api/chatApi';
 import MaterialIcon from './MaterialIcon';
+import CampusLocationIcon from './CampusLocationIcon';
+import { campusLocationChoices, sortCampusLocations } from '../data/campusPresentation';
 import useMapViewport from '../hooks/useMapViewport';
 
 // =============================================================================
 // NODE TYPE ICONS
 // =============================================================================
-const TYPE_ICONS = {
-  office: 'business',
-  building: 'apartment',
-  facility: 'build',
-  landmark: 'location_on',
-  college: 'school',
-};
-
 const TYPE_COLORS = {
   office: '#2563eb',
   building: '#7c3aed',
@@ -27,6 +21,17 @@ const TYPE_COLORS = {
 // MapModule Component
 // =============================================================================
 export default function MapModule({ className = "", destination = null, user = null }) {
+  const [customNodes, setCustomNodes] = useState({});
+  const nodes = useMemo(() => ({ ...CAMPUS_NODES, ...customNodes }), [customNodes]);
+  const [nodesError, setNodesError] = useState('');
+  const [nodesAttempt, setNodesAttempt] = useState(0);
+  const [nodeName, setNodeName] = useState('');
+  const [placingNode, setPlacingNode] = useState(false);
+  const [newNodePosition, setNewNodePosition] = useState(null);
+  const [nodeMessage, setNodeMessage] = useState('');
+  const [nodeError, setNodeError] = useState('');
+  const [savingNode, setSavingNode] = useState(false);
+  const savingNodeRef = useRef(false);
   const [verifiedAdmin, setVerifiedAdmin] = useState(null);
   const account = user?.id;
   const eligibleAdmin = user?.type === 'ADMIN' && user?.is_superuser === true;
@@ -62,9 +67,9 @@ export default function MapModule({ className = "", destination = null, user = n
   
   // ── Coordinate Mapper State ──
   const [mapperCoords, setMapperCoords] = useState(() => {
-    // Initialize from CAMPUS_NODES
+    // Initialize from nodes
     const coords = {};
-    Object.entries(CAMPUS_NODES).forEach(([id, node]) => {
+    Object.entries(nodes).forEach(([id, node]) => {
       coords[id] = { x: node.x, y: node.y };
     });
     return coords;
@@ -73,18 +78,67 @@ export default function MapModule({ className = "", destination = null, user = n
   
   const imgRef = useRef(null);
 
+  useEffect(() => {
+    let cancelled = false;
+    setNodesError('');
+    fetchCampusNodes().then(saved => {
+      if (cancelled) return;
+      setCustomNodes(current => ({ ...current, ...Object.fromEntries(saved.map(node => [node.id, node])) }));
+      setMapperCoords(current => ({ ...current, ...Object.fromEntries(
+        saved.map(node => [node.id, { x: node.x, y: node.y }])
+      ) }));
+    }).catch(error => { if (!cancelled) setNodesError(error.message); });
+    return () => { cancelled = true; };
+  }, [nodesAttempt]);
+
+  useEffect(() => {
+    if (mode !== 'mapper') {
+      setPlacingNode(false); setNewNodePosition(null); setActiveMapperNode(null);
+      setNodeName(''); setNodeError(''); setNodeMessage('');
+    }
+  }, [mode, account]);
+
+  const beginNewNode = event => {
+    event.preventDefault();
+    if (!canUseMapTools || savingNodeRef.current) return;
+    const name = nodeName.trim().replace(/\s+/g, ' ');
+    if (!name || Object.values(nodes).some(node => node.name.toLowerCase() === name.toLowerCase())) {
+      setNodeError(name ? 'A location with this name already exists.' : 'Enter a node name.');
+      return;
+    }
+    setNodeName(name); setNodeError(''); setNodeMessage('');
+    setActiveMapperNode(null); setNewNodePosition(null); setPlacingNode(true);
+  };
+
+  const saveNewNode = async () => {
+    if (!canUseMapTools || !newNodePosition || savingNodeRef.current) return;
+    savingNodeRef.current = true;
+    setSavingNode(true); setNodeError('');
+    try {
+      const node = await createCampusNode({ name: nodeName.trim(), ...newNodePosition });
+      setCustomNodes(current => ({ ...current, [node.id]: node }));
+      setMapperCoords(current => ({ ...current, [node.id]: { x: node.x, y: node.y } }));
+      setNewNodePosition(null); setPlacingNode(false); setNodeName('');
+      setNodeMessage(`${node.name} was saved and is available on the map.`);
+    } catch (error) {
+      setNodeError(error.message);
+    } finally {
+      savingNodeRef.current = false; setSavingNode(false);
+    }
+  };
+
   // ── Sync destination prop ──
   useEffect(() => {
     if (destination) {
-      const resolvedId = CAMPUS_NODES[destination] ? destination : resolveLocationFromText(destination);
-      if (CAMPUS_NODES[resolvedId]) {
+      const resolvedId = nodes[destination] ? destination : Object.values(customNodes).find(node => node.name.toLowerCase() === destination.toLowerCase())?.id || resolveLocationFromText(destination);
+      if (nodes[resolvedId]) {
         setSelectedDestination(resolvedId);
         setShowOriginPicker(true);
         setOrigin(null);
         setPathResult(null);
       }
     }
-  }, [destination]);
+  }, [destination, nodes, customNodes]);
 
   // ── Calculate path when origin & destination are both set ──
   useEffect(() => {
@@ -95,8 +149,8 @@ export default function MapModule({ className = "", destination = null, user = n
         setRouteError('');
         setPathResult(null);
         try {
-          const start = CAMPUS_NODES[origin];
-          const end = CAMPUS_NODES[selectedDestination];
+          const start = nodes[origin];
+          const end = nodes[selectedDestination];
           
           if (!start || !end) return;
           
@@ -129,7 +183,7 @@ export default function MapModule({ className = "", destination = null, user = n
     
     getRoute();
     return () => { cancelled = true; };
-  }, [origin, selectedDestination, routeAttempt]);
+  }, [origin, selectedDestination, routeAttempt, nodes]);
 
   // ── Image click handler ──
   const handleImageClick = useCallback((e) => {
@@ -140,6 +194,10 @@ export default function MapModule({ className = "", destination = null, user = n
     const xPercent = parseFloat(((x / rect.width) * 100).toFixed(2));
     const yPercent = parseFloat(((y / rect.height) * 100).toFixed(2));
 
+    if (mode === 'mapper' && placingNode && !savingNodeRef.current) {
+      setNewNodePosition({ x: xPercent, y: yPercent });
+      return;
+    }
     if (mode === 'mapper' && activeMapperNode) {
       // Save coordinate for active node
       setMapperCoords(prev => ({
@@ -148,7 +206,7 @@ export default function MapModule({ className = "", destination = null, user = n
       }));
       
       // Advance to next unmapped node
-      const nodeIds = Object.keys(CAMPUS_NODES);
+      const nodeIds = Object.keys(nodes);
       const currentIdx = nodeIds.indexOf(activeMapperNode);
       const nextUnmapped = nodeIds.find((id, idx) => {
         if (idx <= currentIdx) return false;
@@ -157,7 +215,7 @@ export default function MapModule({ className = "", destination = null, user = n
       });
       setActiveMapperNode(nextUnmapped || null);
     }
-  }, [mode, activeMapperNode, mapperCoords, viewport.moved]);
+  }, [mode, activeMapperNode, mapperCoords, viewport.moved, placingNode, nodes]);
 
   // ── Node click for navigation ──
   const handleNodeClick = useCallback((nodeId) => {
@@ -190,8 +248,8 @@ export default function MapModule({ className = "", destination = null, user = n
     if (!canUseMapTools) return;
     const output = {};
     Object.entries(mapperCoords).forEach(([id, coords]) => {
-      if (coords.x !== 0 || coords.y !== 0) {
-        output[id] = coords;
+      if (customNodes[id] || coords.x !== 0 || coords.y !== 0) {
+        output[id] = customNodes[id] ? { ...customNodes[id], ...coords } : coords;
       }
     });
     navigator.clipboard.writeText(JSON.stringify(output, null, 2));
@@ -199,28 +257,23 @@ export default function MapModule({ className = "", destination = null, user = n
   };
 
   // ── Helper: check if node is a waypoint (invisible routing node) ──
-  const isWaypoint = (nodeId) => CAMPUS_NODES[nodeId]?.type === 'waypoint';
+  const isWaypoint = (nodeId) => nodes[nodeId]?.type === 'waypoint';
 
   // ── Filter nodes by search (excluding waypoints from UI) ──
-  const filteredNodes = Object.values(CAMPUS_NODES).filter(node =>
-    node.type !== 'waypoint' && (
-      node.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      node.aliases.some(a => a.toLowerCase().includes(searchQuery.toLowerCase()))
-    )
-  );
+  const filteredNodes = campusLocationChoices(nodes, searchQuery);
 
   // ── Check if coordinates are mapped ──
   const hasCoordinates = (nodeId) => {
-    const node = CAMPUS_NODES[nodeId];
-    return node && (node.x !== 0 || node.y !== 0);
+    const node = nodes[nodeId];
+    return node && (customNodes[nodeId] || node.x !== 0 || node.y !== 0);
   };
 
-  // Use mapper coordinates if in mapper mode, otherwise use CAMPUS_NODES
+  // Use mapper coordinates if in mapper mode, otherwise use nodes
   const getNodeCoords = (nodeId) => {
     if (mode === 'mapper') {
       return mapperCoords[nodeId] || { x: 0, y: 0 };
     }
-    return { x: CAMPUS_NODES[nodeId]?.x || 0, y: CAMPUS_NODES[nodeId]?.y || 0 };
+    return { x: nodes[nodeId]?.x || 0, y: nodes[nodeId]?.y || 0 };
   };
 
   // ── Get path polyline points ──
@@ -232,8 +285,9 @@ export default function MapModule({ className = "", destination = null, user = n
       .join(' ');
   };
 
-  const mappedCount = Object.values(mapperCoords).filter(c => c.x !== 0 || c.y !== 0).length;
-  const totalCount = Object.keys(CAMPUS_NODES).length;
+  const visibleNodes = sortCampusLocations(nodes);
+  const mappedCount = visibleNodes.filter(node => customNodes[node.id] || mapperCoords[node.id]?.x || mapperCoords[node.id]?.y).length;
+  const totalCount = visibleNodes.length;
 
   return (
     <div className={`campus-nav-container ${className}`}>
@@ -247,6 +301,7 @@ export default function MapModule({ className = "", destination = null, user = n
           <button
             className={`campus-nav-mode-btn ${mode === 'mapper' ? 'active' : ''}`}
             onClick={() => setMode(mode === 'mapper' ? 'navigate' : 'mapper')}
+            disabled={savingNode}
             aria-pressed={mode === 'mapper'}
             style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}
           >
@@ -257,6 +312,9 @@ export default function MapModule({ className = "", destination = null, user = n
 
       {/* ── Map Area ── */}
       <div className="campus-nav-map-area">
+        {nodesError && <div className="campus-nav-nodes-error" role="alert">
+          {nodesError} <button type="button" onClick={() => setNodesAttempt(value => value + 1)}>Try again</button>
+        </div>}
         <div className="campus-nav-zoom-controls" role="group" aria-label="Map zoom controls">
           <span className="campus-nav-touch-hint">Drag to move · Pinch or use + / −</span>
           <button type="button" aria-label="Zoom out" disabled={viewport.zoom <= 1} onClick={() => viewport.zoomAt(viewport.zoom - .5)}>−</button>
@@ -272,7 +330,7 @@ export default function MapModule({ className = "", destination = null, user = n
           {/* The map image */}
           <img
             ref={imgRef}
-            src="/images/2D_Mapping/ST.PAUL MAP.png"
+            src="/images/2D_Mapping/ST.PAUL-2D MAP.jpg"
             alt="SPUS Campus Map"
             className="campus-nav-map-img"
             onClick={handleImageClick}
@@ -309,10 +367,10 @@ export default function MapModule({ className = "", destination = null, user = n
             )}
 
             {/* Node dots */}
-            {Object.values(CAMPUS_NODES).map(node => {
+            {Object.values(nodes).map(node => {
               if (node.type === 'waypoint') return null; // Hide corridor waypoints
               const coords = getNodeCoords(node.id);
-              if (coords.x === 0 && coords.y === 0) return null;
+              if (!customNodes[node.id] && coords.x === 0 && coords.y === 0) return null;
 
               const isOrigin = origin === node.id;
               const isDest = selectedDestination === node.id;
@@ -384,11 +442,18 @@ export default function MapModule({ className = "", destination = null, user = n
                     onFocus={() => setHoveredNode(node.id)} onBlur={() => setHoveredNode(null)}
                     onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleNodeClick(node.id); } }}
                     onClick={(e) => { e.stopPropagation(); if (!viewport.moved.current) handleNodeClick(node.id); }}
-                    style={{ cursor: 'pointer' }}
+                    style={{ cursor: 'pointer', pointerEvents: mode === 'mapper' ? 'none' : 'auto' }}
                   />
                 </g>
               );
             })}
+
+            {mode === 'mapper' && newNodePosition && (
+              <circle data-map-draft="true" cx={newNodePosition.x} cy={newNodePosition.y}
+                r={1} fill="#2563eb" stroke="white" strokeWidth="0.25" style={{ pointerEvents: 'none' }}>
+                <title>{nodeName} (unsaved)</title>
+              </circle>
+            )}
 
             {/* Waypoint numbers on path (only for real locations, not corridor bends) */}
             {/* The python backend does not currently output turn-by-turn text nodes. */}
@@ -397,8 +462,8 @@ export default function MapModule({ className = "", destination = null, user = n
           {/* ── Hover tooltip (not for waypoints) ── */}
           {hoveredNode && !isWaypoint(hoveredNode) && (() => {
             const coords = getNodeCoords(hoveredNode);
-            const node = CAMPUS_NODES[hoveredNode];
-            if (coords.x === 0 && coords.y === 0) return null;
+            const node = nodes[hoveredNode];
+            if (!customNodes[node.id] && coords.x === 0 && coords.y === 0) return null;
             return (
               <div
                 className="campus-nav-tooltip"
@@ -409,7 +474,7 @@ export default function MapModule({ className = "", destination = null, user = n
                 }}
               >
                 <span className="campus-nav-tooltip-icon">
-                  <MaterialIcon name={TYPE_ICONS[node.type] || 'location_on'} size={15} color={TYPE_COLORS[node.type]} />
+                  <CampusLocationIcon node={node} size={18} color={TYPE_COLORS[node.type]} />
                 </span>
                 <span className="campus-nav-tooltip-name">{node.name}</span>
               </div>
@@ -429,7 +494,7 @@ export default function MapModule({ className = "", destination = null, user = n
             </span>
             <div>
               <div className="campus-nav-origin-dest-label">
-                Destination: <strong>{CAMPUS_NODES[selectedDestination]?.name}</strong>
+                Destination: <strong>{nodes[selectedDestination]?.name}</strong>
               </div>
               <div className="campus-nav-origin-prompt">Where are you right now?</div>
             </div>
@@ -458,7 +523,7 @@ export default function MapModule({ className = "", destination = null, user = n
                 onClick={() => setOrigin(node.id)}
               >
                 <span className="campus-nav-location-item-icon">
-                  <MaterialIcon name={TYPE_ICONS[node.type] || 'location_on'} size={15} color={TYPE_COLORS[node.type]} />
+                  <CampusLocationIcon node={node} size={20} color={TYPE_COLORS[node.type]} />
                 </span>
                 <span>{node.name}</span>
               </button>
@@ -503,7 +568,7 @@ export default function MapModule({ className = "", destination = null, user = n
                   setSearchQuery('');
                 }}
               >
-                <span className="campus-nav-location-item-icon"><MaterialIcon name={TYPE_ICONS[node.type] || 'location_on'} size={18} color={TYPE_COLORS[node.type]} /></span>
+                <span className="campus-nav-location-item-icon"><CampusLocationIcon node={node} size={20} color={TYPE_COLORS[node.type]} /></span>
                 <span>{node.name}</span>
               </button>
             ))}
@@ -522,7 +587,7 @@ export default function MapModule({ className = "", destination = null, user = n
             <div className="campus-nav-directions-summary">
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
                 <MaterialIcon name="location_on" size={15} color="var(--spus-gold)" />
-                {CAMPUS_NODES[origin]?.name} → {CAMPUS_NODES[selectedDestination]?.name}
+                {nodes[origin]?.name} → {nodes[selectedDestination]?.name}
               </span>
               <span className="campus-nav-directions-time">
                 Route ready · Follow the highlighted path
@@ -560,30 +625,53 @@ export default function MapModule({ className = "", destination = null, user = n
           </div>
           
           <p className="campus-nav-mapper-instructions">
-            {activeMapperNode 
-              ? <>Click on the map to place <strong>{CAMPUS_NODES[activeMapperNode]?.name}</strong></>
+            {placingNode ? <>Click on the map to place <strong>{nodeName}</strong>. Click again to adjust it, then save.</> : activeMapperNode
+              ? <>Click on the map to place <strong>{nodes[activeMapperNode]?.name}</strong></>
               : 'Select a node below, then click the map to set its position.'
             }
           </p>
-          <p className="campus-nav-mapper-instructions">Preview and export only. Changes are not saved automatically; apply the exported coordinates to the map configuration and verify routing before publishing.</p>
+          <p className="campus-nav-mapper-instructions">New nodes are saved for everyone. Moving existing pins here is a preview; export coordinates to apply those changes.</p>
+
+          <form className="campus-nav-add-node" onSubmit={beginNewNode}>
+            <label htmlFor="campus-node-name">New node name</label>
+            <input id="campus-node-name" value={nodeName} maxLength={120} required
+              placeholder="e.g. Admissions Office" disabled={placingNode || savingNode}
+              onChange={event => { setNodeName(event.target.value); setNodeError(''); setNodeMessage(''); }} />
+            {!placingNode ? <button type="submit" disabled={savingNode}>Add node</button> : (
+              <div className="campus-nav-add-node-actions">
+                <button type="button" disabled={!newNodePosition || savingNode} onClick={saveNewNode}>
+                  {savingNode ? 'Saving...' : 'Save node'}
+                </button>
+                <button type="button" disabled={savingNode} onClick={() => {
+                  setPlacingNode(false); setNewNodePosition(null); setNodeError('');
+                }}>Cancel</button>
+              </div>
+            )}
+            {nodeError && <p role="alert">{nodeError}</p>}
+            {nodeMessage && <p role="status">{nodeMessage}</p>}
+          </form>
 
           <div className="campus-nav-mapper-list">
-            {Object.values(CAMPUS_NODES)
-              .filter(node => node.type !== 'waypoint') // Hide corridor waypoints from mapper
+            {visibleNodes
               .map(node => {
               const coords = mapperCoords[node.id];
-              const isMapped = coords && (coords.x !== 0 || coords.y !== 0);
+              const isMapped = coords && (customNodes[node.id] || coords.x !== 0 || coords.y !== 0);
               const isActive = activeMapperNode === node.id;
               
               return (
                 <button
                   key={node.id}
                   className={`campus-nav-mapper-item ${isActive ? 'active' : ''} ${isMapped ? 'mapped' : ''}`}
-                  onClick={() => setActiveMapperNode(node.id)}
+                  disabled={savingNode}
+                  onClick={() => {
+                    setPlacingNode(false); setNewNodePosition(null); setNodeError(''); setNodeMessage('');
+                    setActiveMapperNode(node.id);
+                  }}
                 >
                   <span className="campus-nav-mapper-status" style={{ display: 'flex', alignItems: 'center' }}>
                     <MaterialIcon name={isMapped ? "check_circle" : "circle"} size={14} color={isMapped ? "#10B981" : "#D1D5DB"} />
                   </span>
+                  <CampusLocationIcon node={node} size={18} color={TYPE_COLORS[node.type]} />
                   <span className="campus-nav-mapper-name">{node.name}</span>
                   {isMapped && (
                     <span className="campus-nav-mapper-coords">

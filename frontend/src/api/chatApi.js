@@ -62,6 +62,27 @@ export async function sessionStatus() {
   return response.json();
 }
 
+export async function fetchCampusNodes() {
+  const response = await fetch('/api/navigation/nodes/', { credentials: 'omit' });
+  if (!response.ok) throw new Error('Saved map locations could not be loaded.');
+  return (await response.json()).nodes;
+}
+
+export async function createCampusNode(node) {
+  await ensureCsrfToken();
+  const response = await fetch('/api/navigation/nodes/', {
+    method: 'POST', credentials: 'include',
+    headers: { 'Content-Type': 'application/json', 'X-CSRFToken': getCookie('csrftoken') },
+    body: JSON.stringify(node),
+  });
+  const data = await response.json();
+  if (!response.ok) {
+    const detail = data.name?.[0] || data.error;
+    throw new Error(detail || 'The node could not be saved. Please try again.');
+  }
+  return data;
+}
+
 export async function sendMessage(message, conversationId = null, history = [], contextToken = null, mode = 'guest', chatSessionId = null, accountId = null, askedQuestions = []) {
   const requestStarted = globalThis.performance?.now?.();
   const csrfToken = getCookie('csrftoken');

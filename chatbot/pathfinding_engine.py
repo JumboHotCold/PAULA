@@ -5,13 +5,14 @@ from scipy.spatial import cKDTree
 import time
 
 class CampusPathfinder:
-    def __init__(self, pathway_img_path, base_map_path, scale=4):
+    def __init__(self, pathway_img_path, base_map_path, scale=4, horizontal_alignment=None):
         """
         Initializes the pathfinder.
         scale: downsampling factor (4 means 4500px -> 1125px)
         """
         self.base_map_path = base_map_path
         self.scale = scale
+        self.horizontal_alignment = horizontal_alignment
         
         # Step 1 & 2: Load mask and create Grid
         print(f"Initializing Routing Grid (Downsampled {scale}x)...")
@@ -42,6 +43,12 @@ class CampusPathfinder:
         upper_green = np.array([85, 255, 255])
         
         mask = cv2.inRange(hsv, lower_green, upper_green)
+        if self.horizontal_alignment is not None:
+            # Align the existing pathways to the updated drawing's margins.
+            # Keep the source pathway image and corridor layout unchanged.
+            factor, offset_percent = self.horizontal_alignment
+            matrix = np.float32([[factor, 0, w_orig * offset_percent / 100], [0, 1, 0]])
+            mask = cv2.warpAffine(mask, matrix, (w_orig, h_orig), flags=cv2.INTER_NEAREST)
         
         # BRIDGE GAPS aggressively before downsampling
         gap_bridge_kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (25, 25))
@@ -99,12 +106,20 @@ class CampusPathfinder:
         directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
         diagonals = [(-1, -1), (-1, 1), (1, -1), (1, 1)]
         rows, cols = self.grid.shape
+        closed = set()
+        # The smallest step cost is 0.2. Use an admissible octile heuristic
+        # so a settled node never needs to be expanded again.
+        min_cost = float(np.min(2.0 * (1.1 - self.dist_map[self.grid > 0])))
         
         def h(x1, y1, x2, y2):
-            return np.sqrt((x1 - x2)**2 + (y1 - y2)**2)
+            dx, dy = abs(x1 - x2), abs(y1 - y2)
+            return min_cost * (max(dx, dy) + 0.414 * min(dx, dy))
             
         while pq:
             _, g, y, x, parent = heapq.heappop(pq)
+            if (y, x) in closed or g > g_score[(y, x)]:
+                continue
+            closed.add((y, x))
             
             if (y, x) == (en_y, en_x):
                 path = []
@@ -118,7 +133,7 @@ class CampusPathfinder:
             for dy, dx in directions + diagonals:
                 ny, nx = y + dy, x + dx
                 
-                if 0 <= ny < rows and 0 <= nx < cols and self.grid[ny, nx] == 1:
+                if 0 <= ny < rows and 0 <= nx < cols and self.grid[ny, nx] == 1 and (ny, nx) not in closed:
                     weight = 1.414 if (dy != 0 and dx != 0) else 1.0
                     cost_factor = 2.0 * (1.1 - self.dist_map[ny, nx]) 
                     
@@ -140,7 +155,11 @@ class CampusPathfinder:
         if img is None or not path:
             return False
             
-        pts = np.array(path, np.int32)
+        # Routing pixels use the mask resolution; the drawing can be larger.
+        orig_w, orig_h = self.orig_size
+        image_h, image_w = img.shape[:2]
+        pts = np.array([(x * image_w / orig_w, y * image_h / orig_h)
+                        for x, y in path], np.int32)
         pts = pts.reshape((-1, 1, 2))
         
         cv2.polylines(img, [pts], isClosed=False, color=(0, 0, 255), thickness=10)

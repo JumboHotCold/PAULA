@@ -5,6 +5,22 @@ import { userFromLogin, userFromSession, restoreIdentity } from './authIdentity.
 const admin = { authenticated: true, id: 'admin-fixture', is_superuser: true };
 const guest = { type: 'GUEST', id: null, is_superuser: true };
 
+test('the public homepage requires an access choice despite saved guest, student, or admin profiles', () => {
+  const studentSession = { authenticated: true, id: 'S-1', is_superuser: false };
+  for (const [stored, session] of [
+    [guest, { authenticated: false }],
+    [guest, null],
+    [guest, admin],
+    [{ type: 'STUDENT', id: 'S-1' }, studentSession],
+    [{ type: 'ADMIN', id: admin.id }, admin],
+  ]) {
+    const identity = restoreIdentity(stored, session, false, false);
+    assert.equal(identity.user, null);
+    assert.equal(identity.availableAdmin?.id || null, session?.is_superuser ? admin.id : null);
+  }
+  assert.equal(restoreIdentity(guest, admin, true, false).user.type, 'ADMIN');
+});
+
 test('both login forms recognize server-confirmed superusers immediately', () => {
   assert.equal(userFromLogin({ account_id: admin.id, is_superuser: true }, 'fallback').type, 'ADMIN');
   assert.equal(userFromLogin({ student_id: 'S-1', is_superuser: false }, 'fallback').type, 'STUDENT');

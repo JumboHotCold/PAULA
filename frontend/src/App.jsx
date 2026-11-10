@@ -158,7 +158,7 @@ export default function App() {
       let session = null;
       try { session = await sessionStatus(); } catch { /* No verified privileged identity. */ }
       if (cancelled || epoch !== chatEpoch.current) return;
-      const identity = restoreIdentity(stored, session, adminRoute);
+      const identity = restoreIdentity(stored, session, adminRoute, false);
       setAvailableAdmin(identity.availableAdmin);
       if (identity.user) {
         localStorage.setItem('paulibot_user', JSON.stringify(identity.user));

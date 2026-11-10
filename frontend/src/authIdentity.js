@@ -16,11 +16,13 @@ export function userFromLogin(data, fallbackId) {
   return userFromSession({ ...data, authenticated: true, id: data.account_id || data.student_id || fallbackId });
 }
 
-export function restoreIdentity(stored, session, adminRoute = false) {
+export function restoreIdentity(stored, session, adminRoute = false, restoreChat = true) {
   const account = userFromSession(session, stored);
   const availableAdmin = account?.is_superuser ? account : null;
   // Opening the administrative route is an explicit request to use that session.
   if (adminRoute && availableAdmin) return { user: availableAdmin, availableAdmin: null };
+  // The public homepage requires an explicit Student or Visitor Access choice.
+  if (!restoreChat) return { user: null, availableAdmin };
   if (adminRoute && stored?.type === 'GUEST') return { user: null, availableAdmin: null };
   if (stored?.type === 'GUEST') {
     return { user: { type: 'GUEST', id: null, name: 'Guest', is_superuser: false }, availableAdmin };
