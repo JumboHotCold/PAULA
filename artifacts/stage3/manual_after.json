@@ -1,0 +1,1203 @@
+{
+  "rows": [
+    {
+      "query": "tel me abt urself",
+      "normalized": "tel me about yourself",
+      "intent": "identity",
+      "method": "local_phrase",
+      "reason_code": "SOCIAL",
+      "http_status": 200,
+      "status": "social",
+      "reply": "Hi! I'm PAULA, the Paulinian Artificial User Support and Learning Assistant. I'm an AI assistant for St. Paul University Surigao. I can help you find information about programs, enrollment, university offices, and campus navigation, or chat for a bit. For university questions, I use the stored SPUS sources. What would you like to know?\n\n[SUGGESTIONS: \"What programs are offered at SPUS?\" | \"How do I enroll at SPUS?\" | \"Where is the Registrar office?\"]",
+      "mode": "identity",
+      "sources": [],
+      "top_source": {},
+      "action": null,
+      "action_data": null,
+      "parts": [],
+      "suggestions": [
+        "What programs are offered at SPUS?",
+        "How do I enroll at SPUS?",
+        "Where is the Registrar office?"
+      ],
+      "retrieval": [],
+      "latency_ms": 42.6557339997089,
+      "trace": {
+        "event": "request_timing",
+        "request_id": "033434ff-1931-433a-8ad9-410e9df28290",
+        "worker": 9527,
+        "build_commit": "2ccb6454161808571c4c12af2e3c6cbde95a943d",
+        "route": "stage3_guest",
+        "status": 200,
+        "total_ms": 37.27,
+        "sql_count": 1,
+        "sql_ms": 7.54,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.153,
+            "self_ms": 0.153
+          },
+          "social_normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.034,
+            "self_ms": 0.034
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.378,
+            "self_ms": 0.344
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.612,
+            "self_ms": 0.081
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.009,
+            "self_ms": 0.009
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 1.416,
+            "self_ms": 0.794
+          },
+          "grounding": {
+            "calls": 5,
+            "inclusive_ms": 4.238,
+            "self_ms": 4.238
+          },
+          "structured_enrollment": {
+            "calls": 3,
+            "inclusive_ms": 5.012,
+            "self_ms": 1.598
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 34.672,
+            "self_ms": 28.836
+          }
+        },
+        "providers": []
+      },
+      "expected": "identity",
+      "passed": true
+    },
+    {
+      "query": "wat r the programs offerd",
+      "normalized": "what are the programs offered",
+      "intent": "knowledge",
+      "method": "spelling_confirmation",
+      "reason_code": "OK",
+      "http_status": 200,
+      "status": "ok",
+      "reply": "Sure—here is the information from the stored sources.\n\nSPUS offers a comprehensive range of undergraduate programs across five (5) colleges:\n\n**College of Health Sciences (4-Year Curriculum)**\n- Bachelor of Science in Nursing\n- Bachelor of Science in Psychology\n\n**College of Education, Arts and Sciences (3-Year Curriculum)**\n- Bachelor of Arts (Major in: Political Science, Philosophy, English Language, Sociology, Mass Communication)\n- Bachelor of Science in Mathematics\n- Bachelor of Science in Public Administration\n- Bachelor of Elementary Education\n- Bachelor of Secondary Education (Major in: English, Filipino, Mathematics, Sciences, Social Studies, Values Education)\n- Bachelor of Early Childhood Education\n- Bachelor of Physical Education\n\n**College of Business Management and Accountancy (4-Year Curriculum)**\n- Bachelor of Science in Accountancy\n- Bachelor of Science in Business Administration (Major in: Financial Management, Marketing Management, Human Resource Development Management)\n- Bachelor of Science in Hospitality Management\n- Bachelor of Science in Tourism Management\n- Bachelor of Science in Accounting and Information System\n- Bachelor of Science in Office Administration\n\n**College of Engineering & Information Technology (4-Year Curriculum)**\n- Bachelor of Science in Mining Engineering\n- Bachelor of Science in Civil Engineering\n- Bachelor of Science in Computer Engineering\n- Bachelor of Science in Information Technology\n\n**College of Criminal Justice Education (4-Year Curriculum)**\n- Bachelor of Science in Criminology\n- Bachelor of Forensic Science\n\n[SUGGESTIONS: \"Does SPUS offer Graduate School programs?\" | \"Why choose SPUS?\" | \"Where is the registrar office?\"]",
+      "mode": "knowledge",
+      "sources": [
+        {
+          "title": "FAQ (Academics): What programs are offered at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "top_source": {
+        "title": "FAQ (Academics): What programs are offered at SPUS?",
+        "page": null,
+        "url": null,
+        "source_type": "office",
+        "source_office": "Registrar",
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      },
+      "action": null,
+      "action_data": null,
+      "parts": [],
+      "suggestions": [
+        "Does SPUS offer Graduate School programs?",
+        "Why choose SPUS?",
+        "Where is the registrar office?"
+      ],
+      "retrieval": [
+        {
+          "record_type": "faq",
+          "record_id": 146,
+          "personnel_name": null,
+          "question": "What programs are offered at SPUS?",
+          "distance": null,
+          "supporting_sources": [],
+          "review_notes": null
+        }
+      ],
+      "latency_ms": 240.7583499989414,
+      "trace": {
+        "event": "request_timing",
+        "request_id": "2a59dbf2-5682-4ae3-81b3-520f99c5d3df",
+        "worker": 9527,
+        "build_commit": "2ccb6454161808571c4c12af2e3c6cbde95a943d",
+        "route": "stage3_guest",
+        "status": 200,
+        "total_ms": 239.17,
+        "sql_count": 21,
+        "sql_ms": 83.36,
+        "stages": {
+          "spelling_matching": {
+            "calls": 7,
+            "inclusive_ms": 0.861,
+            "self_ms": 0.861
+          },
+          "social_normalization": {
+            "calls": 4,
+            "inclusive_ms": 0.048,
+            "self_ms": 0.048
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.188,
+            "self_ms": 0.139
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.505,
+            "self_ms": 0.086
+          },
+          "structured_personnel": {
+            "calls": 4,
+            "inclusive_ms": 0.106,
+            "self_ms": 0.106
+          },
+          "exact_faq": {
+            "calls": 4,
+            "inclusive_ms": 27.402,
+            "self_ms": 26.194
+          },
+          "query_embedding": {
+            "calls": 2,
+            "inclusive_ms": 27.034,
+            "self_ms": 27.034
+          },
+          "hybrid_retrieval": {
+            "calls": 2,
+            "inclusive_ms": 135.472,
+            "self_ms": 108.439
+          },
+          "retrieval": {
+            "calls": 4,
+            "inclusive_ms": 164.902,
+            "self_ms": 1.593
+          },
+          "grounding": {
+            "calls": 50,
+            "inclusive_ms": 17.047,
+            "self_ms": 17.047
+          },
+          "spelling_evidence": {
+            "calls": 1,
+            "inclusive_ms": 158.539,
+            "self_ms": 1.806
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.173,
+            "self_ms": 0.028
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 1.108,
+            "self_ms": 1.108
+          },
+          "response_render": {
+            "calls": 1,
+            "inclusive_ms": 0.11,
+            "self_ms": 0.11
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 188.955,
+            "self_ms": 18.912
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 49.02,
+            "self_ms": 34.462
+          }
+        },
+        "providers": []
+      },
+      "expected": "evidence",
+      "passed": true
+    },
+    {
+      "query": "where is the registrr",
+      "normalized": "where is the registrar",
+      "intent": "knowledge",
+      "method": "spelling_confirmation",
+      "reason_code": "OK",
+      "http_status": 200,
+      "status": "ok",
+      "reply": "Opening the campus map for Registrar Office. Choose your starting location to calculate a route.",
+      "mode": "knowledge",
+      "sources": [],
+      "top_source": {},
+      "action": "navigate_map",
+      "action_data": {
+        "destination": "registrar_office"
+      },
+      "parts": [],
+      "suggestions": [],
+      "retrieval": [
+        {
+          "record_type": "faq",
+          "record_id": 123,
+          "personnel_name": null,
+          "question": "Where is the registrar office?",
+          "distance": 0.1948293919708749,
+          "supporting_sources": [],
+          "review_notes": null
+        },
+        {
+          "record_type": "faq",
+          "record_id": 122,
+          "personnel_name": null,
+          "question": "Where is the register?",
+          "distance": 0.22383431267243692,
+          "supporting_sources": [],
+          "review_notes": null
+        },
+        {
+          "record_type": "location",
+          "record_id": 2,
+          "personnel_name": null,
+          "question": "Where is Registrar's Office?",
+          "distance": 0.2607279886116961,
+          "supporting_sources": [],
+          "review_notes": null
+        }
+      ],
+      "latency_ms": 102.85884100085241,
+      "trace": {
+        "event": "request_timing",
+        "request_id": "18dc125d-54a4-4a5b-97d9-1563ca23a766",
+        "worker": 9527,
+        "build_commit": "2ccb6454161808571c4c12af2e3c6cbde95a943d",
+        "route": "stage3_guest",
+        "status": 200,
+        "total_ms": 80.83,
+        "sql_count": 1,
+        "sql_ms": 1.29,
+        "stages": {
+          "spelling_matching": {
+            "calls": 4,
+            "inclusive_ms": 0.674,
+            "self_ms": 0.674
+          },
+          "social_normalization": {
+            "calls": 4,
+            "inclusive_ms": 0.046,
+            "self_ms": 0.046
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.611,
+            "self_ms": 0.565
+          },
+          "social_query_embedding": {
+            "calls": 1,
+            "inclusive_ms": 13.711,
+            "self_ms": 13.711
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 14.854,
+            "self_ms": 0.306
+          },
+          "structured_personnel": {
+            "calls": 1,
+            "inclusive_ms": 0.004,
+            "self_ms": 0.004
+          },
+          "grounding": {
+            "calls": 2,
+            "inclusive_ms": 0.434,
+            "self_ms": 0.434
+          },
+          "exact_faq": {
+            "calls": 1,
+            "inclusive_ms": 4.295,
+            "self_ms": 4.071
+          },
+          "retrieval": {
+            "calls": 1,
+            "inclusive_ms": 4.524,
+            "self_ms": 0.16
+          },
+          "spelling_evidence": {
+            "calls": 1,
+            "inclusive_ms": 5.53,
+            "self_ms": 0.797
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.078,
+            "self_ms": 0.013
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.098,
+            "self_ms": 0.098
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 21.637,
+            "self_ms": 0.758
+          }
+        },
+        "providers": []
+      },
+      "expected": "navigation",
+      "passed": true
+    },
+    {
+      "query": "thank u po",
+      "normalized": "thank you po",
+      "intent": "thanks",
+      "method": "rule",
+      "reason_code": "SOCIAL",
+      "http_status": 200,
+      "status": "social",
+      "reply": "Walang anuman! Mabuti kung nakatulong.",
+      "mode": "thanks",
+      "sources": [],
+      "top_source": {},
+      "action": null,
+      "action_data": null,
+      "parts": [],
+      "suggestions": [],
+      "retrieval": [],
+      "latency_ms": 1.4815219983574934,
+      "trace": {
+        "event": "request_timing",
+        "request_id": "4559a7d4-29f7-45f1-ba7b-8356ec3dc033",
+        "worker": 9527,
+        "build_commit": "2ccb6454161808571c4c12af2e3c6cbde95a943d",
+        "route": "stage3_guest",
+        "status": 200,
+        "total_ms": 0.68,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.054,
+            "self_ms": 0.054
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.089,
+            "self_ms": 0.035
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.009,
+            "self_ms": 0.009
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.174,
+            "self_ms": 0.077
+          }
+        },
+        "providers": []
+      },
+      "expected": "thanks",
+      "passed": true
+    },
+    {
+      "query": "salamat gyud",
+      "normalized": "salamat gyud",
+      "intent": "thanks",
+      "method": "normalized_social",
+      "reason_code": "SOCIAL",
+      "http_status": 200,
+      "status": "social",
+      "reply": "Walay sapayan! Let me know if you need anything else.",
+      "mode": "thanks",
+      "sources": [],
+      "top_source": {},
+      "action": null,
+      "action_data": null,
+      "parts": [],
+      "suggestions": [],
+      "retrieval": [],
+      "latency_ms": 1.7694489979476202,
+      "trace": {
+        "event": "request_timing",
+        "request_id": "051cf94a-e6b8-4860-a42c-4b66038a743d",
+        "worker": 9527,
+        "build_commit": "2ccb6454161808571c4c12af2e3c6cbde95a943d",
+        "route": "stage3_guest",
+        "status": 200,
+        "total_ms": 0.77,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.09,
+            "self_ms": 0.09
+          },
+          "social_normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.071,
+            "self_ms": 0.071
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.145,
+            "self_ms": 0.074
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.29,
+            "self_ms": 0.055
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.007,
+            "self_ms": 0.007
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.366,
+            "self_ms": 0.069
+          }
+        },
+        "providers": []
+      },
+      "expected": "thanks",
+      "passed": true
+    },
+    {
+      "query": "salamat kaayo",
+      "normalized": "salamat kaayo",
+      "intent": "thanks",
+      "method": "normalized_social",
+      "reason_code": "SOCIAL",
+      "http_status": 200,
+      "status": "social",
+      "reply": "Walay sapayan! Let me know if you need anything else.",
+      "mode": "thanks",
+      "sources": [],
+      "top_source": {},
+      "action": null,
+      "action_data": null,
+      "parts": [],
+      "suggestions": [],
+      "retrieval": [],
+      "latency_ms": 1.4318819994514342,
+      "trace": {
+        "event": "request_timing",
+        "request_id": "76026f63-644b-4aa4-ab5a-b3b571eaa085",
+        "worker": 9527,
+        "build_commit": "2ccb6454161808571c4c12af2e3c6cbde95a943d",
+        "route": "stage3_guest",
+        "status": 200,
+        "total_ms": 0.68,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.042,
+            "self_ms": 0.042
+          },
+          "social_normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.015,
+            "self_ms": 0.015
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.064,
+            "self_ms": 0.049
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.189,
+            "self_ms": 0.083
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.007,
+            "self_ms": 0.007
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.267,
+            "self_ms": 0.071
+          }
+        },
+        "providers": []
+      },
+      "expected": "thanks",
+      "passed": true
+    },
+    {
+      "query": "maraming salamat po",
+      "normalized": "maraming salamat po",
+      "intent": "thanks",
+      "method": "rule",
+      "reason_code": "SOCIAL",
+      "http_status": 200,
+      "status": "social",
+      "reply": "Walang anuman! Mabuti kung nakatulong.",
+      "mode": "thanks",
+      "sources": [],
+      "top_source": {},
+      "action": null,
+      "action_data": null,
+      "parts": [],
+      "suggestions": [],
+      "retrieval": [],
+      "latency_ms": 1.0318799977540039,
+      "trace": {
+        "event": "request_timing",
+        "request_id": "e5521dda-3dbe-48f1-9954-78a384d5baef",
+        "worker": 9527,
+        "build_commit": "2ccb6454161808571c4c12af2e3c6cbde95a943d",
+        "route": "stage3_guest",
+        "status": 200,
+        "total_ms": 0.46,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.041,
+            "self_ms": 0.041
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.066,
+            "self_ms": 0.025
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.006,
+            "self_ms": 0.006
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.127,
+            "self_ms": 0.055
+          }
+        },
+        "providers": []
+      },
+      "expected": "thanks",
+      "passed": true
+    },
+    {
+      "query": "daghang salamat",
+      "normalized": "daghang salamat",
+      "intent": "thanks",
+      "method": "normalized_social",
+      "reason_code": "SOCIAL",
+      "http_status": 200,
+      "status": "social",
+      "reply": "Walay sapayan! Let me know if you need anything else.",
+      "mode": "thanks",
+      "sources": [],
+      "top_source": {},
+      "action": null,
+      "action_data": null,
+      "parts": [],
+      "suggestions": [],
+      "retrieval": [],
+      "latency_ms": 1.1062090015911963,
+      "trace": {
+        "event": "request_timing",
+        "request_id": "761f8a51-9908-49bc-9bf4-f2adefcd31a2",
+        "worker": 9527,
+        "build_commit": "2ccb6454161808571c4c12af2e3c6cbde95a943d",
+        "route": "stage3_guest",
+        "status": 200,
+        "total_ms": 0.47,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.038,
+            "self_ms": 0.038
+          },
+          "social_normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.01,
+            "self_ms": 0.01
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.041,
+            "self_ms": 0.031
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.11,
+            "self_ms": 0.031
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.004,
+            "self_ms": 0.004
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.17,
+            "self_ms": 0.055
+          }
+        },
+        "providers": []
+      },
+      "expected": "thanks",
+      "passed": true
+    },
+    {
+      "query": "thanks a lot",
+      "normalized": "thanks a lot",
+      "intent": "thanks",
+      "method": "rule",
+      "reason_code": "SOCIAL",
+      "http_status": 200,
+      "status": "social",
+      "reply": "You're welcome! Glad that helped.",
+      "mode": "thanks",
+      "sources": [],
+      "top_source": {},
+      "action": null,
+      "action_data": null,
+      "parts": [],
+      "suggestions": [],
+      "retrieval": [],
+      "latency_ms": 0.8421600032306742,
+      "trace": {
+        "event": "request_timing",
+        "request_id": "748f83c8-96f7-43ac-bf97-13b0c4c9496a",
+        "worker": 9527,
+        "build_commit": "2ccb6454161808571c4c12af2e3c6cbde95a943d",
+        "route": "stage3_guest",
+        "status": 200,
+        "total_ms": 0.35,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.039,
+            "self_ms": 0.039
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.063,
+            "self_ms": 0.024
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.005,
+            "self_ms": 0.005
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.116,
+            "self_ms": 0.048
+          }
+        },
+        "providers": []
+      },
+      "expected": "thanks",
+      "passed": true
+    },
+    {
+      "query": "who is the dean of ceit",
+      "normalized": "who is the dean of ceit",
+      "intent": "knowledge",
+      "method": "rule",
+      "reason_code": "OK",
+      "http_status": 200,
+      "status": "ok",
+      "reply": "Sure—here is the information from the stored sources.\n\nDr. Karen T. Plaza — Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair\n\n[SUGGESTIONS: \"What programs does the College of Education, Arts and Sciences offer?\" | \"What TVET or TESDA programs are offered?\"]",
+      "mode": "knowledge",
+      "sources": [
+        {
+          "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "page": null,
+          "url": "https://spus.edu.ph/administrator/",
+          "source_type": "website",
+          "source_office": "ACADEMIC SERVICES",
+          "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": []
+        }
+      ],
+      "top_source": {
+        "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+        "page": null,
+        "url": "https://spus.edu.ph/administrator/",
+        "source_type": "website",
+        "source_office": "ACADEMIC SERVICES",
+        "retrieved_at": "2026-10-27T14:12:30.692858+00:00",
+        "supporting_sources": [
+          {
+            "source_url": "https://spus.edu.ph/administrator/",
+            "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+            "source_type": "website",
+            "record_type": "webresource",
+            "record_id": 177,
+            "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+          }
+        ],
+        "review_notes": []
+      },
+      "action": null,
+      "action_data": null,
+      "parts": [],
+      "suggestions": [
+        "What programs does the College of Education, Arts and Sciences offer?",
+        "What TVET or TESDA programs are offered?"
+      ],
+      "retrieval": [
+        {
+          "record_type": "webresource",
+          "record_id": 90,
+          "personnel_name": "Dr. Karen T. Plaza",
+          "question": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+          "distance": null,
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 177,
+              "retrieved_at": "2026-10-27T14:12:31.060041+00:00"
+            }
+          ],
+          "review_notes": null
+        }
+      ],
+      "latency_ms": 130.44470800014096,
+      "trace": {
+        "event": "request_timing",
+        "request_id": "666e0444-49fd-4bdf-b287-5da898f82d14",
+        "worker": 9527,
+        "build_commit": "2ccb6454161808571c4c12af2e3c6cbde95a943d",
+        "route": "stage3_guest",
+        "status": 200,
+        "total_ms": 128.3,
+        "sql_count": 4,
+        "sql_ms": 26.54,
+        "stages": {
+          "spelling_matching": {
+            "calls": 3,
+            "inclusive_ms": 0.226,
+            "self_ms": 0.226
+          },
+          "social_normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.018,
+            "self_ms": 0.018
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.098,
+            "self_ms": 0.08
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.233,
+            "self_ms": 0.064
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.068,
+            "self_ms": 0.01
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.101,
+            "self_ms": 0.101
+          },
+          "grounding": {
+            "calls": 51,
+            "inclusive_ms": 16.166,
+            "self_ms": 16.166
+          },
+          "structured_personnel": {
+            "calls": 1,
+            "inclusive_ms": 78.743,
+            "self_ms": 77.051
+          },
+          "retrieval": {
+            "calls": 1,
+            "inclusive_ms": 79.084,
+            "self_ms": 0.243
+          },
+          "response_render": {
+            "calls": 1,
+            "inclusive_ms": 0.033,
+            "self_ms": 0.033
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 81.153,
+            "self_ms": 0.839
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 46.395,
+            "self_ms": 32.715
+          }
+        },
+        "providers": []
+      },
+      "expected": "evidence",
+      "passed": true
+    },
+    {
+      "query": "hi",
+      "normalized": "hi",
+      "intent": "greeting",
+      "method": "rule",
+      "reason_code": "SOCIAL",
+      "http_status": 200,
+      "status": "social",
+      "reply": "Hello! I'm PAULA. How can I help today?",
+      "mode": "greeting",
+      "sources": [],
+      "top_source": {},
+      "action": null,
+      "action_data": null,
+      "parts": [],
+      "suggestions": [],
+      "retrieval": [],
+      "latency_ms": 1.1057180017814972,
+      "trace": {
+        "event": "request_timing",
+        "request_id": "8b605693-cb7e-4f19-9ff9-5e1a550b30aa",
+        "worker": 9527,
+        "build_commit": "2ccb6454161808571c4c12af2e3c6cbde95a943d",
+        "route": "stage3_guest",
+        "status": 200,
+        "total_ms": 0.51,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.031,
+            "self_ms": 0.031
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.055,
+            "self_ms": 0.024
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.01,
+            "self_ms": 0.01
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.12,
+            "self_ms": 0.055
+          }
+        },
+        "providers": []
+      },
+      "expected": "greeting",
+      "passed": true
+    },
+    {
+      "query": "YES",
+      "normalized": "YES",
+      "intent": "affirmation",
+      "method": "rule",
+      "reason_code": "SOCIAL",
+      "http_status": 200,
+      "status": "social",
+      "reply": "Sure! What would you like help with next?",
+      "mode": "affirmation",
+      "sources": [],
+      "top_source": {},
+      "action": null,
+      "action_data": null,
+      "parts": [],
+      "suggestions": [],
+      "retrieval": [],
+      "latency_ms": 0.8813970016490202,
+      "trace": {
+        "event": "request_timing",
+        "request_id": "50da2838-26ee-408f-a430-17903bddc39e",
+        "worker": 9527,
+        "build_commit": "2ccb6454161808571c4c12af2e3c6cbde95a943d",
+        "route": "stage3_guest",
+        "status": 200,
+        "total_ms": 0.43,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 2,
+            "inclusive_ms": 0.052,
+            "self_ms": 0.052
+          },
+          "dialogue_routing": {
+            "calls": 2,
+            "inclusive_ms": 0.09,
+            "self_ms": 0.038
+          },
+          "social_reply": {
+            "calls": 1,
+            "inclusive_ms": 0.007,
+            "self_ms": 0.007
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 0.16,
+            "self_ms": 0.063
+          }
+        },
+        "providers": []
+      },
+      "expected": "affirmation",
+      "passed": true
+    },
+    {
+      "query": "what are the requirements for enrollment",
+      "normalized": "what are the requirements for enrollment",
+      "intent": "knowledge",
+      "method": "rule",
+      "reason_code": "CLARIFICATION",
+      "http_status": 200,
+      "status": "clarification",
+      "reply": "Are you enrolling as an incoming college freshman, a transferee, or an old/continuing college student?\n\nFor basic education or graduate school, please specify your level.\n\n[SUGGESTIONS: \"Incoming college freshman\" | \"Transferee student\" | \"Old/continuing college student\"]",
+      "mode": "knowledge",
+      "sources": [],
+      "top_source": {},
+      "action": null,
+      "action_data": null,
+      "parts": [],
+      "suggestions": [
+        "Incoming college freshman",
+        "Transferee student",
+        "Old/continuing college student"
+      ],
+      "retrieval": [],
+      "latency_ms": 2.5351549993501976,
+      "trace": {
+        "event": "request_timing",
+        "request_id": "f5e34718-7cc5-4045-9f2a-41bd2fe9495e",
+        "worker": 9527,
+        "build_commit": "2ccb6454161808571c4c12af2e3c6cbde95a943d",
+        "route": "stage3_guest",
+        "status": 200,
+        "total_ms": 1.87,
+        "sql_count": 0,
+        "sql_ms": 0.0,
+        "stages": {
+          "spelling_matching": {
+            "calls": 2,
+            "inclusive_ms": 0.102,
+            "self_ms": 0.102
+          },
+          "social_normalization": {
+            "calls": 4,
+            "inclusive_ms": 0.037,
+            "self_ms": 0.037
+          },
+          "social_matching": {
+            "calls": 1,
+            "inclusive_ms": 0.183,
+            "self_ms": 0.146
+          },
+          "dialogue_routing": {
+            "calls": 1,
+            "inclusive_ms": 0.33,
+            "self_ms": 0.091
+          },
+          "normalization": {
+            "calls": 1,
+            "inclusive_ms": 0.055,
+            "self_ms": 0.009
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.117,
+            "self_ms": 0.117
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 1.082,
+            "self_ms": 0.579
+          }
+        },
+        "providers": []
+      },
+      "expected": "clarification",
+      "passed": true
+    },
+    {
+      "query": "how about for transferees",
+      "normalized": "what are the requirements for enrollment (transferee college students)",
+      "intent": "knowledge",
+      "method": "rule",
+      "reason_code": "OK",
+      "http_status": 200,
+      "status": "ok",
+      "reply": "Sure—here is the information from the stored sources.\n\nRequirements for Transferee Students in Higher Education:\n1. Official Transfer Credentials (Honorable Dismissal / Transcript of Records for evaluation)\n2. Curricular Checklist from previous school\n3. Original PSA Birth Certificate\n4. Original Certificate of Good Moral Character\n5. 1 pc. 2x2 ID picture\n6. Accomplished Student Information Sheet (at SAO)\n\n[SUGGESTIONS: \"Who must approve the subject adding, dropping, or withdrawal form?\" | \"Where is the registrar office?\" | \"What college courses or programs are available?\"]",
+      "mode": "knowledge",
+      "sources": [
+        {
+          "title": "FAQ (Registrar's Office): [Registrar] What are the required documents for transferee students enrolling at SPUS?",
+          "page": null,
+          "url": null,
+          "source_type": "office",
+          "source_office": "Registrar",
+          "retrieved_at": null,
+          "supporting_sources": [],
+          "review_notes": []
+        }
+      ],
+      "top_source": {
+        "title": "FAQ (Registrar's Office): [Registrar] What are the required documents for transferee students enrolling at SPUS?",
+        "page": null,
+        "url": null,
+        "source_type": "office",
+        "source_office": "Registrar",
+        "retrieved_at": null,
+        "supporting_sources": [],
+        "review_notes": []
+      },
+      "action": null,
+      "action_data": null,
+      "parts": [],
+      "suggestions": [
+        "Who must approve the subject adding, dropping, or withdrawal form?",
+        "Where is the registrar office?",
+        "What college courses or programs are available?"
+      ],
+      "retrieval": [
+        {
+          "record_type": null,
+          "record_id": null,
+          "personnel_name": null,
+          "question": "[Registrar] What are the required documents for transferee students enrolling at SPUS?",
+          "distance": null,
+          "supporting_sources": [],
+          "review_notes": null
+        }
+      ],
+      "latency_ms": 85.71047599980375,
+      "trace": {
+        "event": "request_timing",
+        "request_id": "979467ca-a01b-4d37-bdfc-6b37e9d08d90",
+        "worker": 9527,
+        "build_commit": "2ccb6454161808571c4c12af2e3c6cbde95a943d",
+        "route": "stage3_guest",
+        "status": 200,
+        "total_ms": 84.65,
+        "sql_count": 9,
+        "sql_ms": 12.79,
+        "stages": {
+          "spelling_matching": {
+            "calls": 5,
+            "inclusive_ms": 0.729,
+            "self_ms": 0.729
+          },
+          "social_normalization": {
+            "calls": 8,
+            "inclusive_ms": 0.085,
+            "self_ms": 0.085
+          },
+          "social_matching": {
+            "calls": 2,
+            "inclusive_ms": 0.416,
+            "self_ms": 0.33
+          },
+          "dialogue_routing": {
+            "calls": 2,
+            "inclusive_ms": 0.692,
+            "self_ms": 0.145
+          },
+          "normalization": {
+            "calls": 2,
+            "inclusive_ms": 0.558,
+            "self_ms": 0.026
+          },
+          "public_vocabulary": {
+            "calls": 1,
+            "inclusive_ms": 26.468,
+            "self_ms": 26.468
+          },
+          "context_resolution": {
+            "calls": 1,
+            "inclusive_ms": 0.548,
+            "self_ms": 0.548
+          },
+          "grounding": {
+            "calls": 48,
+            "inclusive_ms": 15.373,
+            "self_ms": 15.373
+          },
+          "structured_enrollment": {
+            "calls": 1,
+            "inclusive_ms": 5.325,
+            "self_ms": 4.472
+          },
+          "retrieval": {
+            "calls": 1,
+            "inclusive_ms": 6.512,
+            "self_ms": 1.12
+          },
+          "response_render": {
+            "calls": 1,
+            "inclusive_ms": 0.032,
+            "self_ms": 0.032
+          },
+          "orchestration": {
+            "calls": 1,
+            "inclusive_ms": 36.457,
+            "self_ms": 0.92
+          },
+          "followup_suggestions": {
+            "calls": 1,
+            "inclusive_ms": 47.131,
+            "self_ms": 33.336
+          }
+        },
+        "providers": []
+      },
+      "expected": "evidence",
+      "passed": true
+    }
+  ],
+  "n": 14,
+  "passed": 14,
+  "providers_enabled": false
+}

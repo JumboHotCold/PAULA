@@ -7,7 +7,8 @@ from uuid import UUID
 
 from django.conf import settings
 from .embedding_runtime import runtime, DIMENSIONS
-from .performance import emit
+from .performance import emit, diagnostic_error
+from .build_info import build_info
 
 
 def boot_directory():
@@ -26,9 +27,11 @@ def initialize_worker(worker):
     from .views import bot
     from .rag import RAGSearcher
     runtime.web_worker = True
-    emit({'event': 'worker_initializing', 'worker': os.getpid()})
+    stamp = build_info()
+    emit({'event': 'worker_initializing', 'worker': os.getpid(), **stamp})
     worker.notify()
     social_ready = False
+    spelling_ready = False
     try:
         model = runtime.initialize()
         if bot.rag is None:
@@ -36,14 +39,19 @@ def initialize_worker(worker):
         bot.rag.model = model  # Same process singleton; no second model.
         from .dialogue import social_router
         social_router.prepare(model)
+        from .spelling import prepare_vocabulary
+        prepare_vocabulary()
+        spelling_ready = True
         social_ready = True
-    except Exception:
-        pass  # Failed workers remain explicitly unready; no request-time retry.
+    except Exception as exc:
+        diagnostic_error('startup', 'WORKER_PREPARATION_ERROR', exc)
+        # Failed workers remain explicitly unready; no request-time retry.
     worker.notify()
     directory = boot_directory()
-    record = {'worker': os.getpid(), 'ready': runtime.status == 'ready' and social_ready,
+    record = {'worker': os.getpid(), 'ready': runtime.status == 'ready' and social_ready and spelling_ready,
               'social_router_ready': social_ready,
-              'dimensions': DIMENSIONS, 'startup_ms': round((time.perf_counter()-start)*1000, 2)}
+              'spelling_vocabulary_ready': spelling_ready,
+              'dimensions': DIMENSIONS, 'startup_ms': round((time.perf_counter()-start)*1000, 2), **stamp}
     if directory is not None:
         directory.mkdir(mode=0o700, parents=True, exist_ok=True)
         path = directory/f'{os.getpid()}.json'
@@ -69,5 +77,9 @@ def readiness_state():
     elif runtime.status == 'ready':
         workers = [{'worker': os.getpid(), 'ready': True, 'dimensions': DIMENSIONS, 'startup_ms': runtime.startup_ms}]
     workers = list({record['worker']: record for record in workers}.values())
-    return {'ready': runtime.status == 'ready' and len(workers) >= expected,
+    stamp = build_info()
+    consistent = bool(stamp['build_commit']) and bool(stamp['build_source_digest']) and len(workers) >= expected and all(
+        record.get('build_commit') == stamp['build_commit'] and
+        record.get('build_source_digest') == stamp['build_source_digest'] for record in workers)
+    return {'ready': runtime.status == 'ready' and len(workers) >= expected, **stamp, 'build_consistent': consistent,
             'expected_workers': expected, 'ready_workers': len(workers), 'workers': workers}

@@ -1,16 +1,9 @@
 """Friendly framing around unchanged source excerpts; no generated facts."""
+from .conversation_config import conversation_config
 from .context_tokens import ConversationAnswer
 
-INTROS = {
-    'en': ('Sure—here is the information from the stored sources.', 'Here is what I found in the stored sources.'),
-    'fil': ('Sige—narito ang impormasyon mula sa mga nakaimbak na sanggunian.', 'Ito ang nakita ko sa mga nakaimbak na sanggunian.'),
-}
-ACKS = {
-    'greeting': {'en': 'Hi!', 'fil': 'Kumusta!'},
-    'thanks': {'en': "You're welcome!", 'fil': 'Walang anuman!'},
-    'feedback': {'en': 'Thanks for pointing that out. Here is what the stored sources show.',
-                 'fil': 'Salamat sa pagsabi. Narito ang nasa mga nakaimbak na sanggunian.'},
-}
+INTROS = conversation_config()['framing']['intros']
+ACKS = conversation_config()['framing']['acknowledgements']
 
 
 def strip_intro(text):

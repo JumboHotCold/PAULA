@@ -10,6 +10,7 @@ import re
 import time
 from .query_normalization import roles_in
 from .performance import timed
+from .compound_queries import INSTITUTION_REFERENCE, compatible_reference
 
 MAX_MESSAGES = 8
 MAX_USER_CHARS = 2000
@@ -18,7 +19,7 @@ CONTEXT_TTL = 900
 SMALLTALK = re.compile(r'^(?:hi|hello|hey|thanks|thank you|salamat|ok|okay|got it|sige|understood)[!. ]*$', re.I)
 FOLLOW = re.compile(r'^(?:how about|what about|and(?: for)?|also(?: for)?|paano naman(?: ang| sa)?|'
                     r'ano naman(?: ang| sa)?|sa|para sa|kumusta naman|at sa)\s+(.+?)[?.!]*$', re.I)
-PRONOUN = re.compile(r'\b(it|its|they|their|them|that|those|this|there|ito|iyan|iyon|nito|niyan|nila|doon)\b', re.I)
+PRONOUN = re.compile(r'\b(' + INSTITUTION_REFERENCE + r'|it|its|they|their|them|that|those|this|there|ito|iyan|iyon|nito|niyan|nila|doon)\b', re.I)
 QUESTION = re.compile(r'^(?:who|what|where|when|why|how|does|do|is|are|can|which|sino|ano|saan|nasaan|kailan|paano)\b', re.I)
 FILLERS = re.compile(r'\b(?:please|po|naman|ang|sa|the|a|an)\b', re.I)
 ATTRIBUTE_CONTEXT_INTRO = r'(?:how about|what about|ano(?: naman)?(?: ang)?|paano naman(?: ang)?)'
@@ -186,6 +187,8 @@ def _attribute_query(text, previous, vocabulary):
     subject = _subject(previous, vocabulary)
     if not subject:
         return None
+    if re.search(r'\b' + INSTITUTION_REFERENCE + r'\b', text, re.I):
+        return PRONOUN.sub(subject, text) if compatible_reference(text, subject, vocabulary) else None
     # Retain the user's complete attribute request; translate only structural
     # question words, never university facts. Dates/conditions stay attached.
     value = re.sub(r'^' + ATTRIBUTE_CONTEXT_INTRO + r'\s+', 'What are ', text, flags=re.I)
@@ -318,7 +321,7 @@ def resolve_turn(text, previous='', vocabulary=None):
         unique = {(entity.group, entity.key) for _, _, entity in vocabulary.mentions(previous)}
         groups = {group for group, _ in unique}
         qualified_role = ('role' in groups and all(sum(g == group for g, _ in unique) == 1 for group in groups))
-        if subject and (len(unique) <= 1 or qualified_role):
+        if subject and (len(unique) <= 1 or qualified_role) and compatible_reference(text, subject, vocabulary):
             rewritten = PRONOUN.sub(subject, text)
             return Resolution((rewritten,), 'reference', **base)
     return Resolution(clarification=clarification(text), **base)

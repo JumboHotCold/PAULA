@@ -54,64 +54,22 @@ VOCABULARY = set('''where location directions navigate registrar enrollment enro
     transferee continuing faculty scholarship tuition finance guidance cafeteria
     cathedral clinic entrance building office university president director principal dean
     choose benefits program course calendar contact application academic schedule'''.split())
-KNOWN_SHORT_TYPOS = {'wher': 'where', 'wheres': 'where is', 'enrol': 'enroll',
-                     # Reported multi-edit typo; keep this explicit instead of
-                     # broadly correcting two-edit matches to people's names.
-                     'preseidnt': 'president'}
 PROTECTED_WORDS = {'officer', 'officers', 'finances', 'financial', 'offices',
                    'there', 'their', 'them', 'those', 'this', 'these', 'that', 'here',
                    'chose', 'chosen', 'choice', 'benefit', 'police'}
-QUESTION_LEAD_TYPOS = {'wht': 'what', 'whre': 'where', 'whn': 'when', 'hwo': 'how', 'whyy': 'why'}
-CORRECTION_VOCABULARY = VOCABULARY | {word + 's' for word in VOCABULARY if not word.endswith('s')}
 
 
 def _distance(left, right):
-    """Bounded-length Damerau-Levenshtein, including adjacent transpositions."""
-    rows = [list(range(len(right) + 1))]
-    for i, a in enumerate(left, 1):
-        row = [i]
-        for j, b in enumerate(right, 1):
-            value = min(row[j - 1] + 1, rows[-1][j] + 1, rows[-1][j - 1] + (a != b))
-            if i > 1 and j > 1 and a == right[j - 2] and left[i - 2] == b:
-                value = min(value, rows[i - 2][j - 2] + 1)
-            row.append(value)
-        rows.append(row)
-    return rows[-1][-1]
+    """Compatibility wrapper for the shared, bounded matching implementation."""
+    from .spelling import edit_distance
+    return edit_distance(left, right)
 
 
 @timed('normalization')
 def normalize_query(message):
-    """Correct only unambiguous near-matches to a small domain vocabulary.
-
-    Acronyms and numbers are preserved; the vocabulary contains no people.
-    Capitalized names in personnel questions and valid short words (e.g. 'were')
-    are not rewritten into intent triggers. This is not universal spellchecking.
-    """
-    # Only a leading question word is eligible for these short corrections.
-    # Elsewhere a short token may be a name, acronym or identifier.
-    message = re.sub(r'^\s*[A-Za-z]+\b', lambda match:
-        QUESTION_LEAD_TYPOS.get(match.group().strip().lower(), match.group().strip())
-        if not match.group().strip().isupper() else match.group().strip(), message)
-
-    def replace(match):
-        raw = match.group()
-        word = raw.lower()
-        if word in KNOWN_SHORT_TYPOS:
-            return KNOWN_SHORT_TYPOS[word]
-        if raw[0].isupper() and match.start() and re.search(r'\b(who|sino|name)\b', message, re.I):
-            return raw
-        if word in VOCABULARY or word in PROTECTED_WORDS or raw.isupper() or not 5 <= len(word) <= 24:
-            return raw
-        # A regular inflection of a known word is not a spelling mistake.
-        # Preserve the user's grammar; retrieval canonicalizes it separately.
-        if word.endswith('s') and word[:-1] in VOCABULARY:
-            return raw
-        candidates = [(candidate, _distance(word, candidate)) for candidate in CORRECTION_VOCABULARY
-                      if abs(len(candidate) - len(word)) <= 1]
-        best = min((distance for _, distance in candidates), default=99)
-        choices = [candidate for candidate, distance in candidates if distance == best]
-        return choices[0] if best == 1 and len(choices) == 1 else raw
-    return re.sub(r'\s+', ' ', re.sub(r"\b[A-Za-z]+\b", replace, message.strip())).strip()
+    """Matching-only compatibility entry point; no phrase-specific typo list."""
+    from .spelling import matching_plan
+    return matching_plan(message).matching
 
 
 def enrollment_category(message):
@@ -147,8 +105,12 @@ def enrollment_request(message):
 def enrollment_resolution(message, history=None):
     """Return (needs_category, resolved_query), using only a pending question."""
     request = message
-    if not enrollment_request(request):
-        previous = pending_request(history, 'enrollment')
+    selector=message
+    previous = pending_request(history, 'enrollment')
+    if previous:
+        from .clarifications import selection_view
+        selector=selection_view(message)
+    if not enrollment_request(request) or selector != message:
         # These exact labels are enrollment controls supplied by PAULA. Recover
         # their procedure intent if an older client lost its clarification pair.
         # Other statements ('I am an old student') still require pending context.
@@ -156,15 +118,15 @@ def enrollment_resolution(message, history=None):
         if not previous and choice:
             previous = 'How do I enroll at SPUS?'
         # Only a short category reply can resolve a pending clarification.
-        reply_words = set(re.findall(r'\w+', message.lower()))
+        reply_words = set(re.findall(r'\w+', selector.lower()))
         allowed = set('i am im m a an incoming college freshman freshmen first year new transferee transferees transfer '
                       'student students old continuing po ako ay isang na'.split())
-        if not previous or len(message.split()) > 10 or not enrollment_category(message) or not reply_words.issubset(allowed):
+        if not previous or len(message.split()) > 10 or not enrollment_category(selector) or not reply_words.issubset(allowed):
             return False, message
         request = previous
     if re.search(r'\b(grade\s*\d+|kindergarten|nursery|senior high|junior high|basic education|graduate|masters|doctoral)\b', request, re.I):
         return False, message
-    category = enrollment_category(message)
+    category = enrollment_category(selector)
     if category is None:
         return True, message
     # SPUS is the implicit institution for a generic campus-assistant question.
@@ -236,6 +198,8 @@ def navigation_destinations(message):
 def navigation_choice(message, history):
     if not pending_request(history, 'navigation'):
         return False
+    from .clarifications import selection_view
+    message=selection_view(message)
     text = ' '.join(re.findall(r'\w+', message.lower()))
     text = re.sub(r'^(?:the |please )| please$', '', text).strip()
     return any(text in aliases or text == label.lower()

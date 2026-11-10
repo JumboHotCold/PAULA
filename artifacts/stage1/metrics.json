@@ -1,0 +1,295 @@
+{
+  "captured": 45,
+  "expected": 45,
+  "per_query": {
+    "ty": {
+      "samples": 3,
+      "passed": 3,
+      "p50_ms": 3.93,
+      "p95_ms": 127.98,
+      "sql_counts": [
+        0,
+        0,
+        0
+      ],
+      "provider_calls": 0,
+      "query_embeddings": 0
+    },
+    "thankyoui": {
+      "samples": 3,
+      "passed": 3,
+      "p50_ms": 3.92,
+      "p95_ms": 98.44,
+      "sql_counts": [
+        0,
+        0,
+        0
+      ],
+      "provider_calls": 0,
+      "query_embeddings": 0
+    },
+    "thank you": {
+      "samples": 3,
+      "passed": 3,
+      "p50_ms": 2.63,
+      "p95_ms": 4.04,
+      "sql_counts": [
+        0,
+        0,
+        0
+      ],
+      "provider_calls": 0,
+      "query_embeddings": 0
+    },
+    "hi": {
+      "samples": 3,
+      "passed": 3,
+      "p50_ms": 4.16,
+      "p95_ms": 87.36,
+      "sql_counts": [
+        0,
+        0,
+        0
+      ],
+      "provider_calls": 0,
+      "query_embeddings": 0
+    },
+    "tell me about yourself": {
+      "samples": 3,
+      "passed": 3,
+      "p50_ms": 37.58,
+      "p95_ms": 130.55,
+      "sql_counts": [
+        1,
+        1,
+        1
+      ],
+      "provider_calls": 0,
+      "query_embeddings": 0
+    },
+    "hi, tell me about yourself": {
+      "samples": 3,
+      "passed": 0,
+      "p50_ms": 746.9,
+      "p95_ms": 1146.6,
+      "sql_counts": [
+        17,
+        17,
+        10
+      ],
+      "provider_calls": 0,
+      "query_embeddings": 3
+    },
+    "hi, tell me about yourself?": {
+      "samples": 3,
+      "passed": 0,
+      "p50_ms": 165.23,
+      "p95_ms": 170.61,
+      "sql_counts": [
+        10,
+        10,
+        10
+      ],
+      "provider_calls": 0,
+      "query_embeddings": 3
+    },
+    "tell me about SPUS and why should i enroll in this institution": {
+      "samples": 3,
+      "passed": 0,
+      "p50_ms": 194.42,
+      "p95_ms": 215.88,
+      "sql_counts": [
+        11,
+        11,
+        11
+      ],
+      "provider_calls": 0,
+      "query_embeddings": 3
+    },
+    "tell me about SPUS and why should i enroll at SPUS": {
+      "samples": 3,
+      "passed": 3,
+      "p50_ms": 79.06,
+      "p95_ms": 87.67,
+      "sql_counts": [
+        3,
+        3,
+        3
+      ],
+      "provider_calls": 0,
+      "query_embeddings": 0
+    },
+    "What programs are offered?": {
+      "samples": 3,
+      "passed": 3,
+      "p50_ms": 76.2,
+      "p95_ms": 156.11,
+      "sql_counts": [
+        2,
+        2,
+        2
+      ],
+      "provider_calls": 0,
+      "query_embeddings": 0
+    },
+    "why spus?": {
+      "samples": 3,
+      "passed": 3,
+      "p50_ms": 83.74,
+      "p95_ms": 86.8,
+      "sql_counts": [
+        3,
+        3,
+        3
+      ],
+      "provider_calls": 0,
+      "query_embeddings": 0
+    },
+    "Who is the ICT Director and CEIT Dean?": {
+      "samples": 3,
+      "passed": 3,
+      "p50_ms": 339.11,
+      "p95_ms": 439.68,
+      "sql_counts": [
+        14,
+        7,
+        7
+      ],
+      "provider_calls": 0,
+      "query_embeddings": 0
+    },
+    "How do I enroll?": {
+      "samples": 3,
+      "passed": 3,
+      "p50_ms": 4.37,
+      "p95_ms": 12.42,
+      "sql_counts": [
+        0,
+        0,
+        0
+      ],
+      "provider_calls": 0,
+      "query_embeddings": 0
+    },
+    "Where is the Registrar office?": {
+      "samples": 3,
+      "passed": 3,
+      "p50_ms": 4.47,
+      "p95_ms": 5.65,
+      "sql_counts": [
+        0,
+        0,
+        0
+      ],
+      "provider_calls": 0,
+      "query_embeddings": 0
+    },
+    "What is the exact enrollment fee for transferees in 2037?": {
+      "samples": 3,
+      "passed": 3,
+      "p50_ms": 150.17,
+      "p95_ms": 345.42,
+      "sql_counts": [
+        10,
+        10,
+        10
+      ],
+      "provider_calls": 0,
+      "query_embeddings": 3
+    }
+  },
+  "stages": {
+    "context_resolution": {
+      "samples": 30,
+      "p50_inclusive_ms": 0.309,
+      "p95_inclusive_ms": 4.737
+    },
+    "dialogue_routing": {
+      "samples": 45,
+      "p50_inclusive_ms": 0.795,
+      "p95_inclusive_ms": 45.541
+    },
+    "exact_faq": {
+      "samples": 21,
+      "p50_inclusive_ms": 18.775,
+      "p95_inclusive_ms": 35.084
+    },
+    "followup_suggestions": {
+      "samples": 27,
+      "p50_inclusive_ms": 45.076,
+      "p95_inclusive_ms": 68.183
+    },
+    "grounding": {
+      "samples": 27,
+      "p50_inclusive_ms": 12.81,
+      "p95_inclusive_ms": 38.023
+    },
+    "hybrid_retrieval": {
+      "samples": 12,
+      "p50_inclusive_ms": 81.735,
+      "p95_inclusive_ms": 274.408
+    },
+    "normalization": {
+      "samples": 45,
+      "p50_inclusive_ms": 0.821,
+      "p95_inclusive_ms": 4.654
+    },
+    "orchestration": {
+      "samples": 45,
+      "p50_inclusive_ms": 27.766,
+      "p95_inclusive_ms": 688.488
+    },
+    "public_vocabulary": {
+      "samples": 15,
+      "p50_inclusive_ms": 0.02,
+      "p95_inclusive_ms": 146.589
+    },
+    "query_embedding": {
+      "samples": 12,
+      "p50_inclusive_ms": 17.341,
+      "p95_inclusive_ms": 221.738
+    },
+    "query_interpretation": {
+      "samples": 3,
+      "p50_inclusive_ms": 20.859,
+      "p95_inclusive_ms": 26.121
+    },
+    "response_render": {
+      "samples": 15,
+      "p50_inclusive_ms": 0.045,
+      "p95_inclusive_ms": 0.453
+    },
+    "retrieval": {
+      "samples": 24,
+      "p50_inclusive_ms": 75.337,
+      "p95_inclusive_ms": 294.73
+    },
+    "social_normalization": {
+      "samples": 36,
+      "p50_inclusive_ms": 0.037,
+      "p95_inclusive_ms": 2.016
+    },
+    "social_query_embedding": {
+      "samples": 6,
+      "p50_inclusive_ms": 30.212,
+      "p95_inclusive_ms": 725.534
+    },
+    "social_reply": {
+      "samples": 15,
+      "p50_inclusive_ms": 0.007,
+      "p95_inclusive_ms": 0.855
+    },
+    "structured_enrollment": {
+      "samples": 3,
+      "p50_inclusive_ms": 4.271,
+      "p95_inclusive_ms": 15.354
+    },
+    "structured_personnel": {
+      "samples": 24,
+      "p50_inclusive_ms": 0.007,
+      "p95_inclusive_ms": 286.05
+    }
+  },
+  "provider_outcomes": {},
+  "limitation": "Stage 1 baseline only; three sequential warm samples per query, not an improvement, load test or independent accuracy estimate."
+}

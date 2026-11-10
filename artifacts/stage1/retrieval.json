@@ -1,0 +1,291 @@
+{
+  "model_dimension": 384,
+  "offline_initialization_ms": 35910.54,
+  "rows": [
+    {
+      "query": "why should i enroll in SPUS institution?",
+      "terms": [
+        "enroll",
+        "institution",
+        "why"
+      ],
+      "query_encoding_ms": 117.53,
+      "retrieval_status": "no_match",
+      "retrieved": [],
+      "nearest_faqs": [
+        {
+          "id": 100,
+          "question": "What is the SPUS College Department? How do I contact the registrar?",
+          "distance": 0.33979596617269914,
+          "passes_raw_cutoff": true,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 146,
+          "question": "What programs are offered at SPUS?",
+          "distance": 0.3398800092971296,
+          "passes_raw_cutoff": true,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 4,
+          "question": "What is the courses information?",
+          "distance": 0.35255869172338317,
+          "passes_raw_cutoff": true,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 98,
+          "question": "Why choose SPUS? What makes SPUS special?",
+          "distance": 0.36230842099735494,
+          "passes_raw_cutoff": true,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 114,
+          "question": "What college courses or programs are available?",
+          "distance": 0.3931295456549636,
+          "passes_raw_cutoff": true,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 1,
+          "question": "What is the enrollment information?",
+          "distance": 0.39550886180943967,
+          "passes_raw_cutoff": true,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 103,
+          "question": "What programs does the College of Business Management and Accountancy offer? Does SPUS offer Accountancy or HRM?",
+          "distance": 0.3991073966026264,
+          "passes_raw_cutoff": true,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 147,
+          "question": "What programs are offered at SPUS? What are the available undergraduate programs? What courses are available?",
+          "distance": 0.4044922945205979,
+          "passes_raw_cutoff": true,
+          "passes_evidence_gate": false
+        }
+      ]
+    },
+    {
+      "query": "why should i enroll at SPUS?",
+      "terms": [
+        "enroll",
+        "why"
+      ],
+      "query_encoding_ms": 13.01,
+      "retrieval_status": "ok",
+      "retrieved": [
+        {
+          "record_id": 116,
+          "record_type": "faq",
+          "question": "Why choose SPUS?",
+          "retrieval_method": "exact_faq_question"
+        }
+      ],
+      "nearest_faqs": [
+        {
+          "id": 4,
+          "question": "What is the courses information?",
+          "distance": 0.3384774331877318,
+          "passes_raw_cutoff": true,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 146,
+          "question": "What programs are offered at SPUS?",
+          "distance": 0.3411196477222125,
+          "passes_raw_cutoff": true,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 100,
+          "question": "What is the SPUS College Department? How do I contact the registrar?",
+          "distance": 0.36547297239303134,
+          "passes_raw_cutoff": true,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 98,
+          "question": "Why choose SPUS? What makes SPUS special?",
+          "distance": 0.3865831724752876,
+          "passes_raw_cutoff": true,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 1,
+          "question": "What is the enrollment information?",
+          "distance": 0.39826270331517966,
+          "passes_raw_cutoff": true,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 114,
+          "question": "What college courses or programs are available?",
+          "distance": 0.4028506341145007,
+          "passes_raw_cutoff": true,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 115,
+          "question": "Does SPUS offer Graduate School programs?",
+          "distance": 0.40741809650767324,
+          "passes_raw_cutoff": true,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 121,
+          "question": "What is the university's Data Privacy Policy?",
+          "distance": 0.4164575686181947,
+          "passes_raw_cutoff": true,
+          "passes_evidence_gate": false
+        }
+      ]
+    },
+    {
+      "query": "What programs are offered?",
+      "terms": [
+        "program"
+      ],
+      "query_encoding_ms": 12.94,
+      "retrieval_status": "ok",
+      "retrieved": [
+        {
+          "record_id": 146,
+          "record_type": "faq",
+          "question": "What programs are offered at SPUS?",
+          "retrieval_method": "equivalent_faq_question"
+        }
+      ],
+      "nearest_faqs": [
+        {
+          "id": 114,
+          "question": "What college courses or programs are available?",
+          "distance": 0.5588172910835265,
+          "passes_raw_cutoff": false,
+          "passes_evidence_gate": true
+        },
+        {
+          "id": 117,
+          "question": "What TVET or TESDA programs are offered?",
+          "distance": 0.5607763339477174,
+          "passes_raw_cutoff": false,
+          "passes_evidence_gate": true
+        },
+        {
+          "id": 147,
+          "question": "What programs are offered at SPUS? What are the available undergraduate programs? What courses are available?",
+          "distance": 0.5619113221062775,
+          "passes_raw_cutoff": false,
+          "passes_evidence_gate": true
+        },
+        {
+          "id": 146,
+          "question": "What programs are offered at SPUS?",
+          "distance": 0.5655534812142655,
+          "passes_raw_cutoff": false,
+          "passes_evidence_gate": true
+        },
+        {
+          "id": 4,
+          "question": "What is the courses information?",
+          "distance": 0.5963465267936163,
+          "passes_raw_cutoff": false,
+          "passes_evidence_gate": true
+        },
+        {
+          "id": 113,
+          "question": "Does SPUS offer scholarships? Are there scholarships available? What scholarships are offered?",
+          "distance": 0.6017053129829917,
+          "passes_raw_cutoff": false,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 3,
+          "question": "What is the scholarship information? What financial assistance or grants does SPUS offer?",
+          "distance": 0.6097683506789828,
+          "passes_raw_cutoff": false,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 106,
+          "question": "What TVET or TESDA programs does SPUS offer? What are the TESDA training and assessment center programs?",
+          "distance": 0.6237214951183168,
+          "passes_raw_cutoff": false,
+          "passes_evidence_gate": true
+        }
+      ]
+    },
+    {
+      "query": "why spus?",
+      "terms": [
+        "why"
+      ],
+      "query_encoding_ms": 13.28,
+      "retrieval_status": "no_match",
+      "retrieved": [],
+      "nearest_faqs": [
+        {
+          "id": 121,
+          "question": "What is the university's Data Privacy Policy?",
+          "distance": 0.47334808428906017,
+          "passes_raw_cutoff": false,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 120,
+          "question": "What is the history of SPUS?",
+          "distance": 0.475614042543527,
+          "passes_raw_cutoff": false,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 4,
+          "question": "What is the courses information?",
+          "distance": 0.4773096882495189,
+          "passes_raw_cutoff": false,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 98,
+          "question": "Why choose SPUS? What makes SPUS special?",
+          "distance": 0.49633610248565674,
+          "passes_raw_cutoff": false,
+          "passes_evidence_gate": true
+        },
+        {
+          "id": 119,
+          "question": "What is the university's Vision and Mission?",
+          "distance": 0.5039956867694855,
+          "passes_raw_cutoff": false,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 151,
+          "question": "[About SPUS.txt] What is SPUS?",
+          "distance": 0.5068323612213135,
+          "passes_raw_cutoff": false,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 96,
+          "question": "What is the SPUS Vision and Mission?",
+          "distance": 0.5081449737375971,
+          "passes_raw_cutoff": false,
+          "passes_evidence_gate": false
+        },
+        {
+          "id": 100,
+          "question": "What is the SPUS College Department? How do I contact the registrar?",
+          "distance": 0.5342610756003208,
+          "passes_raw_cutoff": false,
+          "passes_evidence_gate": false
+        }
+      ]
+    }
+  ]
+}

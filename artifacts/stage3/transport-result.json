@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "scope": "real frontend module -> isolated Django HTTP",
+  "guest_turns": 4,
+  "private_history_status": 302
+}

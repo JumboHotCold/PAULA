@@ -1,0 +1,688 @@
+{
+  "staff": [
+    {
+      "local_name": "Sr. Marie Rosanne Mallillin, SPC",
+      "local_position": "University President",
+      "query": "Who is Sr. Marie Rosanne Mallillin, SPC?",
+      "status": "ok",
+      "top1_identity_match": true,
+      "possible_website_variants": [
+        {
+          "section": "GRADUATE SCHOOL FACULTY",
+          "name": "Sr. Marie Rosanne Mallillin, SPCS",
+          "role": "University President",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:30.732196+00:00"
+        },
+        {
+          "section": "TOP MANAGEMENT",
+          "name": "Sr. Marie Rosanne Mallillin, SPCS",
+          "role": "University President",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:30.619696+00:00"
+        }
+      ],
+      "evidence": [
+        {
+          "question": "Who is Sr. Marie Rosanne Mallillin, SPC?",
+          "document_title": "Staff Directory: University President",
+          "answer": "The local staff record lists Sr. Marie Rosanne Mallillin, SPC as University President. Office: President's Office, 2nd Floor Admin Building.",
+          "personnel_name": "Sr. Marie Rosanne Mallillin, SPC",
+          "personnel_role": "University President",
+          "source_type": "staff_directory",
+          "source_office": "President's Office, 2nd Floor Admin Building",
+          "source_url": null,
+          "record_type": "staffmember",
+          "record_id": 1,
+          "retrieval_method": "exact_staff_name",
+          "supporting_sources": []
+        }
+      ]
+    },
+    {
+      "local_name": "Dr. Karen Plaza",
+      "local_position": "Dean, College of Engineering and Information Technology",
+      "query": "Who is Dr. Karen Plaza?",
+      "status": "ok",
+      "top1_identity_match": true,
+      "possible_website_variants": [
+        {
+          "section": "ACADEMIC SERVICES",
+          "name": "Dr. Karen T. Plaza",
+          "role": "Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:30.692858+00:00"
+        },
+        {
+          "section": "College of Engineering and Information Technology",
+          "name": "Dr. Karen T. Plaza",
+          "role": "Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:31.060041+00:00"
+        }
+      ],
+      "evidence": [
+        {
+          "question": "Who is Dr. Karen Plaza?",
+          "document_title": "Staff Directory: Dean, College of Engineering and Information Technology",
+          "answer": "The local staff record lists Dr. Karen Plaza as Dean, College of Engineering and Information Technology. Office: CEIT Faculty Room, 1st Floor Admin Building.",
+          "personnel_name": "Dr. Karen Plaza",
+          "personnel_role": "Dean, College of Engineering and Information Technology",
+          "source_type": "staff_directory",
+          "source_office": "CEIT Faculty Room, 1st Floor Admin Building",
+          "source_url": null,
+          "record_type": "staffmember",
+          "record_id": 3,
+          "retrieval_method": "exact_staff_name",
+          "review_notes": [
+            "The website has a possible name-format or role variant. This is the exact local record; the records have not been merged, and current details need institutional confirmation."
+          ],
+          "supporting_sources": []
+        }
+      ]
+    },
+    {
+      "local_name": "Arnold Magalona",
+      "local_position": "Instructor",
+      "query": "Who is Arnold Magalona?",
+      "status": "ok",
+      "top1_identity_match": true,
+      "possible_website_variants": [
+        {
+          "section": "ICT Systems and Services",
+          "name": "Engr. Arnold A. Magalona",
+          "role": "Director, Information & Communications Technology Systems and Services",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:32.063568+00:00"
+        },
+        {
+          "section": "TOP MANAGEMENT",
+          "name": "Engr. Arnold A. Magalona",
+          "role": "Director, Information & Communications Technology Systems and Services",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:30.678558+00:00"
+        }
+      ],
+      "evidence": [
+        {
+          "question": "Who is Arnold Magalona?",
+          "document_title": "Staff Directory: Instructor",
+          "answer": "The local staff record lists Arnold Magalona as Instructor. Office: CEIT Office.",
+          "personnel_name": "Arnold Magalona",
+          "personnel_role": "Instructor",
+          "source_type": "staff_directory",
+          "source_office": "CEIT Office",
+          "source_url": null,
+          "record_type": "staffmember",
+          "record_id": 4,
+          "retrieval_method": "exact_staff_name",
+          "review_notes": [
+            "The website has a possible name-format or role variant. This is the exact local record; the records have not been merged, and current details need institutional confirmation."
+          ],
+          "supporting_sources": []
+        }
+      ]
+    },
+    {
+      "local_name": "Dr. Nikko T. Ederio, LPT",
+      "local_position": "VP for Academics Services",
+      "query": "Who is Dr. Nikko T. Ederio, LPT?",
+      "status": "ok",
+      "top1_identity_match": true,
+      "possible_website_variants": [
+        {
+          "section": "ACADEMIC SERVICES",
+          "name": "Dr. Nikko T. Ederio, LPT",
+          "role": "VP for Academics Services",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:30.685384+00:00"
+        },
+        {
+          "section": "College of Education, Arts and Sciences",
+          "name": "Dr. Nikko T. Ederio, LPT",
+          "role": "VP for Academics Services",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:30.877364+00:00"
+        },
+        {
+          "section": "College of Health Sciences",
+          "name": "Dr. Nikko T. Ederio, LPT",
+          "role": "VP for Academics Services",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:31.272621+00:00"
+        },
+        {
+          "section": "GRADUATE SCHOOL FACULTY",
+          "name": "Dr. Nikko T. Ederio, LPT",
+          "role": "VP for Academics Services",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:30.737133+00:00"
+        },
+        {
+          "section": "Quality Management Office",
+          "name": "Dr. Nikko T. Ederio, LPT",
+          "role": "VP for Academics Services",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:32.022809+00:00"
+        },
+        {
+          "section": "TOP MANAGEMENT",
+          "name": "Dr. Nikko T. Ederio, LPT",
+          "role": "VP for Academics Services",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:30.644267+00:00"
+        }
+      ],
+      "evidence": [
+        {
+          "question": "SPUS Personnel | TOP MANAGEMENT | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+          "document_title": "SPUS Personnel | TOP MANAGEMENT | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+          "answer": "Dr. Nikko T. Ederio, LPT — VP for Academics Services",
+          "text": "Dr. Nikko T. Ederio, LPT — VP for Academics Services",
+          "source_type": "website",
+          "source_url": "https://spus.edu.ph/administrator/",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.644267+00:00",
+          "retrieval_method": "exact_personnel",
+          "record_type": "webresource",
+          "record_id": 77,
+          "personnel_role": "VP for Academics Services",
+          "personnel_name": "Dr. Nikko T. Ederio, LPT",
+          "personnel_section": "TOP MANAGEMENT",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ACADEMIC SERVICES | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 88,
+              "retrieved_at": "2026-10-27T14:12:30.685384+00:00"
+            },
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | Quality Management Office | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 411,
+              "retrieved_at": "2026-10-27T14:12:32.022809+00:00"
+            },
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Health Sciences | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 231,
+              "retrieved_at": "2026-10-27T14:12:31.272621+00:00"
+            },
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Education, Arts and Sciences | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 138,
+              "retrieved_at": "2026-10-27T14:12:30.877364+00:00"
+            },
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 100,
+              "retrieved_at": "2026-10-27T14:12:30.737133+00:00"
+            }
+          ],
+          "source_sections": [
+            "TOP MANAGEMENT",
+            "ACADEMIC SERVICES",
+            "Quality Management Office",
+            "College of Health Sciences",
+            "College of Education, Arts and Sciences",
+            "GRADUATE SCHOOL FACULTY"
+          ],
+          "review_notes": [
+            "A local staff record names a different holder for this role. The official website excerpt is shown; the discrepancy needs institutional review."
+          ],
+          "review_references": [
+            {
+              "name": "Dr. Antonio Talamera",
+              "role": "VP for Academics",
+              "record_id": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "local_name": "Sr. Veneranda del Rosario, SPC",
+      "local_position": "VP for PRISM, Basic Education",
+      "query": "Who is Sr. Veneranda del Rosario, SPC?",
+      "status": "ok",
+      "top1_identity_match": true,
+      "possible_website_variants": [
+        {
+          "section": "PRISM",
+          "name": "Sr. Veneranda del Rosario, SPC",
+          "role": "VP for PRISM, Basic Education",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:31.365989+00:00"
+        },
+        {
+          "section": "TOP MANAGEMENT",
+          "name": "Sr. Veneranda del Rosario, SPC",
+          "role": "VP for PRISM, Basic Education",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:30.637617+00:00"
+        }
+      ],
+      "evidence": [
+        {
+          "question": "SPUS Personnel | TOP MANAGEMENT | VP for PRISM, Basic Education | Sr. Veneranda del Rosario, SPC",
+          "document_title": "SPUS Personnel | TOP MANAGEMENT | VP for PRISM, Basic Education | Sr. Veneranda del Rosario, SPC",
+          "answer": "Sr. Veneranda del Rosario, SPC — VP for PRISM, Basic Education",
+          "text": "Sr. Veneranda del Rosario, SPC — VP for PRISM, Basic Education",
+          "source_type": "website",
+          "source_url": "https://spus.edu.ph/administrator/",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.637617+00:00",
+          "retrieval_method": "exact_personnel",
+          "record_type": "webresource",
+          "record_id": 76,
+          "personnel_role": "VP for PRISM, Basic Education",
+          "personnel_name": "Sr. Veneranda del Rosario, SPC",
+          "personnel_section": "TOP MANAGEMENT",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | PRISM | VP for PRISM, Basic Education | Sr. Veneranda del Rosario, SPC",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 255,
+              "retrieved_at": "2026-10-27T14:12:31.365989+00:00"
+            }
+          ],
+          "source_sections": [
+            "TOP MANAGEMENT",
+            "PRISM"
+          ]
+        }
+      ]
+    },
+    {
+      "local_name": "Dr. Guilbert R. Mantala",
+      "local_position": "VP for PRISM, Higher Education",
+      "query": "Who is Dr. Guilbert R. Mantala?",
+      "status": "ok",
+      "top1_identity_match": true,
+      "possible_website_variants": [
+        {
+          "section": "PRISM",
+          "name": "Dr. Guilbert R. Mantala",
+          "role": "Graduate School Faculty, Program Chair, VP for PRISM, Higher Education",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:31.369344+00:00"
+        },
+        {
+          "section": "TOP MANAGEMENT",
+          "name": "Dr. Guilbert R. Mantala",
+          "role": "Graduate School Faculty, Program Chair, VP for PRISM, Higher Education",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:30.662796+00:00"
+        }
+      ],
+      "evidence": [
+        {
+          "question": "SPUS Personnel | TOP MANAGEMENT | Graduate School Faculty, Program Chair, VP for PRISM, Higher Education | Dr. Guilbert R. Mantala",
+          "document_title": "SPUS Personnel | TOP MANAGEMENT | Graduate School Faculty, Program Chair, VP for PRISM, Higher Education | Dr. Guilbert R. Mantala",
+          "answer": "Dr. Guilbert R. Mantala — Graduate School Faculty, Program Chair, VP for PRISM, Higher Education",
+          "text": "Dr. Guilbert R. Mantala — Graduate School Faculty, Program Chair, VP for PRISM, Higher Education",
+          "source_type": "website",
+          "source_url": "https://spus.edu.ph/administrator/",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.662796+00:00",
+          "retrieval_method": "exact_personnel",
+          "record_type": "webresource",
+          "record_id": 82,
+          "personnel_role": "Graduate School Faculty, Program Chair, VP for PRISM, Higher Education",
+          "personnel_name": "Dr. Guilbert R. Mantala",
+          "personnel_section": "TOP MANAGEMENT",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | PRISM | Graduate School Faculty, Program Chair, VP for PRISM, Higher Education | Dr. Guilbert R. Mantala",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 256,
+              "retrieved_at": "2026-10-27T14:12:31.369344+00:00"
+            }
+          ],
+          "source_sections": [
+            "TOP MANAGEMENT",
+            "PRISM"
+          ]
+        }
+      ]
+    },
+    {
+      "local_name": "Sr. Maria Lirio Gavan, SPC",
+      "local_position": "VP for Administrative Services, VP for Finance and Treasury Head",
+      "query": "Who is Sr. Maria Lirio Gavan, SPC?",
+      "status": "ok",
+      "top1_identity_match": true,
+      "possible_website_variants": [
+        {
+          "section": "Administrative Services Office",
+          "name": "Sr. Maria Lirio Gavan, SPC",
+          "role": "VP for Administrative Services, VP for Finance and Treasury Head",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:32.124949+00:00"
+        },
+        {
+          "section": "TOP MANAGEMENT",
+          "name": "Sr. Maria Lirio Gavan, SPC",
+          "role": "VP for Administrative Services, VP for Finance and Treasury Head",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:30.647736+00:00"
+        }
+      ],
+      "evidence": [
+        {
+          "question": "SPUS Personnel | TOP MANAGEMENT | VP for Administrative Services, VP for Finance and Treasury Head | Sr. Maria Lirio Gavan, SPC",
+          "document_title": "SPUS Personnel | TOP MANAGEMENT | VP for Administrative Services, VP for Finance and Treasury Head | Sr. Maria Lirio Gavan, SPC",
+          "answer": "Sr. Maria Lirio Gavan, SPC — VP for Administrative Services, VP for Finance and Treasury Head",
+          "text": "Sr. Maria Lirio Gavan, SPC — VP for Administrative Services, VP for Finance and Treasury Head",
+          "source_type": "website",
+          "source_url": "https://spus.edu.ph/administrator/",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.647736+00:00",
+          "retrieval_method": "exact_personnel",
+          "record_type": "webresource",
+          "record_id": 78,
+          "personnel_role": "VP for Administrative Services, VP for Finance and Treasury Head",
+          "personnel_name": "Sr. Maria Lirio Gavan, SPC",
+          "personnel_section": "TOP MANAGEMENT",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | Administrative Services Office | VP for Administrative Services, VP for Finance and Treasury Head | Sr. Maria Lirio Gavan, SPC",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 439,
+              "retrieved_at": "2026-10-27T14:12:32.124949+00:00"
+            }
+          ],
+          "source_sections": [
+            "TOP MANAGEMENT",
+            "Administrative Services Office"
+          ]
+        }
+      ]
+    },
+    {
+      "local_name": "Ms. Herley Leyva, Rpm",
+      "local_position": "Director, Human Resources Management",
+      "query": "Who is Ms. Herley Leyva, Rpm?",
+      "status": "ok",
+      "top1_identity_match": true,
+      "possible_website_variants": [
+        {
+          "section": "Human Resource Management Office",
+          "name": "Ms. Herley Leyva, Rpm",
+          "role": "Director, Human Resources Management",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:32.042042+00:00"
+        },
+        {
+          "section": "TOP MANAGEMENT",
+          "name": "Ms. Herley Leyva, Rpm",
+          "role": "Director, Human Resources Management",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:30.651916+00:00"
+        }
+      ],
+      "evidence": [
+        {
+          "question": "SPUS Personnel | TOP MANAGEMENT | Director, Human Resources Management | Ms. Herley Leyva, Rpm",
+          "document_title": "SPUS Personnel | TOP MANAGEMENT | Director, Human Resources Management | Ms. Herley Leyva, Rpm",
+          "answer": "Ms. Herley Leyva, Rpm — Director, Human Resources Management",
+          "text": "Ms. Herley Leyva, Rpm — Director, Human Resources Management",
+          "source_type": "website",
+          "source_url": "https://spus.edu.ph/administrator/",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.651916+00:00",
+          "retrieval_method": "exact_personnel",
+          "record_type": "webresource",
+          "record_id": 79,
+          "personnel_role": "Director, Human Resources Management",
+          "personnel_name": "Ms. Herley Leyva, Rpm",
+          "personnel_section": "TOP MANAGEMENT",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | Human Resource Management Office | Director, Human Resources Management | Ms. Herley Leyva, Rpm",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 416,
+              "retrieved_at": "2026-10-27T14:12:32.042042+00:00"
+            }
+          ],
+          "source_sections": [
+            "TOP MANAGEMENT",
+            "Human Resource Management Office"
+          ]
+        }
+      ]
+    },
+    {
+      "local_name": "Engr. Arnold A. Magalona",
+      "local_position": "Director, Information & Communications Technology Systems and Services",
+      "query": "Who is Engr. Arnold A. Magalona?",
+      "status": "ok",
+      "top1_identity_match": true,
+      "possible_website_variants": [
+        {
+          "section": "ICT Systems and Services",
+          "name": "Engr. Arnold A. Magalona",
+          "role": "Director, Information & Communications Technology Systems and Services",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:32.063568+00:00"
+        },
+        {
+          "section": "TOP MANAGEMENT",
+          "name": "Engr. Arnold A. Magalona",
+          "role": "Director, Information & Communications Technology Systems and Services",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:30.678558+00:00"
+        }
+      ],
+      "evidence": [
+        {
+          "question": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "document_title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "answer": "Engr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services",
+          "text": "Engr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services",
+          "source_type": "website",
+          "source_url": "https://spus.edu.ph/administrator/",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "retrieval_method": "exact_personnel",
+          "record_type": "webresource",
+          "record_id": 86,
+          "personnel_role": "Director, Information & Communications Technology Systems and Services",
+          "personnel_name": "Engr. Arnold A. Magalona",
+          "personnel_section": "TOP MANAGEMENT",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "source_sections": [
+            "TOP MANAGEMENT",
+            "ICT Systems and Services"
+          ]
+        }
+      ]
+    },
+    {
+      "local_name": "Dr. Antonio Talamera",
+      "local_position": "VP for Academics",
+      "query": "Who is Dr. Antonio Talamera?",
+      "status": "ok",
+      "top1_identity_match": true,
+      "possible_website_variants": [],
+      "evidence": [
+        {
+          "question": "Who is Dr. Antonio Talamera?",
+          "document_title": "Staff Directory: VP for Academics",
+          "answer": "The local staff record lists Dr. Antonio Talamera as VP for Academics. Office: VPA Office, 2nd Floor Admin Building.",
+          "personnel_name": "Dr. Antonio Talamera",
+          "personnel_role": "VP for Academics",
+          "source_type": "staff_directory",
+          "source_office": "VPA Office, 2nd Floor Admin Building",
+          "source_url": null,
+          "record_type": "staffmember",
+          "record_id": 13,
+          "retrieval_method": "exact_staff_name",
+          "supporting_sources": []
+        }
+      ]
+    },
+    {
+      "local_name": "Mr. Nikko Ederio",
+      "local_position": "Dean, College of Information and Computing Sciences",
+      "query": "Who is Mr. Nikko Ederio?",
+      "status": "ok",
+      "top1_identity_match": true,
+      "possible_website_variants": [
+        {
+          "section": "ACADEMIC SERVICES",
+          "name": "Dr. Nikko T. Ederio, LPT",
+          "role": "VP for Academics Services",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:30.685384+00:00"
+        },
+        {
+          "section": "College of Education, Arts and Sciences",
+          "name": "Dr. Nikko T. Ederio, LPT",
+          "role": "VP for Academics Services",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:30.877364+00:00"
+        },
+        {
+          "section": "College of Health Sciences",
+          "name": "Dr. Nikko T. Ederio, LPT",
+          "role": "VP for Academics Services",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:31.272621+00:00"
+        },
+        {
+          "section": "GRADUATE SCHOOL FACULTY",
+          "name": "Dr. Nikko T. Ederio, LPT",
+          "role": "VP for Academics Services",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:30.737133+00:00"
+        },
+        {
+          "section": "Quality Management Office",
+          "name": "Dr. Nikko T. Ederio, LPT",
+          "role": "VP for Academics Services",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:32.022809+00:00"
+        },
+        {
+          "section": "TOP MANAGEMENT",
+          "name": "Dr. Nikko T. Ederio, LPT",
+          "role": "VP for Academics Services",
+          "url": "https://spus.edu.ph/administrator/",
+          "last_scraped": "2026-10-27T14:12:30.644267+00:00"
+        }
+      ],
+      "evidence": [
+        {
+          "question": "Who is Mr. Nikko Ederio?",
+          "document_title": "Staff Directory: Dean, College of Information and Computing Sciences",
+          "answer": "The local staff record lists Mr. Nikko Ederio as Dean, College of Information and Computing Sciences. Office: CICS Faculty Room, 3rd Floor IT Building.",
+          "personnel_name": "Mr. Nikko Ederio",
+          "personnel_role": "Dean, College of Information and Computing Sciences",
+          "source_type": "staff_directory",
+          "source_office": "CICS Faculty Room, 3rd Floor IT Building",
+          "source_url": null,
+          "record_type": "staffmember",
+          "record_id": 14,
+          "retrieval_method": "exact_staff_name",
+          "review_notes": [
+            "The website has a possible name-format or role variant. This is the exact local record; the records have not been merged, and current details need institutional confirmation."
+          ],
+          "supporting_sources": []
+        }
+      ]
+    },
+    {
+      "local_name": "Khen Malaque",
+      "local_position": "JSIT Moderator",
+      "query": "Who is Khen Malaque?",
+      "status": "ok",
+      "top1_identity_match": true,
+      "possible_website_variants": [],
+      "evidence": [
+        {
+          "question": "Who is Khen Malaque?",
+          "document_title": "Staff Directory: JSIT Moderator",
+          "answer": "The local staff record lists Khen Malaque as JSIT Moderator.",
+          "personnel_name": "Khen Malaque",
+          "personnel_role": "JSIT Moderator",
+          "source_type": "staff_directory",
+          "source_office": "",
+          "source_url": null,
+          "record_type": "staffmember",
+          "record_id": 15,
+          "retrieval_method": "exact_staff_name",
+          "supporting_sources": []
+        }
+      ]
+    }
+  ],
+  "pbmo_faq": [
+    {
+      "id": 133,
+      "question": "[PBMO] Who is the Director of the Publication, Brand, and Marketing Office (PBMO)?",
+      "answer": "The Director of the Publication, Brand, and Marketing Office (PBMO) at St. Paul University Surigao is Mrs. Michelle Timblacol-Plaza, PT, MAComm.",
+      "source_type": "office",
+      "source_office": "PBMO"
+    }
+  ],
+  "pbmo_website": [
+    {
+      "section": "College of Education, Arts and Sciences",
+      "name": "Mrs. Michelle Timblaco-Plaza",
+      "role": "Director, Publication, Brand, and Marketing, Part-time Faculty",
+      "url": "https://spus.edu.ph/administrator/",
+      "last_scraped": "2026-10-27T14:12:30.985710+00:00"
+    },
+    {
+      "section": "Publication, Documentation and Marketing Office",
+      "name": "Mrs. Michelle Timblaco-Plaza",
+      "role": "Director, Publication, Brand, and Marketing, Part-time Faculty",
+      "url": "https://spus.edu.ph/administrator/",
+      "last_scraped": "2026-10-27T14:12:32.053073+00:00"
+    },
+    {
+      "section": "Publication, Documentation and Marketing Office",
+      "name": "Ms. Antoneth S. Omas-as",
+      "role": "Publication, Documentation and Marketing Staff",
+      "url": "https://spus.edu.ph/administrator/",
+      "last_scraped": "2026-10-27T14:12:32.056369+00:00"
+    },
+    {
+      "section": "TOP MANAGEMENT",
+      "name": "Mrs. Michelle Timblaco-Plaza",
+      "role": "Director, Publication, Brand, and Marketing, Part-time Faculty",
+      "url": "https://spus.edu.ph/administrator/",
+      "last_scraped": "2026-10-27T14:12:30.681871+00:00"
+    }
+  ]
+}

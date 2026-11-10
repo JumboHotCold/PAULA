@@ -6,13 +6,14 @@ import time
 from threading import Lock
 
 from django.conf import settings
+from django.db import DatabaseError
 from django.db.models import Q
 from pgvector.django import CosineDistance
 
 from .grounding import DEPARTMENTS, departments, normalize, rank_evidence, terms
 from .retrieval_types import EvidenceList, RetrievalOutcome
 from .evidence_identity import consolidate_evidence
-from .performance import timed, stage
+from .performance import timed, stage, diagnostic_error, diagnostic_outcome
 from .query_normalization import faq_question_key, normalized_text
 
 logger = logging.getLogger(__name__)
@@ -132,6 +133,11 @@ class RAGSearcher:
     def retrieve(self, query, limit=5, allow_fallback=False):
         started = time.perf_counter()
         try:
+            from .spelling import matching_plan
+            plan = matching_plan(query)
+            if plan.protected_name or plan.needs_confirmation:
+                return RetrievalOutcome(status='ambiguous', elapsed_ms=(time.perf_counter()-started)*1000)
+            query = plan.matching
             rows = self.search(query, limit)
             rows_status = getattr(rows, 'status', None)
             rows = consolidate_evidence(rows)
@@ -155,9 +161,12 @@ class RAGSearcher:
             if any(len(values) > 1 for values in answers.values()):
                 return RetrievalOutcome(status='conflict', attempts=attempts,
                                         elapsed_ms=(time.perf_counter() - started) * 1000)
+            if not rows and status == 'no_match':
+                diagnostic_outcome('retrieval', 'NO_MATCH')
             return RetrievalOutcome(list(rows), 'ok' if rows else status, attempts,
                                     (time.perf_counter() - started) * 1000)
         except Exception as exc:
+            diagnostic_error('retrieval', 'DB_ERROR' if isinstance(exc, DatabaseError) else 'RETRIEVAL_ERROR', exc)
             logger.warning('Retrieval failed (%s)', type(exc).__name__)
             return RetrievalOutcome(status='unavailable', elapsed_ms=(time.perf_counter() - started) * 1000)
 
@@ -171,7 +180,7 @@ class RAGSearcher:
             return EvidenceList(rows[:limit], status=getattr(rows, 'status', 'ok' if rows else 'no_match'))
         from .personnel import exact_personnel_lookup, lookup_kind
         exact = exact_personnel_lookup(query)
-        if getattr(exact, 'status', '') in ('ambiguous', 'conflict'):
+        if getattr(exact, 'status', '') == 'conflict' or (getattr(exact,'status','')=='ambiguous' and lookup_kind(query)!='name'):
             return exact
         if exact:
             return exact[:limit]
@@ -196,6 +205,26 @@ class RAGSearcher:
         exact_faq = self._exact_faq_lookup(query)
         if exact_faq or exact_faq.status == 'conflict':
             return exact_faq
+        if lookup_kind(query) == 'name':
+            # Literal names are identifiers. A nearby vector cannot establish
+            # that two different people are the same person, even when they
+            # share a title or a first name. Preserve local, manually maintained
+            # identities independently of website spelling discrepancies.
+            from .personnel import name_request
+            from .query_normalization import person_key
+            requested = name_request(query)
+            matches = [obj for obj in StaffMember.objects.all() if person_key(obj.name)==requested]
+            rows = [dict(question=f'Who is {obj.name}?', document_title=f'Staff Directory: {obj.position}',
+                         answer=f'The local staff record lists {obj.name} as {obj.position}.' + (f' Office: {obj.office}.' if obj.office else ''),
+                         personnel_name=obj.name, personnel_role=obj.position, source_type='staff_directory',
+                         source_office=obj.office, source_url=None, record_type='staffmember',record_id=obj.pk,
+                         retrieval_method='exact_staff_name') for obj in matches]
+            from .grounding import eligible_evidence
+            if getattr(exact,'status','')=='ambiguous':
+                for row in rows:
+                    row['review_notes']=['The website has a possible name-format or role variant. This is the exact local record; the records have not been merged, and current details need institutional confirmation.']
+            return EvidenceList([row for row in rows if eligible_evidence(query,row)][:limit],
+                                status='ok' if rows else getattr(exact,'status','no_match'))
         # Mentioning announcements does not make an office procedure a news
         # request. Exact knowledge and its conflicts take precedence. An empty
         # announcements table is not evidence that other sources lack an answer.

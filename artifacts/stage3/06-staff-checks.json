@@ -1,0 +1,8 @@
+﻿{
+    "step":  "06-staff",
+    "revision":  "876d36a92c6ad25acd95ec426398ebe0a5b3580e",
+    "backend_exit":  0,
+    "frontend_exit":  0,
+    "backend_tests":  "485",
+    "frontend_tests":  "29"
+}

@@ -1,0 +1,29 @@
+{
+  "seed": 314159,
+  "split_unit": "source phrase; all perturbations stay in the same split",
+  "status": "agent-authored synthetic split; not the private real-student held-out set",
+  "groups": {
+    "social": {
+      "dev": 53,
+      "test": 23
+    },
+    "institutional": {
+      "dev": 84,
+      "test": 36
+    }
+  },
+  "files": {
+    "dev": {
+      "rows": 1096,
+      "sha256": "975ba3b4b4ed1df5ed272eeb714d11b144a40bfea02e793bbf1fc90af07eebc5"
+    },
+    "test": {
+      "rows": 472,
+      "sha256": "873200b73280e547b8b5bdae59d2e42667e97ae613341480144ffc92a786b8a7"
+    },
+    "golden": {
+      "rows": 1284,
+      "sha256": "10cda730cd3ff6d368f25dc4c63c70b527ca4a7f9c7fafb40662397dedbb967a"
+    }
+  }
+}

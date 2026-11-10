@@ -1,0 +1,3983 @@
+[
+  {
+    "query": "Please explain the enrollment information?",
+    "expected_source": [
+      [
+        "faq",
+        1
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Please explain the courses information?",
+    "expected_source": [
+      [
+        "faq",
+        4
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: HISTORY OF THE SISTERS OF ST. PAUL OF CHARTRES (Page 1, aPrt 1)",
+    "expected_source": [
+      [
+        "faq",
+        11
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: HISTORY OF THE SISTERS OF ST. PAUL OF CHARTRES (Phge 1, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        11
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: HISTORY OF THE SISTERS OF ST. PAUL OF CHARTRES (Pag e 1, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        11
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: HISTORY OF THE SISTERS OF ST. PAUL OF CHARTRES (Page 1, aPrt 2)",
+    "expected_source": [
+      [
+        "faq",
+        12
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: HISTORY OF THE SISTERS OF ST. PAUL OF CHARTRES (Phge 1, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        12
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: HISTORY OF THE SISTERS OF ST. PAUL OF CHARTRES (Pag e 1, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        12
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: HISTORY OF THE SISTERS OF ST. PAUL OF CHARTRES (Page 1, aPrt 3)",
+    "expected_source": [
+      [
+        "faq",
+        13
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: HISTORY OF THE SISTERS OF ST. PAUL OF CHARTRES (Phge 1, Part 3)",
+    "expected_source": [
+      [
+        "faq",
+        13
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: HISTORY OF THE SISTERS OF ST. PAUL OF CHARTRES (Pag e 1, Part 3)",
+    "expected_source": [
+      [
+        "faq",
+        13
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: INTERVENTIONS (Page 275, aPrt 1)",
+    "expected_source": [
+      [
+        "faq",
+        14
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: INTERVENTIONS (Phge 275, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        14
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: INTERVENTIONS (Pag e 275, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        14
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: INTERVENTIONS (Page 275, aPrt 2)",
+    "expected_source": [
+      [
+        "faq",
+        15
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: INTERVENTIONS (Phge 275, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        15
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: INTERVENTIONS (Pag e 275, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        15
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: members, Barangay Health Workers, and the residents. To respond to the alarming  (Page 55, aPrt 1)",
+    "expected_source": [
+      [
+        "faq",
+        16
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: members, Barangay Health Workers, and the residents. To respond to the alarming  (Page 55, aPrt 2)",
+    "expected_source": [
+      [
+        "faq",
+        17
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: members, Barangay Health Workers, and the residents. To respond to the alarming  (Page 55, aPrt 3)",
+    "expected_source": [
+      [
+        "faq",
+        18
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: Sliva (Chairman and Accreditor for Areas of Philosophy and Objectives & Administ (Page 82, aPrt 1)",
+    "expected_source": [
+      [
+        "faq",
+        19
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: Sliva (Chairman and Accreditor for Areas of Philosophy and Objectives & Administ (Page 82, aPrt 2)",
+    "expected_source": [
+      [
+        "faq",
+        20
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: July 23, 2021, St. Paul University Surigao Basic Education Department successful (aPge 83, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        21
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: July 23, 2021, St. Paul University Surigao Basic Education Department successful (aPge 83, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        22
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: Candidate status was awarded for the following programs: Doctor of Philosophy in (Page 85, aPrt 1)",
+    "expected_source": [
+      [
+        "faq",
+        26
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: Candidate status was awarded for the following programs: Doctor of Philosophy in (Page 85, aPrt 2)",
+    "expected_source": [
+      [
+        "faq",
+        27
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: On August 4, 2021, consistent honor student Rhea Marie B. Mula of Grade 12 HUMSS (aPge 86, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        28
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: On August 4, 2021, consistent honor student Rhea Marie B. Mula of Grade 12 HUMSS (aPge 86, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        29
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: On August 4, 2021, consistent honor student Rhea Marie B. Mula of Grade 12 HUMSS (aPge 86, Part 3)",
+    "expected_source": [
+      [
+        "faq",
+        30
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: Bronze medalist Azineth Mosqueda said she felt happy, amazed, and proud that she (Page 87, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        31
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: Bronze medalist Azineth Mosqueda said she felt happy, amazed, and porud that she (Page 87, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        31
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: Bronze medalist Azineth Mosqueda said she fet happy, amazed, and proud that she (Page 87, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        31
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: Bronze medgalist Azineth Mosqueda said she felt happy, amazed, and proud that she (Page 87, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        31
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: Bronze medalist Azineth Mosqueda shid she felt happy, amazed, and proud that she (Page 87, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        31
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: Bronze medalist Azineth Mosqueda said she felt happy, amazed, and proud thaat she (Page 87, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        31
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: Bronze medalist Azineth Mosqueda said she fel t happy, amazed, and proud that she (Page 87, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        31
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "hAnDbOoK: bRoNzE MeDaLiSt aZiNeTh mOsQuEdA SaId sHe fElT HaPpY, aMaZeD, aNd pRoUd tHaT ShE (pAgE 87, PaRt 1)",
+    "expected_source": [
+      [
+        "faq",
+        31
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: Bronze medalist Azineth Mosqueda said she felt happy, amazed, and proud that she (Page 87, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        32
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: Bronze medalist Azineth Mosqueda said she felt happy, amazed, and porud that she (Page 87, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        32
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: Bronze medalist Azineth Mosqueda said she fet happy, amazed, and proud that she (Page 87, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        32
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: Bronze medgalist Azineth Mosqueda said she felt happy, amazed, and proud that she (Page 87, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        32
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: Bronze medalist Azineth Mosqueda shid she felt happy, amazed, and proud that she (Page 87, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        32
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: Bronze medalist Azineth Mosqueda said she felt happy, amazed, and proud thaat she (Page 87, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        32
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: Bronze medalist Azineth Mosqueda said she fel t happy, amazed, and proud that she (Page 87, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        32
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "hAnDbOoK: bRoNzE MeDaLiSt aZiNeTh mOsQuEdA SaId sHe fElT HaPpY, aMaZeD, aNd pRoUd tHaT ShE (pAgE 87, PaRt 2)",
+    "expected_source": [
+      [
+        "faq",
+        32
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: The event, \"Realizing the Spirit of Leadership amidst Pandemic,\" featured two sp (Page 88, aPrt 1)",
+    "expected_source": [
+      [
+        "faq",
+        33
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: The event, \"Realizing the Spirit of Leadership amidst Pandemic,\" featured two sp (Page 88, aPrt 2)",
+    "expected_source": [
+      [
+        "faq",
+        34
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: The event, \"Realizing the Spirit of Leadership amidst Pandemic,\" featured two sp (Page 88, aPrt 3)",
+    "expected_source": [
+      [
+        "faq",
+        35
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: Three (3) outstanding professional researchers, namely: Dr. Leslie E. Sauzon, Dr (Page 89, aPrt 1)",
+    "expected_source": [
+      [
+        "faq",
+        36
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: Three (3) outstanding professional researchers, namely: Dr. Leslie E. Sauzon, Dr (Page 89, aPrt 2)",
+    "expected_source": [
+      [
+        "faq",
+        37
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: 2. Consistently provide integral Catholic education marked by academic excellenc (aPge 90, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        38
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: 2. Consistently provide integral Catholic education marked by academic excellenc (aPge 90, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        39
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: research and community service; (aPge 91, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        40
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: research and community servie; (Page 91, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        40
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: research and community service; (aPge 91, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        41
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: PRIORITY PAULINIAN ROOTS, IDENTITY, SPIRITUALITY, AND MISSION (PRISM) (Paeg 93)",
+    "expected_source": [
+      [
+        "faq",
+        44
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: PRIORITY PAULINIAN ROOTS, IDENTITY, SPIRITUALITY, AND MISSION (PRISM) (Phge 93)",
+    "expected_source": [
+      [
+        "faq",
+        44
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: PRIORITY PAULINIAN ROOTS, IDENTITY, SPIRITUALITY, AND MISSION (PRISM) (Pag e 93)",
+    "expected_source": [
+      [
+        "faq",
+        44
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: (revisit and innovate) systems to respond to the needs of every stakeholder we a (Page 95, aPrt 1)",
+    "expected_source": [
+      [
+        "faq",
+        46
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: (revisit and innovate) systems to respond to the needs of e very stakeholder we a (Page 95, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        46
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: (revisit and innovate) systems to respond to the needs of every stakeholder we a (Page 95, aPrt 2)",
+    "expected_source": [
+      [
+        "faq",
+        47
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: (revisit and innovate) systems to respond to the needs of e very stakeholder we a (Page 95, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        47
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: 2. COMMISSION (Page 96, aPrt 1)",
+    "expected_source": [
+      [
+        "faq",
+        48
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: 2. COMMISSION (Pae 96, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        48
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: 2. COMMISSION (Phge 96, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        48
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: 2. COMMISSION (Pag e 96, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        48
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: 2. COMMISSION (Page 96, aPrt 2)",
+    "expected_source": [
+      [
+        "faq",
+        49
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: 2. COMMISSION (Pae 96, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        49
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: 2. COMMISSION (Phge 96, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        49
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: 2. COMMISSION (Pag e 96, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        49
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: In this spirit, we shall take upon ourselves the responsibility of putting into  (Page 97, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        50
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: In this spirit, we shall take upon ourselves the responsibility of putting nito  (Page 97, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        50
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: In this spirit, we shall take upon ourelves the responsibility of putting into  (Page 97, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        50
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: In this spigrit, we shall take upon ourselves the responsibility of putting into  (Page 97, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        50
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: In this spirit, we shall take ugon ourselves the responsibility of putting into  (Page 97, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        50
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: In this spirit, we shall take upon ourselves the responsibility of putting into  (Pagge 97, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        50
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: In this spirit, we shall take upon ou rselves the responsibility of putting into  (Page 97, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        50
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "hAnDbOoK: iN ThIs sPiRiT, wE ShAlL TaKe uPoN OuRsElVeS ThE ReSpOnSiBiLiTy oF PuTtInG InTo  (pAgE 97, PaRt 1)",
+    "expected_source": [
+      [
+        "faq",
+        50
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: In this spirit, we shall take upon ourselves the responsibility of putting into  (Page 97, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        51
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: In this spirit, we shall take upon ourselves the responsibility of putting nito  (Page 97, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        51
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: In this spirit, we shall take upon ourelves the responsibility of putting into  (Page 97, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        51
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: In this spigrit, we shall take upon ourselves the responsibility of putting into  (Page 97, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        51
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: In this spirit, we shall take ugon ourselves the responsibility of putting into  (Page 97, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        51
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: In this spirit, we shall take upon ourselves the responsibility of putting into  (Pagge 97, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        51
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: In this spirit, we shall take upon ou rselves the responsibility of putting into  (Page 97, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        51
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "hAnDbOoK: iN ThIs sPiRiT, wE ShAlL TaKe uPoN OuRsElVeS ThE ReSpOnSiBiLiTy oF PuTtInG InTo  (pAgE 97, PaRt 2)",
+    "expected_source": [
+      [
+        "faq",
+        51
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: *   Strive for total quality as a way of life towards union with Christ. (aPge 98)",
+    "expected_source": [
+      [
+        "faq",
+        52
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: The coat of arms of the Sisters of St. Paul of Chagtres (SPC), the founder and o (Page 99, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        53
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: The coat of arms of the Sisters of St. Paul of Chagtres (SPC), the founder and o (Page 99, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        54
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: perpetual learning. It is a systematic and disciplined effort to teach and learn (Page 100, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        55
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: perpetual learning. It is a systematic and disciplined effort to teach and learn (Page 100, aPrt 1)",
+    "expected_source": [
+      [
+        "faq",
+        55
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: perpetual learning. It is a systematic and disciplined effort to tach and learn (Page 100, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        55
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: perpetual leagrning. It is a systematic and disciplined effort to teach and learn (Page 100, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        55
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: perpetual learning. It is a systematic and disciplined effgrt to teach and learn (Page 100, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        55
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: perpetual learning. It is a ssystematic and disciplined effort to teach and learn (Page 100, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        55
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: perpetual learning. It is a systematic and disciplined effort to t each and learn (Page 100, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        55
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "hAnDbOoK: pErPeTuAl lEaRnInG. iT Is a sYsTeMaTiC AnD DiScIpLiNeD EfFoRt tO TeAcH AnD LeArN (pAgE 100, pArT 1)",
+    "expected_source": [
+      [
+        "faq",
+        55
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: perpetual learning. It is a systematic and disciplined effort to teach and learn (Page 100, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        56
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: perpetual learning. It is a systematic and disciplined effort to teach and learn (Page 100, aPrt 2)",
+    "expected_source": [
+      [
+        "faq",
+        56
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: perpetual learning. It is a systematic and disciplined effort to tach and learn (Page 100, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        56
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: perpetual leagrning. It is a systematic and disciplined effort to teach and learn (Page 100, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        56
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: perpetual learning. It is a systematic and disciplined effgrt to teach and learn (Page 100, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        56
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: perpetual learning. It is a ssystematic and disciplined effort to teach and learn (Page 100, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        56
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: perpetual learning. It is a systematic and disciplined effort to t each and learn (Page 100, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        56
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "hAnDbOoK: pErPeTuAl lEaRnInG. iT Is a sYsTeMaTiC AnD DiScIpLiNeD EfFoRt tO TeAcH AnD LeArN (pAgE 100, pArT 2)",
+    "expected_source": [
+      [
+        "faq",
+        56
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: SYMBOLS (Page 101, aPrt 1)",
+    "expected_source": [
+      [
+        "faq",
+        57
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: SYMBOLS (Pae 101, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        57
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: SYMBOLS (Phge 101, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        57
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: SYMBOLS (Pag e 101, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        57
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: SYMBOLS (Page 101, aPrt 2)",
+    "expected_source": [
+      [
+        "faq",
+        58
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: SYMBOLS (Pae 101, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        58
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: SYMBOLS (Phge 101, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        58
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: SYMBOLS (Pag e 101, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        58
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: LAUREL LEAF (Page 102, aPrt 1)",
+    "expected_source": [
+      [
+        "faq",
+        59
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: LAUREL LEAF (Pae 102, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        59
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: LAUREL LEAF (Phge 102, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        59
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: LAUREL LEAF (Pag e 102, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        59
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: LAUREL LEAF (Page 102, aPrt 2)",
+    "expected_source": [
+      [
+        "faq",
+        60
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: LAUREL LEAF (Pae 102, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        60
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: LAUREL LEAF (Phge 102, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        60
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: LAUREL LEAF (Pag e 102, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        60
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: P06 Resolve business issues and problems with a global strategic perspective usi (aPge 127, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        63
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: P06 Resolve business issues and problems wgth a global strategic perspective usi (Page 127, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        63
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: P06 Resolve business issues and problems with a global strategic perspective usi (aPge 127, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        64
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: P06 Resolve business issues and problems wgth a global strategic perspective usi (Page 127, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        64
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: PO6 OPERATIONS MANAGER (Page 136, aPrt 1)",
+    "expected_source": [
+      [
+        "faq",
+        65
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: PO6 OPERATIONS MANAGER (Phge 136, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        65
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: PO6 OPERATIONS MANAGER (Pag e 136, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        65
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: PO6 OPERATIONS MANAGER (Page 136, aPrt 2)",
+    "expected_source": [
+      [
+        "faq",
+        66
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: PO6 OPERATIONS MANAGER (Phge 136, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        66
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: PO6 OPERATIONS MANAGER (Pag e 136, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        66
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: library/instructional media center materials to students, faculty members and ot (aPge 171, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        67
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: library/instructional media center materials to students, faculty members and ot (aPge 171, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        68
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: policies, rules and regulations for the effective management of the do rmitory to (Page 173, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        69
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: policies, rules and regulations for the effective management of the do rmitory to (Page 173, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        70
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: On terms and conditions and available scholarship, the student may see the S chol (Page 227, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        73
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: On terms and conditions and available scholarship, the student may see the S chol (Page 227, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        74
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: 77-79 2.75 (Page 235, aPrt 1)",
+    "expected_source": [
+      [
+        "faq",
+        75
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: 77-79 2.75 (Pae 235, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        75
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: 77-79 2.75 (Phge 235, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        75
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: 77-79 2.75 (Pag e 235, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        75
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: 77-79 2.75 (Page 235, aPrt 2)",
+    "expected_source": [
+      [
+        "faq",
+        76
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: 77-79 2.75 (Pae 235, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        76
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: 77-79 2.75 (Phge 235, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        76
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: 77-79 2.75 (Pag e 235, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        76
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: SANCTIONABLE ACTS OR OMISSIONS (Page 255, aPrt 1)",
+    "expected_source": [
+      [
+        "faq",
+        77
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: SANCTIONABLE ACTS OR OMISSIONS (Phge 255, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        77
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: SANCTIONABLE ACTS OR OMISSIONS (Pag e 255, Part 1)",
+    "expected_source": [
+      [
+        "faq",
+        77
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: SANCTIONABLE ACTS OR OMISSIONS (Page 255, aPrt 2)",
+    "expected_source": [
+      [
+        "faq",
+        78
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: SANCTIONABLE ACTS OR OMISSIONS (Phge 255, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        78
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: SANCTIONABLE ACTS OR OMISSIONS (Pag e 255, Part 2)",
+    "expected_source": [
+      [
+        "faq",
+        78
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: *   intimacy in and on campus, posting daring pictures and videos in social netw (aPge 256)",
+    "expected_source": [
+      [
+        "faq",
+        79
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: or by reference are hereby repealed. (aPge 287)",
+    "expected_source": [
+      [
+        "faq",
+        80
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Handbook: or by reference are hereby repeal ed. (Page 287)",
+    "expected_source": [
+      [
+        "faq",
+        80
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What is the SPUS We bometrics 2026 ranking?",
+    "expected_source": [
+      [
+        "faq",
+        94
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What is Saint Phul University Surigao (SPUS)?",
+    "expected_source": [
+      [
+        "faq",
+        95
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Please explain Saint Paul University Surigao (SPUS)?",
+    "expected_source": [
+      [
+        "faq",
+        95
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What is the SPUS Vision and Msision?",
+    "expected_source": [
+      [
+        "faq",
+        96
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What is the SPUS Vision and Missioon?",
+    "expected_source": [
+      [
+        "faq",
+        96
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What are the Paulingian Core Values?",
+    "expected_source": [
+      [
+        "faq",
+        97
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What are the PPaulinian Core Values?",
+    "expected_source": [
+      [
+        "faq",
+        97
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What Graduate School programs does SPUS offer? Whta are the GSPS programs?",
+    "expected_source": [
+      [
+        "faq",
+        99
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What Graduate School programs does SPUS offer? Wht are the GSPS programs?",
+    "expected_source": [
+      [
+        "faq",
+        99
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What Graduate School programs does SPUS offer? Wha t are the GSPS programs?",
+    "expected_source": [
+      [
+        "faq",
+        99
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What programs does the College of Education, Agts and Sciences offer?",
+    "expected_source": [
+      [
+        "faq",
+        102
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What programs does the College of Engineering and Information Technology offer? Does SPUS offer IT or Engineering?",
+    "expected_source": [
+      [
+        "faq",
+        104
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What programs does the College of Engineering and Information Technology offer? Does SPUS fofer IT or Engineering?",
+    "expected_source": [
+      [
+        "faq",
+        104
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What programs does the College of Engineering and Information Tecnology offer? Does SPUS offer IT or Engineering?",
+    "expected_source": [
+      [
+        "faq",
+        104
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What programs dgoes the College of Engineering and Information Technology offer? Does SPUS offer IT or Engineering?",
+    "expected_source": [
+      [
+        "faq",
+        104
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What programs does the College of Engineering and Informagion Technology offer? Does SPUS offer IT or Engineering?",
+    "expected_source": [
+      [
+        "faq",
+        104
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What programs does the College of Engineering and Information Technology offer? Does SPUS offer IT or Engiineering?",
+    "expected_source": [
+      [
+        "faq",
+        104
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What programs does the College of Engineering and Information Te chnology offer? Does SPUS offer IT or Engineering?",
+    "expected_source": [
+      [
+        "faq",
+        104
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "wHaT PrOgRaMs dOeS ThE CoLlEgE Of eNgInEeRiNg aNd iNfOrMaTiOn tEcHnOlOgY OfFeR? dOeS SpUs oFfEr iT Or eNgInEeRiNg?",
+    "expected_source": [
+      [
+        "faq",
+        104
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What TVET or TESDA programs does SPUS offer? What are the TESDA training and as sessment center programs?",
+    "expected_source": [
+      [
+        "faq",
+        106
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "How do I enroll in Gade 7?",
+    "expected_source": [
+      [
+        "faq",
+        109
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "How do I enroll in Grahe 7?",
+    "expected_source": [
+      [
+        "faq",
+        109
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "How do I enroll in G rade 7?",
+    "expected_source": [
+      [
+        "faq",
+        109
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What are the requirements for incoming G rade 11 (SHS)?",
+    "expected_source": [
+      [
+        "faq",
+        111
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "How much is the tuitio n?",
+    "expected_source": [
+      [
+        "faq",
+        112
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Does SPUS offer scholarships? Are there scholarships available? What scholarships are offered?",
+    "expected_source": [
+      [
+        "faq",
+        113
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Does SPUS offer scholarships? Are there scholarships available? Whta scholarships are offered?",
+    "expected_source": [
+      [
+        "faq",
+        113
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Does SPUS offer scholarships? Are there scholarships available? Wht scholarships are offered?",
+    "expected_source": [
+      [
+        "faq",
+        113
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Does SPUS offer scholagrships? Are there scholarships available? What scholarships are offered?",
+    "expected_source": [
+      [
+        "faq",
+        113
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Does SPUS offer scholarships? Are there scholarships availabge? What scholarships are offered?",
+    "expected_source": [
+      [
+        "faq",
+        113
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Does SPUS offer scholarships? Are tthere scholarships available? What scholarships are offered?",
+    "expected_source": [
+      [
+        "faq",
+        113
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Does SPUS offer scholarships? Are there scholarships available? Wha t scholarships are offered?",
+    "expected_source": [
+      [
+        "faq",
+        113
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "dOeS SpUs oFfEr sChOlArShIpS? aRe tHeRe sChOlArShIpS AvAiLaBlE? wHaT ScHoLaRsHiPs aRe oFfErEd?",
+    "expected_source": [
+      [
+        "faq",
+        113
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What college courses or progra ms are available?",
+    "expected_source": [
+      [
+        "faq",
+        114
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Does SPUS offer Graduate S chool programs?",
+    "expected_source": [
+      [
+        "faq",
+        115
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Why c hoose SPUS?",
+    "expected_source": [
+      [
+        "faq",
+        116
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What is the SPUS We bometrics Ranking?",
+    "expected_source": [
+      [
+        "faq",
+        118
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What is the university's Vision and Missino?",
+    "expected_source": [
+      [
+        "faq",
+        119
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What is the university's Vision and Missin?",
+    "expected_source": [
+      [
+        "faq",
+        119
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What is the university's Vision and Missio n?",
+    "expected_source": [
+      [
+        "faq",
+        119
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What is the histroy of SPUS?",
+    "expected_source": [
+      [
+        "faq",
+        120
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What is the histoy of SPUS?",
+    "expected_source": [
+      [
+        "faq",
+        120
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What is the hisgory of SPUS?",
+    "expected_source": [
+      [
+        "faq",
+        120
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What is the histor y of SPUS?",
+    "expected_source": [
+      [
+        "faq",
+        120
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Please explain the history of SPUS?",
+    "expected_source": [
+      [
+        "faq",
+        120
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What is the university's Dhta Privacy Policy?",
+    "expected_source": [
+      [
+        "faq",
+        121
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[PBMO] What is the Publication, Brand, and Marketing Office (PBMO) and what services does it provide?",
+    "expected_source": [
+      [
+        "faq",
+        124
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[PBMO] What is the Publication, Brand, and Marketing Office (PBMO) and what servcies does it provide?",
+    "expected_source": [
+      [
+        "faq",
+        124
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[PBMO] What is the Publication, Brand, and Marketing Office (PBMO) and what servies does it provide?",
+    "expected_source": [
+      [
+        "faq",
+        124
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[PBMO] What is the Publication, Bragnd, and Marketing Office (PBMO) and what services does it provide?",
+    "expected_source": [
+      [
+        "faq",
+        124
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[PBMO] What is the Publication, Brand, and Marketing Office (PBMO) and wgat services does it provide?",
+    "expected_source": [
+      [
+        "faq",
+        124
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[PBMO] What is the Publication, Brand, and MMarketing Office (PBMO) and what services does it provide?",
+    "expected_source": [
+      [
+        "faq",
+        124
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[PBMO] What is the Publication, Brand, and Marketing Office (PBMO) and what servic es does it provide?",
+    "expected_source": [
+      [
+        "faq",
+        124
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[PbMo] WhAt iS ThE PuBlIcAtIoN, bRaNd, AnD MaRkEtInG OfFiCe (PbMo) AnD WhAt sErViCeS DoEs iT PrOvIdE?",
+    "expected_source": [
+      [
+        "faq",
+        124
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[PBMO] Who is the Director of the Publication, Brand, and Marketing Office (PBMO)?",
+    "expected_source": [
+      [
+        "faq",
+        133
+      ]
+    ],
+    "status": "conflict",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[PBMO] Who is the Director of the Publication, Brand, and Mareting Office (PBMO)?",
+    "expected_source": [
+      [
+        "faq",
+        133
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[PBMO] Who is the Director of the Publicgation, Brand, and Marketing Office (PBMO)?",
+    "expected_source": [
+      [
+        "faq",
+        133
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[PBMO] Who is the Director of the Publication, Bragd, and Marketing Office (PBMO)?",
+    "expected_source": [
+      [
+        "faq",
+        133
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[PBMO] Who is the Director of the PPublication, Brand, and Marketing Office (PBMO)?",
+    "expected_source": [
+      [
+        "faq",
+        133
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[PBMO] Who is the Director of the Publication, Brand, and Ma rketing Office (PBMO)?",
+    "expected_source": [
+      [
+        "faq",
+        133
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[PbMo] WhO Is tHe dIrEcToR Of tHe pUbLiCaTiOn, BrAnD, aNd mArKeTiNg oFfIcE (pBmO)?",
+    "expected_source": [
+      [
+        "faq",
+        133
+      ]
+    ],
+    "status": "conflict",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] How can an old or continuing college student enroll at SPUS (Document URO-PR-016)?",
+    "expected_source": [
+      [
+        "faq",
+        139
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] How can an old or continuing college student ernoll at SPUS (Document URO-PR-016)?",
+    "expected_source": [
+      [
+        "faq",
+        139
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] How can an old or continuing college studet enroll at SPUS (Document URO-PR-016)?",
+    "expected_source": [
+      [
+        "faq",
+        139
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] How can an old or continguing college student enroll at SPUS (Document URO-PR-016)?",
+    "expected_source": [
+      [
+        "faq",
+        139
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] How can an old or continuing colgege student enroll at SPUS (Document URO-PR-016)?",
+    "expected_source": [
+      [
+        "faq",
+        139
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] How can an old or continuing college student enroll at SPUS (Documeent URO-PR-016)?",
+    "expected_source": [
+      [
+        "faq",
+        139
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] How can an old or continuing college studen t enroll at SPUS (Document URO-PR-016)?",
+    "expected_source": [
+      [
+        "faq",
+        139
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[ReGiStRaR] hOw cAn aN OlD Or cOnTiNuInG CoLlEgE StUdEnT EnRoLl aT SpUs (DoCuMeNt uRo-pR-016)?",
+    "expected_source": [
+      [
+        "faq",
+        139
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] What is the step-by-step enrollment procedure for transferee students at SPUS (Document URO-PR-017)?",
+    "expected_source": [
+      [
+        "faq",
+        140
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] What is the step-by-step enrollment procedure for trnasferee students at SPUS (Document URO-PR-017)?",
+    "expected_source": [
+      [
+        "faq",
+        140
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] What is the step-by-step enrollment procedure for trasferee students at SPUS (Document URO-PR-017)?",
+    "expected_source": [
+      [
+        "faq",
+        140
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] What is the sgtep-by-step enrollment procedure for transferee students at SPUS (Document URO-PR-017)?",
+    "expected_source": [
+      [
+        "faq",
+        140
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] What is the step-by-step enrollment proceduge for transferee students at SPUS (Document URO-PR-017)?",
+    "expected_source": [
+      [
+        "faq",
+        140
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] What is the step-by-sstep enrollment procedure for transferee students at SPUS (Document URO-PR-017)?",
+    "expected_source": [
+      [
+        "faq",
+        140
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] What is the step-by-step enrollment procedure for tr ansferee students at SPUS (Document URO-PR-017)?",
+    "expected_source": [
+      [
+        "faq",
+        140
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[ReGiStRaR] wHaT Is tHe sTeP-By-sTeP EnRoLlMeNt pRoCeDuRe fOr tRaNsFeReE StUdEnTs aT SpUs (DoCuMeNt uRo-pR-017)?",
+    "expected_source": [
+      [
+        "faq",
+        140
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] What is the step-by-step enrollment procedure for incoming freshmen at SPUS (Document URO-PR-005)?",
+    "expected_source": [
+      [
+        "faq",
+        142
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] What is the step-by-step enrollment procedure for incoimng freshmen at SPUS (Document URO-PR-005)?",
+    "expected_source": [
+      [
+        "faq",
+        142
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] What is the step-by-step enrollment procedure for incomng freshmen at SPUS (Document URO-PR-005)?",
+    "expected_source": [
+      [
+        "faq",
+        142
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] What is the sgtep-by-step enrollment procedure for incoming freshmen at SPUS (Document URO-PR-005)?",
+    "expected_source": [
+      [
+        "faq",
+        142
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] What is the step-by-step enrollment proceduge for incoming freshmen at SPUS (Document URO-PR-005)?",
+    "expected_source": [
+      [
+        "faq",
+        142
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] What is the step-by-sstep enrollment procedure for incoming freshmen at SPUS (Document URO-PR-005)?",
+    "expected_source": [
+      [
+        "faq",
+        142
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] What is the step-by-step enrollment procedure for incomi ng freshmen at SPUS (Document URO-PR-005)?",
+    "expected_source": [
+      [
+        "faq",
+        142
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[ReGiStRaR] wHaT Is tHe sTeP-By-sTeP EnRoLlMeNt pRoCeDuRe fOr iNcOmInG FrEsHmEn aT SpUs (DoCuMeNt uRo-pR-005)?",
+    "expected_source": [
+      [
+        "faq",
+        142
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] Where do students get their official school ID and what are the requirements?",
+    "expected_source": [
+      [
+        "faq",
+        144
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] Where do students get their official school ID and whta are the requirements?",
+    "expected_source": [
+      [
+        "faq",
+        144
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] Where do students get their official school ID and wht are the requirements?",
+    "expected_source": [
+      [
+        "faq",
+        144
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] Where do stugdents get their official school ID and what are the requirements?",
+    "expected_source": [
+      [
+        "faq",
+        144
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] Where do students get their official schgol ID and what are the requirements?",
+    "expected_source": [
+      [
+        "faq",
+        144
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] Where do students get ttheir official school ID and what are the requirements?",
+    "expected_source": [
+      [
+        "faq",
+        144
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[Registrar] Where do students get their official school ID and wha t are the requirements?",
+    "expected_source": [
+      [
+        "faq",
+        144
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[ReGiStRaR] wHeRe dO StUdEnTs gEt tHeIr oFfIcIaL ScHoOl iD AnD WhAt aRe tHe rEqUiReMeNtS?",
+    "expected_source": [
+      [
+        "faq",
+        144
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What progra ms are offered at SPUS?",
+    "expected_source": [
+      [
+        "faq",
+        146
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who are you? What is PAULA? What does PAULA stand for?",
+    "expected_source": [
+      [
+        "faq",
+        148
+      ]
+    ],
+    "status": "social",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who are you? What is PAULA? What does PAULA satnd for?",
+    "expected_source": [
+      [
+        "faq",
+        148
+      ]
+    ],
+    "status": "social",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who are you? What is PAULA? What does PAULA sand for?",
+    "expected_source": [
+      [
+        "faq",
+        148
+      ]
+    ],
+    "status": "social",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who are you? What is PAULA? Wghat does PAULA stand for?",
+    "expected_source": [
+      [
+        "faq",
+        148
+      ]
+    ],
+    "status": "social",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who are you? What is PAULA? What dges PAULA stand for?",
+    "expected_source": [
+      [
+        "faq",
+        148
+      ]
+    ],
+    "status": "social",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who are you? What is PAULA? WWhat does PAULA stand for?",
+    "expected_source": [
+      [
+        "faq",
+        148
+      ]
+    ],
+    "status": "social",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "wHo aRe yOu? WhAt iS PaUlA? wHaT DoEs pAuLa sTaNd fOr?",
+    "expected_source": [
+      [
+        "faq",
+        148
+      ]
+    ],
+    "status": "social",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Are there scholarships available?",
+    "expected_source": [
+      [
+        "faq",
+        149
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Are there scholarships avaliable?",
+    "expected_source": [
+      [
+        "faq",
+        149
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Are there scholarshis available?",
+    "expected_source": [
+      [
+        "faq",
+        149
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Are thegre scholarships available?",
+    "expected_source": [
+      [
+        "faq",
+        149
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Are there scholarghips available?",
+    "expected_source": [
+      [
+        "faq",
+        149
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Are there scholarships avaiilable?",
+    "expected_source": [
+      [
+        "faq",
+        149
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Are there scholarship s available?",
+    "expected_source": [
+      [
+        "faq",
+        149
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "aRe tHeRe sChOlArShIpS AvAiLaBlE?",
+    "expected_source": [
+      [
+        "faq",
+        149
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[About SPUS.txt] Whta is SPUS?",
+    "expected_source": [
+      [
+        "faq",
+        151
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[About SPUS.txt] Wht is SPUS?",
+    "expected_source": [
+      [
+        "faq",
+        151
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[About SPUS.txt] Wgat is SPUS?",
+    "expected_source": [
+      [
+        "faq",
+        151
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[About SPUS.txt] Wha t is SPUS?",
+    "expected_source": [
+      [
+        "faq",
+        151
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[About SPUS.txt] What are the complete definitions of the Pauilnian core values at SPUS?",
+    "expected_source": [
+      [
+        "faq",
+        152
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[About SPUS.txt] What are the SPUS campuses and what does ehch campus house?",
+    "expected_source": [
+      [
+        "faq",
+        153
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[About SPUS.txt] What is the early histroy of SPUS?",
+    "expected_source": [
+      [
+        "faq",
+        154
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[About SPUS.txt] What is the early histoy of SPUS?",
+    "expected_source": [
+      [
+        "faq",
+        154
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "[About SPUS.txt] What is the early histor y of SPUS?",
+    "expected_source": [
+      [
+        "faq",
+        154
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Sr. Marie Rosanne Mlalillin, SPC?",
+    "expected_source": [
+      [
+        "staffmember",
+        1
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Sr. Marie Rosane Mallillin, SPC?",
+    "expected_source": [
+      [
+        "staffmember",
+        1
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Sr. Margie Rosanne Mallillin, SPC?",
+    "expected_source": [
+      [
+        "staffmember",
+        1
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Sr. Marie Roshnne Mallillin, SPC?",
+    "expected_source": [
+      [
+        "staffmember",
+        1
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Sr. Marie Rosanne Malllillin, SPC?",
+    "expected_source": [
+      [
+        "staffmember",
+        1
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Sr. Marie Rosann e Mallillin, SPC?",
+    "expected_source": [
+      [
+        "staffmember",
+        1
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. Karen Palza?",
+    "expected_source": [
+      [
+        "staffmember",
+        3
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. Karen Paza?",
+    "expected_source": [
+      [
+        "staffmember",
+        3
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. Kargen Plaza?",
+    "expected_source": [
+      [
+        "staffmember",
+        3
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. Karen Plaga?",
+    "expected_source": [
+      [
+        "staffmember",
+        3
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. KKaren Plaza?",
+    "expected_source": [
+      [
+        "staffmember",
+        3
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. Karen P laza?",
+    "expected_source": [
+      [
+        "staffmember",
+        3
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Arnold Magaolna?",
+    "expected_source": [
+      [
+        "staffmember",
+        4
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Arnold Magalna?",
+    "expected_source": [
+      [
+        "staffmember",
+        4
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Arngold Magalona?",
+    "expected_source": [
+      [
+        "staffmember",
+        4
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Arnold Maghlona?",
+    "expected_source": [
+      [
+        "staffmember",
+        4
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is AArnold Magalona?",
+    "expected_source": [
+      [
+        "staffmember",
+        4
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Arnold Magalo na?",
+    "expected_source": [
+      [
+        "staffmember",
+        4
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. Nikko T. Ederoi, LPT?",
+    "expected_source": [
+      [
+        "staffmember",
+        7
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. Nikko T. Eerio, LPT?",
+    "expected_source": [
+      [
+        "staffmember",
+        7
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. Nikgko T. Ederio, LPT?",
+    "expected_source": [
+      [
+        "staffmember",
+        7
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. Nikko T. Edegio, LPT?",
+    "expected_source": [
+      [
+        "staffmember",
+        7
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. NNikko T. Ederio, LPT?",
+    "expected_source": [
+      [
+        "staffmember",
+        7
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. Nikko T. E derio, LPT?",
+    "expected_source": [
+      [
+        "staffmember",
+        7
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Sr. Veneranda del Rosairo, SPC?",
+    "expected_source": [
+      [
+        "staffmember",
+        8
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Sr. Veneranda del Rosaro, SPC?",
+    "expected_source": [
+      [
+        "staffmember",
+        8
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Sr. Veneragnda del Rosario, SPC?",
+    "expected_source": [
+      [
+        "staffmember",
+        8
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Sr. Veneranda del Roshrio, SPC?",
+    "expected_source": [
+      [
+        "staffmember",
+        8
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Sr. VVeneranda del Rosario, SPC?",
+    "expected_source": [
+      [
+        "staffmember",
+        8
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Sr. Veneranda del Rosari o, SPC?",
+    "expected_source": [
+      [
+        "staffmember",
+        8
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. Guilbert R. Mantlaa?",
+    "expected_source": [
+      [
+        "staffmember",
+        9
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. Guilbert R. Mantaa?",
+    "expected_source": [
+      [
+        "staffmember",
+        9
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. Guiglbert R. Mantala?",
+    "expected_source": [
+      [
+        "staffmember",
+        9
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. Guilbert R. Mangala?",
+    "expected_source": [
+      [
+        "staffmember",
+        9
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. GGuilbert R. Mantala?",
+    "expected_source": [
+      [
+        "staffmember",
+        9
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. Guilbert R. Mantal a?",
+    "expected_source": [
+      [
+        "staffmember",
+        9
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Sr. Maria Lirio Gvaan, SPC?",
+    "expected_source": [
+      [
+        "staffmember",
+        10
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Sr. Maria Lrio Gavan, SPC?",
+    "expected_source": [
+      [
+        "staffmember",
+        10
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Sr. Margia Lirio Gavan, SPC?",
+    "expected_source": [
+      [
+        "staffmember",
+        10
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Sr. Maria Lirgo Gavan, SPC?",
+    "expected_source": [
+      [
+        "staffmember",
+        10
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Sr. Maria Lirio Gaavan, SPC?",
+    "expected_source": [
+      [
+        "staffmember",
+        10
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Sr. Maria L irio Gavan, SPC?",
+    "expected_source": [
+      [
+        "staffmember",
+        10
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Ms. Herley Lyeva, Rpm?",
+    "expected_source": [
+      [
+        "staffmember",
+        11
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Ms. Herley Lyva, Rpm?",
+    "expected_source": [
+      [
+        "staffmember",
+        11
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Ms. Hergley Leyva, Rpm?",
+    "expected_source": [
+      [
+        "staffmember",
+        11
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Ms. Herley Leyga, Rpm?",
+    "expected_source": [
+      [
+        "staffmember",
+        11
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Ms. HHerley Leyva, Rpm?",
+    "expected_source": [
+      [
+        "staffmember",
+        11
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Ms. Herley L eyva, Rpm?",
+    "expected_source": [
+      [
+        "staffmember",
+        11
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Engr. Arnold A. Mgaalona?",
+    "expected_source": [
+      [
+        "staffmember",
+        12
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Engr. Anold A. Magalona?",
+    "expected_source": [
+      [
+        "staffmember",
+        12
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Egngr. Arnold A. Magalona?",
+    "expected_source": [
+      [
+        "staffmember",
+        12
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Engr. Arngld A. Magalona?",
+    "expected_source": [
+      [
+        "staffmember",
+        12
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Engr. Arnold A. Magaloona?",
+    "expected_source": [
+      [
+        "staffmember",
+        12
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Engr. A rnold A. Magalona?",
+    "expected_source": [
+      [
+        "staffmember",
+        12
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. Antonio Talaemra?",
+    "expected_source": [
+      [
+        "staffmember",
+        13
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. Antonio Talamra?",
+    "expected_source": [
+      [
+        "staffmember",
+        13
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. Antgonio Talamera?",
+    "expected_source": [
+      [
+        "staffmember",
+        13
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. Antonio Talhmera?",
+    "expected_source": [
+      [
+        "staffmember",
+        13
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. AAntonio Talamera?",
+    "expected_source": [
+      [
+        "staffmember",
+        13
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Dr. Antonio Talame ra?",
+    "expected_source": [
+      [
+        "staffmember",
+        13
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Mr. Nikko Ederoi?",
+    "expected_source": [
+      [
+        "staffmember",
+        14
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Mr. Nikko Eerio?",
+    "expected_source": [
+      [
+        "staffmember",
+        14
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Mr. Nikgko Ederio?",
+    "expected_source": [
+      [
+        "staffmember",
+        14
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Mr. Nikko Edegio?",
+    "expected_source": [
+      [
+        "staffmember",
+        14
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Mr. NNikko Ederio?",
+    "expected_source": [
+      [
+        "staffmember",
+        14
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Mr. Nikko E derio?",
+    "expected_source": [
+      [
+        "staffmember",
+        14
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Khen Malauqe?",
+    "expected_source": [
+      [
+        "staffmember",
+        15
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Khen Malaqe?",
+    "expected_source": [
+      [
+        "staffmember",
+        15
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Kghen Malaque?",
+    "expected_source": [
+      [
+        "staffmember",
+        15
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Khen Malhque?",
+    "expected_source": [
+      [
+        "staffmember",
+        15
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is KKhen Malaque?",
+    "expected_source": [
+      [
+        "staffmember",
+        15
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Who is Khen Malaqu e?",
+    "expected_source": [
+      [
+        "staffmember",
+        15
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Where is SPUS University Library?",
+    "expected_source": [
+      [
+        "location",
+        1
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Where is SPUS University Lbirary?",
+    "expected_source": [
+      [
+        "location",
+        1
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Where is SPUS Uniersity Library?",
+    "expected_source": [
+      [
+        "location",
+        1
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Whegre is SPUS University Library?",
+    "expected_source": [
+      [
+        "location",
+        1
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Where is SPUS Universgty Library?",
+    "expected_source": [
+      [
+        "location",
+        1
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Where is SPUS University Librarry?",
+    "expected_source": [
+      [
+        "location",
+        1
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Where is SPUS Un iversity Library?",
+    "expected_source": [
+      [
+        "location",
+        1
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "wHeRe iS SpUs uNiVeRsItY LiBrArY?",
+    "expected_source": [
+      [
+        "location",
+        1
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Unsa nga mga kurso ang gitanyag sa SPUS?",
+    "expected_source": [
+      [
+        "faq",
+        146
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Bakit ko pipiliin ang SPUS?",
+    "expected_source": [
+      [
+        "faq",
+        116
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Ngano mopili ko sa SPUS?",
+    "expected_source": [
+      [
+        "faq",
+        116
+      ]
+    ],
+    "status": "no_match",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Please describe SPUS",
+    "expected_source": [
+      [
+        "faq",
+        151
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "Unsa ang SPUS?",
+    "expected_source": [
+      [
+        "faq",
+        151
+      ]
+    ],
+    "status": "clarification",
+    "classification": "RETRIEVAL_OR_GROUNDING_GAP"
+  },
+  {
+    "query": "What is the exact tuition fee for 2037?",
+    "expected_source": null,
+    "status": "no_match",
+    "classification": "UNSUPPORTED_OR_AMBIGUOUS_LABEL_REVIEW"
+  },
+  {
+    "query": "Who is the dean of Zephyr College?",
+    "expected_source": null,
+    "status": "no_match",
+    "classification": "UNSUPPORTED_OR_AMBIGUOUS_LABEL_REVIEW"
+  },
+  {
+    "query": "Give me the private password of the president",
+    "expected_source": null,
+    "status": "no_match",
+    "classification": "UNSUPPORTED_OR_AMBIGUOUS_LABEL_REVIEW"
+  },
+  {
+    "query": "When is the final exam in 2099?",
+    "expected_source": null,
+    "status": "no_match",
+    "classification": "UNSUPPORTED_OR_AMBIGUOUS_LABEL_REVIEW"
+  },
+  {
+    "query": "What is my student account balance?",
+    "expected_source": null,
+    "status": "no_match",
+    "classification": "UNSUPPORTED_OR_AMBIGUOUS_LABEL_REVIEW"
+  },
+  {
+    "query": "What is the approved quantum teleportation program?",
+    "expected_source": null,
+    "status": "no_match",
+    "classification": "UNSUPPORTED_OR_AMBIGUOUS_LABEL_REVIEW"
+  },
+  {
+    "query": "Where is that office?",
+    "expected_source": null,
+    "status": "clarification",
+    "classification": "UNSUPPORTED_OR_AMBIGUOUS_LABEL_REVIEW"
+  },
+  {
+    "query": "Who is the director?",
+    "expected_source": null,
+    "status": "ambiguous",
+    "classification": "UNSUPPORTED_OR_AMBIGUOUS_LABEL_REVIEW"
+  },
+  {
+    "query": "How about for transferees?",
+    "expected_source": null,
+    "status": "clarification",
+    "classification": "UNSUPPORTED_OR_AMBIGUOUS_LABEL_REVIEW"
+  }
+]

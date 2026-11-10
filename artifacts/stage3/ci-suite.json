@@ -1,0 +1,8 @@
+{
+  "passed": 498,
+  "scope": "Local isolated CI PostgreSQL tmpfs; existing runtime image, not remote CI",
+  "discovered": 499,
+  "result": "OK",
+  "revision": "cb7e3a37684f93db84447c50822ff5bb3b5a9fbd",
+  "skipped": 1
+}

@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState, useMemo, useCallback } from 'react';
 import { latestSuggestions, parseMessage } from '../suggestions';
+import { messageBlocks } from '../messageBlocks';
 import ThemeToggle from './ThemeToggle';
 import EditProfileModal from './EditProfileModal';
 import { fetchAnnouncements } from '../api/chatApi';
@@ -62,16 +63,15 @@ function ListItemLine({ text, indent, bullet }) {
 function MarkdownRenderer({ text }) {
   return (
     <div className="markdown-renderer">
-      {text.split('\n').map((line, idx) => {
-        const unorderedMatch = line.match(/^(\s*)(?:-\s|\*\s)(.*)$/);
-        if (unorderedMatch) {
-          return <ListItemLine key={idx} text={unorderedMatch[2]} indent={unorderedMatch[1]} bullet="•" />;
+      {messageBlocks(text).map((block, idx) => {
+        if (block.type==='list') {
+          const Tag=block.ordered?'ol':'ul';
+          return <Tag key={idx} className="answer-list" start={block.ordered?block.items[0].number:undefined}
+            style={{paddingInlineStart:'24px',margin:'0 0 8px',overflowWrap:'anywhere',listStyleType:block.ordered?'decimal':'disc'}}>
+            {block.items.map((item,i)=><li key={i} value={item.number} style={{marginBottom:'8px',lineHeight:1.6,marginLeft:`${item.indent*8}px`}}>{renderFormattedText(item.text)}</li>)}
+          </Tag>;
         }
-        const orderedMatch = line.match(/^(\s*)(\d+\.)\s(.*)$/);
-        if (orderedMatch) {
-          return <ListItemLine key={idx} text={orderedMatch[3]} indent={orderedMatch[1]} bullet={orderedMatch[2]} />;
-        }
-        return line.trim() ? <p key={idx} style={{ marginBottom: '8px' }}>{renderFormattedText(line)}</p> : <div key={idx} style={{ height: '8px' }} />;
+        return block.type==='paragraph' ? <p key={idx} style={{ marginBottom: '8px' }}>{renderFormattedText(block.text)}</p> : <div key={idx} style={{ height: '8px' }} />;
       })}
     </div>
   );

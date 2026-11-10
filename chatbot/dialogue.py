@@ -1,39 +1,17 @@
 """Conservative social/knowledge routing; no answers or user state in the router."""
+from .conversation_config import conversation_config
 from dataclasses import dataclass
 import re
 from threading import Lock
 
-from .performance import timed, stage
-from .query_normalization import normalized_text
-from .intents import normalize_query
+from .performance import timed, stage, diagnostic_error
+from .query_normalization import normalize_input, normalized_text
 from .social_normalization import match_social
+from .spelling import matching_plan
 
 
 # Public intent examples only. These never enter the knowledge vector space.
-SOCIAL_EXAMPLES = {
-    'wellbeing': ('How are things going with you?', 'How is your day going?', 'Are you doing okay?',
-                  'Kumusta ka ngayon?', 'Kamusta ang araw mo?', 'How are you naman?'),
-    'thanks': ('I appreciate your help a lot', 'That was really helpful, thank you', 'You helped me understand',
-               'Maraming salamat sa tulong', 'Thank you, malaking tulong ito'),
-    'acknowledgement': ('Okay, I understand now', 'That makes sense to me', 'All clear, got it',
-                        'Sige, naiintindihan ko na', 'Ah okay, gets ko na'),
-    'farewell': ('I will talk to you later', 'Goodbye and take care', 'See you next time',
-                 'Sige, paalam muna', 'Usap tayo ulit mamaya'),
-    'joke': ('Say something funny to cheer me up', 'Can you tell me a short joke?', 'Make me laugh a little',
-             'Patawanin mo naman ako', 'May joke ka ba?', 'Something funny naman'),
-    'support': ('I have had a tiring day', 'I am feeling nervous and overwhelmed', 'I feel discouraged today',
-                'Pagod na ako ngayon', 'Medyo kinakabahan ako', 'Nakaka-stress ang araw na ito'),
-    'celebration': ('I am happy about my progress', 'I finally finished my work', 'I did it and feel proud',
-                    'Masaya ako ngayon', 'Natapos ko na ang gawain ko', 'Finally, tapos na!'),
-    'preference': ('What is your favorite food?', 'Do you have any hobbies?', 'What do you do for fun?',
-                   'Ano ang paborito mong pagkain?', 'May hobbies ka ba?', 'What music do you like?'),
-    'capabilities': ('What can you help me with?', 'Can we have a casual conversation?', 'What are you able to do?',
-                     'Ano ang kaya mong gawin?', 'Pwede ba tayong mag-usap lang?', 'Can we just chat for a bit?'),
-    'knowledge': ('Who is the university president?', 'How do I enroll as a transferee?', 'What are the library rules?',
-                  'Where is the finance office?', 'What documents are required?', 'Who teaches engineering?',
-                  'How much is tuition?', 'What is the deadline?', 'What programs are available?',
-                  'Sino ang dekano?', 'Paano mag-enroll?', 'Magkano ang bayad?', 'Ano ang requirements?'),
-}
+SOCIAL_EXAMPLES = conversation_config()['semantic']['exemplars']
 
 KNOWLEDGE = re.compile(
     r'\b(?:spus|spu|university|campus|college|school|faculty|faculties|dean|president|director|principal|registrar|'
@@ -49,26 +27,7 @@ SELF_SOCIAL = re.compile(r'\b(?:you|your|ka|mo|ikaw|tayo|joke|funny|laugh|patawa
 EMOTION = re.compile(r'\b(?:tired|stressed|nervous|overwhelmed|discouraged|frustrated|sad|bored|pagod|kinakabahan|lungkot|nakakainis|stress)\b', re.I)
 FIRST_PERSON = re.compile(r"^(?:i\b|i['’]m\b|im\b|feeling\b|medyo\b|pagod\b|kinakabahan\b|ako\b|nakaka\w*\b)", re.I)
 
-FAST = {
-    'greeting': r'(?:hi|hello|hey|huy|mabuhay|good morning|good afternoon|good evening|kamusta|kumusta)(?:\s+(?:there|paula|po|naman))*',
-    'wellbeing': r"(?:how are you(?: doing)?(?: today)?|how['’]s it going|what['’]s up|kumusta ka(?: na)?|kamusta ka(?: na)?)(?:\s+(?:paula|po|naman))*",
-    'thanks': r'(?:thanks|thank you|thank you so much|thanks a lot|salamat|maraming salamat)(?:\s+(?:paula|po|so much|for your help|sa tulong|that helped|malaking tulong))*',
-    'acknowledgement': r'(?:ok|okay|alright|got it|understood|noted|makes sense|sige|gets ko na|naiintindihan ko na|all clear)(?:\s+(?:na|po|paula))*',
-    'farewell': r'(?:bye|goodbye|see you|see you later|good night|paalam|ingat)(?:\s+(?:paula|po|muna))*',
-    'feedback': r"(?:that['’]s wrong|that is wrong|your answer is wrong|that['’]s incorrect|mali yan|mali iyon|mali ang sagot|that doesn['’]t answer my question)",
-    'identity': (r'(?:who(?:\s+(?:are|r))?\s+(?:you|u)|what(?: are| r) you|what do you do|'
-                 r'what is your (?:name|purpose|role|function)|what[\x27\u2019]s your (?:name|purpose|role)|'
-                 r'what is paula|who is paula|what does paula stand for|are you human|'
-                 r'(?:please\s+)?(?:tell me(?: a bit| something| more)? about|introduce|describe)\s+(?:yourself|urself|you|paula)|'
-                 r'(?:can|could|would) you(?: please)? (?:introduce|describe) yourself|'
-                 r'sino ka(?: ba| po)?|ano ang paula|pakilala ka(?: naman| po)?|magpakilala ka(?: naman| po)?)'
-                 r'(?:\s+(?:please|po|paula))*'),
-    'repair': r'(?:oops|oops sorry|sorry typo|sorry that was a typo|typo|wrong message|wrong input|accidentally sent|sorry wrong message|maling pindot|mali ang na-type|sorry maling type)',
-    'affirmation': r'(?:yes|yep|yeah|sure|oo|opo|oo naman)(?:\s+(?:po|paula))*',
-    'negation': r'(?:no|nope|no thanks|no thank you|hindi|dili)(?:\s+(?:po|paula))*',
-    'capabilities': r'(?:help|help me|tulong|patulong|what can you do|what can you help me with|can you help me)(?:\s+(?:please|po|paula))*',
-    'clarification': r'(?:explain|please explain|explain again|what do you mean|could you clarify|please clarify|clarify that)(?:\s+(?:please|po|paula))*',
-}
+FAST = conversation_config()['social']['fast_patterns']
 FAST_PATTERNS = {key: re.compile(r'^(?:' + value + r')[!.?,\s]*$', re.I) for key, value in FAST.items()}
 EDGE_KINDS = ('greeting', 'wellbeing', 'thanks')
 
@@ -81,6 +40,7 @@ class DialogueRoute:
     method: str = 'rule'
     score: float | None = None
     reply_language: str | None = None
+    segments: tuple = ()
 
 
 class SemanticSocialRouter:
@@ -106,21 +66,27 @@ class SemanticSocialRouter:
                 raise ValueError('Invalid social routing prototype vectors')
             self.model, self.labels, self.matrix = model, tuple(labels), matrix
 
-    def classify(self, text):
+    def rank(self, text):
         if self.matrix is None:
-            return None
+            return ()
         import numpy as np
         with stage('social_query_embedding'):
             vector = np.asarray(self.model.encode(text, normalize_embeddings=True, show_progress_bar=False), dtype=float)
         if vector.shape != (384,) or not np.isfinite(vector).all():
-            return None
+            return ()
         scores = self.matrix @ vector
         ranked = sorted(((max(float(scores[i]) for i, label in enumerate(self.labels) if label == kind), kind)
                          for kind in SOCIAL_EXAMPLES), reverse=True)
+        return tuple(ranked)
+
+    def classify(self,text):
+        ranked=self.rank(text)
+        if not ranked:return None
         score, kind = ranked[0]
         # Intent similarity thresholds are independent of the unchanged .45
         # document-retrieval cutoff. Low-margin cases fail toward clarification.
-        if kind == 'knowledge' or score < 0.65 or score - ranked[1][0] < 0.08:
+        semantic=conversation_config()['semantic']
+        if kind == 'knowledge' or score < semantic.get('min_similarity',.65) or score - ranked[1][0] < semantic.get('min_margin',.08):
             return None
         return kind, round(score, 4)
 
@@ -153,20 +119,29 @@ def language_request(text):
     return None
 
 
+def local_self_intent(text):
+    """Whole-command self requests only; extra clauses retain normal retrieval."""
+    return next((kind for kind in ('identity', 'capabilities') if FAST_PATTERNS[kind].fullmatch(text)), None)
+
+
+def task_tail(text):
+    return bool(FACTUAL.search(text) or KNOWLEDGE.search(text) or FOLLOWUP.search(text) or local_self_intent(text))
+
+
 def social_edges(message):
     """Strip only whole social clauses at the edges; preserve the request span."""
     text, ack = message.strip(), ''
     for _ in range(2):
         for kind in EDGE_KINDS:
             match = re.match(r'^(?:' + FAST[kind] + r')(?:[!?,.:;]+\s*|\s+(?:and|at)\s+)(.+)$', text, re.I)
-            if match and (FACTUAL.search(match.group(1)) or KNOWLEDGE.search(match.group(1)) or FOLLOWUP.search(match.group(1))):
+            if match and task_tail(match.group(1)):
                 text, ack = match.group(1).strip(), 'greeting' if kind in ('greeting', 'wellbeing') else kind
                 break
         else:
             break
     # Remove a closing thank-you only when a substantive request remains.
     match = re.match(r'^(.*?)(?:[!.?,;]\s*|\s+)(?:' + FAST['thanks'] + r')[!.?\s]*$', text, re.I)
-    if match and (FACTUAL.search(match.group(1)) or KNOWLEDGE.search(match.group(1)) or FOLLOWUP.search(match.group(1))):
+    if match and task_tail(match.group(1)):
         text, ack = match.group(1).strip(), ack or 'thanks'
     # Abbreviations/typos may be stripped only as an isolated social edge.
     # Keep the factual span verbatim, including dates, negation, and identifiers.
@@ -174,22 +149,23 @@ def social_edges(message):
     if match:
         social = match_social(match.group(1))
         tail = match.group(2).strip()
-        if social and social.kind in EDGE_KINDS and (FACTUAL.search(tail) or KNOWLEDGE.search(tail) or FOLLOWUP.search(tail)):
+        if social and social.kind in EDGE_KINDS and task_tail(tail):
             text, ack = tail, 'greeting' if social.kind in ('greeting', 'wellbeing') else social.kind
     match = re.match(r'^(.*)[!?,;.]\s*([^!?,;.]+)[!?.\s]*$', text, re.S)
     if match:
         social = match_social(match.group(2))
         head = match.group(1).strip()
-        if social and social.kind == 'thanks' and (FACTUAL.search(head) or KNOWLEDGE.search(head) or FOLLOWUP.search(head)):
+        if social and social.kind == 'thanks' and task_tail(head):
             text, ack = head, ack or 'thanks'
     return text, ack
 
 
 @timed('dialogue_routing')
-def route_turn(message, semantic=True):
+def route_turn(message, semantic=True, *, _bundle=True):
     if not isinstance(message, str) or not message.strip():
         return DialogueRoute('knowledge', message if isinstance(message, str) else '')
-    text = normalize_query(message)
+    plan = matching_plan(message)
+    text = plan.matching
     if len(text) > 2000:
         return DialogueRoute('knowledge', text)
     if not re.search(r'\w', text, re.UNICODE):
@@ -198,20 +174,46 @@ def route_turn(message, semantic=True):
         return DialogueRoute('language', method='rule')
     # A comma before a vocative ("Hello, PAULA") is punctuation, not a
     # second request. Do not normalize the substantive retrieval query.
-    social_text = re.sub(r'[,;:]\s*', ' ', text)
-    # Correct a greeting typo only as a whole social utterance; never change
-    # these spans in a factual request or somebody's name.
-    social_text = re.sub(r'^(?:helo|helloo|hllo)(?=\b)', 'hello', social_text, flags=re.I)
+    social_text = re.sub(r'[,;:]\s*', ' ', normalize_input(text).punctuated)
     for kind, pattern in FAST_PATTERNS.items():
         if pattern.fullmatch(social_text):
             return DialogueRoute(kind)
     social = match_social(social_text)
     if social:
         return DialogueRoute(social.kind, method=social.method, score=social.score, reply_language=social.reply_language)
+    if _bundle:
+        clauses = [part.strip() for part in re.split(r'[,;!?]+\s*|\s+(?:and|at|pati|tsaka|&)\s+',message,flags=re.I) if part.strip()]
+        if 2<=len(clauses)<=6:
+            routes = tuple(route_turn(part,semantic=False,_bundle=False) for part in clauses)
+            allowed = {'greeting','wellbeing','thanks','identity','capabilities','affirmation','negation','acknowledgement','farewell'}
+            if all(route.kind in allowed for route in routes):
+                if len({route.kind for route in routes})==1:
+                    return routes[0]
+                if len(routes)==2 and routes[0].kind in EDGE_KINDS and routes[1].kind in ('identity','capabilities'):
+                    from dataclasses import replace
+                    return replace(routes[1],acknowledgement='greeting' if routes[0].kind in ('greeting','wellbeing') else 'thanks')
+                return DialogueRoute('social_bundle',method='composition',segments=routes)
+    if plan.protected_name:
+        return DialogueRoute('knowledge',message,method='protected_name')
+    if plan.needs_confirmation:
+        # Unknown conversational words can resemble several factual nouns.
+        # Try the existing social fallback on the uncorrected shorthand view
+        # before asking a factual spelling question. Institutional constraints
+        # and person requests retain their stricter paths.
+        from .chat_language import expand_shorthand
+        raw=expand_shorthand(normalize_input(message).cased)
+        if semantic and len(normalize_input(raw).spaced.split())>1 and not (KNOWLEDGE.search(raw) or FOLLOWUP.search(raw) or INSTRUCTION.search(raw) or re.search(r'\d|https?://',raw)):
+            try:prediction=social_router.classify(raw)
+            except Exception as exc:
+                diagnostic_error('classifier','CLASSIFIER_ERROR',exc);prediction=None
+            if prediction and ((not FACTUAL.search(raw) and not REQUEST.search(raw)) or SELF_SOCIAL.search(raw)):
+                return DialogueRoute(prediction[0],method='semantic',score=prediction[1])
+        return DialogueRoute('knowledge',text,method='spelling_confirmation',score=min((c.confidence for c in plan.corrections),default=None))
     query, acknowledgement = social_edges(text)
     if query != text:
-        if FAST_PATTERNS['identity'].fullmatch(query):
-            return DialogueRoute('identity')
+        self_intent = local_self_intent(query)
+        if self_intent:
+            return DialogueRoute(self_intent, acknowledgement=acknowledgement)
         return DialogueRoute('knowledge', query, acknowledgement)
     # Explicit requests, domain entities, numerical conditions and references
     # cannot be answered by model memory, even if they contain a social phrase.
@@ -237,7 +239,8 @@ def route_turn(message, semantic=True):
     if semantic:
         try:
             result = social_router.classify(text)
-        except Exception:
+        except Exception as exc:
+            diagnostic_error('classifier', 'CLASSIFIER_ERROR', exc)
             result = None
         if result:
             kind, score = result

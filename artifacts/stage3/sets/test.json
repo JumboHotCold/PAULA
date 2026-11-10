@@ -1,0 +1,3778 @@
+[
+  {
+    "group": "social",
+    "intent": "greeting",
+    "query": "Hey there assistant",
+    "source_id": "social:greeting:0",
+    "operation": "clean",
+    "canonical": "Hey there assistant"
+  },
+  {
+    "group": "social",
+    "intent": "greeting",
+    "query": "Hey there assisatnt",
+    "source_id": "social:greeting:0",
+    "operation": "transposition",
+    "canonical": "Hey there assistant"
+  },
+  {
+    "group": "social",
+    "intent": "greeting",
+    "query": "Hey there assstant",
+    "source_id": "social:greeting:0",
+    "operation": "deletion",
+    "canonical": "Hey there assistant"
+  },
+  {
+    "group": "social",
+    "intent": "greeting",
+    "query": "Hey thegre assistant",
+    "source_id": "social:greeting:0",
+    "operation": "insertion",
+    "canonical": "Hey there assistant"
+  },
+  {
+    "group": "social",
+    "intent": "greeting",
+    "query": "Hey there assistagt",
+    "source_id": "social:greeting:0",
+    "operation": "substitution",
+    "canonical": "Hey there assistant"
+  },
+  {
+    "group": "social",
+    "intent": "greeting",
+    "query": "Hey tthere assistant",
+    "source_id": "social:greeting:0",
+    "operation": "doubled",
+    "canonical": "Hey there assistant"
+  },
+  {
+    "group": "social",
+    "intent": "greeting",
+    "query": "Hey there as sistant",
+    "source_id": "social:greeting:0",
+    "operation": "spacing",
+    "canonical": "Hey there assistant"
+  },
+  {
+    "group": "social",
+    "intent": "greeting",
+    "query": "hEy tHeRe aSsIsTaNt",
+    "source_id": "social:greeting:0",
+    "operation": "case",
+    "canonical": "Hey there assistant"
+  },
+  {
+    "group": "social",
+    "intent": "greeting",
+    "query": "Magandang hapon po",
+    "source_id": "social:greeting:4",
+    "operation": "clean",
+    "canonical": "Magandang hapon po"
+  },
+  {
+    "group": "social",
+    "intent": "greeting",
+    "query": "Magandang hpaon po",
+    "source_id": "social:greeting:4",
+    "operation": "transposition",
+    "canonical": "Magandang hapon po"
+  },
+  {
+    "group": "social",
+    "intent": "greeting",
+    "query": "Magandang hpon po",
+    "source_id": "social:greeting:4",
+    "operation": "deletion",
+    "canonical": "Magandang hapon po"
+  },
+  {
+    "group": "social",
+    "intent": "greeting",
+    "query": "Magandgang hapon po",
+    "source_id": "social:greeting:4",
+    "operation": "insertion",
+    "canonical": "Magandang hapon po"
+  },
+  {
+    "group": "social",
+    "intent": "greeting",
+    "query": "Magandang hapgn po",
+    "source_id": "social:greeting:4",
+    "operation": "substitution",
+    "canonical": "Magandang hapon po"
+  },
+  {
+    "group": "social",
+    "intent": "greeting",
+    "query": "MMagandang hapon po",
+    "source_id": "social:greeting:4",
+    "operation": "doubled",
+    "canonical": "Magandang hapon po"
+  },
+  {
+    "group": "social",
+    "intent": "greeting",
+    "query": "Magandang h apon po",
+    "source_id": "social:greeting:4",
+    "operation": "spacing",
+    "canonical": "Magandang hapon po"
+  },
+  {
+    "group": "social",
+    "intent": "greeting",
+    "query": "mAgAnDaNg hApOn pO",
+    "source_id": "social:greeting:4",
+    "operation": "case",
+    "canonical": "Magandang hapon po"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "Could you say your full name",
+    "source_id": "social:identity:2",
+    "operation": "clean",
+    "canonical": "Could you say your full name"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "Could you say your full naem",
+    "source_id": "social:identity:2",
+    "operation": "transposition",
+    "canonical": "Could you say your full name"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "Could you say your full nae",
+    "source_id": "social:identity:2",
+    "operation": "deletion",
+    "canonical": "Could you say your full name"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "Could you say ygour full name",
+    "source_id": "social:identity:2",
+    "operation": "insertion",
+    "canonical": "Could you say your full name"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "Could you say your fgll name",
+    "source_id": "social:identity:2",
+    "operation": "substitution",
+    "canonical": "Could you say your full name"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "Could you say yyour full name",
+    "source_id": "social:identity:2",
+    "operation": "doubled",
+    "canonical": "Could you say your full name"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "Could you say your full nam e",
+    "source_id": "social:identity:2",
+    "operation": "spacing",
+    "canonical": "Could you say your full name"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "cOuLd yOu sAy yOuR FuLl nAmE",
+    "source_id": "social:identity:2",
+    "operation": "case",
+    "canonical": "Could you say your full name"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "Kinsa man ka",
+    "source_id": "social:identity:5",
+    "operation": "clean",
+    "canonical": "Kinsa man ka"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "Knisa man ka",
+    "source_id": "social:identity:5",
+    "operation": "transposition",
+    "canonical": "Kinsa man ka"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "Knsa man ka",
+    "source_id": "social:identity:5",
+    "operation": "deletion",
+    "canonical": "Kinsa man ka"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "Kingsa man ka",
+    "source_id": "social:identity:5",
+    "operation": "insertion",
+    "canonical": "Kinsa man ka"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "Kinga man ka",
+    "source_id": "social:identity:5",
+    "operation": "substitution",
+    "canonical": "Kinsa man ka"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "KKinsa man ka",
+    "source_id": "social:identity:5",
+    "operation": "doubled",
+    "canonical": "Kinsa man ka"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "K insa man ka",
+    "source_id": "social:identity:5",
+    "operation": "spacing",
+    "canonical": "Kinsa man ka"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "kInSa mAn kA",
+    "source_id": "social:identity:5",
+    "operation": "case",
+    "canonical": "Kinsa man ka"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "Please describe your role to me",
+    "source_id": "social:identity:6",
+    "operation": "clean",
+    "canonical": "Please describe your role to me"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "Please describe your roel to me",
+    "source_id": "social:identity:6",
+    "operation": "transposition",
+    "canonical": "Please describe your role to me"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "Please describe your roe to me",
+    "source_id": "social:identity:6",
+    "operation": "deletion",
+    "canonical": "Please describe your role to me"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "Please desgcribe your role to me",
+    "source_id": "social:identity:6",
+    "operation": "insertion",
+    "canonical": "Please describe your role to me"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "Please describe ygur role to me",
+    "source_id": "social:identity:6",
+    "operation": "substitution",
+    "canonical": "Please describe your role to me"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "Please ddescribe your role to me",
+    "source_id": "social:identity:6",
+    "operation": "doubled",
+    "canonical": "Please describe your role to me"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "Please describe your rol e to me",
+    "source_id": "social:identity:6",
+    "operation": "spacing",
+    "canonical": "Please describe your role to me"
+  },
+  {
+    "group": "social",
+    "intent": "identity",
+    "query": "pLeAsE DeScRiBe yOuR RoLe tO Me",
+    "source_id": "social:identity:6",
+    "operation": "case",
+    "canonical": "Please describe your role to me"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "What are your abilities",
+    "source_id": "social:capabilities:2",
+    "operation": "clean",
+    "canonical": "What are your abilities"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "What are your abiilties",
+    "source_id": "social:capabilities:2",
+    "operation": "transposition",
+    "canonical": "What are your abilities"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "What are yor abilities",
+    "source_id": "social:capabilities:2",
+    "operation": "deletion",
+    "canonical": "What are your abilities"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "Wghat are your abilities",
+    "source_id": "social:capabilities:2",
+    "operation": "insertion",
+    "canonical": "What are your abilities"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "What are ygur abilities",
+    "source_id": "social:capabilities:2",
+    "operation": "substitution",
+    "canonical": "What are your abilities"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "What are your abillities",
+    "source_id": "social:capabilities:2",
+    "operation": "doubled",
+    "canonical": "What are your abilities"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "What are you r abilities",
+    "source_id": "social:capabilities:2",
+    "operation": "spacing",
+    "canonical": "What are your abilities"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "wHaT ArE YoUr aBiLiTiEs",
+    "source_id": "social:capabilities:2",
+    "operation": "case",
+    "canonical": "What are your abilities"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "Ano ang maitutulong mo sa akin",
+    "source_id": "social:capabilities:3",
+    "operation": "clean",
+    "canonical": "Ano ang maitutulong mo sa akin"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "Ano ang maitutulong mo sa akni",
+    "source_id": "social:capabilities:3",
+    "operation": "transposition",
+    "canonical": "Ano ang maitutulong mo sa akin"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "Ano ang maitutulong mo sa akn",
+    "source_id": "social:capabilities:3",
+    "operation": "deletion",
+    "canonical": "Ano ang maitutulong mo sa akin"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "Ano ang maitutgulong mo sa akin",
+    "source_id": "social:capabilities:3",
+    "operation": "insertion",
+    "canonical": "Ano ang maitutulong mo sa akin"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "Ano ang maitutulong mo sa agin",
+    "source_id": "social:capabilities:3",
+    "operation": "substitution",
+    "canonical": "Ano ang maitutulong mo sa akin"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "Ano ang mmaitutulong mo sa akin",
+    "source_id": "social:capabilities:3",
+    "operation": "doubled",
+    "canonical": "Ano ang maitutulong mo sa akin"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "Ano ang maitutulong mo sa aki n",
+    "source_id": "social:capabilities:3",
+    "operation": "spacing",
+    "canonical": "Ano ang maitutulong mo sa akin"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "aNo aNg mAiTuTuLoNg mO Sa aKiN",
+    "source_id": "social:capabilities:3",
+    "operation": "case",
+    "canonical": "Ano ang maitutulong mo sa akin"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "Can u help me understand a question",
+    "source_id": "social:capabilities:6",
+    "operation": "clean",
+    "canonical": "Can u help me understand a question"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "Can u help me understand a qeustion",
+    "source_id": "social:capabilities:6",
+    "operation": "transposition",
+    "canonical": "Can u help me understand a question"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "Can u help me undrstand a question",
+    "source_id": "social:capabilities:6",
+    "operation": "deletion",
+    "canonical": "Can u help me understand a question"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "Can u hgelp me understand a question",
+    "source_id": "social:capabilities:6",
+    "operation": "insertion",
+    "canonical": "Can u help me understand a question"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "Can u help me understhnd a question",
+    "source_id": "social:capabilities:6",
+    "operation": "substitution",
+    "canonical": "Can u help me understand a question"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "Can u help me understand a questiion",
+    "source_id": "social:capabilities:6",
+    "operation": "doubled",
+    "canonical": "Can u help me understand a question"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "Can u help me un derstand a question",
+    "source_id": "social:capabilities:6",
+    "operation": "spacing",
+    "canonical": "Can u help me understand a question"
+  },
+  {
+    "group": "social",
+    "intent": "capabilities",
+    "query": "cAn u hElP Me uNdErStAnD A QuEsTiOn",
+    "source_id": "social:capabilities:6",
+    "operation": "case",
+    "canonical": "Can u help me understand a question"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Much appreciated PAULA",
+    "source_id": "social:thanks:0",
+    "operation": "clean",
+    "canonical": "Much appreciated PAULA"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Much apperciated PAULA",
+    "source_id": "social:thanks:0",
+    "operation": "transposition",
+    "canonical": "Much appreciated PAULA"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Much appeciated PAULA",
+    "source_id": "social:thanks:0",
+    "operation": "deletion",
+    "canonical": "Much appreciated PAULA"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Mguch appreciated PAULA",
+    "source_id": "social:thanks:0",
+    "operation": "insertion",
+    "canonical": "Much appreciated PAULA"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Much apprecihted PAULA",
+    "source_id": "social:thanks:0",
+    "operation": "substitution",
+    "canonical": "Much appreciated PAULA"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "MMuch appreciated PAULA",
+    "source_id": "social:thanks:0",
+    "operation": "doubled",
+    "canonical": "Much appreciated PAULA"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Much ap preciated PAULA",
+    "source_id": "social:thanks:0",
+    "operation": "spacing",
+    "canonical": "Much appreciated PAULA"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "mUcH ApPrEcIaTeD PaUlA",
+    "source_id": "social:thanks:0",
+    "operation": "case",
+    "canonical": "Much appreciated PAULA"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Thank you for explaining that",
+    "source_id": "social:thanks:1",
+    "operation": "clean",
+    "canonical": "Thank you for explaining that"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Thank you for explaining htat",
+    "source_id": "social:thanks:1",
+    "operation": "transposition",
+    "canonical": "Thank you for explaining that"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Thank you for expaining that",
+    "source_id": "social:thanks:1",
+    "operation": "deletion",
+    "canonical": "Thank you for explaining that"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Thagnk you for explaining that",
+    "source_id": "social:thanks:1",
+    "operation": "insertion",
+    "canonical": "Thank you for explaining that"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Thank you for explaingng that",
+    "source_id": "social:thanks:1",
+    "operation": "substitution",
+    "canonical": "Thank you for explaining that"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Thank you for explaining thaat",
+    "source_id": "social:thanks:1",
+    "operation": "doubled",
+    "canonical": "Thank you for explaining that"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Thank you for ex plaining that",
+    "source_id": "social:thanks:1",
+    "operation": "spacing",
+    "canonical": "Thank you for explaining that"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "tHaNk yOu fOr eXpLaInInG ThAt",
+    "source_id": "social:thanks:1",
+    "operation": "case",
+    "canonical": "Thank you for explaining that"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Salamat sa imong tabang",
+    "source_id": "social:thanks:3",
+    "operation": "clean",
+    "canonical": "Salamat sa imong tabang"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Salamat sa imong tbaang",
+    "source_id": "social:thanks:3",
+    "operation": "transposition",
+    "canonical": "Salamat sa imong tabang"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Salamat sa iong tabang",
+    "source_id": "social:thanks:3",
+    "operation": "deletion",
+    "canonical": "Salamat sa imong tabang"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Salgamat sa imong tabang",
+    "source_id": "social:thanks:3",
+    "operation": "insertion",
+    "canonical": "Salamat sa imong tabang"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Salamat sa imogg tabang",
+    "source_id": "social:thanks:3",
+    "operation": "substitution",
+    "canonical": "Salamat sa imong tabang"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Salamat sa imong taabang",
+    "source_id": "social:thanks:3",
+    "operation": "doubled",
+    "canonical": "Salamat sa imong tabang"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Salamat sa i mong tabang",
+    "source_id": "social:thanks:3",
+    "operation": "spacing",
+    "canonical": "Salamat sa imong tabang"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "sAlAmAt sA ImOnG TaBaNg",
+    "source_id": "social:thanks:3",
+    "operation": "case",
+    "canonical": "Salamat sa imong tabang"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Dako akong pasalamat",
+    "source_id": "social:thanks:4",
+    "operation": "clean",
+    "canonical": "Dako akong pasalamat"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Dako akong paslaamat",
+    "source_id": "social:thanks:4",
+    "operation": "transposition",
+    "canonical": "Dako akong pasalamat"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Dako aong pasalamat",
+    "source_id": "social:thanks:4",
+    "operation": "deletion",
+    "canonical": "Dako akong pasalamat"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Dgako akong pasalamat",
+    "source_id": "social:thanks:4",
+    "operation": "insertion",
+    "canonical": "Dako akong pasalamat"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Dako akogg pasalamat",
+    "source_id": "social:thanks:4",
+    "operation": "substitution",
+    "canonical": "Dako akong pasalamat"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Dako akong pasaalamat",
+    "source_id": "social:thanks:4",
+    "operation": "doubled",
+    "canonical": "Dako akong pasalamat"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Dako a kong pasalamat",
+    "source_id": "social:thanks:4",
+    "operation": "spacing",
+    "canonical": "Dako akong pasalamat"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "dAkO AkOnG PaSaLaMaT",
+    "source_id": "social:thanks:4",
+    "operation": "case",
+    "canonical": "Dako akong pasalamat"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Thank u very much",
+    "source_id": "social:thanks:6",
+    "operation": "clean",
+    "canonical": "Thank u very much"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Thank u very umch",
+    "source_id": "social:thanks:6",
+    "operation": "transposition",
+    "canonical": "Thank u very much"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Thank u vey much",
+    "source_id": "social:thanks:6",
+    "operation": "deletion",
+    "canonical": "Thank u very much"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Thagnk u very much",
+    "source_id": "social:thanks:6",
+    "operation": "insertion",
+    "canonical": "Thank u very much"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Thank u vhry much",
+    "source_id": "social:thanks:6",
+    "operation": "substitution",
+    "canonical": "Thank u very much"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Thank u very mucch",
+    "source_id": "social:thanks:6",
+    "operation": "doubled",
+    "canonical": "Thank u very much"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "Thank u ver y much",
+    "source_id": "social:thanks:6",
+    "operation": "spacing",
+    "canonical": "Thank u very much"
+  },
+  {
+    "group": "social",
+    "intent": "thanks",
+    "query": "tHaNk u vErY MuCh",
+    "source_id": "social:thanks:6",
+    "operation": "case",
+    "canonical": "Thank u very much"
+  },
+  {
+    "group": "social",
+    "intent": "farewell",
+    "query": "Sige una sa ko",
+    "source_id": "social:farewell:4",
+    "operation": "clean",
+    "canonical": "Sige una sa ko"
+  },
+  {
+    "group": "social",
+    "intent": "farewell",
+    "query": "Sieg una sa ko",
+    "source_id": "social:farewell:4",
+    "operation": "transposition",
+    "canonical": "Sige una sa ko"
+  },
+  {
+    "group": "social",
+    "intent": "farewell",
+    "query": "Sie una sa ko",
+    "source_id": "social:farewell:4",
+    "operation": "deletion",
+    "canonical": "Sige una sa ko"
+  },
+  {
+    "group": "social",
+    "intent": "farewell",
+    "query": "Sgige una sa ko",
+    "source_id": "social:farewell:4",
+    "operation": "insertion",
+    "canonical": "Sige una sa ko"
+  },
+  {
+    "group": "social",
+    "intent": "farewell",
+    "query": "Sgge una sa ko",
+    "source_id": "social:farewell:4",
+    "operation": "substitution",
+    "canonical": "Sige una sa ko"
+  },
+  {
+    "group": "social",
+    "intent": "farewell",
+    "query": "SSige una sa ko",
+    "source_id": "social:farewell:4",
+    "operation": "doubled",
+    "canonical": "Sige una sa ko"
+  },
+  {
+    "group": "social",
+    "intent": "farewell",
+    "query": "Sig e una sa ko",
+    "source_id": "social:farewell:4",
+    "operation": "spacing",
+    "canonical": "Sige una sa ko"
+  },
+  {
+    "group": "social",
+    "intent": "farewell",
+    "query": "sIgE UnA Sa kO",
+    "source_id": "social:farewell:4",
+    "operation": "case",
+    "canonical": "Sige una sa ko"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "Is everything okay with you",
+    "source_id": "social:wellbeing:1",
+    "operation": "clean",
+    "canonical": "Is everything okay with you"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "Is everything okay iwth you",
+    "source_id": "social:wellbeing:1",
+    "operation": "transposition",
+    "canonical": "Is everything okay with you"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "Is everything oky with you",
+    "source_id": "social:wellbeing:1",
+    "operation": "deletion",
+    "canonical": "Is everything okay with you"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "Is everytghing okay with you",
+    "source_id": "social:wellbeing:1",
+    "operation": "insertion",
+    "canonical": "Is everything okay with you"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "Is everything ogay with you",
+    "source_id": "social:wellbeing:1",
+    "operation": "substitution",
+    "canonical": "Is everything okay with you"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "Is everything okay witth you",
+    "source_id": "social:wellbeing:1",
+    "operation": "doubled",
+    "canonical": "Is everything okay with you"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "Is everything oka y with you",
+    "source_id": "social:wellbeing:1",
+    "operation": "spacing",
+    "canonical": "Is everything okay with you"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "iS EvErYtHiNg oKaY WiTh yOu",
+    "source_id": "social:wellbeing:1",
+    "operation": "case",
+    "canonical": "Is everything okay with you"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "How have you been",
+    "source_id": "social:wellbeing:2",
+    "operation": "clean",
+    "canonical": "How have you been"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "How have you eben",
+    "source_id": "social:wellbeing:2",
+    "operation": "transposition",
+    "canonical": "How have you been"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "How have you ben",
+    "source_id": "social:wellbeing:2",
+    "operation": "deletion",
+    "canonical": "How have you been"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "How hgave you been",
+    "source_id": "social:wellbeing:2",
+    "operation": "insertion",
+    "canonical": "How have you been"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "How have you bhen",
+    "source_id": "social:wellbeing:2",
+    "operation": "substitution",
+    "canonical": "How have you been"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "How hhave you been",
+    "source_id": "social:wellbeing:2",
+    "operation": "doubled",
+    "canonical": "How have you been"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "How have you bee n",
+    "source_id": "social:wellbeing:2",
+    "operation": "spacing",
+    "canonical": "How have you been"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "hOw hAvE YoU BeEn",
+    "source_id": "social:wellbeing:2",
+    "operation": "case",
+    "canonical": "How have you been"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "Maayo ra ka",
+    "source_id": "social:wellbeing:5",
+    "operation": "clean",
+    "canonical": "Maayo ra ka"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "Maaoy ra ka",
+    "source_id": "social:wellbeing:5",
+    "operation": "transposition",
+    "canonical": "Maayo ra ka"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "Mayo ra ka",
+    "source_id": "social:wellbeing:5",
+    "operation": "deletion",
+    "canonical": "Maayo ra ka"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "Maagyo ra ka",
+    "source_id": "social:wellbeing:5",
+    "operation": "insertion",
+    "canonical": "Maayo ra ka"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "Maago ra ka",
+    "source_id": "social:wellbeing:5",
+    "operation": "substitution",
+    "canonical": "Maayo ra ka"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "MMaayo ra ka",
+    "source_id": "social:wellbeing:5",
+    "operation": "doubled",
+    "canonical": "Maayo ra ka"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "M aayo ra ka",
+    "source_id": "social:wellbeing:5",
+    "operation": "spacing",
+    "canonical": "Maayo ra ka"
+  },
+  {
+    "group": "social",
+    "intent": "wellbeing",
+    "query": "mAaYo rA Ka",
+    "source_id": "social:wellbeing:5",
+    "operation": "case",
+    "canonical": "Maayo ra ka"
+  },
+  {
+    "group": "social",
+    "intent": "joke",
+    "query": "I would like to hear a joke",
+    "source_id": "social:joke:2",
+    "operation": "clean",
+    "canonical": "I would like to hear a joke"
+  },
+  {
+    "group": "social",
+    "intent": "joke",
+    "query": "I would like to hear a joek",
+    "source_id": "social:joke:2",
+    "operation": "transposition",
+    "canonical": "I would like to hear a joke"
+  },
+  {
+    "group": "social",
+    "intent": "joke",
+    "query": "I would like to hear a joe",
+    "source_id": "social:joke:2",
+    "operation": "deletion",
+    "canonical": "I would like to hear a joke"
+  },
+  {
+    "group": "social",
+    "intent": "joke",
+    "query": "I would lgike to hear a joke",
+    "source_id": "social:joke:2",
+    "operation": "insertion",
+    "canonical": "I would like to hear a joke"
+  },
+  {
+    "group": "social",
+    "intent": "joke",
+    "query": "I would like to hhar a joke",
+    "source_id": "social:joke:2",
+    "operation": "substitution",
+    "canonical": "I would like to hear a joke"
+  },
+  {
+    "group": "social",
+    "intent": "joke",
+    "query": "I would llike to hear a joke",
+    "source_id": "social:joke:2",
+    "operation": "doubled",
+    "canonical": "I would like to hear a joke"
+  },
+  {
+    "group": "social",
+    "intent": "joke",
+    "query": "I would like to hear a jok e",
+    "source_id": "social:joke:2",
+    "operation": "spacing",
+    "canonical": "I would like to hear a joke"
+  },
+  {
+    "group": "social",
+    "intent": "joke",
+    "query": "i wOuLd lIkE To hEaR A JoKe",
+    "source_id": "social:joke:2",
+    "operation": "case",
+    "canonical": "I would like to hear a joke"
+  },
+  {
+    "group": "social",
+    "intent": "support",
+    "query": "Medyo kabado ako",
+    "source_id": "social:support:5",
+    "operation": "clean",
+    "canonical": "Medyo kabado ako"
+  },
+  {
+    "group": "social",
+    "intent": "support",
+    "query": "Medyo kabaod ako",
+    "source_id": "social:support:5",
+    "operation": "transposition",
+    "canonical": "Medyo kabado ako"
+  },
+  {
+    "group": "social",
+    "intent": "support",
+    "query": "Medyo kbado ako",
+    "source_id": "social:support:5",
+    "operation": "deletion",
+    "canonical": "Medyo kabado ako"
+  },
+  {
+    "group": "social",
+    "intent": "support",
+    "query": "Medgyo kabado ako",
+    "source_id": "social:support:5",
+    "operation": "insertion",
+    "canonical": "Medyo kabado ako"
+  },
+  {
+    "group": "social",
+    "intent": "support",
+    "query": "Medyo kabhdo ako",
+    "source_id": "social:support:5",
+    "operation": "substitution",
+    "canonical": "Medyo kabado ako"
+  },
+  {
+    "group": "social",
+    "intent": "support",
+    "query": "MMedyo kabado ako",
+    "source_id": "social:support:5",
+    "operation": "doubled",
+    "canonical": "Medyo kabado ako"
+  },
+  {
+    "group": "social",
+    "intent": "support",
+    "query": "Medyo k abado ako",
+    "source_id": "social:support:5",
+    "operation": "spacing",
+    "canonical": "Medyo kabado ako"
+  },
+  {
+    "group": "social",
+    "intent": "support",
+    "query": "mEdYo kAbAdO AkO",
+    "source_id": "social:support:5",
+    "operation": "case",
+    "canonical": "Medyo kabado ako"
+  },
+  {
+    "group": "social",
+    "intent": "preference",
+    "query": "May paborito ka bang kanta",
+    "source_id": "social:preference:5",
+    "operation": "clean",
+    "canonical": "May paborito ka bang kanta"
+  },
+  {
+    "group": "social",
+    "intent": "preference",
+    "query": "May paborito ka bang knata",
+    "source_id": "social:preference:5",
+    "operation": "transposition",
+    "canonical": "May paborito ka bang kanta"
+  },
+  {
+    "group": "social",
+    "intent": "preference",
+    "query": "May paborito ka bag kanta",
+    "source_id": "social:preference:5",
+    "operation": "deletion",
+    "canonical": "May paborito ka bang kanta"
+  },
+  {
+    "group": "social",
+    "intent": "preference",
+    "query": "May pabgorito ka bang kanta",
+    "source_id": "social:preference:5",
+    "operation": "insertion",
+    "canonical": "May paborito ka bang kanta"
+  },
+  {
+    "group": "social",
+    "intent": "preference",
+    "query": "May paborito ka bhng kanta",
+    "source_id": "social:preference:5",
+    "operation": "substitution",
+    "canonical": "May paborito ka bang kanta"
+  },
+  {
+    "group": "social",
+    "intent": "preference",
+    "query": "May paborito ka bang kaanta",
+    "source_id": "social:preference:5",
+    "operation": "doubled",
+    "canonical": "May paborito ka bang kanta"
+  },
+  {
+    "group": "social",
+    "intent": "preference",
+    "query": "May paborito ka ban g kanta",
+    "source_id": "social:preference:5",
+    "operation": "spacing",
+    "canonical": "May paborito ka bang kanta"
+  },
+  {
+    "group": "social",
+    "intent": "preference",
+    "query": "mAy pAbOrItO Ka bAnG KaNtA",
+    "source_id": "social:preference:5",
+    "operation": "case",
+    "canonical": "May paborito ka bang kanta"
+  },
+  {
+    "group": "social",
+    "intent": "affirmation",
+    "query": "Oo po",
+    "source_id": "social:affirmation:1",
+    "operation": "clean",
+    "canonical": "Oo po"
+  },
+  {
+    "group": "social",
+    "intent": "affirmation",
+    "query": "Oo op",
+    "source_id": "social:affirmation:1",
+    "operation": "transposition",
+    "canonical": "Oo po"
+  },
+  {
+    "group": "social",
+    "intent": "affirmation",
+    "query": "Oo o",
+    "source_id": "social:affirmation:1",
+    "operation": "deletion",
+    "canonical": "Oo po"
+  },
+  {
+    "group": "social",
+    "intent": "affirmation",
+    "query": "gOo po",
+    "source_id": "social:affirmation:1",
+    "operation": "insertion",
+    "canonical": "Oo po"
+  },
+  {
+    "group": "social",
+    "intent": "affirmation",
+    "query": "Oo go",
+    "source_id": "social:affirmation:1",
+    "operation": "substitution",
+    "canonical": "Oo po"
+  },
+  {
+    "group": "social",
+    "intent": "affirmation",
+    "query": "OOo po",
+    "source_id": "social:affirmation:1",
+    "operation": "doubled",
+    "canonical": "Oo po"
+  },
+  {
+    "group": "social",
+    "intent": "affirmation",
+    "query": "Oo p o",
+    "source_id": "social:affirmation:1",
+    "operation": "spacing",
+    "canonical": "Oo po"
+  },
+  {
+    "group": "social",
+    "intent": "affirmation",
+    "query": "oO Po",
+    "source_id": "social:affirmation:1",
+    "operation": "case",
+    "canonical": "Oo po"
+  },
+  {
+    "group": "social",
+    "intent": "affirmation",
+    "query": "Sure po",
+    "source_id": "social:affirmation:2",
+    "operation": "clean",
+    "canonical": "Sure po"
+  },
+  {
+    "group": "social",
+    "intent": "affirmation",
+    "query": "Suer po",
+    "source_id": "social:affirmation:2",
+    "operation": "transposition",
+    "canonical": "Sure po"
+  },
+  {
+    "group": "social",
+    "intent": "affirmation",
+    "query": "Sue po",
+    "source_id": "social:affirmation:2",
+    "operation": "deletion",
+    "canonical": "Sure po"
+  },
+  {
+    "group": "social",
+    "intent": "affirmation",
+    "query": "Sgure po",
+    "source_id": "social:affirmation:2",
+    "operation": "insertion",
+    "canonical": "Sure po"
+  },
+  {
+    "group": "social",
+    "intent": "affirmation",
+    "query": "Sgre po",
+    "source_id": "social:affirmation:2",
+    "operation": "substitution",
+    "canonical": "Sure po"
+  },
+  {
+    "group": "social",
+    "intent": "affirmation",
+    "query": "SSure po",
+    "source_id": "social:affirmation:2",
+    "operation": "doubled",
+    "canonical": "Sure po"
+  },
+  {
+    "group": "social",
+    "intent": "affirmation",
+    "query": "Sur e po",
+    "source_id": "social:affirmation:2",
+    "operation": "spacing",
+    "canonical": "Sure po"
+  },
+  {
+    "group": "social",
+    "intent": "affirmation",
+    "query": "sUrE Po",
+    "source_id": "social:affirmation:2",
+    "operation": "case",
+    "canonical": "Sure po"
+  },
+  {
+    "group": "social",
+    "intent": "negation",
+    "query": "Dili paula",
+    "source_id": "social:negation:2",
+    "operation": "clean",
+    "canonical": "Dili paula"
+  },
+  {
+    "group": "social",
+    "intent": "negation",
+    "query": "Dili puala",
+    "source_id": "social:negation:2",
+    "operation": "transposition",
+    "canonical": "Dili paula"
+  },
+  {
+    "group": "social",
+    "intent": "negation",
+    "query": "Dili pula",
+    "source_id": "social:negation:2",
+    "operation": "deletion",
+    "canonical": "Dili paula"
+  },
+  {
+    "group": "social",
+    "intent": "negation",
+    "query": "Dgili paula",
+    "source_id": "social:negation:2",
+    "operation": "insertion",
+    "canonical": "Dili paula"
+  },
+  {
+    "group": "social",
+    "intent": "negation",
+    "query": "Dili pauga",
+    "source_id": "social:negation:2",
+    "operation": "substitution",
+    "canonical": "Dili paula"
+  },
+  {
+    "group": "social",
+    "intent": "negation",
+    "query": "DDili paula",
+    "source_id": "social:negation:2",
+    "operation": "doubled",
+    "canonical": "Dili paula"
+  },
+  {
+    "group": "social",
+    "intent": "negation",
+    "query": "Dili p aula",
+    "source_id": "social:negation:2",
+    "operation": "spacing",
+    "canonical": "Dili paula"
+  },
+  {
+    "group": "social",
+    "intent": "negation",
+    "query": "dIlI PaUlA",
+    "source_id": "social:negation:2",
+    "operation": "case",
+    "canonical": "Dili paula"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain enrollment requirements",
+    "source_id": "institutional:0:0",
+    "operation": "clean",
+    "canonical": "Please explain enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain enrollment requiremetns",
+    "source_id": "institutional:0:0",
+    "operation": "transposition",
+    "canonical": "Please explain enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain enrollment requiremens",
+    "source_id": "institutional:0:0",
+    "operation": "deletion",
+    "canonical": "Please explain enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please expglain enrollment requirements",
+    "source_id": "institutional:0:0",
+    "operation": "insertion",
+    "canonical": "Please explain enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain enrollmhnt requirements",
+    "source_id": "institutional:0:0",
+    "operation": "substitution",
+    "canonical": "Please explain enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please eexplain enrollment requirements",
+    "source_id": "institutional:0:0",
+    "operation": "doubled",
+    "canonical": "Please explain enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain enrollment requirement s",
+    "source_id": "institutional:0:0",
+    "operation": "spacing",
+    "canonical": "Please explain enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "pLeAsE ExPlAiN EnRoLlMeNt rEqUiReMeNtS",
+    "source_id": "institutional:0:0",
+    "operation": "case",
+    "canonical": "Please explain enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What should I know about enrollment requirements",
+    "source_id": "institutional:0:4",
+    "operation": "clean",
+    "canonical": "What should I know about enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What should I know about enrlolment requirements",
+    "source_id": "institutional:0:4",
+    "operation": "transposition",
+    "canonical": "What should I know about enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What should I know aout enrollment requirements",
+    "source_id": "institutional:0:4",
+    "operation": "deletion",
+    "canonical": "What should I know about enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What shoguld I know about enrollment requirements",
+    "source_id": "institutional:0:4",
+    "operation": "insertion",
+    "canonical": "What should I know about enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What should I kgow about enrollment requirements",
+    "source_id": "institutional:0:4",
+    "operation": "substitution",
+    "canonical": "What should I know about enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What should I know about enrollment requirementts",
+    "source_id": "institutional:0:4",
+    "operation": "doubled",
+    "canonical": "What should I know about enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What should I know a bout enrollment requirements",
+    "source_id": "institutional:0:4",
+    "operation": "spacing",
+    "canonical": "What should I know about enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "wHaT ShOuLd i kNoW AbOuT EnRoLlMeNt rEqUiReMeNtS",
+    "source_id": "institutional:0:4",
+    "operation": "case",
+    "canonical": "What should I know about enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me understand enrollment requirements",
+    "source_id": "institutional:0:11",
+    "operation": "clean",
+    "canonical": "Help me understand enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me understand enrollment requiremetns",
+    "source_id": "institutional:0:11",
+    "operation": "transposition",
+    "canonical": "Help me understand enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me understand enrollment requiremens",
+    "source_id": "institutional:0:11",
+    "operation": "deletion",
+    "canonical": "Help me understand enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me undersgtand enrollment requirements",
+    "source_id": "institutional:0:11",
+    "operation": "insertion",
+    "canonical": "Help me understand enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me understand enrollmhnt requirements",
+    "source_id": "institutional:0:11",
+    "operation": "substitution",
+    "canonical": "Help me understand enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me uunderstand enrollment requirements",
+    "source_id": "institutional:0:11",
+    "operation": "doubled",
+    "canonical": "Help me understand enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me understand enrollment requirement s",
+    "source_id": "institutional:0:11",
+    "operation": "spacing",
+    "canonical": "Help me understand enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "hElP Me uNdErStAnD EnRoLlMeNt rEqUiReMeNtS",
+    "source_id": "institutional:0:11",
+    "operation": "case",
+    "canonical": "Help me understand enrollment requirements"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain scholarship eligibility",
+    "source_id": "institutional:1:0",
+    "operation": "clean",
+    "canonical": "Please explain scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain scholarship eligibiliyt",
+    "source_id": "institutional:1:0",
+    "operation": "transposition",
+    "canonical": "Please explain scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain scholarship eliibility",
+    "source_id": "institutional:1:0",
+    "operation": "deletion",
+    "canonical": "Please explain scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please expglain scholarship eligibility",
+    "source_id": "institutional:1:0",
+    "operation": "insertion",
+    "canonical": "Please explain scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain scholarghip eligibility",
+    "source_id": "institutional:1:0",
+    "operation": "substitution",
+    "canonical": "Please explain scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please eexplain scholarship eligibility",
+    "source_id": "institutional:1:0",
+    "operation": "doubled",
+    "canonical": "Please explain scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain scholarship el igibility",
+    "source_id": "institutional:1:0",
+    "operation": "spacing",
+    "canonical": "Please explain scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "pLeAsE ExPlAiN ScHoLaRsHiP ElIgIbIlItY",
+    "source_id": "institutional:1:0",
+    "operation": "case",
+    "canonical": "Please explain scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need verified details about scholarship eligibility",
+    "source_id": "institutional:1:3",
+    "operation": "clean",
+    "canonical": "I need verified details about scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need verified details about schloarship eligibility",
+    "source_id": "institutional:1:3",
+    "operation": "transposition",
+    "canonical": "I need verified details about scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need verified details aout scholarship eligibility",
+    "source_id": "institutional:1:3",
+    "operation": "deletion",
+    "canonical": "I need verified details about scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need vergified details about scholarship eligibility",
+    "source_id": "institutional:1:3",
+    "operation": "insertion",
+    "canonical": "I need verified details about scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need verified dethils about scholarship eligibility",
+    "source_id": "institutional:1:3",
+    "operation": "substitution",
+    "canonical": "I need verified details about scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need verified details about scholarship eliggibility",
+    "source_id": "institutional:1:3",
+    "operation": "doubled",
+    "canonical": "I need verified details about scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need verified details a bout scholarship eligibility",
+    "source_id": "institutional:1:3",
+    "operation": "spacing",
+    "canonical": "I need verified details about scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "i nEeD VeRiFiEd dEtAiLs aBoUt sChOlArShIp eLiGiBiLiTy",
+    "source_id": "institutional:1:3",
+    "operation": "case",
+    "canonical": "I need verified details about scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me about scholarship eligibility",
+    "source_id": "institutional:1:5",
+    "operation": "clean",
+    "canonical": "Hi, tell me about scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me about scholarship eligibiliyt",
+    "source_id": "institutional:1:5",
+    "operation": "transposition",
+    "canonical": "Hi, tell me about scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me about scholarship eliibility",
+    "source_id": "institutional:1:5",
+    "operation": "deletion",
+    "canonical": "Hi, tell me about scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me abogut scholarship eligibility",
+    "source_id": "institutional:1:5",
+    "operation": "insertion",
+    "canonical": "Hi, tell me about scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me about scholarghip eligibility",
+    "source_id": "institutional:1:5",
+    "operation": "substitution",
+    "canonical": "Hi, tell me about scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me aabout scholarship eligibility",
+    "source_id": "institutional:1:5",
+    "operation": "doubled",
+    "canonical": "Hi, tell me about scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me about scholarship el igibility",
+    "source_id": "institutional:1:5",
+    "operation": "spacing",
+    "canonical": "Hi, tell me about scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "hI, tElL Me aBoUt sChOlArShIp eLiGiBiLiTy",
+    "source_id": "institutional:1:5",
+    "operation": "case",
+    "canonical": "Hi, tell me about scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rules for scholarship eligibility",
+    "source_id": "institutional:1:7",
+    "operation": "clean",
+    "canonical": "What are the rules for scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rules for scholarship eligibiliyt",
+    "source_id": "institutional:1:7",
+    "operation": "transposition",
+    "canonical": "What are the rules for scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rules for scholarship eliibility",
+    "source_id": "institutional:1:7",
+    "operation": "deletion",
+    "canonical": "What are the rules for scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rulges for scholarship eligibility",
+    "source_id": "institutional:1:7",
+    "operation": "insertion",
+    "canonical": "What are the rules for scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rules for scholarghip eligibility",
+    "source_id": "institutional:1:7",
+    "operation": "substitution",
+    "canonical": "What are the rules for scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rrules for scholarship eligibility",
+    "source_id": "institutional:1:7",
+    "operation": "doubled",
+    "canonical": "What are the rules for scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rules for scholarship el igibility",
+    "source_id": "institutional:1:7",
+    "operation": "spacing",
+    "canonical": "What are the rules for scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "wHaT ArE ThE RuLeS FoR ScHoLaRsHiP ElIgIbIlItY",
+    "source_id": "institutional:1:7",
+    "operation": "case",
+    "canonical": "What are the rules for scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Unsay impormasyon bahin sa scholarship eligibility",
+    "source_id": "institutional:1:9",
+    "operation": "clean",
+    "canonical": "Unsay impormasyon bahin sa scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Unsay impormasyon bahin sa scholarship eliigbility",
+    "source_id": "institutional:1:9",
+    "operation": "transposition",
+    "canonical": "Unsay impormasyon bahin sa scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Unsay impormasyon bahin sa schlarship eligibility",
+    "source_id": "institutional:1:9",
+    "operation": "deletion",
+    "canonical": "Unsay impormasyon bahin sa scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Unsay impormgasyon bahin sa scholarship eligibility",
+    "source_id": "institutional:1:9",
+    "operation": "insertion",
+    "canonical": "Unsay impormasyon bahin sa scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Unsay impormasyon bahgn sa scholarship eligibility",
+    "source_id": "institutional:1:9",
+    "operation": "substitution",
+    "canonical": "Unsay impormasyon bahin sa scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Unsay iimpormasyon bahin sa scholarship eligibility",
+    "source_id": "institutional:1:9",
+    "operation": "doubled",
+    "canonical": "Unsay impormasyon bahin sa scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Unsay impormasyon bahin sa sc holarship eligibility",
+    "source_id": "institutional:1:9",
+    "operation": "spacing",
+    "canonical": "Unsay impormasyon bahin sa scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "uNsAy iMpOrMaSyOn bAhIn sA ScHoLaRsHiP ElIgIbIlItY",
+    "source_id": "institutional:1:9",
+    "operation": "case",
+    "canonical": "Unsay impormasyon bahin sa scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me understand scholarship eligibility",
+    "source_id": "institutional:1:11",
+    "operation": "clean",
+    "canonical": "Help me understand scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me understand scholarship eligibiliyt",
+    "source_id": "institutional:1:11",
+    "operation": "transposition",
+    "canonical": "Help me understand scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me understand scholarship eliibility",
+    "source_id": "institutional:1:11",
+    "operation": "deletion",
+    "canonical": "Help me understand scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me undersgtand scholarship eligibility",
+    "source_id": "institutional:1:11",
+    "operation": "insertion",
+    "canonical": "Help me understand scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me understand scholarghip eligibility",
+    "source_id": "institutional:1:11",
+    "operation": "substitution",
+    "canonical": "Help me understand scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me uunderstand scholarship eligibility",
+    "source_id": "institutional:1:11",
+    "operation": "doubled",
+    "canonical": "Help me understand scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me understand scholarship el igibility",
+    "source_id": "institutional:1:11",
+    "operation": "spacing",
+    "canonical": "Help me understand scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "hElP Me uNdErStAnD ScHoLaRsHiP ElIgIbIlItY",
+    "source_id": "institutional:1:11",
+    "operation": "case",
+    "canonical": "Help me understand scholarship eligibility"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain undergraduate programs",
+    "source_id": "institutional:2:0",
+    "operation": "clean",
+    "canonical": "Please explain undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain undergraduate progarms",
+    "source_id": "institutional:2:0",
+    "operation": "transposition",
+    "canonical": "Please explain undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain undergraduate progrms",
+    "source_id": "institutional:2:0",
+    "operation": "deletion",
+    "canonical": "Please explain undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please expglain undergraduate programs",
+    "source_id": "institutional:2:0",
+    "operation": "insertion",
+    "canonical": "Please explain undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain undergrhduate programs",
+    "source_id": "institutional:2:0",
+    "operation": "substitution",
+    "canonical": "Please explain undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please eexplain undergraduate programs",
+    "source_id": "institutional:2:0",
+    "operation": "doubled",
+    "canonical": "Please explain undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain undergraduate progra ms",
+    "source_id": "institutional:2:0",
+    "operation": "spacing",
+    "canonical": "Please explain undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "pLeAsE ExPlAiN UnDeRgRaDuAtE PrOgRaMs",
+    "source_id": "institutional:2:0",
+    "operation": "case",
+    "canonical": "Please explain undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I find information about undergraduate programs",
+    "source_id": "institutional:2:2",
+    "operation": "clean",
+    "canonical": "Where can I find information about undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I find information about undregraduate programs",
+    "source_id": "institutional:2:2",
+    "operation": "transposition",
+    "canonical": "Where can I find information about undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I find information aout undergraduate programs",
+    "source_id": "institutional:2:2",
+    "operation": "deletion",
+    "canonical": "Where can I find information about undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I fgind information about undergraduate programs",
+    "source_id": "institutional:2:2",
+    "operation": "insertion",
+    "canonical": "Where can I find information about undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I find informagion about undergraduate programs",
+    "source_id": "institutional:2:2",
+    "operation": "substitution",
+    "canonical": "Where can I find information about undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I find information about undergraduate prograams",
+    "source_id": "institutional:2:2",
+    "operation": "doubled",
+    "canonical": "Where can I find information about undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I find information a bout undergraduate programs",
+    "source_id": "institutional:2:2",
+    "operation": "spacing",
+    "canonical": "Where can I find information about undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "wHeRe cAn i fInD InFoRmAtIoN AbOuT UnDeRgRaDuAtE PrOgRaMs",
+    "source_id": "institutional:2:2",
+    "operation": "case",
+    "canonical": "Where can I find information about undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Unsay impormasyon bahin sa undergraduate programs",
+    "source_id": "institutional:2:9",
+    "operation": "clean",
+    "canonical": "Unsay impormasyon bahin sa undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Unsay impormasyon bahin sa undergraduate porgrams",
+    "source_id": "institutional:2:9",
+    "operation": "transposition",
+    "canonical": "Unsay impormasyon bahin sa undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Unsay impormasyon bahin sa undergraduae programs",
+    "source_id": "institutional:2:9",
+    "operation": "deletion",
+    "canonical": "Unsay impormasyon bahin sa undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Unsay impormgasyon bahin sa undergraduate programs",
+    "source_id": "institutional:2:9",
+    "operation": "insertion",
+    "canonical": "Unsay impormasyon bahin sa undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Unsay impormasyon bahgn sa undergraduate programs",
+    "source_id": "institutional:2:9",
+    "operation": "substitution",
+    "canonical": "Unsay impormasyon bahin sa undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Unsay iimpormasyon bahin sa undergraduate programs",
+    "source_id": "institutional:2:9",
+    "operation": "doubled",
+    "canonical": "Unsay impormasyon bahin sa undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Unsay impormasyon bahin sa undergradua te programs",
+    "source_id": "institutional:2:9",
+    "operation": "spacing",
+    "canonical": "Unsay impormasyon bahin sa undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "uNsAy iMpOrMaSyOn bAhIn sA UnDeRgRaDuAtE PrOgRaMs",
+    "source_id": "institutional:2:9",
+    "operation": "case",
+    "canonical": "Unsay impormasyon bahin sa undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me understand undergraduate programs",
+    "source_id": "institutional:2:11",
+    "operation": "clean",
+    "canonical": "Help me understand undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me understand undergraduate progarms",
+    "source_id": "institutional:2:11",
+    "operation": "transposition",
+    "canonical": "Help me understand undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me understand undergraduate progrms",
+    "source_id": "institutional:2:11",
+    "operation": "deletion",
+    "canonical": "Help me understand undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me undersgtand undergraduate programs",
+    "source_id": "institutional:2:11",
+    "operation": "insertion",
+    "canonical": "Help me understand undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me understand undergrhduate programs",
+    "source_id": "institutional:2:11",
+    "operation": "substitution",
+    "canonical": "Help me understand undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me uunderstand undergraduate programs",
+    "source_id": "institutional:2:11",
+    "operation": "doubled",
+    "canonical": "Help me understand undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Help me understand undergraduate progra ms",
+    "source_id": "institutional:2:11",
+    "operation": "spacing",
+    "canonical": "Help me understand undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "hElP Me uNdErStAnD UnDeRgRaDuAtE PrOgRaMs",
+    "source_id": "institutional:2:11",
+    "operation": "case",
+    "canonical": "Help me understand undergraduate programs"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain library policies",
+    "source_id": "institutional:3:0",
+    "operation": "clean",
+    "canonical": "Please explain library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain library poliices",
+    "source_id": "institutional:3:0",
+    "operation": "transposition",
+    "canonical": "Please explain library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain library polices",
+    "source_id": "institutional:3:0",
+    "operation": "deletion",
+    "canonical": "Please explain library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please expglain library policies",
+    "source_id": "institutional:3:0",
+    "operation": "insertion",
+    "canonical": "Please explain library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain libgary policies",
+    "source_id": "institutional:3:0",
+    "operation": "substitution",
+    "canonical": "Please explain library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please eexplain library policies",
+    "source_id": "institutional:3:0",
+    "operation": "doubled",
+    "canonical": "Please explain library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain library polici es",
+    "source_id": "institutional:3:0",
+    "operation": "spacing",
+    "canonical": "Please explain library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "pLeAsE ExPlAiN LiBrArY PoLiCiEs",
+    "source_id": "institutional:3:0",
+    "operation": "case",
+    "canonical": "Please explain library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I find information about library policies",
+    "source_id": "institutional:3:2",
+    "operation": "clean",
+    "canonical": "Where can I find information about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I find information about lbirary policies",
+    "source_id": "institutional:3:2",
+    "operation": "transposition",
+    "canonical": "Where can I find information about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I find information aout library policies",
+    "source_id": "institutional:3:2",
+    "operation": "deletion",
+    "canonical": "Where can I find information about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I fgind information about library policies",
+    "source_id": "institutional:3:2",
+    "operation": "insertion",
+    "canonical": "Where can I find information about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I find informagion about library policies",
+    "source_id": "institutional:3:2",
+    "operation": "substitution",
+    "canonical": "Where can I find information about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I find information about library policiies",
+    "source_id": "institutional:3:2",
+    "operation": "doubled",
+    "canonical": "Where can I find information about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I find information a bout library policies",
+    "source_id": "institutional:3:2",
+    "operation": "spacing",
+    "canonical": "Where can I find information about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "wHeRe cAn i fInD InFoRmAtIoN AbOuT LiBrArY PoLiCiEs",
+    "source_id": "institutional:3:2",
+    "operation": "case",
+    "canonical": "Where can I find information about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need verified details about library policies",
+    "source_id": "institutional:3:3",
+    "operation": "clean",
+    "canonical": "I need verified details about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need verified details about lbirary policies",
+    "source_id": "institutional:3:3",
+    "operation": "transposition",
+    "canonical": "I need verified details about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need verified details aout library policies",
+    "source_id": "institutional:3:3",
+    "operation": "deletion",
+    "canonical": "I need verified details about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need vergified details about library policies",
+    "source_id": "institutional:3:3",
+    "operation": "insertion",
+    "canonical": "I need verified details about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need verified dethils about library policies",
+    "source_id": "institutional:3:3",
+    "operation": "substitution",
+    "canonical": "I need verified details about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need verified details about library policiies",
+    "source_id": "institutional:3:3",
+    "operation": "doubled",
+    "canonical": "I need verified details about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need verified details a bout library policies",
+    "source_id": "institutional:3:3",
+    "operation": "spacing",
+    "canonical": "I need verified details about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "i nEeD VeRiFiEd dEtAiLs aBoUt lIbRaRy pOlIcIeS",
+    "source_id": "institutional:3:3",
+    "operation": "case",
+    "canonical": "I need verified details about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What should I know about library policies",
+    "source_id": "institutional:3:4",
+    "operation": "clean",
+    "canonical": "What should I know about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What should I know about lbirary policies",
+    "source_id": "institutional:3:4",
+    "operation": "transposition",
+    "canonical": "What should I know about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What should I know aout library policies",
+    "source_id": "institutional:3:4",
+    "operation": "deletion",
+    "canonical": "What should I know about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What shoguld I know about library policies",
+    "source_id": "institutional:3:4",
+    "operation": "insertion",
+    "canonical": "What should I know about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What should I kgow about library policies",
+    "source_id": "institutional:3:4",
+    "operation": "substitution",
+    "canonical": "What should I know about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What should I know about library policiies",
+    "source_id": "institutional:3:4",
+    "operation": "doubled",
+    "canonical": "What should I know about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What should I know a bout library policies",
+    "source_id": "institutional:3:4",
+    "operation": "spacing",
+    "canonical": "What should I know about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "wHaT ShOuLd i kNoW AbOuT LiBrArY PoLiCiEs",
+    "source_id": "institutional:3:4",
+    "operation": "case",
+    "canonical": "What should I know about library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, explain library policies",
+    "source_id": "institutional:3:6",
+    "operation": "clean",
+    "canonical": "Thanks, explain library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, explain library poliices",
+    "source_id": "institutional:3:6",
+    "operation": "transposition",
+    "canonical": "Thanks, explain library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, explain library polices",
+    "source_id": "institutional:3:6",
+    "operation": "deletion",
+    "canonical": "Thanks, explain library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, expglain library policies",
+    "source_id": "institutional:3:6",
+    "operation": "insertion",
+    "canonical": "Thanks, explain library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, explain libgary policies",
+    "source_id": "institutional:3:6",
+    "operation": "substitution",
+    "canonical": "Thanks, explain library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, eexplain library policies",
+    "source_id": "institutional:3:6",
+    "operation": "doubled",
+    "canonical": "Thanks, explain library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, explain library polici es",
+    "source_id": "institutional:3:6",
+    "operation": "spacing",
+    "canonical": "Thanks, explain library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "tHaNkS, eXpLaIn lIbRaRy pOlIcIeS",
+    "source_id": "institutional:3:6",
+    "operation": "case",
+    "canonical": "Thanks, explain library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rules for library policies",
+    "source_id": "institutional:3:7",
+    "operation": "clean",
+    "canonical": "What are the rules for library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rules for library poliices",
+    "source_id": "institutional:3:7",
+    "operation": "transposition",
+    "canonical": "What are the rules for library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rules for library polices",
+    "source_id": "institutional:3:7",
+    "operation": "deletion",
+    "canonical": "What are the rules for library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rulges for library policies",
+    "source_id": "institutional:3:7",
+    "operation": "insertion",
+    "canonical": "What are the rules for library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rules for libgary policies",
+    "source_id": "institutional:3:7",
+    "operation": "substitution",
+    "canonical": "What are the rules for library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rrules for library policies",
+    "source_id": "institutional:3:7",
+    "operation": "doubled",
+    "canonical": "What are the rules for library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rules for library polici es",
+    "source_id": "institutional:3:7",
+    "operation": "spacing",
+    "canonical": "What are the rules for library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "wHaT ArE ThE RuLeS FoR LiBrArY PoLiCiEs",
+    "source_id": "institutional:3:7",
+    "operation": "case",
+    "canonical": "What are the rules for library policies"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain Registrar documents",
+    "source_id": "institutional:5:0",
+    "operation": "clean",
+    "canonical": "Please explain Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain Registrar doucments",
+    "source_id": "institutional:5:0",
+    "operation": "transposition",
+    "canonical": "Please explain Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain Registrar docments",
+    "source_id": "institutional:5:0",
+    "operation": "deletion",
+    "canonical": "Please explain Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please expglain Registrar documents",
+    "source_id": "institutional:5:0",
+    "operation": "insertion",
+    "canonical": "Please explain Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain Registrhr documents",
+    "source_id": "institutional:5:0",
+    "operation": "substitution",
+    "canonical": "Please explain Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please eexplain Registrar documents",
+    "source_id": "institutional:5:0",
+    "operation": "doubled",
+    "canonical": "Please explain Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain Registrar do cuments",
+    "source_id": "institutional:5:0",
+    "operation": "spacing",
+    "canonical": "Please explain Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "pLeAsE ExPlAiN ReGiStRaR DoCuMeNtS",
+    "source_id": "institutional:5:0",
+    "operation": "case",
+    "canonical": "Please explain Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What should I know about Registrar documents",
+    "source_id": "institutional:5:4",
+    "operation": "clean",
+    "canonical": "What should I know about Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What should I know about Regsitrar documents",
+    "source_id": "institutional:5:4",
+    "operation": "transposition",
+    "canonical": "What should I know about Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What should I know aout Registrar documents",
+    "source_id": "institutional:5:4",
+    "operation": "deletion",
+    "canonical": "What should I know about Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What shoguld I know about Registrar documents",
+    "source_id": "institutional:5:4",
+    "operation": "insertion",
+    "canonical": "What should I know about Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What should I kgow about Registrar documents",
+    "source_id": "institutional:5:4",
+    "operation": "substitution",
+    "canonical": "What should I know about Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What should I know about Registrar docuuments",
+    "source_id": "institutional:5:4",
+    "operation": "doubled",
+    "canonical": "What should I know about Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What should I know a bout Registrar documents",
+    "source_id": "institutional:5:4",
+    "operation": "spacing",
+    "canonical": "What should I know about Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "wHaT ShOuLd i kNoW AbOuT ReGiStRaR DoCuMeNtS",
+    "source_id": "institutional:5:4",
+    "operation": "case",
+    "canonical": "What should I know about Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me about Registrar documents",
+    "source_id": "institutional:5:5",
+    "operation": "clean",
+    "canonical": "Hi, tell me about Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me about Registrar doucments",
+    "source_id": "institutional:5:5",
+    "operation": "transposition",
+    "canonical": "Hi, tell me about Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me about Registrar docments",
+    "source_id": "institutional:5:5",
+    "operation": "deletion",
+    "canonical": "Hi, tell me about Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me abogut Registrar documents",
+    "source_id": "institutional:5:5",
+    "operation": "insertion",
+    "canonical": "Hi, tell me about Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me about Registrhr documents",
+    "source_id": "institutional:5:5",
+    "operation": "substitution",
+    "canonical": "Hi, tell me about Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me aabout Registrar documents",
+    "source_id": "institutional:5:5",
+    "operation": "doubled",
+    "canonical": "Hi, tell me about Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me about Registrar do cuments",
+    "source_id": "institutional:5:5",
+    "operation": "spacing",
+    "canonical": "Hi, tell me about Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "hI, tElL Me aBoUt rEgIsTrAr dOcUmEnTs",
+    "source_id": "institutional:5:5",
+    "operation": "case",
+    "canonical": "Hi, tell me about Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "May impormasyon ba tungkol sa Registrar documents",
+    "source_id": "institutional:5:10",
+    "operation": "clean",
+    "canonical": "May impormasyon ba tungkol sa Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "May impormasyon ba tungkol sa Registrar doucments",
+    "source_id": "institutional:5:10",
+    "operation": "transposition",
+    "canonical": "May impormasyon ba tungkol sa Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "May impormasyon ba tungkol sa Registrar docments",
+    "source_id": "institutional:5:10",
+    "operation": "deletion",
+    "canonical": "May impormasyon ba tungkol sa Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "May impormasyon ba tunggkol sa Registrar documents",
+    "source_id": "institutional:5:10",
+    "operation": "insertion",
+    "canonical": "May impormasyon ba tungkol sa Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "May impormasyon ba tungkol sa Registrhr documents",
+    "source_id": "institutional:5:10",
+    "operation": "substitution",
+    "canonical": "May impormasyon ba tungkol sa Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "May impormasyon ba ttungkol sa Registrar documents",
+    "source_id": "institutional:5:10",
+    "operation": "doubled",
+    "canonical": "May impormasyon ba tungkol sa Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "May impormasyon ba tungkol sa Registrar do cuments",
+    "source_id": "institutional:5:10",
+    "operation": "spacing",
+    "canonical": "May impormasyon ba tungkol sa Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "mAy iMpOrMaSyOn bA TuNgKoL Sa rEgIsTrAr dOcUmEnTs",
+    "source_id": "institutional:5:10",
+    "operation": "case",
+    "canonical": "May impormasyon ba tungkol sa Registrar documents"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain Finance office hours",
+    "source_id": "institutional:6:0",
+    "operation": "clean",
+    "canonical": "Please explain Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain Finance office huors",
+    "source_id": "institutional:6:0",
+    "operation": "transposition",
+    "canonical": "Please explain Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain Finance ofice hours",
+    "source_id": "institutional:6:0",
+    "operation": "deletion",
+    "canonical": "Please explain Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please expglain Finance office hours",
+    "source_id": "institutional:6:0",
+    "operation": "insertion",
+    "canonical": "Please explain Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain Finhnce office hours",
+    "source_id": "institutional:6:0",
+    "operation": "substitution",
+    "canonical": "Please explain Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please eexplain Finance office hours",
+    "source_id": "institutional:6:0",
+    "operation": "doubled",
+    "canonical": "Please explain Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Please explain Finance o ffice hours",
+    "source_id": "institutional:6:0",
+    "operation": "spacing",
+    "canonical": "Please explain Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "pLeAsE ExPlAiN FiNaNcE OfFiCe hOuRs",
+    "source_id": "institutional:6:0",
+    "operation": "case",
+    "canonical": "Please explain Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you help me with Finance office hours",
+    "source_id": "institutional:6:1",
+    "operation": "clean",
+    "canonical": "Can you help me with Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you help me with Finance office huors",
+    "source_id": "institutional:6:1",
+    "operation": "transposition",
+    "canonical": "Can you help me with Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you help me with Finance ofice hours",
+    "source_id": "institutional:6:1",
+    "operation": "deletion",
+    "canonical": "Can you help me with Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you help me wgith Finance office hours",
+    "source_id": "institutional:6:1",
+    "operation": "insertion",
+    "canonical": "Can you help me with Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you help me with Finhnce office hours",
+    "source_id": "institutional:6:1",
+    "operation": "substitution",
+    "canonical": "Can you help me with Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you help me wwith Finance office hours",
+    "source_id": "institutional:6:1",
+    "operation": "doubled",
+    "canonical": "Can you help me with Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you help me with Finance o ffice hours",
+    "source_id": "institutional:6:1",
+    "operation": "spacing",
+    "canonical": "Can you help me with Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "cAn yOu hElP Me wItH FiNaNcE OfFiCe hOuRs",
+    "source_id": "institutional:6:1",
+    "operation": "case",
+    "canonical": "Can you help me with Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need verified details about Finance office hours",
+    "source_id": "institutional:6:3",
+    "operation": "clean",
+    "canonical": "I need verified details about Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need verified details about Fniance office hours",
+    "source_id": "institutional:6:3",
+    "operation": "transposition",
+    "canonical": "I need verified details about Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need verified details aout Finance office hours",
+    "source_id": "institutional:6:3",
+    "operation": "deletion",
+    "canonical": "I need verified details about Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need vergified details about Finance office hours",
+    "source_id": "institutional:6:3",
+    "operation": "insertion",
+    "canonical": "I need verified details about Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need verified dethils about Finance office hours",
+    "source_id": "institutional:6:3",
+    "operation": "substitution",
+    "canonical": "I need verified details about Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need verified details about Finance offfice hours",
+    "source_id": "institutional:6:3",
+    "operation": "doubled",
+    "canonical": "I need verified details about Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "I need verified details a bout Finance office hours",
+    "source_id": "institutional:6:3",
+    "operation": "spacing",
+    "canonical": "I need verified details about Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "i nEeD VeRiFiEd dEtAiLs aBoUt fInAnCe oFfIcE HoUrS",
+    "source_id": "institutional:6:3",
+    "operation": "case",
+    "canonical": "I need verified details about Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me about Finance office hours",
+    "source_id": "institutional:6:5",
+    "operation": "clean",
+    "canonical": "Hi, tell me about Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me about Finance office huors",
+    "source_id": "institutional:6:5",
+    "operation": "transposition",
+    "canonical": "Hi, tell me about Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me about Finance ofice hours",
+    "source_id": "institutional:6:5",
+    "operation": "deletion",
+    "canonical": "Hi, tell me about Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me abogut Finance office hours",
+    "source_id": "institutional:6:5",
+    "operation": "insertion",
+    "canonical": "Hi, tell me about Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me about Finhnce office hours",
+    "source_id": "institutional:6:5",
+    "operation": "substitution",
+    "canonical": "Hi, tell me about Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me aabout Finance office hours",
+    "source_id": "institutional:6:5",
+    "operation": "doubled",
+    "canonical": "Hi, tell me about Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me about Finance o ffice hours",
+    "source_id": "institutional:6:5",
+    "operation": "spacing",
+    "canonical": "Hi, tell me about Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "hI, tElL Me aBoUt fInAnCe oFfIcE HoUrS",
+    "source_id": "institutional:6:5",
+    "operation": "case",
+    "canonical": "Hi, tell me about Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, explain Finance office hours",
+    "source_id": "institutional:6:6",
+    "operation": "clean",
+    "canonical": "Thanks, explain Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, explain Finance office huors",
+    "source_id": "institutional:6:6",
+    "operation": "transposition",
+    "canonical": "Thanks, explain Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, explain Finance ofice hours",
+    "source_id": "institutional:6:6",
+    "operation": "deletion",
+    "canonical": "Thanks, explain Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, expglain Finance office hours",
+    "source_id": "institutional:6:6",
+    "operation": "insertion",
+    "canonical": "Thanks, explain Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, explain Finhnce office hours",
+    "source_id": "institutional:6:6",
+    "operation": "substitution",
+    "canonical": "Thanks, explain Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, eexplain Finance office hours",
+    "source_id": "institutional:6:6",
+    "operation": "doubled",
+    "canonical": "Thanks, explain Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, explain Finance o ffice hours",
+    "source_id": "institutional:6:6",
+    "operation": "spacing",
+    "canonical": "Thanks, explain Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "tHaNkS, eXpLaIn fInAnCe oFfIcE HoUrS",
+    "source_id": "institutional:6:6",
+    "operation": "case",
+    "canonical": "Thanks, explain Finance office hours"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you help me with CEIT faculty",
+    "source_id": "institutional:7:1",
+    "operation": "clean",
+    "canonical": "Can you help me with CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you help me with CEIT fcaulty",
+    "source_id": "institutional:7:1",
+    "operation": "transposition",
+    "canonical": "Can you help me with CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you help me wih CEIT faculty",
+    "source_id": "institutional:7:1",
+    "operation": "deletion",
+    "canonical": "Can you help me with CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you hgelp me with CEIT faculty",
+    "source_id": "institutional:7:1",
+    "operation": "insertion",
+    "canonical": "Can you help me with CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you help me wgth CEIT faculty",
+    "source_id": "institutional:7:1",
+    "operation": "substitution",
+    "canonical": "Can you help me with CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you help me with CEIT facultty",
+    "source_id": "institutional:7:1",
+    "operation": "doubled",
+    "canonical": "Can you help me with CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you help me wit h CEIT faculty",
+    "source_id": "institutional:7:1",
+    "operation": "spacing",
+    "canonical": "Can you help me with CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "cAn yOu hElP Me wItH CeIt fAcUlTy",
+    "source_id": "institutional:7:1",
+    "operation": "case",
+    "canonical": "Can you help me with CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rules for CEIT faculty",
+    "source_id": "institutional:7:7",
+    "operation": "clean",
+    "canonical": "What are the rules for CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rules for CEIT fcaulty",
+    "source_id": "institutional:7:7",
+    "operation": "transposition",
+    "canonical": "What are the rules for CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rles for CEIT faculty",
+    "source_id": "institutional:7:7",
+    "operation": "deletion",
+    "canonical": "What are the rules for CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Wghat are the rules for CEIT faculty",
+    "source_id": "institutional:7:7",
+    "operation": "insertion",
+    "canonical": "What are the rules for CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rulhs for CEIT faculty",
+    "source_id": "institutional:7:7",
+    "operation": "substitution",
+    "canonical": "What are the rules for CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rules for CEIT facultty",
+    "source_id": "institutional:7:7",
+    "operation": "doubled",
+    "canonical": "What are the rules for CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the r ules for CEIT faculty",
+    "source_id": "institutional:7:7",
+    "operation": "spacing",
+    "canonical": "What are the rules for CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "wHaT ArE ThE RuLeS FoR CeIt fAcUlTy",
+    "source_id": "institutional:7:7",
+    "operation": "case",
+    "canonical": "What are the rules for CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "May impormasyon ba tungkol sa CEIT faculty",
+    "source_id": "institutional:7:10",
+    "operation": "clean",
+    "canonical": "May impormasyon ba tungkol sa CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "May impormasyon ba tungkol sa CEIT fcaulty",
+    "source_id": "institutional:7:10",
+    "operation": "transposition",
+    "canonical": "May impormasyon ba tungkol sa CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "May impormasyon ba tungkl sa CEIT faculty",
+    "source_id": "institutional:7:10",
+    "operation": "deletion",
+    "canonical": "May impormasyon ba tungkol sa CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "May impormgasyon ba tungkol sa CEIT faculty",
+    "source_id": "institutional:7:10",
+    "operation": "insertion",
+    "canonical": "May impormasyon ba tungkol sa CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "May impormasyon ba tunhkol sa CEIT faculty",
+    "source_id": "institutional:7:10",
+    "operation": "substitution",
+    "canonical": "May impormasyon ba tungkol sa CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "May impormasyon ba tungkol sa CEIT facultty",
+    "source_id": "institutional:7:10",
+    "operation": "doubled",
+    "canonical": "May impormasyon ba tungkol sa CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "May impormasyon ba tungko l sa CEIT faculty",
+    "source_id": "institutional:7:10",
+    "operation": "spacing",
+    "canonical": "May impormasyon ba tungkol sa CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "mAy iMpOrMaSyOn bA TuNgKoL Sa cEiT FaCuLtY",
+    "source_id": "institutional:7:10",
+    "operation": "case",
+    "canonical": "May impormasyon ba tungkol sa CEIT faculty"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, explain PBMO publication procedure",
+    "source_id": "institutional:8:6",
+    "operation": "clean",
+    "canonical": "Thanks, explain PBMO publication procedure"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, explain PBMO publication prcoedure",
+    "source_id": "institutional:8:6",
+    "operation": "transposition",
+    "canonical": "Thanks, explain PBMO publication procedure"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, explain PBMO publication proedure",
+    "source_id": "institutional:8:6",
+    "operation": "deletion",
+    "canonical": "Thanks, explain PBMO publication procedure"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, expglain PBMO publication procedure",
+    "source_id": "institutional:8:6",
+    "operation": "insertion",
+    "canonical": "Thanks, explain PBMO publication procedure"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, explain PBMO publicagion procedure",
+    "source_id": "institutional:8:6",
+    "operation": "substitution",
+    "canonical": "Thanks, explain PBMO publication procedure"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, eexplain PBMO publication procedure",
+    "source_id": "institutional:8:6",
+    "operation": "doubled",
+    "canonical": "Thanks, explain PBMO publication procedure"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Thanks, explain PBMO publication pr ocedure",
+    "source_id": "institutional:8:6",
+    "operation": "spacing",
+    "canonical": "Thanks, explain PBMO publication procedure"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "tHaNkS, eXpLaIn pBmO PuBlIcAtIoN PrOcEdUrE",
+    "source_id": "institutional:8:6",
+    "operation": "case",
+    "canonical": "Thanks, explain PBMO publication procedure"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rules for PBMO publication procedure",
+    "source_id": "institutional:8:7",
+    "operation": "clean",
+    "canonical": "What are the rules for PBMO publication procedure"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rules for PBMO publication prcoedure",
+    "source_id": "institutional:8:7",
+    "operation": "transposition",
+    "canonical": "What are the rules for PBMO publication procedure"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rules for PBMO publication proedure",
+    "source_id": "institutional:8:7",
+    "operation": "deletion",
+    "canonical": "What are the rules for PBMO publication procedure"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rulges for PBMO publication procedure",
+    "source_id": "institutional:8:7",
+    "operation": "insertion",
+    "canonical": "What are the rules for PBMO publication procedure"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rules for PBMO publicagion procedure",
+    "source_id": "institutional:8:7",
+    "operation": "substitution",
+    "canonical": "What are the rules for PBMO publication procedure"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rrules for PBMO publication procedure",
+    "source_id": "institutional:8:7",
+    "operation": "doubled",
+    "canonical": "What are the rules for PBMO publication procedure"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "What are the rules for PBMO publication pr ocedure",
+    "source_id": "institutional:8:7",
+    "operation": "spacing",
+    "canonical": "What are the rules for PBMO publication procedure"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "wHaT ArE ThE RuLeS FoR PbMo pUbLiCaTiOn pRoCeDuRe",
+    "source_id": "institutional:8:7",
+    "operation": "case",
+    "canonical": "What are the rules for PBMO publication procedure"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you help me with clinic services",
+    "source_id": "institutional:9:1",
+    "operation": "clean",
+    "canonical": "Can you help me with clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you help me with clinic servcies",
+    "source_id": "institutional:9:1",
+    "operation": "transposition",
+    "canonical": "Can you help me with clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you help me with clinic servies",
+    "source_id": "institutional:9:1",
+    "operation": "deletion",
+    "canonical": "Can you help me with clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you help me wgith clinic services",
+    "source_id": "institutional:9:1",
+    "operation": "insertion",
+    "canonical": "Can you help me with clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you help me with cligic services",
+    "source_id": "institutional:9:1",
+    "operation": "substitution",
+    "canonical": "Can you help me with clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you help me wwith clinic services",
+    "source_id": "institutional:9:1",
+    "operation": "doubled",
+    "canonical": "Can you help me with clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Can you help me with clinic servic es",
+    "source_id": "institutional:9:1",
+    "operation": "spacing",
+    "canonical": "Can you help me with clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "cAn yOu hElP Me wItH ClInIc sErViCeS",
+    "source_id": "institutional:9:1",
+    "operation": "case",
+    "canonical": "Can you help me with clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I find information about clinic services",
+    "source_id": "institutional:9:2",
+    "operation": "clean",
+    "canonical": "Where can I find information about clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I find information about cilnic services",
+    "source_id": "institutional:9:2",
+    "operation": "transposition",
+    "canonical": "Where can I find information about clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I find information aout clinic services",
+    "source_id": "institutional:9:2",
+    "operation": "deletion",
+    "canonical": "Where can I find information about clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I fgind information about clinic services",
+    "source_id": "institutional:9:2",
+    "operation": "insertion",
+    "canonical": "Where can I find information about clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I find informagion about clinic services",
+    "source_id": "institutional:9:2",
+    "operation": "substitution",
+    "canonical": "Where can I find information about clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I find information about clinic servicces",
+    "source_id": "institutional:9:2",
+    "operation": "doubled",
+    "canonical": "Where can I find information about clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Where can I find information a bout clinic services",
+    "source_id": "institutional:9:2",
+    "operation": "spacing",
+    "canonical": "Where can I find information about clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "wHeRe cAn i fInD InFoRmAtIoN AbOuT ClInIc sErViCeS",
+    "source_id": "institutional:9:2",
+    "operation": "case",
+    "canonical": "Where can I find information about clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me about clinic services",
+    "source_id": "institutional:9:5",
+    "operation": "clean",
+    "canonical": "Hi, tell me about clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me about clinic servcies",
+    "source_id": "institutional:9:5",
+    "operation": "transposition",
+    "canonical": "Hi, tell me about clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me about clinic servies",
+    "source_id": "institutional:9:5",
+    "operation": "deletion",
+    "canonical": "Hi, tell me about clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me abogut clinic services",
+    "source_id": "institutional:9:5",
+    "operation": "insertion",
+    "canonical": "Hi, tell me about clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me about cligic services",
+    "source_id": "institutional:9:5",
+    "operation": "substitution",
+    "canonical": "Hi, tell me about clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me aabout clinic services",
+    "source_id": "institutional:9:5",
+    "operation": "doubled",
+    "canonical": "Hi, tell me about clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "Hi, tell me about clinic servic es",
+    "source_id": "institutional:9:5",
+    "operation": "spacing",
+    "canonical": "Hi, tell me about clinic services"
+  },
+  {
+    "group": "institutional",
+    "intent": "knowledge",
+    "query": "hI, tElL Me aBoUt cLiNiC SeRvIcEs",
+    "source_id": "institutional:9:5",
+    "operation": "case",
+    "canonical": "Hi, tell me about clinic services"
+  }
+]

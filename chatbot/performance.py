@@ -8,6 +8,7 @@ import os
 from threading import Lock
 import time
 from uuid import uuid4
+from .build_info import build_info
 
 logger = logging.getLogger('paula.performance')
 _trace = ContextVar('paula_performance_trace', default=None)
@@ -19,6 +20,7 @@ class Trace:
         self.request_id = str(uuid4())
         self.worker = os.getpid()
         self.route = route
+        self.build_commit = build_info()['build_commit']
         self.started = time.perf_counter()
         self.stages = {}
         self.providers = []
@@ -28,7 +30,7 @@ class Trace:
         self.lock = Lock()
 
     def summary(self, status=200):
-        return {'event': 'request_timing', 'request_id': self.request_id, 'worker': self.worker,
+        return {'event': 'request_timing', 'request_id': self.request_id, 'worker': self.worker, 'build_commit': self.build_commit,
                 'route': self.route, 'status': status,
                 'total_ms': round((time.perf_counter()-self.started)*1000, 2),
                 'sql_count': self.sql_count, 'sql_ms': round(self.sql_ms, 2),
@@ -103,11 +105,21 @@ def diagnostic_error(stage_name, code, exception=None):
     trace = _trace.get()
     request_id = trace.request_id if trace is not None else None
     record = {'event': 'request_error', 'request_id': request_id, 'worker': os.getpid(),
-              'stage': stage_name, 'error_code': code}
+              'stage': stage_name, 'error_code': code, 'reason_code': code}
     if exception is not None:
         record['error_type'] = type(exception).__name__
     emit(record)
     return request_id
+
+
+def diagnostic_outcome(stage_name, reason_code, **counts):
+    """Only call with internal status/count metadata, never user/source strings."""
+    trace = _trace.get()
+    record = {'event': 'pipeline_outcome', 'request_id': trace.request_id if trace else None,
+              'worker': os.getpid(), 'build_commit': build_info()['build_commit'],
+              'stage': stage_name, 'reason_code': reason_code, **counts}
+    emit(record)
+    return record['request_id']
 
 
 class RequestTimingMiddleware:

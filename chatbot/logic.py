@@ -20,12 +20,13 @@ from .conversation_context import (
 )
 from .context_tokens import ConversationAnswer
 from .query_normalization import freshness_requested
-from .performance import timed
+from .performance import timed, diagnostic_error
 from .providers import ProviderPolicy, completion_options, generation_scope
 from .dialogue import route_turn, language_for, language_request
 from .social_responses import candidates as social_candidates
-from .response_style import frame_answer, strip_intro
+from .response_style import ACKS, frame_answer, strip_intro
 from .query_understanding import incomplete_request, short_reason_subject, REPHRASE_EN, REPHRASE_FIL
+from .clarifications import validated_pending,spelling_pending
 
 logger = logging.getLogger(__name__)
 
@@ -253,7 +254,20 @@ class PauliBotLogic:
     def _social_reply(self, route, response_language, history):
         # A provider selecting the same reviewed choices added latency without
         # adding expressive range. Keep the whole social path local and bounded.
-        return social_candidates(route.kind, route.reply_language or response_language, history)[0]
+        if route.kind == 'social_bundle':
+            # Preserve order, acknowledge each distinct local intent once.
+            seen, replies = set(), []
+            for segment in route.segments:
+                if segment.kind not in seen:
+                    seen.add(segment.kind)
+                    reply=self._social_reply(segment,response_language,history)
+                    # Reuse reviewed prose, with brief excerpts per intent.
+                    sentences=re.split(r'(?<=[.!?])\s+',reply)
+                    replies.append(' '.join(sentences[:2 if segment.kind=='identity' else 1]))
+            return '\n\n'.join(replies)
+        reply = social_candidates(route.kind, route.reply_language or response_language, history)[0]
+        prefix = ACKS.get(route.acknowledgement, {}).get(response_language, '')
+        return prefix + '\n\n' + reply if prefix and not reply.startswith(prefix) else reply
 
     @generation_scope
     @timed('orchestration')
@@ -268,13 +282,24 @@ class PauliBotLogic:
                                for value in [language_request(row['content'])] if value), None)
         response_language = language_for(user_message, history, preference)
         route = route_turn(user_message)
+        spelling_choices=None
+        if route.method=='spelling_confirmation':
+            from .spelling import matching_plan
+            plan=matching_plan(user_message)
+            if plan.ambiguous and (self.rag is None or callable(getattr(type(self.rag),'retrieve',None))):
+                from .spelling_evidence import resolve_candidates
+                if self.rag is None:
+                    from .rag import RAGSearcher
+                    self.rag=RAGSearcher()
+                resolved_spelling=resolve_candidates(plan,self.rag)
+                if resolved_spelling.status=='resolved':
+                    route=replace(route,query=resolved_spelling.query,method='evidence_spelling')
+                elif resolved_spelling.status=='unavailable':
+                    return self._abstain(user_message,unavailable=True)
+                else:spelling_choices=resolved_spelling.choices
         clean_history = None
         anchor = context_query
-        pending = state.get('pending')
-        if not (isinstance(pending, dict) and set(pending) == {'kind', 'query'} and
-                pending.get('kind') in ('enrollment', 'navigation') and isinstance(pending.get('query'), str) and
-                0 < len(pending['query']) <= 2000):
-            pending = None
+        pending=validated_pending(state.get('pending'))
         if not anchor or (route.kind not in ('knowledge', 'feedback') and pending is None):
             clean_history = dialogue_history(history)
             anchor = anchor or conversation_anchor(clean_history, filtered=True)
@@ -285,6 +310,35 @@ class PauliBotLogic:
                     pending = {'kind': 'enrollment', 'query': previous['content']}
                 elif body.startswith((NAV_QUESTION, NAV_QUESTION_FIL)):
                     pending = {'kind': 'navigation', 'query': previous['content']}
+        if pending and pending['kind']=='spelling':
+            if route.kind=='negation':
+                return ConversationAnswer((self._social_reply(route,response_language,history),[],None,None),anchor,
+                    status='social',mode='negation',language=preference,pending=pending.get('resume'))
+            if route.kind in ('affirmation','acknowledgement'):
+                choices=pending['choices']
+                if len(choices)==1:
+                    return self.process_query(choices[0],history,anchor,_atomic=_atomic,_selection_budget=_selection_budget,
+                        dialogue_state={'language':preference,'pending':pending.get('resume')})
+                text=('Alin sa mga tanong ang ibig mong sabihin?' if response_language=='fil' else 'Which question did you mean? Please choose one.')
+                text+='\n\n[SUGGESTIONS: '+' | '.join(json.dumps(q) for q in choices)+']'
+                return ConversationAnswer((text,[],None,None),anchor,status='clarification',mode='spelling_confirmation',
+                    language=preference,pending=pending)
+            # A selected full question or a new topic replaces the spelling task.
+            pending=pending.get('resume')
+        if route.method in ('spelling_confirmation','protected_name'):
+            if route.method == 'protected_name':
+                text = ('Maaari mong kumpirmahin ang eksaktong pangalan o tungkulin ng taong tinutukoy mo? Hindi ako manghuhula ng pangalan batay sa baybay.'
+                        if response_language=='fil' else
+                        'Could you confirm the person\'s exact name or their role? I won\'t guess a name from a spelling similarity.')
+            else:
+                from .spelling import matching_plan, confirmation_questions
+                questions = spelling_choices or confirmation_questions(matching_plan(user_message))
+                text = ('Ang ibig mo bang sabihin ay ' if response_language=='fil' else 'Did you mean ') + \
+                    (' o ' if response_language=='fil' else ' or ').join(json.dumps(query,ensure_ascii=False) for query in questions) + '?'
+                text += '\n\n[SUGGESTIONS: ' + ' | '.join(json.dumps(query,ensure_ascii=False) for query in questions) + ']'
+                pending=spelling_pending(user_message,questions,pending)
+            return ConversationAnswer((text,[],None,None),anchor,status='clarification',mode=route.method,
+                                      language=preference,pending=pending)
         if route.kind not in ('knowledge', 'feedback'):
             if preference and route.reply_language:
                 route = replace(route, reply_language=None)
@@ -476,5 +530,6 @@ class PauliBotLogic:
                                        displayed_sources, None, None),
                                       resolution.queries[0] if len(resolution.queries) == 1 else '')
         except Exception as exc:
+            diagnostic_error('knowledge', 'KNOWLEDGE_PIPELINE_ERROR', exc)
             logger.warning('Knowledge retrieval unavailable (%s)', type(exc).__name__)
             return self._abstain(message, unavailable=True)

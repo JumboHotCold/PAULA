@@ -1,4 +1,6 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
+import { createSendGuard } from './sendGuard';
+import { restoredMessages } from './suggestions';
 import './App.css';
 import MaterialIcon from './components/MaterialIcon';
 
@@ -30,8 +32,6 @@ function chatSession(user, fresh = false) {
   if (key && fresh) sessionStorage.removeItem(`paula-thread:${user.id}`);
   return value;
 }
-
-const GUEST_GREETING = "Hello! Welcome to Saint Paul University Surigao!\n\nI'm PAULA (Paulinian Artificial User Support and Learning Assistant), your virtual campus assistant. I can help you with admissions, office locations, tuition fees, staff info, and more.\n\nHow may I assist you today?";
 
 function AdminLogin({ onLogin, onBack }) {
   const [username, setUsername] = useState('');
@@ -143,6 +143,8 @@ export default function App() {
   const [chatSessionId, setChatSessionId] = useState(null);
   const [isRestoring, setIsRestoring] = useState(true);
   const chatEpoch = useRef(0);
+  const sendGuard = useRef(null);
+  if (!sendGuard.current) sendGuard.current = createSendGuard();
 
   // Restore session
   useEffect(() => {
@@ -213,7 +215,7 @@ export default function App() {
             const details = await fetchConversationDetails(active.id);
             if (cancelled || epoch !== chatEpoch.current) return;
             setConversationId(active.id);
-            setMessages(details.flatMap(row => [{ text: row.message, isUser: true }, { text: row.response, isUser: false }]));
+            setMessages(restoredMessages(details));
           }
         })
         .catch(console.error);
@@ -366,7 +368,10 @@ export default function App() {
 
   const handleSend = useCallback(
     async (text) => {
+      if (typeof text !== 'string' || !text.trim()) return;
       const epoch = chatEpoch.current;
+      const ticket = sendGuard.current.acquire(epoch);
+      if (!ticket) return;
       setMessages((prev) => [...prev, { text, isUser: true, timestamp: Date.now() / 1000 }]);
       setIsTyping(true);
 
@@ -412,6 +417,8 @@ export default function App() {
           ...prev,
           { text: chatErrorMessage(err), isUser: false },
         ]);
+      } finally {
+        sendGuard.current.release(ticket);
       }
     },
     [conversationId, user, messages, chatSessionId]
@@ -476,7 +483,7 @@ export default function App() {
         setIsTyping(false);
         const details = await fetchConversationDetails(id);
         if (epoch !== chatEpoch.current) return;
-        setMessages(details.map(d => ({ text: d.message, isUser: true })).flatMap((m, i) => [m, { text: details[i].response, isUser: false}]));
+        setMessages(restoredMessages(details));
         setConversationId(id);
         sessionStorage.setItem(`paula-thread:${user.id}`, String(id));
         const session = conversations.find(conversation => conversation.id === id)?.client_session_id;

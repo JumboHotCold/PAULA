@@ -37,14 +37,26 @@ function cleanSuggestions(values) {
     .map(value => value.trim()))].slice(0, 3);
 }
 
+function isConfirmation(text) {
+  return /^(?:Did you mean |Ang ibig mo bang sabihin ay |Which question did you mean\?|Alin sa mga tanong ang ibig mong sabihin\?)/i.test(String(text).trim());
+}
+
+export function restoredMessages(rows) {
+  return rows.flatMap(row => {
+    const parsed=parseMessage(row.response);
+    return [{text:row.message,isUser:true},{text:row.response,isUser:false,suggestions:parsed.suggestions,
+      suggestionsKind:isConfirmation(row.response)?'choice':undefined}];
+  });
+}
+
 export function latestSuggestions(messages, isTyping = false) {
   const index = messages.length - 1;
   const latest = messages[index];
   if (isTyping || !latest || latest.isUser) return { index: -1, suggestions: [] };
   const values = cleanSuggestions(Array.isArray(latest.suggestions) ? latest.suggestions : parseMessage(latest.text).suggestions);
   // Required clarification choices remain available when the bot asks again.
-  const choice = latest.suggestionsKind === 'choice' || (latest.suggestionsKind == null && values.some(value =>
-    !/^(what|why|how|who|where|when|which|does|do|is|are|can|ano|sino|saan|paano)\b/i.test(value)));
+  const choice = latest.suggestionsKind === 'choice' || (latest.suggestionsKind == null && (isConfirmation(latest.text) || values.some(value =>
+    !/^(what|why|how|who|where|when|which|does|do|is|are|can|ano|sino|saan|paano)\b/i.test(value))));
   const asked = new Set(messages.filter(message => message.isUser).map(message => questionKey(message.text)));
   return { index, suggestions: choice ? values : values.filter(value => !asked.has(questionKey(value))) };
 }

@@ -1,0 +1,65 @@
+[
+  {
+    "step": "a",
+    "commit": "1bd1de2",
+    "backend_tests": 412,
+    "backend_seconds": 2.926,
+    "backend_passed": true,
+    "frontend_tests": 24,
+    "frontend_passed": true
+  },
+  {
+    "step": "b",
+    "commit": "29de400",
+    "backend_tests": 417,
+    "backend_seconds": 2.441,
+    "backend_passed": true,
+    "frontend_tests": 24,
+    "frontend_passed": true
+  },
+  {
+    "step": "c",
+    "commit": "b30b5d0",
+    "backend_tests": 417,
+    "backend_seconds": 2.39,
+    "backend_passed": true,
+    "frontend_tests": 27,
+    "frontend_passed": true
+  },
+  {
+    "step": "config",
+    "commit": "40206a5",
+    "backend_tests": 422,
+    "backend_seconds": 2.503,
+    "backend_passed": true,
+    "frontend_tests": 27,
+    "frontend_passed": true
+  },
+  {
+    "step": "build",
+    "commit": "016b617",
+    "backend_tests": 429,
+    "backend_seconds": 4.407,
+    "backend_passed": true,
+    "frontend_tests": 27,
+    "frontend_passed": true
+  },
+  {
+    "step": "diagnostics",
+    "commit": "02ff808",
+    "backend_tests": 442,
+    "backend_seconds": 6.207,
+    "backend_passed": true,
+    "frontend_tests": 27,
+    "frontend_passed": true
+  },
+  {
+    "step": "verify",
+    "commit": "ce72314",
+    "backend_tests": 442,
+    "backend_seconds": 5.324,
+    "backend_passed": true,
+    "frontend_tests": 27,
+    "frontend_passed": true
+  }
+]

@@ -1,0 +1,19 @@
+# Temporary integration tests only; distinct Compose project and tmpfs database.
+services:
+  web:
+    image: paulibot-web
+    tmpfs:
+      - /app/staticfiles
+    ports:
+      - '127.0.0.1:18080:8000'
+    volumes:
+      - .:/app:ro
+      - stage3_model_cache:/root/.cache/huggingface:ro
+    environment:
+      PAULA_WORKER_COUNT: '1'
+      PAULA_LOG_UNANSWERED_QUERIES: 'false'
+      PAULA_FRONTEND_ORIGIN: 'http://127.0.0.1:5174'
+volumes:
+  stage3_model_cache:
+    external: true
+    name: paulibot_model_cache

@@ -22,9 +22,22 @@ SEPARATOR = re.compile(r'\s*,\s*(?:(?:and|at|pati|tsaka)\s+)?|\s*;\s*|\s+\b(?:an
 CONDITION = re.compile(r'\s+((?:in|during|as of|before|after|without|except|excluding|at|sa)\s+.+)$', re.I)
 RELATION = re.compile(r'\b(?:between|difference|relationship|distinction|versus|vs|compare|ihambing|pagkakaiba)\b', re.I)
 DEPENDENT_ACTION = re.compile(r'(?:how (?:do|can) i (?:apply|register|renew)|paano(?: ako)? mag[- ]?apply)[?.! ]*', re.I)
+INSTITUTION_REFERENCE = r'(?:this|that|the same)\s+(?:institution|school|university|campus)'
 DEPENDENT_REASON = re.compile(
     r'why(?: should (?:i|we|you))?\s+(?P<verb>enroll|enrol|study|attend|choose|use|join|visit|contact|apply)'
-    r'(?P<prep>\s+(?:at|for|to))?(?P<reference>\s+(?:it|that|there|here))?[?.! ]*', re.I)
+    r'(?P<prep>\s+(?:at|for|to|in))?(?P<reference>\s+(?:' + INSTITUTION_REFERENCE + r'|it|that|there|here))?[?.! ]*', re.I)
+
+
+def compatible_reference(text, subject, vocabulary):
+    """Typed institution references cannot silently bind to a known office/person."""
+    if not re.search(r'\b' + INSTITUTION_REFERENCE + r'\b', text, re.I):
+        return True
+    mentions = vocabulary.mentions(subject) if vocabulary else []
+    if any(entity.group in {'office', 'college', 'person', 'role', 'audience'} for _, _, entity in mentions):
+        return False
+    if re.search(r'\b(and|or|versus|vs|pati|tsaka)\b|[;,]', subject, re.I):
+        return len(mentions) == 1 and mentions[0][0] == 0 and mentions[0][1] == len(subject)
+    return True
 
 
 def dependent_request(text):
@@ -57,7 +70,7 @@ def bind_dependent(query, prior, vocabulary=None):
     """A short action question may reuse its immediately named resource."""
     if dependent_request(query):
         subject = topic_subject(prior)
-        if subject:
+        if subject and compatible_reference(query, subject, vocabulary):
             # A coordinated prior object does not identify one reason target.
             # Known compound labels may contain conjunctions without ambiguity.
             if re.search(r'\b(and|or|versus|vs|pati|tsaka)\b|[;,]', subject, re.I):
@@ -72,6 +85,11 @@ def bind_dependent(query, prior, vocabulary=None):
                 verb = reason.group('verb').casefold()
                 preposition = {'enroll': 'at', 'enrol': 'at', 'study': 'at', 'apply': 'for'}.get(verb)
                 connector = ' ' + preposition if preposition and not reason.group('prep') else ''
+                if preposition == 'at' and (reason.group('prep') or '').strip().casefold() == 'in':
+                    # Bind the full place reference using the same grammatical
+                    # connector as an explicit named study/enrollment target.
+                    stem = stem[:reason.start('prep')].rstrip()
+                    connector = ' at'
             else:
                 connector = ' for'
             return question(stem + connector + ' ' + subject)

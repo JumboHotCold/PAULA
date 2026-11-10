@@ -1,0 +1,62 @@
+{
+  "ready": true,
+  "build_commit": "ce723145803c3f7d7fccbf3fb8dc52ba7886a3fc",
+  "build_source": "git",
+  "build_source_digest": "93becd8b26f6732c0dfdb7286866454a297b56f703770282979a237f82fe13b8",
+  "build_consistent": true,
+  "expected_workers": 3,
+  "ready_workers": 3,
+  "workers": [
+    {
+      "worker": 72,
+      "ready": true,
+      "social_router_ready": true,
+      "dimensions": 384,
+      "startup_ms": 34593.91,
+      "build_commit": "ce723145803c3f7d7fccbf3fb8dc52ba7886a3fc",
+      "build_source": "git",
+      "build_source_digest": "93becd8b26f6732c0dfdb7286866454a297b56f703770282979a237f82fe13b8"
+    },
+    {
+      "worker": 71,
+      "ready": true,
+      "social_router_ready": true,
+      "dimensions": 384,
+      "startup_ms": 34358.9,
+      "build_commit": "ce723145803c3f7d7fccbf3fb8dc52ba7886a3fc",
+      "build_source": "git",
+      "build_source_digest": "93becd8b26f6732c0dfdb7286866454a297b56f703770282979a237f82fe13b8"
+    },
+    {
+      "worker": 73,
+      "ready": true,
+      "social_router_ready": true,
+      "dimensions": 384,
+      "startup_ms": 34395.02,
+      "build_commit": "ce723145803c3f7d7fccbf3fb8dc52ba7886a3fc",
+      "build_source": "git",
+      "build_source_digest": "93becd8b26f6732c0dfdb7286866454a297b56f703770282979a237f82fe13b8"
+    }
+  ],
+  "database_ready": true,
+  "knowledge_available": true,
+  "index_complete": true,
+  "knowledge": {
+    "FAQ": {
+      "total": 138,
+      "missing": 0
+    },
+    "Location": {
+      "total": 6,
+      "missing": 0
+    },
+    "StaffMember": {
+      "total": 12,
+      "missing": 0
+    },
+    "WebResource": {
+      "total": 476,
+      "missing": 0
+    }
+  }
+}

@@ -16,6 +16,8 @@ jobs:
           docker compose -p paula-ci -f docker-compose.ci.yml exec -T web python manage.py check
           docker compose -p paula-ci -f docker-compose.ci.yml exec -T web python manage.py makemigrations --check --dry-run
           docker compose -p paula-ci -f docker-compose.ci.yml exec -T web python manage.py collectstatic --noinput
+          docker compose -p paula-ci -f docker-compose.ci.yml exec -T web python manage.py migrate --noinput
+          docker compose -p paula-ci -f docker-compose.ci.yml exec -T web python scripts/ci_knowledge_gate.py
           docker compose -p paula-ci -f docker-compose.ci.yml exec -T web python manage.py test chatbot --verbosity 1
       - uses: actions/setup-node@v4
         with:
@@ -28,3 +30,10 @@ jobs:
           npm ci
           npm test
           npm run build
+      - name: Frontend transport to isolated Django HTTP integration
+        run: |
+          docker compose -p paula-ci -f docker-compose.ci.yml exec -d web python manage.py runserver 0.0.0.0:8000 --noreload
+          node scripts/verify_stage3_transport.mjs
+      - name: Stop isolated test services
+        if: always()
+        run: docker compose -p paula-ci -f docker-compose.ci.yml down

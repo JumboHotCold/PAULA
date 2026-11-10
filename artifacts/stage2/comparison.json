@@ -1,0 +1,513 @@
+{
+  "original_before": {
+    "samples": 45,
+    "passed": 36,
+    "failed_queries": [
+      "hi, tell me about yourself",
+      "hi, tell me about yourself?",
+      "tell me about SPUS and why should i enroll in this institution"
+    ]
+  },
+  "original_after": {
+    "samples": 45,
+    "passed": 45
+  },
+  "expanded_after": {
+    "samples": 60,
+    "passed": 60,
+    "failed_queries": []
+  },
+  "timings_captured": 60,
+  "comparisons": {
+    "ty": {
+      "before": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 3.93,
+        "p95_ms": 127.98,
+        "sql_counts": [
+          0,
+          0,
+          0
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      },
+      "after": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 3.28,
+        "p95_ms": 10.04,
+        "sql_counts": [
+          0,
+          0,
+          0
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      }
+    },
+    "thankyoui": {
+      "before": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 3.92,
+        "p95_ms": 98.44,
+        "sql_counts": [
+          0,
+          0,
+          0
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      },
+      "after": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 4.62,
+        "p95_ms": 11.85,
+        "sql_counts": [
+          0,
+          0,
+          0
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      }
+    },
+    "thank you": {
+      "before": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 2.63,
+        "p95_ms": 4.04,
+        "sql_counts": [
+          0,
+          0,
+          0
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      },
+      "after": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 3.47,
+        "p95_ms": 4.18,
+        "sql_counts": [
+          0,
+          0,
+          0
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      }
+    },
+    "hi": {
+      "before": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 4.16,
+        "p95_ms": 87.36,
+        "sql_counts": [
+          0,
+          0,
+          0
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      },
+      "after": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 3.61,
+        "p95_ms": 3.92,
+        "sql_counts": [
+          0,
+          0,
+          0
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      }
+    },
+    "tell me about yourself": {
+      "before": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 37.58,
+        "p95_ms": 130.55,
+        "sql_counts": [
+          1,
+          1,
+          1
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      },
+      "after": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 31.05,
+        "p95_ms": 165.31,
+        "sql_counts": [
+          1,
+          1,
+          1
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      }
+    },
+    "hi, tell me about yourself": {
+      "before": {
+        "samples": 3,
+        "passed": 0,
+        "p50_ms": 746.9,
+        "p95_ms": 1146.6,
+        "sql_counts": [
+          17,
+          17,
+          10
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 3
+      },
+      "after": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 31.41,
+        "p95_ms": 44.22,
+        "sql_counts": [
+          1,
+          1,
+          1
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      }
+    },
+    "hi, tell me about yourself?": {
+      "before": {
+        "samples": 3,
+        "passed": 0,
+        "p50_ms": 165.23,
+        "p95_ms": 170.61,
+        "sql_counts": [
+          10,
+          10,
+          10
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 3
+      },
+      "after": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 32.37,
+        "p95_ms": 88.87,
+        "sql_counts": [
+          1,
+          1,
+          1
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      }
+    },
+    "tell me about SPUS and why should i enroll in this institution": {
+      "before": {
+        "samples": 3,
+        "passed": 0,
+        "p50_ms": 194.42,
+        "p95_ms": 215.88,
+        "sql_counts": [
+          11,
+          11,
+          11
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 3
+      },
+      "after": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 100.37,
+        "p95_ms": 130.57,
+        "sql_counts": [
+          10,
+          3,
+          3
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      }
+    },
+    "tell me about SPUS and why should i enroll at SPUS": {
+      "before": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 79.06,
+        "p95_ms": 87.67,
+        "sql_counts": [
+          3,
+          3,
+          3
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      },
+      "after": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 88.32,
+        "p95_ms": 89.87,
+        "sql_counts": [
+          3,
+          3,
+          3
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      }
+    },
+    "What programs are offered?": {
+      "before": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 76.2,
+        "p95_ms": 156.11,
+        "sql_counts": [
+          2,
+          2,
+          2
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      },
+      "after": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 79.26,
+        "p95_ms": 81.67,
+        "sql_counts": [
+          2,
+          2,
+          2
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      }
+    },
+    "why spus?": {
+      "before": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 83.74,
+        "p95_ms": 86.8,
+        "sql_counts": [
+          3,
+          3,
+          3
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      },
+      "after": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 71.16,
+        "p95_ms": 83.47,
+        "sql_counts": [
+          3,
+          3,
+          3
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      }
+    },
+    "Who is the ICT Director and CEIT Dean?": {
+      "before": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 339.11,
+        "p95_ms": 439.68,
+        "sql_counts": [
+          14,
+          7,
+          7
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      },
+      "after": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 332.17,
+        "p95_ms": 422.42,
+        "sql_counts": [
+          14,
+          7,
+          7
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      }
+    },
+    "How do I enroll?": {
+      "before": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 4.37,
+        "p95_ms": 12.42,
+        "sql_counts": [
+          0,
+          0,
+          0
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      },
+      "after": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 4.42,
+        "p95_ms": 4.79,
+        "sql_counts": [
+          0,
+          0,
+          0
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      }
+    },
+    "Where is the Registrar office?": {
+      "before": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 4.47,
+        "p95_ms": 5.65,
+        "sql_counts": [
+          0,
+          0,
+          0
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      },
+      "after": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 3.88,
+        "p95_ms": 17.31,
+        "sql_counts": [
+          0,
+          0,
+          0
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 0
+      }
+    },
+    "What is the exact enrollment fee for transferees in 2037?": {
+      "before": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 150.17,
+        "p95_ms": 345.42,
+        "sql_counts": [
+          10,
+          10,
+          10
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 3
+      },
+      "after": {
+        "samples": 3,
+        "passed": 3,
+        "p50_ms": 161.44,
+        "p95_ms": 180.94,
+        "sql_counts": [
+          10,
+          10,
+          10
+        ],
+        "provider_calls": 0,
+        "query_embeddings": 3
+      }
+    }
+  },
+  "provider_calls": 0,
+  "no_match_reason_codes": [
+    {
+      "request_id": "6843e8e0-d638-4484-aaa1-f1250271b1b5",
+      "stage": "answer",
+      "reason_code": "UNCLEAR_INTENT"
+    },
+    {
+      "request_id": "dfc353f0-fcc2-4615-94f3-6c9f8f89ce9d",
+      "stage": "retrieval",
+      "reason_code": "NO_MATCH"
+    },
+    {
+      "request_id": "dfc353f0-fcc2-4615-94f3-6c9f8f89ce9d",
+      "stage": "answer",
+      "reason_code": "NO_MATCH"
+    },
+    {
+      "request_id": "55ff6ad7-557b-4254-9997-66fe927926b5",
+      "stage": "answer",
+      "reason_code": "UNCLEAR_INTENT"
+    },
+    {
+      "request_id": "a5e55906-b950-411d-866d-c0028f809983",
+      "stage": "retrieval",
+      "reason_code": "NO_MATCH"
+    },
+    {
+      "request_id": "a5e55906-b950-411d-866d-c0028f809983",
+      "stage": "answer",
+      "reason_code": "NO_MATCH"
+    },
+    {
+      "request_id": "1cb5ac41-51fc-48af-a4cb-76a3e51c0313",
+      "stage": "answer",
+      "reason_code": "UNCLEAR_INTENT"
+    },
+    {
+      "request_id": "41797923-66a7-4c0e-8bc2-b2ba11ae5d37",
+      "stage": "retrieval",
+      "reason_code": "NO_MATCH"
+    },
+    {
+      "request_id": "41797923-66a7-4c0e-8bc2-b2ba11ae5d37",
+      "stage": "answer",
+      "reason_code": "NO_MATCH"
+    }
+  ],
+  "normal_mode_query_text_logged": false,
+  "worker_startup_records": [
+    {
+      "worker": 71,
+      "build_commit": "ce723145803c3f7d7fccbf3fb8dc52ba7886a3fc",
+      "build_source_digest": "93becd8b26f6732c0dfdb7286866454a297b56f703770282979a237f82fe13b8",
+      "ready": true
+    },
+    {
+      "worker": 72,
+      "build_commit": "ce723145803c3f7d7fccbf3fb8dc52ba7886a3fc",
+      "build_source_digest": "93becd8b26f6732c0dfdb7286866454a297b56f703770282979a237f82fe13b8",
+      "ready": true
+    },
+    {
+      "worker": 73,
+      "build_commit": "ce723145803c3f7d7fccbf3fb8dc52ba7886a3fc",
+      "build_source_digest": "93becd8b26f6732c0dfdb7286866454a297b56f703770282979a237f82fe13b8",
+      "ready": true
+    }
+  ],
+  "limitations": "Three sequential samples per query; correctness and path-use regression evidence, not general intent accuracy, load capacity or calibrated retrieval recall."
+}

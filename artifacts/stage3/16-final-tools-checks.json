@@ -1,0 +1,8 @@
+﻿{
+    "step":  "16-final-tools",
+    "revision":  "2ccb6454161808571c4c12af2e3c6cbde95a943d",
+    "backend_exit":  0,
+    "frontend_exit":  0,
+    "backend_tests":  "499",
+    "frontend_tests":  "31"
+}

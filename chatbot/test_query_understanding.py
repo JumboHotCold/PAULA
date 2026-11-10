@@ -61,7 +61,9 @@ class CompletionTests(unittest.TestCase):
             self.assertIsNone(short_reason_subject(query))
 
     def test_leading_question_typos_and_domain_typos_are_conservative(self):
-        for query, expected in (('wht is SPUS?', 'what is SPUS?'), ('hwo do I enorll?', 'how do I enroll?'),
+        # "hwo" is one transposition from BOTH how and who. The new shared
+        # contract preserves it, rather than the old hardcoded leading alias.
+        for query, expected in (('wht is SPUS?', 'what is SPUS?'), ('hwo do I enorll?', 'hwo do I enroll?'),
                                 ('why choos SPUS?', 'why choose SPUS?'), ('What progrms are offered?', 'What programs are offered?')):
             self.assertEqual(normalize_query(query), expected)
         query = 'Were CEIT 2026-00123 Alice Santos finances updated?'
@@ -143,9 +145,13 @@ class PostgreSQLCompletionTests(TestCase):
         self.assertEqual(len(result[1]), 1)
         self.bot.rag.ensure_embeddings.assert_not_called()
 
-    def test_question_typo_in_enrollment_still_asks_category(self):
-        result = self.bot.process_query('hwo do I enorll?')
-        self.assertTrue(result[0].startswith(ENROLL_QUESTION))
+    def test_ambiguous_question_typo_asks_before_selecting_an_intent(self):
+        with patch.object(self.bot.rag,'_hybrid_search',return_value=[]):
+            result = self.bot.process_query('hwo do I enorll?')
+        self.assertEqual(result.answer_status,'clarification')
+        self.assertIn('Did you mean',result[0])
+        self.assertIn('how do I enroll',result[0])
+        self.assertIn('who do I enroll',result[0])
         self.bot.rag.ensure_embeddings.assert_not_called()
 
     def test_unknown_fragment_gets_friendly_clarification(self):

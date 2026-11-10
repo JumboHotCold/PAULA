@@ -1,0 +1,136 @@
+{
+  "split": "dev",
+  "n": 1096,
+  "grid": [
+    {
+      "minimum": 0.55,
+      "margin": 0.05,
+      "correct": 963,
+      "social_correct": 291,
+      "institutional_n": 672,
+      "false_positive": 0
+    },
+    {
+      "minimum": 0.55,
+      "margin": 0.08,
+      "correct": 954,
+      "social_correct": 282,
+      "institutional_n": 672,
+      "false_positive": 0
+    },
+    {
+      "minimum": 0.55,
+      "margin": 0.12,
+      "correct": 953,
+      "social_correct": 281,
+      "institutional_n": 672,
+      "false_positive": 0
+    },
+    {
+      "minimum": 0.6,
+      "margin": 0.05,
+      "correct": 954,
+      "social_correct": 282,
+      "institutional_n": 672,
+      "false_positive": 0
+    },
+    {
+      "minimum": 0.6,
+      "margin": 0.08,
+      "correct": 945,
+      "social_correct": 273,
+      "institutional_n": 672,
+      "false_positive": 0
+    },
+    {
+      "minimum": 0.6,
+      "margin": 0.12,
+      "correct": 944,
+      "social_correct": 272,
+      "institutional_n": 672,
+      "false_positive": 0
+    },
+    {
+      "minimum": 0.65,
+      "margin": 0.05,
+      "correct": 950,
+      "social_correct": 278,
+      "institutional_n": 672,
+      "false_positive": 0
+    },
+    {
+      "minimum": 0.65,
+      "margin": 0.08,
+      "correct": 942,
+      "social_correct": 270,
+      "institutional_n": 672,
+      "false_positive": 0
+    },
+    {
+      "minimum": 0.65,
+      "margin": 0.12,
+      "correct": 941,
+      "social_correct": 269,
+      "institutional_n": 672,
+      "false_positive": 0
+    },
+    {
+      "minimum": 0.7,
+      "margin": 0.05,
+      "correct": 939,
+      "social_correct": 267,
+      "institutional_n": 672,
+      "false_positive": 0
+    },
+    {
+      "minimum": 0.7,
+      "margin": 0.08,
+      "correct": 931,
+      "social_correct": 259,
+      "institutional_n": 672,
+      "false_positive": 0
+    },
+    {
+      "minimum": 0.7,
+      "margin": 0.12,
+      "correct": 930,
+      "social_correct": 258,
+      "institutional_n": 672,
+      "false_positive": 0
+    },
+    {
+      "minimum": 0.75,
+      "margin": 0.05,
+      "correct": 935,
+      "social_correct": 263,
+      "institutional_n": 672,
+      "false_positive": 0
+    },
+    {
+      "minimum": 0.75,
+      "margin": 0.08,
+      "correct": 928,
+      "social_correct": 256,
+      "institutional_n": 672,
+      "false_positive": 0
+    },
+    {
+      "minimum": 0.75,
+      "margin": 0.12,
+      "correct": 927,
+      "social_correct": 255,
+      "institutional_n": 672,
+      "false_positive": 0
+    }
+  ],
+  "selected": {
+    "minimum": 0.55,
+    "margin": 0.05,
+    "correct": 963,
+    "social_correct": 291,
+    "institutional_n": 672,
+    "false_positive": 0
+  },
+  "policy": "zero institutional false positives; retain existing thresholds unless >=1pp development gain",
+  "test_used": false
+}

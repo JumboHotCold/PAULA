@@ -1,0 +1,1004 @@
+{
+  "measured_at": "2026-11-09T13:38:07.232584+00:00",
+  "integrity": {
+    "FAQ": {
+      "count": 138,
+      "sha256": "bc8e18e7bf2b26cf44956da8aed3a4c03e3f77c9fff8b5e21180cc13641cedbd"
+    },
+    "Location": {
+      "count": 6,
+      "sha256": "d54138abcc6b41302f1bc394cbbf0447c3e5de502cb48060c1ea1305c9e88fac"
+    },
+    "StaffMember": {
+      "count": 12,
+      "sha256": "5a618bd4a3d718185a5e06dfb45e3976d94437efea8debbbc2ca8954e68c6f00"
+    },
+    "WebResource": {
+      "count": 476,
+      "sha256": "3fef4ff4d54763878bf1dab2a5acb5cbc41ff4484caa9864118e23bd7f474f83"
+    },
+    "Conversation": {
+      "count": 140,
+      "sha256": "13203c013924f38803eeac24320d116a32c9bef446327630a2e7f45ac8356bf9"
+    },
+    "ChatHistory": {
+      "count": 177,
+      "sha256": "5b709be6248a830587edaf81d62e3e50c2c4220021343764558b299fca393628"
+    }
+  },
+  "rows": [
+    {
+      "query": "tel me abt urself",
+      "plan": {
+        "original": "tel me abt urself",
+        "matching": "tel me abt urself",
+        "corrections": [],
+        "ambiguous": [],
+        "protected_name": true
+      },
+      "route": {
+        "kind": "knowledge",
+        "query": "tel me abt urself",
+        "acknowledgement": "",
+        "method": "protected_name",
+        "score": null,
+        "reply_language": null,
+        "segments": []
+      },
+      "candidates": {
+        "tel": [
+          1,
+          [
+            "tell"
+          ]
+        ],
+        "abt": [
+          99,
+          []
+        ]
+      },
+      "nearest_name": {
+        "tel": [
+          "del"
+        ],
+        "abt": []
+      },
+      "semantic": [
+        [
+          0.3366738133660594,
+          "farewell"
+        ],
+        [
+          0.2945910147250296,
+          "preference"
+        ],
+        [
+          0.2925976721071053,
+          "celebration"
+        ]
+      ],
+      "margin": 0.04208279864102982
+    },
+    {
+      "query": "wat r the programs offerd",
+      "plan": {
+        "original": "wat r the programs offerd",
+        "matching": "what r the programs offerd",
+        "corrections": [
+          {
+            "original": "wat",
+            "replacement": "what",
+            "distance": 1,
+            "confidence": 0.8
+          }
+        ],
+        "ambiguous": [
+          "offerd"
+        ],
+        "protected_name": false
+      },
+      "route": {
+        "kind": "knowledge",
+        "query": "what r the programs offerd",
+        "acknowledgement": "",
+        "method": "spelling_confirmation",
+        "score": 0.8,
+        "reply_language": null,
+        "segments": []
+      },
+      "candidates": {
+        "wat": [
+          1,
+          [
+            "what"
+          ]
+        ],
+        "offerd": [
+          1,
+          [
+            "offer",
+            "offered",
+            "offers"
+          ]
+        ]
+      },
+      "nearest_name": {
+        "wat": [],
+        "offerd": []
+      },
+      "semantic": [
+        [
+          0.7161652734054074,
+          "knowledge"
+        ],
+        [
+          0.2806245783324187,
+          "capabilities"
+        ],
+        [
+          0.15525091876227154,
+          "thanks"
+        ]
+      ],
+      "margin": 0.43554069507298865
+    },
+    {
+      "query": "where is the registrr",
+      "plan": {
+        "original": "where is the registrr",
+        "matching": "where is the registrr",
+        "corrections": [],
+        "ambiguous": [
+          "registrr"
+        ],
+        "protected_name": false
+      },
+      "route": {
+        "kind": "knowledge",
+        "query": "where is the registrr",
+        "acknowledgement": "",
+        "method": "spelling_confirmation",
+        "score": null,
+        "reply_language": null,
+        "segments": []
+      },
+      "candidates": {
+        "registrr": [
+          1,
+          [
+            "register",
+            "registrar"
+          ]
+        ]
+      },
+      "nearest_name": {
+        "registrr": []
+      },
+      "semantic": [
+        [
+          0.20947259124403175,
+          "knowledge"
+        ],
+        [
+          0.14077262947803756,
+          "acknowledgement"
+        ],
+        [
+          0.11310747912292611,
+          "celebration"
+        ]
+      ],
+      "margin": 0.06869996176599419
+    },
+    {
+      "query": "thank u po",
+      "plan": {
+        "original": "thank u po",
+        "matching": "thank u po",
+        "corrections": [],
+        "ambiguous": [],
+        "protected_name": false
+      },
+      "route": {
+        "kind": "knowledge",
+        "query": "thank u po",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null,
+        "segments": []
+      },
+      "candidates": {},
+      "nearest_name": {},
+      "semantic": [
+        [
+          0.3310205433631306,
+          "thanks"
+        ],
+        [
+          0.3207785183026281,
+          "celebration"
+        ],
+        [
+          0.30588986774210364,
+          "joke"
+        ]
+      ],
+      "margin": 0.01024202506050248
+    },
+    {
+      "query": "salamat gyud",
+      "plan": {
+        "original": "salamat gyud",
+        "matching": "salamat gyud",
+        "corrections": [],
+        "ambiguous": [],
+        "protected_name": false
+      },
+      "route": {
+        "kind": "knowledge",
+        "query": "salamat gyud",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null,
+        "segments": []
+      },
+      "candidates": {
+        "gyud": [
+          99,
+          []
+        ]
+      },
+      "nearest_name": {
+        "gyud": []
+      },
+      "semantic": [
+        [
+          0.592823531956312,
+          "thanks"
+        ],
+        [
+          0.4565074840329839,
+          "celebration"
+        ],
+        [
+          0.4562629965517069,
+          "farewell"
+        ]
+      ],
+      "margin": 0.13631604792332808
+    },
+    {
+      "query": "salamat kaayo",
+      "plan": {
+        "original": "salamat kaayo",
+        "matching": "salamat kaayo",
+        "corrections": [],
+        "ambiguous": [],
+        "protected_name": false
+      },
+      "route": {
+        "kind": "thanks",
+        "query": "",
+        "acknowledgement": "",
+        "method": "normalized_social",
+        "score": null,
+        "reply_language": "ceb",
+        "segments": []
+      },
+      "candidates": {},
+      "nearest_name": {},
+      "semantic": [
+        [
+          0.6397510963622766,
+          "celebration"
+        ],
+        [
+          0.6370494074339282,
+          "wellbeing"
+        ],
+        [
+          0.6201839366131541,
+          "thanks"
+        ]
+      ],
+      "margin": 0.0027016889283483225
+    },
+    {
+      "query": "maraming salamat po",
+      "plan": {
+        "original": "maraming salamat po",
+        "matching": "maraming salamat po",
+        "corrections": [],
+        "ambiguous": [],
+        "protected_name": false
+      },
+      "route": {
+        "kind": "thanks",
+        "query": "",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null,
+        "segments": []
+      },
+      "candidates": {},
+      "nearest_name": {},
+      "semantic": [
+        [
+          0.7614558347126155,
+          "thanks"
+        ],
+        [
+          0.4594123552306192,
+          "farewell"
+        ],
+        [
+          0.4366278806827659,
+          "wellbeing"
+        ]
+      ],
+      "margin": 0.3020434794819963
+    },
+    {
+      "query": "daghang salamat",
+      "plan": {
+        "original": "daghang salamat",
+        "matching": "daghang salamat",
+        "corrections": [],
+        "ambiguous": [],
+        "protected_name": false
+      },
+      "route": {
+        "kind": "thanks",
+        "query": "",
+        "acknowledgement": "",
+        "method": "normalized_social",
+        "score": null,
+        "reply_language": "ceb",
+        "segments": []
+      },
+      "candidates": {},
+      "nearest_name": {},
+      "semantic": [
+        [
+          0.5347004877710319,
+          "thanks"
+        ],
+        [
+          0.5099435666073924,
+          "celebration"
+        ],
+        [
+          0.5038743652753748,
+          "joke"
+        ]
+      ],
+      "margin": 0.024756921163639478
+    },
+    {
+      "query": "thanks a lot",
+      "plan": {
+        "original": "thanks a lot",
+        "matching": "thanks a lot",
+        "corrections": [],
+        "ambiguous": [],
+        "protected_name": false
+      },
+      "route": {
+        "kind": "thanks",
+        "query": "",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null,
+        "segments": []
+      },
+      "candidates": {},
+      "nearest_name": {},
+      "semantic": [
+        [
+          0.49227906828964313,
+          "thanks"
+        ],
+        [
+          0.3034109045890503,
+          "acknowledgement"
+        ],
+        [
+          0.2772721224489922,
+          "celebration"
+        ]
+      ],
+      "margin": 0.18886816370059284
+    }
+  ],
+  "staff": [
+    {
+      "id": 1,
+      "name": "Sr. Marie Rosanne Mallillin, SPC",
+      "position": "University President",
+      "query": "Who is Sr. Marie Rosanne Mallillin, SPC?",
+      "kind": "name",
+      "route": {
+        "kind": "knowledge",
+        "query": "Who is Sr. Marie Rosanne Mallillin, SPC?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null,
+        "segments": []
+      },
+      "status": "ok",
+      "exact_identity_hit": true,
+      "evidence": [
+        {
+          "question": "Who is Sr. Marie Rosanne Mallillin, SPC?",
+          "document_title": "Staff Directory: University President",
+          "answer": "Sr. Marie Rosanne Mallillin, SPC is the University President. Office located at President's Office, 2nd Floor Admin Building.",
+          "personnel_name": "Sr. Marie Rosanne Mallillin, SPC",
+          "personnel_role": "University President",
+          "source_type": "staff_directory",
+          "source_office": "President's Office, 2nd Floor Admin Building",
+          "source_url": null,
+          "record_type": "staffmember",
+          "record_id": 1,
+          "retrieval_method": "exact_staff_name",
+          "supporting_sources": []
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Dr. Karen Plaza",
+      "position": "Dean, College of Engineering and Information Technology",
+      "query": "Who is Dr. Karen Plaza?",
+      "kind": "name",
+      "route": {
+        "kind": "knowledge",
+        "query": "Who is Dr. Karen Plaza?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null,
+        "segments": []
+      },
+      "status": "ambiguous",
+      "exact_identity_hit": false,
+      "evidence": []
+    },
+    {
+      "id": 4,
+      "name": "Arnold Magalona",
+      "position": "Instructor",
+      "query": "Who is Arnold Magalona?",
+      "kind": "name",
+      "route": {
+        "kind": "knowledge",
+        "query": "Who is Arnold Magalona?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null,
+        "segments": []
+      },
+      "status": "ambiguous",
+      "exact_identity_hit": false,
+      "evidence": []
+    },
+    {
+      "id": 7,
+      "name": "Dr. Nikko T. Ederio, LPT",
+      "position": "VP for Academics Services",
+      "query": "Who is Dr. Nikko T. Ederio, LPT?",
+      "kind": "name",
+      "route": {
+        "kind": "knowledge",
+        "query": "Who is Dr. Nikko T. Ederio, LPT?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null,
+        "segments": []
+      },
+      "status": "ok",
+      "exact_identity_hit": true,
+      "evidence": [
+        {
+          "question": "SPUS Personnel | TOP MANAGEMENT | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+          "document_title": "SPUS Personnel | TOP MANAGEMENT | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+          "answer": "Dr. Nikko T. Ederio, LPT — VP for Academics Services",
+          "text": "Dr. Nikko T. Ederio, LPT — VP for Academics Services",
+          "source_type": "website",
+          "source_url": "https://spus.edu.ph/administrator/",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.644267+00:00",
+          "retrieval_method": "exact_personnel",
+          "record_type": "webresource",
+          "record_id": 77,
+          "personnel_role": "VP for Academics Services",
+          "personnel_name": "Dr. Nikko T. Ederio, LPT",
+          "personnel_section": "TOP MANAGEMENT",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ACADEMIC SERVICES | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 88,
+              "retrieved_at": "2026-10-27T14:12:30.685384+00:00"
+            },
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | Quality Management Office | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 411,
+              "retrieved_at": "2026-10-27T14:12:32.022809+00:00"
+            },
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Health Sciences | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 231,
+              "retrieved_at": "2026-10-27T14:12:31.272621+00:00"
+            },
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | College of Education, Arts and Sciences | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 138,
+              "retrieved_at": "2026-10-27T14:12:30.877364+00:00"
+            },
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | VP for Academics Services | Dr. Nikko T. Ederio, LPT",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 100,
+              "retrieved_at": "2026-10-27T14:12:30.737133+00:00"
+            }
+          ],
+          "source_sections": [
+            "TOP MANAGEMENT",
+            "ACADEMIC SERVICES",
+            "Quality Management Office",
+            "College of Health Sciences",
+            "College of Education, Arts and Sciences",
+            "GRADUATE SCHOOL FACULTY"
+          ],
+          "review_notes": [
+            "A local staff record names a different holder for this role. The official website excerpt is shown; the discrepancy needs institutional review."
+          ],
+          "review_references": [
+            {
+              "name": "Dr. Antonio Talamera",
+              "role": "VP for Academics",
+              "record_id": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Sr. Veneranda del Rosario, SPC",
+      "position": "VP for PRISM, Basic Education",
+      "query": "Who is Sr. Veneranda del Rosario, SPC?",
+      "kind": "name",
+      "route": {
+        "kind": "knowledge",
+        "query": "Who is Sr. Veneranda del Rosario, SPC?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null,
+        "segments": []
+      },
+      "status": "ok",
+      "exact_identity_hit": true,
+      "evidence": [
+        {
+          "question": "SPUS Personnel | TOP MANAGEMENT | VP for PRISM, Basic Education | Sr. Veneranda del Rosario, SPC",
+          "document_title": "SPUS Personnel | TOP MANAGEMENT | VP for PRISM, Basic Education | Sr. Veneranda del Rosario, SPC",
+          "answer": "Sr. Veneranda del Rosario, SPC — VP for PRISM, Basic Education",
+          "text": "Sr. Veneranda del Rosario, SPC — VP for PRISM, Basic Education",
+          "source_type": "website",
+          "source_url": "https://spus.edu.ph/administrator/",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.637617+00:00",
+          "retrieval_method": "exact_personnel",
+          "record_type": "webresource",
+          "record_id": 76,
+          "personnel_role": "VP for PRISM, Basic Education",
+          "personnel_name": "Sr. Veneranda del Rosario, SPC",
+          "personnel_section": "TOP MANAGEMENT",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | PRISM | VP for PRISM, Basic Education | Sr. Veneranda del Rosario, SPC",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 255,
+              "retrieved_at": "2026-10-27T14:12:31.365989+00:00"
+            }
+          ],
+          "source_sections": [
+            "TOP MANAGEMENT",
+            "PRISM"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Dr. Guilbert R. Mantala",
+      "position": "VP for PRISM, Higher Education",
+      "query": "Who is Dr. Guilbert R. Mantala?",
+      "kind": "name",
+      "route": {
+        "kind": "knowledge",
+        "query": "Who is Dr. Guilbert R. Mantala?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null,
+        "segments": []
+      },
+      "status": "ok",
+      "exact_identity_hit": true,
+      "evidence": [
+        {
+          "question": "SPUS Personnel | TOP MANAGEMENT | Graduate School Faculty, Program Chair, VP for PRISM, Higher Education | Dr. Guilbert R. Mantala",
+          "document_title": "SPUS Personnel | TOP MANAGEMENT | Graduate School Faculty, Program Chair, VP for PRISM, Higher Education | Dr. Guilbert R. Mantala",
+          "answer": "Dr. Guilbert R. Mantala — Graduate School Faculty, Program Chair, VP for PRISM, Higher Education",
+          "text": "Dr. Guilbert R. Mantala — Graduate School Faculty, Program Chair, VP for PRISM, Higher Education",
+          "source_type": "website",
+          "source_url": "https://spus.edu.ph/administrator/",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.662796+00:00",
+          "retrieval_method": "exact_personnel",
+          "record_type": "webresource",
+          "record_id": 82,
+          "personnel_role": "Graduate School Faculty, Program Chair, VP for PRISM, Higher Education",
+          "personnel_name": "Dr. Guilbert R. Mantala",
+          "personnel_section": "TOP MANAGEMENT",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | PRISM | Graduate School Faculty, Program Chair, VP for PRISM, Higher Education | Dr. Guilbert R. Mantala",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 256,
+              "retrieved_at": "2026-10-27T14:12:31.369344+00:00"
+            }
+          ],
+          "source_sections": [
+            "TOP MANAGEMENT",
+            "PRISM"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Sr. Maria Lirio Gavan, SPC",
+      "position": "VP for Administrative Services, VP for Finance and Treasury Head",
+      "query": "Who is Sr. Maria Lirio Gavan, SPC?",
+      "kind": "name",
+      "route": {
+        "kind": "knowledge",
+        "query": "Who is Sr. Maria Lirio Gavan, SPC?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null,
+        "segments": []
+      },
+      "status": "ok",
+      "exact_identity_hit": true,
+      "evidence": [
+        {
+          "question": "SPUS Personnel | TOP MANAGEMENT | VP for Administrative Services, VP for Finance and Treasury Head | Sr. Maria Lirio Gavan, SPC",
+          "document_title": "SPUS Personnel | TOP MANAGEMENT | VP for Administrative Services, VP for Finance and Treasury Head | Sr. Maria Lirio Gavan, SPC",
+          "answer": "Sr. Maria Lirio Gavan, SPC — VP for Administrative Services, VP for Finance and Treasury Head",
+          "text": "Sr. Maria Lirio Gavan, SPC — VP for Administrative Services, VP for Finance and Treasury Head",
+          "source_type": "website",
+          "source_url": "https://spus.edu.ph/administrator/",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.647736+00:00",
+          "retrieval_method": "exact_personnel",
+          "record_type": "webresource",
+          "record_id": 78,
+          "personnel_role": "VP for Administrative Services, VP for Finance and Treasury Head",
+          "personnel_name": "Sr. Maria Lirio Gavan, SPC",
+          "personnel_section": "TOP MANAGEMENT",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | Administrative Services Office | VP for Administrative Services, VP for Finance and Treasury Head | Sr. Maria Lirio Gavan, SPC",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 439,
+              "retrieved_at": "2026-10-27T14:12:32.124949+00:00"
+            }
+          ],
+          "source_sections": [
+            "TOP MANAGEMENT",
+            "Administrative Services Office"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Ms. Herley Leyva, Rpm",
+      "position": "Director, Human Resources Management",
+      "query": "Who is Ms. Herley Leyva, Rpm?",
+      "kind": "name",
+      "route": {
+        "kind": "knowledge",
+        "query": "Who is Ms. Herley Leyva, Rpm?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null,
+        "segments": []
+      },
+      "status": "ok",
+      "exact_identity_hit": true,
+      "evidence": [
+        {
+          "question": "SPUS Personnel | TOP MANAGEMENT | Director, Human Resources Management | Ms. Herley Leyva, Rpm",
+          "document_title": "SPUS Personnel | TOP MANAGEMENT | Director, Human Resources Management | Ms. Herley Leyva, Rpm",
+          "answer": "Ms. Herley Leyva, Rpm — Director, Human Resources Management",
+          "text": "Ms. Herley Leyva, Rpm — Director, Human Resources Management",
+          "source_type": "website",
+          "source_url": "https://spus.edu.ph/administrator/",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.651916+00:00",
+          "retrieval_method": "exact_personnel",
+          "record_type": "webresource",
+          "record_id": 79,
+          "personnel_role": "Director, Human Resources Management",
+          "personnel_name": "Ms. Herley Leyva, Rpm",
+          "personnel_section": "TOP MANAGEMENT",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | Human Resource Management Office | Director, Human Resources Management | Ms. Herley Leyva, Rpm",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 416,
+              "retrieved_at": "2026-10-27T14:12:32.042042+00:00"
+            }
+          ],
+          "source_sections": [
+            "TOP MANAGEMENT",
+            "Human Resource Management Office"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Engr. Arnold A. Magalona",
+      "position": "Director, Information & Communications Technology Systems and Services",
+      "query": "Who is Engr. Arnold A. Magalona?",
+      "kind": "name",
+      "route": {
+        "kind": "knowledge",
+        "query": "Who is Engr. Arnold A. Magalona?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null,
+        "segments": []
+      },
+      "status": "ok",
+      "exact_identity_hit": true,
+      "evidence": [
+        {
+          "question": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "document_title": "SPUS Personnel | TOP MANAGEMENT | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+          "answer": "Engr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services",
+          "text": "Engr. Arnold A. Magalona — Director, Information & Communications Technology Systems and Services",
+          "source_type": "website",
+          "source_url": "https://spus.edu.ph/administrator/",
+          "source_office": "TOP MANAGEMENT",
+          "retrieved_at": "2026-10-27T14:12:30.678558+00:00",
+          "retrieval_method": "exact_personnel",
+          "record_type": "webresource",
+          "record_id": 86,
+          "personnel_role": "Director, Information & Communications Technology Systems and Services",
+          "personnel_name": "Engr. Arnold A. Magalona",
+          "personnel_section": "TOP MANAGEMENT",
+          "supporting_sources": [
+            {
+              "source_url": "https://spus.edu.ph/administrator/",
+              "document_title": "SPUS Personnel | ICT Systems and Services | Director, Information & Communications Technology Systems and Services | Engr. Arnold A. Magalona",
+              "source_type": "website",
+              "record_type": "webresource",
+              "record_id": 422,
+              "retrieved_at": "2026-10-27T14:12:32.063568+00:00"
+            }
+          ],
+          "source_sections": [
+            "TOP MANAGEMENT",
+            "ICT Systems and Services"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Dr. Antonio Talamera",
+      "position": "VP for Academics",
+      "query": "Who is Dr. Antonio Talamera?",
+      "kind": "name",
+      "route": {
+        "kind": "knowledge",
+        "query": "Who is Dr. Antonio Talamera?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null,
+        "segments": []
+      },
+      "status": "ok",
+      "exact_identity_hit": true,
+      "evidence": [
+        {
+          "question": "Who is Dr. Antonio Talamera?",
+          "document_title": "Staff Directory: VP for Academics",
+          "answer": "Dr. Antonio Talamera is the VP for Academics. Office located at VPA Office, 2nd Floor Admin Building.",
+          "personnel_name": "Dr. Antonio Talamera",
+          "personnel_role": "VP for Academics",
+          "source_type": "staff_directory",
+          "source_office": "VPA Office, 2nd Floor Admin Building",
+          "source_url": null,
+          "record_type": "staffmember",
+          "record_id": 13,
+          "retrieval_method": "exact_staff_name",
+          "supporting_sources": []
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Mr. Nikko Ederio",
+      "position": "Dean, College of Information and Computing Sciences",
+      "query": "Who is Mr. Nikko Ederio?",
+      "kind": "name",
+      "route": {
+        "kind": "knowledge",
+        "query": "Who is Mr. Nikko Ederio?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null,
+        "segments": []
+      },
+      "status": "ambiguous",
+      "exact_identity_hit": false,
+      "evidence": []
+    },
+    {
+      "id": 15,
+      "name": "Khen Malaque",
+      "position": "JSIT Moderator",
+      "query": "Who is Khen Malaque?",
+      "kind": "name",
+      "route": {
+        "kind": "knowledge",
+        "query": "Who is Khen Malaque?",
+        "acknowledgement": "",
+        "method": "rule",
+        "score": null,
+        "reply_language": null,
+        "segments": []
+      },
+      "status": "ok",
+      "exact_identity_hit": true,
+      "evidence": [
+        {
+          "question": "Who is Khen Malaque?",
+          "document_title": "Staff Directory: JSIT Moderator",
+          "answer": "Khen Malaque is the JSIT Moderator.",
+          "personnel_name": "Khen Malaque",
+          "personnel_role": "JSIT Moderator",
+          "source_type": "staff_directory",
+          "source_office": "",
+          "source_url": null,
+          "record_type": "staffmember",
+          "record_id": 15,
+          "retrieval_method": "exact_staff_name",
+          "supporting_sources": []
+        }
+      ]
+    }
+  ],
+  "personnel_review": [
+    {
+      "title": "SPUS Personnel | ACADEMIC SERVICES | College Full-time Faculty, Dean, College of Criminal Justice Education, Program Chair | Dr. Jiffrey B. Saguran, CSP",
+      "content": "Section: ACADEMIC SERVICES\nName: Dr. Jiffrey B. Saguran, CSP\nRole: College Full-time Faculty, Dean, College of Criminal Justice Education, Program Chair",
+      "url": "https://spus.edu.ph/administrator/",
+      "last_scraped": "2026-10-27 14:12:30.703935+00:00"
+    },
+    {
+      "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Business Management and Accountancy, Graduate School Faculty | Dr. Chanda Tiu",
+      "content": "Section: ACADEMIC SERVICES\nName: Dr. Chanda Tiu\nRole: Dean, College of Business Management and Accountancy, Graduate School Faculty",
+      "url": "https://spus.edu.ph/administrator/",
+      "last_scraped": "2026-10-27 14:12:30.729155+00:00"
+    },
+    {
+      "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+      "content": "Section: ACADEMIC SERVICES\nName: Dr. Karen T. Plaza\nRole: Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair",
+      "url": "https://spus.edu.ph/administrator/",
+      "last_scraped": "2026-10-27 14:12:30.692858+00:00"
+    },
+    {
+      "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, College of Health Sciences, Head, Health Service | Mrs. Kristal Liza Besario, MaN, RN",
+      "content": "Section: ACADEMIC SERVICES\nName: Mrs. Kristal Liza Besario, MaN, RN\nRole: Dean, College of Health Sciences, Head, Health Service",
+      "url": "https://spus.edu.ph/administrator/",
+      "last_scraped": "2026-10-27 14:12:30.725698+00:00"
+    },
+    {
+      "title": "SPUS Personnel | ACADEMIC SERVICES | Dean, Graduate School & Professional Studies | Dr. Antonio P. Talamayan",
+      "content": "Section: ACADEMIC SERVICES\nName: Dr. Antonio P. Talamayan\nRole: Dean, Graduate School & Professional Studies",
+      "url": "https://spus.edu.ph/administrator/",
+      "last_scraped": "2026-10-27 14:12:30.696762+00:00"
+    },
+    {
+      "title": "SPUS Personnel | College of Business Management and Accountancy | Dean, College of Business Management and Accountancy, Graduate School Faculty | Dr. Chanda Tiu",
+      "content": "Section: College of Business Management and Accountancy\nName: Dr. Chanda Tiu\nRole: Dean, College of Business Management and Accountancy, Graduate School Faculty",
+      "url": "https://spus.edu.ph/administrator/",
+      "last_scraped": "2026-10-27 14:12:31.164189+00:00"
+    },
+    {
+      "title": "SPUS Personnel | College of Criminal Justice Education | College Full-time Faculty, Dean, College of Criminal Justice Education, Program Chair | Dr. Jiffrey B. Saguran, CSP",
+      "content": "Section: College of Criminal Justice Education\nName: Dr. Jiffrey B. Saguran, CSP\nRole: College Full-time Faculty, Dean, College of Criminal Justice Education, Program Chair",
+      "url": "https://spus.edu.ph/administrator/",
+      "last_scraped": "2026-10-27 14:12:31.243007+00:00"
+    },
+    {
+      "title": "SPUS Personnel | College of Education, Arts and Sciences | Dean, College of Education, Arts and Sciences | Dr. Mary Louie E. Galaura",
+      "content": "Section: College of Education, Arts and Sciences\nName: Dr. Mary Louie E. Galaura\nRole: Dean, College of Education, Arts and Sciences",
+      "url": "https://spus.edu.ph/administrator/",
+      "last_scraped": "2026-10-27 14:12:31.012055+00:00"
+    },
+    {
+      "title": "SPUS Personnel | College of Engineering and Information Technology | Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair | Dr. Karen T. Plaza",
+      "content": "Section: College of Engineering and Information Technology\nName: Dr. Karen T. Plaza\nRole: Dean, College of Engineering and Information Technology, Graduate School Faculty, Program Chair",
+      "url": "https://spus.edu.ph/administrator/",
+      "last_scraped": "2026-10-27 14:12:31.060041+00:00"
+    },
+    {
+      "title": "SPUS Personnel | College of Health Sciences | Dean, College of Health Sciences, Head, Health Service | Mrs. Kristal Liza Besario, MaN, RN",
+      "content": "Section: College of Health Sciences\nName: Mrs. Kristal Liza Besario, MaN, RN\nRole: Dean, College of Health Sciences, Head, Health Service",
+      "url": "https://spus.edu.ph/administrator/",
+      "last_scraped": "2026-10-27 14:12:31.280498+00:00"
+    },
+    {
+      "title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | College Full-time Faculty, Dean, College of Criminal Justice Education, Program Chair | Dr. Jiffrey B. Saguran, CSP",
+      "content": "Section: GRADUATE SCHOOL FACULTY\nName: Dr. Jiffrey B. Saguran, CSP\nRole: College Full-time Faculty, Dean, College of Criminal Justice Education, Program Chair",
+      "url": "https://spus.edu.ph/administrator/",
+      "last_scraped": "2026-10-27 14:12:30.748863+00:00"
+    },
+    {
+      "title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | Dean, College of Business Management and Accountancy, Graduate School Faculty | Dr. Chanda Tiu",
+      "content": "Section: GRADUATE SCHOOL FACULTY\nName: Dr. Chanda Tiu\nRole: Dean, College of Business Management and Accountancy, Graduate School Faculty",
+      "url": "https://spus.edu.ph/administrator/",
+      "last_scraped": "2026-10-27 14:12:30.755911+00:00"
+    },
+    {
+      "title": "SPUS Personnel | GRADUATE SCHOOL FACULTY | Dean, Graduate School & Professional Studies | Dr. Antonio P. Talamayan",
+      "content": "Section: GRADUATE SCHOOL FACULTY\nName: Dr. Antonio P. Talamayan\nRole: Dean, Graduate School & Professional Studies",
+      "url": "https://spus.edu.ph/administrator/",
+      "last_scraped": "2026-10-27 14:12:30.741573+00:00"
+    }
+  ]
+}

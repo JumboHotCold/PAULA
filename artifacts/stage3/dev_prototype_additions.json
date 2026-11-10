@@ -1,0 +1,170 @@
+[
+  {
+    "source_id": "social:greeting:1",
+    "intent": "greeting",
+    "locale": "en",
+    "query": "Good day PAULA"
+  },
+  {
+    "source_id": "social:greeting:3",
+    "intent": "greeting",
+    "locale": "ceb",
+    "query": "Maayong gabii"
+  },
+  {
+    "source_id": "social:identity:0",
+    "intent": "identity",
+    "locale": "en",
+    "query": "Please explain who you are"
+  },
+  {
+    "source_id": "social:identity:3",
+    "intent": "identity",
+    "locale": "fil",
+    "query": "Ano ang ibig sabihin ng pangalan mo"
+  },
+  {
+    "source_id": "social:identity:4",
+    "intent": "identity",
+    "locale": "ceb",
+    "query": "Unsay ngalan nimo"
+  },
+  {
+    "source_id": "social:capabilities:0",
+    "intent": "capabilities",
+    "locale": "en",
+    "query": "How can you assist me today"
+  },
+  {
+    "source_id": "social:capabilities:4",
+    "intent": "capabilities",
+    "locale": "ceb",
+    "query": "Unsa imong ikatabang nako"
+  },
+  {
+    "source_id": "social:thanks:2",
+    "intent": "thanks",
+    "locale": "en",
+    "query": "That helped me a lot"
+  },
+  {
+    "source_id": "social:thanks:5",
+    "intent": "thanks",
+    "locale": "fil",
+    "query": "Maraming salamat sa iyo"
+  },
+  {
+    "source_id": "social:farewell:0",
+    "intent": "farewell",
+    "locale": "en",
+    "query": "I have to go now"
+  },
+  {
+    "source_id": "social:farewell:5",
+    "intent": "farewell",
+    "locale": "fil",
+    "query": "Babalik ako mamaya"
+  },
+  {
+    "source_id": "social:wellbeing:0",
+    "intent": "wellbeing",
+    "locale": "en",
+    "query": "How are you feeling today"
+  },
+  {
+    "source_id": "social:wellbeing:4",
+    "intent": "wellbeing",
+    "locale": "ceb",
+    "query": "Kumusta imong adlaw"
+  },
+  {
+    "source_id": "social:joke:0",
+    "intent": "joke",
+    "locale": "en",
+    "query": "Could you share something funny"
+  },
+  {
+    "source_id": "social:joke:3",
+    "intent": "joke",
+    "locale": "fil",
+    "query": "Patawa ka naman ng konti"
+  },
+  {
+    "source_id": "social:joke:4",
+    "intent": "joke",
+    "locale": "ceb",
+    "query": "Pwede ko nimo pakataw on"
+  },
+  {
+    "source_id": "social:support:0",
+    "intent": "support",
+    "locale": "en",
+    "query": "I feel exhausted after today"
+  },
+  {
+    "source_id": "social:support:3",
+    "intent": "support",
+    "locale": "fil",
+    "query": "Nalulungkot ako ngayon"
+  },
+  {
+    "source_id": "social:support:4",
+    "intent": "support",
+    "locale": "ceb",
+    "query": "Gikapoy ko karon"
+  },
+  {
+    "source_id": "social:celebration:0",
+    "intent": "celebration",
+    "locale": "en",
+    "query": "I finished my project today"
+  },
+  {
+    "source_id": "social:celebration:3",
+    "intent": "celebration",
+    "locale": "ceb",
+    "query": "Nagawa ko na sa wakas"
+  },
+  {
+    "source_id": "social:preference:0",
+    "intent": "preference",
+    "locale": "en",
+    "query": "What food do you enjoy most"
+  },
+  {
+    "source_id": "social:preference:3",
+    "intent": "preference",
+    "locale": "fil",
+    "query": "Ano ang hilig mong gawin"
+  },
+  {
+    "source_id": "social:preference:4",
+    "intent": "preference",
+    "locale": "ceb",
+    "query": "Unsa imong ganahan nga pagkaon"
+  },
+  {
+    "source_id": "social:affirmation:0",
+    "intent": "affirmation",
+    "locale": "en",
+    "query": "Yes please"
+  },
+  {
+    "source_id": "social:negation:0",
+    "intent": "negation",
+    "locale": "en",
+    "query": "No please"
+  },
+  {
+    "source_id": "social:acknowledgement:0",
+    "intent": "acknowledgement",
+    "locale": "en",
+    "query": "Okay po"
+  },
+  {
+    "source_id": "social:acknowledgement:3",
+    "intent": "acknowledgement",
+    "locale": "ceb",
+    "query": "Gets ko na po"
+  }
+]
